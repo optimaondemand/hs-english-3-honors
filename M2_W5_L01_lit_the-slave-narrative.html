@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.17</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 5 &middot; Lesson 2.17</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Slave Narrative</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Narrative, ch. 1 (begin)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.17 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Slave Narrative</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Publius argued for a constitution. Emerson argued for the self. Douglass begins with a man from whom both were taken, and the man is himself.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In 1845 a twenty-seven-year-old fugitive published a short book that named the men who had claimed to own him. Today you meet Frederick Douglass, the abolitionist movement he joined, and the genre his book helped define: the <strong>slave narrative</strong>, a first-person account of slavery written or told by someone who lived it. Then you read the book's first page, where Douglass shows that slavery begins its work before the whip ever appears, by denying a person the ordinary materials of a self: a birthday, a family, a name for his own history.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> place Douglass and the <em>Narrative</em> in their moment: the abolitionist movement of 1845.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define the slave narrative as a genre and explain who it was written for.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain, using the opening chapter's own words, how slavery's denial of ordinary knowledge attacks a person's identity.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN (no wrong answer)</div>
+            <div class="widget-question">Think about how you know who you are. Which of these would be hardest to lose?</div>
+            <div class="widget-options">
+                <button data-response="Douglass never had that record. The Narrative opens with a man who cannot name his own birthday, and who watched masters keep it that way on purpose. Notice what he says that not-knowing did to him as a child.">Knowing my birthday and my own history</button>
+                <button data-response="That is the loss the opening chapter turns on. Douglass saw his mother only a handful of times, at night, and he shows that the separation was a custom, not an accident. Watch for the word he uses: custom.">My daily life with my family</button>
+                <button data-response="Douglass was renamed, recorded, and priced by other people; his story stayed his own only because he survived to write it. The book's subtitle, Written by Himself, is his answer to exactly this loss.">Being the one who tells my own story</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The third voice of the module</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Hold the module question in view. Publius answered its first clause: a free people orders its common life by structure, ambition checking ambition. Emerson answered the second: a free person orders an inner life by self-trust. Douglass answers the third, and his answer is not a theory. He is the person the nation denied. The <em>Narrative</em> takes the founding vocabulary this module has been building, liberty, self-government, natural rights, and asks what those words are worth in a country that held millions of people as property. He does not ask it abstractly. He asks it with his own life as the evidence.</p>
+        <div style="background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 16px 20px;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px;">&#127963;&#65039; HISTORICAL CONTEXT &middot; BOSTON, 1845</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.65;"><strong>Frederick Douglass</strong> (about 1818&ndash;1895) was born into slavery as Frederick Bailey in Talbot County, Maryland; he never learned his exact birth year. He escaped in 1838, at about age twenty, settled in New Bedford, Massachusetts, and took the name Douglass. In August 1841 he spoke at an anti-slavery convention in Nantucket, and the <strong>abolitionist movement</strong>, the organized campaign to end slavery, immediately hired him as a traveling lecturer. By the 1840s that movement had newspapers (William Lloyd Garrison's <em>The Liberator</em>), national societies, and packed lecture halls, but it faced a persistent problem: many Northern listeners doubted what they could not see. Some even doubted Douglass himself, reasoning that so skilled a speaker could never have been a slave. In 1845 he answered the doubters in print. The <em>Narrative of the Life of Frederick Douglass, an American Slave, Written by Himself</em> was published in Boston at the Anti-Slavery Office, giving real names, real places, and real dates. Publishing it was dangerous: Douglass was still a fugitive under the law, and the book told his former masters exactly where he was. It sold widely in America and Britain, and it made him the most famous Black man in the country. He spent the rest of his life as an orator, editor, and statesman.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128220; PART 2 &middot; THE ROAD TO 1845, AND THE GENRE HE MASTERED</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">Trace the road first. Every stop on it will matter this week, because the <em>Narrative</em> retells the first three stops from the inside.</p>
+
+        <!-- CORE VISUAL: Douglass's road to 1845 -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">DOUGLASS'S ROAD TO THE <em>NARRATIVE</em></div>
+            <div style="height: 4px; background: #3B4E8C; border-radius: 2px; margin: 0 8px 14px 8px;"></div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 17px; color: #0e1c42;"><strong>c. 1818</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">Tuckahoe, Maryland</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Born enslaved; denied knowledge of his own birthday and parentage.</div></div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 17px; color: #0e1c42;"><strong>1838</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">the escape</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Escapes to the North at about twenty; a fugitive under the law from this day on.</div></div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 17px; color: #0e1c42;"><strong>1841</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">Nantucket</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Speaks at an anti-slavery convention; becomes a traveling abolitionist lecturer.</div></div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 17px; color: #0e1c42;"><strong>1845</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">the <em>Narrative</em></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Publishes his life story in Boston, names included, while still legally a fugitive.</div></div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 17px; color: #0e1c42;"><strong>after</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">orator &amp; statesman</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Editor, orator, adviser to presidents; dies in 1895, a free man of national standing.</div></div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 10px 0;">Now the genre. A <strong>slave narrative</strong> is a first-person account of life in slavery, written or dictated by a person who escaped or was freed. Hundreds were published in the decades before the Civil War, and they shared a purpose: to give a free readership the eyewitness knowledge that slavery's defenders said did not exist. That purpose shaped the form. A slave narrative is at once an <strong>autobiography</strong> (one life, told from the inside), a body of <strong>testimony</strong> (checkable facts: names, places, dates), and an <strong>argument</strong> (evidence arranged to move a nation). Douglass's 1845 <em>Narrative</em> became the most famous example the genre ever produced, and this week you will learn to read all three layers at once.</p>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 16px 0 12px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Begin reading:</strong> open the <em>Narrative</em> and read Chapter 1. This week you will read the front matter (the preface and the letter that open the book) and Chapters 1 through 4. Public-domain text: <a href="https://www.gutenberg.org/files/23/23-h/23-h.htm" style="color: #3B4E8C;">Project Gutenberg, <em>Narrative of the Life of Frederick Douglass</em> (1845)</a>.</div>
+        </div>
+        <div style="background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 14px 18px; margin: 0 0 4px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px; letter-spacing: 0.4px;">A NOTE BEFORE YOU READ</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">The <em>Narrative</em> is testimony, and it records what slavery actually was: brutal violence, and the dehumanizing language slaveholders used about the people they held, including racial slurs that Douglass quotes as evidence against them. These lessons will not repeat that language or dwell on the violence in detail, and you are not asked to. Read the hard passages the way Douglass wrote them: as a witness's record, set down so that a free public could no longer say it did not know.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128683; PART 3 &middot; THE FIRST PAGE: A SELF DENIED</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Most autobiographies open with the facts of a birth. Douglass opens with the fact that he was denied them: "I was born in Tuckahoe, near Hillsborough, and about twelve miles from Easton, in Talbot county, Maryland. I have no accurate knowledge of my age, never having seen any authentic record containing it" (Narrative, ch. 1). Read that second sentence again. The place is exact, down to the mileage, but the date of his own birth is a blank. Then he shows the blank is deliberate: "By far the larger part of the slaves know as little of their ages as horses know of theirs, and it is the wish of most masters within my knowledge to keep their slaves thus ignorant" (Narrative, ch. 1). Two moves in one sentence. The comparison to horses names what slavery claimed a person was: livestock, for whom a birthday would be pointless. And "the wish of most masters" names the denial as policy, not accident. The child felt the difference before he could explain it: "The white children could tell their ages. I could not tell why I ought to be deprived of the same privilege" (Narrative, ch. 1). Asking was forbidden; his master treated the question itself as misbehavior.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The same erasure covers his parentage. His mother was hired out to a farm miles away when he was an infant. His father was a white man, rumored to be his own master, and Douglass notes that the law was built to keep such facts useless: "slaveholders have ordained, and by law established, that the children of slave women shall in all cases follow the condition of their mothers" (Narrative, ch. 1). Follow the logic of that law and you see the design Douglass wants you to see. A birthday, a mother, a father, a family record: these are the raw materials out of which any person builds a self. Slavery withheld each one on purpose, because a person with no history is easier to hold as property. That is why this week is called the self denied, and it is why the founding arguments you read in Weeks 1 through 4 are on trial from the book's first paragraph. A system Publius would call government without consent, and Emerson would call the destruction of self-trust at the root, Douglass simply describes, from memory, in plain declarative sentences.</p>
+
+        <!-- INTERACTIVE: student matches the line to what it reveals (after reading ch. 1) -->
+        <div class="optima-widget ow-match" data-done="All four matched. Each line does a different piece of work toward the same design." style="margin-top: 18px;">
+            <div class="widget-kicker">&#129513; NOW YOU: MATCH THE LINE TO WHAT IT REVEALS</div>
+            <div class="widget-question">Click a <strong>line from Chapter 1</strong>, then click what that line reveals about how slavery worked. Use what the chapter itself says, not a guess. Four pairs.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">THE LINE</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="age">"I have no accurate knowledge of my age, never having seen any authentic record containing it."</button>
+                        <button data-key="horses">"slaves know as little of their ages as horses know of theirs"</button>
+                        <button data-key="wish">"it is the wish of most masters within my knowledge to keep their slaves thus ignorant"</button>
+                        <button data-key="law">"the children of slave women shall in all cases follow the condition of their mothers"</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHAT IT REVEALS</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="wish">The ignorance was policy, kept in place on purpose, not an accident of poor recordkeeping.</button>
+                        <button data-key="horses">The comparison classifies a person as livestock, not as someone with a life worth dating.</button>
+                        <button data-key="age">Even the person living the life was denied the ordinary facts of his own history.</button>
+                        <button data-key="law">A child's legal status was fixed by his mother's condition, so a father's identity could be made to not matter.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Start a new page in your Module 2 Organizer titled "Douglass, Narrative." Copy the sentence "By far the larger part of the slaves know as little of their ages as horses know of theirs, and it is the wish of most masters within my knowledge to keep their slaves thus ignorant." and cite it (Narrative, ch. 1). Under it, write three or four sentences answering: what two things does this single sentence establish, and why does Douglass need both on his first page? To decide, look at the sentence's two halves separately, what the comparison claims and what "the wish of most masters" claims, then ask what a reader who accepted both would already have conceded about slavery.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can give you a reliable outline of Douglass's life and a serviceable definition of the slave narrative. Be careful with one thing: Douglass wrote three autobiographies, and AI summaries often blend them, attributing scenes or wording from the later books to the 1845 <em>Narrative</em>. He also delivered a famous 1852 speech on the Fourth of July that is not part of this book. When you cite, quote from the 1845 text in front of you and check the chapter yourself.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.18: The Conditions of Bondage</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Separation from his mother, life on the Lloyd plantation, and how a witness turns memory into evidence.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Every writer in this module makes a public case, and Douglass's case begins with the right to a self. As you read this week, keep one question open for your Publius Returns op-ed: what does a nation owe the people it has wronged by design, and who has the standing to say so?</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.17 &middot; The Slave Narrative</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the passage.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
