@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.25</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 7 &middot; Lesson 2.25</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">How a Slave Was Made a Man</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Narrative, ch. 10</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.25 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">How a Slave Was Made a Man</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Chapter 10 opens with Douglass nearly broken. It ends with a single sentence that turns the whole book around: "You have seen how a man was made a slave; you shall see how a slave was made a man."</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In Week 6 literacy opened the door in Douglass's mind. This week his sense of himself comes all the way back, and it happens on a Maryland farm, under a man hired to destroy exactly that. Today you read chapter 10 for its turning point: what the year with Covey did to Douglass, what changed when he refused to be beaten again, and how Douglass, writing years later, frames that change not as a fistfight won but as the recovery of a self. Read for his own reflective language, because his framing, not the physical struggle, is the lesson.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what Douglass means by being "broken," and why he treats the year with Covey as the low point of the whole book.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> read the turning point through Douglass's own words: what he says was rekindled, revived, and recalled.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> connect this recovered self to the module's question about self-government.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN (no wrong answer)</div>
+            <div class="widget-question">Douglass calls one moment the "turning-point" of his life as a slave. When you think of a real turning point, what usually marks it?</div>
+            <div class="widget-options">
+                <button data-response="Douglass agrees that something outward happened, a physical stand against Covey. But watch how little of the chapter he spends on the struggle itself, and how much on what it changed inside him. The event is the smaller half of the story.">Something that happened on the outside, an event</button>
+                <button data-response="This is closer to Douglass's own account. He barely describes the struggle; he lingers on what returned to him, the sense of himself he thought was gone. Read for the inner change, not the outer one.">A change in how you saw yourself afterward</button>
+                <button data-response="Douglass would say both, but in a precise order: the moment mattered because of what it recovered, a self-confidence and a determination he names directly. Notice which one he treats as the real event.">Both, but I could not say which mattered more</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Where chapter 10 sits in the book</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">By chapter 10 Douglass is about sixteen. His owner, frustrated by the "city" habits and the freed mind you read about last week, has hired him out for a year to Edward Covey, a poor farmer with a regional reputation for one skill: breaking the will of enslaved people who would not submit. Covey succeeded, for a time. Douglass describes the result plainly, and you should read his words as testimony, not as a scene to picture: "Mr. Covey succeeded in breaking me. I was broken in body, soul, and spirit" (Narrative, ch. 10). He goes on: "the dark night of slavery closed in upon me; and behold a man transformed into a brute" (Narrative, ch. 10). That is the floor of the whole book. Everything the <em>Narrative</em> has argued so far, that slavery works by erasing a person's self, has arrived at its endpoint: a human being nearly convinced he is no longer one.</p>
+        <div style="background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 16px 20px;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px;">&#127963;&#65039; HOW TO READ THIS CHAPTER</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.65;">Chapter 10 contains a physical struggle and describes brutal treatment. This lesson does not reproduce the violence or ask you to picture it. Read the chapter the way Douglass wrote it: as a witness's record, and above all as the story of a recovered self. When you take notes, quote his reflective sentences, the ones about what changed in him, and leave the blows to his own restraint. Douglass himself keeps the focus there; the event matters to him only for what it restored.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128220; PART 2 &middot; A TOOL FOR READING A TURNING POINT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">One day, worn to collapse, Douglass refused to submit to another beating and stood his ground. He gives the physical part of it almost nothing, a few restrained lines. What he dwells on instead is what the stand did to him afterward, and how he chooses to describe that change is itself an argument. Writers who mark a personal turning point tend to reach for one of two kinds of verb, and the choice is never accidental.</p>
+
+        <!-- READING-TOOL VISUAL: a lens, not the answer -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">A READING TOOL: VERBS OF RETURN VS. VERBS OF CREATION</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 15px; color: #3B4E8C; margin-bottom: 6px;">VERBS OF RETURN</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">restored, revived, recovered, recalled, rekindled, regained</div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 8px;">These say: this was mine already. It was taken or buried, and now it is back.</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 15px; color: #C7922C; margin-bottom: 6px;">VERBS OF CREATION</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">became, gained, discovered, invented, achieved, built</div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 8px;">These say: this is new. It did not exist in me before this moment.</div>
+                </div>
+            </div>
+            <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 14px;">The choice matters because it makes a claim about slavery itself. If a writer says he <em>became</em> a man, slavery only delayed a growth that was always coming. If he says his manhood was <em>restored</em>, slavery is described as a theft: it took something that was rightfully his from the start.</div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 0 0;">As you read chapter 10, watch for the verbs Douglass himself chooses at the exact moment the chapter turns, and notice, too, what he is careful to say did <em>not</em> change afterward. Both choices are doing argumentative work, not just describing a day on a farm.</p>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 16px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>This week's reading:</strong> read chapters 8 and 9 quickly as a bridge, then read chapter 10 closely for today, chapter 11 for Lesson 2.26, and the Appendix for Lesson 2.27. Public-domain text: <a href="https://www.gutenberg.org/files/23/23-h/23-h.htm" style="color: #3B4E8C;">Project Gutenberg, <em>Narrative of the Life of Frederick Douglass</em> (1845)</a>.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 3 &middot; NOW YOU: TRACE THE TURN</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">Now that you have read chapter 10, put its turning point back together in the order Douglass builds it.</p>
+
+        <!-- INTERACTIVE: student sequences the chapter's own arc from the text -->
+        <div class="optima-widget ow-order" data-done="That is the order the chapter follows: broken, then a stand, then the sentence, then the naming of what returned, then the distinction that outlasts it.">
+            <div class="widget-kicker">&#129513; NOW YOU: PUT CHAPTER 10'S TURN IN ORDER</div>
+            <div class="widget-question">Click these five moments from chapter 10 in the order Douglass presents them.</div>
+            <div class="order-list">
+                <button data-order="3"><span class="seq" data-default="?">?</span> Douglass marks the moment with a balanced sentence addressed straight to the reader.</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span> Douglass describes himself as "broken in body, soul, and spirit" under Covey.</button>
+                <button data-order="4"><span class="seq" data-default="?">?</span> Douglass names, one by one, what the stand gave back to him.</button>
+                <button data-order="2"><span class="seq" data-default="?">?</span> Douglass refuses to submit to another beating and stands his ground.</button>
+                <button data-order="5"><span class="seq" data-default="?">?</span> Douglass draws a line between remaining a slave "in form" and no longer being one "in fact."</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 0 0;">Look at the verbs you found for step four. Douglass writes that the stand "rekindled the few expiring embers of freedom," "revived within me a sense of my own manhood," "recalled the departed self-confidence," and "inspired me again with a determination to be free" (Narrative, ch. 10). Every one is a verb of return, not creation: nothing here is new, and the chapter's key sentence agrees, calling the change "how a slave was made a man," not how a slave became a fighter. Douglass is equally exact about what did not change. He was still legally enslaved that same evening, still on Covey's farm, still years from escape, so he draws the line the whole passage turns on: "however long I might remain a slave in form, the day had passed forever when I could be a slave in fact" (Narrative, ch. 10). Form and fact. A law could still call him property, but the inner submission that made the property system work in him was over, and he seals it with an image of rebirth: "a glorious resurrection, from the tomb of slavery, to the heaven of freedom" (Narrative, ch. 10). That is Douglass's own definition of self-government: the point at which a person's inner life stops being ruled from outside, whatever the law still claims.</p>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">In your Module 2 Organizer, copy the sentence "however long I might remain a slave in form, the day had passed forever when I could be a slave in fact" and cite it (Narrative, ch. 10). Under it, write four or five sentences explaining the difference between a slave "in form" and a slave "in fact," and why Douglass insists the change was real even though he was still legally enslaved. To work it out, define each phrase in your own words first, then ask what the property system needed from Douglass that it had now lost. Connect your answer to the module question: in what sense had Douglass begun to govern himself?</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Ask an AI tool to summarize "the Covey episode" and it will usually give you the outline of events. What it tends to flatten is Douglass's framing: it will call the moment a fight and stop there, missing that Douglass presents it as a recovery of selfhood, and sometimes importing dramatic details from his later autobiographies that are not in the 1845 text. When you write about this chapter, quote Douglass's own verbs of return (rekindled, revived, recalled) from the text in front of you, and keep his emphasis, not the summary's.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.26: The Escape and the Orator</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Chapter 11: why Douglass deliberately refuses to tell you how he escaped, and how the book ends at the moment his public voice begins.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Chapter 10 is also a strong source of recitation passages, because Douglass built the turning point to be spoken. Read the "rekindled&hellip;revived&hellip;recalled" passage and the "resurrection" sentence aloud once today, and notice how the parallel verbs give your voice a rhythm to ride. If one of them is your recitation passage, this reading was your first rehearsal.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.25 &middot; How a Slave Was Made a Man</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
