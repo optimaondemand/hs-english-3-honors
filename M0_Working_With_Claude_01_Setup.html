@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Working with Claude (1): Getting Set Up</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    code.fn { background:#0E1C42; color:#F4C860; padding:2px 8px; border-radius:5px; font-family: Consolas, monospace; font-size:15px; }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-direction: column; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 10px 14px; font-size: 15px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0 0 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- HEADER -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<!-- METADATA -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Start Here</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Page</div>
+        <div style="font-size: 17px; color: #0e1c42;">Working with Claude (1 of 2)</div>
+        <div style="font-size: 12px; color: #0e1c42;">Getting set up</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Type</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Orientation (no assignment)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">WORKING WITH CLAUDE &middot; PAGE 1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Getting Claude Code Running for This Course</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Nothing here is graded. Read it once now, then come back to it whenever you set up a project.</div>
+    </div>
+
+    <!-- Help not replace, stated first -->
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#127919; THE ONE RULE, BEFORE ANYTHING ELSE</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Claude is an assistant, not an author. In this course you use it to <strong>help</strong> your thinking: to check a fact, sort your notes, or talk through a plan. You do <strong>not</strong> use it to do your reading, your interpreting, your drafting, or your word choices. Those are the actual work of an English student, and they are what your grade rewards. Every place a project invites you to use Claude, it also asks you to log what you did, so the line between your work and its help stays clear.</p>
+    </div>
+
+    <!-- What it is -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#129302; WHAT CLAUDE CODE IS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Claude is an AI assistant you talk to in plain language. <strong>Claude Code</strong> is a version of it that runs on a computer and can open, read, and write the actual files in a folder you point it at. That matters for this course, because your work lives in real files: a Word draft, a PDF you downloaded, an outline, a set of notes. Claude Code can look at those files with you and help you work on them, instead of you copying and pasting text back and forth.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">You sign in with <strong>your own account</strong>. Your conversations and files are yours; do not use anyone else's login, and do not share yours.</p>
+    </div>
+
+    <!-- CORE VISUAL: can / cannot -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128064; WHAT IT CAN AND CANNOT DO FOR YOU</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0; border: 2px solid #0E1C42; border-radius: 10px; overflow: hidden;">
+            <div style="flex: 1; min-width: 260px; background: #EEF1F8; padding: 18px 20px;">
+                <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.4px; margin-bottom: 10px;">&#9989; GOOD USES (IT HELPS)</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.7;">
+                    &#9656; Explain a hard sentence or an unfamiliar word.<br />
+                    &#9656; Check a date or a historical fact you then verify.<br />
+                    &#9656; Sort or reorganize notes you already wrote.<br />
+                    &#9656; Ask "what am I missing?" about your own outline.<br />
+                    &#9656; Turn your rough bullet points into a cleaner list to react to.
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 260px; background: #FDECEC; padding: 18px 20px; border-left: 2px solid #0E1C42;">
+                <div style="font-size: 12px; color: #C0392B; letter-spacing: 0.4px; margin-bottom: 10px;">&#9940; NOT FOR THIS COURSE (IT REPLACES YOU)</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.7;">
+                    &#9656; Writing your essay, scene, or discussion post.<br />
+                    &#9656; Reading the text so you do not have to.<br />
+                    &#9656; Producing your interpretation or your thesis.<br />
+                    &#9656; Choosing your words, images, or phrasing.<br />
+                    &#9656; Giving you "quotes" you paste in without checking.
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 12px;">A good test: if the tool did the thinking, it was the wrong use. If it helped you do your thinking, it was the right one.</div>
+    </div>
+
+    <!-- Setup steps -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#128295; GET IT RUNNING (FOUR STEPS)</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 0 0 14px 0;">Exact setup steps depend on your device, so follow the current official setup guide and ask your facilitator if a step does not match your screen. The shape is always the same:</p>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Sign in with your own account.</strong> Use the account your school set up for you. Keep the password somewhere safe.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Install Claude Code and open it.</strong> It runs in a simple text window (a terminal). You type what you want in plain language and press enter; there is no complicated menu to learn.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Point it at your course folder.</strong> Open it inside your <code class="fn">Optima &#8594; ELA &#8594; ELA11</code> folder in OneDrive so it can see the files you are working on. Now it can read your draft or your notes when you ask.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>Try a first, safe request.</strong> Ask something low-stakes, such as: "List the files in this folder," or "Explain what a soliloquy is in two sentences." You are just confirming it works and getting used to talking to it.</div>
+        </div>
+        <div style="background: #E8F6FB; border: 1px solid #A9D6E8; border-radius: 6px; padding: 12px 16px; margin-top: 16px; font-size: 15px; color: #1a2340; line-height: 1.6;">&#128279; <strong>Official setup guide:</strong> <em>[Teacher: link the current Claude Code setup guide and your school's account instructions here.]</em> Stuck on a step? Email your facilitator.</div>
+    </div>
+
+    <!-- File types -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128196; THE FILE TYPES YOU WILL MEET</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 12px 0;">Different work comes in different file types. Claude Code can read all of these; knowing what each is keeps you organized.</p>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+            <div style="background:#EEF1F8; border:1px solid #C7CFE6; border-radius:8px; padding:12px 14px;"><code class="fn">.docx</code><div style="font-size:14px; color:#1a2340; margin-top:6px; line-height:1.45;">Microsoft Word. Your drafts, essays, and the Reading Journal.</div></div>
+            <div style="background:#EEF1F8; border:1px solid #C7CFE6; border-radius:8px; padding:12px 14px;"><code class="fn">.pdf</code><div style="font-size:14px; color:#1a2340; margin-top:6px; line-height:1.45;">A fixed page format. Readings, worksheets you download, and the PDF you submit for some projects.</div></div>
+            <div style="background:#EEF1F8; border:1px solid #C7CFE6; border-radius:8px; padding:12px 14px;"><code class="fn">.txt</code> / <code class="fn">.md</code><div style="font-size:14px; color:#1a2340; margin-top:6px; line-height:1.45;">Plain text and Markdown. Quick notes and outlines with no formatting to fuss over.</div></div>
+            <div style="background:#EEF1F8; border:1px solid #C7CFE6; border-radius:8px; padding:12px 14px;"><code class="fn">.png</code> / <code class="fn">.jpg</code><div style="font-size:14px; color:#1a2340; margin-top:6px; line-height:1.45;">Images. Storyboards, a photo of handwritten work, a film still you are analyzing.</div></div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE self-check -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 6px;">&#129504; QUICK SELF-CHECK (UNGRADED)</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 8px 0;">You are writing your Elsinore Stage scene. Which request keeps Claude as a <em>helper</em> and not an <em>author</em>? Pick one.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">CHOOSE THE HELP-NOT-REPLACE REQUEST</div>
+            <div class="widget-options">
+                <button data-correct="false" data-response="This hands the whole task to the tool. Writing the scene in blank verse is the actual assignment, and it must be your work.">"Write my missing scene for Hamlet in blank verse."</button>
+                <button data-correct="true" data-response="Good. You did the writing; you are asking for a check on the meter and a place to look, then you decide what to change. That is a helper, not an author.">"Here are the ten lines I wrote. Point out any that break the five-beat rhythm, but do not rewrite them for me."</button>
+                <button data-correct="false" data-response="Close, but 'make it sound more like Shakespeare' asks the tool to choose your words and voice. Ask it to point out where your voice slips instead, then fix it yourself.">"Rewrite my scene to make it sound more like Shakespeare."</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Wrap + next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#10145;&#65039; NEXT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Now that it runs, go to <strong>Working with Claude (2): Prompting, Records, and Checking</strong>. It shows how to ask well, keep an honest record of what you used, manage your usage, and make sure what the tool tells you is actually true before you rely on it.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Start Here</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Working with Claude (1 of 2) &middot; Getting Set Up</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      var f = w.querySelector('.widget-feedback'); if (f) { f.classList.remove('show'); f.textContent = ''; }
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
+</content>
