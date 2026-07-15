@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Working with Claude (2): Prompting, Records, and Checking</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    code.fn { background:#0E1C42; color:#F4C860; padding:2px 8px; border-radius:5px; font-family: Consolas, monospace; font-size:15px; }
+    .pb-row { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px; align-items:center; }
+    .pb-label { font-size:12px; color:#3B4E8C; min-width:110px; }
+    .pb-row button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:8px 12px; font-size:14px; color:#0E1C42; cursor:pointer; font-family:inherit; }
+    .pb-row button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .pb-row button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .pb-output { background:#0E1C42; color:#EEF1F8; border-radius:8px; padding:14px 16px; font-size:15px; line-height:1.6; min-height:20px; }
+    .pb-output .empty { color:#9fb3cc; }
+    .pb-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+    .pb-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- HEADER -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<!-- METADATA -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Start Here</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Page</div>
+        <div style="font-size: 17px; color: #0e1c42;">Working with Claude (2 of 2)</div>
+        <div style="font-size: 12px; color: #0e1c42;">Prompting, records, and checking</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Type</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Orientation (no assignment)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">WORKING WITH CLAUDE &middot; PAGE 2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Prompting, Records, and Checking</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Four habits that make AI useful and honest: ask well, keep records, use it lean, and verify everything.</div>
+    </div>
+
+    <!-- Habit 1: prompting -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9997;&#65039; HABIT 1 &middot; WRITE A GOOD PROMPT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">A vague request gets a vague, generic answer. A specific one gets something you can actually use. A strong prompt usually has four parts:</p>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+            <div style="background:#EEF1F8; border:1px solid #C7CFE6; border-radius:8px; padding:12px 14px;"><div style="font-size:12px; color:#3B4E8C;">ROLE / CONTEXT</div><div style="font-size:15px; color:#1a2340; line-height:1.5;">Who you are and what you are doing. "I am an 11th grader analyzing Act I of Hamlet."</div></div>
+            <div style="background:#EEF1F8; border:1px solid #C7CFE6; border-radius:8px; padding:12px 14px;"><div style="font-size:12px; color:#3B4E8C;">THE TASK</div><div style="font-size:15px; color:#1a2340; line-height:1.5;">Exactly what you want it to do. "Explain this line," not "help with Hamlet."</div></div>
+            <div style="background:#EEF1F8; border:1px solid #C7CFE6; border-radius:8px; padding:12px 14px;"><div style="font-size:12px; color:#3B4E8C;">THE MATERIAL</div><div style="font-size:15px; color:#1a2340; line-height:1.5;">Give it the actual text or your actual notes, so it works from your reading, not a guess.</div></div>
+            <div style="background:#EEF1F8; border:1px solid #C7CFE6; border-radius:8px; padding:12px 14px;"><div style="font-size:12px; color:#3B4E8C;">THE LIMITS</div><div style="font-size:15px; color:#1a2340; line-height:1.5;">What you do NOT want. "Do not rewrite it; just point to the problem." "Two sentences, plain words."</div></div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE: prompt builder -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 6px;">&#129504; BUILD A PROMPT (UNGRADED)</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 14px 0;">Pick one option in each row and watch a usable prompt assemble below. Try a weak choice, then a strong one, and see the difference.</p>
+        <div id="pb">
+            <div class="pb-row"><span class="pb-label">Role / context</span>
+                <button data-slot="role" data-val="">(none)</button>
+                <button data-slot="role" data-val="I am an 11th-grade English student working on Act III of Hamlet. ">Add context</button>
+            </div>
+            <div class="pb-row"><span class="pb-label">Task</span>
+                <button data-slot="task" data-val="Help with Hamlet. ">Vague</button>
+                <button data-slot="task" data-val="Explain what this line means in plain English. ">Specific</button>
+            </div>
+            <div class="pb-row"><span class="pb-label">Material</span>
+                <button data-slot="mat" data-val="">No text</button>
+                <button data-slot="mat" data-val='The line is: "To be, or not to be, that is the question." '>Paste the line</button>
+            </div>
+            <div class="pb-row"><span class="pb-label">Limits</span>
+                <button data-slot="lim" data-val="">No limits</button>
+                <button data-slot="lim" data-val="Keep it to two sentences and do not write my analysis for me.">Set limits</button>
+            </div>
+            <div style="font-size:11px; color:#3B4E8C; margin:12px 0 6px 0;">YOUR PROMPT</div>
+            <div class="pb-output"><span class="empty">Choose an option in each row above.</span></div>
+            <div id="pb-verdict" style="font-size:15px; color:#1a2340; line-height:1.55; margin-top:10px;"></div>
+            <button class="pb-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Habit 2: records / AI-use log -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128221; HABIT 2 &middot; KEEP A RECORD (THE AI-USE LOG)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Whenever you use Claude on graded work, keep a short, honest log. It protects you (it shows the work is yours) and it makes you notice how you are actually using the tool. Four columns are enough:</p>
+        <div style="border: 2px solid #0E1C42; border-radius: 10px; overflow: hidden;">
+            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; background:#0E1C42; color:#fff; font-size:13px;">
+                <div style="padding:10px 12px; border-right:1px solid #33406a;">What I asked</div>
+                <div style="padding:10px 12px; border-right:1px solid #33406a;">What it gave me</div>
+                <div style="padding:10px 12px; border-right:1px solid #33406a;">What I kept</div>
+                <div style="padding:10px 12px;">What was wrong</div>
+            </div>
+            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; font-size:14px; color:#1a2340;">
+                <div style="padding:10px 12px; border-right:1px solid #D0D9E8; border-top:1px solid #D0D9E8;">Check my ten lines for broken meter.</div>
+                <div style="padding:10px 12px; border-right:1px solid #D0D9E8; border-top:1px solid #D0D9E8;">Flagged lines 4 and 7 as having six beats.</div>
+                <div style="padding:10px 12px; border-right:1px solid #D0D9E8; border-top:1px solid #D0D9E8;">Fixed line 4 myself; kept line 7 on purpose.</div>
+                <div style="padding:10px 12px; border-top:1px solid #D0D9E8;">It miscounted line 2; I checked and it was fine.</div>
+            </div>
+        </div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 12px 0 0 0;">Keep this log in your Module Organizer, in a section named "AI-use log." Projects that invite Claude will ask for it.</p>
+    </div>
+
+    <!-- Habit 3: tokens / lean use -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9889; HABIT 3 &middot; USE IT LEAN (MANAGING TOKENS)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">AI tools measure work in <strong>tokens</strong>, small chunks of text (roughly a few characters each). Every word you send and every word it sends back costs tokens, and your access has limits. You do not need to count them, but a few habits keep you from running out mid-project:</p>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.8;">
+            &#9656; <strong>Send only what is needed.</strong> Paste the paragraph you are working on, not the whole play.<br />
+            &#9656; <strong>Start a fresh conversation for a new task.</strong> Long, wandering chats carry all their earlier text along and cost more each turn.<br />
+            &#9656; <strong>Ask for the length you want.</strong> "Two sentences" costs far less than an unbounded answer, and is usually more useful anyway.<br />
+            &#9656; <strong>Do the easy thinking yourself.</strong> Save the tool for the moment you are genuinely stuck.
+        </div>
+    </div>
+
+    <!-- Habit 4: verify -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128269; HABIT 4 &middot; VERIFY EVERYTHING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is the most important habit. AI tools sometimes state false things with total confidence. The classic trap in an English class: you ask for a quotation and it hands you a line that <strong>is not in the play</strong>, worded just plausibly enough to fool you. It can also get a date, an author, or a source wrong.</p>
+        <div style="background:#FDECEC; border:1px solid #E8B4AE; border-left:5px solid #C0392B; border-radius:8px; padding:14px 18px;">
+            <div style="font-size:11px; color:#C0392B; margin-bottom:8px;">&#9888;&#65039; THE RULE</div>
+            <p style="font-size:16px; color:#1a2340; line-height:1.6; margin:0;">Never put an AI-supplied quotation, date, or fact into your work until you have confirmed it against the real source with your own eyes. A quote is only yours to use once you have found it in the text and can cite it by act, scene, and line.</p>
+        </div>
+    </div>
+
+    <!-- Save to OneDrive -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#128190; SAVE YOUR OUTPUTS TO ONEDRIVE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Anything you decide to keep, save into your <code class="fn">Optima &#8594; ELA &#8594; ELA11</code> folder, named the usual way (<code class="fn">LastName_FirstName_AssignmentShortName_ELA11</code>, with <code class="fn">_Draft1</code> at the very end for drafts). A chat window is not storage; if you close it, the conversation can be gone. Your OneDrive folder is where your real, submittable work lives.</p>
+    </div>
+
+    <!-- Wrap -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Ask well, log honestly, use it lean, verify everything, and save what you keep. Do those five things and Claude will make you faster without making the work any less yours. Each project will tell you exactly where it fits; the thinking stays with you.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Start Here</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Working with Claude (2 of 2) &middot; Prompting, Records, and Checking</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  var pb = document.getElementById('pb');
+  if (!pb) return;
+  var state = { role: null, task: null, mat: null, lim: null };
+  var strong = { role: 1, task: 1, mat: 1, lim: 1 }; // index of strong choice per slot (2nd button)
+  function render() {
+    var out = pb.querySelector('.pb-output');
+    var parts = [state.role, state.task, state.mat, state.lim].filter(function (p) { return p; });
+    if (parts.length === 0) { out.innerHTML = '<span class="empty">Choose an option in each row above.</span>'; pb.querySelector('#pb-verdict').textContent = ''; return; }
+    out.textContent = parts.join('').trim();
+    var v = pb.querySelector('#pb-verdict');
+    var allStrong = state.role && state.task && state.task.indexOf('Explain') === 0 && state.mat && state.lim;
+    var weakTask = state.task && state.task.indexOf('Help with Hamlet') === 0;
+    if (allStrong) { v.textContent = 'Strong prompt. It has who you are, one clear task, the actual line, and a limit that keeps the thinking yours.'; }
+    else if (weakTask || !state.mat || !state.lim) { v.textContent = 'This will get a generic answer. Add the actual line, make the task specific, and set a limit so it helps instead of taking over.'; }
+    else { v.textContent = 'Getting there. The more specific and bounded your request, the more useful and the more honest the help.'; }
+  }
+  pb.addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-slot]');
+    if (b) {
+      var slot = b.dataset.slot;
+      pb.querySelectorAll('button[data-slot="' + slot + '"]').forEach(function (x) { x.classList.remove('selected'); });
+      b.classList.add('selected');
+      state[slot] = b.dataset.val;
+      render();
+      return;
+    }
+    if (e.target.closest('.pb-reset')) {
+      state = { role: null, task: null, mat: null, lim: null };
+      pb.querySelectorAll('button[data-slot]').forEach(function (x) { x.classList.remove('selected'); });
+      render();
+    }
+  });
+})();
+</script>
+</body>
+</html>
+</content>
