@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 6.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .widget-options { display:flex; flex-direction:column; gap:8px; }
+    .widget-options button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .widget-options button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .widget-options button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6 &middot; Lesson 6.03</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (3 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Rest Is Silence</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Hamlet, Act V, sc. 2 (finale)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 6.03 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Rest Is Silence</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A friendly fencing match is staged for the court's entertainment. What it becomes is for you to read, not to be told.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have followed this play for five weeks: a ghost's demand, a prince who delays, a king who schemes. This lesson gives you a reading tool first: the shape of a tragedy's final movement, called its <strong>catastrophe</strong>. Then you read the final scene yourself. Only after you have read it do we come back to discuss what happened and what it resolves.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define a tragic catastrophe and place it in the shape of a tragedy's plot.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace how Claudius's plan for the duel unfolds once it is set in motion.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what the play resolves, and what it leaves unresolved, in its final minutes.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128128; PART 1 &middot; A READING TOOL: THE SHAPE OF A CATASTROPHE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Critics since the Renaissance have described a tragedy's plot in five movements: an opening that sets the world in motion, rising action that builds pressure, a climax where the central choice turns, falling action that plays out the consequences, and finally the <strong>catastrophe</strong>, the last movement, where the pressure built across the whole play discharges at once. A catastrophe is not simply "the ending." It is the moment a play answers, one way or another, the questions it has spent every act asking. Nothing here tells you what happens in <em>Hamlet</em>'s catastrophe. It tells you what to watch for once you read it: which threads resolve, who is left standing when the pressure releases, and what the final minutes suggest about the questions this module has been asking about self-knowledge and self-government.</p>
+
+        <!-- CORE VISUAL: the five-part shape, generic reading tool -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">THE SHAPE OF A TRAGEDY'S PLOT</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <div style="flex: 1; min-width: 110px; background: #FFFFFF; border: 1px solid #C7CFE6; border-radius: 8px; padding: 10px 10px; text-align: center;"><div style="font-size: 13px; color: #0e1c42;"><strong>Exposition</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4;">The world and its trouble are introduced.</div></div>
+                <div style="flex: 1; min-width: 110px; background: #FFFFFF; border: 1px solid #C7CFE6; border-radius: 8px; padding: 10px 10px; text-align: center;"><div style="font-size: 13px; color: #0e1c42;"><strong>Rising action</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4;">Choices and schemes build the pressure.</div></div>
+                <div style="flex: 1; min-width: 110px; background: #FFFFFF; border: 1px solid #C7CFE6; border-radius: 8px; padding: 10px 10px; text-align: center;"><div style="font-size: 13px; color: #0e1c42;"><strong>Climax</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4;">The central choice turns, for good.</div></div>
+                <div style="flex: 1; min-width: 110px; background: #FFFFFF; border: 1px solid #C7CFE6; border-radius: 8px; padding: 10px 10px; text-align: center;"><div style="font-size: 13px; color: #0e1c42;"><strong>Falling action</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4;">Consequences play out, faster now.</div></div>
+                <div style="flex: 1; min-width: 110px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 10px 10px; text-align: center;"><div style="font-size: 13px; color: #0e1c42;"><strong>Catastrophe</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4;">The built-up pressure discharges. You are here.</div></div>
+            </div>
+        </div>
+
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 14px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read now, before you go further:</strong> <em>Hamlet</em>, Act V, scene 2, from the duel to the end. <a href="https://www.folger.edu/explore/shakespeares-works/hamlet/read/5/2/" style="color: #3B4E8C;">Folger Shakespeare, <em>Hamlet</em> 5.2</a>.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9876;&#65039; PART 2 &middot; NOW THAT YOU'VE READ IT: THE CATASTROPHE SPRINGS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The duel you just read begins as sport and turns to slaughter. Claudius had prepared two deaths in case one failed: a blade with an unblunted, poisoned tip for Laertes to use, and a poisoned cup of wine for Hamlet if the sword did not land. Both go wrong for their maker. Gertrude, celebrating a hit, drinks from the cup meant for her son and dies warning him: "The drink, the drink! I am poisoned" (5.2). In a scuffle the poisoned blade cuts Hamlet and then, in the confusion, cuts Laertes with his own weapon. Dying, Laertes confesses the whole scheme and names its author: "the King, the King's to blame" (5.2). Only now, with proof in his own veins and his mother dead in front of him, does Hamlet finally strike. The revenge the Ghost demanded in Act I arrives in the final minute, and only because Hamlet is himself dying.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">But look at who is left standing. Horatio, the steady friend who has watched from the first scene, reaches for the poisoned cup to die beside Hamlet, and Hamlet stops him with his last real effort. Someone has to live: "report me and my cause aright / To the unsatisfied" (5.2). Hamlet's dying wish is not for revenge, which he already has, but for the <em>truth</em> to be told rightly. Then: "The rest is silence" (5.2). Horatio's farewell, "Good night, sweet prince, / And flights of angels sing thee to thy rest" (5.2), closes the human story. Fortinbras, the acting prince from the Norway thread, marches in, claims the empty throne, and orders Hamlet carried off like a soldier. The state goes on; the family is gone. That discharge, all at once, is the catastrophe the reading tool above named.</p>
+
+        <!-- Interactive comprehension: match who to how (student supplies it, after reading) -->
+        <div class="optima-widget ow-match" data-done="All five matched. You have traced the whole catastrophe: who falls, how, and who is left to carry the story forward.">
+            <div class="widget-kicker">&#129513; MATCH EACH PERSON TO WHAT HAPPENS TO THEM</div>
+            <div class="widget-question">Reread the final scene if you need to. Click a name, then click what happens to them in the last minutes of the play.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:180px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">PERSON</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="gertrude">Gertrude</button>
+                        <button data-key="laertes">Laertes</button>
+                        <button data-key="claudius">Claudius</button>
+                        <button data-key="hamlet">Hamlet</button>
+                        <button data-key="horatio">Horatio</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:180px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHAT HAPPENS</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="horatio">Is stopped from dying and charged to tell the story truly</button>
+                        <button data-key="claudius">Is stabbed with the poisoned blade and forced to drink his own poison</button>
+                        <button data-key="gertrude">Drinks from the poisoned cup meant for her son</button>
+                        <button data-key="hamlet">Is cut by the poisoned blade and dies just after avenging his father</button>
+                        <button data-key="laertes">Is cut by his own poisoned blade and confesses the plot before he dies</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Hamlet's last request is that Horatio live to "report me and my cause aright" (5.2). In four or five sentences, explain why a play so full of spying and false stories ends by entrusting one man with the true one. Quote the charge to Horatio and cite it. Then connect it back to the module's question: what does it suggest about self-government that Hamlet's final act is to secure the truth rather than the throne?</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can give you a reliable list of who dies and how in the final scene. Be careful asking it to interpret the ending, though: whether Fortinbras's arrival is a hopeful restoration of order or a bleak foreign takeover is a real debate, and an AI may pick one and sound certain. Decide it yourself from what the text shows and does not show.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 6.04: Citing the Play</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Now that you know the whole play, learn to quote and cite it correctly for your discussion, essay, and project.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You have finished <em>Hamlet</em>. The examined self ends not with a solved question but with a truth handed on to a friend. Hold the whole arc in view; this week's discussion and the project ahead ask you to judge it.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 6.03 &middot; The Rest Is Silence</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
