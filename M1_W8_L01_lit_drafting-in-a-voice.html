@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 8.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .widget-options { display:flex; flex-direction:column; gap:8px; }
+    .widget-options button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .widget-options button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .widget-options button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 8 &middot; Lesson 8.01</div>
+        <div style="font-size: 12px; color: #0e1c42;">Project Craft</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Drafting in a Character's Voice</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Toward</div>
+        <div style="font-size: 16px; color: #0e1c42;">Your draft, due this week</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 8.01 &middot; Project Craft</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Drafting in a Character's Voice</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A soliloquy is a shape, not just a mood. Give your character a beginning, a turn, and an end, and the lines will follow.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have a plan: a character, a gap in the play, and something they want. Today you turn that plan into a draft. The trick is structure. Every soliloquy you studied this quarter moved through a shape, from a starting feeling or question, through a turn, to a decision or new understanding. Build your scene on that shape and the blank verse becomes a container to fill, not a blank page to fear.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> shape my scene into an opening, a turn, and a close.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> write lines that mostly hold the five-beat rhythm and land one antithesis.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> keep one clear want driving the whole speech.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129513; PART 1 &middot; THE SHAPE OF A SOLILOQUY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Look back at what you learned. Hamlet's first soliloquy opens in grief, turns when he names his mother's marriage, and closes by shutting his own mouth. "To be, or not to be" opens with a question, turns on "perchance to dream," and closes on conscience. The pattern is <strong>opening, turn, close</strong>. Your scene needs the same spine. Use the skeleton below as a container; fill each part with your character's want.</p>
+
+        <!-- CORE VISUAL: soliloquy skeleton (structural, not a copyable sample) -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">A SCENE SKELETON TO FILL (roughly 20&ndash;40 lines)</div>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="background: #FFFFFF; border-left: 5px solid #C7922C; border-radius: 8px; padding: 12px 16px;"><div style="font-size: 15px; color: #0e1c42;"><strong>Opening (the feeling or question)</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Where is your character, and what pulls the words out of them right now? Start in the middle of the feeling, not with throat-clearing.</div></div>
+                <div style="background: #FFFFFF; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 12px 16px;"><div style="font-size: 15px; color: #0e1c42;"><strong>The turn (a new thought or fact)</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Something shifts: a memory, a realization, a decision forming. This is where your antithesis often earns its place, holding two possibilities against each other.</div></div>
+                <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 8px; padding: 12px 16px;"><div style="font-size: 15px; color: #0e1c42;"><strong>Close (the landing)</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">The character arrives somewhere they were not at the start: a choice, a resolve, a fuller grief. End on a line that could be spoken and remembered.</div></div>
+            </div>
+        </div>
+
+        <!-- Interactive: apply the shape to the real soliloquy (student supplies the order, grounded in the actual text) -->
+        <div class="optima-widget ow-order" data-done="That is the order Hamlet's first soliloquy actually follows: grief, then the turn to his mother, then the vow of silence." style="margin-top:18px;">
+            <div class="widget-kicker">&#129513; NOW YOU: FIND THE SHAPE IN THE REAL THING</div>
+            <div class="widget-question">Here are three excerpts from Hamlet's actual first soliloquy (Act I, sc. 2). Click them in the order they occur, matching opening &rarr; turn &rarr; close.</div>
+            <div class="order-list">
+                <button data-order="3"><span class="seq" data-default="?">?</span>&ldquo;But break, my heart, for I must hold my tongue.&rdquo;</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span>&ldquo;O, that this too too solid flesh would melt, / Thaw, and resolve itself into a dew!&rdquo;</button>
+                <button data-order="2"><span class="seq" data-default="?">?</span>&ldquo;But two months dead, nay, not so much, not two&hellip; Frailty, thy name is woman!&rdquo;</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9999;&#65039; PART 2 &middot; DRAFTING TACTICS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Get the thought down first, then shape it to the beat; do not try to write perfect pentameter on the first pass. Say each line aloud as you go, since your ear will catch a limp line faster than your eye. Keep one want in view: if a line does not serve what your character is after, cut it. And do not narrate stage directions in the verse; let the words imply the action, the way Shakespeare's do.</p>
+
+        <!-- Interactive: craft self-check on openings, student judges rather than is handed the answer -->
+        <div class="optima-widget ow-select" style="margin-top:16px;">
+            <div class="widget-kicker">&#129513; WHICH OPENING EARNS ITS PLACE?</div>
+            <div class="widget-question">Two invented opening lines for a soliloquy. Which one starts in the middle of the feeling, the way Hamlet's own openings do?</div>
+            <div class="widget-options">
+                <button data-response="Yes. It opens on a live feeling and an image, no throat-clearing, the way &ldquo;O, that this too too solid flesh would melt&rdquo; does.">&ldquo;I stood upon the rampart wall tonight, and watched a thing I cannot name.&rdquo;</button>
+                <button data-response="Not quite. This announces that a speech is about to happen instead of starting inside the feeling. Cut the throat-clearing and open on the thing itself.">&ldquo;I have many thoughts to share tonight about what I have seen and felt.&rdquo;</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Before you draft in your document, sketch your scene's spine in your Journal: one line naming the opening feeling or question, one line naming the turn, one line naming the close. Then note the single want that runs through all three. Keep this beside you as you draft so the scene does not wander. You will write the full draft in the assignment document, not here.</div>
+        </div>
+    </div>
+
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#129302; WORKING WITH CLAUDE ON THIS PROJECT</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">The lines must be yours; generating them with AI defeats the whole assignment and reads as generic on the page. The <strong>Elsinore Stage Workshop</strong> page has the right, narrow step for Claude here: checking rhythm, never drafting. Use that step, and log it, when you sit down to write.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 8.02: Sounding Like the Play</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">How to match Shakespeare's register and avoid the anachronisms that break the spell.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A scene with a clear shape and a single want is already most of the way to good. Draft boldly this week; you will have next week to refine. Get the spine down first.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 8.01 &middot; Drafting in a Character's Voice</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .order-list button').forEach(function (b) { b.classList.remove('selected','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      w._orderSeq=0;
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and think back to the soliloquy.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
