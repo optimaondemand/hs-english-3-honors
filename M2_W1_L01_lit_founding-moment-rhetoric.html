@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all 0.15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1 &middot; Lesson 2.01</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Founding Moment &amp; Rhetorical Appeals</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Federalist (context)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.01 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Founding Moment &amp; Rhetorical Appeals</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The founders did not decree the Constitution. They had to argue for it, in public, one newspaper essay at a time.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In 1787 the fate of the Constitution hung on persuasion. Before you read Madison, you need two things: the situation he was writing into, and the tools every persuader uses. Today you learn the founding moment and the three classic <strong>rhetorical appeals</strong>, ethos, logos, and pathos, so that when you read the Federalist you can name exactly how it works on a reader.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why the founders argued for the Constitution in public essays.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define ethos, logos, and pathos and tell them apart.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> spot an appeal at work in a short piece of persuasion.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN (no wrong answer)</div>
+            <div class="widget-question">When someone is trying to convince you of something, what tends to work best on you?</div>
+            <div class="widget-options">
+                <button data-response="That is an appeal to ethos: you are persuaded by the speaker's credibility and character. Watch how Publius builds authority as a calm, informed voice.">Whether I trust the person</button>
+                <button data-response="That is logos: you are persuaded by reasoning and evidence. The Federalist leans hard on logos, chains of if-then argument. Watch for it.">Whether the logic holds up</button>
+                <button data-response="That is pathos: you are moved by feeling. Even a coolly reasoned essay uses some pathos, fear of collapse, pride in the new nation. Watch where it appears.">How it makes me feel</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Why argue in the newspapers?</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">When the Constitutional Convention finished its draft in 1787, the document still had to be <strong>ratified</strong>, approved, by the states, and many Americans were suspicious of a stronger national government. So supporters took their case to the public. Writing under the shared pen name <strong>Publius</strong>, Alexander Hamilton, James Madison, and John Jay published essays in New York newspapers arguing, point by point, that the Constitution deserved support. These became <em>The Federalist</em>. The key thing to notice: this was not a command from above. It was persuasion aimed at ordinary readers who could vote the Constitution down. To read the Federalist well, you read it as an argument built to win a real audience.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127914; PART 2 &middot; THE THREE APPEALS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">Since Aristotle, readers have named three ways a text persuades. Most strong arguments use all three; naming them lets you see how a writer is working on you.</p>
+
+        <!-- CORE VISUAL: rhetorical triangle -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">THE RHETORICAL APPEALS</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>Ethos</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">credibility &amp; character</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Persuasion through the speaker's authority and trustworthiness. "Trust me: I am fair, informed, and on your side."</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>Logos</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">logic &amp; evidence</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Persuasion through reasoning: facts, causes and effects, if-then chains. The Federalist's main engine.</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>Pathos</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">emotion</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Persuasion through feeling: fear of collapse, hope for the republic, pride, urgency.</div></div>
+            </div>
+        </div>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 16px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Begin reading:</strong> open <em>The Federalist No. 10</em> and read the first few paragraphs, listening for the voice of Publius. You will read the whole essay across the next two lessons. <a href="https://avalon.law.yale.edu/18th_century/fed10.asp" style="color: #3B4E8C;">The Avalon Project, Yale Law School</a>.</div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE: post-reading comprehension. Student names the appeal at work in lines from the opening of No. 10 (student supplies the analysis; page does not pre-label). -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 3 &middot; NOW YOU: NAME THE APPEAL</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">You have started reading No. 10 and met the voice of Publius. Look back at the lines below from the opening pages and decide, from what you actually read, which appeal each one leans on hardest.</p>
+        <div class="optima-widget ow-match" data-done="All three appeals, at work on the very first page of the essay.">
+            <div class="widget-kicker">&#129513; CLICK A LINE, THEN THE APPEAL IT LEANS ON</div>
+            <div class="widget-question">Match each line from the opening of No. 10 to the appeal it relies on most.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">LINE FROM NO. 10</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="ethos">&ldquo;None deserves to be more accurately developed than its tendency to break and control the violence of faction.&rdquo; (Federalist No. 10)</button>
+                        <button data-key="pathos">&ldquo;The friend of popular governments never finds himself so much alarmed for their character and fate, as when he contemplates their propensity to this dangerous vice.&rdquo; (Federalist No. 10)</button>
+                        <button data-key="logos">&ldquo;The latent causes of faction are thus sown in the nature of man; and we see them everywhere brought into different degrees of activity, according to the different circumstances of civil society.&rdquo; (Federalist No. 10)</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">APPEAL</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="logos">Logos: a general claim about cause and effect in human nature, offered as reasoning to be tested.</button>
+                        <button data-key="ethos">Ethos: a careful, measured promise from the writer to develop the case &ldquo;accurately,&rdquo; before a single argument has even been made.</button>
+                        <button data-key="pathos">Pathos: real alarm, fear for whether a free government can survive its own worst tendency.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Set up your Module 2 Organizer, then start an "appeals watch." As you begin No. 10, copy one short sentence where Publius seems to use each appeal, or as many as you find so far, and label it ethos, logos, or pathos. To decide: ask whether the sentence works by authority (ethos), by reasoning (logos), or by feeling (pathos). You will add to this list all week.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can define the three appeals and give textbook examples. Where it is weaker is judging a real, mixed passage, where a single sentence may work by logic and feeling at once. Use it to check a definition, then do the labeling yourself; the disagreements are where you actually learn to read rhetoric.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.02: Factions and Their Causes</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Madison names the great danger to the republic and explains why liberty itself feeds it.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Every text in this quarter is someone making a public case: Publius for a constitution, Emerson for the self, Douglass for freedom. The appeals are your lens on all of them, and the tools you will use in your own Publius Returns op-ed.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.01 &middot; The Founding Moment &amp; Rhetorical Appeals</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button').forEach(function (b) { b.classList.remove('selected'); b.classList.remove('matched'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w._matchPick = null;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
