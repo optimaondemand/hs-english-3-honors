@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1 &middot; Lesson 2.02</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (2 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Factions and Their Causes</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Federalist No. 10</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.02 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Factions and Their Causes</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A brand-new nation asks a nervous question: now that we are free, what will tear us apart?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Writing as "Publius" in 1787, James Madison names the greatest danger he sees to the young republic: the <strong>faction</strong>, a group that puts its own interest above everyone else's. Today you read the first half of <em>Federalist No. 10</em> and follow Madison's reasoning about what factions are, where they come from, and why he says you cannot cure them by taking away freedom.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define a faction in Madison's terms and name its causes.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain his "air and fire" comparison between liberty and faction.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace the cause-and-effect structure of Madison's argument.</div>
+        </div>
+    </div>
+
+    <!-- Historical context -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127963;&#65039; WHEN AND WHY THIS WAS WRITTEN</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The Revolution had been won, but the young United States was struggling under the Articles of Confederation, a weak national government that left the states quarreling. In 1786, Shays' Rebellion, an armed tax revolt by Massachusetts farmers, frightened leaders who feared the whole experiment might collapse. To win support for a new Constitution, Madison, Alexander Hamilton, and John Jay published a series of newspaper essays under the shared pen name <strong>Publius</strong>. <em>Federalist No. 10</em> is Madison's answer to a hard question: can a government by the people survive its own people's divisions?</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT IS A FACTION, AND WHERE DOES IT COME FROM?</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Madison defines a faction as a group of citizens, "whether amounting to a majority or a minority of the whole," who are "united and actuated by some common impulse of passion, or of interest, adverse to the rights of other citizens, or to the permanent and aggregate interests of the community" (Federalist 10). In plainer terms: a faction is a group that pushes its own goal even when it harms everyone else. And note the danger Madison flags, a faction can be a <em>majority</em>. Where do factions come from? From human nature itself: as long as people are free to think, they will reach different opinions and pursue different interests. Madison points to one cause above all: "the most common and durable source of factions has been the various and unequal distribution of property" (Federalist 10). The rich and the poor, creditors and debtors, merchants and farmers, each will pull toward its own advantage.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128293; PART 2 &middot; MADISON'S IMAGE: LIBERTY AND FACTION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">If factions are so dangerous, why not simply outlaw them? Because, Madison argues, you cannot kill faction without killing freedom itself. He makes the point with one of the most memorable images in American political writing.</p>
+
+        <!-- CORE VISUAL: air and fire analogy -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px; text-align: center;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 16px;">"LIBERTY IS TO FACTION WHAT AIR IS TO FIRE" (FEDERALIST 10)</div>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 0; flex-wrap: wrap;">
+                <div style="background: #FFFFFF; border: 2px solid #3B4E8C; border-radius: 8px; padding: 14px 20px; min-width: 130px;"><div style="font-size: 28px;">&#128168;</div><div style="font-size: 16px; color: #0e1c42;"><strong>Air</strong></div><div style="font-size: 13px; color: #1a2340;">feeds fire</div></div>
+                <div style="font-size: 26px; color: #3B4E8C; padding: 0 16px;">=</div>
+                <div style="background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 14px 20px; min-width: 130px;"><div style="font-size: 28px;">&#128293;</div><div style="font-size: 16px; color: #0e1c42;"><strong>Liberty</strong></div><div style="font-size: 13px; color: #1a2340;">feeds faction</div></div>
+            </div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 16px; max-width: 680px; margin-left:auto; margin-right:auto;">Take away air and the fire dies, but you cannot remove all the air without destroying life itself. Likewise, you could end faction by ending liberty, but then you would have destroyed the very thing the republic exists to protect. So the cure cannot be less freedom. It must be a design that <em>controls the effects</em> of faction. That is the problem Madison sets up here and solves in the second half of the essay.</div>
+        </div>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 16px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> <em>The Federalist No. 10</em>, first half (through Madison's statement that the cure must control faction's effects, not remove its causes). Public-domain text: <a href="https://avalon.law.yale.edu/18th_century/fed10.asp" style="color: #3B4E8C;">The Avalon Project, Yale Law School</a>.</div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE: post-reading comprehension. Student reconstructs the order of Madison's reasoning from the text (page does not pre-fill the sequence). -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129513; NOW YOU: REBUILD MADISON'S REASONING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">You just read the first half of No. 10. Put these five moves back in the order Madison actually makes them.</p>
+        <div class="optima-widget ow-order" data-done="That is the order Madison builds his case: name the danger, define it, trace it to human nature, name its main cause, then rule out the one cure that would cost too much.">
+            <div class="widget-kicker">CLICK THE FIVE MOVES IN ORDER</div>
+            <div class="widget-question">Sequence Madison's reasoning as it unfolds across the first half of No. 10.</div>
+            <div class="order-list">
+                <button data-order="4"><span class="seq" data-default="?">?</span> He names the &ldquo;most common and durable source of factions&rdquo;: &ldquo;the various and unequal distribution of property&rdquo; (Federalist No. 10).</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span> He warns that &ldquo;instability, injustice, and confusion&rdquo; have been &ldquo;the mortal diseases under which popular governments have everywhere perished&rdquo; (Federalist No. 10).</button>
+                <button data-order="3"><span class="seq" data-default="?">?</span> He traces faction to human nature itself: its &ldquo;latent causes...are thus sown in the nature of man&rdquo; (Federalist No. 10).</button>
+                <button data-order="2"><span class="seq" data-default="?">?</span> He defines a faction as citizens &ldquo;united and actuated by some common impulse of passion, or of interest, adverse to the rights of other citizens&rdquo; (Federalist No. 10).</button>
+                <button data-order="5"><span class="seq" data-default="?">?</span> He rules out removing liberty as the cure: &ldquo;Liberty is to faction what air is to fire, an aliment without which it instantly expires&rdquo; (Federalist No. 10).</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Lay out Madison's cause and effect in your Journal. In three or four sentences: name the <em>cause</em> of faction as Madison sees it, name the <em>effect</em> he fears for a government (quote the phrase about the "mortal diseases" of popular governments and cite it), and explain in your own words why he says the answer cannot be to remove liberty. Quote at least one line from No. 10 and cite it (Federalist 10).</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can paraphrase Madison's argument and define "faction," which helps if the eighteenth-century sentences run long. Be careful with quotations: AI often rewords a famous line slightly, and a misquoted founding document is a real error. Whenever you plan to quote No. 10, copy the words from the text itself, not from an AI's summary.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.03: The Extended Republic</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Madison's surprising solution: a bigger, representative republic is safer from faction than a small direct democracy.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Madison does not pretend people are angels. He builds his argument on the assumption that we are self-interested and divided, and then asks how a free government can survive that fact. Hold his diagnosis in mind; next lesson you see his cure.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.02 &middot; Factions and Their Causes</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.order-list button').forEach(function (b) { b.classList.remove('picked'); var s = b.querySelector('.seq'); if (s) s.textContent = s.dataset.default || '?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w._orderSeq = 0;
+      return;
+    }
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq = (ow._orderSeq || 0) + 1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen = ow._orderSeq; var seq = oBtn.querySelector('.seq'); if (seq) seq.textContent = ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok = true; all.forEach(function (b) { if (b.dataset.chosen !== b.dataset.order) ok = false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order Madison follows. Hit Reset and reread the first half of No. 10.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
