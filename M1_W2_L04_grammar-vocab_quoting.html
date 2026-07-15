@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.04</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-direction: column; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 10px 14px; font-size: 15px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    table.wordstudy { width: 100%; border-collapse: collapse; margin: 6px 0; }
+    table.wordstudy th { background: #0E1C42; color: #fff; font-size: 13px; text-align: left; padding: 9px 12px; border: 1px solid #334; }
+    table.wordstudy td { font-size: 15px; color: #1a2340; padding: 9px 12px; border: 1px solid #D0D9E8; vertical-align: top; line-height: 1.5; }
+    table.wordstudy tr:nth-child(even) td { background: #F4F6FA; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2 &middot; Lesson 2.04</div>
+        <div style="font-size: 12px; color: #0e1c42;">Grammar &amp; Vocabulary</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Quoting the Play: Integration &amp; Punctuation</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Word Study</div>
+        <div style="font-size: 16px; color: #0e1c42;">brevity, pestilent</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.04 &middot; Grammar &amp; Vocabulary</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Quoting the Play: Integration &amp; Punctuation</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; one combined grammar and vocabulary session</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A quotation dropped into a paragraph sits there like a stone. A quotation woven in becomes part of your own sentence's muscle.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">All week your Journal tasks have asked you to quote the play, and every claim you post in this week's discussion needs lines behind it. So today's grammar is the mechanics of doing that cleanly: how to <strong>integrate a quotation</strong> into your own sentence and how to <strong>punctuate</strong> the seam so no reader can see the stitching. Then two words from Act II for your Word Study.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> weave a quoted phrase into my own sentence so the grammar of the whole still works.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose the right punctuation for each setup: comma, colon, or none at all.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use two Act II words precisely in sentences of my own.</div>
+        </div>
+    </div>
+
+    <!-- PART 1: three ways in + core visual -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9999;&#65039; PART 1 &middot; THREE WAYS TO BRING A QUOTATION IN</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">There are three standard ways to attach quoted words to your own, and the punctuation follows from which one you choose. <strong>Woven:</strong> the quoted phrase serves as a grammatical part of your sentence (a noun, an object, a description), and you use <em>no</em> extra punctuation before it. <strong>Speech tag:</strong> a short introducing clause like <em>Hamlet says</em> or <em>Polonius insists</em> takes a <em>comma</em> before the quotation. <strong>Colon setup:</strong> a complete sentence of your own, followed by a <em>colon</em>, then the quotation standing as evidence. The test is always the same: read the sentence aloud with the quotation marks removed. If it sounds like one grammatical sentence, the seam is clean. After the quotation, cite act and scene in parentheses: (2.2).</p>
+
+        <!-- CORE VISUAL: the quotation-weaving board -->
+        <div style="background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 10px; padding: 20px; margin: 8px 0 6px 0;">
+            <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.6px; margin-bottom: 12px;">ONE LINE, THREE CLEAN SEAMS &middot; AND ONE BROKEN ONE</div>
+            <div style="background: #FDF3E3; border-radius: 6px; padding: 12px 16px; margin-bottom: 10px; font-size: 16px; color: #1a2340;"><strong style="color: #C7922C;">&#10007; Dropped in (avoid):</strong> Hamlet mocks Polonius. "Words, words, words" (2.2). The quotation floats alone; no sentence of yours holds it.</div>
+            <div style="text-align: center; font-size: 22px; color: #3B4E8C; margin: 4px 0;">&#8595;</div>
+            <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; font-size: 16px; color: #0e1c42; line-height: 1.55;"><strong>Woven (no punctuation):</strong> Hamlet deflates Polonius's question by reducing his book to <span style="background:#dfe6f5; border-radius:4px; padding:1px 4px;">"words, words, words"</span> (2.2).</div>
+            <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; font-size: 16px; color: #0e1c42; line-height: 1.55;"><strong>Speech tag (comma):</strong> Baffled but impressed, Polonius admits<span style="background:#dfe6f5; border-radius:4px; padding:1px 4px;">,</span> "Though this be madness, yet there is method in 't" (2.2).</div>
+            <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 12px 16px; font-size: 16px; color: #0e1c42; line-height: 1.55;"><strong>Colon setup (colon):</strong> The act ends with a plan, not a feeling<span style="background:#dfe6f5; border-radius:4px; padding:1px 4px;">:</span> "The play's the thing / Wherein I'll catch the conscience of the King" (2.2).</div>
+            <div style="font-size: 14px; color: #1a2340; margin-top: 10px;">The shaded spots mark the seam. Notice the last example keeps the slash ( / ) where the verse line breaks; keep it whenever you quote more than one line of verse inside your paragraph.</div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 6px 0 16px 0;">Two more mechanics worth locking in now. First, if you trim or adjust a quoted word so it fits your grammar, show the change in square brackets: Hamlet swears the actor "would drown the stage with tears" while he himself remains "unpregnant of [his] cause" (2.2). Second, quote the smallest piece that proves your point; a few exact words inside a strong sentence of yours beat four lines copied out.</p>
+
+        <!-- Interactive self-check: correct vs incorrect integration (mechanics only) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9997;&#65039; NOW YOU: WHICH SEAM IS CLEAN?</div>
+            <div class="widget-question">Click each sentence below and see what it gets right or wrong about integrating this line from Act II: Polonius's "brevity is the soul of wit" (2.2).</div>
+            <div class="widget-options">
+                <button data-response="Not quite. A &quot;that&quot; clause introducing a quotation takes no comma at all; the words after &quot;that&quot; are woven straight into your sentence. Drop both commas and try again.">Polonius insists that, "brevity is the soul of wit" (2.2), while he rambles on for another twenty lines.</button>
+                <button data-response="This is clean. The quotation serves as the direct object of &quot;insists,&quot; so no comma sits at the seam, and the citation follows right after the closing quotation mark.">Polonius insists "brevity is the soul of wit" (2.2), while he rambles on for another twenty lines.</button>
+                <button data-response="The seam itself is fine, but the citation is missing. Every quotation needs its act and scene in parentheses, even when the sentence around it is well built.">Polonius insists "brevity is the soul of wit," while he rambles on for another twenty lines.</button>
+                <button data-response="Two problems here: a colon needs a complete sentence of your own in front of it, and &quot;while he rambles on&quot; is not one. The quotation marks are also missing, so the borrowed words no longer read as a quotation at all.">Polonius insists that brevity is the soul of wit: while he rambles on for another twenty lines (2.2).</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- practice (help up front, no dropdown) -->
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Take Hamlet's line "Denmark's a prison" (2.2) and write it into your Journal three times, once in each pattern: woven into your own sentence with no punctuation at the seam, introduced by a speech tag with a comma, and set up by a complete sentence with a colon. Then read each aloud without the quotation marks and mark the one that flows best. Keep the citation (2.2) after every version. You will use your favorite pattern in this week's discussion post.</div>
+        </div>
+    </div>
+
+    <!-- PART 2: Word Study -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128213; PART 2 &middot; WORD STUDY (from Act II)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Two words from Act II, defined where they appear.</p>
+        <table class="wordstudy">
+            <thead><tr><th style="width: 150px;">Word</th><th>In the play</th><th>What it means</th><th>Word origin</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>brevity</strong><br /><span style="font-size: 12px; color: #3B4E8C;">noun</span></td>
+                    <td>Polonius promises the king and queen that "brevity is the soul of wit" (2.2), then talks on at great length.</td>
+                    <td>Shortness in speech or writing; saying a thing in few words.</td>
+                    <td>From Latin <em>brevitas</em>, from <em>brevis</em> ("short"); the same root gives "brief" and "abbreviate," all carrying the plain sense of shortness.</td>
+                </tr>
+                <tr>
+                    <td><strong>pestilent</strong><br /><span style="font-size: 12px; color: #3B4E8C;">adjective</span></td>
+                    <td>Hamlet tells his old friends the very air has become "a foul and pestilent congregation of vapors" (2.2).</td>
+                    <td>Spreading disease or harm; poisonous, deadly to health or spirit.</td>
+                    <td>From Latin <em>pestilentem</em>, from <em>pestis</em> ("plague, deadly disease"); a word for fatal epidemic came to describe anything poisonous or corrupting.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
+            <div class="rj-task">Add both words to the Word Study section of your Journal. For each, write one new sentence of your own on a subject that has nothing to do with <em>Hamlet</em>, keeping the meaning exact. For example, for <em>brevity</em>: "The coach's halftime speech was ten seconds long, and its brevity said more than a lecture could." Aim to make the sentence show the meaning, not just contain the word. Notice how <em>pestilent</em>'s root sense of literal plague still echoes when we call an idea or influence "pestilent."</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#128172;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Discussion: The Antic Disposition</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Make your claim about Hamlet's madness and back it with exact Act II lines, woven in with the seams you practiced today. Then confirm your Week 2 checklist on the Module Map.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Every analytical sentence you write this year will carry evidence, and the seam between your words and the text's words is where readers judge your control. Weave, tag, or set up with a colon; never just drop the stone and walk away.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.04 &middot; Quoting the Play: Integration &amp; Punctuation</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
