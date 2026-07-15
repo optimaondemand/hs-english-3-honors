@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 7.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-direction: column; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 10px 14px; font-size: 15px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0 0 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 7 &middot; Lesson 7.02</div>
+        <div style="font-size: 12px; color: #0e1c42;">Project Craft</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Writing the Lost Scene</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Sets up</div>
+        <div style="font-size: 16px; color: #0e1c42;">The Elsinore Stage (Wks 8&ndash;9)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 7.02 &middot; Project Craft</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Writing the Lost Scene</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Every play has doors it never opens: a character offstage, a silence, a scene we only hear about. Your project walks through one of those doors.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">For your Module 1 project, the <strong>Elsinore Stage</strong>, you join Shakespeare's company and write an original missing scene or soliloquy for a secondary character: Ophelia, Laertes, Gertrude, Horatio, or Fortinbras. This is not fan fiction; it is a form of interpretation. To write a character's hidden moment convincingly, you have to understand them as well as Shakespeare did. Today you learn how the project works and how to find the right gap to fill.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify a genuine gap in the play where a lost scene could plausibly live.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> list what my scene must stay consistent with in the real play.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> plan a scene in blank verse that carries one clear point of view.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT THE PROJECT IS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Over Weeks 8 and 9 you will draft and then finalize a short original piece, roughly 20 to 40 lines, that could slot into the real <em>Hamlet</em>: a soliloquy Ophelia never gets, the letter-scene Horatio only reports, Fortinbras's council before he marches. You will write it in loose <strong>blank verse</strong> (the five-beat line from Week 1), work in at least one named rhetorical figure such as antithesis, and hold a single clear point of view so the character wants something on the page. This is <strong>imitation</strong> in the oldest sense: you learn an author's craft by writing in their manner. The goal is not parody but fidelity, catching how your character actually thinks and speaks.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129513; PART 2 &middot; ANATOMY OF A LOST SCENE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">A convincing lost scene answers three questions before you write a line. Use your Week 4 Character Dossier to answer them.</p>
+
+        <!-- CORE VISUAL: anatomy -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">THREE QUESTIONS EVERY LOST SCENE MUST ANSWER</div>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="background: #FFFFFF; border-left: 5px solid #C7922C; border-radius: 8px; padding: 12px 16px;"><div style="font-size: 15px; color: #0e1c42;"><strong>1. Where does it slot in?</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Name the exact seam in the real play: after which scene, during which offstage event. The gap should be real, a place the play genuinely leaves open, not a contradiction of what we see.</div></div>
+                <div style="background: #FFFFFF; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 12px 16px;"><div style="font-size: 15px; color: #0e1c42;"><strong>2. Whose voice, and what do they want here?</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Your character must want something in this moment, and it should grow out of the want you traced in your dossier. Give them a reason to speak now.</div></div>
+                <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 8px; padding: 12px 16px;"><div style="font-size: 15px; color: #0e1c42;"><strong>3. What must it not contradict?</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">List the facts your scene has to respect: what the character knows and does not know at that point, and what the real play shows happening before and after. Consistency is what makes it feel like Shakespeare's, not yours pasted in.</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PART 3: interactive comprehension, applied after the craft lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127917; PART 3 &middot; HEAR THE REGISTER</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">A student drafting a lost scene for Horatio, mourning quietly after Hamlet's death, tried four different opening lines. Only one holds the play's register: loose blank verse, elevated but plain diction, feeling shown rather than reported. Read all four, then choose the one that actually sounds like it could stand in the play.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#128172; WHICH DRAFT LINE BEST IMITATES THE PLAY'S VOICE?</div>
+            <div class="widget-question">Four student drafts for the same moment. Which one belongs in Elsinore?</div>
+            <div class="widget-options">
+                <button data-response="This is the strongest draft. It holds a loose iambic rhythm, plain but elevated diction, and does what a soliloquy does: it reveals a feeling instead of announcing one.">"My friend is gone, and with him goes the light / that kept this castle's darkness somewhat kind."</button>
+                <button data-response="This breaks the register entirely. Contractions and casual phrases like 'kind of scary' would never survive in Elsinore. Grief in this play speaks through image and figure, not commentary.">"I can't believe he's actually dead. It's so unfair, and honestly kind of scary."</button>
+                <button data-response="This tells us what happened instead of catching feeling in the moment. A soliloquy is a mind caught thinking, not a summary for someone who missed the play.">"Hamlet was a good prince who died fighting for justice and revenge against his uncle who killed his father."</button>
+                <button data-response="This overdoes it. Piling up 'O woe,' 'alack,' and exclamation points imitates the surface of old language without the work underneath: restraint, evidence, one specific image. Volume is not the same as feeling.">"O woe! O grief! O sorrow beyond measure! Alack, alack, my heart doth break in twain!"</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Plan your lost scene by answering the three questions in your Journal. Name the exact seam where your scene slots in; name your character and the one thing they want in that moment; and list two or three facts from the real play your scene must not contradict. Pull from your Week 4 Character Dossier. This plan becomes your Week 8 draft, so make it specific.</div>
+        </div>
+    </div>
+
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#129302; WORKING WITH CLAUDE ON THIS PROJECT</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">The writing of this scene must be your own; that is the whole assignment. The <strong>Elsinore Stage Workshop</strong> page has a built-in step for using Claude the right way: it can check your lines for rhythm or plot contradictions, never generate or rewrite them. You will do that step, and log it, when you get there.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 7.03: Speaking the Verse</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Prepare your recitation: how to mark a passage so your voice carries its meaning.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Writing inside another author's world is one of the fastest ways to learn how it was built. Choose your gap with care this week; a good gap does half the work of a good scene.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 7.02 &middot; Writing the Lost Scene</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
