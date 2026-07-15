@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2 &middot; Lesson 2.03</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (3 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Rogue and Peasant Slave</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Hamlet, Act II, sc. 2 (second half)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.03 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Rogue and Peasant Slave</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">An actor weeps real tears for an imaginary queen, and a prince who has real cause to weep asks himself why he has done nothing.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Act II ends with the arrival of a troupe of traveling actors and the play's second great soliloquy. Today you finish the act and study two techniques that lock together: the <strong>soliloquy of self-reproach</strong>, in which Hamlet turns his wit into a whip and uses it on himself, and the <strong>play-within-a-play</strong>, the device he invents in the same speech to test both the Ghost and the king.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why the First Player's speech about Hecuba strikes Hamlet so hard.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace the movement of the "rogue and peasant slave" soliloquy from self-contempt to a concrete plan.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define the play-within-a-play device and explain what Hamlet expects it to prove.</div>
+        </div>
+    </div>
+
+    <!-- PART 1: the reading -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE PLAYERS AND THE SPEECH ABOUT HECUBA</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When "the tragedians of the city" (2.2) arrive, Hamlet comes alive for the first time since Act I. He greets them warmly and asks the First Player for an old favorite, a speech he prizes even though the play it came from failed; it was, he says, "caviary to the general" (2.2), too fine for the crowd. The speech retells the fall of Troy: Pyrrhus, a Greek soldier whose father was killed in the war, butchers the old king Priam while the queen, Hecuba, "the mobl&egrave;d queen" (2.2), runs barefoot through the burning city. Listen to what the material is doing: a son avenging a father with a sword that falls without hesitation, exactly the act Hamlet has sworn and not performed. The actor is so caught in the telling that Polonius interrupts: "Look whe'er he has not turned his color and has tears in 's eyes" (2.2). A hired performer weeps over a fiction. Hamlet clears the room, and what that weeping unlocks in him is the soliloquy.</p>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 6px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> <em>Hamlet</em>, Act II, scene 2, from the players' arrival to the end of the act (the soliloquy that begins "O, what a rogue and peasant slave am I!"). <a href="https://www.folger.edu/explore/shakespeares-works/hamlet/read/2/2/" style="color: #3B4E8C;">Folger Shakespeare, <em>Hamlet</em> 2.2</a>.</div>
+        </div>
+    </div>
+
+    <!-- PART 2: the soliloquy of self-reproach -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128293; PART 2 &middot; THE SOLILOQUY OF SELF-REPROACH</div>
+
+        <!-- IMPROVED VISUAL: the general reading tool for a self-reproach soliloquy -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px; margin-bottom: 16px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">A READING TOOL: THE SHAPE OF A SELF-REPROACH SOLILOQUY</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0; border: 2px solid #0E1C42; border-radius: 10px; overflow: hidden;">
+                <div style="flex: 1; min-width: 190px; background: #FFFFFF; padding: 16px 18px;">
+                    <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.4px; margin-bottom: 8px;">1. THE ATTACK</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">The speaker turns hard against himself, naming his own failure in the harshest terms he can find.</div>
+                </div>
+                <div style="flex: 1; min-width: 190px; background: #EEF1F8; padding: 16px 18px; border-left: 2px solid #0E1C42;">
+                    <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.4px; margin-bottom: 8px;">2. THE REASONING</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">The attack cools into weighing: examining motives, testing evidence, questioning what he actually knows for certain.</div>
+                </div>
+                <div style="flex: 1; min-width: 190px; background: #FDF3E3; padding: 16px 18px; border-left: 2px solid #0E1C42;">
+                    <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.4px; margin-bottom: 8px;">3. THE RESOLVE</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">The speech ends not in another feeling but in a decision: a specific next step.</div>
+                </div>
+            </div>
+            <div style="font-size: 13px; color: #3B4E8C; text-align: center; margin-top: 12px;">Not every self-reproach speech uses all three stages in equal measure, but watch for this shape: attack, then reasoning, then resolve. It is the map for reading the soliloquy below.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You know from Week 1 that a soliloquy shows the private mind. This one shows a mind attacking itself. Alone, back in verse, Hamlet measures himself against the actor and loses: "O, what a rogue and peasant slave am I!" (2.2). The actor summoned real tears "in a fiction, in a dream of passion," while Hamlet, with a murdered father and a real charge, stays "unpregnant of my cause" (2.2), that is, carrying his task without bringing it to birth. The self-contempt boils into a fantasy of what the actor would do with Hamlet's motive, then curdles into name-calling aimed at himself, and then, watch closely, the speech pivots. Insulting yourself is still doing nothing, and Hamlet catches himself doing it. Out of the collapse comes reasoning: the Ghost might be lying, since "the devil hath power / T' assume a pleasing shape" (2.2), so the charge needs independent proof before it deserves blood. And the actors themselves suggest the instrument. This is the signature shape of a Hamlet soliloquy: feeling first, then thinking about the feeling, then a decision the feeling alone could never have produced.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">The central question of the speech is worth holding all module: "What's Hecuba to him, or he to Hecuba, / That he should weep for her?" (2.2). Why should pretended grief move a man more than real grief moves him? Keep your answer provisional; the play is not done with the question.</p>
+
+        <!-- Interactive comprehension: reconstruct the soliloquy's beats -->
+        <div class="optima-widget ow-order" data-done="That is the order the soliloquy actually follows: attack, reasoning, resolve." style="margin-top:6px;">
+            <div class="widget-kicker">&#128260; NOW YOU: PUT THE BEATS OF THE SOLILOQUY IN ORDER</div>
+            <div class="widget-question">Click these five moments from "O, what a rogue and peasant slave am I!" in the order they happen in the speech.</div>
+            <div class="order-list">
+                <button data-order="3"><span class="seq" data-default="?">?</span> He names his own failure directly: he remains "unpregnant of my cause" (2.2).</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span> He turns hard on himself: "O, what a rogue and peasant slave am I!" (2.2).</button>
+                <button data-order="4"><span class="seq" data-default="?">?</span> He reasons about the risk that the Ghost lied, since the devil "hath power / T' assume a pleasing shape" (2.2).</button>
+                <button data-order="2"><span class="seq" data-default="?">?</span> He measures himself against the actor, who wept real tears for a woman who never existed.</button>
+                <button data-order="5"><span class="seq" data-default="?">?</span> He settles on a plan: use the players so the play can "catch the conscience of the King" (2.2).</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 3: play-within-a-play + core visual -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127917; PART 3 &middot; THE DEVICE: A PLAY WITHIN THE PLAY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Hamlet's plan is to have the players perform a murder resembling his father's before the whole court, and to watch Claudius watch it. Guilty spectators, he reasons, betray themselves; the stage has been known to make "guilty creatures sitting at a play" proclaim "their malefactions" (2.2). The device is called the <strong>play-within-a-play</strong>: a staged performance inside the world of the drama, watched by the characters while we watch them. It turns the act's whole surveillance pattern inside out. For two scenes, everyone has been spying on Hamlet; now Hamlet builds a trap where the theater itself does the spying, and the watcher becomes the watched. The act closes on his couplet: "The play's the thing / Wherein I'll catch the conscience of the King" (2.2).</p>
+
+        <!-- CORE VISUAL: nested stages -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">A STAGE INSIDE A STAGE: WHO IS WATCHING WHOM?</div>
+            <div style="background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 10px; padding: 16px;">
+                <div style="font-size: 12px; color: #0e1c42; letter-spacing: 0.4px; margin-bottom: 4px;">OUTER STAGE &middot; <strong>Shakespeare's <em>Hamlet</em></strong></div>
+                <div style="font-size: 14px; color: #1a2340; margin-bottom: 12px;">We watch everyone. Nothing on either inner level escapes us.</div>
+                <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 16px;">
+                    <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.4px; margin-bottom: 4px;">MIDDLE STAGE &middot; <strong>The court at Elsinore</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; margin-bottom: 12px;">Claudius watches the performance. Hamlet watches Claudius. Two audiences, two targets.</div>
+                    <div style="background: #FDF3E3; border: 2px solid #C7922C; border-radius: 10px; padding: 14px;">
+                        <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.4px; margin-bottom: 4px;">INNER STAGE &middot; <strong>The players' murder play</strong></div>
+                        <div style="font-size: 14px; color: #1a2340;">A staged poisoning, built to resemble the crime the Ghost described. The bait at the center of the trap.</div>
+                    </div>
+                </div>
+            </div>
+            <div style="font-size: 13px; color: #3B4E8C; text-align: center; margin-top: 12px;">Each frame watches the one inside it. The fiction at the center is the only level where everyone finally sees the truth performed.</div>
+        </div>
+    </div>
+
+    <!-- Reading Journal task (help up front, no dropdown) -->
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Find the turn in the "rogue and peasant slave" soliloquy: the moment where Hamlet stops lashing himself and starts building the plan. Copy the line where you locate the pivot into your Journal, cited (2.2). Then write two sentences: what the speech is doing just before your line, and what it is doing just after. Readers place the turn in slightly different spots, so do not hunt for one official answer; what matters is that the before and the after genuinely differ in your quotation's shadow.</div>
+        </div>
+    </div>
+
+    <!-- RECITATION THREAD LAUNCH (ungraded note) -->
+    <div style="background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#127908; RECITATION THREAD &middot; STARTS NOW (ungraded this week)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In <strong>Week 7</strong> you will perform a graded recitation of a <em>Hamlet</em> soliloquy: memorized, spoken aloud, and recorded. The work starts now, because memory is built by small repeated visits, not a last-minute cram. <strong>This week, choose your soliloquy</strong> and write your choice in your Reading Journal. You may pick any soliloquy from the play, including ones we have not reached yet. Candidates you have already met or will meet soon:</p>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.8; margin: 0 0 10px 0;">
+            &#8226; "O, that this too too solid flesh would melt" (1.2), grief in private<br />
+            &#8226; "O, what a rogue and peasant slave am I!" (2.2), this week's self-reproach (you may recite a continuous portion; it is long)<br />
+            &#8226; "To be, or not to be" (3.1), coming next week, the most famous and the most heavily judged
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.65; margin: 0;">Pick the one whose voice you can imagine in your own mouth. You may change your mind through Week 4; after that, commit. Once you choose, read your soliloquy aloud two or three times this week. That is the whole assignment for now.</p>
+    </div>
+
+    <!-- AI callout -->
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can explain who Hecuba and Pyrrhus were and summarize the Troy story behind the First Player's speech; that background is factual and easy to check. It cannot locate the turn in the soliloquy for you, because that is a judgment about where feeling becomes reasoning, and different readers defend different lines. If you use AI for the mythology, still trace the speech's movement with your own pencil.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.04: Quoting the Play &amp; Word Study</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">This week's grammar and vocabulary: weaving quotations smoothly into your own sentences, plus two words from Act II.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#128172;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Discussion: The Antic Disposition</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Real disturbance, deliberate performance, or both? Bring your Act II evidence.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Hamlet has stopped waiting for his feelings to produce action and built a test instead: proof before blood. Whether the test is conscience or one more delay is a question you now own. The trap is set; Act III springs it.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.03 &middot; Rogue and Peasant Slave</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
