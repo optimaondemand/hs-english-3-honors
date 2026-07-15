@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.16</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-direction: column; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 10px 14px; font-size: 15px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    table.wordstudy { width: 100%; border-collapse: collapse; margin: 6px 0; }
+    table.wordstudy th { background: #0E1C42; color: #fff; font-size: 13px; text-align: left; padding: 9px 12px; border: 1px solid #334; }
+    table.wordstudy td { font-size: 15px; color: #1a2340; padding: 9px 12px; border: 1px solid #D0D9E8; vertical-align: top; line-height: 1.5; }
+    table.wordstudy tr:nth-child(even) td { background: #F4F6FA; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4 &middot; Lesson 2.16</div>
+        <div style="font-size: 12px; color: #0e1c42;">Grammar &amp; Vocabulary</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Balanced Sentence</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Word Study</div>
+        <div style="font-size: 16px; color: #0e1c42;">aversion, suffrage</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.16 &middot; Grammar &amp; Vocabulary</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Balanced Sentence</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; one combined grammar and vocabulary session</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Emerson's sentences stick in the memory because so many of them are built like scales: two matched pans, one pivot.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In Module 1 you learned the semicolon as a hinge between two independent clauses. Today you learn the sentence form that puts that hinge to its highest use: the <strong>balanced sentence</strong>, two clauses of matching grammatical shape weighed against each other across a semicolon. It is the natural form for comparison, which makes it exactly the tool this week's Madison-and-Emerson quick-write needs.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> build a balanced sentence: two independent clauses of matching shape joined at a semicolon.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> check the two tests every balanced sentence must pass: both sides stand alone, and both sides match in structure.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use two words from "Self-Reliance" precisely in my own sentences.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9999;&#65039; PART 1 &middot; TWO PANS, ONE PIVOT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">A <strong>balanced sentence</strong> sets two independent clauses side by side and gives them the same grammatical shape, so the reader weighs one against the other. The semicolon is the pivot of the scale. You already know the semicolon rule from Module 1: both sides must be able to stand alone as complete sentences. Balance adds a second requirement: the two sides should <em>mirror</em> each other, subject for subject, verb for verb, so that whatever differs stands out sharply. Emerson wrote one of the cleanest examples in American prose.</p>
+
+        <!-- CORE VISUAL: the frame -->
+        <div style="background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.6px; margin-bottom: 12px;">THE FRAME (EMERSON'S OWN SENTENCE)</div>
+            <div style="background: #EEF1F8; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; font-size: 18px; color: #0e1c42; line-height: 1.7;"><span style="color:#3B4E8C;">It is easy <strong>in the world</strong> to live after <strong>the world's</strong> opinion</span><span style="background:#dfe6f5; border-radius:4px; padding:1px 6px; margin: 0 2px;"><strong>;</strong></span><span style="color:#C7922C;">it is easy <strong>in solitude</strong> to live after <strong>our own</strong></span> <span style="font-size:14px; color:#1a2340;">("Self-Reliance")</span></div>
+            <div style="font-size: 14px; color: #1a2340; line-height: 1.55;"><span style="color:#3B4E8C;"><strong>Blue</strong></span> and <span style="color:#C7922C;"><strong>gold</strong></span> are twins: <em>it is easy</em> + a place + <em>to live after</em> + whose opinion. Because everything else matches, the two differences (bolded) carry the whole meaning: world vs. solitude, the world's opinion vs. our own. The semicolon is the pivot; each pan of the scale could stand alone as a sentence. Emerson then breaks the pattern on purpose with a third clause beginning "but the great man&hellip;", and the break lands hard precisely because the balance came first.</div>
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 12px 0 18px 0;">To build your own, write the first clause, then rebuild it with the terms swapped: <em>Madison trusts the structure of the republic; Emerson trusts the structure of the soul.</em> Run both tests before you keep it. Stand-alone test: cover each side of the semicolon and check that what remains is a complete sentence. Mirror test: line the clauses up and check that each part has a partner of the same kind. Two cautions. First, if the second half only completes the first (<em>Madison trusts structure; especially checks and balances</em>), the second pan is a fragment and the semicolon is wrong. Second, balance is a spice, not a diet: one balanced sentence gives a paragraph its spine, while three in a row sound like a fortune cookie.</p>
+
+        <!-- INTERACTIVE: student runs the stand-alone test and the mirror test on four candidates -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#129513; NOW YOU: RUN THE TWO TESTS</div>
+            <div class="widget-question">Only one of these four passes both the stand-alone test and the mirror test. Which one is the true balanced sentence?</div>
+            <div class="widget-options">
+                <button data-response="Yes. Cover either side of the semicolon and each half still stands as a complete sentence. Both sides share the same shape, subject plus &quot;trusts the structure of&quot; plus a noun, so the one word that differs, republic versus soul, carries the whole comparison.">Madison trusts the structure of the republic; Emerson trusts the structure of the soul.</button>
+                <button data-response="Not quite. Cover the left side and read only &quot;especially checks and balances.&quot; That fragment cannot stand alone as a sentence, so it fails the stand-alone test; the semicolon is doing a comma's job here.">Madison trusts the structure of the republic; especially checks and balances.</button>
+                <button data-response="Close, but check the mirror test, not just the stand-alone test. Both halves do stand alone, but the second clause is longer and shaped differently, &quot;believes deeply in the freedom and dignity of&quot; instead of &quot;trusts the structure of.&quot; The mismatch blurs the comparison instead of sharpening it.">Madison trusts the structure of the republic; Emerson believes deeply in the freedom and dignity of the individual conscience.</button>
+                <button data-response="Both halves stand alone here, but there is no semicolon and no real mirroring, only two facts joined by &quot;and.&quot; A balanced sentence needs the pivot and the matched shape, not just two true statements side by side.">Madison built a government of checks and balances, and Emerson wrote essays about self-reliance.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Beneath the two-column bridge you built in Lesson 2.15, write two balanced sentences of your own. The first must weigh Madison against Emerson (one clause each, matching shape, semicolon at the pivot). The second may be about anything from your own life. Then label the pivot and underline the matched parts in each, the way the frame above does with color. Run the stand-alone test and the mirror test on both before you move on; if a side fails the stand-alone test, rebuild it into a full clause rather than patching with a comma. At least one of these sentences should reappear in this week's synthesis quick-write.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128213; PART 2 &middot; WORD STUDY (from "Self-Reliance")</div>
+        <table class="wordstudy">
+            <thead><tr><th style="width: 150px;">Word</th><th>In the text</th><th>What it means</th><th>Word origin</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>aversion</strong><br /><span style="font-size: 12px; color: #3B4E8C;">noun</span></td>
+                    <td>Right after the joint-stock sentence, Emerson writes: "The virtue in most request is conformity. Self-reliance is its aversion" ("Self-Reliance").</td>
+                    <td>A settled, strong dislike; the thing one turns away from. Emerson means society does not merely prefer conformity, it actively recoils from self-reliance.</td>
+                    <td>From Latin <em>aversionem</em>, from <em>avertere</em> ("to turn away"), from <em>ab-</em> ("away") and <em>vertere</em> ("to turn"); literally a turning away from something disliked.</td>
+                </tr>
+                <tr>
+                    <td><strong>suffrage</strong><br /><span style="font-size: 12px; color: #3B4E8C;">noun</span></td>
+                    <td>"Absolve you to yourself, and you shall have the suffrage of the world" ("Self-Reliance").</td>
+                    <td>Approval, support, or consent; in modern civic use, the right to vote. Emerson uses the older sense: clear your conscience before yourself, and the world's approval will follow.</td>
+                    <td>From Latin <em>suffragium</em> ("a vote, support"); the deeper root is uncertain, possibly linked to <em>frangere</em> ("to break," from broken pottery pieces once used as ballots).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
+            <div class="rj-task">Add both words to your Journal. For each, write one new sentence of your own on a subject unrelated to Emerson, keeping the meaning exact and making the sentence show the meaning. For <em>aversion</em>, name both the person who feels it and the thing it turns away from; "an aversion to" is the usual pattern. For <em>suffrage</em>, pick one sense and commit: either approval and support (Emerson's sense) or the right to vote (the sense you will meet in Douglass's century), and make your sentence leave no doubt which one you mean. Bonus move: cast one of the two sentences as a balanced sentence from Part 1. Notice how <em>aversion</em>'s root sense of "turning away" still echoes in the modern word.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; USE IT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#9997;&#65039;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Synthesis Quick-Write: Madison Meets Emerson</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A balanced sentence is the strongest possible opening for a comparison paragraph: it holds both writers up in one motion and shows the reader the exact point of difference. Open your quick-write with one, then argue.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The balanced sentence is how English does justice to two ideas at once; the writers in this module lived by it. Keep it in your kit for the Publius Returns op-ed, where you will need to hold your position and your opponent's in a single steady hand.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.16 &middot; The Balanced Sentence</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and reread.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
