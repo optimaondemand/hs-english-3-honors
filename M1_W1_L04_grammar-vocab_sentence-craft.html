@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 1.04</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    table.wordstudy { width: 100%; border-collapse: collapse; margin: 6px 0; }
+    table.wordstudy th { background: #0E1C42; color: #fff; font-size: 13px; text-align: left; padding: 9px 12px; border: 1px solid #334; }
+    table.wordstudy td { font-size: 15px; color: #1a2340; padding: 9px 12px; border: 1px solid #D0D9E8; vertical-align: top; line-height: 1.5; }
+    table.wordstudy tr:nth-child(even) td { background: #F4F6FA; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .widget-options { display:flex; flex-direction:column; gap:8px; }
+    .widget-options button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .widget-options button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .widget-options button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1 &middot; Lesson 1.04</div>
+        <div style="font-size: 12px; color: #0e1c42;">Grammar &amp; Vocabulary</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Sentence Craft: Subordination</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Word Study</div>
+        <div style="font-size: 16px; color: #0e1c42;">countenance, prodigal</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.04 &middot; Grammar &amp; Vocabulary</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Sentence Craft: Subordination</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; one combined grammar and vocabulary session</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Short, choppy sentences report facts. Complex sentences show which fact depends on which.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You are advanced writers, so grammar here is quick and immediately useful. Today's tool is <strong>subordination</strong>: joining ideas so one clearly leans on another. It is the single fastest way to turn flat, list-like prose into sentences that think. Then two words from Act I for your Word Study.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> tell an independent clause from a subordinate clause.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> combine two short sentences into one complex sentence using subordination.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use two Act I words precisely in sentences of my own.</div>
+        </div>
+    </div>
+
+    <!-- PART 1: subordination + core visual -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9999;&#65039; PART 1 &middot; INDEPENDENT AND SUBORDINATE CLAUSES</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">A <strong>clause</strong> is a group of words with a subject and a verb. An <strong>independent clause</strong> can stand alone as a sentence: <em>Hamlet distrusts the king.</em> A <strong>subordinate clause</strong> cannot; it opens with a subordinating word (because, although, when, since, while, if) that makes it lean on something else: <em>because his father's death still troubles him.</em> By itself that is a fragment. Attach it to an independent clause and you get a complex sentence that shows a relationship, cause, contrast, or time, instead of just stacking facts. Below, two flat sentences become one that reasons.</p>
+
+        <!-- CORE VISUAL: sentence-combining board -->
+        <div style="background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 10px; padding: 20px; margin: 8px 0 6px 0;">
+            <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.6px; margin-bottom: 12px;">FROM CHOPPY TO COMPLEX</div>
+            <div style="background: #FDF3E3; border-radius: 6px; padding: 12px 16px; margin-bottom: 6px; font-size: 17px; color: #1a2340;">Hamlet acts strangely. He wants to hide his true purpose.</div>
+            <div style="text-align: center; font-size: 22px; color: #3B4E8C; margin: 4px 0;">&#8595;</div>
+            <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 12px 16px; font-size: 18px; color: #0e1c42; line-height: 1.5;"><span style="background:#dfe6f5; border-radius:4px; padding:1px 4px;">Because he wants to hide his true purpose,</span> Hamlet acts strangely.</div>
+            <div style="font-size: 14px; color: #1a2340; margin-top: 10px;">The shaded part is the subordinate clause. Notice the comma after it when it comes first, and how the sentence now shows <em>why</em>, not just <em>what</em>.</div>
+        </div>
+
+        <!-- Self-check: mechanics only (comma with a leading subordinate clause) -->
+        <div class="optima-widget ow-select" style="margin-top:18px;">
+            <div class="widget-kicker">&#9999;&#65039; CHECK YOURSELF: IS IT PUNCTUATED CORRECTLY?</div>
+            <div class="widget-question">Which of these three versions of the same sentence follows the comma rule from the example above?</div>
+            <div class="widget-options">
+                <button data-response="Not quite. Read it aloud: the subordinate clause (&ldquo;Because he wants to hide his true purpose&rdquo;) comes first, so it needs a comma right where it ends, before the independent clause begins. This version runs the two straight together with no break.">Because he wants to hide his true purpose Hamlet acts strangely.</button>
+                <button data-response="Right. The subordinate clause opens the sentence, so a comma marks where it ends and the independent clause (&ldquo;Hamlet acts strangely&rdquo;) begins. If you flipped the order &mdash; independent clause first &mdash; you would drop the comma: &ldquo;Hamlet acts strangely because he wants to hide his true purpose.&rdquo;">Because he wants to hide his true purpose, Hamlet acts strangely.</button>
+                <button data-response="Not quite. The comma has landed right after the subordinating word itself, splitting the clause in half instead of marking where the whole clause ends. Move it to the end of the clause, right before the independent clause starts.">Because, he wants to hide his true purpose Hamlet acts strangely.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- practice (help up front, no dropdown) -->
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">In your Journal, take these two flat sentences and combine them into one complex sentence: "The Ghost tells Hamlet the truth. Hamlet is not sure he can act on it." To do it: pick a subordinating word that fits the relationship (although, even though, because), turn one sentence into a clause that starts with it, and join it to the other. If your clause comes first, put a comma after it. Write two different versions using two different subordinating words, and note which one you prefer and why.</div>
+        </div>
+    </div>
+
+    <!-- PART 2: Word Study -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128213; PART 2 &middot; WORD STUDY (from Act I)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Two words from Act I, defined where they appear.</p>
+        <table class="wordstudy">
+            <thead><tr><th style="width: 150px;">Word</th><th>In the play</th><th>What it means</th><th>Word origin</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>countenance</strong><br /><span style="font-size: 12px; color: #3B4E8C;">noun</span></td>
+                    <td>Horatio describes the Ghost's face as one "more in sorrow than in anger."</td>
+                    <td>A person's face or expression; the look the face is wearing.</td>
+                    <td>From Old French <em>contenance</em>, from Latin <em>continentia</em> ("restraint, self-control"), from <em>continere</em> ("to hold together"); the sense narrowed from bearing to the face itself.</td>
+                </tr>
+                <tr>
+                    <td><strong>prodigal</strong><br /><span style="font-size: 12px; color: #3B4E8C;">adjective</span></td>
+                    <td>In scene 3, the young are warned against being too free, too <em>prodigal</em>, with what they give away.</td>
+                    <td>Spending or giving lavishly, often more than is wise.</td>
+                    <td>From Latin <em>prodigere</em> ("to squander"), from <em>pro-</em> ("forth") and <em>agere</em> ("to drive"); literally "to drive forth," which became spending wastefully.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
+            <div class="rj-task">Add both words to the Word Study section of your Journal. For each, write one new sentence of your own on a subject that has nothing to do with <em>Hamlet</em>, keeping the meaning exact. For example, for <em>countenance</em>: "The coach kept a calm countenance even as the game slipped away." Aim to make the sentence show the meaning, not just contain the word. Notice how <em>countenance</em>'s root sense of "holding together" still echoes in the idea of keeping your composure.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#9997;&#65039;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Feeder 1: Twelve Lines of Trouble</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Write your own short blank-verse soliloquy. Bring in an antithesis from Lesson 1.03, and let your sentences lean and connect rather than sit in a list.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Subordination is not decoration; it is how a sentence shows thinking. Reach for it whenever your writing starts to sound like a list, this week and all year.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.04 &middot; Sentence Craft: Subordination</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
