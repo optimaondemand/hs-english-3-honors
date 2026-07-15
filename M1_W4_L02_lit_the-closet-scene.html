@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 4.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-direction: column; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 10px 14px; font-size: 15px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all 0.15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4 &middot; Lesson 4.02</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (2 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Closet Scene</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Hamlet, Act III, sc. 4 (first half)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.02 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Closet Scene</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A son comes to his mother's room to speak daggers. A voice cries out behind the curtain, and he uses a real one.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In Lesson 4.01, Hamlet stood over the king with every advantage and reasoned his way out of striking. Now, in his mother's private chamber, with no time to reason at all, he strikes. The blade goes through the arras, the hanging tapestry, and into Polonius, who had hidden there to listen. Today you read the first half of Act III, scene 4, and study what one rash act does to a plot: this is the play's <strong>point of no return</strong>, the moment after which nothing can be walked back.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace the sequence of the killing of Polonius and cite the lines that carry it.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why this moment is the plot's point of no return, and name the consequences it sets in motion.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> contrast the impulsive kill in 3.4 with the reasoned sparing in 3.3, and say what the contrast shows about Hamlet.</div>
+        </div>
+    </div>
+
+    <!-- PART 1: the scene -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE RAT BEHIND THE ARRAS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Remember how this trap was set. At the end of scene 3, Polonius told the king he would hide behind the arras in the queen's chamber to overhear Hamlet, one more act of the spying you have tracked since Act II. The scene opens with mother and son trading the same sentence like a blow returned: "Hamlet, thou hast thy father much offended," she begins, meaning Claudius. "Mother, you have my father much offended," he answers, meaning the dead king (3.4). One word swapped, two different fathers, and the whole quarrel is already on the table.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hamlet is rougher than she expects. He forces her to sit: "You go not till I set you up a glass / Where you may see the inmost part of you" (3.4). He means a mirror, but Gertrude hears a threat and cries out: "What wilt thou do? Thou wilt not murder me? / Help, ho!" (3.4). Behind the arras, Polonius echoes her cry for help. And Hamlet, who deliberated for a full speech over the kneeling king, does not deliberate at all. "How now, a rat? Dead for a ducat, dead" (3.4). One thrust through the cloth. His first question tells you everything about what he hoped: "Is it the King?" (3.4). It is not. His farewell to the body is a verdict on the man and, though he does not hear it yet, on himself: "Thou wretched, rash, intruding fool, farewell" (3.4). <em>Rash</em> is exactly the word; it has simply changed owners.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then the interrogation Hamlet came for. He answers his mother's shock at the killing by naming a worse deed, "almost as bad, good mother, / As kill a king and marry with his brother" (3.4), and her reply, "As kill a king?" (3.4), is worth pausing over: her surprise is one of the play's few clues about how much she knew. He holds up the two portraits, his father and his uncle, "The counterfeit presentment of two brothers" (3.4), and makes her look from one to the other. It works. She sees herself: "Thou turn'st my eyes into my very soul, / And there I see such black and grainèd spots" (3.4), and begs him to stop: "These words like daggers enter in my ears" (3.4). Daggers were his stated plan for this visit; the play lets you hear the metaphor land where the sword just did.</p>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 6px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> <em>Hamlet</em>, Act III, scene 4, from its opening through Gertrude's "These words like daggers enter in my ears." Public-domain full text with scene navigation: <a href="https://www.folger.edu/explore/shakespeares-works/hamlet/read/3/4/" style="color: #3B4E8C;">Folger Shakespeare, <em>Hamlet</em> 3.4</a>.</div>
+        </div>
+    </div>
+
+    <!-- PART 2: the point of no return + core visual -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128257; PART 2 &middot; THE TECHNIQUE: THE POINT OF NO RETURN</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Plots have a hinge: a single action after which the story can only run downhill in a new direction. Before this moment, Hamlet is a wronged man who has done no wrong; every option is still open to him. One thrust through a curtain closes them. He meant it for the king, so the act is attempted revenge; it kills an old fool, so the act is also a blunder; and either way it is a killing he cannot take back. Watch what one rash second sets in motion.</p>
+
+        <!-- CONCEPT VISUAL: one act, many consequences (kept small) -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">ONE THRUST THROUGH THE ARRAS: WHAT IT SETS IN MOTION</div>
+            <div style="background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 12px 16px; text-align: center; margin-bottom: 12px;">
+                <div style="font-size: 11px; color: #C7922C; margin-bottom: 4px;">THE ACT (3.4)</div>
+                <div style="font-size: 17px; color: #0e1c42;"><strong>"How now, a rat? Dead for a ducat, dead."</strong></div>
+                <div style="font-size: 14px; color: #1a2340; margin-top: 4px;">Hamlet stabs blind through the curtain. Polonius falls.</div>
+            </div>
+            <div style="text-align: center; font-size: 22px; color: #3B4E8C; margin-bottom: 4px;">&#8595;</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; text-align: center;">One rash second, many consequences, reaching people who were not even in the room. Match each person below to the consequence this act sets in motion for them.</div>
+        </div>
+
+        <!-- POST-READING INTERACTIVE: student maps character to consequence -->
+        <div class="optima-widget ow-match" data-done="You have the chain: one act, reaching three lives at once." style="margin-top:18px;">
+            <div class="widget-kicker">&#129513; NOW YOU: MATCH EACH PERSON TO THE CONSEQUENCE</div>
+            <div class="widget-question">Click a person, then click the consequence this killing sets in motion for them. Use what the play has already set up, and what you just read.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:150px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">PERSON</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="hamlet">Hamlet</button>
+                        <button data-key="ophelia">Ophelia</button>
+                        <button data-key="laertes">Laertes</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:150px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">CONSEQUENCE SET IN MOTION</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="laertes">Comes home to a murdered father and gains a cause against Hamlet that mirrors Hamlet's own cause against Claudius.</button>
+                        <button data-key="hamlet">Is now a killer whatever his cause, and hands Claudius a public reason to move against him.</button>
+                        <button data-key="ophelia">Loses her father to the very man she loved, a double loss the next act will show the cost of.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 0 0;">Set the two halves of this week side by side and the design is hard to miss. In 3.3, Hamlet has certainty, opportunity, and time to think, and the thinking stops his hand. In 3.4, he has a muffled cry and no time at all, and the hand moves before the thought. The play is asking a hard question about deliberation itself: if his reason spares the guilty man and his instinct kills an innocent one, what exactly is all that thinking for?</p>
+    </div>
+
+    <!-- HAMLET NUANCE: moral complexity of a killing in the dark -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127963;&#65039; A QUESTION WORTH SITTING WITH: WHAT KIND OF ACT IS THIS?</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is worth pausing on what actually happens here, apart from what it sets in motion. Hamlet hears a voice behind a curtain and drives a sword through it without knowing who stands there. His own first question afterward, "Is it the King?" (3.4), tells you he was hoping, not certain. He kills a man he cannot see, and the man turns out to be an old counselor, not the king he meant to strike. Readers have long argued over what this moment says about Hamlet as a hero: is this decisive courage finally breaking through his hesitation, or a rash, reckless act that happens to land on the wrong person? Both readings can point to the same lines. He does not check who is there before he strikes, and "rash" is the very word he uses for Polonius while pulling the sword free, a word that could just as easily describe his own thrust.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">WEIGH IT YOURSELF</div>
+            <div class="widget-question">Which comes closer to your own reading of this moment, based on the text?</div>
+            <div class="widget-options">
+                <button data-response="There is real support for this: he acts instantly, without the paralysis he shows elsewhere, and a revenge tragedy's hero is expected to act. Hold that reading next to the fact that he still does not know who he has killed until after the blow, and weigh both.">Decisive action, finally, after so much hesitation</button>
+                <button data-response="Also well supported: he stakes a killing on a guess, &quot;Is it the King?&quot; comes after the blow, not before it, and the man he kills has done him no harm. Hold that reading next to the fact that he genuinely believed, wrongly, he was finally striking his enemy, and weigh both.">A rash, reckless act that happens to kill the wrong man</button>
+                <button data-response="A defensible position. The same second can be read as courage and as recklessness, depending on which lines you foreground. If someone pushed you to choose one reading for an essay, decide now which lines you would lead with.">Both at once, and the play does not force a choice</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Reading Journal task (help up front, no dropdown) -->
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Write three or four sentences on the question "Is it the King?" (3.4). To do it well: say what the question proves about Hamlet's intent when he stabbed, then set this instant kill against the sparing in 3.3, where he had the real king in front of him and waited. End with one sentence on what the pairing suggests: is Hamlet's problem an unwillingness to act, or something stranger about when he can act? Quote both scenes; cite by act and scene.</div>
+        </div>
+    </div>
+
+    <!-- AI callout -->
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can list the consequences of Polonius's death across the rest of the play, and its list will look like the diagram above. What it cannot supply is the weight of the moment as you read it: the speed of the stab after a full scene of deliberation. Summaries flatten pacing, and pacing is the argument here. Read the lines in order yourself before you let anything summarize them for you.</p>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 4.03: The Ghost Returns</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Mid-quarrel, a familiar figure enters the chamber. Watch closely who in the room reacts to it, and who does not. The play hands you its hardest open question.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Hamlet called Polonius "rash" while pulling a sword out of him. Keep that word in view for the rest of the play: the tragedy is no longer only about a man who cannot act, but about what it costs when he finally does.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.02 &middot; The Closet Scene</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
