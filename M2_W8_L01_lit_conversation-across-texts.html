@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.29</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    table.voices { width: 100%; border-collapse: collapse; min-width: 640px; }
+    table.voices th { padding: 12px 14px; font-size: 14px; text-align: left; border: 1px solid #C7CFE6; }
+    table.voices td { padding: 11px 14px; font-size: 15px; color: #1a2340; border: 1px solid #C7CFE6; vertical-align: top; line-height: 1.55; }
+    table.voices td.rowlabel { background: #EEF1F8; font-size: 12px; color: #0E1C42; letter-spacing: 0.4px; width: 120px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 8 &middot; Lesson 2.29</div>
+        <div style="font-size: 12px; color: #0e1c42;">Project Craft (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">A Conversation Across Texts</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Toward</div>
+        <div style="font-size: 16px; color: #0e1c42;">Your draft, due this week</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.29 &middot; Project Craft</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">A Conversation Across Texts</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Three Americans, three answers to the same question. Your op-ed begins when you decide what the question is.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have spent seven weeks with three writers who never met and never stopped arguing. Publius trusts structure: the state governs itself through checks and design. Emerson trusts conscience: the soul governs itself or it is not free at all. Douglass is the evidence both of them needed: a self seized back, by force of literacy and will, from a nation that denied it everything. Today you seat the three of them around one table, choose the live civic question your op-ed will answer, and map what each voice supplies you: evidence, a counter-position, or both.</div>
+    </div>
+
+    <div class="optima-widget ow-reflect">
+        <div class="widget-kicker">&#128173; QUICK CHECK-IN (no wrong answer)</div>
+        <div class="widget-question">Be honest before you build anything. When a public question divides people, which voice do you instinctively trust first?</div>
+        <div class="widget-options">
+            <button data-response="You lean toward Publius: process over passion, and no one a judge in his own cause. Watch that instinct as you draft. Your op-ed will be stronger if you let Emerson and Douglass ask what a fair process is worth to the person it fails.">The rules we agreed on</button>
+            <button data-response="You lean toward Emerson: nothing outranks the integrity of your own mind. Watch that instinct as you draft. Your op-ed will be stronger if you let Publius ask what happens when a million sincere consciences all claim the same authority.">My own sense of right and wrong</button>
+            <button data-response="You lean toward Douglass: the argument that counts is the one made from lived evidence. Watch that instinct as you draft. Your op-ed will be stronger if you ask what a single powerful story proves, and what still needs structure and principle behind it.">The person who has lived the question</button>
+        </div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state how Publius, Emerson, and Douglass would each answer one civic question, citing all three texts.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose a live civic question that is genuinely contested and that all three texts can argue about.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> mark which voice supplies my op-ed's evidence and which supplies the counter-position I must answer.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127963;&#65039; PART 1 &middot; THREE VOICES, ONE QUESTION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Here is the method in miniature. Take one question the whole module has circled: <em>when a law seems unjust, what should a free person do?</em> Now listen to each writer answer it in turn. Read down each column to hear one voice whole, then across each row to hear the argument between them. Notice that every voice is strong somewhere, and every voice has a hard question waiting for it. Your op-ed will do this same work with the question you choose.</p>
+
+        <!-- CORE VISUAL: three-voice comparison on one question -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px; overflow-x: auto;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">ONE QUESTION, THREE VOICES: WHEN A LAW SEEMS UNJUST, WHAT SHOULD A FREE PERSON DO?</div>
+            <table class="voices">
+                <thead>
+                    <tr>
+                        <th style="background: #EEF1F8; width: 120px;"></th>
+                        <th style="background: #3B4E8C; color: #FFFFFF;">PUBLIUS<br /><span style="font-size: 12px; color: #C7CFE6;">The Federalist (1787&ndash;88): the state governs itself</span></th>
+                        <th style="background: #C7922C; color: #FFFFFF;">EMERSON<br /><span style="font-size: 12px; color: #FDF3E3;">"Self-Reliance" (1841): the soul governs itself</span></th>
+                        <th style="background: #0E1C42; color: #FFFFFF;">DOUGLASS<br /><span style="font-size: 12px; color: #55C8E8;">Narrative (1845): the self seized back</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #FFFFFF;">
+                        <td class="rowlabel">THE ANSWER</td>
+                        <td>Work within the structure. No one may be judge in his own cause; a government must "control the governed" and then "control itself" (Federalist 51). Change the law through the process built for changing laws.</td>
+                        <td>Answer to your own conscience first. "Nothing is at last sacred but the integrity of your own mind" ("Self-Reliance"). A soul that waits for permission to do right has already surrendered.</td>
+                        <td>Ask who the law serves before you honor it. The law he lived under made teaching a child to read a crime; the ban itself showed him "the pathway from slavery to freedom" (Narrative, ch. 6).</td>
+                    </tr>
+                    <tr style="background: #F4F6FA;">
+                        <td class="rowlabel">THE EVIDENCE</td>
+                        <td>Reasoning from human nature: "the latent causes of faction are thus sown in the nature of man" (Federalist 10), so "Ambition must be made to counteract ambition" (Federalist 51). Argument by design.</td>
+                        <td>Appeal to the reader's own experience of conformity: "The virtue in most request is conformity" ("Self-Reliance"). Argument by provocation, daring you to check his claim against your life.</td>
+                        <td>Lived fact, remembered exactly: the forbidden alphabet, the stolen lessons, the fight with Covey. "You have seen how a man was made a slave; you shall see how a slave was made a man" (Narrative, ch. 10).</td>
+                    </tr>
+                    <tr style="background: #FFFFFF;">
+                        <td class="rowlabel">THE HARD QUESTION FOR THIS VOICE</td>
+                        <td>What does the citizen owe a process that is procedurally valid and morally wrong? Douglass lived under exactly such laws, and the process offered him nothing.</td>
+                        <td>If every conscience is its own final court, what stops a million sincere consciences from becoming the very faction Publius feared, each "united and actuated by some common impulse of passion" (Federalist 10)?</td>
+                        <td>One life is the strongest evidence and the smallest sample. What principle turns his single testimony into a rule for the republic, and who builds the structure that enforces it?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 0 0;">This is what "putting texts in conversation" means in practice. You do not summarize three writers in three separate paragraphs. You let them answer the same question, agree where they honestly agree, and collide where they honestly collide, and then you take your own position inside that tension.</p>
+
+        <!-- INTERACTIVE: student applies the three-voice lens to fresh lines, not the ones already paired in the table above -->
+        <div class="optima-widget ow-match" data-done="All three matched. You can hear each register even without the by-line." style="margin-top:18px;">
+            <div class="widget-kicker">&#129513; NOW YOU: WHOSE VOICE IS THIS?</div>
+            <div class="widget-question">These three lines are not the ones in the table above. Click a line, then click the writer whose voice it is.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">LINE</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="pub">&ldquo;If men were angels, no government would be necessary.&rdquo;</button>
+                        <button data-key="em">&ldquo;Whoso would be a man must be a nonconformist.&rdquo;</button>
+                        <button data-key="doug">&ldquo;This battle with Mr. Covey was the turning-point in my career as a slave.&rdquo;</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WRITER</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="doug">Douglass, <em>Narrative</em>, ch. 10</button>
+                        <button data-key="pub">Publius, Federalist No. 51</button>
+                        <button data-key="em">Emerson, &quot;Self-Reliance&quot;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128499;&#65039; PART 2 &middot; CHOOSING A LIVE CIVIC QUESTION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Your op-ed needs a question that is alive right now, not a settled one. The module's three great tensions are your hunting grounds. Under each one, real questions are being argued in legislatures, school boards, courtrooms, and kitchen tables this year:</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px;">
+            <div style="flex: 1; min-width: 220px; background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 14px 16px;">
+                <div style="font-size: 12px; color: #3B4E8C; margin-bottom: 8px;">CONSCIENCE VS. LAW</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.7;">Should citizens ever break a law they believe is unjust, or only work to change it? Should professionals be required to provide services their conscience objects to? When is protest that disrupts public life justified?</div>
+            </div>
+            <div style="flex: 1; min-width: 220px; background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 8px; padding: 14px 16px;">
+                <div style="font-size: 12px; color: #C7922C; margin-bottom: 8px;">THE INDIVIDUAL VS. THE INSTITUTION</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.7;">Should platforms or governments decide what speech is acceptable online? Should schools be able to restrict what students say or wear? How much power should any one branch, agency, or company hold over daily life?</div>
+            </div>
+            <div style="flex: 1; min-width: 220px; background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 14px 16px;">
+                <div style="font-size: 12px; color: #0E1C42; margin-bottom: 8px;">SELF-RELIANCE VS. OBLIGATION</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.7;">Should voting be required by law? Should young people owe a term of national or community service? What do the successful owe the communities that raised them, and should that debt ever be legislated?</div>
+            </div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Choose from these or bring your own, but test your question against four checks before you commit. First, it is genuinely contested: informed, decent people currently disagree. Second, all three texts can speak to it: Publius has a structural angle, Emerson a conscience angle, Douglass a lived-evidence angle, even if one of them ends up on the other side of your argument. Third, scholars have written about it, because Week 2 taught you to search JStor and your op-ed must carry researched support. Fourth, you care about the answer, because 700 words of pretended conviction reads exactly like what it is.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9878;&#65039; PART 3 &middot; ASSIGN THE VOICES THEIR SEATS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Once the question is chosen, give each writer a job. One or two of them will argue your side: they supply <strong>evidence</strong>, a quotation or an episode that carries weight your bare opinion cannot. At least one of them will push against you: he supplies your <strong>counter-position</strong>, the strongest objection your op-ed must concede and answer. Do not force all three onto your side; an op-ed that conscripts every witness convinces no one, and the revision lesson later this week will hunt for exactly that flattening. The writer who disagrees with you is the most useful one at the table, because answering him honestly is what makes a reader trust you.</p>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Build your own three-voice table in your Module 2 Organizer, on your chosen civic question. Write the question at the top in one sentence that ends with a question mark. Then give each writer two rows: THE ANSWER he would give, in your own words, and THE EVIDENCE you would cite from his text, quoted briefly and cited the way this module always cites: (Federalist 10 or 51), ("Self-Reliance"), (Narrative, ch. 6). Finish by marking each column FOR ME or AGAINST ME. Coaching: run the four checks from Part 2 before you fill anything in, and if a column sits empty because a writer has nothing to say to your question, that is your signal to sharpen the question, not to skip the voice.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Asked to compare three thinkers, AI tools tend to produce a smooth "all three value freedom" summary that erases the collisions your op-ed is built on. An AI also cannot tell you which civic question you actually care about, and that choice decides whether the whole project works. If you use AI here, limit it to checking a quotation's exact wording or a date, then build the table and choose the question yourself.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.30: Writing as Publius</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The op-ed as a form: why a pseudonym, how the three appeals work on a citizen reader, and where your concession, your counter, and your JStor research belong.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A good op-ed is a conversation you are brave enough to finish. Choose a question that is really being argued, seat all three voices honestly, and decide where you stand. Tomorrow you learn the form; the position you take today is what the form will carry.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.29 &middot; A Conversation Across Texts</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button').forEach(function (b) { b.classList.remove('selected'); b.classList.remove('matched'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      if (w._matchPick) w._matchPick = null;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    // ow-match engine: click a left item, then a right item; correct pairs lock in.
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget');
+      var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) {
+        mw.querySelectorAll('.match-col button').forEach(function (b) { b.classList.remove('selected'); });
+        mBtn.classList.add('selected');
+        mw._matchPick = mBtn;
+      } else if (mw._matchPick === mBtn) {
+        mBtn.classList.remove('selected'); mw._matchPick = null;
+      } else if (mw._matchPick.closest('.match-col').dataset.side === side) {
+        mw.querySelectorAll('.match-col button').forEach(function (b) { b.classList.remove('selected'); });
+        mBtn.classList.add('selected'); mw._matchPick = mBtn;
+      } else {
+        var first = mw._matchPick;
+        if (first.dataset.key === mBtn.dataset.key) {
+          first.classList.remove('selected'); first.classList.add('matched'); first.disabled = true;
+          mBtn.classList.add('matched'); mBtn.disabled = true;
+          var left = mw.querySelectorAll('.match-col button:not(.matched)').length;
+          fb2.textContent = left === 0 ? (mw.dataset.done || 'All matched.') : 'Matched. Keep going.';
+          fb2.classList.add('show');
+        } else {
+          first.classList.remove('selected');
+          fb2.textContent = 'Not that pairing. Reread and try again.';
+          fb2.classList.add('show');
+        }
+        mw._matchPick = null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
