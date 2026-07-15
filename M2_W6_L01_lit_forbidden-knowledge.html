@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.21</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6 &middot; Lesson 2.21</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Forbidden Knowledge</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Narrative, chapter 6</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.21 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Forbidden Knowledge</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A woman opens a spelling book to teach a child his letters. What happens next turns an ordinary lesson into the turning point of the whole book.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Chapter 6 is the hinge of the Narrative. In the Auld house in Baltimore, Douglass is briefly taught, then forbidden to learn, and he insists the forbidding taught him more than the lessons did. Today you read the scene closely and watch for the moment his reasoning turns: what does a ban this forceful tell a sharp mind about the thing it bans? By the end of the lesson you will be able to explain why, in this book, literacy and slavery cannot share a house.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace the turning point of chapter 6: the lessons begun, the lessons forbidden, and the reasons Mr. Auld gives.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain, using Douglass's own words, what he understood in that moment and why he treats the ban as a revelation.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> connect the forbidden alphabet to this module's question about self-government.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A DOOR OPENS IN BALTIMORE</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN (no wrong answer)</div>
+            <div class="widget-question">Suppose someone with power over you declared one ordinary skill strictly off limits to you, and only to you. What would the ban itself tell you?</div>
+            <div class="widget-options">
+                <button data-response="That is exactly the inference Douglass draws. A ban is a confession: nobody outlaws a skill that changes nothing. Watch how he reasons from the strength of the prohibition to the strength of the thing prohibited.">The skill must be more powerful than it looks</button>
+                <button data-response="Douglass would agree, and he pushes one step further: afraid of what, exactly? Mr. Auld answers that question out loud, in detail, and the answer is the most useful information Douglass has ever been given.">The person banning it is afraid of something</button>
+                <button data-response="That is what the system needed people to believe: rules as plain facts of life, not decisions that serve someone. Chapter 6 is the moment Douglass stops reading the rule that way and starts asking whom it protects.">Not much; rules are simply rules</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A new house, a new mistress</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Last week ended with Douglass, still a child, sent from the Eastern Shore plantation to Baltimore to serve the family of Hugh Auld. Chapter 6 opens on his new mistress, Sophia Auld, and on something Douglass has never met before: kindness without ceremony. She had never held a person in slavery; she had earned her own living as a weaver; and she treated the boy in her charge, he writes, as one human being treats another. "Very soon after I went to live with Mr. and Mrs. Auld, she very kindly commenced to teach me the A, B, C" (Narrative, ch. 6). Then she helped him begin spelling short words. In most classrooms in the country, this scene would be too ordinary to mention. In this house it is a crisis.</p>
+        <div style="background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 16px 20px; margin-bottom: 14px;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px;">&#127963;&#65039; HISTORICAL CONTEXT &middot; READING AS A CRIME</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.65;">Douglass arrived in Baltimore around 1826, aged about eight. City slavery differed from plantation slavery; Douglass himself observes that "a city slave is almost a freeman, compared with a slave on the plantation" (Narrative, ch. 6), though chapter 6 also records brutal exceptions a few doors away. On literacy the slaveholding states were firm: by the 1830s most had passed laws punishing anyone who taught an enslaved person to read, and where no statute reached, custom enforced the same ban. Slaveholders feared what a reading population could do: read abolitionist arguments, forge the written passes that controlled movement, and, as this book itself proves, tell their own story to the world. When Mr. Auld calls instruction "unlawful," he is describing the world he knows.</div>
+        </div>
+        <div style="background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 16px 20px;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px;">&#128221; A NOTE ON THE LANGUAGE OF THE NARRATIVE</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.65;">Douglass reports the speech of enslavers exactly as he heard it, and that speech includes a racial slur. These lessons quote Douglass's own reflective prose and paraphrase the slur wherever it appears; when you meet it in the full text, read it as Douglass presents it, as evidence of the system he is exposing. Quote his words in your Journal; paraphrase theirs.</div>
+        </div>
+
+        <!-- READING-TOOL VISUAL: a transferable strategy, taught before the read, no plot given away -->
+        <div style="background: #FFFFFF; border: 2px solid #3B4E8C; border-radius: 10px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 10px; text-align: center;">A READING TOOL: WHEN A RULE EXPLAINS ITSELF</div>
+            <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 0;">Sometimes the person forbidding a thing also gives reasons for the ban, out loud, in detail. Treat those reasons as evidence, whether or not the speaker means them that way. The move is simple: if banning X is supposed to prevent result Y, then X must be capable of producing Y, or no one would bother banning it. As you read, watch for a moment where someone explains a rule at length, and try flipping the claim over to see what it admits.</p>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin-bottom: 20px;">
+        <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read now:</strong> chapter 6 of the Narrative today; chapter 7 before the next lesson. Public-domain text: <a href="https://www.gutenberg.org/files/23/23-h/23-h.htm" style="color: #3B4E8C;">Narrative of the Life of Frederick Douglass, an American Slave (1845), Project Gutenberg</a>. Cite by chapter: (Narrative, ch. 6).</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128293; PART 2 &middot; NOW THAT YOU HAVE READ: THE DOOR SLAMS, AND EXPLAINS ITSELF</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">The lessons do not survive discovery. Mr. Auld finds out, and Douglass reports that he "at once forbade Mrs. Auld to instruct me further, telling her, among other things, that it was unlawful, as well as unsafe, to teach a slave to read" (Narrative, ch. 6). Then Auld keeps talking, and this is the mistake Douglass never lets him take back. Using a proverb built around the slur, Auld warns his wife that give a slave an inch and he will take the whole measure; that an enslaved person should know nothing but obedience; that learning would ruin him for slavery. Two of his sentences can be quoted as he spoke them: <strong>"It would forever unfit him to be a slave"</strong> and <strong>"It would make him discontented and unhappy"</strong> (Narrative, ch. 6). Auld intends all of this as a warning. Douglass receives it as a map.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">Read what the boy does with the speech: "These words sank deep into my heart, stirred up sentiments within that lay slumbering, and called into existence an entirely new train of thought" (Narrative, ch. 6). What had been a "most perplexing difficulty," as he puts it, was suddenly solved: he now understood "the white man's power to enslave the black man" (Narrative, ch. 6). The power was not mysterious and it was not natural. It was maintained, deliberately, by keeping the enslaved from the written word. And a power that must be maintained can be unmade. "From that moment, I understood the pathway from slavery to freedom" (Narrative, ch. 6).</p>
+
+        <!-- INTERACTIVE: student applies the Part 1 tool themselves, using Auld's actual lines -->
+        <div class="optima-widget ow-match" data-done="You have found the same reversal Douglass found: each warning names the very thing it fears.">
+            <div class="widget-kicker">&#129513; NOW YOU: MATCH WHAT AULD SAYS TO WHAT IT REVEALS</div>
+            <div class="widget-question">Click one of Auld's own lines, then click what that line reveals once you flip it over, using the reading tool from Part 1. Work from the chapter, not a guess.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHAT AULD SAYS</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="unlawful">"It was unlawful, as well as unsafe, to teach a slave to read."</button>
+                        <button data-key="unfit">"It would forever unfit him to be a slave."</button>
+                        <button data-key="unhappy">"It would make him discontented and unhappy."</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHAT IT REVEALS</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="unfit">Being unfit for slavery can be learned, letter by letter.</button>
+                        <button data-key="unhappy">The contentment of the enslaved is manufactured, not natural.</button>
+                        <button data-key="unlawful">Reading must be powerful enough to need a law against it.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div style="background: #0E1C42; border-radius: 8px; padding: 12px 16px; text-align: center; margin-top: 16px;"><div style="font-size: 16px; color: #FFFFFF; font-style: italic; line-height: 1.6;">"What he most dreaded, that I most desired. What he most loved, that I most hated." (Narrative, ch. 6)</div></div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 0 0;">Notice the shape of Douglass's reasoning: he takes each claim his master makes, holds it steady, and reads it from the other side. Auld argues so forcefully that Douglass concludes the man must believe every word, which makes the speech reliable intelligence. Douglass even keeps the account fair: "In learning to read, I owe almost as much to the bitter opposition of my master, as to the kindly aid of my mistress" (Narrative, ch. 6). The chapter's last movement is quieter and sadder. Slavery does not only harm the enslaved; Douglass watches it corrupt Sophia Auld herself. "The fatal poison of irresponsible power was already in her hands, and soon commenced its infernal work" (Narrative, ch. 6). Publius warned that unchecked power damages whoever holds it; chapter 6 shows that argument wearing a human face.</p>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">On your Douglass pages, copy the sentence "From that moment, I understood the pathway from slavery to freedom." and cite it (Narrative, ch. 6). Under it, write four or five sentences answering two questions in your own words: what exactly did Douglass understand in that moment, and why did Mr. Auld's opposition teach him more than Mrs. Auld's lessons could? Be precise about the reasoning, not just the feeling; the strongest entries trace how Douglass turns each of Auld's claims inside out, the way the matching activity above does.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can accurately summarize chapter 6 and supply solid background on anti-literacy laws in the slaveholding states. It is weaker at the move this chapter runs on: tracing how one overheard speech reverses the meaning of everything a character believed before it. A summary will tell you that Douglass decided to learn to read; only the page in front of you shows the chain of inferences by which a ban became a map. Use AI for background if you like; do the tracing yourself.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.22: Stealing an Education</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The lessons are over and the house is watching. Chapter 7 shows what a determined twelve-year-old does with a piece of bread, a city full of schoolboys, and seven years.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Publius designed a government on the theory that no one can be trusted with unchecked power; Emerson commanded you to trust your own mind. Douglass is the module's hardest case: a person denied both the vote and the alphabet. Watch what he reaches for first. It is not a weapon and not a door; it is a word, and this module will ask you why.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.21 &middot; Forbidden Knowledge</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button').forEach(function (b) { b.classList.remove('selected','matched'); b.disabled=false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w._matchPick = null;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button, .ow-select .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget');
+      var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) {
+        mw.querySelectorAll('.match-col button').forEach(function (b) { b.classList.remove('selected'); });
+        mBtn.classList.add('selected'); mw._matchPick = mBtn;
+      } else if (mw._matchPick === mBtn) {
+        mBtn.classList.remove('selected'); mw._matchPick = null;
+      } else if (mw._matchPick.closest('.match-col').dataset.side === side) {
+        mw.querySelectorAll('.match-col button').forEach(function (b) { b.classList.remove('selected'); });
+        mBtn.classList.add('selected'); mw._matchPick = mBtn;
+      } else {
+        var first = mw._matchPick;
+        if (first.dataset.key === mBtn.dataset.key) {
+          first.classList.remove('selected'); first.classList.add('matched'); first.disabled = true;
+          mBtn.classList.add('matched'); mBtn.disabled = true;
+          var left = mw.querySelectorAll('.match-col button:not(.matched)').length;
+          fb2.textContent = left === 0 ? (mw.dataset.done || 'All matched.') : 'Matched. Keep going.';
+        } else {
+          first.classList.remove('selected');
+          fb2.textContent = 'Not that pairing. Reread and try again.';
+        }
+        fb2.classList.add('show'); mw._matchPick = null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
