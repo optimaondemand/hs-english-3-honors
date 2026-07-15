@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 6.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .widget-options { display:flex; flex-direction:column; gap:8px; }
+    .widget-options button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .widget-options button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .widget-options button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6 &middot; Lesson 6.01</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Graveyard</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Hamlet, Act V, sc. 1</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 6.01 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Graveyard</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The most serious scene in the play opens with two laborers cracking jokes and tossing skulls out of a grave.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">After four acts of watching and plotting, Act V begins in a graveyard, and it begins funny. Two gravediggers trade riddles while they work; then Hamlet picks up a skull and finds it belonged to a man he loved as a child. Today you read scene 1 and study how Shakespeare places comedy right next to death, an old idea called <strong>memento mori</strong>, the reminder that death spares no one, however great they become.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what the gravediggers' comedy adds to a scene about death.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define memento mori and trace it through Hamlet's words over Yorick's skull.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how the scene turns from comedy to grief when Ophelia's funeral arrives.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN (no wrong answer)</div>
+            <div class="widget-question">Why do people sometimes crack jokes at a funeral or in a hospital waiting room?</div>
+            <div class="widget-options">
+                <button data-response="Right: humor can be a way to stand something unbearable. That is exactly what the gravediggers' joking does here, and it is also how Shakespeare lets an audience breathe before the grief lands.">To cope with what is unbearable</button>
+                <button data-response="True, and Shakespeare uses that too. The gravediggers treat death as ordinary, daily work, and that ordinariness is its own kind of truth about dying: it comes for everyone, jester and king alike.">Because death is ordinary to them</button>
+                <button data-response="A fair instinct. Watch how Shakespeare keeps the comedy from feeling cruel: the jokes are about death in general, and the grief, when it arrives with Ophelia's body, is given its full weight.">It can seem disrespectful</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Comedy at the edge of the grave</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Shakespeare opens the final act with two <strong>clowns</strong>, the theatrical term for comic laborers, digging a grave and speaking in prose, not verse. They argue law and logic, sing while they dig, and treat bones as the tools of their trade. This is <strong>comic relief</strong>: a break in tension that, placed well, makes the seriousness around it land harder. Notice the clowns speak prose while the nobles speak verse; Shakespeare uses the shift to mark the difference between the daily world and the tragic one. When Hamlet arrives and asks how long a body lasts in the earth, the gravedigger answers with grim cheer, that a tanner's corpse "will last you some eight year or nine year" (5.1). Death here is not terror; it is a schedule.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128128; PART 2 &middot; YORICK, AND THE GREAT LEVELER</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Then the gravedigger hands up a particular skull, and the scene changes key. It belonged to <strong>Yorick</strong>, the old court jester who carried Hamlet on his back as a boy. Hamlet holds it: "Alas, poor Yorick! I knew him, Horatio: a fellow of infinite jest" (5.1). The lips that kissed him are gone; the jokes that filled the hall are silent. From this one skull Hamlet reasons outward to a hard truth: death makes no exceptions. Even the greatest are not spared. Alexander the Great, he imagines, is now dust that might plug a beer barrel; "Imperious Caesar, dead and turned to clay, / Might stop a hole to keep the wind away" (5.1). This is <strong>memento mori</strong>: the reminder that every life, jester or conqueror, ends in the same earth. The whole play has asked how to live rightly; the graveyard answers that the clock is short for everyone.</p>
+
+        <!-- CORE VISUAL: the great leveler -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">MEMENTO MORI: THE ONE END THAT LEVELS EVERYONE</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch;">
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px; text-align: center;"><div style="font-size: 15px; color: #0e1c42;"><strong>The jester</strong></div><div style="font-size: 13px; color: #1a2340; line-height: 1.45;">Yorick, "a fellow of infinite jest," who once carried the prince on his back.</div></div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px; text-align: center;"><div style="font-size: 15px; color: #0e1c42;"><strong>The conqueror</strong></div><div style="font-size: 13px; color: #1a2340; line-height: 1.45;">Alexander, Caesar, the greatest names Hamlet can summon.</div></div>
+                <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 24px;">&#8594;</div>
+                <div style="flex: 1; min-width: 150px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 12px 14px; text-align: center;"><div style="font-size: 15px; color: #0e1c42;"><strong>The same dust</strong></div><div style="font-size: 13px; color: #1a2340; line-height: 1.45;">Clay that "might stop a hole to keep the wind away" (5.1). Rank buys no exception.</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128148; PART 3 &middot; THE FUNERAL, AND A LEAP INTO THE GRAVE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The comedy stops cold. A funeral procession enters, and the cut rites tell Hamlet the death was a suspected suicide before he understands whose it is. Then he sees Laertes grieving and realizes: the grave is Ophelia's. Grief overrules his hiding. He steps forward and matches Laertes claim for claim, insisting on the depth of his own love: "I loved Ophelia. Forty thousand brothers / Could not with all their quantity of love / Make up my sum" (5.1). The two men grapple. Whether Hamlet's outburst is pure love, guilt, or rivalry with Laertes is left for you to weigh; what is certain is that the prince who spent four acts watching from the shadows has stepped into the open, at a graveside, over a body his own actions helped fill.</p>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 6px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> <em>Hamlet</em>, Act V, scene 1. Public-domain full text with scene navigation: <a href="https://www.folger.edu/explore/shakespeares-works/hamlet/read/5/1/" style="color: #3B4E8C;">Folger Shakespeare, <em>Hamlet</em> 5.1</a>.</div>
+        </div>
+    </div>
+
+    <!-- Interactive comprehension: match the line to who speaks it (student supplies it, after reading) -->
+    <div class="optima-widget ow-match" data-done="All four matched. You have the voices of the scene: the gravedigger's daily-work calm, Hamlet's grief over Yorick, and the funeral exchange between Laertes and the Doctor.">
+        <div class="widget-kicker">&#129513; NOW THAT YOU'VE READ IT: MATCH THE LINE TO WHO SPEAKS IT</div>
+        <div class="widget-question">Reread the scene if you need to. Click a line, then click who speaks it in Act V, scene 1. Four pairs.</div>
+        <div style="display:flex; flex-wrap:wrap; gap:20px;">
+            <div style="flex:1; min-width:200px;">
+                <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">LINE</div>
+                <div class="match-col" data-side="left">
+                    <button data-key="gravedigger">&ldquo;A tanner will last you nine year.&rdquo;</button>
+                    <button data-key="hamlet">&ldquo;Alas, poor Yorick! I knew him, Horatio: a fellow of infinite jest.&rdquo;</button>
+                    <button data-key="laertes">&ldquo;What ceremony else?&rdquo;</button>
+                    <button data-key="doctor">&ldquo;Her obsequies have been as far enlarged / As we have warranty.&rdquo;</button>
+                </div>
+            </div>
+            <div style="flex:1; min-width:200px;">
+                <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHO SPEAKS IT</div>
+                <div class="match-col" data-side="right">
+                    <button data-key="doctor">The Doctor, explaining why the funeral rites are cut short</button>
+                    <button data-key="hamlet">Hamlet, holding a skull he recognizes</button>
+                    <button data-key="gravedigger">The gravedigger, mid-dig, on how long a body lasts in the earth</button>
+                    <button data-key="laertes">Laertes, pressing for more ceremony at his sister's grave</button>
+                </div>
+            </div>
+        </div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Write three or four sentences on why Shakespeare opens his most death-haunted scene with jokes. To do it well: quote one gravedigger line and one line from Hamlet over the skull, each cited (5.1), and explain what the comedy does to the grief that follows. Does the humor make the funeral hit harder, soften it, or something else? Argue from the two lines you chose.</div>
+        </div>
+    </div>
+
+    <div style="background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127908; RECITATION: NEARLY THERE (ungraded, nothing to turn in)</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.65; margin: 0;">Your graded recitation is next week. This week, run your whole soliloquy from memory at least once a day, out loud and standing. If a passage keeps slipping, write it out by hand once; the hand often remembers what the eye skims. Aim to be off-book by the end of the week so that next week you can focus on delivery, not recall.</p>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can tell you who Yorick was and explain the memento mori tradition, both easily verified. It cannot judge, for you, whether Hamlet's graveside outburst is love or rivalry; that is an interpretive call the text keeps open. If an AI states one reading flatly, treat it as a claim to test against the lines, not a settled fact.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 6.02: The Readiness Is All</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A changed Hamlet returns to Elsinore strangely calm, and agrees to a fencing match he half-knows is a trap.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The graveyard strips the play down to its bones, literally. Every scheme, every crown, every soliloquy ends in the same earth. Carry that leveling into the final scene, where the schemers and the schemed-against all arrive there together.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 6.01 &middot; The Graveyard</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
