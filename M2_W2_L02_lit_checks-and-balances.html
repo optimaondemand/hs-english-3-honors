@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.06</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .widget-options { display:flex; flex-direction:column; gap:8px; }
+    .widget-options button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .widget-options button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .widget-options button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2 &middot; Lesson 2.06</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (2 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Checks and Balances</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Federalist No. 51 (finish)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.06 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Checks and Balances</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The cure for power grabbing is not better people. It is a floor plan that sets power against power.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Yesterday Madison named the double task: control the governed, then control itself. Today you finish <em>Federalist No. 51</em> and study the "auxiliary precautions" themselves: separate branches with rival motives, and power divided twice over. This is the machinery behind the phrase every civics class repeats, <strong>checks and balances</strong>, explained by the man who argued for it when it was still a proposal.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how "ambition must be made to counteract ambition" works as a design principle.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the two divisions of power that create Madison's "double security."</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace the problem, danger, solution structure that organizes the essay's argument.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; AMBITION AGAINST AMBITION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Madison's design principle fits in five words: "Ambition must be made to counteract ambition" (Federalist 51). People in government will always want more power; that is ambition, and Madison refuses to pretend otherwise. Instead of hoping officials act nobly, he arms each branch with its own powers and its own motives to defend them, so that one office's hunger runs into another's. Think of a competitive team: every player wants to be the star, but the rules force those ambitions to push against each other, and the collision keeps the game fair. Each branch also needs enough real independence to put up a fight. Madison argues that each department should have a will of its own, its own foundation of authority, so that none simply takes orders from another. He concedes the principle cannot be absolute: judges, for instance, need rare qualifications, so the other branches help select them. Notice the writer's move you practiced in Feeder 3: state the principle, concede its practical limit, and hold the claim anyway.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128737;&#65039; PART 2 &middot; THE DOUBLE SECURITY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">Then Madison zooms out. In America, he explains, power is not just split among branches; it is divided <em>twice</em>. First the people's power is divided between two levels of government, national and state. Then the portion given to each level is subdivided again into legislative, executive, and judicial departments. "Hence a double security arises to the rights of the people" (Federalist 51). The governments check each other, and inside each government the branches check each other.</p>
+
+        <!-- CORE VISUAL: double security diagram -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">"HENCE A DOUBLE SECURITY ARISES" (FEDERALIST 51): POWER DIVIDED TWICE</div>
+            <div style="background: #0E1C42; color: #ffffff; border-radius: 8px; padding: 10px 16px; text-align: center; font-size: 15px; margin-bottom: 10px;">THE PEOPLE'S POWER</div>
+            <div style="text-align: center; font-size: 13px; color: #3B4E8C; margin-bottom: 8px;">&#8595; &nbsp;division 1: between two levels of government&nbsp; &#8595;</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 2px solid #C7922C; border-radius: 8px; padding: 12px 14px; text-align: center;">
+                    <div style="font-size: 16px; color: #0e1c42;"><strong>National government</strong></div>
+                    <div style="font-size: 13px; color: #1a2340;">checks the states</div>
+                </div>
+                <div style="display: flex; align-items: center; font-size: 20px; color: #3B4E8C;">&#8646;</div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 2px solid #C7922C; border-radius: 8px; padding: 12px 14px; text-align: center;">
+                    <div style="font-size: 16px; color: #0e1c42;"><strong>State governments</strong></div>
+                    <div style="font-size: 13px; color: #1a2340;">check the national government</div>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 13px; color: #3B4E8C; margin-bottom: 8px;">&#8595; &nbsp;division 2: inside each government, three rival branches&nbsp; &#8595;</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 170px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px; text-align: center;">
+                    <div style="font-size: 24px;">&#128220;</div>
+                    <div style="font-size: 16px; color: #0e1c42;"><strong>Legislative</strong></div>
+                    <div style="font-size: 13px; color: #1a2340; line-height: 1.5;">makes law; its ambition is checked by veto and by the courts</div>
+                </div>
+                <div style="flex: 1; min-width: 170px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px; text-align: center;">
+                    <div style="font-size: 24px;">&#128737;&#65039;</div>
+                    <div style="font-size: 16px; color: #0e1c42;"><strong>Executive</strong></div>
+                    <div style="font-size: 13px; color: #1a2340; line-height: 1.5;">enforces law; checked by the purse, impeachment, and the courts</div>
+                </div>
+                <div style="flex: 1; min-width: 170px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px; text-align: center;">
+                    <div style="font-size: 24px;">&#9878;&#65039;</div>
+                    <div style="font-size: 16px; color: #0e1c42;"><strong>Judicial</strong></div>
+                    <div style="font-size: 13px; color: #1a2340; line-height: 1.5;">judges law; checked by appointment and impeachment</div>
+                </div>
+            </div>
+            <div style="text-align: center; background: #FDF3E3; border: 1px solid #E7C983; color: #0e1c42; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 10px;">Every arrow is an ambition pushing back on another ambition. No single hand ever holds the whole.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129517; PART 3 &middot; THE SHAPE OF THE ARGUMENT: PROBLEM, DANGER, SOLUTION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Step back from the machinery and look at how the essay is built, because you will borrow this structure for your own writing. Madison states a <strong>problem</strong>: government must control the governed and also control itself. He names the <strong>danger</strong>: concentrated power, including the power of a united majority, threatens everyone's rights; he warns that when a majority shares a common interest, the rights of the minority are at risk. Then he delivers the <strong>solution</strong>: divide power twice, multiply the interests in an extended republic, and let ambition police ambition. Problem, danger, solution: the reader arrives at the remedy already convinced the disease is real. Watch for the same three-beat structure in Hamilton tomorrow, and steal it for Publius Returns.</p>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 16px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Finish reading:</strong> <em>The Federalist No. 51</em>, second half (from "ambition must be made to counteract ambition" to the end). Public-domain text: <a href="https://avalon.law.yale.edu/18th_century/fed51.asp" style="color: #3B4E8C;">The Avalon Project, Yale Law School</a>.</div>
+        </div>
+
+        <!-- INTERACTIVE: student reconstructs the essay's three-move shape from the reading -->
+        <div class="optima-widget ow-order" data-done="That is the order Madison builds his case: problem, then danger, then solution. Notice how naming the danger first makes the reader feel the risk before the fix ever arrives." style="margin-top:18px;">
+            <div class="widget-kicker">&#129513; NOW YOU: TRACE THE ARGUMENT'S SHAPE</div>
+            <div class="widget-question">Federalist 51 builds its case in three moves. Click them in the order Madison makes them, from the reading you just finished.</div>
+            <div class="order-list">
+                <button data-order="3"><span class="seq" data-default="?">?</span> Delivers the solution: "Ambition must be made to counteract ambition," with power divided twice to create a "double security" for the people's rights (Federalist 51).</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span> States the problem: government must be enabled to control the governed, then obliged to control itself.</button>
+                <button data-order="2"><span class="seq" data-default="?">?</span> Names the danger: left unchecked, even a majority united by a common interest can threaten the rights of the minority.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Draw or outline the double security in your Journal: the two divisions of power, in your own words, with one sentence for each explaining what it protects against. Quote either "Ambition must be made to counteract ambition" or the "double security" line, and cite it (Federalist 51). Then answer in two or three sentences: which single check in the diagram do you think does the most work today, and why? Point to how that check has an ambition pushing back on another; that is the test of whether you picked a real one.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can produce a tidy chart of checks and balances in seconds, and it will usually be accurate about the mechanics. What it cannot do is tell you which check matters most right now, or whether Madison's machinery is working; those are judgment calls that depend on evidence and argument. Use AI to confirm a mechanism if you are unsure, and keep the evaluation, the part your Journal asks for, as your own reasoning.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.07: The Least Dangerous Branch</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Hamilton takes the branch people feared most, unelected judges for life, and argues it is the weakest of the three.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Madison's deepest claim is that structure can do what virtue alone cannot. The same is true of an essay: a well-built argument protects your point even when a hostile reader works through it. Build your writing the way Madison built the government.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.06 &middot; Checks and Balances</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
