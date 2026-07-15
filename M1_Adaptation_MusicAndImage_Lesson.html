@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Adaptation Studio: Music and Image</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 2px solid #0E1C42; }
+    .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- HEADER -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<!-- METADATA -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Honors Project</div>
+        <div style="font-size: 17px; color: #0e1c42;">The Adaptation Studio</div>
+        <div style="font-size: 12px; color: #0e1c42;">Sound &amp; score teaching lesson</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Focus</div>
+        <div style="font-size: 17px; color: #0e1c42;">How music and image tell a story</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Pairs with</div>
+        <div style="font-size: 16px; color: #0e1c42;">your sound-and-score milestone</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">ADAPTATION STUDIO &middot; TEACHING LESSON</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Music and Image: Telling a Story Without Words</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Some of the most powerful moments in film use almost no dialogue. The score and the picture do the storytelling. As a director, this is one of your sharpest tools, in film and in VR.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127925; DIEGETIC AND NON-DIEGETIC, ONE MORE TIME</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Sound that belongs to the world of the scene (a car engine, a character humming) is <strong>diegetic</strong>. A musical score the characters cannot hear, laid over the scene to shape how you feel, is <strong>non-diegetic</strong>. Watch how each clip below uses non-diegetic music to carry meaning the images alone would not, and how the pace of the editing works with the music.</p>
+    </div>
+
+    <!-- CLIP 1: UP -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127909; CLIP 1 &middot; A WHOLE LIFE, NO DIALOGUE &middot; <em>Up</em> (2009), "Married Life"</div>
+        <div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/EHoHhdbEq1Y" title="Up, Married Life montage" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <!-- Teacher: confirm the clip still plays; swap the video ID if it was removed. -->
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 12px 0 10px 0;">This is a wordless montage showing a marriage from wedding to widowhood, set to one recurring melody.</p>
+        <div style="background:#FDF3E3; border:1px solid #C7922C; border-radius:8px; padding:14px 16px; margin-bottom:12px;">
+            <div style="font-size:11px; color:#C7922C; margin-bottom:8px; letter-spacing:0.4px;">NOTICE (NO ANSWERS YET)</div>
+            <ul style="margin:0; padding-left:20px;">
+                <li style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;">How does the melody change (key, tempo, instruments) as the story moves through different years?</li>
+                <li style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;">What happens to the editing pace during the happy moments versus the sad ones?</li>
+                <li style="font-size:15px; color:#1a2340; line-height:1.55;">What single repeated image keeps returning, and what happens to your feeling about it by the end?</li>
+            </ul>
+        </div>
+        <div style="font-size:12px; color:#3B4E8C; margin-bottom:6px;">Jot what you notice here, then copy it into your director's log or notebook.</div>
+        <textarea style="width:100%; min-height:70px; border:1.5px solid #3B4E8C; border-radius:6px; padding:10px 12px; font-family:inherit; font-size:14px; color:#0e1c42; box-sizing:border-box; resize:vertical;" placeholder="What did you notice about the melody, the pace, and the repeated image?"></textarea>
+    </div>
+
+    <!-- CLIP 2: Shining -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127909; CLIP 2 &middot; DREAD BEFORE ANYTHING HAPPENS &middot; <em>The Shining</em> (1980), opening</div>
+        <div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/LjLip2FZLuA" title="The Shining, opening scene" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <!-- Teacher: confirm the clip still plays; swap the video ID if it was removed. -->
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 12px 0 10px 0;">This clip shows a car driving through mountain scenery, filmed from above. Nothing frightening happens in the images alone. You will watch it twice, once without the score and once with it, to isolate what the music is doing.</p>
+        <div style="background:#FDF3E3; border:1px solid #C7922C; border-radius:8px; padding:14px 16px; margin-bottom:12px;">
+            <div style="font-size:11px; color:#C7922C; margin-bottom:8px; letter-spacing:0.4px;">A TWO-PART LISTENING ACTIVITY</div>
+            <div style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:10px;"><strong>Step 1.</strong> Mute your device (we cannot mute the clip for you), then watch the scene with the sound off. Just watch the road, the car, and the mountains.</div>
+            <label style="font-size:12px; color:#3B4E8C; display:block; margin-bottom:6px;">With the sound off, what do you feel, and what do you expect to happen next?</label>
+            <textarea style="width:100%; min-height:70px; border:1.5px solid #3B4E8C; border-radius:6px; padding:10px 12px; font-family:inherit; font-size:14px; color:#0e1c42; box-sizing:border-box; resize:vertical; margin-bottom:14px;" placeholder="With the sound off, what did you notice or expect?"></textarea>
+            <div style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:10px;"><strong>Step 2.</strong> Unmute your device and watch the same scene again, this time with the sound on.</div>
+            <label style="font-size:12px; color:#3B4E8C; display:block; margin-bottom:6px;">With the sound on, what changed about how you felt?</label>
+            <textarea style="width:100%; min-height:70px; border:1.5px solid #3B4E8C; border-radius:6px; padding:10px 12px; font-family:inherit; font-size:14px; color:#0e1c42; box-sizing:border-box; resize:vertical; margin-bottom:14px;" placeholder="With the sound on, what changed?"></textarea>
+            <div style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:10px;"><strong>Step 3. Reflect.</strong> In your own words, how does the music add to this moment, when the images by themselves show nothing frightening?</div>
+            <label style="font-size:12px; color:#3B4E8C; display:block; margin-bottom:6px;">Your reflection</label>
+            <textarea style="width:100%; min-height:70px; border:1.5px solid #3B4E8C; border-radius:6px; padding:10px 12px; font-family:inherit; font-size:14px; color:#0e1c42; box-sizing:border-box; resize:vertical;" placeholder="How does the music add to this moment?"></textarea>
+        </div>
+    </div>
+
+    <!-- CLIP 3: Inception -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127909; CLIP 3 &middot; TENSION WITHOUT AN ANSWER &middot; <em>Inception</em> (2010), ending</div>
+        <div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/YuX04u1gfIQ" title="Inception, ending scene" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <!-- Teacher: confirm the clip still plays; swap the video ID if it was removed. -->
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 12px 0 10px 0;">This clip shows a spinning top and a cut to black at the very end of the film, without answering the question the story has been asking.</p>
+        <div style="background:#FDF3E3; border:1px solid #C7922C; border-radius:8px; padding:14px 16px; margin-bottom:12px;">
+            <div style="font-size:11px; color:#C7922C; margin-bottom:8px; letter-spacing:0.4px;">NOTICE (NO ANSWERS YET)</div>
+            <ul style="margin:0; padding-left:20px;">
+                <li style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;">What is the score doing in the moments right before the cut to black?</li>
+                <li style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;">Where exactly does the cut happen, and what does the sound do at that exact instant?</li>
+                <li style="font-size:15px; color:#1a2340; line-height:1.55;">What do you feel in the silence that follows the cut?</li>
+            </ul>
+        </div>
+        <div style="font-size:12px; color:#3B4E8C; margin-bottom:6px;">Jot what you notice here, then copy it into your director's log or notebook.</div>
+        <textarea style="width:100%; min-height:70px; border:1.5px solid #3B4E8C; border-radius:6px; padding:10px 12px; font-family:inherit; font-size:14px; color:#0e1c42; box-sizing:border-box; resize:vertical;" placeholder="What did you notice about the score, the timing of the cut, and the silence after?"></textarea>
+    </div>
+
+    <!-- INTERACTIVE -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="optima-widget ow-match" data-done="Right. In each case the music and the image together do what no line of dialogue could." style="margin:0;">
+            <div class="widget-kicker">&#129513; NOW YOU: MATCH THE CLIP TO WHAT SOUND AND IMAGE DO TOGETHER</div>
+            <div class="widget-question">Click a clip, then the effect its music-and-image pairing creates.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:160px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">THE CLIP</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="up">Up, "Married Life"</button>
+                        <button data-key="shining">The Shining, opening</button>
+                        <button data-key="inception">Inception, ending</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:160px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHAT IT DOES</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="shining">Creates dread over peaceful images, so the music warns you before the plot does</button>
+                        <button data-key="inception">Holds an unanswered question in suspense and cuts away at the peak of tension</button>
+                        <button data-key="up">Tells an entire life story, wordless, with one melody that changes mood</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Apply -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#127909; TAKE IT TO YOUR PROJECT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">In your director's log, name one moment in your unit where sound could carry meaning the images cannot: a silence, a single instrument, an ambient noise, or your own narration. Say what you want the viewer to feel, and what sound would create it. Your recorded narration is a musical choice too.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; The Adaptation Studio</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Music and Image: Telling a Story Without Words</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.match-col button').forEach(function (b) { b.classList.remove('selected','matched'); b.disabled=false; });
+      var f = w.querySelector('.widget-feedback'); if (f) { f.classList.remove('show'); f.textContent=''; }
+      w._matchPick=null; return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Rewatch and listen for what the music is doing.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
+</content>
