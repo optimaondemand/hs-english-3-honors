@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.13</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4 &middot; Lesson 2.13</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">A Foolish Consistency</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">"Self-Reliance" (1841)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.13 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">A Foolish Consistency</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Most people treat changing your mind as a weakness. Emerson calls the refusal to change it a hobgoblin.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Last week you met Emerson's first target: conformity, the pressure to think what everyone around you thinks. Today he names a second, sneakier enemy: your own past. Why do we keep defending opinions we no longer hold? Emerson's answer produced one of the most quoted (and most misquoted) sentences in American writing, and it will sharpen how you handle your own evolving claims all quarter.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what Emerson means by a "foolish" consistency, and what kind of consistency he is not attacking.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace the argument that leads to "To be great is to be misunderstood," and say what that sentence does and does not claim.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> apply Emerson's standard to my own evolving claim in the Reading Journal.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN (no wrong answer)</div>
+            <div class="widget-question">Think of the last time you publicly changed your mind about something that mattered. How did it feel?</div>
+            <div class="widget-options">
+                <button data-response="Emerson would say that discomfort is the hobgoblin at work: you were guarding your past self's reputation instead of your present self's judgment. Watch how he argues that the guard is not worth posting.">Uncomfortable. People remembered what I said before.</button>
+                <button data-response="Then you have already practiced what Emerson preaches. Today's reading gives you the language for why that freedom matters, and what it can cost.">Freeing. The old opinion no longer fit the evidence.</button>
+                <button data-response="That is honest, and it is common: many of us quietly avoid the test. Emerson thinks the avoidance itself has a price. Read today's passage with that in mind.">I am not sure I ever have, at least not out loud.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The second terror</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Last week Emerson argued that conformity, living "after the world's opinion," scatters your force and blurs your character. But he sees a second force that "scares us from self-trust": <strong>consistency</strong>, which he describes as "a reverence for our past act or word, because the eyes of others have no other data for computing our orbit than our past acts, and we are loth to disappoint them" ("Self-Reliance"). Notice the reasoning inside that sentence. We stay consistent, Emerson says, not because our old opinion is still true but because other people are watching, and their picture of us is built from what we already said. Consistency, on this account, is just conformity wearing a mask: conformity to your own past self.</p>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 16px 0 0 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Finish the essay this week:</strong> read from the paragraph beginning "The other terror that scares us from self-trust" through the end of "Self-Reliance." <a href="https://www.gutenberg.org/files/16643/16643-h/16643-h.htm" style="color: #3B4E8C;">Essays: First Series, Project Gutenberg</a>.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128123; PART 2 &middot; THE HOBGOBLIN SENTENCE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">Here is the famous sentence, with the word people forget in bold. Read it slowly; every word is doing work.</p>
+
+        <!-- CORE VISUAL: the hobgoblin sentence, annotated -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">ONE SENTENCE, THREE MOVES ("SELF-RELIANCE")</div>
+            <div style="background: #FFFFFF; border: 1px solid #C7CFE6; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; font-size: 20px; color: #0e1c42; line-height: 1.7; text-align: center;">"A <span style="background:#FDF3E3; border-bottom: 3px solid #C7922C; padding: 1px 4px;"><strong>foolish</strong></span> consistency is the <span style="background:#EEF1F8; border-bottom: 3px solid #3B4E8C; padding: 1px 4px;">hobgoblin</span> of little minds, adored by <span style="background:#EEF1F8; border-bottom: 3px solid #3B4E8C; padding: 1px 4px;">little statesmen and philosophers and divines</span>."</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 15px; color: #0e1c42;"><strong>"foolish"</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">The qualifier everyone drops. Emerson does not attack all consistency, only the kind kept for its own sake after the reason for it has died.</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 15px; color: #0e1c42;"><strong>"hobgoblin"</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">A goblin from folklore, a fear for children. The metaphor does the arguing: only a small mind is frightened by the charge "but you said the opposite last year."</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 15px; color: #0e1c42;"><strong>"little statesmen&hellip;"</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">He names the professions that live by their record: politicians, philosophers, clergy. The people most watched are most tempted to freeze in place.</div></div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 0 0;">Then Emerson pushes further: "With consistency a great soul has simply nothing to do" ("Self-Reliance"). And he gives the positive command that follows from it: "Speak what you think now in hard words, and to-morrow speak what to-morrow thinks in hard words again, though it contradict everything you said to-day." The standard is not "never contradict yourself." The standard is <strong>say what you now believe, plainly, every time</strong>. If your thinking has grown, your words must be allowed to grow with it. A person who forbids that growth is not being principled; that person is guarding a reputation.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#11088; PART 3 &middot; "TO BE GREAT IS TO BE MISUNDERSTOOD"</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Emerson knows the objection and stages it himself. He imagines a voice interrupting: "Ah, so you shall be sure to be misunderstood." His reply is a roll call: "Is it so bad, then, to be misunderstood? Pythagoras was misunderstood, and Socrates, and Jesus, and Luther, and Copernicus, and Galileo, and Newton, and every pure and wise spirit that ever took flesh. To be great is to be misunderstood" ("Self-Reliance").</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Look at who is on the list: thinkers whose ideas contradicted the settled opinion of their day and were attacked for it, and whose ideas later reshaped the world. The logic runs one direction only. Emerson claims that every great spirit was misunderstood; he does not claim that everyone who is misunderstood is great. Being confusing, or wrong, or simply stubborn earns no place on that list. The sentence is a consolation for those who speak honest new thought, not a license to be careless.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 18px 0;">Put the two halves of today together and Emerson's position comes into focus. Your past positions are data about who you were, not commands to who you are. Truth-telling in the present tense will sometimes look like contradiction from the outside, and that appearance is a price worth paying. Whether that price is <em>always</em> worth paying, especially for the people a leader has made promises to, is a question worth holding onto. Keep it open; it returns with force in Lesson 2.15, when Emerson meets Madison.</p>
+
+        <!-- INTERACTIVE: student reconstructs the argument's sequence from the reading -->
+        <div class="optima-widget ow-order" data-done="That is the order the essay follows: name the fear, dismiss it, command honesty, meet the objection, answer it.">
+            <div class="widget-kicker">&#129513; NOW YOU: TRACE EMERSON'S ARGUMENT</div>
+            <div class="widget-question">Click these five moments from today's reading in the order Emerson makes the argument.</div>
+            <div class="order-list">
+                <button data-order="3"><span class="seq" data-default="?">?</span> He commands the reader to "speak what you think now in hard words," even if it contradicts what was said yesterday ("Self-Reliance").</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span> He names consistency, alongside conformity, as a force that "scares us from self-trust" ("Self-Reliance").</button>
+                <button data-order="5"><span class="seq" data-default="?">?</span> He answers with the roll call of misunderstood thinkers, ending "To be great is to be misunderstood" ("Self-Reliance").</button>
+                <button data-order="2"><span class="seq" data-default="?">?</span> He calls a foolish consistency "the hobgoblin of little minds" ("Self-Reliance").</button>
+                <button data-order="4"><span class="seq" data-default="?">?</span> He stages the objection against himself: "so you shall be sure to be misunderstood" ("Self-Reliance").</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Open the "evolving claim" section of your Module 2 Organizer and reread your Week 1 answer to the module question. Write a short entry doing two things. First, name one place your thinking has shifted since Week 1 and state your current view in one plain sentence, hard words and all. Second, judge your own shift by Emerson's standard: is this growth (new evidence, better reasons) or drift (absorbing other people's opinions)? To decide, point to the specific reading or idea that moved you; growth can name its cause, drift usually cannot. Quote the hobgoblin sentence or the "Speak what you think" sentence and cite it ("Self-Reliance").</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">The hobgoblin sentence is one of the most misquoted lines in American literature; AI tools trained on the misquotations sometimes repeat them, dropping the word "foolish" or reshuffling the ending. An AI summary can also flatten Emerson's careful one-way claim about being misunderstood into "geniuses are always doubted." Check any quotation against the actual text before you use it; that habit is worth more than any summary.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.14: The Self and the Joint-Stock Company</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Emerson's harshest metaphor for society, and an honest accounting of what nonconformity actually costs.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Your Publius Returns op-ed will be stronger if you let your claim evolve while you draft it. Emerson just gave you permission: revision is not inconsistency, it is thinking in public. The writers who never change a word are usually the ones who stopped thinking.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.13 &middot; A Foolish Consistency</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the argument.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
