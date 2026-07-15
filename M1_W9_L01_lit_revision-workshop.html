@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 9.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .widget-options { display:flex; flex-direction:column; gap:8px; }
+    .widget-options button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .widget-options button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .widget-options button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 9 &middot; Lesson 9.01</div>
+        <div style="font-size: 12px; color: #0e1c42;">Project Craft</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Revision Workshop</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Toward</div>
+        <div style="font-size: 16px; color: #0e1c42;">Your final, due this week</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 9.01 &middot; Project Craft</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Revision Workshop</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Writing is rewriting. A draft is raw material; revision is where the scene becomes good.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have a full draft and, likely, a note or two from your teacher. Today you revise with purpose. Revision is not proofreading; it is re-seeing. You will strengthen the shape, sharpen the verse line by line, protect the consistency you built, and only then fix the small errors. Then you submit the graded final.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> revise for shape and sense first, then for line-level craft, then for errors.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> act on feedback deliberately, deciding what to take and why.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128260; PART 1 &middot; THREE PASSES, IN ORDER</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Do not revise everything at once. Make three separate passes, big to small, so you do not polish a line you later cut.</p>
+
+        <!-- CORE VISUAL: revision passes -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">REVISE IN THREE PASSES</div>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="background: #FFFFFF; border-left: 5px solid #C7922C; border-radius: 8px; padding: 12px 16px;"><div style="font-size: 15px; color: #0e1c42;"><strong>Pass 1 &middot; Shape &amp; sense</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Does the opening / turn / close still hold? Is the one want clear throughout? Cut or move anything that wanders. This is the pass that matters most.</div></div>
+                <div style="background: #FFFFFF; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 12px 16px;"><div style="font-size: 15px; color: #0e1c42;"><strong>Pass 2 &middot; The line</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Read aloud. Fix limp rhythm, replace a weak verb, make sure your antithesis actually balances. Confirm nothing broke the register or the plot.</div></div>
+                <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 8px; padding: 12px 16px;"><div style="font-size: 15px; color: #0e1c42;"><strong>Pass 3 &middot; Proofread</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Only now: spelling, punctuation (use the module's grammar, no em dashes), and, if you quote or reference the play, a correct MLA citation from Lesson 6.04.</div></div>
+            </div>
+        </div>
+
+        <!-- Interactive: student sorts revision tasks into the correct pass, applying the tool -->
+        <div class="optima-widget ow-match" data-done="Matched. That is the order: shape, then line, then error." style="margin-top:18px;">
+            <div class="widget-kicker">&#129513; NOW YOU: SORT THE FIX TO THE PASS</div>
+            <div class="widget-question">Click a revision task, then click the pass it belongs to. Three pairs.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:180px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">REVISION TASK</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="shape">Cut a line that does not serve your character's one want</button>
+                        <button data-key="line">Replace a weak verb so the antithesis actually balances</button>
+                        <button data-key="proof">Fix a misspelled word and format the MLA citation</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:180px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">PASS</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="proof">Pass 3 &middot; Proofread</button>
+                        <button data-key="shape">Pass 1 &middot; Shape &amp; sense</button>
+                        <button data-key="line">Pass 2 &middot; The line</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128172; PART 2 &middot; USING FEEDBACK WELL</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Feedback is information, not orders. For each comment your teacher left, decide: do you agree, and what will you change? If you disagree, you can keep your choice, but only if you can say why it serves the scene. The one thing you may not do is ignore a note about a plot contradiction; that has to be fixed. Revision is where you show you can hold your own judgment and take good counsel at the same time.</p>
+
+        <!-- Interactive: apply the one firm rule to a concrete case -->
+        <div class="optima-widget ow-select" style="margin-top:16px;">
+            <div class="widget-kicker">&#129513; YOUR TEACHER LEFT THIS NOTE. NOW WHAT?</div>
+            <div class="widget-question">"This line contradicts what we see happen earlier in the play." What should you do?</div>
+            <div class="widget-options">
+                <button data-response="Correct. A plot contradiction is the one kind of note you cannot set aside. Fix it, even if it costs you a line you liked.">Fix it. A plot contradiction has to be corrected.</button>
+                <button data-response="Not this one. Feedback on style is a judgment call you can weigh, but a plot contradiction is a fact, not a matter of taste.">Keep the line if you still like how it sounds.</button>
+                <button data-response="Not this one. You do not need to start over; find the one contradicting detail and adjust just that part.">Scrap the whole scene and start over.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Before you revise, log your plan in your Journal: list each piece of feedback you received (or, if none yet, the two weakest spots you already see), and next to each write what you will do about it and why. Then make your three passes in order. Keeping this short revision plan is the habit that turns a draft into a finished piece.</div>
+        </div>
+    </div>
+
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#129302; WORKING WITH CLAUDE ON THIS PROJECT</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can proofread for spelling and mechanics, a fair use in Pass 3, but do not let it rewrite your lines or "improve" your verse. Use the same narrow rhythm-check step from the <strong>Elsinore Stage Workshop</strong> and its AI-use log; if it suggests a rewrite, treat it as a question, then fix the line in your own words.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; NOW FINISH IT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#127917;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>The Elsinore Stage: Final</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Submit your revised scene as the graded project. Optionally, record a staged reading for the class gallery.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The discipline you used here, revise big to small, weigh feedback, protect what you meant, is the same one you will bring to every essay this year. A finished piece is a drafted piece that was taken seriously twice.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 9.01 &middot; The Revision Workshop</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button').forEach(function (b) { b.classList.remove('selected','matched'); b.disabled=false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      w._matchPick=null;
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
