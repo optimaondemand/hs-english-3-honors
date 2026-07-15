@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.14</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4 &middot; Lesson 2.14</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (2 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Self and the Joint-Stock Company</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">"Self-Reliance" (1841)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.14 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Self and the Joint-Stock Company</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Emerson describes society as a business, and every member as a shareholder who paid for security with freedom.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today you slow down over the harshest metaphor in "Self-Reliance" and take it apart word by word. Then you do what Emerson himself does a few paragraphs later: count the real cost of refusing the bargain. He never pretends nonconformity is free. Reading both halves honestly, the attack and the price tag, is what separates understanding this essay from quoting it.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> unpack the joint-stock company metaphor: what is traded, what is gained, and what Emerson thinks the trade destroys.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the costs Emerson admits nonconformity carries, in his own words.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state the strongest answer society could give back to Emerson, fairly.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127974; PART 1 &middot; READING THE METAPHOR LIKE A CONTRACT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">Here is the sentence, from the paragraph you studied briefly last week: "Society is a joint-stock company, in which the members agree, for the better securing of his bread to each shareholder, to surrender the liberty and culture of the eater" ("Self-Reliance"). A joint-stock company is a business owned by shareholders: each puts something in, each draws a dividend out. Emerson asks you to read your whole social world as that kind of company, so read the sentence the way a lawyer reads a contract. What does each member pay in? What does each member get back?</p>
+
+        <!-- CORE VISUAL: the contract, itemized -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">THE SHAREHOLDER AGREEMENT, AS EMERSON READS IT</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch;">
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #C7CFE6; border-top: 4px solid #3B4E8C; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.5px; margin-bottom: 8px;">WHAT EACH MEMBER RECEIVES</div>
+                    <div style="font-size: 16px; color: #0e1c42; margin-bottom: 6px;"><strong>"the better securing of his bread"</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Security. Belonging. A safer livelihood than anyone could win alone. Emerson concedes the dividend is real; that is what makes the company so hard to quit.</div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; min-width: 90px;">
+                    <div style="background: #0E1C42; color: #FFFFFF; border-radius: 8px; padding: 10px 14px; font-size: 13px; text-align: center;">in exchange<br />for</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #C7CFE6; border-top: 4px solid #C7922C; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.5px; margin-bottom: 8px;">WHAT EACH MEMBER SURRENDERS</div>
+                    <div style="font-size: 16px; color: #0e1c42; margin-bottom: 6px;"><strong>"the liberty and culture of the eater"</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Not just freedom of action ("liberty") but inner growth ("culture" here means the cultivation of the self, a mind allowed to ripen on its own terms).</div>
+                </div>
+            </div>
+            <div style="background: #FDF3E3; border: 1px solid #E7C983; border-radius: 8px; padding: 12px 16px; margin-top: 12px; font-size: 14px; color: #1a2340; line-height: 1.55;"><strong>The fine print:</strong> Emerson states the company's one operating rule in the next two sentences: "The virtue in most request is conformity. Self-reliance is its aversion." A company needs predictable shareholders. The self-reliant member is bad for business.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 0 0;">Notice what kind of attack this is. Emerson does not say society is evil or that its members are fools. He says society is a <em>bargain</em>, entered for real benefits, whose hidden price is the thing he values most. That framing sets up his most quoted demand, which you met last week and can now read with full force: "Whoso would be a man must be a nonconformist," because "Nothing is at last sacred but the integrity of your own mind" ("Self-Reliance"). If the company's dividend is bread, and the cost is your mind's integrity, Emerson thinks you are selling the only thing you cannot buy back.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9878;&#65039; PART 2 &middot; THE PRICE TAG EMERSON ADMITS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">A weaker writer would stop there. Emerson keeps going and itemizes what quitting the company costs, in the present tense, as fact: "For nonconformity the world whips you with its displeasure" ("Self-Reliance"). The bystanders "look askance on him in the public street or in the friend's parlor." He even coaches the nonconformist on how to bear it, noting that "the sour faces of the multitude, like their sweet faces, have no deep cause, but are put on and off as the wind blows and a newspaper directs." The disapproval is shallow, he argues, but it is real, and it arrives daily, from strangers and from friends.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">And he grants how rare the strength to bear it is: "It is easy in the world to live after the world's opinion; it is easy in solitude to live after our own; but the great man is he who in the midst of the crowd keeps with perfect sweetness the independence of solitude" ("Self-Reliance"). Read that sentence twice. Emerson is not praising the hermit who avoids the test, and not the crowd-pleaser who fails it. The standard is independence <em>inside</em> the crowd, kept with "sweetness" rather than bitterness. Defiance that curdles into contempt for other people fails his test just as surely as conformity does.</p>
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 14px 18px; margin: 0 0 18px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">FAIR PLAY: WHAT WOULD SOCIETY SAY BACK?</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Before you side with Emerson, give the company its lawyer. Society might answer: the "surrender" is what makes every other good possible; without the pooled security of laws, schools, and markets, there is no bread, no leisure, and no printed essay called "Self-Reliance." Even the language Emerson writes in is a shared inheritance, not a private invention. Whether that answer defeats him or only qualifies him is exactly the question Lesson 2.15 puts on the table, with Madison holding the company's brief.</div>
+        </div>
+
+        <!-- INTERACTIVE: student matches each quoted phrase to its role in Emerson's own argument -->
+        <div class="optima-widget ow-match" data-done="All four matched. You have the whole bargain: what it pays, what it costs, and the standard Emerson holds you to.">
+            <div class="widget-kicker">&#129513; NOW YOU: MATCH THE PHRASE TO ITS ROLE IN THE ARGUMENT</div>
+            <div class="widget-question">Click a <strong>phrase from the text</strong>, then click the <strong>role it plays</strong> in Emerson's argument. Four pairs.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:200px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">PHRASE</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="bread">"the better securing of his bread"</button>
+                        <button data-key="liberty">"the liberty and culture of the eater"</button>
+                        <button data-key="whips">"the world whips you with its displeasure"</button>
+                        <button data-key="solitude">"the independence of solitude"</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:200px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">ITS ROLE</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="liberty">What each member surrenders to join the company</button>
+                        <button data-key="solitude">The standard Emerson asks a nonconformist to keep, even inside a crowd</button>
+                        <button data-key="bread">What society promises each member in exchange</button>
+                        <button data-key="whips">The cost Emerson admits a nonconformist will actually pay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">In your Week 4 notes, copy the joint-stock sentence and write a two-part response. Part one: name one concrete, present-day version of the bargain, a specific setting where people trade some freedom of thought or expression for belonging or security (a team, a workplace, an online community, a friend group). Explain in two or three sentences how the trade works there, using the metaphor's own terms: dividend and surrender. Part two: apply Emerson's admitted costs to it. What "whips of displeasure" would a nonconformist face in that setting, and would keeping "the independence of solitude" there be worth it? Also add one line to your appeals watch: the joint-stock sentence works partly by pathos through metaphor. Note what feeling the business language is built to produce.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Ask an AI tool what "joint-stock company" meant to an 1841 reader and it can supply useful business history: shared ownership, shared risk, dividends. What it cannot do is decide whether the metaphor is fair to society; that is a judgment, not a fact, and Emerson's own text argues both sides. Use AI for the historical footnote, then weigh the metaphor yourself.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.15: The Bridge: Madison Meets Emerson</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The two visions of self-government you have built this module finally face each other.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The strongest move in today's reading is Emerson conceding the costs of his own position. That is the same claim-concede-counter engine you practiced in Feeder 3, run by a master. Your Publius Returns op-ed earns trust the same way: name what your position costs before your opponent does.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.14 &middot; The Self and the Joint-Stock Company</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and reread.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
