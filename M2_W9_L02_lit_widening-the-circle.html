@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.33</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 9 &middot; Lesson 2.33</div>
+        <div style="font-size: 12px; color: #0e1c42;">Honors Extension (2 of 2)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Widening the Circle</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Declaration of Independence (1776), one sentence</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.33 &middot; Honors Extension</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Widening the Circle</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Publius, Emerson, and Douglass have been talking to each other all module. Today a fourth voice pulls up a chair, and everyone else has to make room.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Every conversation changes when a new voice joins it, not because the new voice necessarily wins the argument, but because everyone already talking has to account for what it says. Today you add one sentence, the most consequential sentence in American political writing, to the table where Publius, Emerson, and Douglass have been arguing. You will find that it does not simply agree with all three; it stands underneath the whole conversation as the premise none of them can escape, and it presses hardest on the one voice arguing that the promise has been broken.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what the Declaration's claim that "all men are created equal" adds to the module's three voices.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how adding a new voice to a conversation can sharpen an argument in one place and complicate it in another.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> test the objection I named yesterday against this widened conversation.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128220; PART 1 &middot; THE SENTENCE UNDERNEATH THE CONVERSATION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">In 1776, thirteen years before Publius wrote and sixty-five years before Emerson, the Continental Congress adopted a declaration drafted chiefly by Thomas Jefferson, announcing to "a candid world" why the colonies were separating from Great Britain. Its second sentence states the premise the rest of the document argues from: "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness" (Declaration of Independence). A "self-evident" truth is one the document claims needs no proof, only recognition. Read the rest of this module's texts against that one sentence and something becomes visible that was there all along: none of the three writers is arguing from a blank slate. Each one is arguing from, or against, this single founding claim.</p>
+
+        <!-- CORE VISUAL: the widening circle -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 22px; text-align: center;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 16px;">A FOURTH VOICE JOINS THE CONVERSATION</div>
+            <div style="position: relative; width: 100%; max-width: 480px; margin: 0 auto;">
+                <div style="border: 3px dashed #C7922C; border-radius: 50%; padding: 34px 18px; background: rgba(199,146,44,0.05);">
+                    <div style="font-size: 13px; color: #c7922c; margin-bottom: 14px;">"ALL MEN ARE CREATED EQUAL" &middot; DECLARATION, 1776</div>
+                    <div style="border: 2px solid #3B4E8C; border-radius: 50%; padding: 22px 16px; background: #FFFFFF; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                        <div style="flex: 1; min-width: 120px; background: #EEF1F8; border-radius: 8px; padding: 10px 8px;"><div style="font-size: 14px; color: #0e1c42;"><strong>Publius</strong></div><div style="font-size: 12px; color: #1a2340;">builds a government to secure it</div></div>
+                        <div style="flex: 1; min-width: 120px; background: #EEF1F8; border-radius: 8px; padding: 10px 8px;"><div style="font-size: 14px; color: #0e1c42;"><strong>Emerson</strong></div><div style="font-size: 12px; color: #1a2340;">locates it inside each mind</div></div>
+                        <div style="flex: 1; min-width: 120px; background: #EEF1F8; border-radius: 8px; padding: 10px 8px;"><div style="font-size: 14px; color: #0e1c42;"><strong>Douglass</strong></div><div style="font-size: 12px; color: #1a2340;">holds the nation to it</div></div>
+                    </div>
+                </div>
+            </div>
+            <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 16px;">The dashed gold ring is the premise; the solid indigo ring is the module's three voices, each responding to it in a different key.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 0 0;">Trace each spoke of that circle. Publius, in Federalist 51, is designing the machinery that keeps a government from taking back rights it is supposed to secure; the whole argument for auxiliary precautions and separated powers assumes the Declaration's claim is worth protecting, and asks how, not whether. Emerson, in "Self-Reliance," relocates the claim inward: if all people carry an equal, self-evident dignity, then that dignity does not wait on any government's permission, and Emerson's demand to trust your own mind is one way of taking "created equal" seriously at the level of the individual conscience. Douglass, in the Appendix and across the <em>Narrative</em>, is the voice for whom the premise and the practice have visibly split apart. He does not reject "all men are created equal"; he holds the nation to it, the same rhetorical move you studied in Week 7, measuring a professed ideal against an actual practice. Adding the Declaration does not give Douglass a new argument. It gives you, the reader, the exact ideal his whole book is measuring the republic against.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128172; PART 2 &middot; WHAT A FOURTH VOICE DOES</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Widening a conversation to include one more voice rarely just adds support to what was already being said. It does at least two things at once, and a strong reader watches for both.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;"><strong>It can sharpen an argument</strong> by giving a vaguer claim a sharper name. Douglass's charge that America betrays its "founding words" becomes exact once you know which words: "all men are created equal," a claim written by a slaveholder, applied by Douglass to people that same document's authors did not free. The Declaration does not soften that irony; it hands you the precise sentence the irony depends on.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;"><strong>It can also complicate an argument</strong> by raising a question the original three voices leave open. If the claim was self-evident in 1776, why did it take Douglass's generation, and generations after his, to make good on it for everyone the document should have covered? Is the fault in the claim, in the men who wrote it and did not live by it, or in the slow work of applying a true premise to an unjust practice? The three module texts do not resolve that question for you. Widening the circle does not hand you an answer; it hands you a sharper version of the problem, which is what a strong fourth voice should do.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 3 &middot; THE SHAPE OF A REBUTTAL THAT WIDENS THE CIRCLE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Douglass does not simply accuse the nation of hypocrisy; he holds it to a promise it already made, then shows precisely where practice breaks from that promise. That is a repeatable move, not a one-time trick, and it is the move your own Anti-Publius reply will need to make. Put these five moves in the order a rebuttal like his actually follows, from shared ground to final pressure.</p>
+        <div class="optima-widget ow-order" data-done="That is the order the move follows: ground the rebuttal in shared premise before naming the objection, testing it, producing evidence, and pressing the case.">
+            <div class="widget-kicker">&#129513; NOW YOU: PUT THE STEPS IN ORDER</div>
+            <div class="widget-question">Click these five moves in the order a rebuttal that widens the circle actually follows.</div>
+            <div class="order-list">
+                <button data-order="2"><span class="seq" data-default="?">?</span> State, honestly, the strongest objection your own claim actually faces.</button>
+                <button data-order="4"><span class="seq" data-default="?">?</span> Point to specific, named evidence of where practice falls short of the premise, not a general accusation.</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span> Name the premise both sides already accept, the promise or claim neither writer denies.</button>
+                <button data-order="5"><span class="seq" data-default="?">?</span> Press the case by holding the argument to its own premise, the way Douglass holds the nation to its founding creed.</button>
+                <button data-order="3"><span class="seq" data-default="?">?</span> Test the objection against the shared premise: does the premise make the objection sharper, or does it complicate it?</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">In your Module 2 Organizer, copy the Declaration sentence beginning "We hold these truths to be self-evident" and cite it (Declaration of Independence). Place it beside one Federalist quotation and one Douglass quotation you have already logged this module. Write four or five sentences: does the Declaration's claim sharpen your two quoted passages, complicate them, or both? Then reread the objection you named yesterday to your own op-ed claim and test it against this widened conversation: does the Declaration's premise make your original claim easier to defend, harder to defend, or does it change the objection itself? Name which, and why, in your own words.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can locate the Declaration's "all men are created equal" sentence accurately and describe its historical role. It is weaker at the specific connective work this lesson asks for: showing exactly how one writer's argument depends on that premise. A generic AI answer might say all three writers "believed in equality," which is true but says almost nothing. When you write your own connection, name the specific passage in Federalist 51, "Self-Reliance," or the Narrative that the Declaration's claim actually touches, and say precisely how.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>The Anti-Publius</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Write the reply your own harshest honest critic would write, drawing on the strongest objection from Lesson 2.32 and, if it strengthens your case, the wider conversation from today.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Any argument you make for the rest of your life will sit inside a wider conversation than the one you started in. Practicing the habit of asking what a new voice would add, not just whether it agrees with you, is what keeps an argument honest as it grows.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.33 &middot; Widening the Circle</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the steps.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
