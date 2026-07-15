@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Independent Reading</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .genre-tabs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+    .genre-tabs button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:20px; padding:8px 16px; font-size:14px; color:#0E1C42; cursor:pointer; font-family:inherit; }
+    .genre-tabs button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .genre-tabs button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .genre-panel { display:none; background:#FFFFFF; border:1px solid #C7CFE6; border-radius:8px; padding:16px 20px; }
+    .genre-panel.show { display:block; }
+    .genre-panel ul { margin:0; padding-left:20px; columns:2; column-gap:28px; }
+    .genre-panel li { font-size:15px; color:#1a2340; line-height:1.7; break-inside:avoid; }
+    .ir-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+    .ir-reset:hover { background: #FDF3E3; }
+    @media (max-width:640px){ .genre-panel ul { columns:1; } }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- HEADER -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<!-- METADATA -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Start Here</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Page</div>
+        <div style="font-size: 17px; color: #0e1c42;">Independent Reading</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Rhythm</div>
+        <div style="font-size: 16px; color: #0e1c42;">One book each quarter</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">YOUR READING LIFE</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 6px;">Read one book you choose, each quarter, for the pleasure of it</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Alongside the works we study together, you keep a reading life of your own. Each quarter you pick one book from the menu below and read it at your own pace. This is meant to be enjoyable, not another heavy assignment, so the way you are held accountable is deliberately light.</div>
+    </div>
+
+    <!-- Why -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128218; WHY THIS IS PART OF THE COURSE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The strongest readers are people who read on their own, by choice, for years. This part of the course exists to build that habit while you still have a class supporting it. You choose the book, so it is yours; the point is to finish a quarter having genuinely read and enjoyed something, not to be tested on it.</p>
+    </div>
+
+    <!-- HOW IT WORKS: the light accountability -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#129517; HOW THE QUARTER WORKS (THREE LIGHT STEPS)</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+            <div style="min-width: 30px; height: 30px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div><div style="font-size: 18px; color: #0e1c42;"><strong>Choose a book</strong> (Week 1).</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Pick one title from the menu below, or propose your own for quick teacher approval. Do not pick a book we are studying together that quarter.</div></div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+            <div style="min-width: 30px; height: 30px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div><div style="font-size: 18px; color: #0e1c42;"><strong>Keep a one-line reading log</strong> (as you go).</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">In your Module Organizer, add a quick line whenever you read: the date, the pages or minutes, and one sentence of reaction. That is the whole log. It builds the habit and takes seconds.</div></div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 30px; height: 30px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div><div style="font-size: 18px; color: #0e1c42;"><strong>Share one short response</strong> (the Quarterly Reading Check).</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Near the end of the quarter, do <em>one</em> of the responses below. It is graded for completion, not graded like an essay. Or, if you would rather talk than write, sign up for a three-minute conversation with your facilitator instead.</div></div>
+        </div>
+    </div>
+
+    <!-- Response menu + log visual -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127917; CHOOSE ONE RESPONSE (WHATEVER SUITS THE BOOK AND YOU)</div>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom:16px;">
+            <div style="background:#EEF1F8; border:1px solid #C7CFE6; border-radius:8px; padding:14px 16px;"><div style="font-size:16px; color:#0e1c42;">&#127908; <strong>Book talk</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">A two-to-three minute recording: what it is, one thing you loved, and who should read it.</div></div>
+            <div style="background:#EEF1F8; border:1px solid #C7CFE6; border-radius:8px; padding:14px 16px;"><div style="font-size:16px; color:#0e1c42;">&#9993;&#65039; <strong>Recommendation letter</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">A short letter to a friend making the case for (or against) the book.</div></div>
+            <div style="background:#EEF1F8; border:1px solid #C7CFE6; border-radius:8px; padding:14px 16px;"><div style="font-size:16px; color:#0e1c42;">&#128278; <strong>Favorite passage</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Copy one passage you love and add a few sentences on why it stayed with you.</div></div>
+            <div style="background:#EEF1F8; border:1px solid #C7CFE6; border-radius:8px; padding:14px 16px;"><div style="font-size:16px; color:#0e1c42;">&#128279; <strong>Connection</strong></div><div style="font-size:14px; color:#1a2340; line-height:1.5;">One page linking your book to the work we studied this quarter (a shared theme, a mirrored choice).</div></div>
+        </div>
+        <div style="background:#E8F6FB; border:1px solid #A9D6E8; border-radius:8px; padding:14px 18px; font-size:15px; color:#1a2340; line-height:1.6;">&#128172; <strong>Prefer talking?</strong> Swap the written response for a three-minute facilitator conference. Live students can do this in Teams; On-Demand students by appointment. Same credit either way.</div>
+        <!-- log mockup -->
+        <div style="margin-top:16px; border:2px solid #0E1C42; border-radius:10px; overflow:hidden;">
+            <div style="background:#0E1C42; color:#fff; padding:10px 16px; font-size:15px;">Reading log &middot; example</div>
+            <div style="padding:8px 16px 14px 16px; font-size:15px; color:#1a2340; line-height:1.9;">
+                Sep 9 &middot; 20 min &middot; Hooked already; the narrator is funnier than I expected.<br />
+                Sep 12 &middot; 25 pp &middot; Slower here, but I want to know what she decides.<br />
+                Sep 16 &middot; 30 min &middot; That twist changes how I read the first chapter.
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE: genre chooser + book menu -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#128214; THE BOOK MENU &middot; PICK A GENRE TO BROWSE</div>
+        <div class="genre-tabs" id="genreTabs">
+            <button data-g="classics" class="selected">Classics &amp; Folklore</button>
+            <button data-g="mystery">Mystery / Adventure / Humor</button>
+            <button data-g="scifi">Fantasy &amp; Science Fiction</button>
+            <button data-g="histfic">Historical Fiction</button>
+            <button data-g="nonfic">Nonfiction</button>
+            <button data-g="award">Award Winning</button>
+        </div>
+        <div class="genre-panel show" data-g="classics">
+            <ul>
+                <li><em>Anna Karenina</em> (Tolstoy)</li><li><em>The Brothers Karamazov</em> (Dostoevsky) &mdash; any by author</li><li><em>A Connecticut Yankee in King Arthur's Court</em> (Twain)</li><li><em>Crime and Punishment</em> (Dostoevsky)</li><li><em>David Copperfield</em> (Dickens) &mdash; any by author except in-class texts</li><li><em>Emma</em> (Austen) &mdash; any by author except <em>Pride and Prejudice</em></li><li><em>The Good Earth</em> (Buck)</li><li><em>The Grapes of Wrath</em> (Steinbeck)</li><li><em>Great Expectations</em> (Dickens)</li><li><em>The House of the Seven Gables</em> (Hawthorne)</li><li><em>Ivanhoe</em> (Scott)</li><li><em>Lady Susan</em> (Austen)</li><li><em>The Last of the Mohicans</em> (Cooper)</li><li><em>Northanger Abbey</em> (Austen)</li><li><em>The Old Man and the Sea</em> (Hemingway)</li><li><em>Persuasion</em> (Austen)</li><li><em>The Pickwick Papers</em> (Dickens)</li><li><em>Pilgrim's Progress</em> (Bunyan)</li><li><em>The Sea Wolf</em> (London)</li><li><em>Sense and Sensibility</em> (Austen)</li><li><em>Wuthering Heights</em> (Bront&euml;)</li><li><em>The Yearling</em> (Rawlings)</li>
+            </ul>
+        </div>
+        <div class="genre-panel" data-g="mystery">
+            <ul>
+                <li><em>Alas, Babylon</em> (Frank)</li><li><em>The Count of Monte Cristo</em> (Dumas)</li><li><em>Father Brown: Essential Tales</em> (Chesterton)</li><li><em>Lord of the Flies</em> (Golding)</li><li><em>The Outsiders</em> (Hinton)</li><li><em>Portuguese Irregular Verbs</em> (von Igelfeld)</li><li><em>Rebecca</em> (du Maurier)</li><li><em>Right, Ho Jeeves</em> (Wodehouse)</li><li><em>A Separate Peace</em> (Knowles)</li><li><em>Strong Poison</em> (Sayers)</li><li><em>The Three Musketeers</em> (Dumas)</li><li><em>A Tree Grows in Brooklyn</em> (B. Smith)</li>
+            </ul>
+        </div>
+        <div class="genre-panel" data-g="scifi">
+            <ul>
+                <li><em>1984</em> (Orwell)</li><li><em>Brave New World</em> (Huxley)</li><li><em>Dandelion Wine</em> (Bradbury) &mdash; any by author</li><li><em>Gulliver's Travels</em> (Swift)</li><li><em>The Hobbit</em> (Tolkien)</li><li><em>I, Robot</em> (Asimov)</li><li><em>The Little Prince</em> (de Saint-Exup&eacute;ry)</li><li><em>The Lord of the Rings</em> (Tolkien) &mdash; series</li><li><em>The Martian Chronicles</em> (Bradbury)</li><li><em>The Pilgrim's Regress</em> (Lewis)</li><li><em>The Princess and the Curdie</em> (MacDonald) &mdash; any by author</li><li><em>The Princess and the Goblin</em> (MacDonald)</li><li><em>The Silmarillion</em> (Tolkien)</li><li><em>Something Wicked This Way Comes</em> (Bradbury)</li><li><em>Watership Down</em> (Adams)</li>
+            </ul>
+            <div style="font-size:13px; color:#3B4E8C; margin-top:10px;">Note: <em>Fahrenheit 451</em> is on the approved list but is our Quarter 4 study text, so choose it only in another quarter (or another Bradbury title).</div>
+        </div>
+        <div class="genre-panel" data-g="histfic">
+            <ul>
+                <li><em>1776</em> (McCullough)</li><li><em>The Boy in the Striped Pajamas</em> (Boyne)</li><li><em>Cry, the Beloved Country</em> (Paton)</li><li><em>The Devil's Arithmetic</em> (Yolen)</li><li><em>Follow the River</em> (Thom)</li><li><em>Gone with the Wind</em> (Mitchell)</li><li><em>The Lantern Bearers</em> (Sutcliff) &mdash; series</li><li><em>My &Aacute;ntonia</em> (Cather)</li><li><em>The Night Journey</em> (Lasky)</li><li><em>O Pioneers!</em> (Cather)</li><li><em>Old Men at Midnight</em> (Potok)</li><li><em>A Proud Taste for Scarlet and Miniver</em> (Konigsburg)</li><li><em>The Ramsay Scallop</em> (Temple)</li><li><em>Rifles for Watie</em> (Keith)</li><li><em>Rocket Boys</em> (Hickam)</li><li><em>Three Came Home</em> (Keith)</li><li><em>Under the Blood-Red Sun</em> (Salisbury)</li><li><em>When My Name Was Keoko</em> (Park)</li><li><em>Yellow Star</em> (Roy)</li>
+            </ul>
+        </div>
+        <div class="genre-panel" data-g="nonfic">
+            <ul>
+                <li><em>The Abolition of Man</em> (Lewis) &mdash; any nonfiction by author</li><li><em>Alexander Hamilton</em> (Chernow)</li><li><em>Amusing Ourselves to Death</em> (Postman)</li><li><em>Autobiography of Ben Franklin</em> (Franklin)</li><li><em>Bury My Heart at Wounded Knee</em> (Brown)</li><li><em>The Cost of Discipleship</em> (Bonhoeffer) &mdash; any by author</li><li><em>Crazy Horse</em> (Sandoz)</li><li><em>Dawn</em> (Wiesel)</li><li><em>The Diary of a Young Girl</em> (Frank)</li><li><em>Experiencing the Presence of God</em> (Tozer) &mdash; any by author</li><li><em>Freedom Train</em> (Sterling)</li><li><em>The Hiding Place</em> (ten Boom)</li><li><em>How the Irish Saved Civilization</em> (Cahill)</li><li><em>The Knowledge of the Holy</em> (Tozer)</li><li><em>The Joyful Christian</em> (Lewis)</li><li><em>Life Together</em> (Bonhoeffer)</li><li><em>Lincoln: A Photobiography</em> (Freedman)</li><li><em>Lindbergh</em> (Berg)</li><li><em>Mere Christianity</em> (Lewis)</li><li><em>Miracles</em> (Lewis)</li><li><em>Profiles in Courage</em> (Kennedy)</li>
+            </ul>
+            <div style="font-size:13px; color:#3B4E8C; margin-top:10px;">Note: Douglass's <em>Narrative of the Life of Frederick Douglass</em> is on the approved list but is our Quarter 2 study text, so choose a different nonfiction title for independent reading.</div>
+        </div>
+        <div class="genre-panel" data-g="award">
+            <ul>
+                <li><em>Chains</em> (Anderson)</li><li><em>The Chosen</em> (Potok)</li><li><em>Gilead</em> (Robinson)</li><li><em>Jayber Crow</em> (Berry)</li><li><em>Lonesome Dove</em> (McMurtry)</li><li><em>Maus</em> (Spiegelman)</li><li><em>One Crazy Summer</em> (Williams-Garcia)</li><li><em>The Slave Dancer</em> (Fox)</li><li><em>The Story of My Life</em> (Keller)</li><li><em>A String in the Harp</em> (Bond)</li><li><em>A Time to Stand: The Alamo</em> (Lord)</li><li><em>Unbroken</em> (Hillenbrand)</li><li><em>Up from Slavery</em> (Washington)</li><li><em>Walk Two Moons</em> (Creech)</li><li><em>Warriors Don't Cry</em> (Beals)</li>
+            </ul>
+        </div>
+        <button class="ir-reset">Show first genre</button>
+    </div>
+
+    <!-- Wrap -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#9989; THIS WEEK</div>
+        <!-- Teacher: attach M1_IndependentReading_BookList.pdf (built 2026-07-14, in this same Module-0-Start-Here folder) as this page's Canvas file. -->
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Pick your Quarter 1 book, add a "Independent Reading" section to your Module Organizer, and write your first log line the day you start. That is all it takes to begin. <em>The approved book menu is also available as a downloadable PDF on this page. The Quarterly Reading Check is a completion item near the end of each module.</em></p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Start Here</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Independent Reading &middot; One book you choose, each quarter</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  var tabs = document.getElementById('genreTabs');
+  if (!tabs) return;
+  var frame = tabs.closest('div');
+  function show(g) {
+    tabs.querySelectorAll('button').forEach(function (b) { b.classList.toggle('selected', b.dataset.g === g); });
+    frame.querySelectorAll('.genre-panel').forEach(function (p) { p.classList.toggle('show', p.dataset.g === g); });
+  }
+  tabs.addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-g]');
+    if (b) show(b.dataset.g);
+  });
+  var reset = frame.querySelector('.ir-reset');
+  if (reset) reset.addEventListener('click', function () { show('classics'); });
+})();
+</script>
+</body>
+</html>
+</content>
