@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 6.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .widget-options { display:flex; flex-direction:column; gap:8px; }
+    .widget-options button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .widget-options button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .widget-options button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6 &middot; Lesson 6.02</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (2 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Readiness Is All</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Hamlet, Act V, sc. 2 (first half)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 6.02 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Readiness Is All</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The prince who could not act now walks knowingly toward a rigged duel, and he is calm.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Hamlet comes back from the sea a different man. He tells Horatio how he turned the king's death-warrant against the men carrying it, and he speaks about fate with a settled calm we have not heard before. Today you read the first half of the final scene and study that change: the move from endless questioning to a strange readiness.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how Hamlet escaped the voyage and what it shows about his new decisiveness.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what Hamlet means by "the readiness is all" and how it differs from his earlier paralysis.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> weigh whether Hamlet's calm is wisdom, surrender, or both.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE MAN WHO CAME BACK</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Hamlet tells Horatio what happened at sea. Unable to sleep, on impulse he found the sealed commission he was carrying, opened it, and read his own death order: England was to behead him on arrival. He did not agonize. He wrote a new order condemning the bearers, Rosencrantz and Guildenstern, sealed it with his father's signet ring, and slipped it back. This is the man who spent three acts unable to strike acting instantly and without a second thought. He explains it as more than cleverness: "There's a divinity that shapes our ends, / Rough-hew them how we will" (5.2). Something larger than his own planning, he now believes, is shaping events; his part is to be ready when the moment comes.</p>
+    </div>
+
+    <!-- HAMLET NUANCE: Rosencrantz and Guildenstern -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#9878;&#65039; A HARDER LOOK: HAMLET AND HIS CHILDHOOD FRIENDS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Notice what Hamlet says almost in passing here. The commission he rewrote at sea did not just save his own life; it sent Rosencrantz and Guildenstern, two courtiers he grew up with, to be executed in England in his place. He does not agonize over it. "They are not near my conscience," he tells Horatio; "their defeat / Does by their own insinuation grow" (5.2). His reasoning is that they knew whose errand they were running and put themselves between him and a king plotting his death. That is a real argument: they were, in their way, a threat to his life. It is also true that the same Hamlet who spent three acts unable to strike even his father's actual murderer dispatches two former friends without a second thought once his own life is at stake. Whatever else this Act V calm is, it includes quick, lethal self-preservation, and that complicates any simple reading of him as a straightforward hero. Hold both facts at once as you weigh him.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#128173; WEIGH IT (no single right answer)</div>
+            <div class="widget-question">Hamlet says of their deaths, "They are not near my conscience" (5.2). Given everything you have read of him, how do you weigh that line?</div>
+            <div class="widget-options">
+                <button data-response="That is one honest reading. Hamlet frames it exactly that way: they &quot;made love to this employment&quot; and stood, in his own words, between &quot;mighty opposites&quot; (5.2). Whether that fully accounts for two former friends is still worth weighing against how quickly he decided it.">He is right: they served a king plotting his death, and stopping them was self-preservation.</button>
+                <button data-response="That contrast is real and worth sitting with. The same mind that spent Acts I through III questioning every action rewrites a death warrant here almost without pause. That does not settle whether the act itself was wrong, only that it complicates any simple, admiring reading of him.">It unsettles me: he decided their deaths without any of the doubt that paralyzed him earlier.</button>
+                <button data-response="The play does leave it open. Hamlet gives you his own justification and moves on without dwelling on it; whether that justification is sufficient is a question the text raises and does not answer for you.">Both readings hold at once, and the play does not pick one for me.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9878;&#65039; PART 2 &middot; FROM QUESTION TO READINESS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">The foppish courtier Osric arrives with a wager: the king has bet on a fencing match between Hamlet and Laertes. Horatio, uneasy, offers to call it off, and Hamlet refuses in the quietest, strangest speech of the play. He will "defy augury," refuse to read the bad omen he clearly senses, because the timing of death is not ours to control: "If it be now, 'tis not to come; if it be not to come, it will be now; if it be not now, yet it will come. The readiness is all" (5.2). Set that beside "To be, or not to be." There, death was a dread that stopped thought cold. Here, it is simply the one certain appointment, and the only thing in a person's power is to meet it prepared. The question that drove four acts has quieted into acceptance.</p>
+
+        <!-- CORE VISUAL: before/after -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">ONE HAMLET, TWO STANCES TOWARD DEATH</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0; border: 2px solid #0E1C42; border-radius: 10px; overflow: hidden;">
+                <div style="flex: 1; min-width: 240px; background: #FFFFFF; padding: 18px 20px;">
+                    <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.4px; margin-bottom: 10px;">ACT III &middot; "TO BE, OR NOT TO BE"</div>
+                    <div style="font-size: 16px; color: #0e1c42; line-height: 1.55;">Death is an unknown to dread; "the dread of something after death" freezes action. Thinking about it prevents doing anything.</div>
+                </div>
+                <div style="flex: 1; min-width: 240px; background: #FDF3E3; padding: 18px 20px; border-left: 2px solid #0E1C42;">
+                    <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.4px; margin-bottom: 10px;">ACT V &middot; "THE READINESS IS ALL"</div>
+                    <div style="font-size: 16px; color: #0e1c42; line-height: 1.55;">Death is a certainty to accept; its timing is not ours. The task is not to solve it but to be ready. Acceptance frees him to act.</div>
+                </div>
+            </div>
+            <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 10px;">The change is the heart of Act V: the same mind, no longer paralyzed by the question it could not answer.</div>
+        </div>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 14px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> <em>Hamlet</em>, Act V, scene 2, up to the start of the duel. <a href="https://www.folger.edu/explore/shakespeares-works/hamlet/read/5/2/" style="color: #3B4E8C;">Folger Shakespeare, <em>Hamlet</em> 5.2</a>.</div>
+        </div>
+    </div>
+
+    <!-- Interactive comprehension: sequence the beats (student supplies it, after reading) -->
+    <div class="optima-widget ow-order" data-done="That is the order the scene follows: the sea story first, then the wager, then the choice to face it.">
+        <div class="widget-kicker">&#128203; NOW THAT YOU'VE READ IT: PUT THESE BEATS IN ORDER</div>
+        <div class="widget-question">Click the events in the order they happen in Act V, scene 2, up to the start of the duel.</div>
+        <div class="order-list">
+            <button data-order="2"><span class="seq" data-default="?">?</span> Osric arrives with the king's wager on a fencing match between Hamlet and Laertes.</button>
+            <button data-order="1"><span class="seq" data-default="?">?</span> Hamlet tells Horatio how he rewrote the sea commission, sending Rosencrantz and Guildenstern to their deaths in his place.</button>
+            <button data-order="4"><span class="seq" data-default="?">?</span> Hamlet refuses to call off the match, answering that "the readiness is all."</button>
+            <button data-order="3"><span class="seq" data-default="?">?</span> Horatio, sensing something is wrong, offers to tell the court Hamlet is unfit and call the match off.</button>
+        </div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Set "the readiness is all" (5.2) beside a line from "To be, or not to be" (3.1) in your Journal. In four or five sentences, name what has changed in how Hamlet faces death, and then take a position: is his new calm hard-won wisdom, or is it a kind of giving up? Quote both lines, cite them, and argue from the difference between them. There is no official answer; defend yours from the text.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can summarize how Hamlet escaped the ship and gloss the word "augury," and it will usually get those facts right. Whether his Act V calm is wisdom or resignation is the interpretive question of the whole act, and the play does not answer it; if an AI hands you a verdict, treat it as one reading to argue with, and go back to the two soliloquies yourself.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 6.03: The Rest Is Silence</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The duel plays out, and the play answers, one way or another, every question it opened with the Ghost in Act I.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Readiness, not resolution, is where Hamlet lands. Whether that is growth or defeat is the last thing the play leaves you to decide, and the duel is about to force the issue.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 6.02 &middot; The Readiness Is All</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
