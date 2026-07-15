@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 4.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all 0.15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- HEADER -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<!-- METADATA -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4 &middot; Lesson 4.01</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Prayer Scene</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Hamlet, Act III, sc. 3</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.01 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Prayer Scene</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A guilty king kneels to pray. Behind him, sword drawn, stands the man the Mousetrap just convinced. Nothing happens.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Last week Hamlet said he would take "the ghost's word for a thousand pound." Act III, scene 3 hands him the perfect chance to act on it, and he does not take it. Today you read the scene where the two men come closest to each other in the whole play, each alone with his conscience: Claudius trying and failing to pray, and Hamlet talking himself out of the kill. You will also see the sharpest use yet of a device you already know, dramatic irony, because Hamlet's reason for sparing the king rests on a fact that only you know is false.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what Claudius confesses in his soliloquy and why his prayer fails.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state Hamlet's reasoning for sparing Claudius, the revenge-and-damnation problem, in my own words.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> show how the scene's closing couplet turns Hamlet's reasoning into dramatic irony.</div>
+        </div>
+    </div>
+
+    <!-- PART 1 warm-up + Claudius's soliloquy -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN (no wrong answer)</div>
+            <div class="widget-question">Think of a time you wanted to be forgiven for something but were not willing to give up what you gained from it. Which felt more true to you afterward: the wanting, or the not-giving-up?</div>
+            <div class="widget-options">
+                <button data-response="Claudius would understand you. His soliloquy is one long, honest wanting: he calls his own crime rank and begs his knees to bend. Watch how far the wanting gets him, and what stops it.">The wanting</button>
+                <button data-response="Then you already hold the key to this scene. Claudius asks the exact question you are describing: can a man be pardoned while he keeps the things the crime bought him? Watch what answer he reaches.">The not-giving-up</button>
+                <button data-response="That divided state is precisely where Shakespeare puts Claudius: he compares himself to a man bound to two pieces of business who cannot begin either. Watch for that image early in the speech.">Both, pulling against each other</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The villain gets a soliloquy</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Until now, the soliloquy has belonged to Hamlet. In scene 3, after sending everyone away, Claudius gets one, and Shakespeare does something risky with it: he makes the murderer honest. Alone, Claudius admits everything the Mousetrap suggested: "O, my offense is rank, it smells to heaven; / It hath the primal eldest curse upon 't, / A brother's murder" (3.3). The "primal eldest curse" reaches back to Cain and Abel, the first murder in Scripture, also a brother killing a brother. Claudius wants to pray and cannot start; he says he stands "like a man to double business bound" (3.3), pulled between repenting and keeping what the murder bought.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Then he asks the question the whole speech turns on: "May one be pardoned and retain th' offense?" (3.3). In the world's "corrupted currents," he admits, a rich criminal can buy his way past justice, "Offense's gilded hand may shove by justice" (3.3), but not in heaven, where every action shows as it truly is and each soul's "audit" must stand as it stands. He knows what real repentance would cost: the crown, the ambition, the queen. He will surrender none of them. Still he tries, ordering his own body into position: "Bow, stubborn knees" (3.3). And there he kneels as Hamlet enters behind him.</p>
+    </div>
+
+    <!-- PART 2: Hamlet's choice + the damnation problem -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9876;&#65039; PART 2 &middot; THE SWORD HELD STILL: REVENGE AND DAMNATION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hamlet's speech over the kneeling king is not a full meditation like "To be, or not to be." It is a short soliloquy that works like an extended <strong>aside</strong>: quick, private, decision-making speech, thought moving at the speed of the moment. It begins as action: "Now might I do it pat, now he is a-praying, / And now I'll do 't" (3.3). Then the thinking catches up with the sword. If he kills Claudius at prayer, the king dies with a clean soul and goes to heaven. "A villain kills my father, and for that, / I, his sole son, do this same villain send / To heaven" (3.3). That, he decides, is payment, not payback: "Why, this is hire and salary, not revenge" (3.3).</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">This is the revenge-and-damnation problem, and it is worth taking seriously on its own terms. In the play's world, <em>when</em> you die matters as much as <em>that</em> you die, because the state of the soul at death decides where it goes. The Ghost complained in Act I of exactly this: killed in his sleep, "full of bread," with no chance to confess, "With all his crimes broad blown, as flush as May" (3.3, as Hamlet recalls it). By that logic, killing Claudius mid-prayer would give the murderer a better death than the victim got. So Hamlet re-sheathes the sword and promises a worse occasion: "When he is drunk asleep, or in his rage, / Or in th' incestuous pleasure of his bed, / At game, a-swearing, or about some act / That has no relish of salvation in 't" (3.3). He exits on a cold line: "This physic but prolongs thy sickly days" (3.3). Whether this logic is conviction or camouflage for one more delay is this week's discussion, so start weighing it now.</p>
+
+        <!-- CONCEPT VISUAL: false premise + dramatic irony (kept small, general) -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 16px 18px; margin-bottom: 4px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 10px; text-align: center;">THE IDEA BEHIND THIS SCENE: A FALSE PREMISE</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">A <strong>false premise</strong> is a belief a decision gets built on that turns out not to be true. The reasoning stacked on top of it can be careful and perfectly logical and still land somewhere wrong, because the floor underneath it was never solid. <strong>Dramatic irony</strong> is what happens onstage when the audience is handed a piece of the truth that a character does not have. As you read, watch for a decision Hamlet makes on a belief about Claudius's prayer, and watch for a piece of information the scene may give only to you.</div>
+        </div>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 14px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> <em>Hamlet</em>, Act III, scene 3. Public-domain full text with scene navigation: <a href="https://www.folger.edu/explore/shakespeares-works/hamlet/read/3/3/" style="color: #3B4E8C;">Folger Shakespeare, <em>Hamlet</em> 3.3</a>.</div>
+        </div>
+
+        <!-- POST-READING INTERACTIVE: student reconstructs who believes/knows what -->
+        <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-top: 18px;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#129513; NOW THAT YOU'VE READ THE SCENE</div>
+            <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 6px 0;">Two men share the stage, and each is working from different information. Match each figure to what they believe or know at this exact moment. Reread the scene if you need to; nothing here is filled in for you.</p>
+            <div class="optima-widget ow-match" data-done="You have the scene: two beliefs, and a fact only one side can hear.">
+                <div class="widget-kicker">MATCH WHO TO WHAT THEY BELIEVE OR KNOW</div>
+                <div class="widget-question">Click a figure, then click the belief or piece of knowledge that belongs to them.</div>
+                <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                    <div style="flex:1; min-width:150px;">
+                        <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHO</div>
+                        <div class="match-col" data-side="left">
+                            <button data-key="hamlet">Hamlet, standing with the sword drawn</button>
+                            <button data-key="claudius">Claudius, kneeling with his eyes closed</button>
+                            <button data-key="you">You, the audience, hearing the closing couplet</button>
+                        </div>
+                    </div>
+                    <div style="flex:1; min-width:150px;">
+                        <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHAT THEY BELIEVE OR KNOW</div>
+                        <div class="match-col" data-side="right">
+                            <button data-key="claudius">His prayer is not working. He will not give up the crown, the queen, or the gains of the murder, and a pardon cannot reach a man who still keeps the prize.</button>
+                            <button data-key="you">The prayer never actually rose to heaven, whatever Hamlet believed about it when he made his choice.</button>
+                            <button data-key="hamlet">The king is truly praying, so killing him now would send a cleansed soul to heaven rather than deliver revenge.</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-feedback"></div>
+                <button class="widget-reset">Reset</button>
+            </div>
+
+            <div class="optima-widget ow-select" style="margin-top:16px;">
+                <div class="widget-kicker">WHY IS THE SPARING IRONIC?</div>
+                <div class="widget-question">Given what you just matched, which best explains why Hamlet's decision to spare Claudius counts as dramatic irony?</div>
+                <div class="widget-options">
+                    <button data-response="Close, but sharpen it. Hamlet's reasoning does rest on the state of the king's soul, but the irony is not just that he might be wrong; it is that you, the audience, are handed the answer before he acts on it. Say what specifically you know that he does not.">Because Hamlet might be wrong about whether Claudius is really praying</button>
+                    <button data-response="That is the sharper reading. Hamlet spares the king specifically to avoid sending a cleansed soul to heaven, and the scene then gives the audience, and only the audience, the couplet showing the prayer failed. The premise his whole choice rests on is false, and he never finds out.">Because the audience hears the couplet showing the prayer failed, so the belief Hamlet's choice depends on is false, and he never learns it</button>
+                    <button data-response="Not quite the irony at work here. Claudius's guilt was already confirmed in earlier scenes, so that alone is not new. What is specific to this scene is the audience alone learning that the prayer, whatever its sincerity, did not succeed.">Because Claudius is guilty and the audience already knew that</button>
+                </div>
+                <div class="widget-feedback"></div>
+                <button class="widget-reset">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reading Journal task (no dropdown; help up front) -->
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Write four or five sentences on Hamlet's decision to wait. To do it well: first restate his reasoning fairly, in your own words, quoting the line that carries it ("Why, this is hire and salary, not revenge," 3.3). Then set the closing couplet beside it and name what you know that Hamlet does not. Finish with the question you will argue in this week's discussion: does his reason read as sincere conviction or as one more excuse to delay? You do not have to decide yet; lay out the evidence on both sides. These notes are your raw material for the discussion post.</div>
+        </div>
+    </div>
+
+    <!-- AI callout -->
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can explain the theology behind this scene, why dying at prayer mattered, quickly and usually accurately. What it cannot do is tell you whether Hamlet believes his own argument, because the text does not say and readers have disagreed for centuries. If you ask, an AI will often pick a side and present it as settled. Treat its answer as one voice in the debate, and hold it to the same standard as any classmate: show me the lines.</p>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 4.02: The Closet Scene</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Minutes after sparing the man he came to kill, Hamlet is alone with his mother and hears a voice cry out from behind a curtain. Watch what he does with no time left to reason.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Scene 3 is the play in miniature: one man cannot make himself repent, the other cannot make himself strike, and each failure is hidden from the other. Keep Hamlet's stated reason in hand; the very next scene will test it against what he does when he does not stop to think.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.01 &middot; The Prayer Scene</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
