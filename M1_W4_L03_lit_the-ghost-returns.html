@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 4.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-direction: column; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 10px 14px; font-size: 15px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all 0.15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4 &middot; Lesson 4.03</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (3 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Ghost Returns</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Hamlet, Act III, sc. 4 (second half)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 4.03 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Ghost Returns</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The dead king walks into his wife's chamber. His son sees him. His wife sees nothing at all.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In Act I, the Ghost appeared on the battlements and four different people saw it. Now it appears again, mid-quarrel, in Gertrude's chamber, and only Hamlet can see or hear it. Today you finish Act III and take up the question this staging forces: is the Ghost a real visitor from beyond the play's world, or a projection of Hamlet's overdriven mind? Readers and directors have split on this for four hundred years, and the text keeps the door open in both directions. Your job is not to settle it. Your job is to see exactly which lines hold it open.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state why the Ghost says it has returned, citing its own words.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how character perspective shapes what counts as real in a scene, using Gertrude's and Hamlet's opposed testimony.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> build a two-sided evidence case for an open question without forcing a verdict the text does not give.</div>
+        </div>
+    </div>
+
+    <!-- PART 1: the reading -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; "TO WHET THY ALMOST BLUNTED PURPOSE"</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hamlet is at the peak of his fury, forcing his mother to compare the two portraits, when he suddenly stops and stares past her. The Ghost has entered. His first instinct is guilt: he asks whether it has come "your tardy son to chide" (3.4), the son who let time pass and let the purpose cool. The Ghost confirms it: "Do not forget. This visitation / Is but to whet thy almost blunted purpose" (3.4). To <em>whet</em> is to sharpen a blade; the revenge, it says, has gone dull. But notice its second concern, and its gentleness: "But look, amazement on thy mother sits" (3.4). It tells Hamlet to step between her and her fear, to speak to her. Even here, the Ghost's charge from Act I holds its old shape: strike the king, spare the queen.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then the scene splits in two. Hamlet speaks to the figure; Gertrude watches her son speak to an empty room. "Alas, he's mad" (3.4), she concludes. He points: "On him, on him! Look you how pale he glares" (3.4). She asks what he is looking at, and her answer to his "Do you see nothing there?" is one of the most carefully balanced lines in the play: "Nothing at all; yet all that is I see" (3.4). She sees everything present, and the Ghost is not among it. She names his vision "the very coinage of your brain," a thing minted by madness, "This bodiless creation ecstasy / Is very cunning in" (3.4). <em>Ecstasy</em> here means madness, a mind standing outside itself; hold onto the word, it is in this week's Word Study.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hamlet's defense is precise: "My pulse as yours doth temperately keep time / And makes as healthful music. It is not madness / That I have uttered" (3.4). Offer me any test, he says, and I will reword the whole matter, "which madness / Would gambol from" (3.4): a mad mind would skip away from the retelling, and his does not. Then he turns preacher. He urges her to own the past and refuse the future: "Confess yourself to heaven, / Repent what's past, avoid what is to come" (3.4), to stay out of Claudius's bed, and, if the feeling is not yet real, to act the better part until it becomes real: "Assume a virtue if you have it not" (3.4). His summary of his own harshness could stand over the whole scene: "I must be cruel only to be kind" (3.4). He leaves dragging Polonius out, already knowing the price of the night's work: "I must to England, you know that" (3.4).</p>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 6px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> <em>Hamlet</em>, Act III, scene 4, from the Ghost's entrance to the end of the scene. Public-domain full text with scene navigation: <a href="https://www.folger.edu/explore/shakespeares-works/hamlet/read/3/4/" style="color: #3B4E8C;">Folger Shakespeare, <em>Hamlet</em> 3.4</a>.</div>
+        </div>
+    </div>
+
+    <!-- PART 2: perspective and reliability + core visual -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128065;&#65039; PART 2 &middot; THE TECHNIQUE: PERSPECTIVE AND RELIABILITY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Everything you know in a play arrives through someone's <strong>perspective</strong>, and perspectives can be tested for <strong>reliability</strong> the way a court tests a witness: how many saw it, in what state, and with what stake in the answer. Scene 4 makes the test unavoidable, because two sane-sounding witnesses in the same room give opposite testimony about the same figure. The play could easily have resolved this; a single line from Gertrude, or a second witness, would do it. Shakespeare withholds that line. Weigh both files below, and notice that each side has real evidence, not just a mood.</p>
+
+        <!-- CORE VISUAL: two-sided evidence board -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">THE GHOST IN 3.4: TWO CASE FILES, ONE OPEN VERDICT</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+                <div style="flex: 1; min-width: 230px; background: #FFFFFF; border: 2px solid #3B4E8C; border-radius: 8px; padding: 12px 14px;">
+                    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 6px;">CASE FILE A &middot; A REAL VISITOR</div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.6;">&#8226; In Act I it was seen by Barnardo, Marcellus, and Horatio before Hamlet ever knew of it (1.1).<br />&#8226; Its account of the murder has since been confirmed: Claudius's guilty aside (3.1), his fleeing the Mousetrap (3.2), his confession at prayer (3.3).<br />&#8226; Hamlet offers a test on the spot: his pulse keeps time "temperately," and he can retell everything "which madness / Would gambol from" (3.4).</div>
+                </div>
+                <div style="flex: 1; min-width: 230px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 12px 14px;">
+                    <div style="font-size: 11px; color: #C7922C; margin-bottom: 6px;">CASE FILE B &middot; A PROJECTION</div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.6;">&#8226; This time, only Hamlet sees or hears it; Gertrude, looking straight at the spot, sees "Nothing at all" (3.4).<br />&#8226; She has a ready diagnosis: "the very coinage of your brain," the work of "ecstasy" (3.4).<br />&#8226; It appears at the exact moment Hamlet's fury at his mother outruns the Ghost's Act I command to leave her to heaven, as if something in him called himself back to the task.</div>
+                </div>
+            </div>
+            <div style="background: #0E1C42; border-radius: 8px; padding: 12px 16px; text-align: center;">
+                <div style="font-size: 15px; color: #ffffff; line-height: 1.55;">The text supports both files and closes neither. A director must choose; a reader gets to hold both. When a question is genuinely open, the strong move is not picking faster, it is citing better.</div>
+            </div>
+        </div>
+
+        <!-- POST-READING INTERACTIVE: apply the two case files to new testimony from the scene -->
+        <div class="optima-widget ow-match" data-done="You've placed both pieces of testimony. Notice: neither one closes the case." style="margin-top:18px;">
+            <div class="widget-kicker">&#129513; NOW YOU: FILE TWO MORE PIECES OF TESTIMONY</div>
+            <div class="widget-question">Two more lines from the scene. Match each to what it is evidence <em>for</em>, reasoning it out from what you just read.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:180px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">THE LINE</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="ghost">The Ghost: "This visitation / Is but to whet thy almost blunted purpose."</button>
+                        <button data-key="gertrude">Gertrude: "Nothing at all; yet all that is I see."</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:180px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHAT IT SUPPORTS</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="gertrude">A witness reports total certainty about everything actually present in the room, and the figure is not among it.</button>
+                        <button data-key="ghost">A figure states its own reason for appearing, as something that exists and acts independently of Hamlet's mind.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">HOLD BOTH FILES AT ONCE</div>
+            <div class="widget-question">Now that you have four pieces of evidence on the board (two from the reading above, two you just filed), does either line you just matched settle the question for good?</div>
+            <div class="widget-options">
+                <button data-response="Worth testing against the other file before you settle there. A line stating its own purpose is exactly what a real, independent figure would say, but it is also exactly what a mind convinced of its own logic would produce. Neither file gets to claim total victory from one line.">Yes, the Ghost's stated purpose settles it: this is a real, independent visitor</button>
+                <button data-response="Reasonable, and it is genuinely strong evidence, but the play still gives Hamlet a working pulse-test and a coherent retelling in the very same scene. Total certainty on one side does not erase evidence on the other.">Yes, Gertrude's flat certainty settles it: this is only in Hamlet's mind</button>
+                <button data-response="This is the strongest position the text supports. Both lines are real evidence, and both still leave room for the opposite reading. That is exactly why directors have staged this scene both ways for centuries.">No, both lines are real evidence and both still leave the question open</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Reading Journal task (help up front, no dropdown) -->
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Build your own two-column page for the Ghost question. In one column, list the two strongest pieces of textual evidence you can find that the Ghost is real; in the other, the two strongest that it is a projection. Quote each and cite by act and scene, drawing on Act I as well as 3.4. Then, below the columns, write two sentences: which single piece of evidence do you find hardest to argue away, and what would the play lose if Shakespeare had settled the question for you? There is no right verdict here; the quality of the citations is the work.</div>
+        </div>
+    </div>
+
+    <!-- Recitation rehearsal checkpoint (ungraded) -->
+    <div style="background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127908; RECITATION REHEARSAL CHECKPOINT (ungraded, nothing to turn in)</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.65; margin: 0;">Rehearse your chosen soliloquy aloud at least twice this week, standing, at performance volume. This is the <strong>final week to change your choice</strong>: if another soliloquy has been pulling at you since Week 2, switch now and say the new one aloud before the week ends. After this week, commit; Weeks 5 and 6 are for memorizing one speech, not auditioning three. As you rehearse, use this week's lessons: every soliloquy you might choose is a mind deciding something, so find the line where the decision turns and let your voice turn with it. The graded recitation is Week 7.</p>
+    </div>
+
+    <!-- AI callout -->
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Ask an AI tool whether the Ghost is real and it will usually give you a tidy answer, sometimes with invented citations to critics. The honest state of the question is that the text sustains both readings, and scholars still disagree. An AI can help you locate the relevant lines faster; it cannot relieve you of the judgment, and on open questions it tends to manufacture closure. Keep the question open on purpose; that is the skill this lesson is teaching.</p>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 4.04: Sentence Craft &amp; Word Study</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">This week's grammar and vocabulary: adding information cleanly with appositives and comma pairs, plus two words from the scenes you just read.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#9997;&#65039;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Feeder 2: Character Dossier &amp; Motivation Brief</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Pick a secondary figure and map the gap between their public words and their private aim. The perspective work you did today is exactly the muscle this feeder uses.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Act III ends with the play's deepest question about knowledge itself: when two honest witnesses see different worlds, what does it mean to know? Carry your evidence board forward; Act IV will keep adding to both columns.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.03 &middot; The Ghost Returns</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
