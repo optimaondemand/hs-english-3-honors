@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- HEADER -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<!-- METADATA -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2 &middot; Lesson 2.01</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Spying at Elsinore</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Hamlet, Act II, sc. 1</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.01 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Spying at Elsinore</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A father hires a spy to watch his own son. Then his daughter arrives, shaking, with a report of something we never see.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Act I ended with Hamlet swearing to remember and deciding to act mad. Act II opens somewhere stranger: not with Hamlet at all, but with Polonius coaching a servant in the art of spying on Laertes in Paris. Today you read Act II, scene 1, and study two tools the play now leans on: the <strong>surveillance motif</strong>, the pattern of watching and being watched that spreads through every scene, and <strong>reported action</strong>, the choice to keep an important event offstage and let us hear it only secondhand.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace the surveillance motif: who watches whom in scene 1, and by what method.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what reported (offstage) action is and what a playwright gains by using it.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> weigh Ophelia's report of Hamlet's visit as filtered evidence, not settled fact.</div>
+        </div>
+    </div>
+
+    <!-- PART 1 warm-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN (no wrong answer)</div>
+            <div class="widget-question">A friend describes an event you did not see. Before you decide what really happened, what do you weigh most?</div>
+            <div class="widget-options">
+                <button data-response="Fair. In scene 1 the teller is Ophelia, frightened, and her father Polonius, who wants the story to prove his theory. Watch how each teller shapes what you are allowed to know.">Who is telling me</button>
+                <button data-response="Good instinct. Ophelia's report is packed with physical detail: the clothing, the pale face, the knocking knees. Ask yourself whether details that vivid settle the question or only sharpen it.">The details they give</button>
+                <button data-response="That is the wariest answer, and Act II rewards it. Nearly everyone in this act wants a story to come out a certain way. Keep asking what each teller stands to gain.">What they want me to believe</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A court that runs on watching</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">A <strong>motif</strong> is an image, action, or idea that keeps returning until the repetition itself starts to mean something. In <em>Hamlet</em>, the returning action is <strong>watching</strong>. Act I opened with sentries on watch for a ghost. Act II turns the watching inward: fathers watch children, kings watch nephews, and hired eyes do the work at a safe distance. Notice that almost no one in this act simply asks a direct question. They set traps, send agents, and, in Polonius's own words, "By indirections find directions out" (2.1). As you read, keep a running tally: who is watching whom, and who never realizes they are being watched?</p>
+    </div>
+
+    <!-- PART 2: the concept, one worked example, then the reading -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128064; PART 2 &middot; HOW A WATCHER/WATCHED PAIR WORKS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">A watcher/watched pair has three parts: someone who wants information, an agent who does the actual watching, and a target who has no idea they are being observed. Scene 1 opens with the clearest example in the play so far. Polonius calls in his own servant, Reynaldo, and sends him to Paris, not to visit Laertes, but to test him: drop small false rumors about his son's behavior, "such wanton, wild, and usual slips" (2.1), and see which ones strangers confirm. As Polonius puts it, "Your bait of falsehood take this carp of truth" (2.1). Study how the three parts line up below.</p>
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">ONE WORKED EXAMPLE: THE THREE PARTS OF A WATCHER/WATCHED PAIR</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: stretch;">
+                <div style="flex: 1; min-width: 170px; background: #FFFFFF; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px; text-align: center;">
+                    <div style="font-size: 11px; color: #3B4E8C;">WHO WANTS TO KNOW</div>
+                    <div style="font-size: 18px; color: #0e1c42; margin-top: 4px;"><strong>Polonius</strong></div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; font-size: 22px; color: #C7922C;">&#8594;</div>
+                <div style="flex: 1; min-width: 170px; background: #FFFFFF; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px; text-align: center;">
+                    <div style="font-size: 11px; color: #3B4E8C;">WHO DOES THE WATCHING</div>
+                    <div style="font-size: 18px; color: #0e1c42; margin-top: 4px;"><strong>Reynaldo</strong></div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; font-size: 22px; color: #C7922C;">&#8594;</div>
+                <div style="flex: 1; min-width: 170px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 12px 14px; text-align: center;">
+                    <div style="font-size: 11px; color: #C7922C;">WHO IS WATCHED, UNAWARE</div>
+                    <div style="font-size: 18px; color: #0e1c42; margin-top: 4px;"><strong>Laertes</strong> (in Paris)</div>
+                </div>
+            </div>
+            <div style="font-size: 13px; color: #3B4E8C; text-align: center; margin-top: 12px;">Hold this three-part shape in mind. Scene 1 sets up at least one more watcher/watched pair with different names in the same three slots. You will find it yourself, after you read.</div>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Now read scene 1</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Read Act II, scene 1. In the first half, watch how carefully Polonius scripts the spying: Reynaldo may hint at gambling and drinking, but must protect the family name from real "scandal." In the second half, someone arrives at Polonius's door badly shaken, with news about Hamlet. As you read that account, ask yourself who is really doing the watching in the exchange that follows, and whether the person delivering the report understands she is being used as one.</p>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 6px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> <em>Hamlet</em>, Act II, scene 1. Public-domain full text with scene navigation: <a href="https://www.folger.edu/explore/shakespeares-works/hamlet/read/2/1/" style="color: #3B4E8C;">Folger Shakespeare, <em>Hamlet</em> 2.1</a>.</div>
+        </div>
+
+        <!-- Interactive comprehension: student supplies the pairing after reading -->
+        <div class="optima-widget ow-match" data-done="You have mapped the watchers scene 1 actually sets up.">
+            <div class="widget-kicker">&#129513; NOW YOU: MATCH EACH NAME TO ITS ROLE IN THE WATCHING</div>
+            <div class="widget-question">Now that you have read scene 1, click a <strong>name</strong>, then click the <strong>role</strong> that name plays in the watcher/watched pairs the scene sets up.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:150px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">NAME</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="polonius">Polonius</button>
+                        <button data-key="reynaldo">Reynaldo</button>
+                        <button data-key="ophelia">Ophelia</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:150px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">ROLE IN THE SCENE</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="ophelia">Never sent to spy, but her account of Hamlet becomes evidence her father did not have to work for</button>
+                        <button data-key="polonius">Arranges both watchings: sends an agent to test his own son, then reads his daughter's fright as proof of a theory</button>
+                        <button data-key="reynaldo">Sent to Paris to plant small false rumors about Laertes and see which ones strangers confirm</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Locate: find the line where a character sets someone to spy -->
+        <div class="optima-widget" style="margin-top:18px;">
+            <div class="widget-kicker">&#128269; FIND IT IN THE TEXT</div>
+            <div class="widget-question">Somewhere in his instructions to Reynaldo, Polonius states outright that he is sending Reynaldo to watch Laertes without Laertes ever knowing it. Find that line and type it below, with its citation (2.1).</div>
+            <textarea class="locate-box" placeholder="Type the line and citation you found&hellip;"></textarea>
+            <div style="font-size:14px; color:#3B4E8C; margin-top:10px;">Where to look: this comes early in the scene, while Polonius is still coaching Reynaldo before he leaves for Paris. Listen for language about bait, tests, or roundabout means rather than a direct order to "spy."</div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 3: reported action + Reading Journal task -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127917; PART 3 &middot; THE SCENE WE NEVER SEE: REPORTED ACTION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Hamlet's visit to Ophelia is one of the most vivid moments in the play, and Shakespeare deliberately keeps it <strong>offstage</strong>. We get it only as <strong>reported action</strong>: an event we never witness, delivered secondhand by a character who did. The choice does real work. Because we see nothing ourselves, we cannot rule on the central question. Is this the "antic disposition" Hamlet promised to put on, performed for a witness he knows will report it? Or is it genuine distress leaking through? A staged version would have to pick one. The report keeps both alive, and it makes us do exactly what everyone at Elsinore does: judge a person through someone else's account.</p>
+        <div class="rj-badge">
+            <div class="rj-icon">&#128211;</div>
+            <div>
+                <div class="rj-label">READING JOURNAL</div>
+                <div class="rj-task">In your Journal, write three or four sentences on Ophelia's report. To do it well: first list what we actually know happened (only what her words describe), then name what is filtered, that is, anything colored by her fear or by having no one else to confirm it. Quote at least one physical detail from her speech, such as "Pale as his shirt" (2.1), and end with your own one-sentence verdict: performance, real distress, or impossible to tell from this evidence. Any of the three can be argued well; what matters is that your verdict rests on the words.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI callout -->
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can summarize scene 1 and even list the spying episodes for you. What it cannot do is weigh Ophelia as a witness, because that judgment depends on how you read her fear and her obedience to her father. AI summaries also tend to state Polonius's love theory as if the play endorses it; the text leaves it open. Read the scene yourself before you let any summary tell you what it says.</p>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.02: Wit and Prose</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The king sets two more watchers on Hamlet, and Hamlet answers them, and everyone, in a new register: prose, sharpened into a weapon.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Elsinore has become a court where truth arrives only through spies and secondhand reports. Keep your tally of watchers going all act; the pattern pays off when Hamlet builds a watching-trap of his own in Lesson 2.03.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.01 &middot; Spying at Elsinore</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
