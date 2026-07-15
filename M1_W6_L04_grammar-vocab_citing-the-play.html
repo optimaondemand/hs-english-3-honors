@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 6.04</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .widget-options { display:flex; flex-direction:column; gap:8px; }
+    .widget-options button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .widget-options button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .widget-options button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    table.wordstudy { width: 100%; border-collapse: collapse; margin: 6px 0; }
+    table.wordstudy th { background: #0E1C42; color: #fff; font-size: 13px; text-align: left; padding: 9px 12px; border: 1px solid #334; }
+    table.wordstudy td { font-size: 15px; color: #1a2340; padding: 9px 12px; border: 1px solid #D0D9E8; vertical-align: top; line-height: 1.5; }
+    table.wordstudy tr:nth-child(even) td { background: #F4F6FA; }
+    code.cite { background:#0E1C42; color:#F4C860; padding:2px 8px; border-radius:5px; font-family: Consolas, monospace; font-size:15px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6 &middot; Lesson 6.04</div>
+        <div style="font-size: 12px; color: #0e1c42;">Grammar &amp; Vocabulary</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Citing the Play in MLA</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Word Study</div>
+        <div style="font-size: 16px; color: #0e1c42;">equivocation, augury</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 6.04 &middot; Grammar &amp; Vocabulary</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Citing the Play in MLA</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; one combined grammar and vocabulary session</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">You have been citing <em>Hamlet</em> as (act.scene) all module. Here is the full, correct way to do it, and how to quote verse.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Your discussion this week, and your project and any essay, all lean on quoting the play. This lesson gives you the MLA rules for citing a verse play by act, scene, and line, and for quoting poetry so the line breaks survive. It is short and practical; you will use it immediately.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> write an MLA parenthetical citation for a verse play by act, scene, and line.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> quote two or three lines of verse and mark the line breaks correctly.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use two words from Act V precisely in sentences of my own.</div>
+        </div>
+    </div>
+
+    <!-- PART 1: citation + core visual -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9999;&#65039; PART 1 &middot; THE RULES</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">For a play written in verse, MLA cites by <strong>act, scene, and line</strong>, separated by periods, in parentheses, with no "p." and no commas: <code class="cite">(3.1.64)</code> means act 3, scene 1, line 64. The period at the end of your sentence goes <em>after</em> the closing parenthesis. When you quote <strong>two or three lines of verse</strong> and run them into your sentence, mark each line break with a slash, with a space on either side. For a quotation longer than three lines, set it off as an indented block instead.</p>
+
+        <!-- CORE VISUAL: anatomy of a verse citation -->
+        <div style="background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.6px; margin-bottom: 14px;">ANATOMY OF A VERSE QUOTATION</div>
+            <div style="background: #EEF1F8; border-radius: 8px; padding: 16px 18px; margin-bottom: 12px;">
+                <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">Hamlet resolves to trust something larger than his own plans: "There's a divinity that shapes our ends<span style="background:#f6e4c2; border-radius:3px; padding:0 4px;"> / </span>Rough-hew them how we will" <code class="cite">(5.2.11-12)</code>.</div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 200px; background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 10px 14px;"><div style="font-size: 13px; color: #C7922C; margin-bottom: 4px;">THE SLASH</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">A space, a slash, a space, at each line break, so a reader sees where the verse turns.</div></div>
+                <div style="flex: 1; min-width: 200px; background: #EEF1F8; border-left: 4px solid #3B4E8C; border-radius: 6px; padding: 10px 14px;"><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 4px;">THE CITATION</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">act.scene.line, a range joined by a hyphen, in parentheses, sentence period after it.</div></div>
+            </div>
+        </div>
+
+        <!-- Self-check: mechanics only -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9999;&#65039; SELF-CHECK: SPOT THE CORRECT CITATION</div>
+            <div class="widget-question">Which of these follows the MLA rule for citing a verse play by act, scene, and line?</div>
+            <div class="widget-options">
+                <button data-response="Correct. Periods separate act, scene, and line, with no &quot;p.&quot; and no labels, and the parentheses sit right where the quotation ends.">(3.4.217)</button>
+                <button data-response="Not quite. MLA separates act, scene, and line with periods, not commas: (3.4.217).">(3,4,217)</button>
+                <button data-response="Not quite. A verse play is cited by line, not page, and without labels for act and scene: (3.4.217).">(Act 3, Scene 4, p. 217)</button>
+                <button data-response="Not quite for current MLA style. Some older printed editions use roman numerals for act and scene, but MLA wants arabic numerals joined by periods: (3.4.217).">(III.iv.217)</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Practice on a line you have already logged. Pick any two consecutive lines of verse from your Journal notes, quote them inside a sentence of your own with the slash marking the line break, and add a correct MLA parenthetical. Then write one more sentence quoting just a short phrase (not full lines) and citing it. Check: spaces around the slash, periods (not commas) between act, scene, and line, and the sentence period after the parenthesis.</div>
+        </div>
+    </div>
+
+    <!-- PART 2: Word Study -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128213; PART 2 &middot; WORD STUDY (from Act V)</div>
+        <table class="wordstudy">
+            <thead><tr><th style="width: 160px;">Word</th><th>In the play</th><th>What it means</th><th>Word origin</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>equivocation</strong><br /><span style="font-size: 12px; color: #3B4E8C;">noun</span></td>
+                    <td>In the graveyard, Hamlet marvels that "we must speak by the card, or equivocation will undo us" (5.1).</td>
+                    <td>Using words with double or slippery meanings to mislead without outright lying.</td>
+                    <td>From Latin <em>aequivocus</em> ("of equal or same voice"), from <em>aequus</em> ("equal") and <em>vocare</em> ("to call"); literally calling two different things by one name.</td>
+                </tr>
+                <tr>
+                    <td><strong>augury</strong><br /><span style="font-size: 12px; color: #3B4E8C;">noun</span></td>
+                    <td>Refusing to heed the omen he feels, Hamlet says "we defy augury" (5.2).</td>
+                    <td>The practice of predicting the future from signs or omens.</td>
+                    <td>From Latin <em>augurium</em>, from <em>augur</em>, the Roman priest who read omens in birds' flight; the word's deeper root is disputed, but is often linked to <em>avis</em> ("bird").</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
+            <div class="rj-task">Add both words to the Word Study section of your Journal. For each, write one new sentence of your own on a subject unrelated to <em>Hamlet</em>, keeping the meaning exact and making the sentence show the meaning. For <em>equivocation</em>, aim for the sense of dodging with slippery words rather than lying outright. Notice how <em>equivocation</em>'s root sense of "equal voice" still echoes in a statement built to mean two things at once.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; USE IT THIS WEEK AND BEYOND</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#128221;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>This week's discussion, and everything ahead</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Cite this way in your Week 6 discussion post, and keep the rule handy for the Elsinore Stage project and any essay: quote briefly, mark the verse, cite act.scene.line.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Accurate citation is not busywork; it is how you let a reader check you and how you show you are arguing from the text, not from memory. Make it a habit now and it will serve you in every course.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 6.04 &middot; Citing the Play in MLA</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
