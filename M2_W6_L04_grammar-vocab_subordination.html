@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.24</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:6px; }
+    .widget-reset:hover { background:#FDF3E3; }
+    table.wordstudy { width: 100%; border-collapse: collapse; margin: 6px 0; }
+    table.wordstudy th { background: #0E1C42; color: #fff; font-size: 13px; text-align: left; padding: 9px 12px; border: 1px solid #334; }
+    table.wordstudy td { font-size: 15px; color: #1a2340; padding: 9px 12px; border: 1px solid #D0D9E8; vertical-align: top; line-height: 1.5; }
+    table.wordstudy tr:nth-child(even) td { background: #F4F6FA; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6 &middot; Lesson 2.24</div>
+        <div style="font-size: 12px; color: #0e1c42;">Grammar &amp; Vocabulary</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Subordination</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Word Study</div>
+        <div style="font-size: 16px; color: #0e1c42;">stratagem, abolition</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.24 &middot; Grammar &amp; Vocabulary</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Subordination: The Sentence That Ranks Its Ideas</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; one combined grammar and vocabulary session</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Douglass almost never reports an event and stops. Something happens, and because it happens, something follows. The sentence that carries that kind of reasoning is the complex sentence, and it has a grammar.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Emerson argued in commands; Douglass reasons in <strong>subordination</strong>, sentences where one clause takes charge and the others report to it. Today you learn to build complex sentences, to choose which idea rules the sentence and which serves it, and to punctuate the result. Then Word Study: two words from chapter 7, <em>stratagem</em> and <em>abolition</em>, one of which Douglass had to define for himself.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> tell an independent clause from a subordinate clause and build complex sentences with subordinating conjunctions.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use subordination to rank ideas, signaling cause, time, and concession, and punctuate each arrangement correctly.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use two words from this week's reading precisely in my own sentences.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9999;&#65039; PART 1 &middot; CLAUSES THAT RULE, CLAUSES THAT SERVE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">A <strong>clause</strong> is a group of words with its own subject and verb. An <strong>independent clause</strong> can stand alone as a sentence: <em>I found time to get a lesson.</em> A <strong>subordinate clause</strong> has a subject and verb but cannot stand alone, because a <strong>subordinating conjunction</strong> in front of it marks it as serving some larger sentence: <em>when I was sent of errands</em>. Join one of each and you have a <strong>complex sentence</strong>. The conjunction you choose declares the relationship: <em>because</em>, <em>since</em>, and <em>as</em> signal <strong>cause</strong>; <em>when</em>, <em>after</em>, <em>while</em>, and <em>whilst</em> (Douglass's older form) signal <strong>time</strong>; <em>although</em>, <em>though</em>, and <em>whereas</em> signal <strong>concession</strong>, the move you practiced in Week 1; <em>if</em> and <em>unless</em> signal <strong>condition</strong>, Madison's mood from Week 2. Two working rules govern the punctuation: when the subordinate clause comes first, close it with a comma before the main clause arrives; when the main clause comes first, you usually need no comma. And never let a subordinate clause stand alone with a period after it; the conjunction promises a main clause, and a reader feels the broken promise. That stranded clause is called a <strong>fragment</strong>.</p>
+
+        <!-- CORE VISUAL: the frame -->
+        <div style="background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.6px; margin-bottom: 12px;">THE FRAME (DOUGLASS'S OWN SENTENCE, CH. 6)</div>
+            <div style="background: #EEF1F8; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; font-size: 18px; color: #0e1c42; line-height: 1.7;"><span style="color:#3B4E8C;"><strong>Whilst I was saddened by the thought of losing the aid of my kind mistress</strong></span><span style="color:#9fb3cc;">,&nbsp;[comma]&nbsp;</span><span style="color:#C7922C;"><strong>I was gladdened by the invaluable instruction</strong></span> <span style="color:#3B4E8C;">which, by the merest accident, I had gained from my master</span>. <span style="font-size:14px; color:#1a2340;">(Narrative, ch. 6)</span></div>
+            <div style="font-size: 14px; color: #1a2340; line-height: 1.55;"><span style="color:#3B4E8C;"><strong>Blue</strong></span> = subordinate clauses. The first opens with <em>whilst</em> and cannot stand alone; it holds the sorrow. The second, opening with <em>which</em>, is a relative clause serving the noun <em>instruction</em>. <span style="color:#C7922C;"><strong>Gold</strong></span> = the independent clause, the one part of the sentence that could survive by itself: <em>I was gladdened</em>. Look at what the ranking accomplishes. Both feelings are real, but the grammar decides the case: the sorrow is filed in a subordinate clause, the gladness governs the sentence. The comma after the opening clause marks the handoff. Douglass renders a fair verdict on a mixed experience in a single sentence, and subordination is the instrument that does it.</div>
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 12px 0 0 0;">You have now collected three ways to join ideas, and they make a set. <strong>Coordination</strong>, the balanced sentence from Week 4, sets two clauses side by side as equals; Douglass's "What he most dreaded, that I most desired" gives each half the same weight on purpose. <strong>Subordination</strong> makes one clause serve another, which is exactly what tracing cause and consequence requires: <em>because Auld forbade the lessons, Douglass understood their value</em>. The main clause carries your claim; the subordinate clause carries its circumstances. When you revise your own paragraphs this week, ask of every compound sentence: are these two ideas really equals, or is one of them evidence for the other? If one is evidence, subordinate it, and your reasoning will surface in the grammar itself.</p>
+
+        <!-- INTERACTIVE: student identifies what job each subordinate clause is doing -->
+        <div class="optima-widget ow-match" data-done="You have sorted all four. The conjunction always announces the job before the clause does any work.">
+            <div class="widget-kicker">&#129513; NOW YOU: MATCH THE SENTENCE TO THE JOB ITS SUBORDINATE CLAUSE IS DOING</div>
+            <div class="widget-question">Click a sentence, then click the relationship its subordinate clause signals. Use the conjunction as your clue.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">SENTENCE</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="time">"Whilst I was saddened by the thought of losing the aid of my kind mistress, I was gladdened by the invaluable instruction&hellip; I had gained from my master" (Narrative, ch. 6).</button>
+                        <button data-key="cause">Because Auld forbade the lessons, Douglass concluded that reading must be worth fearing.</button>
+                        <button data-key="concession">Although The Columbian Orator gave him arguments, it gave him no ladder out of the pit.</button>
+                        <button data-key="condition">If a boy could master the alphabet, no law could fully undo what he had learned.</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHAT THE CLAUSE SIGNALS</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="condition">Condition</button>
+                        <button data-key="time">Time</button>
+                        <button data-key="concession">Concession</button>
+                        <button data-key="cause">Cause</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Write three complex sentences of your own about this week's reading, each tracing a cause or consequence from chapters 6 and 7. Build one with a cause conjunction (<em>because</em> or <em>since</em>), one with a concession conjunction (<em>although</em> or <em>while</em>), and one with a time conjunction (<em>when</em> or <em>after</em>). Bracket the subordinate clause in each, label the job it does (cause, concession, time), and check the comma rule: comma after a subordinate clause that opens the sentence, usually none before one that ends it. Then reread all three and confirm the main clause in each carries the idea you actually most want to assert. If it does not, trade the clauses and rewrite.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128213; PART 2 &middot; WORD STUDY (from the Narrative, chapter 7)</div>
+        <table class="wordstudy">
+            <thead><tr><th style="width: 150px;">Word</th><th>In the text</th><th>What it means</th><th>Word origin</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>stratagem</strong><br /><span style="font-size: 12px; color: #3B4E8C;">noun</span></td>
+                    <td>Of learning to read and write with no teacher and a watching household, Douglass writes: "In accomplishing this, I was compelled to resort to various stratagems" (Narrative, ch. 7).</td>
+                    <td>A careful scheme or maneuver for gaining an end against watchful opposition. From a Greek word for a general's maneuver in war; the word still carries that scent of a contest, of outwitting rather than overpowering. A stratagem is planned, not improvised, which is what separates it from a mere trick.</td>
+                    <td>From Greek <em>strategema</em>, from <em>strategos</em> ("general"), from <em>stratos</em> ("army") and <em>agein</em> ("to lead"); literally "the act of a general," a planned maneuver in war.</td>
+                </tr>
+                <tr>
+                    <td><strong>abolition</strong><br /><span style="font-size: 12px; color: #3B4E8C;">noun</span></td>
+                    <td>Douglass keeps hearing the word before he can learn it: "If a slave ran away and succeeded in getting clear&hellip; it was spoken of as the fruit of abolition" (Narrative, ch. 7). The dictionary gave him only "the act of abolishing," and no adult would tell him what was to be abolished.</td>
+                    <td>The formal, deliberate ending of a practice or institution, in this era above all the ending of slavery; from a Latin verb meaning to destroy or efface. An abolitionist is one who works for that ending. Note the word's precision: things merely stop, but only decisions abolish.</td>
+                    <td>From Latin <em>abolere</em> ("to destroy, blot out"), likely <em>ab-</em> ("away") joined to a root meaning "to grow"; literally an undoing of something's continued existence.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 12px 0 0 0;">Look closely at the second row: in chapter 7 Douglass performs a word study of his own. The dictionary fails him, the adults refuse him, so he collects the word's contexts, everything a slaveholder calls "the fruit of abolition," until a city newspaper finally lets him triangulate the meaning. That is inference from context, done under conditions no vocabulary quiz will ever impose on you, and it is the same discipline this column asks of you every week.</p>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
+            <div class="rj-task">Add both words to your Journal. For each, write one new sentence of your own on a subject unrelated to Douglass, keeping the meaning exact and letting the sentence show it. For <em>stratagem</em>, make the contest visible: show who is maneuvering around whom, and toward what end; a stratagem with no opposition is just a plan. For <em>abolition</em>, let the formality do the work: show something ended by decision and effort, not something that faded on its own. Bonus move: build one of your two sentences as a complex sentence from Part 1, with the subordinate clause bracketed and labeled. Notice how <em>stratagem</em>'s root sense of "a general's maneuver" still echoes in its scent of outwitting an opponent.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; USE IT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#128172;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Discussion: The Most Dangerous Skill</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Your post this week traces causes and consequences: why enslavers feared literacy, and what learning to read caused in Douglass. Those are subordination's home questions. Let a <em>because</em> clause carry your reasoning and an <em>although</em> clause carry the loss you are weighing, and keep your main clauses for the claims themselves.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">An op-ed that only asserts is a list; an op-ed that subordinates is an argument. When Publius Returns asks you to persuade the citizenry, your reader will decide within a paragraph whether you rank your ideas or merely pile them. Douglass, who reasoned his way from a forbidden alphabet to a nation's conscience one consequence at a time, is the standard. Next week you recite him.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.24 &middot; Subordination</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.match-col button').forEach(function (b) { b.classList.remove('selected','matched'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w._matchPick = null;
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget');
+      var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) {
+        mw.querySelectorAll('.match-col button').forEach(function (b) { b.classList.remove('selected'); });
+        mBtn.classList.add('selected'); mw._matchPick = mBtn;
+      } else if (mw._matchPick === mBtn) {
+        mBtn.classList.remove('selected'); mw._matchPick = null;
+      } else if (mw._matchPick.closest('.match-col').dataset.side === side) {
+        mw.querySelectorAll('.match-col button').forEach(function (b) { b.classList.remove('selected'); });
+        mBtn.classList.add('selected'); mw._matchPick = mBtn;
+      } else {
+        var first = mw._matchPick;
+        if (first.dataset.key === mBtn.dataset.key) {
+          first.classList.remove('selected'); first.classList.add('matched'); first.disabled = true;
+          mBtn.classList.add('matched'); mBtn.disabled = true;
+          var left = mw.querySelectorAll('.match-col button:not(.matched)').length;
+          fb2.textContent = left === 0 ? (mw.dataset.done || 'All matched.') : 'Matched. Keep going.';
+        } else {
+          first.classList.remove('selected');
+          fb2.textContent = 'Not that pairing. Check the conjunction again and try once more.';
+        }
+        fb2.classList.add('show'); mw._matchPick = null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
