@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 1.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all 0.15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- HEADER -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<!-- METADATA -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1 &middot; Lesson 1.01</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Seeming and Being: Entering Elsinore</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Hamlet, Act I, sc. 1&ndash;2</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.01 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Seeming and Being: Entering Elsinore</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A prince stands in a bright court, dressed in black, and tells everyone they do not know what he is.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This year asks one question from many angles: what does it mean to govern yourself? We begin with a man who cannot stop examining his own mind. In the first two scenes of <em>Hamlet</em>, a ghost walks the castle walls and a new king smiles over a fresh grave. Your work today is to read those scenes and to start tracking the gap this whole play runs on: the distance between how things <em>seem</em> and how they <em>are</em>.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what a soliloquy is and why a playwright uses one.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace the contrast between public appearance and private truth in scenes 1 and 2.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> support a reading of a line with specific evidence from the text.</div>
+        </div>
+    </div>
+
+    <!-- What is the Reading Journal (one-time signpost) -->
+    <div style="background: #FFFFFF; border: 1px solid #C7CFE6; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#128211; MEET YOUR READING JOURNAL</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Your <strong>Reading Journal</strong> is the one Word document you set up in Start Here (the Module 1 Organizer). You keep it open all module and add to it as you read; you do <strong>not</strong> turn it in every week. Your teacher collects it once, partway through the module, at a scheduled <strong>Reading Journal Check</strong>, and you upload the same document then through Canvas using the OneDrive tab. It lives in your own OneDrive at <strong>Optima &#8594; ELA &#8594; ELA11</strong> and stays yours to revisit.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Watch for this mark. Whenever you see the 📓 <strong>Reading Journal</strong> badge, the task goes in your Journal.</p>
+    </div>
+
+    <!-- PART 1 warm-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN (no wrong answer)</div>
+            <div class="widget-question">Think of a time you had to keep your real feelings hidden in public. Which was closer to the truth: what you showed, or what you held inside?</div>
+            <div class="widget-options">
+                <button data-response="Hold onto that. Hamlet makes almost this exact point in scene 2: the mourning clothes everyone can see are the least of what he feels. Watch for the moment he insists on it.">What I showed</button>
+                <button data-response="Then you already understand Hamlet's opening move. He tells the whole court that his black clothes and sighs cannot begin to show what is inside him. Watch for that claim.">What I held inside</button>
+                <button data-response="Both at once is an honest answer, and it is the play's answer too. Hamlet lives in the gap between the two. Watch how often he points straight at it.">Both at once</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What a soliloquy does</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">On a stage, a character can lie to every other character and still tell the audience the truth. That is the work of the <strong>soliloquy</strong>: a speech delivered while alone, thinking aloud, with no one to perform for. It is the one place in a play where public words fall away and we hear the private mind. <em>Hamlet</em> is built on this device. In public, its hero is watched by a king who took the throne under a shadow, so Hamlet guards his face; alone, he lets us see what the court cannot. As you read, keep two columns in mind: what Hamlet shows others, and what he shows only us.</p>
+    </div>
+
+    <!-- SITUATE THE TEXT: author card + timeline + setting note -->
+    <!-- Teacher/dev note: portrait is hotlinked from Wikimedia Commons (public domain). For long-term reliability, rehost this image in the optima-assets repo and swap the src. -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#127963;&#65039; SITUATE THE TEXT: WHO, WHEN, AND WHERE</div>
+
+        <!-- Author card -->
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 16px;">
+            <div style="flex-shrink: 0; text-align: center; width: 150px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/William_Shakespeare_by_John_Taylor%2C_edited.jpg" alt="Portrait of William Shakespeare: a man with a high forehead, dark eyes, a trimmed beard, and a small gold earring, wearing a dark doublet with a plain white collar." style="width: 150px; height: auto; border-radius: 8px; border: 3px solid #0E1C42; display: block;" />
+                <div style="font-size: 11px; color: #3B4E8C; margin-top: 6px; line-height: 1.4;">The Chandos portrait, attributed to John Taylor, c. 1611. Public domain.</div>
+            </div>
+            <div style="flex: 1; min-width: 260px;">
+                <div style="font-size: 19px; color: #0e1c42; margin-bottom: 6px;"><strong>William Shakespeare (1564&ndash;1616)</strong></div>
+                <p style="font-size: 16px; color: #1a2340; line-height: 1.65; margin: 0;">Shakespeare was born in Stratford-upon-Avon, England, and built his career in London as an actor, a part-owner of a playing company, and the most celebrated playwright of his age. He wrote <em>Hamlet</em> around 1600 for an open-air London playhouse, the Globe, which had almost no scenery. There were no spotlights and no film close-ups, so the language did the work a camera does now. <em>Hamlet</em> also belongs to a popular form of the day, the <strong>revenge tragedy</strong>, in which a wronged figure is called, often by a ghost, to avenge a murder and is usually destroyed in the attempt. Audiences knew the pattern. Part of what makes <em>Hamlet</em> strange to its first viewers is how long its hero refuses to follow it.</p>
+            </div>
+        </div>
+
+        <!-- Timeline strip -->
+        <div style="background: #FFFFFF; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">A QUICK TIMELINE</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                <div style="flex: 1; min-width: 150px; background: #EEF1F8; border-radius: 8px; padding: 10px 14px; text-align: center;"><div style="font-size: 20px; color: #0e1c42;"><strong>1564</strong></div><div style="font-size: 13px; color: #1a2340;">Shakespeare is born in Stratford</div></div>
+                <div style="color: #3B4E8C; font-size: 20px;">&#8594;</div>
+                <div style="flex: 1; min-width: 150px; background: #FDF3E3; border: 1px solid #E7C983; border-radius: 8px; padding: 10px 14px; text-align: center;"><div style="font-size: 20px; color: #0e1c42;"><strong>c. 1600</strong></div><div style="font-size: 13px; color: #1a2340;"><em>Hamlet</em> written and first staged</div></div>
+                <div style="color: #3B4E8C; font-size: 20px;">&#8594;</div>
+                <div style="flex: 1; min-width: 150px; background: #EEF1F8; border-radius: 8px; padding: 10px 14px; text-align: center;"><div style="font-size: 20px; color: #0e1c42;"><strong>1616</strong></div><div style="font-size: 13px; color: #1a2340;">Shakespeare dies</div></div>
+            </div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 14px;"><strong>When is the play set?</strong> Shakespeare never names a year. He built <em>Hamlet</em> from an old Scandinavian legend of a Danish prince, a story older than the year 1200, so its world feels late-medieval. But he stitched in details from his own Renaissance: Hamlet and his friend Horatio study at the University of Wittenberg, a real school that existed in Shakespeare's own lifetime, not the distant past. Read the setting as a Denmark out of legend, seen through Renaissance eyes.</div>
+        </div>
+    </div>
+
+    <!-- MAP: Hamlet's world (accurate rendered map + interactive comprehension) -->
+    <!-- Teacher/dev note: this section shows a verified public-domain Renaissance map (Ortelius, c.1570, Folger digitization, hotlinked from Wikimedia Commons Special:FilePath) PLUS a simplified, labeled SVG schematic that translates the geography for quick reading, PLUS an interactive match widget. Rehost the Ortelius image to optima-assets for long-term reliability and swap the src. -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 6px;">&#128506;&#65039; THE MAP OF HAMLET'S WORLD</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 14px 0;">The action never leaves the Danish court, but its threats and escapes come from the countries around it. Denmark is a peninsula (Jutland) plus islands; the castle of Elsinore (Kronborg) stands at the northeast tip of the island of Zealand, on the narrow strait facing Sweden.</p>
+
+        <!-- Public-domain Renaissance map (Ortelius, c. 1570), digitized by the Folger Shakespeare Library. Hotlinked from Wikimedia Commons via Special:FilePath (scaled). For long-term reliability, rehost to optima-assets and swap the src. -->
+        <div style="background:#FFFFFF; border:1px solid #C7CFE6; border-radius:10px; padding:14px 16px; margin-bottom:16px; text-align:center;">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Maps_of_Denmark_and_of_the_Cimbrian_%28Jutland%29_Peninsula_by_Abraham_Ortelius.jpeg?width=1100" alt="A hand-colored Renaissance map of the kingdom of Denmark and the Jutland peninsula, drawn by Abraham Ortelius, with old sailing ships and decorative title cartouches. Latin place names label the regions and seas." style="width:100%; max-width:900px; height:auto; border-radius:8px; border:3px solid #0E1C42;" />
+            <div style="font-size:13px; color:#3B4E8C; margin-top:10px; line-height:1.5;">Abraham Ortelius, <em>Daniae Regni Typus</em> (a map of the kingdom of Denmark), first printed about <strong>1570</strong> in the <em>Theatrum Orbis Terrarum</em>, the first modern atlas. This is a <strong>Renaissance-era map</strong>, made within a generation of when Shakespeare wrote <em>Hamlet</em>, and it is provided here so you can see Denmark as mapmakers of the play's own age pictured it. Public domain; digitized by the Folger Shakespeare Library.</div>
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 14px 0;">The old Latin labels and the artist's sea monsters make this map hard to read at a glance, which is part of its charm. Use what you know from the reading to place each location in the activity below.</p>
+
+        <!-- Interactive comprehension: match place to its role (student supplies it) -->
+        <div class="optima-widget ow-match" style="margin-top:18px;">
+            <div class="widget-kicker">&#129513; NOW YOU: MATCH EACH PLACE TO ITS ROLE IN THE PLAY</div>
+            <div class="widget-question">Click a <strong>place</strong>, then click the <strong>role</strong> it plays in <em>Hamlet</em>. Use what you know from the reading, not the map labels. Five pairs.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:150px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">PLACE</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="denmark">Denmark / Elsinore</button>
+                        <button data-key="norway">Norway</button>
+                        <button data-key="england">England</button>
+                        <button data-key="poland">Poland</button>
+                        <button data-key="wittenberg">Wittenberg</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:150px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">ROLE</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="wittenberg">The university Hamlet is called home from</button>
+                        <button data-key="poland">Where Fortinbras marches his army to fight</button>
+                        <button data-key="denmark">The court where the whole play takes place</button>
+                        <button data-key="england">Where Claudius later sends Hamlet, meaning him harm</button>
+                        <button data-key="norway">Home of young Fortinbras and his threatened army</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2 core visual + reading -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128064; PART 2 &middot; THE ENGINE OF THE PLAY: SEEMING VS. BEING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">Early in scene 2, the new king and queen tell Hamlet to stop grieving so visibly. Look at how he answers. His public words are careful and cold; the truth he keeps for himself is enormous. This single exchange sets up everything to come.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0; border: 2px solid #0E1C42; border-radius: 10px; overflow: hidden; margin: 4px 0 6px 0;">
+            <div style="flex: 1; min-width: 240px; background: #FDF3E3; padding: 18px 20px;">
+                <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.4px; margin-bottom: 10px;">&#128374;&#65039; WHAT THE COURT IS MEANT TO SEE</div>
+                <div style="font-size: 16px; color: #0e1c42; line-height: 1.55; margin-bottom: 10px;">A young prince in mourning black, told his grief is now excessive and that he should rejoin the family.</div>
+                <div style="font-size: 15px; color: #1a2340; font-style: italic; line-height: 1.5;">His guarded, double-edged replies: "A little more than kin, and less than kind," and "I am too much i' the sun."</div>
+            </div>
+            <div style="flex: 1; min-width: 240px; background: #EEF1F8; padding: 18px 20px; border-left: 2px solid #0E1C42;">
+                <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.4px; margin-bottom: 10px;">&#128173; WHAT HAMLET HOLDS WITHIN</div>
+                <div style="font-size: 16px; color: #0e1c42; line-height: 1.55; margin-bottom: 10px;">A grief and suspicion so deep that the outward signs cannot begin to show it.</div>
+                <div style="font-size: 15px; color: #1a2340; font-style: italic; line-height: 1.5;">His insistence: "Seems, madam? Nay, it is; I know not 'seems,'" and "I have that within which passeth show."</div>
+            </div>
+        </div>
+        <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-bottom: 16px;">Appearance vs. reality is the machine the whole play runs on. In every scene, ask: who is performing, and for whom?</div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 6px 0 8px 0;">Now read scenes 1 and 2</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Read Act I, scenes 1 and 2. In <strong>scene 1</strong>, watch the cold, fearful watch on the battlements and the silent <strong>Ghost</strong> that will not answer; notice how Horatio explains the war-footing with Norway and young Fortinbras. In <strong>scene 2</strong>, hear <strong>Claudius</strong> balance a funeral and a wedding in the same smooth breath, then watch Hamlet refuse to play along. Mark the word <em>seems</em> each time it appears.</p>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 6px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> <em>Hamlet</em>, Act I, scenes 1&ndash;2. Public-domain full text with scene navigation: <a href="https://www.folger.edu/explore/shakespeares-works/hamlet/read/1/1/" style="color: #3B4E8C;">Folger Shakespeare, <em>Hamlet</em>, Act 1</a>.</div>
+        </div>
+    </div>
+
+    <!-- PART 3: Reading Journal task (no dropdown; help up front) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 3 &middot; DO SOMETHING WITH THE READING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Hamlet's very first words are a muttered aside about his uncle, the new king, who has married his mother: <em>"A little more than kin, and less than kind."</em> Two small words, <em>kin</em> and <em>kind</em>, carry the whole mood.</p>
+        <div class="rj-badge">
+            <div class="rj-icon">&#128211;</div>
+            <div>
+                <div class="rj-label">READING JOURNAL</div>
+                <div class="rj-task">In your Journal, write two or three sentences on this line. To do it well: say what <em>kin</em> means (family), then weigh the two senses of <em>kind</em> (affectionate, and "of the same nature"). Then explain what the pun lets Hamlet do in front of the king he distrusts. Quote the words you are reading; a claim without the words is only a guess.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI callout -->
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can summarize these scenes in seconds and define a word like <em>kind</em>. What it cannot do is read the line in your own voice or notice the pun for you. It also invents things: ask it for a quotation and it may hand you a line that is not in the play. Use it, if at all, to check a definition; then confirm every claim against the actual text before you write it down.</p>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 1.02: The Sound of the Soliloquy</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">We close-read Hamlet's first soliloquy and learn the verse it is written in: blank verse, the five-beat line you will use in Feeder 1.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You have met a hero who will spend five acts trying to know his own mind. Hold onto the seeming-versus-being pattern; it is the lens for everything ahead.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.01 &middot; Seeming and Being: Entering Elsinore</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button').forEach(function (b) { b.classList.remove('selected'); b.classList.remove('matched'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      if (w._matchPick) w._matchPick = null;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    // ow-match engine: click a left item, then a right item; correct pairs lock in.
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget');
+      var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) {
+        // first pick
+        mw.querySelectorAll('.match-col button').forEach(function (b) { b.classList.remove('selected'); });
+        mBtn.classList.add('selected');
+        mw._matchPick = mBtn;
+      } else if (mw._matchPick === mBtn) {
+        mBtn.classList.remove('selected'); mw._matchPick = null;
+      } else if (mw._matchPick.closest('.match-col').dataset.side === side) {
+        // same side: switch selection
+        mw.querySelectorAll('.match-col button').forEach(function (b) { b.classList.remove('selected'); });
+        mBtn.classList.add('selected'); mw._matchPick = mBtn;
+      } else {
+        // opposite side: evaluate
+        var first = mw._matchPick;
+        if (first.dataset.key === mBtn.dataset.key) {
+          first.classList.remove('selected'); first.classList.add('matched'); first.disabled = true;
+          mBtn.classList.add('matched'); mBtn.disabled = true;
+          var left = mw.querySelectorAll('.match-col button:not(.matched)').length;
+          fb2.textContent = left === 0 ? 'All five matched. You have the geography of the play: the court at the center, the threats and escapes around it.' : 'Matched. Keep going.';
+          fb2.classList.add('show');
+        } else {
+          first.classList.remove('selected');
+          fb2.textContent = 'Not that pairing. Think about where that place actually appears in the story, then try again.';
+          fb2.classList.add('show');
+        }
+        mw._matchPick = null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
