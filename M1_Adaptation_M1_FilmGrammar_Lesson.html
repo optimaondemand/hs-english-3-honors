@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Adaptation Studio: Reading a Film</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 2px solid #0E1C42; }
+    .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .widget-options { display:flex; flex-direction:column; gap:8px; }
+    .widget-options button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .widget-options button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .widget-options button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- HEADER -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<!-- METADATA -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Honors Project</div>
+        <div style="font-size: 17px; color: #0e1c42;">The Adaptation Studio</div>
+        <div style="font-size: 12px; color: #0e1c42;">Milestone 1 &middot; teaching lesson</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Weeks</div>
+        <div style="font-size: 17px; color: #0e1c42;">1&ndash;2 &middot; Pre-production I</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Do this before</div>
+        <div style="font-size: 16px; color: #0e1c42;">the Milestone 1 worksheet + submission</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">ADAPTATION STUDIO &middot; TEACHING LESSON</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Reading a Film: How a Scene Tells a Story Without Telling You</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Before you direct anything, learn to see how directors work. This lesson teaches five tools and then puts them to work on three famous scenes.</div>
+    </div>
+
+    <!-- Show don't tell frame -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127916; THE BIG IDEA: SHOW, DO NOT TELL</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">A weak scene has a character announce how they feel. A strong scene makes you feel it through what you see and hear: where the camera stands, how the light falls, what the sound is doing, how the shots are cut together. Your job this year is to make an argument about a text through those choices, not through narration. First, the vocabulary.</p>
+    </div>
+
+    <!-- Five terms with rendered concept visuals -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127909; FIVE TOOLS OF FILM GRAMMAR</div>
+        <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 14px 0;">Learn these five terms. You will use them to name the choices you see in the clips below and the choices you make in your own project.</p>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="border-left:4px solid #3B4E8C; background:#EEF1F8; border-radius:6px; padding:14px 18px;">
+                <div style="font-size:17px; color:#0e1c42; margin-bottom:4px;"><strong>1. Mise-en-scene</strong> (pronounced "meez-ahn-sen")</div>
+                <div style="font-size:15px; color:#1a2340; line-height:1.6;">Everything arranged in the frame: the setting, the lighting, the props, the costumes, and the staging (where people stand and move). In VR, this becomes the whole 360-degree world you build around the viewer.</div>
+            </div>
+            <div style="border-left:4px solid #3B4E8C; background:#EEF1F8; border-radius:6px; padding:14px 18px;">
+                <div style="font-size:17px; color:#0e1c42; margin-bottom:4px;"><strong>2. Shot and movement</strong></div>
+                <div style="font-size:15px; color:#1a2340; line-height:1.6;">How the camera frames and moves. A <strong>wide shot</strong> shows the whole space and can make a person look small or alone. A <strong>medium shot</strong> balances the person and the setting. A <strong>close-up</strong> fills the frame with a face and makes a feeling hard to escape. Angle matters too: looking down on someone makes them seem vulnerable, looking up makes them loom. In VR, this becomes where the viewer stands and where they look.</div>
+            </div>
+            <div style="border-left:4px solid #3B4E8C; background:#EEF1F8; border-radius:6px; padding:14px 18px;">
+                <div style="font-size:17px; color:#0e1c42; margin-bottom:4px;"><strong>3. Sound</strong></div>
+                <div style="font-size:15px; color:#1a2340; line-height:1.6;"><strong>Diegetic</strong> sound exists inside the scene (footsteps, dialogue, a slammed door). <strong>Non-diegetic</strong> sound is added over the scene and the characters cannot hear it (a music score, voiceover narration). <strong>Silence</strong> is a choice too: a held silence can build tension before a sound breaks it.</div>
+            </div>
+            <div style="border-left:4px solid #3B4E8C; background:#EEF1F8; border-radius:6px; padding:14px 18px;">
+                <div style="font-size:17px; color:#0e1c42; margin-bottom:4px;"><strong>4. Editing and pacing</strong></div>
+                <div style="font-size:15px; color:#1a2340; line-height:1.6;">The order and rhythm of the shots. Many quick cuts feel fast and tense; one long, unbroken take feels slow and can build dread. In a spatial medium, this is how you move a viewer through the experience.</div>
+            </div>
+            <div style="border-left:4px solid #3B4E8C; background:#EEF1F8; border-radius:6px; padding:14px 18px;">
+                <div style="font-size:17px; color:#0e1c42; margin-bottom:4px;"><strong>5. Genre and convention</strong></div>
+                <div style="font-size:15px; color:#1a2340; line-height:1.6;">The visual and tonal rules a genre carries. A tragedy tends toward muted color, a slow pace, and a fall toward loss; a thriller toward tight framing, quick cuts, and tense sound; a documentary toward natural light and real locations. Using a rule, or breaking it on purpose, is itself an argument.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CLIP 1: crop duster -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127909; CLIP 1 &middot; TENSION FROM EMPTINESS &middot; <em>North by Northwest</em> (1959), the crop-duster scene</div>
+        <div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/sIY7BQkbIT8" title="North by Northwest crop-duster scene" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <!-- Teacher note: clip embedded from the Movieclips channel (Warner Bros.). -->
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 12px 0 10px 0;">In this scene, a man waits alone in an open field before a small plane appears and comes at him.</p>
+        <div style="background:#FDF3E3; border:1px solid #C7922C; border-radius:8px; padding:14px 16px; margin-bottom:12px;">
+            <div style="font-size:11px; color:#C7922C; margin-bottom:8px; letter-spacing:0.4px;">NOTICE (NO ANSWERS YET)</div>
+            <ul style="margin:0; padding-left:20px;">
+                <li style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;">What happens to the size of the man in the wide shots of the field?</li>
+                <li style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;">What does the camera do when it looks down on him from a high angle?</li>
+                <li style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;">How much sound or music do you hear before the plane arrives?</li>
+                <li style="font-size:15px; color:#1a2340; line-height:1.55;">What changes about the camera and the pace when the plane suddenly rushes in low?</li>
+            </ul>
+        </div>
+        <div style="font-size:12px; color:#3B4E8C; margin-bottom:6px;">Jot what you notice here, then copy it into your director's log or notebook.</div>
+        <textarea style="width:100%; min-height:70px; border:1.5px solid #3B4E8C; border-radius:6px; padding:10px 12px; font-family:inherit; font-size:14px; color:#0e1c42; box-sizing:border-box; resize:vertical;" placeholder="What did you notice about the shots, angles, sound, and pace?"></textarea>
+    </div>
+
+    <!-- CLIP 2: Matrix -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127909; CLIP 2 &middot; A CHOICE MADE VISIBLE &middot; <em>The Matrix</em> (1999), "Blue Pill or Red Pill"</div>
+        <div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/zE7PKRjrid4" title="The Matrix, Blue Pill or Red Pill scene" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 12px 0 10px 0;">In this scene, Morpheus offers Neo a choice between two pills while the two men sit close together in conversation.</p>
+        <div style="background:#FDF3E3; border:1px solid #C7922C; border-radius:8px; padding:14px 16px; margin-bottom:12px;">
+            <div style="font-size:11px; color:#C7922C; margin-bottom:8px; letter-spacing:0.4px;">NOTICE (NO ANSWERS YET)</div>
+            <ul style="margin:0; padding-left:20px;">
+                <li style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;">What color and brightness is the lighting in the room?</li>
+                <li style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;">How close together are the two men framed, and how much space is around them?</li>
+                <li style="font-size:15px; color:#1a2340; line-height:1.55;">What do the close-ups on their eyes and hands show that the dialogue alone does not?</li>
+            </ul>
+        </div>
+        <div style="font-size:12px; color:#3B4E8C; margin-bottom:6px;">Jot what you notice here, then copy it into your director's log or notebook.</div>
+        <textarea style="width:100%; min-height:70px; border:1.5px solid #3B4E8C; border-radius:6px; padding:10px 12px; font-family:inherit; font-size:14px; color:#0e1c42; box-sizing:border-box; resize:vertical;" placeholder="What did you notice about the color, light, framing, and close-ups?"></textarea>
+    </div>
+
+    <!-- CLIP 3: Roman Holiday -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127909; CLIP 3 &middot; JOY WITHOUT A SPEECH &middot; <em>Roman Holiday</em> (1953), the Vespa scene</div>
+        <div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/Txo7AiiHid0" title="Roman Holiday, Vespa scene" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 12px 0 10px 0;">In this scene, a princess rides a scooter through Rome with a companion, and no one states how she feels.</p>
+        <div style="background:#FDF3E3; border:1px solid #C7922C; border-radius:8px; padding:14px 16px; margin-bottom:12px;">
+            <div style="font-size:11px; color:#C7922C; margin-bottom:8px; letter-spacing:0.4px;">NOTICE (NO ANSWERS YET)</div>
+            <ul style="margin:0; padding-left:20px;">
+                <li style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;">What does the lighting and the openness of the streets suggest about her mood?</li>
+                <li style="font-size:15px; color:#1a2340; line-height:1.55; margin-bottom:6px;">What is the music doing during the ride, and how fast or slow is it?</li>
+                <li style="font-size:15px; color:#1a2340; line-height:1.55;">What does her movement, posture, and expression show without a line of dialogue?</li>
+            </ul>
+        </div>
+        <div style="font-size:12px; color:#3B4E8C; margin-bottom:6px;">Jot what you notice here, then copy it into your director's log or notebook.</div>
+        <textarea style="width:100%; min-height:70px; border:1.5px solid #3B4E8C; border-radius:6px; padding:10px 12px; font-family:inherit; font-size:14px; color:#0e1c42; box-sizing:border-box; resize:vertical;" placeholder="What did you notice about the light, sound, and movement?"></textarea>
+    </div>
+
+    <!-- INTERACTIVE 1: match technique to effect -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="optima-widget ow-match" data-done="You have it. In every case, a choice of image or sound is doing the storytelling." style="margin:0;">
+            <div class="widget-kicker">&#129513; NOW YOU: MATCH THE CHOICE TO WHAT IT DOES</div>
+            <div class="widget-question">From the three clips, match each directorial choice to the effect it creates. Click a choice, then its effect.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:170px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">THE CHOICE</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="wide">Wide shots of a man alone in an empty field</button>
+                        <button data-key="green">Dim green light and tight close-ups on two men</button>
+                        <button data-key="bright">Bright daylight, open streets, a light score</button>
+                        <button data-key="silence">Almost no music before the plane attacks</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:170px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">THE EFFECT</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="bright">Freedom and joy, with no line of dialogue saying so</button>
+                        <button data-key="silence">Dread; the quiet makes the sudden noise terrifying</button>
+                        <button data-key="wide">Vulnerability; the character is tiny and exposed</button>
+                        <button data-key="green">A tense, trapped, unreal mood around a hard choice</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE 2: apply to Hamlet -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="optima-widget ow-select" style="margin:0;">
+            <div class="widget-kicker">&#129504; APPLY IT TO HAMLET (UNGRADED)</div>
+            <div class="widget-question">You are staging Hamlet's "To be, or not to be" in VR. You want the viewer to feel how alone and uncertain he is. Which single choice best <em>shows</em> that, instead of telling it?</div>
+            <div class="widget-options">
+                <button data-response="This tells, it does not show. A voice announcing the theme is exactly what film grammar lets you avoid. Look for a choice that makes the feeling physical.">Add narration that says "Hamlet feels alone and unsure."</button>
+                <button data-response="Strong choice. Vast empty space and a small, off-center figure make isolation something the viewer feels in the body. That is mise-en-scene and shot scale doing the work.">Place the viewer in a vast, empty, dim hall with Hamlet small and off to one side.</button>
+                <button data-response="Bright light and a lively score would fight the meaning. Match your world to the feeling; here that means space, dimness, and quiet.">Fill the space with bright light and an upbeat musical score.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#10145;&#65039; NEXT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Open the <strong>Milestone 1 Worksheet</strong>. You will study one worked example, then plan your own analysis and a storyboard for a Hamlet soliloquy in space. When it is done, you download it as a PDF and submit it on the Milestone 1 page.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; The Adaptation Studio</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Milestone 1 &middot; Reading a Film</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button').forEach(function (b) { b.classList.remove('selected','matched'); b.disabled=false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      w._matchPick=null; return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback'); fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show'); return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Rewatch the clip and think about what the choice makes you feel.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
+</content>
