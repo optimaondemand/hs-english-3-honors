@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 5.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- HEADER -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<!-- METADATA -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Examined Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 5 &middot; Lesson 5.01</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">How All Occasions</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Hamlet, Act IV, sc. 1&ndash;4</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 5.01 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">How All Occasions</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">On his way into exile, Hamlet watches twenty thousand men march to fight over a field not worth farming, and asks why he, with every reason to act, still has not.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Hamlet has killed the wrong man, and Act IV opens with the bill coming due. The king moves fast: Hamlet is packed onto a ship for England before the body is cold. But on the road to the coast, Shakespeare stages one last meeting. Hamlet crosses paths with the army of young <strong>Fortinbras</strong>, the Norwegian prince from Act I, and out of that encounter comes his final soliloquy. Today you read scenes 1 through 4 and learn the device the encounter is built on: the <strong>foil</strong>.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace how the killing of Polonius forces Claudius's hand and sends Hamlet toward England.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define a <em>foil</em> and explain how Fortinbras works as one for Hamlet.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> follow the argument of "How all occasions do inform against me" from question to resolution.</div>
+        </div>
+    </div>
+
+    <!-- PART 1 warm-up + the fallout -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN (no wrong answer)</div>
+            <div class="widget-question">Think of something you kept putting off even though you had every reason to do it. What finally moved you, if anything did: a deadline, an example, or shame?</div>
+            <div class="widget-options">
+                <button data-response="A deadline is exactly what Claudius hands Hamlet in these scenes: a ship, a schedule, an exit. Watch whether being forced to move actually changes what Hamlet does, or only where he does it.">A deadline</button>
+                <button data-response="Then you already have the shape of today's soliloquy. Hamlet watches another man's example, an army marching for almost nothing, and measures himself against it. Watch what the example does to him.">An example</button>
+                <button data-response="Shame is the engine of the speech you will read today. Hamlet says the sight of the army makes his own excuses look gross to him. Watch how he turns embarrassment into a resolution.">Shame</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The fallout, scene by scene</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In <strong>scene 1</strong>, Gertrude reports the killing to Claudius: her son, "Mad as the sea and wind" (4.1), heard a stir behind the curtain, cried "A rat, a rat" (4.1), and ran the old man through. Watch the king's first reaction. It is not grief for Polonius; it is "It had been so with us, had we been there" (4.1). He hears the sword-thrust as meant for himself, and he immediately worries how the killing will look: "It will be laid to us" (4.1). By the end of the scene he has his answer: ship Hamlet away at dawn. <strong>Scene 2</strong> is short and strange: Hamlet has hidden the body and answers the courtiers sent to find it in riddles, treating Rosencrantz as the king's sponge, soaked with favors and squeezed dry when needed. In <strong>scene 3</strong>, brought before the king, Hamlet keeps up the grim clowning. Asked where Polonius is, he answers that the old man is at supper, "Not where he eats, but where he is eaten" (4.3), and follows the thought all the way down: "a king may go a progress through the guts of a beggar" (4.3). It sounds like madness, but notice what the joke actually says to a usurping king: crowns do not protect a body. Claudius announces the voyage, "For England" (4.3), and Hamlet goes almost cheerfully. Then, alone, the king drops the mask in a soliloquy of his own. The letters Hamlet carries order England to kill him: "Do it, England, / For like the hectic in my blood he rages" (4.3). A fever, he says, and Hamlet's death the cure.</p>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 6px 0 4px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> <em>Hamlet</em>, Act IV, scenes 1&ndash;4. Public-domain full text with scene navigation: <a href="https://www.folger.edu/explore/shakespeares-works/hamlet/read/4/1/" style="color: #3B4E8C;">Folger Shakespeare, <em>Hamlet</em>, Act 4</a>.</div>
+        </div>
+
+        <!-- Interactive comprehension: sequence the fallout from the text (student supplies it) -->
+        <div class="optima-widget ow-order" data-done="That is the order the fallout follows in scenes 1 through 3." style="margin-top:18px;">
+            <div class="widget-kicker">&#128203; NOW YOU: PUT THE FALLOUT IN ORDER</div>
+            <div class="widget-question">Now that you have read scenes 1&ndash;3, click these six beats in the order they actually happen in the text.</div>
+            <div class="order-list">
+                <button data-order="4"><span class="seq" data-default="?">?</span>Brought before the king, Hamlet jokes that a king may pass "through the guts of a beggar" (4.3).</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span>Gertrude tells Claudius that her son, "Mad as the sea and wind" (4.1), has killed Polonius.</button>
+                <button data-order="6"><span class="seq" data-default="?">?</span>Alone, Claudius reveals in soliloquy that the sealed letters actually order England to kill Hamlet (4.3).</button>
+                <button data-order="2"><span class="seq" data-default="?">?</span>Claudius, fearing the blame will land on him, decides to ship Hamlet away at dawn (4.1).</button>
+                <button data-order="5"><span class="seq" data-default="?">?</span>Claudius announces the voyage, "For England" (4.3), and Hamlet goes along.</button>
+                <button data-order="3"><span class="seq" data-default="?">?</span>Hamlet hides the body and answers the courtiers sent to find it in riddles (4.2).</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2: the foil + core visual -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9876;&#65039; PART 2 &middot; THE DEVICE OF THE SCENE: THE FOIL</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">A <strong>foil</strong> is a character set beside another so that the contrast sharpens both. The word comes from an old jeweler's trick: a thin sheet of metal foil placed behind a gem to make it shine harder. In <strong>scene 4</strong>, Shakespeare places Fortinbras behind Hamlet. The two princes match point for point: each is the son of a dead king, each is named for his father, each has an uncle on the throne that might have been his. Then the match breaks. Fortinbras is marching an army across Denmark to attack Poland, and the prize, a passing captain admits, is "a little patch of ground / That hath in it no profit but the name" (4.4). He would not pay five ducats to farm it. Fortinbras acts on the thinnest pretext imaginable, an eggshell of a cause; Hamlet, with a murdered father, a corrupted court, and a direct charge from the dead, has not acted at all. That is what a foil does: it does not tell you who is right, it makes the difference impossible to ignore.</p>
+
+        <!-- CORE VISUAL: two princes, one scale -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">ACT IV, SCENE 4: TWO PRINCES, MEASURED AGAINST EACH OTHER</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0; border: 2px solid #0E1C42; border-radius: 10px; overflow: hidden; margin-bottom: 10px;">
+                <div style="flex: 1; min-width: 240px; background: #FFFFFF; padding: 18px 20px;">
+                    <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.4px; margin-bottom: 10px;">&#9876;&#65039; FORTINBRAS, THE FOIL</div>
+                    <div style="font-size: 16px; color: #0e1c42; line-height: 1.55; margin-bottom: 10px;"><strong>His cause:</strong> a worthless field. "A little patch of ground / That hath in it no profit but the name" (4.4).</div>
+                    <div style="font-size: 16px; color: #0e1c42; line-height: 1.55;"><strong>His response:</strong> twenty thousand men on the march, honor at stake in a straw.</div>
+                </div>
+                <div style="flex: 1; min-width: 240px; background: #FDF3E3; padding: 18px 20px; border-left: 2px solid #0E1C42;">
+                    <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.4px; margin-bottom: 10px;">&#128173; HAMLET, THE GEM</div>
+                    <div style="font-size: 16px; color: #0e1c42; line-height: 1.55; margin-bottom: 10px;"><strong>His cause:</strong> a murdered father, a stained mother, a throne held by the killer. By his own count he has "cause, and will, and strength, and means" (4.4).</div>
+                    <div style="font-size: 16px; color: #0e1c42; line-height: 1.55;"><strong>His response:</strong> so far, one killing he did not intend and a ship carrying him away from his revenge.</div>
+                </div>
+            </div>
+            <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px;">The foil is the plainer metal that makes the gem's flaw visible. Hamlet looks at Fortinbras and sees exactly what he himself has not done.</div>
+        </div>
+    </div>
+
+    <!-- PART 3: the soliloquy -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128173; PART 3 &middot; THE LAST SOLILOQUY: FROM QUESTION TO RESOLUTION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Left alone on the plain, Hamlet begins: "How all occasions do inform against me / And spur my dull revenge" (4.4). Everything he sees has become evidence at his own trial. You have now heard him alone many times, and this speech completes a pattern. The Act I soliloquy was an outburst of grief; "To be, or not to be" was a meditation with no <em>I</em> in it; this one is a self-examination that ends in a verdict. Follow its argument in three moves. First, the question: what is a man whose only business is "to sleep and feed? A beast, no more" (4.4). Reason was given to be used, not "to fust in us unused" (4.4). Second, the evidence against himself: he cannot even name what has stopped him, and the fact stands that "I have cause, and will, and strength, and means / To do 't" (4.4). Third, the example in front of him. He reasons that true greatness is "not to stir without great argument" (4.4), yet greatness also means finding honor's quarrel in a straw when honor is truly at stake, and his stake could not be greater. The speech ends on the play's hardest turn: "My thoughts be bloody or be nothing worth!" (4.4).</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Read that last line carefully before you take it at face value. Hamlet resolves that his <em>thoughts</em> will be bloody, not his hands, and he makes the resolution while under guard, sailing away from the man he has sworn to kill. Whether this is a real turning point or one more substitution of words for deeds is a genuinely open question. Mark the line and hold your verdict; the rest of the play will argue it with you.</p>
+    </div>
+
+    <!-- Hamlet nuance: a closer look at what actually moves him -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#128269; A CLOSER LOOK: WHAT ACTUALLY MOVES HIM</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.65; margin: 0;">Look again at what convinces Hamlet, not just what he concludes. He does not find a better argument for revenge; he watches Fortinbras march twenty thousand men to die over "a little patch of ground / That hath in it no profit but the name" (4.4), and the sight shames him into his resolution. He is admiring, and measuring himself against, a war he himself calls pointless. That complicates a speech that is often read as simple heroic resolve. Is envying a needless slaughter a mark of honor working itself out in him, or a sign that Hamlet, like the foil he is watching, has started to mistake the size of the gesture for the rightness of the cause?</p>
+    </div>
+
+    <div class="optima-widget ow-reflect">
+        <div class="widget-kicker">&#128173; WEIGH IT (no wrong answer)</div>
+        <div class="widget-question">Given what actually moves Hamlet in this soliloquy, how do you read his resolve?</div>
+        <div class="widget-options">
+            <button data-response="There is a case for that: he names his own delay as unreasoning and vows to fix it. But notice the evidence that convinces him is an army dying for &quot;no profit but the name&quot; (4.4). Ask whether that argument would hold up if a friend used it on you before you settle here.">Genuine honor finally taking hold</button>
+            <button data-response="That reading has real force: a foil is supposed to let you question the model it offers, not simply admire it, and here Hamlet holds up a wasteful war as his standard. But he is also a prisoner under guard, sailing further from his revenge with every line, with few other models on offer. Weigh both readings before you settle on one.">A troubling standard to be shamed by</button>
+            <button data-response="Many careful readers land here. The speech is genuinely moving and its model is genuinely unsettling, in the same fourteen lines. Hold onto the tension instead of resolving it; the play does not resolve it either.">Both are true at once</button>
+        </div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
+
+    <!-- Reading Journal task (no dropdown; help up front) -->
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">In your Journal, answer this in four or five sentences: what exactly does the sight of Fortinbras's army change in Hamlet, and what does it leave unchanged? To do it well: quote one line from the soliloquy that shows the change (the opening line and the closing line are both strong candidates) and cite it (4.4); then point to one fact of Hamlet's situation at the end of the scene that is exactly what it was at the start. The gap between those two is the point.</div>
+        </div>
+    </div>
+
+    <!-- Recitation rehearsal checkpoint (ungraded) -->
+    <div style="background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127908; RECITATION REHEARSAL: BEGIN MEMORIZING (ungraded, nothing to turn in)</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.65; margin: 0;">By now your soliloquy is chosen and you have read it aloud across several weeks. This week, start committing it to memory. Work in small blocks: take the first two or three lines, say them until they come without looking, then add the next block and run from the top. Let the verse help you; the five-beat pulse and the punctuation are a built-in memory aid. Aim to have the first half solid from memory by the end of this week. The graded recitation is in Week 7, so this start gives you two weeks of margin.</p>
+    </div>
+
+    <!-- AI callout -->
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can outline the argument of "How all occasions do inform against me" and label Fortinbras a foil, because both are standard readings. What it cannot decide is whether the closing resolution is real, since the play itself leaves that open and Hamlet does not soliloquize again to tell us. It may also misquote: this soliloquy appears in some early texts of the play and not others, so quotations pulled from memory are unreliable. Check every line against the text you were assigned before you cite it.</p>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 5.02: Ophelia's Madness</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Hamlet leaves the stage, and the cost of his sword-thrust arrives: Ophelia enters singing, and her brother comes home with a mob at his back.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You now have the play's method for judging its hero: set another son beside him and watch. Fortinbras is the first mirror. Two lessons from now, Laertes will be the second, and the comparison will get much less comfortable.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.01 &middot; How All Occasions</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
