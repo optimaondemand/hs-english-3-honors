@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.10</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .widget-options { display:flex; flex-direction:column; gap:8px; }
+    .widget-options button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .widget-options button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .widget-options button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3 &middot; Lesson 2.10</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (2 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Nonconformist</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">"Self-Reliance" (continuing)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.10 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Nonconformist</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Emerson names the force working against self-trust. It is not a king or a law. It is everyone around you, being agreeable, and expecting you to be agreeable back.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today you read the essay's most famous demand: <strong>"Whoso would be a man must be a nonconformist"</strong> ("Self-Reliance"). To weigh that demand you need two things: a precise account of what Emerson actually asks a person to resist, and a name for the sentence-form he delivers it in. That form is the <strong>aphorism</strong>, and it is the engine of his style.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state what Emerson claims society demands of its members, in his words and in mine.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name specifically what Emerson asks a person to resist, and what price he admits resistance carries.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define the aphorism and explain how it persuades, and where it is vulnerable.</div>
+        </div>
+    </div>
+
+    <!-- READING TOOL: how this kind of Emerson paragraph turns -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128101; PART 1 &middot; A TOOL FOR READING THIS KIND OF PARAGRAPH</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">In the paragraphs ahead, Emerson makes a charge about how society operates on its members, and he does not mean a literal plot with meetings and a plan; watch for the word he actually uses and what work it is doing. Passages like this one tend to move through the same four stages. Learn the shape first, then read for where each stage lands.</p>
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">HOW THIS KIND OF PARAGRAPH TURNS</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">1. NAMES A PRESSURE</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">He identifies a force acting on people, often one they do not notice because it feels ordinary.</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">2. DRAWS A LINE</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">He names which trait society prizes and which it turns away from.</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 13px; color: #C7922C; margin-bottom: 6px;">3. ADMITS A COST</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">He states plainly what resisting the pressure will cost a person who tries it.</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 13px; color: #C7922C; margin-bottom: 6px;">4. DELIVERS THE DEMAND</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">He tells you what he asks of you anyway, often as a short, stark command.</div></div>
+            </div>
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 14px 0 0 0;">As you read, try to label each sentence with one of these four stages. Some sentences will do more than one job at once.</p>
+    </div>
+
+    <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin-bottom: 20px;">
+        <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> continue "Self-Reliance" through the paragraphs on society, conformity, and the world's displeasure. Public-domain text: <a href="https://en.wikisource.org/wiki/Essays:_First_Series/Self-Reliance" style="color: #3B4E8C;">Wikisource, <em>Essays: First Series</em> (1841)</a>.</div>
+    </div>
+
+    <!-- NOW THAT YOU HAVE READ IT: map the paragraph onto the shape above -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9876;&#65039; PART 2 &middot; NOW THAT YOU HAVE READ IT: THE PRESSURE AND THE PRICE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">Here is how the paragraphs you just read map onto the four-stage shape: the instruments society uses to collect conformity, and what Emerson says each one costs a person who yields to it.</p>
+
+        <!-- CORE VISUAL: the pressure and the resistance, now grounded in the reading -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">HOW SOCIETY COLLECTS, AS EMERSON DESCRIBES IT</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.4px; margin-bottom: 6px;">INSTRUMENT 1 &middot; APPROVAL</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Smiles, praise, and belonging are paid out for agreeing. The reward feels free; Emerson says its price is your opinion.</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.4px; margin-bottom: 6px;">INSTRUMENT 2 &middot; CUSTOM</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">"This is how it has always been done" ends the question before your judgment can begin it. Custom decides so you do not have to.</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 13px; color: #C7922C; letter-spacing: 0.4px; margin-bottom: 6px;">INSTRUMENT 3 &middot; DISPLEASURE</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">And if reward and habit fail, punishment: <em>"For nonconformity the world whips you with its displeasure"</em> ("Self-Reliance").</div>
+                </div>
+            </div>
+            <div style="background: #0E1C42; border-radius: 8px; padding: 14px 18px; text-align: center;">
+                <div style="font-size: 12px; color: #55c8e8; letter-spacing: 0.5px; margin-bottom: 6px;">EMERSON'S DEMAND, AGAINST ALL THREE</div>
+                <div style="font-size: 16px; color: #ffffff; font-style: italic; line-height: 1.55;">"Whoso would be a man must be a nonconformist" ("Self-Reliance").</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 0 0;">Notice that Emerson does not pretend resistance is free. The whip in that sentence is not leather; it is coldness, mockery, and exclusion, and he treats it as a real cost that a self-reliant person must be willing to pay. "Whoso" is an old form meaning <em>whoever</em>, and "man" here carries the older sense of a full, complete human being. The sentence makes full personhood <em>conditional</em>: in Emerson's grammar of life, you do not get to be entirely yourself and entirely agreeable at once. Also confirm, from your own reading: what precisely does Emerson say the nonconformist must resist? Read carefully and the list is narrower than "break every rule."</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 3 &middot; THE APHORISM, EMERSON'S WEAPON OF CHOICE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">An <strong>aphorism</strong> is a compact, memorable sentence that states a general truth: short enough to carry in your head, general enough to apply beyond its page. "The virtue in most request is conformity" is one. So is "Whoso would be a man must be a nonconformist." Emerson's essays are built from them the way walls are built from stone.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">How does an aphorism persuade? Not the way Madison persuades. Madison builds if-then chains you can inspect link by link. An aphorism skips the chain: its brevity <em>feels</em> like certainty, and instead of offering proof it invites you to test the claim against your own experience. When your memory supplies a confirming example, the sentence suddenly seems obviously true, and you did half the arguing yourself. That is its power, and its vulnerability: an aphorism asserts; it does not demonstrate. A reader who slows down is allowed to ask, is this actually true, or does it just sound true?</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">Try that slow reading on today's demand. "Whoso would be a man must be a nonconformist" is a sentence urging you not to be swayed by mere confident assertion, delivered as a confident assertion it expects you to be swayed by. Is that a contradiction, or is Emerson simply using the only sentence-form strong enough for the job? Hold the question; Lesson 2.11 sharpens it.</p>
+
+        <!-- INTERACTIVE (after reading): what does the aphorism actually claim -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#129513; WHAT DOES THIS APHORISM ACTUALLY CLAIM?</div>
+            <div class="widget-question">"The virtue in most request is conformity. Self-reliance is its aversion" ("Self-Reliance"). Which paraphrase actually follows from that sentence?</div>
+            <div class="widget-options">
+                <button data-response="Not quite. Emerson is not describing individual likes and dislikes; read again, the sentence is about what a whole society, as a system, rewards and turns away from.">People generally prefer to agree with others rather than think for themselves.</button>
+                <button data-response="This is the closer reading. Emerson is naming a social economy: conformity is the trait society pays out approval for, and self-reliance is the trait it has an aversion to, turns away from, refuses to reward.">In society's economy of reward, going along is the trait most valued; trusting yourself is the trait society turns away from.</button>
+                <button data-response="That overreaches. The sentence names what society values and rejects; it does not by itself claim that self-reliance is morally superior, only that society is not the one rewarding it.">Self-reliance is a higher virtue than conformity, and Emerson is condemning anyone who conforms.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Start an "aphorism collection" in your Module 2 Organizer. From today's reading, copy three aphorisms exactly, with quotation marks, each cited ("Self-Reliance"). Beside each, write one sentence of your own: does your experience confirm the claim, or complicate it? Give the specific example your memory supplied, since that example is the aphorism working on you. How to spot one: it is short, it is general, and it stands alone; if a sentence needs its neighbors to make sense, it is not an aphorism.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">AI tools are fluent at producing aphorism-shaped sentences, which is one reason the internet is full of wise-sounding quotations attributed to Emerson that appear nowhere in his work. Before you use any Emerson quotation, from an AI answer or a quote site, verify it against the actual essay text. If you cannot find the sentence in "Self-Reliance," do not put his name on it.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.11: Envy, Imitation, and Your Own Genius</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Emerson's harshest verdicts, "envy is ignorance" and "imitation is suicide," and the honest case for and against his individualism.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">When you write your Publius Returns op-ed, you will want at least one sentence readers carry away with them. That is the aphorism's job. But you now know its limit: it asserts without proving. Earn your memorable sentence with the argument around it, the way Madison would.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.10 &middot; The Nonconformist</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
