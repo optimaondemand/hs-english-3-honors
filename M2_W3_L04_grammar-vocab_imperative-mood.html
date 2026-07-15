@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.12</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .widget-options { display:flex; flex-direction:column; gap:8px; }
+    .widget-options button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .widget-options button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .widget-options button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+    table.wordstudy { width: 100%; border-collapse: collapse; margin: 6px 0; }
+    table.wordstudy th { background: #0E1C42; color: #fff; font-size: 13px; text-align: left; padding: 9px 12px; border: 1px solid #334; }
+    table.wordstudy td { font-size: 15px; color: #1a2340; padding: 9px 12px; border: 1px solid #D0D9E8; vertical-align: top; line-height: 1.5; }
+    table.wordstudy tr:nth-child(even) td { background: #F4F6FA; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3 &middot; Lesson 2.12</div>
+        <div style="font-size: 12px; color: #0e1c42;">Grammar &amp; Vocabulary</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Imperative Mood</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Word Study</div>
+        <div style="font-size: 16px; color: #0e1c42;">aversion, integrity</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.12 &middot; Grammar &amp; Vocabulary</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Imperative Mood</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; one combined grammar and vocabulary session</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">"Trust thyself." Two words, no stated subject, and a whole philosophy. The shortest sentences in Emerson's essay are commands, and commands have a grammar.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Madison argued with conditionals; Emerson argues with the <strong>imperative mood</strong>, the sentence-form that stops describing the world and starts directing the reader. Today you learn how imperatives are built, how the softer <strong>hortatory</strong> command with <em>let</em> works, and when a command persuades rather than hectors. Then Word Study: two words this essay leans on, <em>aversion</em> and <em>integrity</em>.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify the imperative mood by its understood subject and base-form verb, and build direct and negative imperatives.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> build a hortatory sentence with <em>let</em> and explain when a writer reaches for it instead of a direct command.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use two words from this week's reading precisely in my own sentences.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9999;&#65039; PART 1 &middot; THE MOOD THAT GIVES ORDERS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">English verbs come in <strong>moods</strong>, and you have already met two this quarter. The <strong>indicative</strong> states what is: <em>Society demands conformity.</em> The <strong>subjunctive</strong> imagines what is not; it lived inside last week's contrary-to-fact conditional, in Madison's "If men <em>were</em> angels." The <strong>imperative</strong> does neither. It commands: <em>Trust thyself.</em> Its grammar has two signatures. First, the subject is the <strong>understood you</strong>: unstated, but present, which is why the command lands on whoever is reading. Second, the verb takes its <strong>base form</strong>, the bare verb with no ending: <em>trust</em>, <em>insist</em>, <em>go</em>. For a <strong>negative imperative</strong>, put <em>do not</em> or <em>never</em> in front of the base verb: <em>never imitate</em>. Punctuate a command with a period; save exclamation points for genuine emergencies, since a calm imperative carries more authority than a shouted one. There is also a third form, the <strong>hortatory</strong> command with <em>let</em>, which urges rather than orders and lets the writer include others, or even themselves, in the command: Emerson writes, "Let a man then know his worth, and keep things under his feet" ("Self-Reliance"). A direct command to the reader would have been <em>know your worth</em>; the <em>let</em> form turns the same demand into an invitation the whole room can accept together.</p>
+
+        <!-- CORE VISUAL: the frame -->
+        <div style="background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.6px; margin-bottom: 12px;">THE FRAME (EMERSON'S OWN SENTENCE)</div>
+            <div style="background: #EEF1F8; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; font-size: 18px; color: #0e1c42; line-height: 1.6;"><span style="background:#dfe6f5; border-radius:4px; padding:1px 5px; color:#3B4E8C;">[you]</span> <span style="color:#C7922C;"><strong>Insist</strong> on yourself</span>;<span style="color:#9fb3cc;">&nbsp;[semicolon]&nbsp;</span><span style="color:#3B4E8C;"><strong>never imitate</strong></span>. <span style="font-size:14px; color:#1a2340;">("Self-Reliance")</span></div>
+            <div style="font-size: 14px; color: #1a2340; line-height: 1.55;"><span style="color:#3B4E8C;"><strong>[you]</strong></span> = the understood subject, never written but always aimed at the reader. <span style="color:#C7922C;"><strong>Gold</strong></span> = a direct imperative: base verb <em>insist</em>, first word of the sentence. <span style="color:#3B4E8C;"><strong>Blue</strong></span> = a negative imperative: <em>never</em> + base verb <em>imitate</em>. The semicolon yokes the two commands into one balanced order, the positive and the negative of a single demand. Emerson's shortest form drops even the preposition: <em>Trust thyself</em>, base verb plus an old form of <em>yourself</em>. Two words, and the subject is you.</div>
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 12px 0 0 0;">Why does persuasion love the imperative? Because it changes the reader's role. An indicative sentence lets you watch an idea from your seat; an imperative pulls you onto the stage: now you must obey, refuse, or argue back, and any of the three means you are engaged. But the mood is strong medicine. A page of commands stops persuading and starts hectoring, and the reader quietly leaves. Watch Emerson's rhythm: each imperative rides on indicative sentences that give reasons before or after it. That is the working rule for your own writing: <strong>earn each command with the reasoning around it</strong>, and spend imperatives the way you spend exclamation points, rarely and on purpose.</p>
+
+        <!-- INTERACTIVE: identify the mood of each sentence -->
+        <div class="optima-widget ow-match" data-done="All four matched. You can tell a command from a statement on sight, and a direct command from a hortatory one.">
+            <div class="widget-kicker">&#129513; MATCH EACH SENTENCE TO ITS MOOD</div>
+            <div class="widget-question">Click a sentence, then click the label that names its mood. All four sentences are from this week's reading.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">SENTENCE</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="direct">"Trust thyself" ("Self-Reliance")</button>
+                        <button data-key="negative">"&hellip;never imitate" ("Self-Reliance")</button>
+                        <button data-key="hortatory">"Let a man then know his worth, and keep things under his feet" ("Self-Reliance")</button>
+                        <button data-key="indicative">"Society everywhere is in conspiracy against the manhood of every one of its members" ("Self-Reliance")</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">MOOD</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="indicative">Indicative: states what is; not a command.</button>
+                        <button data-key="hortatory">Hortatory command: urges rather than orders, built with <em>let</em>.</button>
+                        <button data-key="direct">Direct imperative: base verb, subject an understood "you."</button>
+                        <button data-key="negative">Negative imperative: <em>never</em> (or <em>do not</em>) plus the base verb.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Choose a civic question you might use for Publius Returns and write three commands about it: one direct imperative (base verb first), one negative imperative (<em>do not</em> or <em>never</em> + base verb), and one hortatory sentence (<em>Let us&hellip;</em> or <em>Let every citizen&hellip;</em>). Label each form. Then pick your strongest of the three and attach one indicative sentence before or after it giving the reason that earns the command. Check yourself against the frame above: no stated subject except inside the <em>let</em> form, and every verb in its base form.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128213; PART 2 &middot; WORD STUDY (from "Self-Reliance")</div>
+        <table class="wordstudy">
+            <thead><tr><th style="width: 150px;">Word</th><th>In the text</th><th>What it means</th><th>Word origin</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>aversion</strong><br /><span style="font-size: 12px; color: #3B4E8C;">noun</span></td>
+                    <td>Naming what society prizes and what it shuns, Emerson writes: "The virtue in most request is conformity. Self-reliance is its aversion" ("Self-Reliance").</td>
+                    <td>A strong, settled dislike; also the thing that is disliked or turned away from. From Latin roots meaning "a turning away." In Emerson's sentence, self-reliance is the thing society turns away from.</td>
+                    <td>From Latin <em>aversionem</em>, from <em>avertere</em> ("to turn away"), from <em>ab-</em> ("away") and <em>vertere</em> ("to turn"); literally a turning away from something disliked.</td>
+                </tr>
+                <tr>
+                    <td><strong>integrity</strong><br /><span style="font-size: 12px; color: #3B4E8C;">noun</span></td>
+                    <td>Emerson sets it above every other authority: "Nothing is at last sacred but the integrity of your own mind" ("Self-Reliance").</td>
+                    <td>Wholeness; the state of being complete and undivided, from Latin <em>integer</em>, "whole." Applied to character, it means being one person through and through, not honest merely by rule but undivided between what you believe, say, and do.</td>
+                    <td>From Latin <em>integritas</em>, from <em>integer</em> ("whole, untouched"), from <em>in-</em> ("not") and <em>tangere</em> ("to touch"); literally "untouched-ness," wholeness applied to character.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
+            <div class="rj-task">Add both words to your Journal. For each, write one new sentence of your own on a subject unrelated to Emerson, keeping the meaning exact and letting the sentence show it. For <em>aversion</em>, make clear who turns away from what; "I have an aversion" alone shows nothing. For <em>integrity</em>, let the wholeness sense do the work: show a person undivided between belief, word, and act, not just someone following rules. Bonus move: cast one of your two sentences as an imperative or a hortatory <em>let</em> sentence from Part 1. Notice how <em>integrity</em>'s root sense of "untouched wholeness" still echoes in what it means to call a person's character intact.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; USE IT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#128172;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Discussion: Self-Reliance: Virtue, Danger, or Both?</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Your discussion post argues in the indicative; do not command your classmates. But bank today's imperative sentences in your Journal: an op-ed addressed to the citizenry is the imperative's natural home, and Publius Returns will want one or two, well earned.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The imperative is the mood of writers who want something from the reader beyond agreement: they want action. Emerson commands the conscience, and in two weeks you will hear Douglass command a nation's. When your own writing finally needs a command, you will know how to build one and what it costs to use.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.12 &middot; The Imperative Mood</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
