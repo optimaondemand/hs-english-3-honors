@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.15</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    table.bridge { width: 100%; border-collapse: collapse; min-width: 560px; }
+    table.bridge th { padding: 12px 14px; font-size: 14px; text-align: left; border: 1px solid #C7CFE6; }
+    table.bridge td { padding: 11px 14px; font-size: 15px; color: #1a2340; border: 1px solid #C7CFE6; vertical-align: top; line-height: 1.55; }
+    table.bridge td.rowlabel { background: #EEF1F8; font-size: 12px; color: #0E1C42; letter-spacing: 0.4px; width: 130px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4 &middot; Lesson 2.15</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (3 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Bridge: Madison Meets Emerson</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Federalist &amp; "Self-Reliance"</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.15 &middot; Literature &middot; Synthesis</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Bridge: Madison Meets Emerson</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Two Americans, fifty years apart, both preach self-government. One means a nation. The other means a soul.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have now read both halves of this module's first great conversation. In 1787 and 1788 Madison argued that a free people can govern itself only through carefully built institutions. In 1841 Emerson argued that a free person is governed rightly only from within, and that institutions are the very "joint-stock company" that buys up your liberty. Today you put the two side by side, find where they secretly agree, and locate the exact point where they collide. This lesson feeds directly into this week's graded synthesis quick-write.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> compare Madison's and Emerson's accounts of self-government point by point, citing both texts.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name at least one point where the two arguments genuinely support each other and one where they genuinely collide.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> hold both writers in one paragraph without flattening either, the core skill of the synthesis quick-write.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129309; PART 1 &middot; WHERE THEY SHAKE HANDS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Start with the agreement, because it is deeper than it looks. Both writers begin from the same unflattering fact about human beings: left unchecked, we do not naturally govern ourselves well. Madison puts it institutionally: "If men were angels, no government would be necessary" (Federalist 51). Emerson puts it personally: most people never claim their own minds at all, since "The virtue in most request is conformity" ("Self-Reliance"). Neither writer trusts the crowd. Madison fears the crowd organized into a majority faction, "united and actuated by some common impulse of passion" against the rights of others (Federalist 10). Emerson fears the crowd absorbed into your own head, the "world's opinion" you live after without noticing.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">There is a second handshake, easy to miss. Each writer's remedy quietly depends on the other's. Madison's republic needs citizens capable of independent judgment; representation only refines the public's views if somebody in the room actually thinks for himself. And Emerson's nonconformist needs something like Madison's republic: a government that controls itself is precisely the kind that leaves room for a dissenting soul to speak "what you think now in hard words" without being crushed for it. You can argue that the two visions are two halves of one American idea: the architecture of freedom and the inhabitant of it.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9878;&#65039; PART 2 &middot; THE TWO SELF-GOVERNMENTS, SIDE BY SIDE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">Now hold the two arguments up in parallel. Read down each column first, then across each row. The rows where the columns rhyme are your points of support; the rows where they clash are your points of collision.</p>
+
+        <!-- CORE VISUAL: two-column compare/contrast -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px; overflow-x: auto;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">SELF-GOVERNMENT, TWICE</div>
+            <table class="bridge">
+                <thead>
+                    <tr>
+                        <th style="background: #EEF1F8; width: 130px;"></th>
+                        <th style="background: #3B4E8C; color: #FFFFFF;">THE STATE GOVERNS ITSELF<br /><span style="font-size: 12px; color: #C7CFE6;">Madison, The Federalist (1787&ndash;88)</span></th>
+                        <th style="background: #C7922C; color: #FFFFFF;">THE SOUL GOVERNS ITSELF<br /><span style="font-size: 12px; color: #FDF3E3;">Emerson, "Self-Reliance" (1841)</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #FFFFFF;">
+                        <td class="rowlabel">THE DANGER</td>
+                        <td>Faction: passion and interest organized into power, above all a majority trampling a minority (Federalist 10).</td>
+                        <td>Conformity and foolish consistency: the crowd's opinion, and your own past, ruling your mind ("Self-Reliance").</td>
+                    </tr>
+                    <tr style="background: #F4F6FA;">
+                        <td class="rowlabel">HUMAN NATURE</td>
+                        <td>Flawed and fixed: "the latent causes of faction are thus sown in the nature of man" (Federalist 10). Design around it.</td>
+                        <td>Flawed in practice, divine in potential: "Trust thyself: every heart vibrates to that iron string" ("Self-Reliance"). Awaken it.</td>
+                    </tr>
+                    <tr style="background: #FFFFFF;">
+                        <td class="rowlabel">THE REMEDY</td>
+                        <td>Structure from outside: "Ambition must be made to counteract ambition" (Federalist 51). Checks, balances, the extended republic.</td>
+                        <td>Character from inside: "Nothing is at last sacred but the integrity of your own mind" ("Self-Reliance"). No structure can substitute.</td>
+                    </tr>
+                    <tr style="background: #F4F6FA;">
+                        <td class="rowlabel">SOCIETY IS</td>
+                        <td>A necessary achievement: government must "control the governed" and then "control itself" (Federalist 51), and justice is its end.</td>
+                        <td>A suspect bargain: "a joint-stock company" that trades bread for "the liberty and culture of the eater" ("Self-Reliance").</td>
+                    </tr>
+                    <tr style="background: #FFFFFF;">
+                        <td class="rowlabel">CONSISTENCY</td>
+                        <td>A virtue of institutions: stable laws, precedents, and "auxiliary precautions" make freedom durable (Federalist 51).</td>
+                        <td>A vice of individuals when foolish: "the hobgoblin of little minds"; speak today's thought even if it contradicts yesterday's ("Self-Reliance").</td>
+                    </tr>
+                    <tr style="background: #F4F6FA;">
+                        <td class="rowlabel">FREEDOM MEANS</td>
+                        <td>Rights secured against other people's passions, including the majority's.</td>
+                        <td>A mind unmortgaged to other people's opinions, including the majority's.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 0 0;">Read across the FREEDOM MEANS row and you can see why these two are so often taught together: they end in almost the same sentence. Read across THE REMEDY and SOCIETY IS rows and you can see why they can never fully merge: what Madison builds, Emerson audits.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128165; PART 3 &middot; THE COLLISION, STATED HONESTLY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Here is the hardest case, and no summary should soften it. Suppose an individual conscience, after honest reflection, concludes that a law is unjust. Emerson's counsel is clear: "Whoso would be a man must be a nonconformist," and nothing is "at last sacred but the integrity of your own mind." But Madison's whole system exists because he does not trust any single judge in his own cause; that is why power must check power and why no faction, even a faction of one sincere conscience, gets to override the process. To Madison, a republic of Emersons, each answering only to the integrity of his own mind, looks like the very instability he called the "mortal diseases" of popular government (Federalist 10). To Emerson, a citizenry of perfectly checked and balanced conformists looks like a company town: orderly, secure, and dead at the center.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 18px 0;">Which is right? This course is not going to tell you, because the American tradition itself has never settled it. The tension between the ordered republic and the individual conscience runs straight through the next voice you will read: Frederick Douglass, who faced laws that were procedurally valid and utterly unjust, and who had to decide what a self-governing soul owes a self-governing state that denies it everything. Hold the question open. Your synthesis quick-write asks you to take a position <em>inside</em> the tension, not to dissolve it.</p>
+
+        <!-- INTERACTIVE: student matches a Federalist move to its parallel move in Emerson -->
+        <div class="optima-widget ow-match" data-done="All four matched. Political language and personal language keep making the same moves, sometimes side by side, sometimes head to head.">
+            <div class="widget-kicker">&#129513; NOW YOU: MATCH THE FEDERALIST MOVE TO ITS PARALLEL IN EMERSON</div>
+            <div class="widget-question">Click a move from <strong>The Federalist</strong>, then click the move in <strong>"Self-Reliance"</strong> that runs parallel to it. Use what you read in both texts, not just today's table. Four pairs.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">THE FEDERALIST</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="angels">"If men were angels, no government would be necessary" (Federalist 51)</button>
+                        <button data-key="faction">A majority faction "united and actuated by some common impulse of passion" (Federalist 10)</button>
+                        <button data-key="ambition">"Ambition must be made to counteract ambition" (Federalist 51)</button>
+                        <button data-key="control">Government must "control the governed" and then "control itself" (Federalist 51)</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">"SELF-RELIANCE"</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="control">"Whoso would be a man must be a nonconformist" ("Self-Reliance")</button>
+                        <button data-key="ambition">"Nothing is at last sacred but the integrity of your own mind" ("Self-Reliance")</button>
+                        <button data-key="angels">"The virtue in most request is conformity" ("Self-Reliance")</button>
+                        <button data-key="faction">Living "after the world's opinion" without noticing ("Self-Reliance")</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Build your own two-column bridge in your Module 2 Organizer; it becomes your raw material for the graded quick-write. Left column Madison, right column Emerson. Add two rows in your own words, then beneath the table write two single sentences: one beginning "They support each other when&hellip;" and one beginning "They collide when&hellip;" Each sentence must include one short quoted phrase from each writer, cited by paper number (Federalist 10 or 51) or by essay title ("Self-Reliance"). Coaching: pick the rows where you felt genuine friction as you read, not the ones that look easiest to fill in; the quick-write rewards a real collision.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Comparison is where AI tools most often smooth over real disagreement: asked to compare two thinkers, they tend to produce a tidy "both value freedom" paragraph that neither writer would sign. An AI-generated comparison also cannot tell you which tension <em>you</em> find unresolved, and that judgment is the whole assignment. If you use AI at all here, use it to check a date or a quotation's wording, then build the bridge yourself.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.16, then the Synthesis Quick-Write</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">First learn the balanced sentence, the grammatical form this comparison was made for. Then write the graded paragraph that puts Madison and Emerson in conversation, and submit your Reading Journal Check.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Your Publius Returns op-ed will speak to fellow citizens about a live civic question. Every strong op-ed does what you practiced today: it lets the two best voices in the room finish their sentences before it answers them.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.15 &middot; The Bridge: Madison Meets Emerson</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and reread.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
