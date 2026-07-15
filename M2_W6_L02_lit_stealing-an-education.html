@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.22</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:6px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6 &middot; Lesson 2.22</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (2 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Stealing an Education</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Narrative, chapter 7</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.22 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Stealing an Education</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">No teacher, a watched house, and a law against the whole project. Chapter 7 is the story of how Douglass got an education anyway, and of what the getting cost him.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">"I was compelled to resort to various stratagems," Douglass writes of the years that follow the ban (Narrative, ch. 7). Today you trace that campaign, waged in stolen minutes across a childhood, and then follow the chapter where it leads next. Douglass refuses to tell the easy version of this story. Hold both halves as true at once, and read to find out why he insists on that.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the stratagems by which Douglass learned to read and write, and what each one required of him.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what The Columbian Orator gave Douglass: arguments against slavery, and words to utter his own thoughts.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> weigh the double edge of literacy in chapter 7: what it freed in Douglass and what it made him feel more sharply.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128101; PART 1 &middot; A TOOL FOR TRACKING A SECRET CAMPAIGN</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">A person with no teacher, no classroom, and a law against the whole project still has resources: the people around them, the minutes in a day, whatever texts pass through their hands, and their own persistence. As you read chapter 7, keep a running two-column tally, on scratch paper or in your head: every method Douglass finds to grab an education, and what each one costs or requires of him. A campaign fought in secret leaves exactly these two kinds of traces in the text.</p>
+
+        <!-- READING-TOOL VISUAL: generic tracking frame, no plot given away -->
+        <div style="background: #FFFFFF; border: 2px solid #3B4E8C; border-radius: 10px; padding: 16px 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 10px; text-align: center;">WHAT TO TRACK AS YOU READ</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 150px; background: #EEF1F8; border-radius: 8px; padding: 10px 14px; text-align: center;"><div style="font-size: 15px; color: #0e1c42;"><strong>Who</strong></div><div style="font-size: 13px; color: #1a2340;">helps him, knowingly or not</div></div>
+                <div style="flex: 1; min-width: 150px; background: #EEF1F8; border-radius: 8px; padding: 10px 14px; text-align: center;"><div style="font-size: 15px; color: #0e1c42;"><strong>When</strong></div><div style="font-size: 13px; color: #1a2340;">he finds or steals the time</div></div>
+                <div style="flex: 1; min-width: 150px; background: #EEF1F8; border-radius: 8px; padding: 10px 14px; text-align: center;"><div style="font-size: 15px; color: #0e1c42;"><strong>What</strong></div><div style="font-size: 13px; color: #1a2340;">he reads or copies</div></div>
+                <div style="flex: 1; min-width: 150px; background: #EEF1F8; border-radius: 8px; padding: 10px 14px; text-align: center;"><div style="font-size: 15px; color: #0e1c42;"><strong>Cost</strong></div><div style="font-size: 13px; color: #1a2340;">what the getting costs him</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin-bottom: 20px;">
+        <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> chapter 7 of the Narrative, start to finish. Public-domain text: <a href="https://www.gutenberg.org/files/23/23-h/23-h.htm" style="color: #3B4E8C;">Narrative of the Life of Frederick Douglass, an American Slave (1845), Project Gutenberg</a>. Cite by chapter: (Narrative, ch. 7).</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128101; PART 2 &middot; NOW THAT YOU HAVE READ: THE WATCHED HOUSE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Chapter 7 opens with the completion of Sophia Auld's transformation. The woman who began the alphabet now polices it; nothing angers her more than the sight of the boy with a newspaper. Douglass's judgment on this change is one of the book's most striking claims: "Slavery proved as injurious to her as it did to me" (Narrative, ch. 7). She learned, he writes, what her husband already knew, "that education and slavery were incompatible with each other" (Narrative, ch. 7). But her vigilance comes too late, and Douglass announces it with a proverb you have heard before. Mr. Auld had warned, using words this course paraphrases, that if you give an enslaved person an inch he will take the full measure. Douglass takes the enslaver's own saying and turns it into a verdict: "Mistress, in teaching me the alphabet, had given me the inch, and no precaution could prevent me from taking the ell" (Narrative, ch. 7). An ell is an old cloth measure, forty-five inches. The threat has become his plan.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">What follows is a campaign, waged in errands and spare minutes across seven years, on four fronts: people, time, arguments, and practice.</p>
+
+        <!-- INTERACTIVE: student orders the stratagems as Douglass presents them -->
+        <div class="optima-widget ow-order" data-done="That is the order Douglass presents them in: a person, then a minute, then a book of arguments, then a skill he keeps practicing.">
+            <div class="widget-kicker">&#129513; NOW YOU: ORDER THE STRATAGEMS</div>
+            <div class="widget-question">Click these four methods in the order Douglass introduces them in chapter 7.</div>
+            <div class="order-list">
+                <button data-order="3"><span class="seq" data-default="?">?</span> He gets hold of <em>The Columbian Orator</em> at about twelve and reads it at "every opportunity," finding in it an enslaved man's arguments against his master.</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span> He befriends the white schoolboys of the neighborhood, trading bread from the house for reading lessons: "As many of these as I could, I converted into teachers."</button>
+                <button data-order="4"><span class="seq" data-default="?">?</span> He learns to write from timber markings in the shipyard and by copying his master's son's used copy-books: "my pen and ink was a lump of chalk."</button>
+                <button data-order="2"><span class="seq" data-default="?">?</span> Sent on errands, he carries his book and reads on the way: "I found time to get a lesson before my return."</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div style="background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 16px 20px; margin: 16px 0 0 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px;">&#127963;&#65039; HISTORICAL CONTEXT &middot; THE COLUMBIAN ORATOR</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.65;">The Columbian Orator, compiled by Caleb Bingham and first published in 1797, was one of the most widely used schoolbooks in early America: a collection of speeches, dialogues, and poems for teaching elocution, the art of speaking well. The pieces Douglass names are a dialogue in which an enslaved man argues down his master's every justification, and speeches he attributes to the Irish orator Sheridan pleading the rights of the oppressed. "They gave tongue to interesting thoughts of my own soul, which had frequently flashed through my mind, and died away for want of utterance" (Narrative, ch. 7). The book that taught American schoolchildren to speak taught Douglass the same thing; when you meet Douglass the orator next week, remember where he did his first rehearsing.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 0 0;">Weigh what the Orator gave him, in his own accounting: from the dialogue, "the power of truth over the conscience of even a slaveholder," and from Sheridan, "a bold denunciation of slavery, and a powerful vindication of human rights" (Narrative, ch. 7). Notice also who stands beside him in this chapter: the schoolboys who take his question seriously when he asks, "Have not I as good a right to be free as you have?" (Narrative, ch. 7). The system he is fighting is enforced by adults and law; the cracks in it, in chapter 7, are children and a shared loaf of bread.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9878;&#65039; PART 3 &middot; THE DOUBLE EDGE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">If the chapter ended there, it would be a triumph story, and Douglass will not let it be one. Reading gives him the arguments, and the arguments give him no exit. "The more I read, the more I was led to abhor and detest my enslavers" (Narrative, ch. 7). The discontent Mr. Auld predicted arrives exactly on schedule, and Douglass says so: "I would at times feel that learning to read had been a curse rather than a blessing" (Narrative, ch. 7). Then he explains the feeling in two of the most quoted sentences in the book: "It had given me a view of my wretched condition, without the remedy. It opened my eyes to the horrible pit, but to no ladder upon which to get out" (Narrative, ch. 7).</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Read the paragraphs that follow soberly, because Douglass wrote them soberly. He records that he sometimes envied enslaved people who could not read, that he wished at times to stop thinking altogether, and that in his worst moments only the hope of eventually being free kept him going. He is thirteen or fourteen years old when he feels this. This is what the lesson's title means by a double edge: literacy freed his mind years before anything could free his body, and a freed mind in bondage feels the bondage completely. Knowledge here is not comfort; it is sight. Auld said reading would make him "discontented and unhappy," and it did. What Auld could not imagine is what Douglass would build out of the discontent. The remedy, the ladder out of the pit, begins next week.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Even in this darkness the chapter keeps moving. Douglass hears the word "abolition," cannot find anyone willing to explain it, works out its meaning from a city newspaper, and quietly resolves to run when the time is right. And he keeps learning to write, "after a long, tedious effort for years" (Narrative, ch. 7), because a man planning to escape may one day, as he notes, have occasion to write his own pass. Every skill in this chapter is aimed at freedom.</p>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Make a two-column entry titled "What reading gave / What reading cost." Put at least two items in each column, and anchor each column with one exact quotation from chapter 7, copied word for word and cited (Narrative, ch. 7). Keep the quotations short, a sentence or less, and check them letter by letter against the text. Then, beneath the columns, write two or three sentences answering honestly: was Mr. Auld right about what reading would do? Distinguish between his prediction coming true and his conclusion being right; those are not the same thing, and the gap between them is where your discussion post this week lives.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can list Douglass's methods of learning to read and write quickly and mostly accurately. Ask it about the "curse rather than a blessing" passage, though, and it will often smooth the pain into a tidy arc: he suffered, but it was worth it. Chapter 7 does not say that. Douglass leaves the anguish standing next to the achievement, unresolved, and the honesty is the argument. Keep it unresolved in your notes too.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.23: Words as Power</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">You have followed what Douglass did. Next you study how he writes about it: the metaphors, the balanced contrasts, and the cadence of a man who trained on a book of speeches.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Publius argued that liberty needs structure; Emerson, that it needs self-trust. Chapter 7 adds the missing term: liberty needs knowledge, and knowledge has a price that the knower pays first. When your Publius Returns op-ed argues about what free citizens owe one another, remember the boy trading bread for lessons in a country whose laws called the trade a crime.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.22 &middot; Stealing an Education</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.order-list button').forEach(function (b) { b.classList.remove('picked'); var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      w._orderSeq = 0;
+      return;
+    }
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq = (ow._orderSeq || 0) + 1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen = ow._orderSeq;
+      var seq = oBtn.querySelector('.seq'); if (seq) seq.textContent = ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok = true; all.forEach(function (b) { if (b.dataset.chosen !== b.dataset.order) ok = false; });
+        var fb = ow.querySelector('.widget-feedback');
+        fb.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the chapter.';
+        fb.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
