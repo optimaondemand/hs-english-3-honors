@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Lesson 2.11</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    .optima-widget { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:18px 22px; margin:18px 0; }
+    .widget-kicker { font-size:11px; color:#3B4E8C; margin-bottom:10px; letter-spacing:0.4px; }
+    .widget-question { font-size:17px; color:#0E1C42; margin-bottom:14px; line-height:1.55; }
+    .widget-options { display:flex; flex-direction:column; gap:8px; }
+    .widget-options button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .widget-options button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .widget-options button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:10px 0 0 0; display:none; border-radius:4px; }
+    .widget-feedback.show { display:block; }
+    .widget-reset { background:transparent; border:1px solid #C7922C; color:#C7922C; border-radius:6px; padding:6px 12px; font-size:12px; cursor:pointer; font-family:inherit; margin-top:10px; }
+    .widget-reset:hover { background:#FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">American Conscience</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week / Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3 &middot; Lesson 2.11</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (3 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Envy, Imitation, and Your Own Genius</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">"Self-Reliance" (finish the first half)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.11 &middot; Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Envy, Imitation, and Your Own Genius</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Near the start of his essay Emerson hands down two verdicts: envy is ignorance, and imitation is suicide. Today you weigh whether they are wisdom, recklessness, or both at once.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have read Emerson's call to self-trust and his case against conformity. Today you return to the sentence where the whole essay is compressed, read his definition of <strong>genius</strong>, and watch him argue by <strong>metaphor</strong>. Then this lesson does something the essay itself refuses to do: it lays out the strongest case for Emerson's individualism and the strongest case against it, side by side, and leaves the verdict to you. The week's discussion asks where you land.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what Emerson means by "envy is ignorance" and "imitation is suicide," and how each metaphor argues.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state Emerson's idea of genius as trust in your own thought.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> articulate both the appeal and the danger of Emerson's individualism, with a reason for each.</div>
+        </div>
+    </div>
+
+    <!-- READING TOOL: how a metaphor argues -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127793; PART 1 &middot; A TOOL FOR READING A METAPHOR-AS-ARGUMENT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">In the essay's second paragraph, Emerson delivers two of his harshest verdicts, and both arrive as metaphors rather than as reasoned claims. Before you reread that paragraph, learn how a metaphor like this argues, tried here on a sentence from outside the essay.</p>
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px 20px;">
+            <div style="font-size: 15px; color: #0e1c42; font-style: italic; text-align: center; margin-bottom: 14px;">"Time is money."</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">1. NAME THE TWO THINGS EQUATED</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Time, an hour passing. Money, a thing you can spend, save, or lose.</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">2. NOTE WHAT GETS BORROWED</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Money's urgency, scarcity, and loss get carried over onto time, which does not naturally have them.</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FDF3E3; border: 1px solid #E7C983; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 13px; color: #C7922C; margin-bottom: 6px;">3. STATE THE SMUGGLED CLAIM</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Wasting time is exactly like losing money, a claim about value the sentence never actually proves.</div></div>
+            </div>
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 14px 0 0 0;">A metaphor-as-argument compresses a claim into an image and makes you feel the stakes before you have weighed the evidence. That compression is its power, and its vulnerability: the image proves nothing, and a careful reader notices that too. Use these three steps when you reread Emerson's verdicts below.</p>
+    </div>
+
+    <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin-bottom: 20px;">
+        <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Read:</strong> reread the opening paragraphs of "Self-Reliance," on genius and the education sentence, this time watching for the two verdicts and the metaphor each one runs on. Public-domain text: <a href="https://en.wikisource.org/wiki/Essays:_First_Series/Self-Reliance" style="color: #3B4E8C;">Wikisource, <em>Essays: First Series</em> (1841)</a>.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127793; PART 2 &middot; NOW THAT YOU HAVE READ IT: THE EDUCATION SENTENCE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Emerson describes a threshold every person crosses, or fails to: <strong>"There is a time in every man's education when he arrives at the conviction that envy is ignorance; that imitation is suicide&hellip;"</strong> ("Self-Reliance"). Notice the framing: this is not advice but a <em>conviction you arrive at</em>, the way you arrive at a place. Education, for Emerson, is the road there.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Now take the two verdicts one at a time, running your three steps on each. <em>Envy is ignorance</em>: to envy someone is to be ignorant, Emerson claims, of your own powers and your own portion. The envious person knows the other's gifts in detail and their own not at all; if they saw what they carried, the envy would evaporate. <em>Imitation is suicide</em>: the harsher one. To copy another life is to kill something, and the metaphor names the victim: the self you were supposed to become. No one else dies; the crime is entirely internal, which is why no one prosecutes it and most people never notice it happening.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">As with the aphorism in Lesson 2.10, the compression here is the power and the vulnerability at once. Later in the first half Emerson gives the demand its positive form, two clean imperatives: <strong>"Insist on yourself; never imitate"</strong> ("Self-Reliance"). And what exactly are you insisting on? The essay's opening claim, in paraphrase: Emerson defines genius not as rare talent but as the trust that what is true for you in your own private heart is true for everyone. Your inmost thought, trusted and spoken, is the one thing no one else can supply.</p>
+
+        <!-- INTERACTIVE (after reading): what does the verdict actually claim -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#129513; WHAT DOES "IMITATION IS SUICIDE" ACTUALLY CLAIM?</div>
+            <div class="widget-question">Run your three steps on Emerson's metaphor. Which paraphrase actually follows from unpacking the image, rather than just softening it?</div>
+            <div class="widget-options">
+                <button data-response="Not quite. Emerson's image is stronger than a warning about a habit; a habit can be dropped painlessly. The metaphor claims something is actually destroyed, not merely delayed or discouraged.">Copying other people is a bad habit that will eventually catch up with you.</button>
+                <button data-response="This is the closer reading. The image borrows suicide's finality and self-inflicted nature: a copied life does not fail to become something, it actively ends the particular self that would have existed instead.">To imitate another life is to end, by your own choice, the self you would otherwise have become; no one else is harmed, but something real is destroyed.</button>
+                <button data-response="That is too literal. Emerson is not describing physical danger; the metaphor is about identity and self-formation, not bodily harm.">Emerson is warning that people who imitate others are at real risk of self-harm.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9878;&#65039; PART 3 &middot; TWO HONEST WAYS TO READ EMERSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 16px 0;">Readers have argued about this essay since 1841, and the argument is not between people who understand it and people who do not. Both readings below are careful readings. Weigh them.</p>
+
+        <!-- CORE VISUAL: the promise and the risk -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">EMERSON'S INDIVIDUALISM, READ TWO WAYS</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+                <div style="flex: 1; min-width: 240px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 13px; color: #C7922C; letter-spacing: 0.4px; margin-bottom: 6px;">READING 1 &middot; THE PROMISE</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Self-trust is the ground of all honest work. Every reformer, inventor, and artist at some point stood against the room, and "Self-Reliance" is the creed that steadied them. Without it you live secondhand: borrowed opinions, borrowed ambitions, a copied life. Emerson's extremity is medicine measured to the disease, because the pull of conformity is just that strong.</div>
+                </div>
+                <div style="flex: 1; min-width: 240px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 13px; color: #3B4E8C; letter-spacing: 0.4px; margin-bottom: 6px;">READING 2 &middot; THE RISK</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">What checks the self? People misread their own motives constantly; stubbornness, pride, and worse can all speak in the voice of conscience. Madison built an entire constitution on the premise that no one, including you, should be trusted unchecked. And if everyone insists on themselves, who concedes, who compromises, who keeps promises that stop being convenient?</div>
+                </div>
+            </div>
+            <div style="background: #0E1C42; border-radius: 8px; padding: 14px 18px; text-align: center;">
+                <div style="font-size: 12px; color: #55c8e8; letter-spacing: 0.5px; margin-bottom: 6px;">YOUR TASK</div>
+                <div style="font-size: 16px; color: #ffffff; line-height: 1.55;">Hold both readings. This week's discussion asks where you stand; next week the essay's second half will complicate whichever answer you give.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 0 0;">One more thing an honest reader notices: the two readings are not strangers to each other. The same trait, held conviction, looks like integrity in Reading 1 and stubbornness in Reading 2, and from inside a decision it can be genuinely hard to tell which one you are practicing. That difficulty is not a flaw in your reading. It is the live question of this module, and Douglass will raise its stakes in two weeks.</p>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-task">Make a two-column entry titled "The Promise / The Risk." In each column, state that reading of Emerson in one or two sentences of your own words, then test it against one real example: a person you know of, from history, the news, or your own life, whose story fits that column. Close with one line stating where you stand today, and hold it loosely; you are allowed to change your mind next week, and Emerson himself would insist on your right to do so. This entry is your raw material for this week's discussion post.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Ask an AI tool whether self-reliance is a virtue or a danger and it will typically return a balanced list of points on each side. The list can be a useful check on your coverage. What it cannot supply is a position: the discussion this week grades your stand, your reasoning, and your cited line, and those have to be yours. If you use AI at all here, use it after you have drafted, to see whether it names a counterargument you have not answered.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 2.12: Grammar &amp; Vocabulary</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The imperative mood: the grammar behind "Trust thyself" and "Insist on yourself; never imitate," plus this week's Word Study.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#128172;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Discussion: Self-Reliance: Virtue, Danger, or Both?</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Take your position, cite one line from the essay, and reply to a classmate who reads Emerson differently.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Keep both readings alive as this module moves on. In Week 5 you will meet Frederick Douglass, a man for whom trusting his own mind against everything his society insisted was not a philosophy of personal growth but the beginning of survival. Emerson's question will look different from there.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.11 &middot; Envy, Imitation, and Your Own Genius</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // RESET (all widget types)
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    // ow-select / ow-reflect: single choice + feedback text from data-response
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    // ow-match: click left, click right; matching data-key locks in
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    // ow-order: click items in sequence; when all picked, compare to data-order
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
