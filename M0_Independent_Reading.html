@@ -170,7 +170,7 @@
 (function () {
   var tabs = document.getElementById('genreTabs');
   if (!tabs) return;
-  var frame = tabs.closest('div');
+  var frame = tabs.parentElement;
   function show(g) {
     tabs.querySelectorAll('button').forEach(function (b) { b.classList.toggle('selected', b.dataset.g === g); });
     frame.querySelectorAll('.genre-panel').forEach(function (p) { p.classList.toggle('show', p.dataset.g === g); });
