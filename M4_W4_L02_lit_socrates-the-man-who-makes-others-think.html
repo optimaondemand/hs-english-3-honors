@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; Socrates, the Man Who Makes Others Think</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all 0.15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    details.je-reader summary::-webkit-details-marker { display:none; }
+    details.je-reader[open] summary { border-bottom:1px solid #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Self Imperiled</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (2 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Socrates, the Man Who Makes Others Think</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 15px; color: #0e1c42; font-style: italic;">Plato, Apology, excerpts (embedded) + Fahrenheit 451, Part Two</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Socrates, the Man Who Makes Others Think</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:12px 18px; margin-bottom:20px;">
+        <div style="font-size:11px; color:#3B4E8C; margin-bottom:6px;">&#128218; YOUR OWN COPY</div>
+        <div style="font-size:14px; color:#1a2340; line-height:1.55;">Students must obtain lawful access to the assigned literary work separately. Optima course materials are original instructional materials designed to support analysis, discussion, and assessment of the work. Copyrighted text, images, illustrations, panels, audio, or other protected materials are not reproduced in Canvas, videos, downloadable files, or teacher resources except where expressly licensed, in the public domain, or approved as a limited fair-use excerpt for instructional analysis.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">In 399 BCE, a jury in Athens can let a man go free on one condition: that he stop asking people questions. He refuses, in public, knowing the refusal may cost him his life.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Step outside the novel for one lesson, into a real trial that happened almost twenty-four centuries before Bradbury wrote a word. Socrates stands before the citizens of Athens, charged with corrupting the young, and instead of pleading for his life he defends the practice of thinking itself. The reading is his own words, translated from the Greek and long in the public domain; the lesson then sets him beside two men from this novel: Faber, who withdrew from the fight, and Beatty, the best-read man in the story, who burns anyway. Ask, at the end: who would Socrates be in this novel, and who in it would be the one condemning him?</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state the trial's central idea: the examined life, and obedience to conscience over the crowd's demand.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain Socrates's purpose in this speech: not acquittal, but the defense of philosophy itself.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> set Socrates beside Faber and Beatty and argue who he would be, and who would condemn him, in this novel's world.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN</div>
+            <div class="widget-question">If the price of keeping your convictions in public were real danger, and the price of staying safe were simply agreeing to stop saying what you think, which price would frighten you more?</div>
+            <div class="widget-options">
+                <button data-response="Socrates names this fear directly and rejects it as the real danger: giving up the examined life while the body goes on living. Watch for the moment he says so.">Losing my convictions, even if my life stayed safe</button>
+                <button data-response="That is the ordinary, human answer, and Socrates knows the jury feels it too. His speech has to argue against exactly this instinct, not around it.">Losing my life, even if my convictions survived somewhere</button>
+                <button data-response="Socrates would call this the most honest starting point of all, since it names the real stakes without pretending the choice is easy. Read on for how he argues past it.">Both, honestly, and I am not sure which is worse</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A speech as a speech: audience, purpose, the moves it makes</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">In 399 BCE, Socrates, a seventy-year-old philosopher who spent his days in the streets and marketplaces of Athens questioning anyone willing to talk with him, was brought to trial on charges of corrupting the young and failing to honor the city's gods. Plato, his student, recorded the defense speech as the <em>Apology</em> (from the Greek <em>apologia</em>, meaning a formal defense, not an admission of fault). Read it the way you would read any speech: who is the <strong>audience</strong> (roughly five hundred Athenian citizens, sitting as both jury and, in effect, the public he has spent his life questioning), what is the <strong>purpose</strong> (not, as the speech shows, to win an acquittal at any cost, but to defend the value of the examined life itself, even at the cost of his own), and what <strong>moves</strong> does the speaker make to get there (a comparison to a pest that will not stop biting, a refusal to bargain, a flat rejection of the one deal that would save him). The translation here is Benjamin Jowett's, first published in 1892 and long in the public domain.</p>
+
+        <!-- CORE VISUAL: the shape of the speech -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">THE SPEECH'S THREE MOVES</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 15px; color: #0e1c42;"><strong>Refusing to bargain</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 6px;">Offered his freedom if he stops philosophizing, Socrates says plainly that he will obey his own conviction of what is right rather than the court, and that he would rather die many times than change his ways.</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FDF3E3; border-top: 4px solid #C7922C; border: 1px solid #E7C983; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 15px; color: #0e1c42;"><strong>The gadfly figure</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 6px;">He compares himself to a stinging fly sent to keep a large, sluggish horse (the city) awake and alert, and warns Athens it will sleep on undisturbed if it kills its own gadfly.</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 15px; color: #0e1c42;"><strong>The unexamined life</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 6px;">Asked why he cannot simply hold his tongue elsewhere, he answers that daily examination of himself and others is the greatest good a person can pursue, and that a life without it is not worth living.</div></div>
+            </div>
+            <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 14px;">Notice what is missing: an apology in the modern sense. Socrates never says he is sorry, and never asks to be let off on the court's terms.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 2 &middot; READ THE SPEECH ITSELF, IN THREE EXCERPTS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Each excerpt below is quoted in full, exactly as Jowett translated it, from Plato's <em>Apology</em>. Read all three before you go on to the widget.</p>
+
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+            <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: Plato, <em>Apology</em>, excerpt A1 (Jowett translation, public domain)</strong> <span style="font-size:13px; color:#3B4E8C;">Socrates answers the offer to release him if he stops philosophizing</span></summary>
+            <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+                <p style="margin:0;">Strange, indeed, would be my conduct, O men of Athens, if I who, when I was ordered by the generals whom you chose to command me at Potidaea and Amphipolis and Delium, remained where they placed me, like any other man, facing death&mdash;if now, when, as I conceive and imagine, God orders me to fulfil the philosopher&rsquo;s mission of searching into myself and other men, I were to desert my post through fear of death, or any other fear; that would indeed be strange, and I might justly be arraigned in court for denying the existence of the gods, if I disobeyed the oracle because I was afraid of death, fancying that I was wise when I was not wise. For the fear of death is indeed the pretence of wisdom, and not real wisdom, being a pretence of knowing the unknown; and no one knows whether death, which men in their fear apprehend to be the greatest evil, may not be the greatest good. Is not this ignorance of a disgraceful sort, the ignorance which is the conceit that a man knows what he does not know? And in this respect only I believe myself to differ from men in general, and may perhaps claim to be wiser than they are:&mdash;that whereas I know but little of the world below, I do not suppose that I know: but I do know that injustice and disobedience to a better, whether God or man, is evil and dishonourable, and I will never fear or avoid a possible good rather than a certain evil. And therefore if you let me go now, and are not convinced by Anytus, who said that since I had been prosecuted I must be put to death; (or if not that I ought never to have been prosecuted at all); and that if I escape now, your sons will all be utterly ruined by listening to my words&mdash;if you say to me, Socrates, this time we will not mind Anytus, and you shall be let off, but upon one condition, that you are not to enquire and speculate in this way any more, and that if you are caught doing so again you shall die;&mdash;if this was the condition on which you let me go, I should reply: Men of Athens, I honour and love you; but I shall obey God rather than you, and while I have life and strength I shall never cease from the practice and teaching of philosophy, exhorting any one whom I meet and saying to him after my manner: You, my friend,&mdash;a citizen of the great and mighty and wise city of Athens,&mdash;are you not ashamed of heaping up the greatest amount of money and honour and reputation, and caring so little about wisdom and truth and the greatest improvement of the soul, which you never regard or heed at all? And if the person with whom I am arguing, says: Yes, but I do care; then I do not leave him or let him go at once; but I proceed to interrogate and examine and cross-examine him, and if I think that he has no virtue in him, but only says that he has, I reproach him with undervaluing the greater, and overvaluing the less. And I shall repeat the same words to every one whom I meet, young and old, citizen and alien, but especially to the citizens, inasmuch as they are my brethren. For know that this is the command of God; and I believe that no greater good has ever happened in the state than my service to the God. For I do nothing but go about persuading you all, old and young alike, not to take thought for your persons or your properties, but first and chiefly to care about the greatest improvement of the soul. I tell you that virtue is not given by money, but that from virtue comes money and every other good of man, public as well as private. This is my teaching, and if this is the doctrine which corrupts the youth, I am a mischievous person. But if any one says that this is not my teaching, he is speaking an untruth. Wherefore, O men of Athens, I say to you, do as Anytus bids or not as Anytus bids, and either acquit me or not; but whichever you do, understand that I shall never alter my ways, not even if I have to die many times.</p>
+            </div>
+        </details>
+
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+            <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: Plato, <em>Apology</em>, excerpt A2 (Jowett translation, public domain)</strong> <span style="font-size:13px; color:#3B4E8C;">the gadfly</span></summary>
+            <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+                <p style="margin:0;">And now, Athenians, I am not going to argue for my own sake, as you may think, but for yours, that you may not sin against the God by condemning me, who am his gift to you. For if you kill me you will not easily find a successor to me, who, if I may use such a ludicrous figure of speech, am a sort of gadfly, given to the state by God; and the state is a great and noble steed who is tardy in his motions owing to his very size, and requires to be stirred into life. I am that gadfly which God has attached to the state, and all day long and in all places am always fastening upon you, arousing and persuading and reproaching you. You will not easily find another like me, and therefore I would advise you to spare me. I dare say that you may feel out of temper (like a person who is suddenly awakened from sleep), and you think that you might easily strike me dead as Anytus advises, and then you would sleep on for the remainder of your lives, unless God in his care of you sent you another gadfly. When I say that I am given to you by God, the proof of my mission is this:&mdash;if I had been like other men, I should not have neglected all my own concerns or patiently seen the neglect of them during all these years, and have been doing yours, coming to you individually like a father or elder brother, exhorting you to regard virtue; such conduct, I say, would be unlike human nature. If I had gained anything, or if my exhortations had been paid, there would have been some sense in my doing so; but now, as you will perceive, not even the impudence of my accusers dares to say that I have ever exacted or sought pay of any one; of that they have no witness. And I have a sufficient witness to the truth of what I say&mdash;my poverty.</p>
+            </div>
+        </details>
+
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+            <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: Plato, <em>Apology</em>, excerpt B (Jowett translation, public domain)</strong> <span style="font-size:13px; color:#3B4E8C;">the unexamined life; from the penalty speech</span></summary>
+            <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+                <p style="margin:0;">Some one will say: Yes, Socrates, but cannot you hold your tongue, and then you may go into a foreign city, and no one will interfere with you? Now I have great difficulty in making you understand my answer to this. For if I tell you that to do as you say would be a disobedience to the God, and therefore that I cannot hold my tongue, you will not believe that I am serious; and if I say again that daily to discourse about virtue, and of those other things about which you hear me examining myself and others, is the greatest good of man, and that the unexamined life is not worth living, you are still less likely to believe me. Yet I say what is true, although a thing of which it is hard for me to persuade you. Also, I have never been accustomed to think that I deserve to suffer any harm. Had I money I might have estimated the offence at what I was able to pay, and not have been much the worse. But I have none, and therefore I must ask you to proportion the fine to my means. Well, perhaps I could afford a mina, and therefore I propose that penalty: Plato, Crito, Critobulus, and Apollodorus, my friends here, bid me say thirty min&aelig;, and they will be the sureties. Let thirty min&aelig; be the penalty; for which sum they will be ample security to you.</p>
+            </div>
+        </details>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 3 &middot; NOW YOU: MATCH THE MOVE TO ITS PURPOSE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Four rhetorical choices from the excerpts above, quoted exactly as Socrates makes them. Match each to the purpose it serves in his defense.</p>
+        <div class="optima-widget ow-match" data-done="All four matched. Notice that every one of these choices serves the same purpose: not to win acquittal, but to make philosophy itself impossible to condemn without the jury condemning something in themselves too.">
+            <div class="widget-kicker">&#129513; CLICK A CHOICE, THEN ITS PURPOSE</div>
+            <div class="widget-question">Four pairs, quoted from the excerpts above.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:240px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">THE RHETORICAL CHOICE</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="refuse">&ldquo;I shall obey God rather than you, and while I have life and strength I shall never cease from the practice and teaching of philosophy&rdquo;</button>
+                        <button data-key="gadfly">&ldquo;I am that gadfly which God has attached to the state, and all day long and in all places am always fastening upon you, arousing and persuading and reproaching you&rdquo;</button>
+                        <button data-key="soldier">&ldquo;when I was ordered by the generals whom you chose to command me&hellip; remained where they placed me, like any other man, facing death&rdquo;</button>
+                        <button data-key="examined">&ldquo;the unexamined life is not worth living&rdquo;</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:240px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">ITS PURPOSE</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="soldier">The soldier comparison: he already faced death on the state's own orders, so he asks why fear of death should now make him desert a post God assigned him.</button>
+                        <button data-key="examined">States the speech's central claim outright: a life that never questions itself is not worth the living of it, whatever comfort it offers.</button>
+                        <button data-key="refuse">Refusing to bargain: rejects the one deal that would save his life, so the jury cannot claim they only punished a man who chose death over silence by accident.</button>
+                        <button data-key="gadfly">The gadfly figure: reframes his own annoying, uncomfortable questioning as a public service the city needs, not a crime against it.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; SOCRATES BESIDE FABER AND BEATTY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">You have already met two well-read men in this novel. Faber, the retired English professor, told Montag: "It's not books you need, it's some of the things that once were in books." (<em>Fahrenheit 451</em>, Part Two), and then spent years hiding rather than acting on that conviction in public, until Montag's visit forces his hand. Beatty, the fire captain, has clearly read everything Montag has burned and more, and uses that reading as a weapon rather than a practice. Socrates had a choice that looks, on its surface, like Faber's: go quiet, leave the city, keep thinking privately and stay safe. He refuses it, in public, at the cost of his life. Beatty made the opposite choice from Socrates for a different reason: he kept his reading but abandoned any conviction it should be shared, and turned his knowledge into a way of controlling other people instead of examining himself. As you read Part Two this week, hold these three men in view together, because Week 4's later lessons return to Beatty directly.</p>
+        <div class="rj-badge">
+            <div class="rj-icon">&#128211;</div>
+            <div>
+                <div class="rj-label">READING RESPONSE</div>
+                <div class="rj-task">Under Week 4 notes, answer in your own words: who would Socrates be if he lived inside <em>Fahrenheit 451</em>, and who in the novel would be the one condemning him? Defend your answer with one detail from Faber's or Beatty's conduct in your own copy, cited by Part, and one phrase from the Apology excerpts above, quoted exactly. Then write one sentence on which of the three men, Socrates, Faber, or Beatty, you think comes closest to answering this module's question about what it takes to keep the self alive.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Claude can give you background on Socrates's trial and on Plato's relationship to him; check any historical claim against a second source before you rely on it. It cannot decide who Socrates would be inside this novel. That comparison is yours to build from the excerpts above and from what you find in your own copy.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>The Quotation Duel and the Alarm</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Back at the firehouse, you meet a very different use of a well-stocked memory: quotation as a weapon rather than an argument.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Socrates had every reason to stop talking and did not. Beatty, met next, is a man with just as much reading behind him, who chose the opposite answer to the same test.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Socrates, the Man Who Makes Others Think</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

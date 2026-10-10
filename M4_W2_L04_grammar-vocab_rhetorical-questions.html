@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; Rhetorical Questions &amp; the Rush of Clauses</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all 0.15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    table.wordstudy { width: 100%; border-collapse: collapse; }
+    table.wordstudy th { background: #0E1C42; color: #fff; font-size: 13px; text-align: left; padding: 10px 12px; border: 1px solid #334; }
+    table.wordstudy td { font-size: 15px; color: #1a2340; padding: 10px 12px; border: 1px solid #D0D9E8; vertical-align: top; line-height: 1.55; }
+    table.wordstudy tr:nth-child(even) td { background: #F4F6FA; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Self Imperiled</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">Grammar &amp; Vocabulary</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Rhetorical Questions &amp; the Rush of Clauses</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Fahrenheit 451, Part One (sentences, own copy)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Grammar &amp; Vocabulary</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Rhetorical Questions &amp; the Rush of Clauses</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; one combined grammar and vocabulary session</div>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:12px 18px; margin-bottom:20px;">
+        <div style="font-size:11px; color:#3B4E8C; margin-bottom:6px;">&#128218; YOUR OWN COPY</div>
+        <div style="font-size:14px; color:#1a2340; line-height:1.55;">Students must obtain lawful access to the assigned literary work separately. Optima course materials are original instructional materials designed to support analysis, discussion, and assessment of the work. Copyrighted text, images, illustrations, panels, audio, or other protected materials are not reproduced in Canvas, videos, downloadable files, or teacher resources except where expressly licensed, in the public domain, or approved as a limited fair-use excerpt for instructional analysis.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Beatty never stops to let Montag answer. His questions arrive so fast, and in such long strings, that agreeing is the only response left standing.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A rhetorical question is a question asked to make a point, not to get an answer; and a rush of clauses is a sentence that piles reason on reason, fast, so the listener never gets a moment to object to any single one. Beatty's speeches in Part One use both, and together they build a grammar of overwhelming: a way of talking that feels like argument but is built to prevent one. Today you learn to build and to hear both moves, using model sentences written for this lesson and one real example from Douglass, whom you already met in Module 2. Then Word Study: two words from Part One, <em>noncombustible</em> and <em>proboscis</em>, found in Part One.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify a rhetorical question and explain what answer it is built to force.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> build a short rush of clauses that overwhelms on purpose, and know why it works.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use <em>noncombustible</em> and <em>proboscis</em> precisely in sentences of my own.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9999;&#65039; PART 1 &middot; TWO TOOLS THAT FEEL LIKE ARGUMENT BUT AREN'T QUITE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">A <strong>rhetorical question</strong> is a question the speaker does not actually want answered, because the answer is built into how the question is asked. "Isn't it obvious?" is not a request for information; it is a way of saying "agree with me" while sounding like an invitation. The trap is that a real question and a rhetorical one look identical on the page. The test is not the punctuation. It is whether a genuine, different answer is actually welcome, or whether disagreeing would sound absurd on its face.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">A <strong>rush of clauses</strong> stacks several clauses, independent or subordinate, one after another with little pause, so that the listener is handed reason after reason before there is time to question the first one. Used honestly, it can build real momentum toward a true conclusion. Used the way Beatty uses it, it works less like a ladder of logic and more like a wave: by the time it breaks, the listener has been carried somewhere without ever choosing to walk there.</p>
+
+        <!-- CORE VISUAL: rhetorical question and rush of clauses, with model sentences (not from the novel) -->
+        <div style="background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.6px; margin-bottom: 4px;">A GRAMMAR OF OVERWHELMING: TWO MOVES</div>
+            <div style="font-size: 12px; color: #3B4E8C; font-style: italic; margin-bottom: 12px;">The example sentences below were written for this lesson, in the manner of a talkative captain making his case. They are models of the shapes, not lines from the novel; Beatty's own sentences are in your copy, where the response task sends you.</div>
+
+            <div style="background: #EEF1F8; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px;">
+                <div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">A RHETORICAL QUESTION &middot; the answer is built in</div>
+                <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">"Now, who in his right mind would rather sit alone with a sad book than laugh with his neighbors at a good show?"</div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 6px;">The question sounds open, but "who in his right mind" has already answered it. Disagreeing would mean admitting you might not be in your right mind.</div>
+            </div>
+
+            <div style="background: #EEF1F8; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px;">
+                <div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">A GENUINE QUESTION &middot; a real answer is welcome</div>
+                <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">"What do you make of the argument, and where exactly do you think it goes wrong?"</div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 6px;">No answer is smuggled into the phrasing. A disagreement here would not sound foolish before it was even spoken.</div>
+            </div>
+
+            <div style="background: #FDF3E3; border-radius: 8px; padding: 14px 18px;">
+                <div style="font-size: 13px; color: #C7922C; margin-bottom: 6px;">A RUSH OF CLAUSES &middot; reason stacked on reason, fast</div>
+                <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">"Give a man too many books and he starts asking questions, and give him questions and he starts doubting his neighbors, and give him doubt and pretty soon nobody in the whole block can agree on a single thing worth agreeing on."</div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 6px;">Four clauses, chained by "and," each one presented as following automatically from the last. Slow the sentence down and the chain has real gaps; at full speed, it feels airtight.</div>
+            </div>
+            <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 12px;">Two tests before you trust either move. <strong>The answer test</strong> for a question: could a genuinely different answer be spoken aloud without sounding ridiculous? If not, it's rhetorical. <strong>The slow-down test</strong> for a clause chain: read it one clause at a time and ask, at each joint, does this really follow, or does it just arrive fast enough that it feels like it does?</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 12px 0;">Now sort three examples using both tests. The sentences below were written for this exercise in Beatty's manner; they are not his lines.</p>
+
+        <div class="optima-widget ow-match" data-done="All three matched. Now find the real ones: Beatty's visit is full of both moves, and your response task sends you to your own copy to catch them.">
+            <div class="widget-kicker">&#129513; MATCH EACH SENTENCE TO ITS MOVE</div>
+            <div class="widget-question">Click a sentence, then click the move it makes. Run the answer test and the slow-down test first.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">THE SENTENCE (a model, not from the novel)</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="rhet">"Do you really think a man reading alone in a locked room is happier than a man laughing with the whole block?"</button>
+                        <button data-key="rush">"Cut the philosophy course, and the students relax, and the parents stop complaining, and the school looks better on paper, and everyone calls it progress."</button>
+                        <button data-key="genuine">"What would change for you, specifically, if you had an hour alone with a book instead of an evening with the walls?"</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">ITS MOVE</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="rush">a rush of clauses &middot; four steps chained by "and," each sold as automatic, arriving too fast to check any single link</button>
+                        <button data-key="genuine">a genuine question &middot; a real, different answer could be spoken here without sounding absurd</button>
+                        <button data-key="rhet">a rhetorical question &middot; "do you really think" already tells you which answer is acceptable</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div style="background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 16px 20px; margin: 16px 0 0 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px;">A REAL EXAMPLE, FROM DOUGLASS</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.65;">Not every rhetorical question is a tool of overwhelming; the same move can expose an injustice instead of hiding one. When two schoolboys try to justify their own good fortune against Douglass's enslavement, he presses them with a single, plain rhetorical question: <em>"Have not I as good a right to be free as you have?"</em> (<em>Narrative</em>, ch. 7). No real answer is invited; the question is built so that only one honest answer exists. The difference between this and Beatty's questions is not the grammar, which is nearly identical. It is what each speaker is asking you to stop examining: Douglass asks you to stop excusing an injustice; Beatty asks you to stop examining anything at all.</div>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">In your own copy, find one rhetorical question and one rush of clauses in Beatty's visit from this week's reading. Write each one out, cited (Part One). Under each, run the matching test in writing: for the question, name the answer it is built to force and explain how you can tell; for the clause chain, break it into its separate clauses and mark the joint where the reasoning is weakest. Then write a rush of clauses of your own, at least three links long, arguing for something you actually believe, and one honest rhetorical question you could ask a friend, labeled as such.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128213; PART 2 &middot; WORD STUDY (from Part One)</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 0 0 12px 0;">Because the novel is under copyright, the "In the text" column names the scene where each word appears rather than quoting it. Find the sentence in your own copy and write it out.</p>
+        <table class="wordstudy">
+            <thead><tr><th style="width: 150px;">Word</th><th>In the text</th><th>What it means</th><th>Word origin</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>noncombustible</strong><br /><span style="font-size: 12px; color: #3B4E8C;">adjective</span></td>
+                    <td>Part One: the word Beatty reaches for when he explains, during his visit, why firemen no longer put fires out and instead set them, because homes have not been built to burn in a very long time. Find the sentence and notice what job Beatty says firemen used to do, before this one.</td>
+                    <td>Not able to be set on fire; fireproof. Applied to the houses in this world, it is the fact that makes the old fireman's job disappear, and the new one, burning books instead of saving buildings, possible.</td>
+                    <td>From Latin <em>non</em> ("not") plus <em>combustibilis</em>, from <em>combustus</em>, the past participle of <em>comburere</em> ("to burn up, consume by fire"), itself built from <em>com-</em> (intensifying) and an old root for burning.</td>
+                </tr>
+                <tr>
+                    <td><strong>proboscis</strong><br /><span style="font-size: 12px; color: #3B4E8C;">noun</span></td>
+                    <td>Part One: the word used for the part of the Mechanical Hound that Beatty describes in clinical detail while he explains, during his visit, how the machine is set to track a particular person's chemistry. Find it and notice how the description turns the Hound's face into a piece of equipment.</td>
+                    <td>A long, flexible snout or nose, especially one used to probe or search, as in an elephant's trunk or an insect's feeding tube. Used for the Hound, it strips away any animal warmth and leaves only a sensor with a name borrowed from biology.</td>
+                    <td>From Greek <em>proboskis</em>, "means of getting food," from <em>pro-</em> ("before, forward") and <em>boskein</em> ("to feed, to graze"): literally, the part that reaches forward to feed.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">WORD STUDY &middot; TRY IT</div>
+            <div class="rj-task">Copy the sentence from your own copy for each word. Then write one new sentence of your own for each, on a subject unrelated to the novel, keeping the meaning exact. For <em>noncombustible</em>, describe an actual material or product, not a feeling. For <em>proboscis</em>, use it for an animal or insect where the word is scientifically accurate, then try it once more as a deliberately clinical description of something that is not an animal at all, the way Beatty uses it for the Hound.</div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Rhetorical Questions &amp; the Rush of Clauses</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button').forEach(function (b) { b.classList.remove('selected'); b.classList.remove('matched'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w._matchPick = null;
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

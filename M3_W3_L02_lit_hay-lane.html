@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; Hay Lane: Staging a First Meeting</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-direction: column; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 10px 14px; font-size: 15px; color: #0E1C42; cursor: pointer; transition: all .15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0 0 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    details.je-reader summary::-webkit-details-marker { display:none; }
+    details.je-reader[open] summary { border-bottom:1px solid #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (2 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Hay Lane: Staging a First Meeting</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Jane Eyre, ch. 12 (reread) and ch. 13</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Hay Lane: Staging a First Meeting</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Jane expects a legend and gets a dog. A stranger falls from his horse, and it is Jane who ends up doing the rescuing.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In chapter 12, which you already read in the Thornfield arrival lesson, Jane sets out for Hay and meets a stranger on the road. Today you go back into that scene to see how Bront&euml; stages a first meeting: what the reader is led to expect, and what actually happens instead. Then read chapter 13, the first evening the stranger and Jane spend in the same room by name.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name what the Hay Lane scene sets the reader up to expect and what it delivers instead, with citations for both.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> put the beats of the Hay Lane encounter in the order chapter 12 gives them.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> point to one moment in chapter 13 where Rochester tests or provokes Jane, and one where she answers him without flinching.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a story, film, or show that set you up to expect one thing and then gave you something else. Did the surprise work, or did it feel like a trick?</div>
+            <div class="widget-options">
+                <button data-response="Jane fills the quiet road with a legend before the rider even appears, remembering Bessie's stories of a Gytrash. Watch how deliberately the text builds that expectation before undoing it.">The story planted a specific expectation, then undercut it</button>
+                <button data-response="Bronte swaps the usual roles almost immediately: the traveler needs help, not the young woman alone on a dark road. Watch who ends up doing what in this scene.">A character did something I did not expect for their role</button>
+                <button data-response="Jane is calm and useful the moment the fantastical explanation (a Gytrash) is replaced by an ordinary one (a fallen rider). Watch how quickly her fear turns into competence.">The tone shifted faster than I expected, from eerie to ordinary</button>
+                <button data-response="The chapter never even gives Jane the stranger's name until later; watch how much is withheld and for how long.">Withheld information made the scene feel staged on purpose</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Reading how a scene is staged</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">A first meeting between two major characters is never an accident of plot. A novelist chooses what the reader expects going in, then decides whether to satisfy that expectation or reverse it, and the choice tells you something about the relationship to come. Chapter 12 builds a specific expectation, a supernatural "Gytrash," and then swaps in the ordinary and the unglamorous: an irritable man, a common dog, a sprained ankle. It also reverses a second expectation: in a period when a lone woman was the one who might need rescuing on a dark road, it is Jane who offers help, and Jane whose hand the fallen rider needs.</p>
+
+        <!-- CORE VISUAL: expectation vs. reversal -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">WHAT THE SCENE SETS UP, WHAT IT DELIVERS (CHAPTER 12)</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 12px; color: #C7922C; margin-bottom: 6px;">WHAT THE READER IS LED TO EXPECT</div>
+                    <div style="font-size: 15px; color: #0e1c42; line-height: 1.55;">A "Gytrash," a North-of-England spirit Bessie once described, which "haunted solitary ways" in the shape of a horse, mule, or dog.</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 12px; color: #3B4E8C; margin-bottom: 6px;">WHAT ACTUALLY HAPPENS</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">"No Gytrash was this,&mdash;only a traveller taking the short cut to Millcote," who slips on ice and needs Jane's help to catch his horse.</div>
+                </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px;">
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 12px; color: #C7922C; margin-bottom: 6px;">THE FAMILIAR STORY PATTERN</div>
+                    <div style="font-size: 15px; color: #0e1c42; line-height: 1.55;">A lone young woman on a dark road is usually the one a story puts at risk, waiting to be helped.</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 12px; color: #3B4E8C; margin-bottom: 6px;">THE REVERSAL HERE</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Jane says, "I cannot think of leaving you, sir," and it is she who catches the bridle and hands him his whip.</div>
+                </div>
+            </div>
+            <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 14px;">A staged reversal tells you the terms of a relationship before either character has said much at all.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 2 &middot; READ CHAPTER 13</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;"><strong>Watch for:</strong> the first time Rochester questions Jane directly about her past and her opinions, and where in the conversation Jane answers plainly instead of deferring to him. Notice also how much of what Mrs. Fairfax told you about the family in chapter 13 remains unexplained.</p>
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter XIII</strong> <span style="font-size:13px; color:#3B4E8C;">(about 4,000 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">Mr. Rochester, it seems, by the surgeon’s orders, went to bed early that night; nor did he rise soon next morning. When he did come down, it was to attend to business: his agent and some of his tenants were arrived, and waiting to speak with him.</p>
+    <p style="margin:0 0 14px 0;">Adèle and I had now to vacate the library: it would be in daily requisition as a reception-room for callers. A fire was lit in an apartment upstairs, and there I carried our books, and arranged it for the future schoolroom. I discerned in the course of the morning that Thornfield Hall was a changed place: no longer silent as a church, it echoed every hour or two to a knock at the door, or a clang of the bell; steps, too, often traversed the hall, and new voices spoke in different keys below; a rill from the outer world was flowing through it; it had a master: for my part, I liked it better.</p>
+    <p style="margin:0 0 14px 0;">Adèle was not easy to teach that day; she could not apply: she kept running to the door and looking over the banisters to see if she could get a glimpse of Mr. Rochester; then she coined pretexts to go downstairs, in order, as I shrewdly suspected, to visit the library, where I knew she was not wanted; then, when I got a little angry, and made her sit still, she continued to talk incessantly of her “ami, Monsieur Edouard Fairfax <em>de</em> Rochester,” as she dubbed him (I had not before heard his prenomens), and to conjecture what presents he had brought her: for it appears he had intimated the night before, that when his luggage came from Millcote, there would be found amongst it a little box in whose contents she had an interest.</p>
+    <p style="margin:0 0 14px 0;">“Et cela doit signifier,” said she, “qu’il y aura là dedans un cadeau pour moi, et peut-être pour vous aussi, mademoiselle. Monsieur a parlé de vous: il m’a demandé le nom de ma gouvernante, et si elle n’était pas une petite personne, assez mince et un peu pâle. J’ai dit qu’oui: car c’est vrai, n’est-ce pas, mademoiselle?”</p>
+    <p style="margin:0 0 14px 0;">I and my pupil dined as usual in Mrs. Fairfax’s parlour; the afternoon was wild and snowy, and we passed it in the schoolroom. At dark I allowed Adèle to put away books and work, and to run downstairs; for, from the comparative silence below, and from the cessation of appeals to the door-bell, I conjectured that Mr. Rochester was now at liberty. Left alone, I walked to the window; but nothing was to be seen thence: twilight and snowflakes together thickened the air, and hid the very shrubs on the lawn. I let down the curtain and went back to the fireside.</p>
+    <p style="margin:0 0 14px 0;">In the clear embers I was tracing a view, not unlike a picture I remembered to have seen of the castle of Heidelberg, on the Rhine, when Mrs. Fairfax came in, breaking up by her entrance the fiery mosaic I had been piercing together, and scattering too some heavy unwelcome thoughts that were beginning to throng on my solitude.</p>
+    <p style="margin:0 0 14px 0;">“Mr. Rochester would be glad if you and your pupil would take tea with him in the drawing-room this evening,” said she: “he has been so much engaged all day that he could not ask to see you before.”</p>
+    <p style="margin:0 0 14px 0;">“When is his tea-time?” I inquired.</p>
+    <p style="margin:0 0 14px 0;">“Oh, at six o’clock: he keeps early hours in the country. You had better change your frock now; I will go with you and fasten it. Here is a candle.”</p>
+    <p style="margin:0 0 14px 0;">“Is it necessary to change my frock?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, you had better: I always dress for the evening when Mr. Rochester is here.”</p>
+    <p style="margin:0 0 14px 0;">This additional ceremony seemed somewhat stately; however, I repaired to my room, and, with Mrs. Fairfax’s aid, replaced my black stuff dress by one of black silk; the best and the only additional one I had, except one of light grey, which, in my Lowood notions of the toilette, I thought too fine to be worn, except on first-rate occasions.</p>
+    <p style="margin:0 0 14px 0;">“You want a brooch,” said Mrs. Fairfax. I had a single little pearl ornament which Miss Temple gave me as a parting keepsake: I put it on, and then we went downstairs. Unused as I was to strangers, it was rather a trial to appear thus formally summoned in Mr. Rochester’s presence. I let Mrs. Fairfax precede me into the dining-room, and kept in her shade as we crossed that apartment; and, passing the arch, whose curtain was now dropped, entered the elegant recess beyond.</p>
+    <p style="margin:0 0 14px 0;">Two wax candles stood lighted on the table, and two on the mantelpiece; basking in the light and heat of a superb fire, lay Pilot—Adèle knelt near him. Half reclined on a couch appeared Mr. Rochester, his foot supported by the cushion; he was looking at Adèle and the dog: the fire shone full on his face. I knew my traveller with his broad and jetty eyebrows; his square forehead, made squarer by the horizontal sweep of his black hair. I recognised his decisive nose, more remarkable for character than beauty; his full nostrils, denoting, I thought, choler; his grim mouth, chin, and jaw—yes, all three were very grim, and no mistake. His shape, now divested of cloak, I perceived harmonised in squareness with his physiognomy: I suppose it was a good figure in the athletic sense of the term—broad chested and thin flanked, though neither tall nor graceful.</p>
+    <p style="margin:0 0 14px 0;">Mr. Rochester must have been aware of the entrance of Mrs. Fairfax and myself; but it appeared he was not in the mood to notice us, for he never lifted his head as we approached.</p>
+    <p style="margin:0 0 14px 0;">“Here is Miss Eyre, sir,” said Mrs. Fairfax, in her quiet way. He bowed, still not taking his eyes from the group of the dog and child.</p>
+    <p style="margin:0 0 14px 0;">“Let Miss Eyre be seated,” said he: and there was something in the forced stiff bow, in the impatient yet formal tone, which seemed further to express, “What the deuce is it to me whether Miss Eyre be there or not? At this moment I am not disposed to accost her.”</p>
+    <p style="margin:0 0 14px 0;">I sat down quite disembarrassed. A reception of finished politeness would probably have confused me: I could not have returned or repaid it by answering grace and elegance on my part; but harsh caprice laid me under no obligation; on the contrary, a decent quiescence, under the freak of manner, gave me the advantage. Besides, the eccentricity of the proceeding was piquant: I felt interested to see how he would go on.</p>
+    <p style="margin:0 0 14px 0;">He went on as a statue would, that is, he neither spoke nor moved. Mrs. Fairfax seemed to think it necessary that some one should be amiable, and she began to talk. Kindly, as usual—and, as usual, rather trite—she condoled with him on the pressure of business he had had all day; on the annoyance it must have been to him with that painful sprain: then she commended his patience and perseverance in going through with it.</p>
+    <p style="margin:0 0 14px 0;">“Madam, I should like some tea,” was the sole rejoinder she got. She hastened to ring the bell; and when the tray came, she proceeded to arrange the cups, spoons, &amp;c., with assiduous celerity. I and Adèle went to the table; but the master did not leave his couch.</p>
+    <p style="margin:0 0 14px 0;">“Will you hand Mr. Rochester’s cup?” said Mrs. Fairfax to me; “Adèle might perhaps spill it.”</p>
+    <p style="margin:0 0 14px 0;">I did as requested. As he took the cup from my hand, Adèle, thinking the moment propitious for making a request in my favour, cried out—</p>
+    <p style="margin:0 0 14px 0;">“N’est-ce pas, monsieur, qu’il y a un cadeau pour Mademoiselle Eyre dans votre petit coffre?”</p>
+    <p style="margin:0 0 14px 0;">“Who talks of cadeaux?” said he gruffly. “Did you expect a present, Miss Eyre? Are you fond of presents?” and he searched my face with eyes that I saw were dark, irate, and piercing.</p>
+    <p style="margin:0 0 14px 0;">“I hardly know, sir; I have little experience of them: they are generally thought pleasant things.”</p>
+    <p style="margin:0 0 14px 0;">“Generally thought? But what do <em>you</em> think?”</p>
+    <p style="margin:0 0 14px 0;">“I should be obliged to take time, sir, before I could give you an answer worthy of your acceptance: a present has many faces to it, has it not? and one should consider all, before pronouncing an opinion as to its nature.”</p>
+    <p style="margin:0 0 14px 0;">“Miss Eyre, you are not so unsophisticated as Adèle: she demands a ‘cadeau,’ clamorously, the moment she sees me: you beat about the bush.”</p>
+    <p style="margin:0 0 14px 0;">“Because I have less confidence in my deserts than Adèle has: she can prefer the claim of old acquaintance, and the right too of custom; for she says you have always been in the habit of giving her playthings; but if I had to make out a case I should be puzzled, since I am a stranger, and have done nothing to entitle me to an acknowledgment.”</p>
+    <p style="margin:0 0 14px 0;">“Oh, don’t fall back on over-modesty! I have examined Adèle, and find you have taken great pains with her: she is not bright, she has no talents; yet in a short time she has made much improvement.”</p>
+    <p style="margin:0 0 14px 0;">“Sir, you have now given me my ‘cadeau;’ I am obliged to you: it is the meed teachers most covet—praise of their pupils’ progress.”</p>
+    <p style="margin:0 0 14px 0;">“Humph!” said Mr. Rochester, and he took his tea in silence.</p>
+    <p style="margin:0 0 14px 0;">“Come to the fire,” said the master, when the tray was taken away, and Mrs. Fairfax had settled into a corner with her knitting; while Adèle was leading me by the hand round the room, showing me the beautiful books and ornaments on the consoles and chiffonnières. We obeyed, as in duty bound; Adèle wanted to take a seat on my knee, but she was ordered to amuse herself with Pilot.</p>
+    <p style="margin:0 0 14px 0;">“You have been resident in my house three months?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, sir.”</p>
+    <p style="margin:0 0 14px 0;">“And you came from—?”</p>
+    <p style="margin:0 0 14px 0;">“From Lowood school, in ——shire.”</p>
+    <p style="margin:0 0 14px 0;">“Ah! a charitable concern. How long were you there?”</p>
+    <p style="margin:0 0 14px 0;">“Eight years.”</p>
+    <p style="margin:0 0 14px 0;">“Eight years! you must be tenacious of life. I thought half the time in such a place would have done up any constitution! No wonder you have rather the look of another world. I marvelled where you had got that sort of face. When you came on me in Hay Lane last night, I thought unaccountably of fairy tales, and had half a mind to demand whether you had bewitched my horse: I am not sure yet. Who are your parents?”</p>
+    <p style="margin:0 0 14px 0;">“I have none.”</p>
+    <p style="margin:0 0 14px 0;">“Nor ever had, I suppose: do you remember them?”</p>
+    <p style="margin:0 0 14px 0;">“No.”</p>
+    <p style="margin:0 0 14px 0;">“I thought not. And so you were waiting for your people when you sat on that stile?”</p>
+    <p style="margin:0 0 14px 0;">“For whom, sir?”</p>
+    <p style="margin:0 0 14px 0;">“For the men in green: it was a proper moonlight evening for them. Did I break through one of your rings, that you spread that damned ice on the causeway?”</p>
+    <p style="margin:0 0 14px 0;">I shook my head. “The men in green all forsook England a hundred years ago,” said I, speaking as seriously as he had done. “And not even in Hay Lane, or the fields about it, could you find a trace of them. I don’t think either summer or harvest, or winter moon, will ever shine on their revels more.”</p>
+    <p style="margin:0 0 14px 0;">Mrs. Fairfax had dropped her knitting, and, with raised eyebrows, seemed wondering what sort of talk this was.</p>
+    <p style="margin:0 0 14px 0;">“Well,” resumed Mr. Rochester, “if you disown parents, you must have some sort of kinsfolk: uncles and aunts?”</p>
+    <p style="margin:0 0 14px 0;">“No; none that I ever saw.”</p>
+    <p style="margin:0 0 14px 0;">“And your home?”</p>
+    <p style="margin:0 0 14px 0;">“I have none.”</p>
+    <p style="margin:0 0 14px 0;">“Where do your brothers and sisters live?”</p>
+    <p style="margin:0 0 14px 0;">“I have no brothers or sisters.”</p>
+    <p style="margin:0 0 14px 0;">“Who recommended you to come here?”</p>
+    <p style="margin:0 0 14px 0;">“I advertised, and Mrs. Fairfax answered my advertisement.”</p>
+    <p style="margin:0 0 14px 0;">“Yes,” said the good lady, who now knew what ground we were upon, “and I am daily thankful for the choice Providence led me to make. Miss Eyre has been an invaluable companion to me, and a kind and careful teacher to Adèle.”</p>
+    <p style="margin:0 0 14px 0;">“Don’t trouble yourself to give her a character,” returned Mr. Rochester: “eulogiums will not bias me; I shall judge for myself. She began by felling my horse.”</p>
+    <p style="margin:0 0 14px 0;">“Sir?” said Mrs. Fairfax.</p>
+    <p style="margin:0 0 14px 0;">“I have to thank her for this sprain.”</p>
+    <p style="margin:0 0 14px 0;">The widow looked bewildered.</p>
+    <p style="margin:0 0 14px 0;">“Miss Eyre, have you ever lived in a town?”</p>
+    <p style="margin:0 0 14px 0;">“No, sir.”</p>
+    <p style="margin:0 0 14px 0;">“Have you seen much society?”</p>
+    <p style="margin:0 0 14px 0;">“None but the pupils and teachers of Lowood, and now the inmates of Thornfield.”</p>
+    <p style="margin:0 0 14px 0;">“Have you read much?”</p>
+    <p style="margin:0 0 14px 0;">“Only such books as came in my way; and they have not been numerous or very learned.”</p>
+    <p style="margin:0 0 14px 0;">“You have lived the life of a nun: no doubt you are well drilled in religious forms;—Brocklehurst, who I understand directs Lowood, is a parson, is he not?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, sir.”</p>
+    <p style="margin:0 0 14px 0;">“And you girls probably worshipped him, as a convent full of religieuses would worship their director.”</p>
+    <p style="margin:0 0 14px 0;">“Oh, no.”</p>
+    <p style="margin:0 0 14px 0;">“You are very cool! No! What! a novice not worship her priest! That sounds blasphemous.”</p>
+    <p style="margin:0 0 14px 0;">“I disliked Mr. Brocklehurst; and I was not alone in the feeling. He is a harsh man; at once pompous and meddling; he cut off our hair; and for economy’s sake bought us bad needles and thread, with which we could hardly sew.”</p>
+    <p style="margin:0 0 14px 0;">“That was very false economy,” remarked Mrs. Fairfax, who now again caught the drift of the dialogue.</p>
+    <p style="margin:0 0 14px 0;">“And was that the head and front of his offending?” demanded Mr. Rochester.</p>
+    <p style="margin:0 0 14px 0;">“He starved us when he had the sole superintendence of the provision department, before the committee was appointed; and he bored us with long lectures once a week, and with evening readings from books of his own inditing, about sudden deaths and judgments, which made us afraid to go to bed.”</p>
+    <p style="margin:0 0 14px 0;">“What age were you when you went to Lowood?”</p>
+    <p style="margin:0 0 14px 0;">“About ten.”</p>
+    <p style="margin:0 0 14px 0;">“And you stayed there eight years: you are now, then, eighteen?”</p>
+    <p style="margin:0 0 14px 0;">I assented.</p>
+    <p style="margin:0 0 14px 0;">“Arithmetic, you see, is useful; without its aid, I should hardly have been able to guess your age. It is a point difficult to fix where the features and countenance are so much at variance as in your case. And now what did you learn at Lowood? Can you play?”</p>
+    <p style="margin:0 0 14px 0;">“A little.”</p>
+    <p style="margin:0 0 14px 0;">“Of course: that is the established answer. Go into the library—I mean, if you please.—(Excuse my tone of command; I am used to say, ‘Do this,’ and it is done: I cannot alter my customary habits for one new inmate.)—Go, then, into the library; take a candle with you; leave the door open; sit down to the piano, and play a tune.”</p>
+    <p style="margin:0 0 14px 0;">I departed, obeying his directions.</p>
+    <p style="margin:0 0 14px 0;">“Enough!” he called out in a few minutes. “You play <em>a little</em>, I see; like any other English school-girl; perhaps rather better than some, but not well.”</p>
+    <p style="margin:0 0 14px 0;">I closed the piano and returned. Mr. Rochester continued—</p>
+    <p style="margin:0 0 14px 0;">“Adèle showed me some sketches this morning, which she said were yours. I don’t know whether they were entirely of your doing; probably a master aided you?”</p>
+    <p style="margin:0 0 14px 0;">“No, indeed!” I interjected.</p>
+    <p style="margin:0 0 14px 0;">“Ah! that pricks pride. Well, fetch me your portfolio, if you can vouch for its contents being original; but don’t pass your word unless you are certain: I can recognise patchwork.”</p>
+    <p style="margin:0 0 14px 0;">“Then I will say nothing, and you shall judge for yourself, sir.”</p>
+    <p style="margin:0 0 14px 0;">I brought the portfolio from the library.</p>
+    <p style="margin:0 0 14px 0;">“Approach the table,” said he; and I wheeled it to his couch. Adèle and Mrs. Fairfax drew near to see the pictures.</p>
+    <p style="margin:0 0 14px 0;">“No crowding,” said Mr. Rochester: “take the drawings from my hand as I finish with them; but don’t push your faces up to mine.”</p>
+    <p style="margin:0 0 14px 0;">He deliberately scrutinised each sketch and painting. Three he laid aside; the others, when he had examined them, he swept from him.</p>
+    <p style="margin:0 0 14px 0;">“Take them off to the other table, Mrs. Fairfax,” said he, “and look at them with Adèle;—you” (glancing at me) “resume your seat, and answer my questions. I perceive those pictures were done by one hand: was that hand yours?”</p>
+    <p style="margin:0 0 14px 0;">“Yes.”</p>
+    <p style="margin:0 0 14px 0;">“And when did you find time to do them? They have taken much time, and some thought.”</p>
+    <p style="margin:0 0 14px 0;">“I did them in the last two vacations I spent at Lowood, when I had no other occupation.”</p>
+    <p style="margin:0 0 14px 0;">“Where did you get your copies?”</p>
+    <p style="margin:0 0 14px 0;">“Out of my head.”</p>
+    <p style="margin:0 0 14px 0;">“That head I see now on your shoulders?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, sir.”</p>
+    <p style="margin:0 0 14px 0;">“Has it other furniture of the same kind within?”</p>
+    <p style="margin:0 0 14px 0;">“I should think it may have: I should hope—better.”</p>
+    <p style="margin:0 0 14px 0;">He spread the pictures before him, and again surveyed them alternately.</p>
+    <p style="margin:0 0 14px 0;">While he is so occupied, I will tell you, reader, what they are: and first, I must premise that they are nothing wonderful. The subjects had, indeed, risen vividly on my mind. As I saw them with the spiritual eye, before I attempted to embody them, they were striking; but my hand would not second my fancy, and in each case it had wrought out but a pale portrait of the thing I had conceived.</p>
+    <p style="margin:0 0 14px 0;">These pictures were in water-colours. The first represented clouds low and livid, rolling over a swollen sea: all the distance was in eclipse; so, too, was the foreground; or rather, the nearest billows, for there was no land. One gleam of light lifted into relief a half-submerged mast, on which sat a cormorant, dark and large, with wings flecked with foam; its beak held a gold bracelet set with gems, that I had touched with as brilliant tints as my palette could yield, and as glittering distinctness as my pencil could impart. Sinking below the bird and mast, a drowned corpse glanced through the green water; a fair arm was the only limb clearly visible, whence the bracelet had been washed or torn.</p>
+    <p style="margin:0 0 14px 0;">The second picture contained for foreground only the dim peak of a hill, with grass and some leaves slanting as if by a breeze. Beyond and above spread an expanse of sky, dark blue as at twilight: rising into the sky was a woman’s shape to the bust, portrayed in tints as dusk and soft as I could combine. The dim forehead was crowned with a star; the lineaments below were seen as through the suffusion of vapour; the eyes shone dark and wild; the hair streamed shadowy, like a beamless cloud torn by storm or by electric travail. On the neck lay a pale reflection like moonlight; the same faint lustre touched the train of thin clouds from which rose and bowed this vision of the Evening Star.</p>
+    <p style="margin:0 0 14px 0;">The third showed the pinnacle of an iceberg piercing a polar winter sky: a muster of northern lights reared their dim lances, close serried, along the horizon. Throwing these into distance, rose, in the foreground, a head,—a colossal head, inclined towards the iceberg, and resting against it. Two thin hands, joined under the forehead, and supporting it, drew up before the lower features a sable veil; a brow quite bloodless, white as bone, and an eye hollow and fixed, blank of meaning but for the glassiness of despair, alone were visible. Above the temples, amidst wreathed turban folds of black drapery, vague in its character and consistency as cloud, gleamed a ring of white flame, gemmed with sparkles of a more lurid tinge. This pale crescent was “the likeness of a kingly crown;” what it diademed was “the shape which shape had none.”</p>
+    <p style="margin:0 0 14px 0;">“Were you happy when you painted these pictures?” asked Mr. Rochester presently.</p>
+    <p style="margin:0 0 14px 0;">“I was absorbed, sir: yes, and I was happy. To paint them, in short, was to enjoy one of the keenest pleasures I have ever known.”</p>
+    <p style="margin:0 0 14px 0;">“That is not saying much. Your pleasures, by your own account, have been few; but I daresay you did exist in a kind of artist’s dreamland while you blent and arranged these strange tints. Did you sit at them long each day?”</p>
+    <p style="margin:0 0 14px 0;">“I had nothing else to do, because it was the vacation, and I sat at them from morning till noon, and from noon till night: the length of the midsummer days favoured my inclination to apply.”</p>
+    <p style="margin:0 0 14px 0;">“And you felt self-satisfied with the result of your ardent labours?”</p>
+    <p style="margin:0 0 14px 0;">“Far from it. I was tormented by the contrast between my idea and my handiwork: in each case I had imagined something which I was quite powerless to realise.”</p>
+    <p style="margin:0 0 14px 0;">“Not quite: you have secured the shadow of your thought; but no more, probably. You had not enough of the artist’s skill and science to give it full being: yet the drawings are, for a school-girl, peculiar. As to the thoughts, they are elfish. These eyes in the Evening Star you must have seen in a dream. How could you make them look so clear, and yet not at all brilliant? for the planet above quells their rays. And what meaning is that in their solemn depth? And who taught you to paint wind? There is a high gale in that sky, and on this hill-top. Where did you see Latmos? For that is Latmos. There! put the drawings away!”</p>
+    <p style="margin:0 0 14px 0;">I had scarce tied the strings of the portfolio, when, looking at his watch, he said abruptly—</p>
+    <p style="margin:0 0 14px 0;">“It is nine o’clock: what are you about, Miss Eyre, to let Adèle sit up so long? Take her to bed.”</p>
+    <p style="margin:0 0 14px 0;">Adèle went to kiss him before quitting the room: he endured the caress, but scarcely seemed to relish it more than Pilot would have done, nor so much.</p>
+    <p style="margin:0 0 14px 0;">“I wish you all good-night, now,” said he, making a movement of the hand towards the door, in token that he was tired of our company, and wished to dismiss us. Mrs. Fairfax folded up her knitting: I took my portfolio: we curtseyed to him, received a frigid bow in return, and so withdrew.</p>
+    <p style="margin:0 0 14px 0;">“You said Mr. Rochester was not strikingly peculiar, Mrs. Fairfax,” I observed, when I rejoined her in her room, after putting Adèle to bed.</p>
+    <p style="margin:0 0 14px 0;">“Well, is he?”</p>
+    <p style="margin:0 0 14px 0;">“I think so: he is very changeful and abrupt.”</p>
+    <p style="margin:0 0 14px 0;">“True: no doubt he may appear so to a stranger, but I am so accustomed to his manner, I never think of it; and then, if he has peculiarities of temper, allowance should be made.”</p>
+    <p style="margin:0 0 14px 0;">“Why?”</p>
+    <p style="margin:0 0 14px 0;">“Partly because it is his nature—and we can none of us help our nature; and partly because he has painful thoughts, no doubt, to harass him, and make his spirits unequal.”</p>
+    <p style="margin:0 0 14px 0;">“What about?”</p>
+    <p style="margin:0 0 14px 0;">“Family troubles, for one thing.”</p>
+    <p style="margin:0 0 14px 0;">“But he has no family.”</p>
+    <p style="margin:0 0 14px 0;">“Not now, but he has had—or, at least, relatives. He lost his elder brother a few years since.”</p>
+    <p style="margin:0 0 14px 0;">“His <em>elder</em> brother?”</p>
+    <p style="margin:0 0 14px 0;">“Yes. The present Mr. Rochester has not been very long in possession of the property; only about nine years.”</p>
+    <p style="margin:0 0 14px 0;">“Nine years is a tolerable time. Was he so very fond of his brother as to be still inconsolable for his loss?”</p>
+    <p style="margin:0 0 14px 0;">“Why, no—perhaps not. I believe there were some misunderstandings between them. Mr. Rowland Rochester was not quite just to Mr. Edward; and perhaps he prejudiced his father against him. The old gentleman was fond of money, and anxious to keep the family estate together. He did not like to diminish the property by division, and yet he was anxious that Mr. Edward should have wealth, too, to keep up the consequence of the name; and, soon after he was of age, some steps were taken that were not quite fair, and made a great deal of mischief. Old Mr. Rochester and Mr. Rowland combined to bring Mr. Edward into what he considered a painful position, for the sake of making his fortune: what the precise nature of that position was I never clearly knew, but his spirit could not brook what he had to suffer in it. He is not very forgiving: he broke with his family, and now for many years he has led an unsettled kind of life. I don’t think he has ever been resident at Thornfield for a fortnight together, since the death of his brother without a will left him master of the estate; and, indeed, no wonder he shuns the old place.”</p>
+    <p style="margin:0 0 14px 0;">“Why should he shun it?”</p>
+    <p style="margin:0 0 14px 0;">“Perhaps he thinks it gloomy.”</p>
+    <p style="margin:0 0 14px 0;">The answer was evasive. I should have liked something clearer; but Mrs. Fairfax either could not, or would not, give me more explicit information of the origin and nature of Mr. Rochester’s trials. She averred they were a mystery to herself, and that what she knew was chiefly from conjecture. It was evident, indeed, that she wished me to drop the subject, which I did accordingly.</p>
+  </div>
+</details>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 3 &middot; NOW YOU: TRACE THE ENCOUNTER IN ORDER</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Six beats from the Hay Lane scene, chapter 12. Put them in the order the text gives them.</p>
+        <div class="optima-widget ow-order" data-done="That is the order chapter 12 follows: the legend, the ordinary dog, the fall, the offer of help, the departure, and only afterward the name. Bronte stages the reversal before she lets you know who the stranger is.">
+            <div class="widget-kicker">&#128204; CLICK THE MOMENTS IN THE ORDER THEY HAPPEN</div>
+            <div class="widget-question">Six beats, from Bessie's remembered legend to the stranger's name.</div>
+            <div class="order-list">
+                <button data-order="2"><span class="seq" data-default="?">?</span> A large black-and-white dog glides past Jane, quietly, without stopping to look at her.</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span> Walking to Hay, Jane remembers Bessie's tales of a "Gytrash" that haunts solitary roads.</button>
+                <button data-order="3"><span class="seq" data-default="?">?</span> A horse and rider come down the icy causeway behind the dog, and both slip and fall.</button>
+                <button data-order="4"><span class="seq" data-default="?">?</span> Jane offers to help; the stranger, gruff at first, eventually asks her to catch his horse's bridle.</button>
+                <button data-order="5"><span class="seq" data-default="?">?</span> He learns she is "the governess" at Thornfield, then rides off toward Millcote without giving his name.</button>
+                <button data-order="6"><span class="seq" data-default="?">?</span> Back at Thornfield, Leah tells Jane the injured rider was Mr. Rochester himself.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; DO SOMETHING WITH THE READING</div>
+        <div class="rj-badge">
+            <div class="rj-icon">&#128211;</div>
+            <div>
+                <div class="rj-label">READING RESPONSE</div>
+                <div class="rj-task">Write a paragraph on the reversal of rescue. To do it well: state plainly who does the actual rescuing on Hay Lane, and quote the line where Jane commits to staying ("I cannot think of leaving you, sir&hellip;"). Then explain what this reversal suggests about the kind of relationship these two characters might have, compared to a story where the woman waits to be saved. Finally, from chapter 13, quote one line where Rochester tests or provokes Jane (for example, about presents, or about Lowood) and one line where Jane answers him without flinching. What do her answers suggest about how she will handle being observed and questioned in this house? Cite everything by chapter.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Claude can define what a "reversal of expectation" is as a narrative device and give examples from other novels. It cannot tell you which line in chapter 13 hits hardest for you as evidence of Jane holding her ground. Go back to the chapter and choose your own.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Fireside and Fire</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Rochester keeps talking, the Gothic hints keep accumulating, and one night ends with Jane putting out a fire he never saw coming.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Noticing how a scene is staged, what it sets up and what it delivers, is also the skill of opening a piece of writing for a stranger. A strong lead sets up an expectation on purpose, the way this chapter does.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Hay Lane: Staging a First Meeting</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

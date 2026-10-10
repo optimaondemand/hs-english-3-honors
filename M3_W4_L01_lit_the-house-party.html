@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; The House Party</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    details.je-reader summary::-webkit-details-marker { display:none; }
+    details.je-reader[open] summary { border-bottom:1px solid #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The House Party</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Jane Eyre, ch. 16&ndash;18</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The House Party</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">"Write under it, 'Portrait of a Governess, disconnected, poor, and plain.'" Jane gives herself a task no teacher required: draw her own face without softening one defect, then draw the woman she believes Mr. Rochester will marry.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Thornfield fills with guests, and for three chapters you watch a house full of people perform. Blanche Ingram is beautiful, witty, and on display; the guests play charades, literally dressing themselves as characters; rank sorts who speaks to whom. Today's reading tool is learning to watch a performance: who is the audience, what is being shown, and what does the narration let you see that the room does not. Use that tool on the charades, then watch Jane turn the same discipline on herself.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify who is performing for whom at the house party, and name what the charades literalize about rank and display.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why Jane draws two self-portraits and what discipline the exercise is meant to practice.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> separate what a character performs for an audience from what the narrator privately notices.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a time you compared yourself unfavorably to someone else, in looks, money, or standing. What did you do with that comparison afterward?</div>
+            <div class="widget-options">
+                <button data-response="Naming the comparison out loud, even privately, is the first move Jane makes too. Watch what she does with the comparison once she has named it: does it stay a private ache, or does she turn it into a task?">I named it to myself and left it there</button>
+                <button data-response="Turning a feeling into a task is exactly the discipline this lesson teaches. Watch for the moment Jane converts a painful comparison into an assignment she sets herself.">I turned it into something to work on or fix</button>
+                <button data-response="Trying to out-perform someone is one answer to the ache of comparison. Jane tries something different: not performance, but a plain look at the truth. Watch how her method differs from competing.">I tried to outdo the other person somehow</button>
+                <button data-response="Talking it through with someone else is a fair answer, and notably not the one Jane has available to her: she has no one at Thornfield to say this to, so she says it to herself, on paper. Watch what that isolation costs and buys her.">I talked it through with someone I trusted</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Reading a performance</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">A house party in a Victorian novel is rarely just a party. It is a stage: guests dress, speak, and arrange themselves for an audience, and what they perform tells you what their world rewards. Four questions let you read a performance instead of just watching it. <strong>Who is the audience?</strong> Every display has someone it is aimed at, and someone it excludes. <strong>What is being shown?</strong> Beauty, wit, and rank are goods on display here, the way accomplishments were paraded before Blanche Ingram's own former governesses. <strong>Where does the mask slip?</strong> A performance is work, and work shows strain somewhere: a curled lip, a forced laugh, a comment that lands wrong. <strong>What does the narrator see that the room does not?</strong> Jane sits at the edge of every scene this week, watching everyone perform while she performs almost nothing at all, and the narration hands you a second, private view of the same room.</p>
+
+        <!-- CORE VISUAL: reading a performance, four questions -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">READING A PERFORMANCE: FOUR QUESTIONS FOR THE HOUSE PARTY</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>The audience</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">who is watching, who is left out</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Ask: whose approval is being sought, and who in the room does not count as a spectator worth performing for?</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>The display</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">what is being shown off</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Ask: is it beauty, wit, rank, or all three at once, and who decided these were the goods worth showing?</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>The slipping mask</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">where the performance shows strain</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Ask: where does a smile turn to a curled lip, or a compliment turn cutting?</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>The private view</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">what the narrator alone tells you</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Ask: what does Jane's narration let you see that no one in the drawing room can see?</div></div>
+            </div>
+            <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 14px;">Ask all four of a scene before you decide what it means. The charades below are a performance about performance: watch what each question turns up.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 2 &middot; READ CHAPTERS 16 THROUGH 18</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Chapter 16 is the morning after the fire in Rochester's room, and the arrival of the guests. Chapter 17 is the party itself, and the drawing room where Jane first sees Blanche Ingram at close range. Chapter 18 is the charades. Read all three below, using the performance questions as you go. Watch, in chapter 16, for the exact words Jane orders herself to write under her two drawings; in chapter 18, for what the three charade scenes spell when their answers are strung together, and for who is allowed to be an audience and who is told she "looks too stupid" for the game.</p>
+
+        <div style="font-size: 15px; color: #3B4E8C; margin: 0 0 10px 0;">&#128279; Full text at <a href="https://www.gutenberg.org/ebooks/1260" style="color: #3B4E8C;">Project Gutenberg, ebook #1260</a> (public domain).</div>
+
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter XVI</strong> <span style="font-size:13px; color:#3B4E8C;">(about 3,700 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">I both wished and feared to see Mr. Rochester on the day which followed this sleepless night: I wanted to hear his voice again, yet feared to meet his eye. During the early part of the morning, I momentarily expected his coming; he was not in the frequent habit of entering the schoolroom, but he did step in for a few minutes sometimes, and I had the impression that he was sure to visit it that day.</p>
+    <p style="margin:0 0 14px 0;">But the morning passed just as usual: nothing happened to interrupt the quiet course of Adèle’s studies; only soon after breakfast, I heard some bustle in the neighbourhood of Mr. Rochester’s chamber, Mrs. Fairfax’s voice, and Leah’s, and the cook’s—that is, John’s wife—and even John’s own gruff tones. There were exclamations of “What a mercy master was not burnt in his bed!” “It is always dangerous to keep a candle lit at night.” “How providential that he had presence of mind to think of the water-jug!” “I wonder he waked nobody!” “It is to be hoped he will not take cold with sleeping on the library sofa,” &amp;c.</p>
+    <p style="margin:0 0 14px 0;">To much confabulation succeeded a sound of scrubbing and setting to rights; and when I passed the room, in going downstairs to dinner, I saw through the open door that all was again restored to complete order; only the bed was stripped of its hangings. Leah stood up in the window-seat, rubbing the panes of glass dimmed with smoke. I was about to address her, for I wished to know what account had been given of the affair: but, on advancing, I saw a second person in the chamber—a woman sitting on a chair by the bedside, and sewing rings to new curtains. That woman was no other than Grace Poole.</p>
+    <p style="margin:0 0 14px 0;">There she sat, staid and taciturn-looking, as usual, in her brown stuff gown, her check apron, white handkerchief, and cap. She was intent on her work, in which her whole thoughts seemed absorbed: on her hard forehead, and in her commonplace features, was nothing either of the paleness or desperation one would have expected to see marking the countenance of a woman who had attempted murder, and whose intended victim had followed her last night to her lair, and (as I believed), charged her with the crime she wished to perpetrate. I was amazed—confounded. She looked up, while I still gazed at her: no start, no increase or failure of colour betrayed emotion, consciousness of guilt, or fear of detection. She said “Good morning, Miss,” in her usual phlegmatic and brief manner; and taking up another ring and more tape, went on with her sewing.</p>
+    <p style="margin:0 0 14px 0;">“I will put her to some test,” thought I: “such absolute impenetrability is past comprehension.”</p>
+    <p style="margin:0 0 14px 0;">“Good morning, Grace,” I said. “Has anything happened here? I thought I heard the servants all talking together a while ago.”</p>
+    <p style="margin:0 0 14px 0;">“Only master had been reading in his bed last night; he fell asleep with his candle lit, and the curtains got on fire; but, fortunately, he awoke before the bed-clothes or the wood-work caught, and contrived to quench the flames with the water in the ewer.”</p>
+    <p style="margin:0 0 14px 0;">“A strange affair!” I said, in a low voice: then, looking at her fixedly—“Did Mr. Rochester wake nobody? Did no one hear him move?”</p>
+    <p style="margin:0 0 14px 0;">She again raised her eyes to me, and this time there was something of consciousness in their expression. She seemed to examine me warily; then she answered—</p>
+    <p style="margin:0 0 14px 0;">“The servants sleep so far off, you know, Miss, they would not be likely to hear. Mrs. Fairfax’s room and yours are the nearest to master’s; but Mrs. Fairfax said she heard nothing: when people get elderly, they often sleep heavy.” She paused, and then added, with a sort of assumed indifference, but still in a marked and significant tone—“But you are young, Miss; and I should say a light sleeper: perhaps you may have heard a noise?”</p>
+    <p style="margin:0 0 14px 0;">“I did,” said I, dropping my voice, so that Leah, who was still polishing the panes, could not hear me, “and at first I thought it was Pilot: but Pilot cannot laugh; and I am certain I heard a laugh, and a strange one.”</p>
+    <p style="margin:0 0 14px 0;">She took a new needleful of thread, waxed it carefully, threaded her needle with a steady hand, and then observed, with perfect composure—</p>
+    <p style="margin:0 0 14px 0;">“It is hardly likely master would laugh, I should think, Miss, when he was in such danger: You must have been dreaming.”</p>
+    <p style="margin:0 0 14px 0;">“I was not dreaming,” I said, with some warmth, for her brazen coolness provoked me. Again she looked at me; and with the same scrutinising and conscious eye.</p>
+    <p style="margin:0 0 14px 0;">“Have you told master that you heard a laugh?” she inquired.</p>
+    <p style="margin:0 0 14px 0;">“I have not had the opportunity of speaking to him this morning.”</p>
+    <p style="margin:0 0 14px 0;">“You did not think of opening your door and looking out into the gallery?” she further asked.</p>
+    <p style="margin:0 0 14px 0;">She appeared to be cross-questioning me, attempting to draw from me information unawares. The idea struck me that if she discovered I knew or suspected her guilt, she would be playing of some of her malignant pranks on me; I thought it advisable to be on my guard.</p>
+    <p style="margin:0 0 14px 0;">“On the contrary,” said I, “I bolted my door.”</p>
+    <p style="margin:0 0 14px 0;">“Then you are not in the habit of bolting your door every night before you get into bed?”</p>
+    <p style="margin:0 0 14px 0;">“Fiend! she wants to know my habits, that she may lay her plans accordingly!” Indignation again prevailed over prudence: I replied sharply, “Hitherto I have often omitted to fasten the bolt: I did not think it necessary. I was not aware any danger or annoyance was to be dreaded at Thornfield Hall: but in future” (and I laid marked stress on the words) “I shall take good care to make all secure before I venture to lie down.”</p>
+    <p style="margin:0 0 14px 0;">“It will be wise so to do,” was her answer: “this neighbourhood is as quiet as any I know, and I never heard of the hall being attempted by robbers since it was a house; though there are hundreds of pounds’ worth of plate in the plate-closet, as is well known. And you see, for such a large house, there are very few servants, because master has never lived here much; and when he does come, being a bachelor, he needs little waiting on: but I always think it best to err on the safe side; a door is soon fastened, and it is as well to have a drawn bolt between one and any mischief that may be about. A deal of people, Miss, are for trusting all to Providence; but I say Providence will not dispense with the means, though He often blesses them when they are used discreetly.” And here she closed her harangue: a long one for her, and uttered with the demureness of a Quakeress.</p>
+    <p style="margin:0 0 14px 0;">I still stood absolutely dumfoundered at what appeared to me her miraculous self-possession and most inscrutable hypocrisy, when the cook entered.</p>
+    <p style="margin:0 0 14px 0;">“Mrs. Poole,” said she, addressing Grace, “the servants’ dinner will soon be ready: will you come down?”</p>
+    <p style="margin:0 0 14px 0;">“No; just put my pint of porter and bit of pudding on a tray, and I’ll carry it upstairs.”</p>
+    <p style="margin:0 0 14px 0;">“You’ll have some meat?”</p>
+    <p style="margin:0 0 14px 0;">“Just a morsel, and a taste of cheese, that’s all.”</p>
+    <p style="margin:0 0 14px 0;">“And the sago?”</p>
+    <p style="margin:0 0 14px 0;">“Never mind it at present: I shall be coming down before teatime: I’ll make it myself.”</p>
+    <p style="margin:0 0 14px 0;">The cook here turned to me, saying that Mrs. Fairfax was waiting for me: so I departed.</p>
+    <p style="margin:0 0 14px 0;">I hardly heard Mrs. Fairfax’s account of the curtain conflagration during dinner, so much was I occupied in puzzling my brains over the enigmatical character of Grace Poole, and still more in pondering the problem of her position at Thornfield and questioning why she had not been given into custody that morning, or, at the very least, dismissed from her master’s service. He had almost as much as declared his conviction of her criminality last night: what mysterious cause withheld him from accusing her? Why had he enjoined me, too, to secrecy? It was strange: a bold, vindictive, and haughty gentleman seemed somehow in the power of one of the meanest of his dependents; so much in her power, that even when she lifted her hand against his life, he dared not openly charge her with the attempt, much less punish her for it.</p>
+    <p style="margin:0 0 14px 0;">Had Grace been young and handsome, I should have been tempted to think that tenderer feelings than prudence or fear influenced Mr. Rochester in her behalf; but, hard-favoured and matronly as she was, the idea could not be admitted. “Yet,” I reflected, “she has been young once; her youth would be contemporary with her master’s: Mrs. Fairfax told me once, she had lived here many years. I don’t think she can ever have been pretty; but, for aught I know, she may possess originality and strength of character to compensate for the want of personal advantages. Mr. Rochester is an amateur of the decided and eccentric: Grace is eccentric at least. What if a former caprice (a freak very possible to a nature so sudden and headstrong as his) has delivered him into her power, and she now exercises over his actions a secret influence, the result of his own indiscretion, which he cannot shake off, and dare not disregard?” But, having reached this point of conjecture, Mrs. Poole’s square, flat figure, and uncomely, dry, even coarse face, recurred so distinctly to my mind’s eye, that I thought, “No; impossible! my supposition cannot be correct. Yet,” suggested the secret voice which talks to us in our own hearts, “<em>you</em> are not beautiful either, and perhaps Mr. Rochester approves you: at any rate, you have often felt as if he did; and last night—remember his words; remember his look; remember his voice!”</p>
+    <p style="margin:0 0 14px 0;">I well remembered all; language, glance, and tone seemed at the moment vividly renewed. I was now in the schoolroom; Adèle was drawing; I bent over her and directed her pencil. She looked up with a sort of start.</p>
+    <p style="margin:0 0 14px 0;">“Qu’avez-vous, mademoiselle?” said she. “Vos doigts tremblent comme la feuille, et vos joues sont rouges: mais, rouges comme des cerises!”</p>
+    <p style="margin:0 0 14px 0;">“I am hot, Adèle, with stooping!” She went on sketching; I went on thinking.</p>
+    <p style="margin:0 0 14px 0;">I hastened to drive from my mind the hateful notion I had been conceiving respecting Grace Poole; it disgusted me. I compared myself with her, and found we were different. Bessie Leaven had said I was quite a lady; and she spoke truth—I was a lady. And now I looked much better than I did when Bessie saw me; I had more colour and more flesh, more life, more vivacity, because I had brighter hopes and keener enjoyments.</p>
+    <p style="margin:0 0 14px 0;">“Evening approaches,” said I, as I looked towards the window. “I have never heard Mr. Rochester’s voice or step in the house to-day; but surely I shall see him before night: I feared the meeting in the morning; now I desire it, because expectation has been so long baffled that it is grown impatient.”</p>
+    <p style="margin:0 0 14px 0;">When dusk actually closed, and when Adèle left me to go and play in the nursery with Sophie, I did most keenly desire it. I listened for the bell to ring below; I listened for Leah coming up with a message; I fancied sometimes I heard Mr. Rochester’s own tread, and I turned to the door, expecting it to open and admit him. The door remained shut; darkness only came in through the window. Still it was not late; he often sent for me at seven and eight o’clock, and it was yet but six. Surely I should not be wholly disappointed to-night, when I had so many things to say to him! I wanted again to introduce the subject of Grace Poole, and to hear what he would answer; I wanted to ask him plainly if he really believed it was she who had made last night’s hideous attempt; and if so, why he kept her wickedness a secret. It little mattered whether my curiosity irritated him; I knew the pleasure of vexing and soothing him by turns; it was one I chiefly delighted in, and a sure instinct always prevented me from going too far; beyond the verge of provocation I never ventured; on the extreme brink I liked well to try my skill. Retaining every minute form of respect, every propriety of my station, I could still meet him in argument without fear or uneasy restraint; this suited both him and me.</p>
+    <p style="margin:0 0 14px 0;">A tread creaked on the stairs at last. Leah made her appearance; but it was only to intimate that tea was ready in Mrs. Fairfax’s room. Thither I repaired, glad at least to go downstairs; for that brought me, I imagined, nearer to Mr. Rochester’s presence.</p>
+    <p style="margin:0 0 14px 0;">“You must want your tea,” said the good lady, as I joined her; “you ate so little at dinner. I am afraid,” she continued, “you are not well to-day: you look flushed and feverish.”</p>
+    <p style="margin:0 0 14px 0;">“Oh, quite well! I never felt better.”</p>
+    <p style="margin:0 0 14px 0;">“Then you must prove it by evincing a good appetite; will you fill the teapot while I knit off this needle?” Having completed her task, she rose to draw down the blind, which she had hitherto kept up, by way, I suppose, of making the most of daylight, though dusk was now fast deepening into total obscurity.</p>
+    <p style="margin:0 0 14px 0;">“It is fair to-night,” said she, as she looked through the panes, “though not starlight; Mr. Rochester has, on the whole, had a favourable day for his journey.”</p>
+    <p style="margin:0 0 14px 0;">“Journey!—Is Mr. Rochester gone anywhere? I did not know he was out.”</p>
+    <p style="margin:0 0 14px 0;">“Oh, he set off the moment he had breakfasted! He is gone to the Leas, Mr. Eshton’s place, ten miles on the other side Millcote. I believe there is quite a party assembled there; Lord Ingram, Sir George Lynn, Colonel Dent, and others.”</p>
+    <p style="margin:0 0 14px 0;">“Do you expect him back to-night?”</p>
+    <p style="margin:0 0 14px 0;">“No—nor to-morrow either; I should think he is very likely to stay a week or more: when these fine, fashionable people get together, they are so surrounded by elegance and gaiety, so well provided with all that can please and entertain, they are in no hurry to separate. Gentlemen especially are often in request on such occasions; and Mr. Rochester is so talented and so lively in society, that I believe he is a general favourite: the ladies are very fond of him; though you would not think his appearance calculated to recommend him particularly in their eyes: but I suppose his acquirements and abilities, perhaps his wealth and good blood, make amends for any little fault of look.”</p>
+    <p style="margin:0 0 14px 0;">“Are there ladies at the Leas?”</p>
+    <p style="margin:0 0 14px 0;">“There are Mrs. Eshton and her three daughters—very elegant young ladies indeed; and there are the Honourable Blanche and Mary Ingram, most beautiful women, I suppose: indeed I have seen Blanche, six or seven years since, when she was a girl of eighteen. She came here to a Christmas ball and party Mr. Rochester gave. You should have seen the dining-room that day—how richly it was decorated, how brilliantly lit up! I should think there were fifty ladies and gentlemen present—all of the first county families; and Miss Ingram was considered the belle of the evening.”</p>
+    <p style="margin:0 0 14px 0;">“You saw her, you say, Mrs. Fairfax: what was she like?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, I saw her. The dining-room doors were thrown open; and, as it was Christmas-time, the servants were allowed to assemble in the hall, to hear some of the ladies sing and play. Mr. Rochester would have me to come in, and I sat down in a quiet corner and watched them. I never saw a more splendid scene: the ladies were magnificently dressed; most of them—at least most of the younger ones—looked handsome; but Miss Ingram was certainly the queen.”</p>
+    <p style="margin:0 0 14px 0;">“And what was she like?”</p>
+    <p style="margin:0 0 14px 0;">“Tall, fine bust, sloping shoulders; long, graceful neck: olive complexion, dark and clear; noble features; eyes rather like Mr. Rochester’s: large and black, and as brilliant as her jewels. And then she had such a fine head of hair; raven-black and so becomingly arranged: a crown of thick plaits behind, and in front the longest, the glossiest curls I ever saw. She was dressed in pure white; an amber-coloured scarf was passed over her shoulder and across her breast, tied at the side, and descending in long, fringed ends below her knee. She wore an amber-coloured flower, too, in her hair: it contrasted well with the jetty mass of her curls.”</p>
+    <p style="margin:0 0 14px 0;">“She was greatly admired, of course?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, indeed: and not only for her beauty, but for her accomplishments. She was one of the ladies who sang: a gentleman accompanied her on the piano. She and Mr. Rochester sang a duet.”</p>
+    <p style="margin:0 0 14px 0;">“Mr. Rochester? I was not aware he could sing.”</p>
+    <p style="margin:0 0 14px 0;">“Oh! he has a fine bass voice, and an excellent taste for music.”</p>
+    <p style="margin:0 0 14px 0;">“And Miss Ingram: what sort of a voice had she?”</p>
+    <p style="margin:0 0 14px 0;">“A very rich and powerful one: she sang delightfully; it was a treat to listen to her;—and she played afterwards. I am no judge of music, but Mr. Rochester is; and I heard him say her execution was remarkably good.”</p>
+    <p style="margin:0 0 14px 0;">“And this beautiful and accomplished lady, she is not yet married?”</p>
+    <p style="margin:0 0 14px 0;">“It appears not: I fancy neither she nor her sister have very large fortunes. Old Lord Ingram’s estates were chiefly entailed, and the eldest son came in for everything almost.”</p>
+    <p style="margin:0 0 14px 0;">“But I wonder no wealthy nobleman or gentleman has taken a fancy to her: Mr. Rochester, for instance. He is rich, is he not?”</p>
+    <p style="margin:0 0 14px 0;">“Oh! yes. But you see there is a considerable difference in age: Mr. Rochester is nearly forty; she is but twenty-five.”</p>
+    <p style="margin:0 0 14px 0;">“What of that? More unequal matches are made every day.”</p>
+    <p style="margin:0 0 14px 0;">“True: yet I should scarcely fancy Mr. Rochester would entertain an idea of the sort. But you eat nothing: you have scarcely tasted since you began tea.”</p>
+    <p style="margin:0 0 14px 0;">“No: I am too thirsty to eat. Will you let me have another cup?”</p>
+    <p style="margin:0 0 14px 0;">I was about again to revert to the probability of a union between Mr. Rochester and the beautiful Blanche; but Adèle came in, and the conversation was turned into another channel.</p>
+    <p style="margin:0 0 14px 0;">When once more alone, I reviewed the information I had got; looked into my heart, examined its thoughts and feelings, and endeavoured to bring back with a strict hand such as had been straying through imagination’s boundless and trackless waste, into the safe fold of common sense.</p>
+    <p style="margin:0 0 14px 0;">Arraigned at my own bar, Memory having given her evidence of the hopes, wishes, sentiments I had been cherishing since last night—of the general state of mind in which I had indulged for nearly a fortnight past; Reason having come forward and told, in her own quiet way, a plain, unvarnished tale, showing how I had rejected the real, and rabidly devoured the ideal;—I pronounced judgment to this effect:—</p>
+    <p style="margin:0 0 14px 0;">That a greater fool than Jane Eyre had never breathed the breath of life; that a more fantastic idiot had never surfeited herself on sweet lies, and swallowed poison as if it were nectar.</p>
+    <p style="margin:0 0 14px 0;">“<em>You</em>,” I said, “a favourite with Mr. Rochester? <em>You</em> gifted with the power of pleasing him? <em>You</em> of importance to him in any way? Go! your folly sickens me. And you have derived pleasure from occasional tokens of preference—equivocal tokens shown by a gentleman of family and a man of the world to a dependent and a novice. How dared you? Poor stupid dupe!—Could not even self-interest make you wiser? You repeated to yourself this morning the brief scene of last night?—Cover your face and be ashamed! He said something in praise of your eyes, did he? Blind puppy! Open their bleared lids and look on your own accursed senselessness! It does good to no woman to be flattered by her superior, who cannot possibly intend to marry her; and it is madness in all women to let a secret love kindle within them, which, if unreturned and unknown, must devour the life that feeds it; and, if discovered and responded to, must lead, <em>ignis-fatuus</em>-like, into miry wilds whence there is no extrication.</p>
+    <p style="margin:0 0 14px 0;">“Listen, then, Jane Eyre, to your sentence: to-morrow, place the glass before you, and draw in chalk your own picture, faithfully, without softening one defect; omit no harsh line, smooth away no displeasing irregularity; write under it, ‘Portrait of a Governess, disconnected, poor, and plain.’</p>
+    <p style="margin:0 0 14px 0;">“Afterwards, take a piece of smooth ivory—you have one prepared in your drawing-box: take your palette, mix your freshest, finest, clearest tints; choose your most delicate camel-hair pencils; delineate carefully the loveliest face you can imagine; paint it in your softest shades and sweetest lines, according to the description given by Mrs. Fairfax of Blanche Ingram; remember the raven ringlets, the oriental eye;—What! you revert to Mr. Rochester as a model! Order! No snivel!—no sentiment!—no regret! I will endure only sense and resolution. Recall the august yet harmonious lineaments, the Grecian neck and bust; let the round and dazzling arm be visible, and the delicate hand; omit neither diamond ring nor gold bracelet; portray faithfully the attire, aërial lace and glistening satin, graceful scarf and golden rose; call it ‘Blanche, an accomplished lady of rank.’</p>
+    <p style="margin:0 0 14px 0;">“Whenever, in future, you should chance to fancy Mr. Rochester thinks well of you, take out these two pictures and compare them: say, ‘Mr. Rochester might probably win that noble lady’s love, if he chose to strive for it; is it likely he would waste a serious thought on this indigent and insignificant plebeian?’”</p>
+    <p style="margin:0 0 14px 0;">“I’ll do it,” I resolved: and having framed this determination, I grew calm, and fell asleep.</p>
+    <p style="margin:0 0 14px 0;">I kept my word. An hour or two sufficed to sketch my own portrait in crayons; and in less than a fortnight I had completed an ivory miniature of an imaginary Blanche Ingram. It looked a lovely face enough, and when compared with the real head in chalk, the contrast was as great as self-control could desire. I derived benefit from the task: it had kept my head and hands employed, and had given force and fixedness to the new impressions I wished to stamp indelibly on my heart.</p>
+    <p style="margin:0 0 14px 0;">Ere long, I had reason to congratulate myself on the course of wholesome discipline to which I had thus forced my feelings to submit. Thanks to it, I was able to meet subsequent occurrences with a decent calm, which, had they found me unprepared, I should probably have been unequal to maintain, even externally.</p>
+  </div>
+</details>
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter XVII</strong> <span style="font-size:13px; color:#3B4E8C;">(about 8,000 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">A week passed, and no news arrived of Mr. Rochester: ten days, and still he did not come. Mrs. Fairfax said she should not be surprised if he were to go straight from the Leas to London, and thence to the Continent, and not show his face again at Thornfield for a year to come; he had not unfrequently quitted it in a manner quite as abrupt and unexpected. When I heard this, I was beginning to feel a strange chill and failing at the heart. I was actually permitting myself to experience a sickening sense of disappointment; but rallying my wits, and recollecting my principles, I at once called my sensations to order; and it was wonderful how I got over the temporary blunder—how I cleared up the mistake of supposing Mr. Rochester’s movements a matter in which I had any cause to take a vital interest. Not that I humbled myself by a slavish notion of inferiority: on the contrary, I just said—</p>
+    <p style="margin:0 0 14px 0;">“You have nothing to do with the master of Thornfield, further than to receive the salary he gives you for teaching his protégée, and to be grateful for such respectful and kind treatment as, if you do your duty, you have a right to expect at his hands. Be sure that is the only tie he seriously acknowledges between you and him; so don’t make him the object of your fine feelings, your raptures, agonies, and so forth. He is not of your order: keep to your caste, and be too self-respecting to lavish the love of the whole heart, soul, and strength, where such a gift is not wanted and would be despised.”</p>
+    <p style="margin:0 0 14px 0;">I went on with my day’s business tranquilly; but ever and anon vague suggestions kept wandering across my brain of reasons why I should quit Thornfield; and I kept involuntarily framing advertisements and pondering conjectures about new situations: these thoughts I did not think to check; they might germinate and bear fruit if they could.</p>
+    <p style="margin:0 0 14px 0;">Mr. Rochester had been absent upwards of a fortnight, when the post brought Mrs. Fairfax a letter.</p>
+    <p style="margin:0 0 14px 0;">“It is from the master,” said she, as she looked at the direction. “Now I suppose we shall know whether we are to expect his return or not.”</p>
+    <p style="margin:0 0 14px 0;">And while she broke the seal and perused the document, I went on taking my coffee (we were at breakfast): it was hot, and I attributed to that circumstance a fiery glow which suddenly rose to my face. Why my hand shook, and why I involuntarily spilt half the contents of my cup into my saucer, I did not choose to consider.</p>
+    <p style="margin:0 0 14px 0;">“Well, I sometimes think we are too quiet; but we run a chance of being busy enough now: for a little while at least,” said Mrs. Fairfax, still holding the note before her spectacles.</p>
+    <p style="margin:0 0 14px 0;">Ere I permitted myself to request an explanation, I tied the string of Adèle’s pinafore, which happened to be loose: having helped her also to another bun and refilled her mug with milk, I said, nonchalantly—</p>
+    <p style="margin:0 0 14px 0;">“Mr. Rochester is not likely to return soon, I suppose?”</p>
+    <p style="margin:0 0 14px 0;">“Indeed he is—in three days, he says: that will be next Thursday; and not alone either. I don’t know how many of the fine people at the Leas are coming with him: he sends directions for all the best bedrooms to be prepared; and the library and drawing-rooms are to be cleaned out; I am to get more kitchen hands from the George Inn, at Millcote, and from wherever else I can; and the ladies will bring their maids and the gentlemen their valets: so we shall have a full house of it.” And Mrs. Fairfax swallowed her breakfast and hastened away to commence operations.</p>
+    <p style="margin:0 0 14px 0;">The three days were, as she had foretold, busy enough. I had thought all the rooms at Thornfield beautifully clean and well arranged; but it appears I was mistaken. Three women were got to help; and such scrubbing, such brushing, such washing of paint and beating of carpets, such taking down and putting up of pictures, such polishing of mirrors and lustres, such lighting of fires in bedrooms, such airing of sheets and feather-beds on hearths, I never beheld, either before or since. Adèle ran quite wild in the midst of it: the preparations for company and the prospect of their arrival, seemed to throw her into ecstasies. She would have Sophie to look over all her “toilettes,” as she called frocks; to furbish up any that were “<em>passées</em>,” and to air and arrange the new. For herself, she did nothing but caper about in the front chambers, jump on and off the bedsteads, and lie on the mattresses and piled-up bolsters and pillows before the enormous fires roaring in the chimneys. From school duties she was exonerated: Mrs. Fairfax had pressed me into her service, and I was all day in the storeroom, helping (or hindering) her and the cook; learning to make custards and cheese-cakes and French pastry, to truss game and garnish desert-dishes.</p>
+    <p style="margin:0 0 14px 0;">The party were expected to arrive on Thursday afternoon, in time for dinner at six. During the intervening period I had no time to nurse chimeras; and I believe I was as active and gay as anybody—Adèle excepted. Still, now and then, I received a damping check to my cheerfulness; and was, in spite of myself, thrown back on the region of doubts and portents, and dark conjectures. This was when I chanced to see the third-storey staircase door (which of late had always been kept locked) open slowly, and give passage to the form of Grace Poole, in prim cap, white apron, and handkerchief; when I watched her glide along the gallery, her quiet tread muffled in a list slipper; when I saw her look into the bustling, topsy-turvy bedrooms,—just say a word, perhaps, to the charwoman about the proper way to polish a grate, or clean a marble mantelpiece, or take stains from papered walls, and then pass on. She would thus descend to the kitchen once a day, eat her dinner, smoke a moderate pipe on the hearth, and go back, carrying her pot of porter with her, for her private solace, in her own gloomy, upper haunt. Only one hour in the twenty-four did she pass with her fellow-servants below; all the rest of her time was spent in some low-ceiled, oaken chamber of the second storey: there she sat and sewed—and probably laughed drearily to herself,—as companionless as a prisoner in his dungeon.</p>
+    <p style="margin:0 0 14px 0;">The strangest thing of all was, that not a soul in the house, except me, noticed her habits, or seemed to marvel at them: no one discussed her position or employment; no one pitied her solitude or isolation. I once, indeed, overheard part of a dialogue between Leah and one of the charwomen, of which Grace formed the subject. Leah had been saying something I had not caught, and the charwoman remarked—</p>
+    <p style="margin:0 0 14px 0;">“She gets good wages, I guess?”</p>
+    <p style="margin:0 0 14px 0;">“Yes,” said Leah; “I wish I had as good; not that mine are to complain of,—there’s no stinginess at Thornfield; but they’re not one fifth of the sum Mrs. Poole receives. And she is laying by: she goes every quarter to the bank at Millcote. I should not wonder but she has saved enough to keep her independent if she liked to leave; but I suppose she’s got used to the place; and then she’s not forty yet, and strong and able for anything. It is too soon for her to give up business.”</p>
+    <p style="margin:0 0 14px 0;">“She is a good hand, I daresay,” said the charwoman.</p>
+    <p style="margin:0 0 14px 0;">“Ah!—she understands what she has to do,—nobody better,” rejoined Leah significantly; “and it is not every one could fill her shoes—not for all the money she gets.”</p>
+    <p style="margin:0 0 14px 0;">“That it is not!” was the reply. “I wonder whether the master—”</p>
+    <p style="margin:0 0 14px 0;">The charwoman was going on; but here Leah turned and perceived me, and she instantly gave her companion a nudge.</p>
+    <p style="margin:0 0 14px 0;">“Doesn’t she know?” I heard the woman whisper.</p>
+    <p style="margin:0 0 14px 0;">Leah shook her head, and the conversation was of course dropped. All I had gathered from it amounted to this,—that there was a mystery at Thornfield; and that from participation in that mystery I was purposely excluded.</p>
+    <p style="margin:0 0 14px 0;">Thursday came: all work had been completed the previous evening; carpets were laid down, bed-hangings festooned, radiant white counterpanes spread, toilet tables arranged, furniture rubbed, flowers piled in vases: both chambers and saloons looked as fresh and bright as hands could make them. The hall, too, was scoured; and the great carved clock, as well as the steps and banisters of the staircase, were polished to the brightness of glass; in the dining-room, the sideboard flashed resplendent with plate; in the drawing-room and boudoir, vases of exotics bloomed on all sides.</p>
+    <p style="margin:0 0 14px 0;">Afternoon arrived: Mrs. Fairfax assumed her best black satin gown, her gloves, and her gold watch; for it was her part to receive the company,—to conduct the ladies to their rooms, &amp;c. Adèle, too, would be dressed: though I thought she had little chance of being introduced to the party that day at least. However, to please her, I allowed Sophie to apparel her in one of her short, full muslin frocks. For myself, I had no need to make any change; I should not be called upon to quit my sanctum of the schoolroom; for a sanctum it was now become to me,—“a very pleasant refuge in time of trouble.”</p>
+    <p style="margin:0 0 14px 0;">It had been a mild, serene spring day—one of those days which, towards the end of March or the beginning of April, rise shining over the earth as heralds of summer. It was drawing to an end now; but the evening was even warm, and I sat at work in the schoolroom with the window open.</p>
+    <p style="margin:0 0 14px 0;">“It gets late,” said Mrs. Fairfax, entering in rustling state. “I am glad I ordered dinner an hour after the time Mr. Rochester mentioned; for it is past six now. I have sent John down to the gates to see if there is anything on the road: one can see a long way from thence in the direction of Millcote.” She went to the window. “Here he is!” said she. “Well, John” (leaning out), “any news?”</p>
+    <p style="margin:0 0 14px 0;">“They’re coming, ma’am,” was the answer. “They’ll be here in ten minutes.”</p>
+    <p style="margin:0 0 14px 0;">Adèle flew to the window. I followed, taking care to stand on one side, so that, screened by the curtain, I could see without being seen.</p>
+    <p style="margin:0 0 14px 0;">The ten minutes John had given seemed very long, but at last wheels were heard; four equestrians galloped up the drive, and after them came two open carriages. Fluttering veils and waving plumes filled the vehicles; two of the cavaliers were young, dashing-looking gentlemen; the third was Mr. Rochester, on his black horse, Mesrour, Pilot bounding before him; at his side rode a lady, and he and she were the first of the party. Her purple riding-habit almost swept the ground, her veil streamed long on the breeze; mingling with its transparent folds, and gleaming through them, shone rich raven ringlets.</p>
+    <p style="margin:0 0 14px 0;">“Miss Ingram!” exclaimed Mrs. Fairfax, and away she hurried to her post below.</p>
+    <p style="margin:0 0 14px 0;">The cavalcade, following the sweep of the drive, quickly turned the angle of the house, and I lost sight of it. Adèle now petitioned to go down; but I took her on my knee, and gave her to understand that she must not on any account think of venturing in sight of the ladies, either now or at any other time, unless expressly sent for: that Mr. Rochester would be very angry, &amp;c. “Some natural tears she shed” on being told this; but as I began to look very grave, she consented at last to wipe them.</p>
+    <p style="margin:0 0 14px 0;">A joyous stir was now audible in the hall: gentlemen’s deep tones and ladies’ silvery accents blent harmoniously together, and distinguishable above all, though not loud, was the sonorous voice of the master of Thornfield Hall, welcoming his fair and gallant guests under its roof. Then light steps ascended the stairs; and there was a tripping through the gallery, and soft cheerful laughs, and opening and closing doors, and, for a time, a hush.</p>
+    <p style="margin:0 0 14px 0;">“Elles changent de toilettes,” said Adèle; who, listening attentively, had followed every movement; and she sighed.</p>
+    <p style="margin:0 0 14px 0;">“Chez maman,” said she, “quand il y avait du monde, je le suivais partout, au salon et à leurs chambres; souvent je regardais les femmes de chambre coiffer et habiller les dames, et c’était si amusant: comme cela on apprend.”</p>
+    <p style="margin:0 0 14px 0;">“Don’t you feel hungry, Adèle?”</p>
+    <p style="margin:0 0 14px 0;">“Mais oui, mademoiselle: voilà cinq ou six heures que nous n’avons pas mangé.”</p>
+    <p style="margin:0 0 14px 0;">“Well now, while the ladies are in their rooms, I will venture down and get you something to eat.”</p>
+    <p style="margin:0 0 14px 0;">And issuing from my asylum with precaution, I sought a back-stairs which conducted directly to the kitchen. All in that region was fire and commotion; the soup and fish were in the last stage of projection, and the cook hung over her crucibles in a frame of mind and body threatening spontaneous combustion. In the servants’ hall two coachmen and three gentlemen’s gentlemen stood or sat round the fire; the abigails, I suppose, were upstairs with their mistresses; the new servants, that had been hired from Millcote, were bustling about everywhere. Threading this chaos, I at last reached the larder; there I took possession of a cold chicken, a roll of bread, some tarts, a plate or two and a knife and fork: with this booty I made a hasty retreat. I had regained the gallery, and was just shutting the back-door behind me, when an accelerated hum warned me that the ladies were about to issue from their chambers. I could not proceed to the schoolroom without passing some of their doors, and running the risk of being surprised with my cargo of victualage; so I stood still at this end, which, being windowless, was dark: quite dark now, for the sun was set and twilight gathering.</p>
+    <p style="margin:0 0 14px 0;">Presently the chambers gave up their fair tenants one after another: each came out gaily and airily, with dress that gleamed lustrous through the dusk. For a moment they stood grouped together at the other extremity of the gallery, conversing in a key of sweet subdued vivacity: they then descended the staircase almost as noiselessly as a bright mist rolls down a hill. Their collective appearance had left on me an impression of high-born elegance, such as I had never before received.</p>
+    <p style="margin:0 0 14px 0;">I found Adèle peeping through the schoolroom door, which she held ajar. “What beautiful ladies!” cried she in English. “Oh, I wish I might go to them! Do you think Mr. Rochester will send for us by-and-by, after dinner?”</p>
+    <p style="margin:0 0 14px 0;">“No, indeed, I don’t; Mr. Rochester has something else to think about. Never mind the ladies to-night; perhaps you will see them to-morrow: here is your dinner.”</p>
+    <p style="margin:0 0 14px 0;">She was really hungry, so the chicken and tarts served to divert her attention for a time. It was well I secured this forage, or both she, I, and Sophie, to whom I conveyed a share of our repast, would have run a chance of getting no dinner at all: every one downstairs was too much engaged to think of us. The dessert was not carried out till after nine; and at ten footmen were still running to and fro with trays and coffee-cups. I allowed Adèle to sit up much later than usual; for she declared she could not possibly go to sleep while the doors kept opening and shutting below, and people bustling about. Besides, she added, a message might possibly come from Mr. Rochester when she was undressed; “et alors quel dommage!”</p>
+    <p style="margin:0 0 14px 0;">I told her stories as long as she would listen to them; and then for a change I took her out into the gallery. The hall lamp was now lit, and it amused her to look over the balustrade and watch the servants passing backwards and forwards. When the evening was far advanced, a sound of music issued from the drawing-room, whither the piano had been removed; Adèle and I sat down on the top step of the stairs to listen. Presently a voice blent with the rich tones of the instrument; it was a lady who sang, and very sweet her notes were. The solo over, a duet followed, and then a glee: a joyous conversational murmur filled up the intervals. I listened long: suddenly I discovered that my ear was wholly intent on analysing the mingled sounds, and trying to discriminate amidst the confusion of accents those of Mr. Rochester; and when it caught them, which it soon did, it found a further task in framing the tones, rendered by distance inarticulate, into words.</p>
+    <p style="margin:0 0 14px 0;">The clock struck eleven. I looked at Adèle, whose head leant against my shoulder; her eyes were waxing heavy, so I took her up in my arms and carried her off to bed. It was near one before the gentlemen and ladies sought their chambers.</p>
+    <p style="margin:0 0 14px 0;">The next day was as fine as its predecessor: it was devoted by the party to an excursion to some site in the neighbourhood. They set out early in the forenoon, some on horseback, the rest in carriages; I witnessed both the departure and the return. Miss Ingram, as before, was the only lady equestrian; and, as before, Mr. Rochester galloped at her side; the two rode a little apart from the rest. I pointed out this circumstance to Mrs. Fairfax, who was standing at the window with me—</p>
+    <p style="margin:0 0 14px 0;">“You said it was not likely they should think of being married,” said I, “but you see Mr. Rochester evidently prefers her to any of the other ladies.”</p>
+    <p style="margin:0 0 14px 0;">“Yes, I daresay: no doubt he admires her.”</p>
+    <p style="margin:0 0 14px 0;">“And she him,” I added; “look how she leans her head towards him as if she were conversing confidentially; I wish I could see her face; I have never had a glimpse of it yet.”</p>
+    <p style="margin:0 0 14px 0;">“You will see her this evening,” answered Mrs. Fairfax. “I happened to remark to Mr. Rochester how much Adèle wished to be introduced to the ladies, and he said: ‘Oh! let her come into the drawing-room after dinner; and request Miss Eyre to accompany her.’”</p>
+    <p style="margin:0 0 14px 0;">“Yes; he said that from mere politeness: I need not go, I am sure,” I answered.</p>
+    <p style="margin:0 0 14px 0;">“Well, I observed to him that as you were unused to company, I did not think you would like appearing before so gay a party—all strangers; and he replied, in his quick way—‘Nonsense! If she objects, tell her it is my particular wish; and if she resists, say I shall come and fetch her in case of contumacy.’”</p>
+    <p style="margin:0 0 14px 0;">“I will not give him that trouble,” I answered. “I will go, if no better may be; but I don’t like it. Shall you be there, Mrs. Fairfax?”</p>
+    <p style="margin:0 0 14px 0;">“No; I pleaded off, and he admitted my plea. I’ll tell you how to manage so as to avoid the embarrassment of making a formal entrance, which is the most disagreeable part of the business. You must go into the drawing-room while it is empty, before the ladies leave the dinner-table; choose your seat in any quiet nook you like; you need not stay long after the gentlemen come in, unless you please: just let Mr. Rochester see you are there and then slip away—nobody will notice you.”</p>
+    <p style="margin:0 0 14px 0;">“Will these people remain long, do you think?”</p>
+    <p style="margin:0 0 14px 0;">“Perhaps two or three weeks, certainly not more. After the Easter recess, Sir George Lynn, who was lately elected member for Millcote, will have to go up to town and take his seat; I daresay Mr. Rochester will accompany him: it surprises me that he has already made so protracted a stay at Thornfield.”</p>
+    <p style="margin:0 0 14px 0;">It was with some trepidation that I perceived the hour approach when I was to repair with my charge to the drawing-room. Adèle had been in a state of ecstasy all day, after hearing she was to be presented to the ladies in the evening; and it was not till Sophie commenced the operation of dressing her that she sobered down. Then the importance of the process quickly steadied her, and by the time she had her curls arranged in well-smoothed, drooping clusters, her pink satin frock put on, her long sash tied, and her lace mittens adjusted, she looked as grave as any judge. No need to warn her not to disarrange her attire: when she was dressed, she sat demurely down in her little chair, taking care previously to lift up the satin skirt for fear she should crease it, and assured me she would not stir thence till I was ready. This I quickly was: my best dress (the silver-grey one, purchased for Miss Temple’s wedding, and never worn since) was soon put on; my hair was soon smoothed; my sole ornament, the pearl brooch, soon assumed. We descended.</p>
+    <p style="margin:0 0 14px 0;">Fortunately there was another entrance to the drawing-room than that through the saloon where they were all seated at dinner. We found the apartment vacant; a large fire burning silently on the marble hearth, and wax candles shining in bright solitude, amid the exquisite flowers with which the tables were adorned. The crimson curtain hung before the arch: slight as was the separation this drapery formed from the party in the adjoining saloon, they spoke in so low a key that nothing of their conversation could be distinguished beyond a soothing murmur.</p>
+    <p style="margin:0 0 14px 0;">Adèle, who appeared to be still under the influence of a most solemnising impression, sat down, without a word, on the footstool I pointed out to her. I retired to a window-seat, and taking a book from a table near, endeavoured to read. Adèle brought her stool to my feet; ere long she touched my knee.</p>
+    <p style="margin:0 0 14px 0;">“What is it, Adèle?”</p>
+    <p style="margin:0 0 14px 0;">“Est-ce que je ne puis pas prendre une seule de ces fleurs magnifiques, mademoiselle? Seulement pour completer ma toilette.”</p>
+    <p style="margin:0 0 14px 0;">“You think too much of your ‘toilette,’ Adèle: but you may have a flower.” And I took a rose from a vase and fastened it in her sash. She sighed a sigh of ineffable satisfaction, as if her cup of happiness were now full. I turned my face away to conceal a smile I could not suppress: there was something ludicrous as well as painful in the little Parisienne’s earnest and innate devotion to matters of dress.</p>
+    <p style="margin:0 0 14px 0;">A soft sound of rising now became audible; the curtain was swept back from the arch; through it appeared the dining-room, with its lit lustre pouring down light on the silver and glass of a magnificent dessert-service covering a long table; a band of ladies stood in the opening; they entered, and the curtain fell behind them.</p>
+    <p style="margin:0 0 14px 0;">There were but eight; yet, somehow, as they flocked in, they gave the impression of a much larger number. Some of them were very tall; many were dressed in white; and all had a sweeping amplitude of array that seemed to magnify their persons as a mist magnifies the moon. I rose and curtseyed to them: one or two bent their heads in return, the others only stared at me.</p>
+    <p style="margin:0 0 14px 0;">They dispersed about the room, reminding me, by the lightness and buoyancy of their movements, of a flock of white plumy birds. Some of them threw themselves in half-reclining positions on the sofas and ottomans: some bent over the tables and examined the flowers and books: the rest gathered in a group round the fire: all talked in a low but clear tone which seemed habitual to them. I knew their names afterwards, and may as well mention them now.</p>
+    <p style="margin:0 0 14px 0;">First, there was Mrs. Eshton and two of her daughters. She had evidently been a handsome woman, and was well preserved still. Of her daughters, the eldest, Amy, was rather little: naïve, and child-like in face and manner, and piquant in form; her white muslin dress and blue sash became her well. The second, Louisa, was taller and more elegant in figure; with a very pretty face, of that order the French term <em>minois chiffoné</em>: both sisters were fair as lilies.</p>
+    <p style="margin:0 0 14px 0;">Lady Lynn was a large and stout personage of about forty, very erect, very haughty-looking, richly dressed in a satin robe of changeful sheen: her dark hair shone glossily under the shade of an azure plume, and within the circlet of a band of gems.</p>
+    <p style="margin:0 0 14px 0;">Mrs. Colonel Dent was less showy; but, I thought, more lady-like. She had a slight figure, a pale, gentle face, and fair hair. Her black satin dress, her scarf of rich foreign lace, and her pearl ornaments, pleased me better than the rainbow radiance of the titled dame.</p>
+    <p style="margin:0 0 14px 0;">But the three most distinguished—partly, perhaps, because the tallest figures of the band—were the Dowager Lady Ingram and her daughters, Blanche and Mary. They were all three of the loftiest stature of women. The Dowager might be between forty and fifty: her shape was still fine; her hair (by candle-light at least) still black; her teeth, too, were still apparently perfect. Most people would have termed her a splendid woman of her age: and so she was, no doubt, physically speaking; but then there was an expression of almost insupportable haughtiness in her bearing and countenance. She had Roman features and a double chin, disappearing into a throat like a pillar: these features appeared to me not only inflated and darkened, but even furrowed with pride; and the chin was sustained by the same principle, in a position of almost preternatural erectness. She had, likewise, a fierce and a hard eye: it reminded me of Mrs. Reed’s; she mouthed her words in speaking; her voice was deep, its inflections very pompous, very dogmatical,—very intolerable, in short. A crimson velvet robe, and a shawl turban of some gold-wrought Indian fabric, invested her (I suppose she thought) with a truly imperial dignity.</p>
+    <p style="margin:0 0 14px 0;">Blanche and Mary were of equal stature,—straight and tall as poplars. Mary was too slim for her height, but Blanche was moulded like a Dian. I regarded her, of course, with special interest. First, I wished to see whether her appearance accorded with Mrs. Fairfax’s description; secondly, whether it at all resembled the fancy miniature I had painted of her; and thirdly—it will out!—whether it were such as I should fancy likely to suit Mr. Rochester’s taste.</p>
+    <p style="margin:0 0 14px 0;">As far as person went, she answered point for point, both to my picture and Mrs. Fairfax’s description. The noble bust, the sloping shoulders, the graceful neck, the dark eyes and black ringlets were all there;—but her face? Her face was like her mother’s; a youthful unfurrowed likeness: the same low brow, the same high features, the same pride. It was not, however, so saturnine a pride! she laughed continually; her laugh was satirical, and so was the habitual expression of her arched and haughty lip.</p>
+    <p style="margin:0 0 14px 0;">Genius is said to be self-conscious. I cannot tell whether Miss Ingram was a genius, but she was self-conscious—remarkably self-conscious indeed. She entered into a discourse on botany with the gentle Mrs. Dent. It seemed Mrs. Dent had not studied that science: though, as she said, she liked flowers, “especially wild ones;” Miss Ingram had, and she ran over its vocabulary with an air. I presently perceived she was (what is vernacularly termed) <em>trailing</em> Mrs. Dent; that is, playing on her ignorance; her <em>trail</em> might be clever, but it was decidedly not good-natured. She played: her execution was brilliant; she sang: her voice was fine; she talked French apart to her mamma; and she talked it well, with fluency and with a good accent.</p>
+    <p style="margin:0 0 14px 0;">Mary had a milder and more open countenance than Blanche; softer features too, and a skin some shades fairer (Miss Ingram was dark as a Spaniard)—but Mary was deficient in life: her face lacked expression, her eye lustre; she had nothing to say, and having once taken her seat, remained fixed like a statue in its niche. The sisters were both attired in spotless white.</p>
+    <p style="margin:0 0 14px 0;">And did I now think Miss Ingram such a choice as Mr. Rochester would be likely to make? I could not tell—I did not know his taste in female beauty. If he liked the majestic, she was the very type of majesty: then she was accomplished, sprightly. Most gentlemen would admire her, I thought; and that he <em>did</em> admire her, I already seemed to have obtained proof: to remove the last shade of doubt, it remained but to see them together.</p>
+    <p style="margin:0 0 14px 0;">You are not to suppose, reader, that Adèle has all this time been sitting motionless on the stool at my feet: no; when the ladies entered, she rose, advanced to meet them, made a stately reverence, and said with gravity—</p>
+    <p style="margin:0 0 14px 0;">“Bon jour, mesdames.”</p>
+    <p style="margin:0 0 14px 0;">And Miss Ingram had looked down at her with a mocking air, and exclaimed, “Oh, what a little puppet!”</p>
+    <p style="margin:0 0 14px 0;">Lady Lynn had remarked, “It is Mr. Rochester’s ward, I suppose—the little French girl he was speaking of.”</p>
+    <p style="margin:0 0 14px 0;">Mrs. Dent had kindly taken her hand, and given her a kiss. Amy and Louisa Eshton had cried out simultaneously—</p>
+    <p style="margin:0 0 14px 0;">“What a love of a child!”</p>
+    <p style="margin:0 0 14px 0;">And then they had called her to a sofa, where she now sat, ensconced between them, chattering alternately in French and broken English; absorbing not only the young ladies’ attention, but that of Mrs. Eshton and Lady Lynn, and getting spoilt to her heart’s content.</p>
+    <p style="margin:0 0 14px 0;">At last coffee is brought in, and the gentlemen are summoned. I sit in the shade—if any shade there be in this brilliantly-lit apartment; the window-curtain half hides me. Again the arch yawns; they come. The collective appearance of the gentlemen, like that of the ladies, is very imposing: they are all costumed in black; most of them are tall, some young. Henry and Frederick Lynn are very dashing sparks indeed; and Colonel Dent is a fine soldierly man. Mr. Eshton, the magistrate of the district, is gentleman-like: his hair is quite white, his eyebrows and whiskers still dark, which gives him something of the appearance of a “père noble de théâtre.” Lord Ingram, like his sisters, is very tall; like them, also, he is handsome; but he shares Mary’s apathetic and listless look: he seems to have more length of limb than vivacity of blood or vigour of brain.</p>
+    <p style="margin:0 0 14px 0;">And where is Mr. Rochester?</p>
+    <p style="margin:0 0 14px 0;">He comes in last: I am not looking at the arch, yet I see him enter. I try to concentrate my attention on those netting-needles, on the meshes of the purse I am forming—I wish to think only of the work I have in my hands, to see only the silver beads and silk threads that lie in my lap; whereas, I distinctly behold his figure, and I inevitably recall the moment when I last saw it; just after I had rendered him, what he deemed, an essential service, and he, holding my hand, and looking down on my face, surveyed me with eyes that revealed a heart full and eager to overflow; in whose emotions I had a part. How near had I approached him at that moment! What had occurred since, calculated to change his and my relative positions? Yet now, how distant, how far estranged we were! So far estranged, that I did not expect him to come and speak to me. I did not wonder, when, without looking at me, he took a seat at the other side of the room, and began conversing with some of the ladies.</p>
+    <p style="margin:0 0 14px 0;">No sooner did I see that his attention was riveted on them, and that I might gaze without being observed, than my eyes were drawn involuntarily to his face; I could not keep their lids under control: they would rise, and the irids would fix on him. I looked, and had an acute pleasure in looking,—a precious yet poignant pleasure; pure gold, with a steely point of agony: a pleasure like what the thirst-perishing man might feel who knows the well to which he has crept is poisoned, yet stoops and drinks divine draughts nevertheless.</p>
+    <p style="margin:0 0 14px 0;">Most true is it that “beauty is in the eye of the gazer.” My master’s colourless, olive face, square, massive brow, broad and jetty eyebrows, deep eyes, strong features, firm, grim mouth,—all energy, decision, will,—were not beautiful, according to rule; but they were more than beautiful to me; they were full of an interest, an influence that quite mastered me,—that took my feelings from my own power and fettered them in his. I had not intended to love him; the reader knows I had wrought hard to extirpate from my soul the germs of love there detected; and now, at the first renewed view of him, they spontaneously arrived, green and strong! He made me love him without looking at me.</p>
+    <p style="margin:0 0 14px 0;">I compared him with his guests. What was the gallant grace of the Lynns, the languid elegance of Lord Ingram,—even the military distinction of Colonel Dent, contrasted with his look of native pith and genuine power? I had no sympathy in their appearance, their expression: yet I could imagine that most observers would call them attractive, handsome, imposing; while they would pronounce Mr. Rochester at once harsh-featured and melancholy-looking. I saw them smile, laugh—it was nothing; the light of the candles had as much soul in it as their smile; the tinkle of the bell as much significance as their laugh. I saw Mr. Rochester smile:—his stern features softened; his eye grew both brilliant and gentle, its ray both searching and sweet. He was talking, at the moment, to Louisa and Amy Eshton. I wondered to see them receive with calm that look which seemed to me so penetrating: I expected their eyes to fall, their colour to rise under it; yet I was glad when I found they were in no sense moved. “He is not to them what he is to me,” I thought: “he is not of their kind. I believe he is of mine;—I am sure he is—I feel akin to him—I understand the language of his countenance and movements: though rank and wealth sever us widely, I have something in my brain and heart, in my blood and nerves, that assimilates me mentally to him. Did I say, a few days since, that I had nothing to do with him but to receive my salary at his hands? Did I forbid myself to think of him in any other light than as a paymaster? Blasphemy against nature! Every good, true, vigorous feeling I have gathers impulsively round him. I know I must conceal my sentiments: I must smother hope; I must remember that he cannot care much for me. For when I say that I am of his kind, I do not mean that I have his force to influence, and his spell to attract; I mean only that I have certain tastes and feelings in common with him. I must, then, repeat continually that we are for ever sundered:—and yet, while I breathe and think, I must love him.”</p>
+    <p style="margin:0 0 14px 0;">Coffee is handed. The ladies, since the gentlemen entered, have become lively as larks; conversation waxes brisk and merry. Colonel Dent and Mr. Eshton argue on politics; their wives listen. The two proud dowagers, Lady Lynn and Lady Ingram, confabulate together. Sir George—whom, by-the-bye, I have forgotten to describe,—a very big, and very fresh-looking country gentleman, stands before their sofa, coffee-cup in hand, and occasionally puts in a word. Mr. Frederick Lynn has taken a seat beside Mary Ingram, and is showing her the engravings of a splendid volume: she looks, smiles now and then, but apparently says little. The tall and phlegmatic Lord Ingram leans with folded arms on the chair-back of the little and lively Amy Eshton; she glances up at him, and chatters like a wren: she likes him better than she does Mr. Rochester. Henry Lynn has taken possession of an ottoman at the feet of Louisa: Adèle shares it with him: he is trying to talk French with her, and Louisa laughs at his blunders. With whom will Blanche Ingram pair? She is standing alone at the table, bending gracefully over an album. She seems waiting to be sought; but she will not wait too long: she herself selects a mate.</p>
+    <p style="margin:0 0 14px 0;">Mr. Rochester, having quitted the Eshtons, stands on the hearth as solitary as she stands by the table: she confronts him, taking her station on the opposite side of the mantelpiece.</p>
+    <p style="margin:0 0 14px 0;">“Mr. Rochester, I thought you were not fond of children?”</p>
+    <p style="margin:0 0 14px 0;">“Nor am I.”</p>
+    <p style="margin:0 0 14px 0;">“Then, what induced you to take charge of such a little doll as that?” (pointing to Adèle). “Where did you pick her up?”</p>
+    <p style="margin:0 0 14px 0;">“I did not pick her up; she was left on my hands.”</p>
+    <p style="margin:0 0 14px 0;">“You should have sent her to school.”</p>
+    <p style="margin:0 0 14px 0;">“I could not afford it: schools are so dear.”</p>
+    <p style="margin:0 0 14px 0;">“Why, I suppose you have a governess for her: I saw a person with her just now—is she gone? Oh, no! there she is still, behind the window-curtain. You pay her, of course; I should think it quite as expensive,—more so; for you have them both to keep in addition.”</p>
+    <p style="margin:0 0 14px 0;">I feared—or should I say, hoped?—the allusion to me would make Mr. Rochester glance my way; and I involuntarily shrank farther into the shade: but he never turned his eyes.</p>
+    <p style="margin:0 0 14px 0;">“I have not considered the subject,” said he indifferently, looking straight before him.</p>
+    <p style="margin:0 0 14px 0;">“No, you men never do consider economy and common sense. You should hear mama on the chapter of governesses: Mary and I have had, I should think, a dozen at least in our day; half of them detestable and the rest ridiculous, and all incubi—were they not, mama?”</p>
+    <p style="margin:0 0 14px 0;">“Did you speak, my own?”</p>
+    <p style="margin:0 0 14px 0;">The young lady thus claimed as the dowager’s special property, reiterated her question with an explanation.</p>
+    <p style="margin:0 0 14px 0;">“My dearest, don’t mention governesses; the word makes me nervous. I have suffered a martyrdom from their incompetency and caprice. I thank Heaven I have now done with them!”</p>
+    <p style="margin:0 0 14px 0;">Mrs. Dent here bent over to the pious lady and whispered something in her ear; I suppose, from the answer elicited, it was a reminder that one of the anathematised race was present.</p>
+    <p style="margin:0 0 14px 0;">“Tant pis!” said her Ladyship, “I hope it may do her good!” Then, in a lower tone, but still loud enough for me to hear, “I noticed her; I am a judge of physiognomy, and in hers I see all the faults of her class.”</p>
+    <p style="margin:0 0 14px 0;">“What are they, madam?” inquired Mr. Rochester aloud.</p>
+    <p style="margin:0 0 14px 0;">“I will tell you in your private ear,” replied she, wagging her turban three times with portentous significancy.</p>
+    <p style="margin:0 0 14px 0;">“But my curiosity will be past its appetite; it craves food now.”</p>
+    <p style="margin:0 0 14px 0;">“Ask Blanche; she is nearer you than I.”</p>
+    <p style="margin:0 0 14px 0;">“Oh, don’t refer him to me, mama! I have just one word to say of the whole tribe; they are a nuisance. Not that I ever suffered much from them; I took care to turn the tables. What tricks Theodore and I used to play on our Miss Wilsons, and Mrs. Greys, and Madame Jouberts! Mary was always too sleepy to join in a plot with spirit. The best fun was with Madame Joubert: Miss Wilson was a poor sickly thing, lachrymose and low-spirited, not worth the trouble of vanquishing, in short; and Mrs. Grey was coarse and insensible; no blow took effect on her. But poor Madame Joubert! I see her yet in her raging passions, when we had driven her to extremities—spilt our tea, crumbled our bread and butter, tossed our books up to the ceiling, and played a charivari with the ruler and desk, the fender and fire-irons. Theodore, do you remember those merry days?”</p>
+    <p style="margin:0 0 14px 0;">“Yaas, to be sure I do,” drawled Lord Ingram; “and the poor old stick used to cry out, ‘Oh you villains childs!’—and then we sermonised her on the presumption of attempting to teach such clever blades as we were, when she was herself so ignorant.”</p>
+    <p style="margin:0 0 14px 0;">“We did; and, Tedo, you know, I helped you in prosecuting (or persecuting) your tutor, whey-faced Mr. Vining—the parson in the pip, as we used to call him. He and Miss Wilson took the liberty of falling in love with each other—at least Tedo and I thought so; we surprised sundry tender glances and sighs which we interpreted as tokens of ‘la belle passion,’ and I promise you the public soon had the benefit of our discovery; we employed it as a sort of lever to hoist our dead-weights from the house. Dear mama, there, as soon as she got an inkling of the business, found out that it was of an immoral tendency. Did you not, my lady-mother?”</p>
+    <p style="margin:0 0 14px 0;">“Certainly, my best. And I was quite right: depend on that: there are a thousand reasons why liaisons between governesses and tutors should never be tolerated a moment in any well-regulated house; firstly—”</p>
+    <p style="margin:0 0 14px 0;">“Oh, gracious, mama! Spare us the enumeration! <em>Au reste</em>, we all know them: danger of bad example to innocence of childhood; distractions and consequent neglect of duty on the part of the attached—mutual alliance and reliance; confidence thence resulting—insolence accompanying—mutiny and general blow-up. Am I right, Baroness Ingram, of Ingram Park?”</p>
+    <p style="margin:0 0 14px 0;">“My lily-flower, you are right now, as always.”</p>
+    <p style="margin:0 0 14px 0;">“Then no more need be said: change the subject.”</p>
+    <p style="margin:0 0 14px 0;">Amy Eshton, not hearing or not heeding this dictum, joined in with her soft, infantine tone: “Louisa and I used to quiz our governess too; but she was such a good creature, she would bear anything: nothing put her out. She was never cross with us; was she, Louisa?”</p>
+    <p style="margin:0 0 14px 0;">“No, never: we might do what we pleased; ransack her desk and her workbox, and turn her drawers inside out; and she was so good-natured, she would give us anything we asked for.”</p>
+    <p style="margin:0 0 14px 0;">“I suppose, now,” said Miss Ingram, curling her lip sarcastically, “we shall have an abstract of the memoirs of all the governesses extant: in order to avert such a visitation, I again move the introduction of a new topic. Mr. Rochester, do you second my motion?”</p>
+    <p style="margin:0 0 14px 0;">“Madam, I support you on this point, as on every other.”</p>
+    <p style="margin:0 0 14px 0;">“Then on me be the onus of bringing it forward. Signior Eduardo, are you in voice to-night?”</p>
+    <p style="margin:0 0 14px 0;">“Donna Bianca, if you command it, I will be.”</p>
+    <p style="margin:0 0 14px 0;">“Then, signior, I lay on you my sovereign behest to furbish up your lungs and other vocal organs, as they will be wanted on my royal service.”</p>
+    <p style="margin:0 0 14px 0;">“Who would not be the Rizzio of so divine a Mary?”</p>
+    <p style="margin:0 0 14px 0;">“A fig for Rizzio!” cried she, tossing her head with all its curls, as she moved to the piano. “It is my opinion the fiddler David must have been an insipid sort of fellow; I like black Bothwell better: to my mind a man is nothing without a spice of the devil in him; and history may say what it will of James Hepburn, but I have a notion, he was just the sort of wild, fierce, bandit hero whom I could have consented to gift with my hand.”</p>
+    <p style="margin:0 0 14px 0;">“Gentlemen, you hear! Now which of you most resembles Bothwell?” cried Mr. Rochester.</p>
+    <p style="margin:0 0 14px 0;">“I should say the preference lies with you,” responded Colonel Dent.</p>
+    <p style="margin:0 0 14px 0;">“On my honour, I am much obliged to you,” was the reply.</p>
+    <p style="margin:0 0 14px 0;">Miss Ingram, who had now seated herself with proud grace at the piano, spreading out her snowy robes in queenly amplitude, commenced a brilliant prelude; talking meantime. She appeared to be on her high horse to-night; both her words and her air seemed intended to excite not only the admiration, but the amazement of her auditors: she was evidently bent on striking them as something very dashing and daring indeed.</p>
+    <p style="margin:0 0 14px 0;">“Oh, I am so sick of the young men of the present day!” exclaimed she, rattling away at the instrument. “Poor, puny things, not fit to stir a step beyond papa’s park gates: nor to go even so far without mama’s permission and guardianship! Creatures so absorbed in care about their pretty faces, and their white hands, and their small feet; as if a man had anything to do with beauty! As if loveliness were not the special prerogative of woman—her legitimate appanage and heritage! I grant an ugly <em>woman</em> is a blot on the fair face of creation; but as to the <em>gentlemen</em>, let them be solicitous to possess only strength and valour: let their motto be:—Hunt, shoot, and fight: the rest is not worth a fillip. Such should be my device, were I a man.”</p>
+    <p style="margin:0 0 14px 0;">“Whenever I marry,” she continued after a pause which none interrupted, “I am resolved my husband shall not be a rival, but a foil to me. I will suffer no competitor near the throne; I shall exact an undivided homage: his devotions shall not be shared between me and the shape he sees in his mirror. Mr. Rochester, now sing, and I will play for you.”</p>
+    <p style="margin:0 0 14px 0;">“I am all obedience,” was the response.</p>
+    <p style="margin:0 0 14px 0;">“Here then is a Corsair-song. Know that I doat on Corsairs; and for that reason, sing it <em>con spirito</em>.”</p>
+    <p style="margin:0 0 14px 0;">“Commands from Miss Ingram’s lips would put spirit into a mug of milk and water.”</p>
+    <p style="margin:0 0 14px 0;">“Take care, then: if you don’t please me, I will shame you by showing how such things <em>should</em> be done.”</p>
+    <p style="margin:0 0 14px 0;">“That is offering a premium on incapacity: I shall now endeavour to fail.”</p>
+    <p style="margin:0 0 14px 0;">“Gardez-vous en bien! If you err wilfully, I shall devise a proportionate punishment.”</p>
+    <p style="margin:0 0 14px 0;">“Miss Ingram ought to be clement, for she has it in her power to inflict a chastisement beyond mortal endurance.”</p>
+    <p style="margin:0 0 14px 0;">“Ha! explain!” commanded the lady.</p>
+    <p style="margin:0 0 14px 0;">“Pardon me, madam: no need of explanation; your own fine sense must inform you that one of your frowns would be a sufficient substitute for capital punishment.”</p>
+    <p style="margin:0 0 14px 0;">“Sing!” said she, and again touching the piano, she commenced an accompaniment in spirited style.</p>
+    <p style="margin:0 0 14px 0;">“Now is my time to slip away,” thought I: but the tones that then severed the air arrested me. Mrs. Fairfax had said Mr. Rochester possessed a fine voice: he did—a mellow, powerful bass, into which he threw his own feeling, his own force; finding a way through the ear to the heart, and there waking sensation strangely. I waited till the last deep and full vibration had expired—till the tide of talk, checked an instant, had resumed its flow; I then quitted my sheltered corner and made my exit by the side-door, which was fortunately near. Thence a narrow passage led into the hall: in crossing it, I perceived my sandal was loose; I stopped to tie it, kneeling down for that purpose on the mat at the foot of the staircase. I heard the dining-room door unclose; a gentleman came out; rising hastily, I stood face to face with him: it was Mr. Rochester.</p>
+    <p style="margin:0 0 14px 0;">“How do you do?” he asked.</p>
+    <p style="margin:0 0 14px 0;">“I am very well, sir.”</p>
+    <p style="margin:0 0 14px 0;">“Why did you not come and speak to me in the room?”</p>
+    <p style="margin:0 0 14px 0;">I thought I might have retorted the question on him who put it: but I would not take that freedom. I answered—</p>
+    <p style="margin:0 0 14px 0;">“I did not wish to disturb you, as you seemed engaged, sir.”</p>
+    <p style="margin:0 0 14px 0;">“What have you been doing during my absence?”</p>
+    <p style="margin:0 0 14px 0;">“Nothing particular; teaching Adèle as usual.”</p>
+    <p style="margin:0 0 14px 0;">“And getting a good deal paler than you were—as I saw at first sight. What is the matter?”</p>
+    <p style="margin:0 0 14px 0;">“Nothing at all, sir.”</p>
+    <p style="margin:0 0 14px 0;">“Did you take any cold that night you half drowned me?”</p>
+    <p style="margin:0 0 14px 0;">“Not the least.”</p>
+    <p style="margin:0 0 14px 0;">“Return to the drawing-room: you are deserting too early.”</p>
+    <p style="margin:0 0 14px 0;">“I am tired, sir.”</p>
+    <p style="margin:0 0 14px 0;">He looked at me for a minute.</p>
+    <p style="margin:0 0 14px 0;">“And a little depressed,” he said. “What about? Tell me.”</p>
+    <p style="margin:0 0 14px 0;">“Nothing—nothing, sir. I am not depressed.”</p>
+    <p style="margin:0 0 14px 0;">“But I affirm that you are: so much depressed that a few more words would bring tears to your eyes—indeed, they are there now, shining and swimming; and a bead has slipped from the lash and fallen on to the flag. If I had time, and was not in mortal dread of some prating prig of a servant passing, I would know what all this means. Well, to-night I excuse you; but understand that so long as my visitors stay, I expect you to appear in the drawing-room every evening; it is my wish; don’t neglect it. Now go, and send Sophie for Adèle. Good-night, my—” He stopped, bit his lip, and abruptly left me.</p>
+  </div>
+</details>
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter XVIII</strong> <span style="font-size:13px; color:#3B4E8C;">(about 5,800 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">Merry days were these at Thornfield Hall; and busy days too: how different from the first three months of stillness, monotony, and solitude I had passed beneath its roof! All sad feelings seemed now driven from the house, all gloomy associations forgotten: there was life everywhere, movement all day long. You could not now traverse the gallery, once so hushed, nor enter the front chambers, once so tenantless, without encountering a smart lady’s-maid or a dandy valet.</p>
+    <p style="margin:0 0 14px 0;">The kitchen, the butler’s pantry, the servants’ hall, the entrance hall, were equally alive; and the saloons were only left void and still when the blue sky and halcyon sunshine of the genial spring weather called their occupants out into the grounds. Even when that weather was broken, and continuous rain set in for some days, no damp seemed cast over enjoyment: indoor amusements only became more lively and varied, in consequence of the stop put to outdoor gaiety.</p>
+    <p style="margin:0 0 14px 0;">I wondered what they were going to do the first evening a change of entertainment was proposed: they spoke of “playing charades,” but in my ignorance I did not understand the term. The servants were called in, the dining-room tables wheeled away, the lights otherwise disposed, the chairs placed in a semicircle opposite the arch. While Mr. Rochester and the other gentlemen directed these alterations, the ladies were running up and down stairs ringing for their maids. Mrs. Fairfax was summoned to give information respecting the resources of the house in shawls, dresses, draperies of any kind; and certain wardrobes of the third storey were ransacked, and their contents, in the shape of brocaded and hooped petticoats, satin sacques, black modes, lace lappets, &amp;c., were brought down in armfuls by the abigails; then a selection was made, and such things as were chosen were carried to the boudoir within the drawing-room.</p>
+    <p style="margin:0 0 14px 0;">Meantime, Mr. Rochester had again summoned the ladies round him, and was selecting certain of their number to be of his party. “Miss Ingram is mine, of course,” said he: afterwards he named the two Misses Eshton, and Mrs. Dent. He looked at me: I happened to be near him, as I had been fastening the clasp of Mrs. Dent’s bracelet, which had got loose.</p>
+    <p style="margin:0 0 14px 0;">“Will you play?” he asked. I shook my head. He did not insist, which I rather feared he would have done; he allowed me to return quietly to my usual seat.</p>
+    <p style="margin:0 0 14px 0;">He and his aids now withdrew behind the curtain: the other party, which was headed by Colonel Dent, sat down on the crescent of chairs. One of the gentlemen, Mr. Eshton, observing me, seemed to propose that I should be asked to join them; but Lady Ingram instantly negatived the notion.</p>
+    <p style="margin:0 0 14px 0;">“No,” I heard her say: “she looks too stupid for any game of the sort.”</p>
+    <p style="margin:0 0 14px 0;">Ere long a bell tinkled, and the curtain drew up. Within the arch, the bulky figure of Sir George Lynn, whom Mr. Rochester had likewise chosen, was seen enveloped in a white sheet: before him, on a table, lay open a large book; and at his side stood Amy Eshton, draped in Mr. Rochester’s cloak, and holding a book in her hand. Somebody, unseen, rang the bell merrily; then Adèle (who had insisted on being one of her guardian’s party), bounded forward, scattering round her the contents of a basket of flowers she carried on her arm. Then appeared the magnificent figure of Miss Ingram, clad in white, a long veil on her head, and a wreath of roses round her brow; by her side walked Mr. Rochester, and together they drew near the table. They knelt; while Mrs. Dent and Louisa Eshton, dressed also in white, took up their stations behind them. A ceremony followed, in dumb show, in which it was easy to recognise the pantomime of a marriage. At its termination, Colonel Dent and his party consulted in whispers for two minutes, then the Colonel called out—</p>
+    <p style="margin:0 0 14px 0;">“Bride!” Mr. Rochester bowed, and the curtain fell.</p>
+    <p style="margin:0 0 14px 0;">A considerable interval elapsed before it again rose. Its second rising displayed a more elaborately prepared scene than the last. The drawing-room, as I have before observed, was raised two steps above the dining-room, and on the top of the upper step, placed a yard or two back within the room, appeared a large marble basin, which I recognised as an ornament of the conservatory—where it usually stood, surrounded by exotics, and tenanted by gold fish—and whence it must have been transported with some trouble, on account of its size and weight.</p>
+    <p style="margin:0 0 14px 0;">Seated on the carpet, by the side of this basin, was seen Mr. Rochester, costumed in shawls, with a turban on his head. His dark eyes and swarthy skin and Paynim features suited the costume exactly: he looked the very model of an Eastern emir, an agent or a victim of the bowstring. Presently advanced into view Miss Ingram. She, too, was attired in oriental fashion: a crimson scarf tied sash-like round the waist: an embroidered handkerchief knotted about her temples; her beautifully-moulded arms bare, one of them upraised in the act of supporting a pitcher, poised gracefully on her head. Both her cast of form and feature, her complexion and her general air, suggested the idea of some Israelitish princess of the patriarchal days; and such was doubtless the character she intended to represent.</p>
+    <p style="margin:0 0 14px 0;">She approached the basin, and bent over it as if to fill her pitcher; she again lifted it to her head. The personage on the well-brink now seemed to accost her; to make some request:—“She hasted, let down her pitcher on her hand, and gave him to drink.” From the bosom of his robe he then produced a casket, opened it and showed magnificent bracelets and earrings; she acted astonishment and admiration; kneeling, he laid the treasure at her feet; incredulity and delight were expressed by her looks and gestures; the stranger fastened the bracelets on her arms and the rings in her ears. It was Eliezer and Rebecca: the camels only were wanting.</p>
+    <p style="margin:0 0 14px 0;">The divining party again laid their heads together: apparently they could not agree about the word or syllable the scene illustrated. Colonel Dent, their spokesman, demanded “the tableau of the whole;” whereupon the curtain again descended.</p>
+    <p style="margin:0 0 14px 0;">On its third rising only a portion of the drawing-room was disclosed; the rest being concealed by a screen, hung with some sort of dark and coarse drapery. The marble basin was removed; in its place, stood a deal table and a kitchen chair: these objects were visible by a very dim light proceeding from a horn lantern, the wax candles being all extinguished.</p>
+    <p style="margin:0 0 14px 0;">Amidst this sordid scene, sat a man with his clenched hands resting on his knees, and his eyes bent on the ground. I knew Mr. Rochester; though the begrimed face, the disordered dress (his coat hanging loose from one arm, as if it had been almost torn from his back in a scuffle), the desperate and scowling countenance, the rough, bristling hair might well have disguised him. As he moved, a chain clanked; to his wrists were attached fetters.</p>
+    <p style="margin:0 0 14px 0;">“Bridewell!” exclaimed Colonel Dent, and the charade was solved.</p>
+    <p style="margin:0 0 14px 0;">A sufficient interval having elapsed for the performers to resume their ordinary costume, they re-entered the dining-room. Mr. Rochester led in Miss Ingram; she was complimenting him on his acting.</p>
+    <p style="margin:0 0 14px 0;">“Do you know,” said she, “that, of the three characters, I liked you in the last best? Oh, had you but lived a few years earlier, what a gallant gentleman-highwayman you would have made!”</p>
+    <p style="margin:0 0 14px 0;">“Is all the soot washed from my face?” he asked, turning it towards her.</p>
+    <p style="margin:0 0 14px 0;">“Alas! yes: the more’s the pity! Nothing could be more becoming to your complexion than that ruffian’s rouge.”</p>
+    <p style="margin:0 0 14px 0;">“You would like a hero of the road then?”</p>
+    <p style="margin:0 0 14px 0;">“An English hero of the road would be the next best thing to an Italian bandit; and that could only be surpassed by a Levantine pirate.”</p>
+    <p style="margin:0 0 14px 0;">“Well, whatever I am, remember you are my wife; we were married an hour since, in the presence of all these witnesses.” She giggled, and her colour rose.</p>
+    <p style="margin:0 0 14px 0;">“Now, Dent,” continued Mr. Rochester, “it is your turn.” And as the other party withdrew, he and his band took the vacated seats. Miss Ingram placed herself at her leader’s right hand; the other diviners filled the chairs on each side of him and her. I did not now watch the actors; I no longer waited with interest for the curtain to rise; my attention was absorbed by the spectators; my eyes, erewhile fixed on the arch, were now irresistibly attracted to the semicircle of chairs. What charade Colonel Dent and his party played, what word they chose, how they acquitted themselves, I no longer remember; but I still see the consultation which followed each scene: I see Mr. Rochester turn to Miss Ingram, and Miss Ingram to him; I see her incline her head towards him, till the jetty curls almost touch his shoulder and wave against his cheek; I hear their mutual whisperings; I recall their interchanged glances; and something even of the feeling roused by the spectacle returns in memory at this moment.</p>
+    <p style="margin:0 0 14px 0;">I have told you, reader, that I had learnt to love Mr. Rochester: I could not unlove him now, merely because I found that he had ceased to notice me—because I might pass hours in his presence, and he would never once turn his eyes in my direction—because I saw all his attentions appropriated by a great lady, who scorned to touch me with the hem of her robes as she passed; who, if ever her dark and imperious eye fell on me by chance, would withdraw it instantly as from an object too mean to merit observation. I could not unlove him, because I felt sure he would soon marry this very lady—because I read daily in her a proud security in his intentions respecting her—because I witnessed hourly in him a style of courtship which, if careless and choosing rather to be sought than to seek, was yet, in its very carelessness, captivating, and in its very pride, irresistible.</p>
+    <p style="margin:0 0 14px 0;">There was nothing to cool or banish love in these circumstances, though much to create despair. Much too, you will think, reader, to engender jealousy: if a woman, in my position, could presume to be jealous of a woman in Miss Ingram’s. But I was not jealous: or very rarely;—the nature of the pain I suffered could not be explained by that word. Miss Ingram was a mark beneath jealousy: she was too inferior to excite the feeling. Pardon the seeming paradox; I mean what I say. She was very showy, but she was not genuine: she had a fine person, many brilliant attainments; but her mind was poor, her heart barren by nature: nothing bloomed spontaneously on that soil; no unforced natural fruit delighted by its freshness. She was not good; she was not original: she used to repeat sounding phrases from books: she never offered, nor had, an opinion of her own. She advocated a high tone of sentiment; but she did not know the sensations of sympathy and pity; tenderness and truth were not in her. Too often she betrayed this, by the undue vent she gave to a spiteful antipathy she had conceived against little Adèle: pushing her away with some contumelious epithet if she happened to approach her; sometimes ordering her from the room, and always treating her with coldness and acrimony. Other eyes besides mine watched these manifestations of character—watched them closely, keenly, shrewdly. Yes; the future bridegroom, Mr. Rochester himself, exercised over his intended a ceaseless surveillance; and it was from this sagacity—this guardedness of his—this perfect, clear consciousness of his fair one’s defects—this obvious absence of passion in his sentiments towards her, that my ever-torturing pain arose.</p>
+    <p style="margin:0 0 14px 0;">I saw he was going to marry her, for family, perhaps political reasons, because her rank and connections suited him; I felt he had not given her his love, and that her qualifications were ill adapted to win from him that treasure. This was the point—this was where the nerve was touched and teased—this was where the fever was sustained and fed: <em>she could not charm him</em>.</p>
+    <p style="margin:0 0 14px 0;">If she had managed the victory at once, and he had yielded and sincerely laid his heart at her feet, I should have covered my face, turned to the wall, and (figuratively) have died to them. If Miss Ingram had been a good and noble woman, endowed with force, fervour, kindness, sense, I should have had one vital struggle with two tigers—jealousy and despair: then, my heart torn out and devoured, I should have admired her—acknowledged her excellence, and been quiet for the rest of my days: and the more absolute her superiority, the deeper would have been my admiration—the more truly tranquil my quiescence. But as matters really stood, to watch Miss Ingram’s efforts at fascinating Mr. Rochester, to witness their repeated failure—herself unconscious that they did fail; vainly fancying that each shaft launched hit the mark, and infatuatedly pluming herself on success, when her pride and self-complacency repelled further and further what she wished to allure—to witness <em>this</em>, was to be at once under ceaseless excitation and ruthless restraint.</p>
+    <p style="margin:0 0 14px 0;">Because, when she failed, I saw how she might have succeeded. Arrows that continually glanced off from Mr. Rochester’s breast and fell harmless at his feet, might, I knew, if shot by a surer hand, have quivered keen in his proud heart—have called love into his stern eye, and softness into his sardonic face; or, better still, without weapons a silent conquest might have been won.</p>
+    <p style="margin:0 0 14px 0;">“Why can she not influence him more, when she is privileged to draw so near to him?” I asked myself. “Surely she cannot truly like him, or not like him with true affection! If she did, she need not coin her smiles so lavishly, flash her glances so unremittingly, manufacture airs so elaborate, graces so multitudinous. It seems to me that she might, by merely sitting quietly at his side, saying little and looking less, get nigher his heart. I have seen in his face a far different expression from that which hardens it now while she is so vivaciously accosting him; but then it came of itself: it was not elicited by meretricious arts and calculated manoeuvres; and one had but to accept it—to answer what he asked without pretension, to address him when needful without grimace—and it increased and grew kinder and more genial, and warmed one like a fostering sunbeam. How will she manage to please him when they are married? I do not think she will manage it; and yet it might be managed; and his wife might, I verily believe, be the very happiest woman the sun shines on.”</p>
+    <p style="margin:0 0 14px 0;">I have not yet said anything condemnatory of Mr. Rochester’s project of marrying for interest and connections. It surprised me when I first discovered that such was his intention: I had thought him a man unlikely to be influenced by motives so commonplace in his choice of a wife; but the longer I considered the position, education, &amp;c., of the parties, the less I felt justified in judging and blaming either him or Miss Ingram for acting in conformity to ideas and principles instilled into them, doubtless, from their childhood. All their class held these principles: I supposed, then, they had reasons for holding them such as I could not fathom. It seemed to me that, were I a gentleman like him, I would take to my bosom only such a wife as I could love; but the very obviousness of the advantages to the husband’s own happiness offered by this plan convinced me that there must be arguments against its general adoption of which I was quite ignorant: otherwise I felt sure all the world would act as I wished to act.</p>
+    <p style="margin:0 0 14px 0;">But in other points, as well as this, I was growing very lenient to my master: I was forgetting all his faults, for which I had once kept a sharp look-out. It had formerly been my endeavour to study all sides of his character: to take the bad with the good; and from the just weighing of both, to form an equitable judgment. Now I saw no bad. The sarcasm that had repelled, the harshness that had startled me once, were only like keen condiments in a choice dish: their presence was pungent, but their absence would be felt as comparatively insipid. And as for the vague something—was it a sinister or a sorrowful, a designing or a desponding expression?—that opened upon a careful observer, now and then, in his eye, and closed again before one could fathom the strange depth partially disclosed; that something which used to make me fear and shrink, as if I had been wandering amongst volcanic-looking hills, and had suddenly felt the ground quiver and seen it gape: that something, I, at intervals, beheld still; and with throbbing heart, but not with palsied nerves. Instead of wishing to shun, I longed only to dare—to divine it; and I thought Miss Ingram happy, because one day she might look into the abyss at her leisure, explore its secrets and analyse their nature.</p>
+    <p style="margin:0 0 14px 0;">Meantime, while I thought only of my master and his future bride—saw only them, heard only their discourse, and considered only their movements of importance—the rest of the party were occupied with their own separate interests and pleasures. The Ladies Lynn and Ingram continued to consort in solemn conferences, where they nodded their two turbans at each other, and held up their four hands in confronting gestures of surprise, or mystery, or horror, according to the theme on which their gossip ran, like a pair of magnified puppets. Mild Mrs. Dent talked with good-natured Mrs. Eshton; and the two sometimes bestowed a courteous word or smile on me. Sir George Lynn, Colonel Dent, and Mr. Eshton discussed politics, or county affairs, or justice business. Lord Ingram flirted with Amy Eshton; Louisa played and sang to and with one of the Messrs. Lynn; and Mary Ingram listened languidly to the gallant speeches of the other. Sometimes all, as with one consent, suspended their by-play to observe and listen to the principal actors: for, after all, Mr. Rochester and—because closely connected with him—Miss Ingram were the life and soul of the party. If he was absent from the room an hour, a perceptible dulness seemed to steal over the spirits of his guests; and his re-entrance was sure to give a fresh impulse to the vivacity of conversation.</p>
+    <p style="margin:0 0 14px 0;">The want of his animating influence appeared to be peculiarly felt one day that he had been summoned to Millcote on business, and was not likely to return till late. The afternoon was wet: a walk the party had proposed to take to see a gipsy camp, lately pitched on a common beyond Hay, was consequently deferred. Some of the gentlemen were gone to the stables: the younger ones, together with the younger ladies, were playing billiards in the billiard-room. The dowagers Ingram and Lynn sought solace in a quiet game at cards. Blanche Ingram, after having repelled, by supercilious taciturnity, some efforts of Mrs. Dent and Mrs. Eshton to draw her into conversation, had first murmured over some sentimental tunes and airs on the piano, and then, having fetched a novel from the library, had flung herself in haughty listlessness on a sofa, and prepared to beguile, by the spell of fiction, the tedious hours of absence. The room and the house were silent: only now and then the merriment of the billiard-players was heard from above.</p>
+    <p style="margin:0 0 14px 0;">It was verging on dusk, and the clock had already given warning of the hour to dress for dinner, when little Adèle, who knelt by me in the drawing-room window-seat, suddenly exclaimed—</p>
+    <p style="margin:0 0 14px 0;">“Voilà Monsieur Rochester, qui revient!”</p>
+    <p style="margin:0 0 14px 0;">I turned, and Miss Ingram darted forwards from her sofa: the others, too, looked up from their several occupations; for at the same time a crunching of wheels and a splashing tramp of horse-hoofs became audible on the wet gravel. A post-chaise was approaching.</p>
+    <p style="margin:0 0 14px 0;">“What can possess him to come home in that style?” said Miss Ingram. “He rode Mesrour (the black horse), did he not, when he went out? and Pilot was with him:—what has he done with the animals?”</p>
+    <p style="margin:0 0 14px 0;">As she said this, she approached her tall person and ample garments so near the window, that I was obliged to bend back almost to the breaking of my spine: in her eagerness she did not observe me at first, but when she did, she curled her lip and moved to another casement. The post-chaise stopped; the driver rang the door-bell, and a gentleman alighted attired in travelling garb; but it was not Mr. Rochester; it was a tall, fashionable-looking man, a stranger.</p>
+    <p style="margin:0 0 14px 0;">“How provoking!” exclaimed Miss Ingram: “you tiresome monkey!” (apostrophising Adèle), “who perched you up in the window to give false intelligence?” and she cast on me an angry glance, as if I were in fault.</p>
+    <p style="margin:0 0 14px 0;">Some parleying was audible in the hall, and soon the new-comer entered. He bowed to Lady Ingram, as deeming her the eldest lady present.</p>
+    <p style="margin:0 0 14px 0;">“It appears I come at an inopportune time, madam,” said he, “when my friend, Mr. Rochester, is from home; but I arrive from a very long journey, and I think I may presume so far on old and intimate acquaintance as to instal myself here till he returns.”</p>
+    <p style="margin:0 0 14px 0;">His manner was polite; his accent, in speaking, struck me as being somewhat unusual,—not precisely foreign, but still not altogether English: his age might be about Mr. Rochester’s,—between thirty and forty; his complexion was singularly sallow: otherwise he was a fine-looking man, at first sight especially. On closer examination, you detected something in his face that displeased, or rather that failed to please. His features were regular, but too relaxed: his eye was large and well cut, but the life looking out of it was a tame, vacant life—at least so I thought.</p>
+    <p style="margin:0 0 14px 0;">The sound of the dressing-bell dispersed the party. It was not till after dinner that I saw him again: he then seemed quite at his ease. But I liked his physiognomy even less than before: it struck me as being at the same time unsettled and inanimate. His eye wandered, and had no meaning in its wandering: this gave him an odd look, such as I never remembered to have seen. For a handsome and not an unamiable-looking man, he repelled me exceedingly: there was no power in that smooth-skinned face of a full oval shape: no firmness in that aquiline nose and small cherry mouth; there was no thought on the low, even forehead; no command in that blank, brown eye.</p>
+    <p style="margin:0 0 14px 0;">As I sat in my usual nook, and looked at him with the light of the girandoles on the mantelpiece beaming full over him—for he occupied an arm-chair drawn close to the fire, and kept shrinking still nearer, as if he were cold, I compared him with Mr. Rochester. I think (with deference be it spoken) the contrast could not be much greater between a sleek gander and a fierce falcon: between a meek sheep and the rough-coated keen-eyed dog, its guardian.</p>
+    <p style="margin:0 0 14px 0;">He had spoken of Mr. Rochester as an old friend. A curious friendship theirs must have been: a pointed illustration, indeed, of the old adage that “extremes meet.”</p>
+    <p style="margin:0 0 14px 0;">Two or three of the gentlemen sat near him, and I caught at times scraps of their conversation across the room. At first I could not make much sense of what I heard; for the discourse of Louisa Eshton and Mary Ingram, who sat nearer to me, confused the fragmentary sentences that reached me at intervals. These last were discussing the stranger; they both called him “a beautiful man.” Louisa said he was “a love of a creature,” and she “adored him;” and Mary instanced his “pretty little mouth, and nice nose,” as her ideal of the charming.</p>
+    <p style="margin:0 0 14px 0;">“And what a sweet-tempered forehead he has!” cried Louisa,—“so smooth—none of those frowning irregularities I dislike so much; and such a placid eye and smile!”</p>
+    <p style="margin:0 0 14px 0;">And then, to my great relief, Mr. Henry Lynn summoned them to the other side of the room, to settle some point about the deferred excursion to Hay Common.</p>
+    <p style="margin:0 0 14px 0;">I was now able to concentrate my attention on the group by the fire, and I presently gathered that the new-comer was called Mr. Mason; then I learned that he was but just arrived in England, and that he came from some hot country: which was the reason, doubtless, his face was so sallow, and that he sat so near the hearth, and wore a surtout in the house. Presently the words Jamaica, Kingston, Spanish Town, indicated the West Indies as his residence; and it was with no little surprise I gathered, ere long, that he had there first seen and become acquainted with Mr. Rochester. He spoke of his friend’s dislike of the burning heats, the hurricanes, and rainy seasons of that region. I knew Mr. Rochester had been a traveller: Mrs. Fairfax had said so; but I thought the continent of Europe had bounded his wanderings; till now I had never heard a hint given of visits to more distant shores.</p>
+    <p style="margin:0 0 14px 0;">I was pondering these things, when an incident, and a somewhat unexpected one, broke the thread of my musings. Mr. Mason, shivering as some one chanced to open the door, asked for more coal to be put on the fire, which had burnt out its flame, though its mass of cinder still shone hot and red. The footman who brought the coal, in going out, stopped near Mr. Eshton’s chair, and said something to him in a low voice, of which I heard only the words, “old woman,”—“quite troublesome.”</p>
+    <p style="margin:0 0 14px 0;">“Tell her she shall be put in the stocks if she does not take herself off,” replied the magistrate.</p>
+    <p style="margin:0 0 14px 0;">“No—stop!” interrupted Colonel Dent. “Don’t send her away, Eshton; we might turn the thing to account; better consult the ladies.” And speaking aloud, he continued—“Ladies, you talked of going to Hay Common to visit the gipsy camp; Sam here says that one of the old Mother Bunches is in the servants’ hall at this moment, and insists upon being brought in before ‘the quality,’ to tell them their fortunes. Would you like to see her?”</p>
+    <p style="margin:0 0 14px 0;">“Surely, colonel,” cried Lady Ingram, “you would not encourage such a low impostor? Dismiss her, by all means, at once!”</p>
+    <p style="margin:0 0 14px 0;">“But I cannot persuade her to go away, my lady,” said the footman; “nor can any of the servants: Mrs. Fairfax is with her just now, entreating her to be gone; but she has taken a chair in the chimney-corner, and says nothing shall stir her from it till she gets leave to come in here.”</p>
+    <p style="margin:0 0 14px 0;">“What does she want?” asked Mrs. Eshton.</p>
+    <p style="margin:0 0 14px 0;">“‘To tell the gentry their fortunes,’ she says, ma’am; and she swears she must and will do it.”</p>
+    <p style="margin:0 0 14px 0;">“What is she like?” inquired the Misses Eshton, in a breath.</p>
+    <p style="margin:0 0 14px 0;">“A shockingly ugly old creature, miss; almost as black as a crock.”</p>
+    <p style="margin:0 0 14px 0;">“Why, she’s a real sorceress!” cried Frederick Lynn. “Let us have her in, of course.”</p>
+    <p style="margin:0 0 14px 0;">“To be sure,” rejoined his brother; “it would be a thousand pities to throw away such a chance of fun.”</p>
+    <p style="margin:0 0 14px 0;">“My dear boys, what are you thinking about?” exclaimed Mrs. Lynn.</p>
+    <p style="margin:0 0 14px 0;">“I cannot possibly countenance any such inconsistent proceeding,” chimed in the Dowager Ingram.</p>
+    <p style="margin:0 0 14px 0;">“Indeed, mama, but you can—and will,” pronounced the haughty voice of Blanche, as she turned round on the piano-stool; where till now she had sat silent, apparently examining sundry sheets of music. “I have a curiosity to hear my fortune told: therefore, Sam, order the beldame forward.”</p>
+    <p style="margin:0 0 14px 0;">“My darling Blanche! recollect—”</p>
+    <p style="margin:0 0 14px 0;">“I do—I recollect all you can suggest; and I must have my will—quick, Sam!”</p>
+    <p style="margin:0 0 14px 0;">“Yes—yes—yes!” cried all the juveniles, both ladies and gentlemen. “Let her come—it will be excellent sport!”</p>
+    <p style="margin:0 0 14px 0;">The footman still lingered. “She looks such a rough one,” said he.</p>
+    <p style="margin:0 0 14px 0;">“Go!” ejaculated Miss Ingram, and the man went.</p>
+    <p style="margin:0 0 14px 0;">Excitement instantly seized the whole party: a running fire of raillery and jests was proceeding when Sam returned.</p>
+    <p style="margin:0 0 14px 0;">“She won’t come now,” said he. “She says it’s not her mission to appear before the ‘vulgar herd’ (them’s her words). I must show her into a room by herself, and then those who wish to consult her must go to her one by one.”</p>
+    <p style="margin:0 0 14px 0;">“You see now, my queenly Blanche,” began Lady Ingram, “she encroaches. Be advised, my angel girl—and—”</p>
+    <p style="margin:0 0 14px 0;">“Show her into the library, of course,” cut in the “angel girl.” “It is not my mission to listen to her before the vulgar herd either: I mean to have her all to myself. Is there a fire in the library?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, ma’am—but she looks such a tinkler.”</p>
+    <p style="margin:0 0 14px 0;">“Cease that chatter, blockhead! and do my bidding.”</p>
+    <p style="margin:0 0 14px 0;">Again Sam vanished; and mystery, animation, expectation rose to full flow once more.</p>
+    <p style="margin:0 0 14px 0;">“She’s ready now,” said the footman, as he reappeared. “She wishes to know who will be her first visitor.”</p>
+    <p style="margin:0 0 14px 0;">“I think I had better just look in upon her before any of the ladies go,” said Colonel Dent.</p>
+    <p style="margin:0 0 14px 0;">“Tell her, Sam, a gentleman is coming.”</p>
+    <p style="margin:0 0 14px 0;">Sam went and returned.</p>
+    <p style="margin:0 0 14px 0;">“She says, sir, that she’ll have no gentlemen; they need not trouble themselves to come near her; nor,” he added, with difficulty suppressing a titter, “any ladies either, except the young, and single.”</p>
+    <p style="margin:0 0 14px 0;">“By Jove, she has taste!” exclaimed Henry Lynn.</p>
+    <p style="margin:0 0 14px 0;">Miss Ingram rose solemnly: “I go first,” she said, in a tone which might have befitted the leader of a forlorn hope, mounting a breach in the van of his men.</p>
+    <p style="margin:0 0 14px 0;">“Oh, my best! oh, my dearest! pause—reflect!” was her mama’s cry; but she swept past her in stately silence, passed through the door which Colonel Dent held open, and we heard her enter the library.</p>
+    <p style="margin:0 0 14px 0;">A comparative silence ensued. Lady Ingram thought it “le cas” to wring her hands: which she did accordingly. Miss Mary declared she felt, for her part, she never dared venture. Amy and Louisa Eshton tittered under their breath, and looked a little frightened.</p>
+    <p style="margin:0 0 14px 0;">The minutes passed very slowly: fifteen were counted before the library-door again opened. Miss Ingram returned to us through the arch.</p>
+    <p style="margin:0 0 14px 0;">Would she laugh? Would she take it as a joke? All eyes met her with a glance of eager curiosity, and she met all eyes with one of rebuff and coldness; she looked neither flurried nor merry: she walked stiffly to her seat, and took it in silence.</p>
+    <p style="margin:0 0 14px 0;">“Well, Blanche?” said Lord Ingram.</p>
+    <p style="margin:0 0 14px 0;">“What did she say, sister?” asked Mary.</p>
+    <p style="margin:0 0 14px 0;">“What did you think? How do you feel? Is she a real fortune-teller?” demanded the Misses Eshton.</p>
+    <p style="margin:0 0 14px 0;">“Now, now, good people,” returned Miss Ingram, “don’t press upon me. Really your organs of wonder and credulity are easily excited: you seem, by the importance of you all—my good mama included—ascribe to this matter, absolutely to believe we have a genuine witch in the house, who is in close alliance with the old gentleman. I have seen a gipsy vagabond; she has practised in hackneyed fashion the science of palmistry and told me what such people usually tell. My whim is gratified; and now I think Mr. Eshton will do well to put the hag in the stocks to-morrow morning, as he threatened.”</p>
+    <p style="margin:0 0 14px 0;">Miss Ingram took a book, leant back in her chair, and so declined further conversation. I watched her for nearly half-an-hour: during all that time she never turned a page, and her face grew momently darker, more dissatisfied, and more sourly expressive of disappointment. She had obviously not heard anything to her advantage: and it seemed to me, from her prolonged fit of gloom and taciturnity, that she herself, notwithstanding her professed indifference, attached undue importance to whatever revelations had been made her.</p>
+    <p style="margin:0 0 14px 0;">During all that time she never turned a page</p>
+    <p style="margin:0 0 14px 0;">Meantime, Mary Ingram, Amy and Louisa Eshton, declared they dared not go alone; and yet they all wished to go. A negotiation was opened through the medium of the ambassador, Sam; and after much pacing to and fro, till, I think, the said Sam’s calves must have ached with the exercise, permission was at last, with great difficulty, extorted from the rigorous Sibyl, for the three to wait upon her in a body.</p>
+    <p style="margin:0 0 14px 0;">Their visit was not so still as Miss Ingram’s had been: we heard hysterical giggling and little shrieks proceeding from the library; and at the end of about twenty minutes they burst the door open, and came running across the hall, as if they were half-scared out of their wits.</p>
+    <p style="margin:0 0 14px 0;">“I am sure she is something not right!” they cried, one and all. “She told us such things! She knows all about us!” and they sank breathless into the various seats the gentlemen hastened to bring them.</p>
+    <p style="margin:0 0 14px 0;">Pressed for further explanation, they declared she had told them of things they had said and done when they were mere children; described books and ornaments they had in their boudoirs at home: keepsakes that different relations had presented to them. They affirmed that she had even divined their thoughts, and had whispered in the ear of each the name of the person she liked best in the world, and informed them of what they most wished for.</p>
+    <p style="margin:0 0 14px 0;">Here the gentlemen interposed with earnest petitions to be further enlightened on these two last-named points; but they got only blushes, ejaculations, tremors, and titters, in return for their importunity. The matrons, meantime, offered vinaigrettes and wielded fans; and again and again reiterated the expression of their concern that their warning had not been taken in time; and the elder gentlemen laughed, and the younger urged their services on the agitated fair ones.</p>
+    <p style="margin:0 0 14px 0;">In the midst of the tumult, and while my eyes and ears were fully engaged in the scene before me, I heard a hem close at my elbow: I turned, and saw Sam.</p>
+    <p style="margin:0 0 14px 0;">“If you please, miss, the gipsy declares that there is another young single lady in the room who has not been to her yet, and she swears she will not go till she has seen all. I thought it must be you: there is no one else for it. What shall I tell her?”</p>
+    <p style="margin:0 0 14px 0;">“Oh, I will go by all means,” I answered: and I was glad of the unexpected opportunity to gratify my much-excited curiosity. I slipped out of the room, unobserved by any eye—for the company were gathered in one mass about the trembling trio just returned—and I closed the door quietly behind me.</p>
+    <p style="margin:0 0 14px 0;">“If you like, miss,” said Sam, “I’ll wait in the hall for you; and if she frightens you, just call and I’ll come in.”</p>
+    <p style="margin:0 0 14px 0;">“No, Sam, return to the kitchen: I am not in the least afraid.” Nor was I; but I was a good deal interested and excited.</p>
+  </div>
+</details>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 3 &middot; NOW YOU: SOLVE THE CHARADE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">The guests act out a word in three scenes, one syllable at a time, and a watching team calls out the answer at the end of each. Put the three scenes back in the order they were performed, and notice what the finished word turns out to be.</p>
+        <div class="optima-widget ow-order" data-done="That is the order: a dumb-show wedding, then Eliezer offering gifts to Rebecca at a well, then a chained prisoner in a dark cell. Bride, well, and a prison scene together spell Bridewell, the name of a famous London prison. The game is a pun built entirely out of costume and gesture, which is exactly why it rewards the person with the most resources for spectacle.">
+            <div class="widget-kicker">&#128204; CLICK THE SCENES IN THE ORDER THEY WERE PERFORMED</div>
+            <div class="widget-question">Three tableaux, from the first curtain to the third.</div>
+            <div class="order-list">
+                <button data-order="2"><span class="seq" data-default="?">?</span> Miss Ingram, dressed as an Eastern woman, fills a pitcher at a marble basin while Mr. Rochester, turbaned and seated on the floor, offers her a casket of bracelets and rings.</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span> Sir George Lynn, wrapped in a white sheet, stands over an open book while Mr. Rochester and Miss Ingram, both in white, kneel through a dumb-show wedding ceremony; Colonel Dent calls out the answer.</button>
+                <button data-order="3"><span class="seq" data-default="?">?</span> By dim lantern light, a begrimed Mr. Rochester sits in fetters at a bare deal table, and Colonel Dent calls out the word that finishes the charade.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 14px 0 0 0;">Run the four performance questions on the charades themselves. The audience is the whole party, sorted into actors and a "divining" team; the display is Miss Ingram's beauty and Mr. Rochester's command of a room; the mask slips when Lady Ingram tries to call the whole game off and is overruled by her own daughter; and Jane's private view is that she is asked to play and refuses, which tells you something the scene itself never says aloud.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; TWO SELF-PORTRAITS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">After an evening of watching Rochester's attention settle on Blanche Ingram, Jane does not spiral. She assigns herself a task: draw her own face in chalk, "without softening one defect," and label it <em>Portrait of a Governess, disconnected, poor, and plain</em>. Then she draws, on ivory, the loveliest imagined face she can manage from Mrs. Fairfax's description, and labels it <em>Blanche, an accomplished lady of rank</em>. She calls the whole exercise "a course of wholesome discipline."</p>
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">TWO SELF-PORTRAITS, SIDE BY SIDE</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+                <div style="flex: 1; min-width: 240px; background: #FFFFFF; border: 1px solid #C7CFE6; border-radius: 8px; padding: 16px 18px;">
+                    <div style="font-size: 13px; color: #C7922C; margin-bottom: 8px;">DRAWN IN CHALK, FROM THE MIRROR</div>
+                    <div style="font-size: 17px; color: #0e1c42; font-style: italic; line-height: 1.6;">&ldquo;Portrait of a Governess, disconnected, poor, and plain.&rdquo;</div>
+                    <div style="font-size: 14px; color: #1a2340; margin-top: 10px; line-height: 1.5;">Every line kept, nothing smoothed away. Jane's instruction to herself: <em>omit no harsh line, smooth away no displeasing irregularity.</em></div>
+                </div>
+                <div style="flex: 1; min-width: 240px; background: #FFFFFF; border: 1px solid #C7CFE6; border-radius: 8px; padding: 16px 18px;">
+                    <div style="font-size: 13px; color: #C7922C; margin-bottom: 8px;">PAINTED IN IVORY, FROM DESCRIPTION</div>
+                    <div style="font-size: 17px; color: #0e1c42; font-style: italic; line-height: 1.6;">&ldquo;Blanche, an accomplished lady of rank.&rdquo;</div>
+                    <div style="font-size: 14px; color: #1a2340; margin-top: 10px; line-height: 1.5;">Painted in her softest shades, from Mrs. Fairfax's description: raven ringlets, an oriental eye, a Grecian neck.</div>
+                </div>
+            </div>
+            <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 14px;">Jane's rule for herself: whenever she suspects Rochester thinks well of her, she is to take out both pictures and compare them.</div>
+        </div>
+        <div class="rj-badge">
+            <div class="rj-icon">&#128211;</div>
+            <div>
+                <div class="rj-label">READING RESPONSE</div>
+                <div class="rj-task">Jane calls the two portraits "a course of wholesome discipline." Explain in your own words what she is training herself to do with this exercise, and name the virtue it most resembles: is it humility, self-government, honesty, or something else? To do it well, quote the sentence where she describes what the task gave her ("it had kept my head and hands employed&hellip;") and say plainly whether you think the discipline works, using what you notice about her behavior for the rest of chapter 16 and into chapter 17 as your evidence. Cite by chapter.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Claude can explain what a Victorian charade party was and how the game was typically played. It cannot tell you what Jane's two portraits reveal about her state of mind at this exact point in the novel; that reading has to come from your own attention to the words she chooses. Check any quotation it offers you against the chapter text before you use it.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>The Fortune-Teller and Mason's Wound</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A gipsy fortune-teller arrives at Thornfield, and a stranger's name makes Mr. Rochester go pale.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Reading a performance is a skill that returns later in the week, when a stranger in a red cloak sits by the library fire and starts asking questions that are a little too well informed.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">The House Party</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

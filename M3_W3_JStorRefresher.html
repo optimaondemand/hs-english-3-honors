@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; The JStor Refresher: Researching Jane's World</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3 &middot; Research Tool</div>
+        <div style="font-size: 12px; color: #0e1c42;">Refresher</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Researching Jane's World</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Research Tool</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The JStor Refresher: Researching Jane's World</div>
+        <div style="font-size: 16px; color: #0e1c42;">A short return to the toolkit you already learned</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHY THE CHRONICLE NEEDS SOURCES</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A general reader who has never opened <em>Jane Eyre</em> has no reason to trust a feature that only asserts things. What earns that trust is a feature that <strong>shows its work</strong>: real sources, checked, cited, and used honestly. Your Thornfield Chronicle piece explains one part of Jane's world to that reader, and it needs at least one source from JStor to back it up. You already learned the full JStor workflow in Module 2. This page is a refresher, not a new lesson, pointed at the Chronicle's research.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#10067; YOUR QUESTION AND YOUR PLAN, BEFORE YOU SEARCH</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65; margin-bottom: 16px;">A search without a question returns everything and settles nothing. Before you open JStor, write three short lines at the top of your Chronicle notes. Bring all three to the Week 7 project lesson; a teacher may ask to see them.</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>The question.</strong> One sentence, phrased as a question a stranger could answer with evidence, not a topic. "The governess" is a topic. "Why did a governess in the 1840s rank below the family but above the servants, and what did that cost her?" is a question.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>The plan.</strong> Two places to look (JStor is one; the novel itself, a period source, or a reference work can be the other) and one line on what kind of source would actually settle your question: a historian's article, a document from the period, a scholar's reading of the novel.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6;"><strong>The revision, after your first search.</strong> Rewrite the question narrower or aimed differently, using what the first results taught you. Under it, one honest line on what did not work (terms too broad, results all about the wrong decade, nothing scholarly) and what you changed. A question that survives its first search unchanged is usually too vague to have been tested.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129517; SIX STEPS, IN ORDER</div>
+
+        <!-- CORE VISUAL: six-step refresher flow -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">FROM SIGNING IN TO A SAVED CITATION</div>
+            <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px;">
+                <div style="flex: 1; min-width: 120px; text-align: center; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 8px;"><div style="font-size: 22px;">&#128273;</div><div style="font-size: 14px; color: #0e1c42; margin-top: 4px;"><strong>1 &middot; Sign in</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4; margin-top: 4px;">Start Here, JStor Access page</div></div>
+                <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+                <div style="flex: 1; min-width: 120px; text-align: center; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 8px;"><div style="font-size: 22px;">&#128269;</div><div style="font-size: 14px; color: #0e1c42; margin-top: 4px;"><strong>2 &middot; Search</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4; margin-top: 4px;">two or three key terms</div></div>
+                <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+                <div style="flex: 1; min-width: 120px; text-align: center; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 8px;"><div style="font-size: 22px;">&#128301;</div><div style="font-size: 14px; color: #0e1c42; margin-top: 4px;"><strong>3 &middot; Filter</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4; margin-top: 4px;">to scholarly journal articles</div></div>
+                <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+                <div style="flex: 1; min-width: 120px; text-align: center; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 8px;"><div style="font-size: 22px;">&#128196;</div><div style="font-size: 14px; color: #0e1c42; margin-top: 4px;"><strong>4 &middot; Skim</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4; margin-top: 4px;">an abstract before committing</div></div>
+                <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+                <div style="flex: 1; min-width: 120px; text-align: center; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 8px;"><div style="font-size: 22px;">&#9878;&#65039;</div><div style="font-size: 14px; color: #0e1c42; margin-top: 4px;"><strong>5 &middot; Evaluate</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4; margin-top: 4px;">credibility, the C.R.A.P. check</div></div>
+                <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+                <div style="flex: 1; min-width: 120px; text-align: center; background: #FDF3E3; border-top: 4px solid #C7922C; border: 1px solid #E7C983; border-radius: 8px; padding: 12px 8px;"><div style="font-size: 22px;">&#128221;</div><div style="font-size: 14px; color: #0e1c42; margin-top: 4px;"><strong>6 &middot; Save</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4; margin-top: 4px;">the citation, export MLA</div></div>
+            </div>
+        </div>
+
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-top: 16px;">
+            <div style="border-left: 3px solid #3B4E8C; padding-left: 14px; margin-bottom: 8px;"><strong>1. Sign in.</strong> Open the Canvas-native <strong>"Research &amp; JStor Access"</strong> page inside the Start Here module and sign in at www.jstor.org with the credentials posted there. Those credentials live only on that page; never write them anywhere else, including here.</div>
+            <div style="border-left: 3px solid #3B4E8C; padding-left: 14px; margin-bottom: 8px;"><strong>2. Search.</strong> Use two or three key terms pulled from your chosen Chronicle angle, not a full sentence.</div>
+            <div style="border-left: 3px solid #3B4E8C; padding-left: 14px; margin-bottom: 8px;"><strong>3. Filter to scholarly.</strong> In the results sidebar, limit the content type to journal articles, where peer review lives.</div>
+            <div style="border-left: 3px solid #3B4E8C; padding-left: 14px; margin-bottom: 8px;"><strong>4. Skim an abstract.</strong> Read the short summary at the top of an article before opening the whole thing; it tells you in a minute whether the source actually addresses your angle.</div>
+            <div style="border-left: 3px solid #3B4E8C; padding-left: 14px; margin-bottom: 8px;"><strong>5. Evaluate credibility.</strong> Run the C.R.A.P. check from Module 2: Currency (when was it written), Relevance (does it address your actual question), Authority (who wrote it and where), Purpose (is it informing, arguing, or advocating).</div>
+            <div style="border-left: 3px solid #C7922C; padding-left: 14px;"><strong>6. Save the citation and export MLA.</strong> On the article page, use the "Cite" option, choose MLA, and paste the citation into your working document the moment you decide to use the source.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128269; FOUR EXAMPLE SEARCH STRINGS, ONE PER CHRONICLE ANGLE</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 14px 0;">These show the <em>form</em> a good search takes: short, phrase-quoted where it helps, matched to an angle. They are examples of queries to try, not claims about what any of them will return. Run your own version on JStor and see what actually comes up.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <div style="flex: 1; min-width: 220px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px;"><div style="font-size:14px; color:#3B4E8C; margin-bottom:6px;"><strong>The governess question</strong></div><div style="font-size:15px; color:#0e1c42; font-family: 'Courier New', monospace;">"governess" Victorian history</div></div>
+            <div style="flex: 1; min-width: 220px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px;"><div style="font-size:14px; color:#3B4E8C; margin-bottom:6px;"><strong>The Gothic mode</strong></div><div style="font-size:15px; color:#0e1c42; font-family: 'Courier New', monospace;">Gothic fiction Bront&euml;</div></div>
+            <div style="flex: 1; min-width: 220px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px;"><div style="font-size:14px; color:#3B4E8C; margin-bottom:6px;"><strong>Marriage law and money</strong></div><div style="font-size:15px; color:#0e1c42; font-family: 'Courier New', monospace;">Victorian marriage law inheritance women</div></div>
+            <div style="flex: 1; min-width: 220px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px;"><div style="font-size:14px; color:#3B4E8C; margin-bottom:6px;"><strong>The coming-of-age shape</strong></div><div style="font-size:15px; color:#0e1c42; font-family: 'Courier New', monospace;">Bildungsroman "Jane Eyre"</div></div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#129525; FROM SOURCE TO SENTENCE</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0 0 14px 0;">A source does not walk straight into your paragraph. It passes through five stops on the way from the page you found to the sentence you write:</p>
+        <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px;">
+            <div style="flex: 1; min-width: 110px; text-align: center; background: #EEF1F8; border-radius: 8px; padding: 12px 8px;"><div style="font-size: 22px;">&#128214;</div><div style="font-size: 14px; color: #0e1c42; margin-top: 4px;"><strong>Read</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4;">the whole passage, not just the line you want</div></div>
+            <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+            <div style="flex: 1; min-width: 110px; text-align: center; background: #EEF1F8; border-radius: 8px; padding: 12px 8px;"><div style="font-size: 22px;">&#128221;</div><div style="font-size: 14px; color: #0e1c42; margin-top: 4px;"><strong>Note</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4;">what it actually says, in your own shorthand</div></div>
+            <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+            <div style="flex: 1; min-width: 110px; text-align: center; background: #EEF1F8; border-radius: 8px; padding: 12px 8px;"><div style="font-size: 22px;">&#128172;</div><div style="font-size: 14px; color: #0e1c42; margin-top: 4px;"><strong>Paraphrase</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4;">it in your own words for most of your draft</div></div>
+            <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+            <div style="flex: 1; min-width: 110px; text-align: center; background: #EEF1F8; border-radius: 8px; padding: 12px 8px;"><div style="font-size: 22px;">&#128100;</div><div style="font-size: 14px; color: #0e1c42; margin-top: 4px;"><strong>Attribute</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4;">it to the author by name in your sentence</div></div>
+            <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+            <div style="flex: 1; min-width: 110px; text-align: center; background: #FDF3E3; border-radius: 8px; padding: 12px 8px;"><div style="font-size: 22px;">&#128221;</div><div style="font-size: 14px; color: #0e1c42; margin-top: 4px;"><strong>Cite</strong></div><div style="font-size: 12px; color: #1a2340; line-height: 1.4;">it in MLA, in-text and in the source list</div></div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="optima-widget ow-reflect" style="margin: 0;">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN</div>
+            <div class="widget-question">Which of your four Chronicle angle choices are you leaning toward right now, and why?</div>
+            <div class="widget-options">
+                <button data-response="Good. Turn that instinct into a search: pull two or three key terms from the angle you named and try step 2 of the refresher above.">The governess question interests me most</button>
+                <button data-response="The Gothic angle has plenty to say about mood and setting. Try a search combining Gothic fiction with Bronte's name, then filter to journal articles.">I want to write about the Gothic mode</button>
+                <button data-response="Money and marriage law shaped nearly every choice open to a Victorian woman. A search on inheritance and marriage law will get you started.">The money and marriage side interests me</button>
+                <button data-response="The coming-of-age shape is one every reader half-recognizes. A search on the Bildungsroman form paired with the novel's title is a strong place to begin.">I'm drawn to the coming-of-age shape</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Run one search on JStor for your chosen Chronicle angle. Write down your search terms, and the titles, authors, and publication years of two promising articles from your results. You are logging what you found, not claiming you have read or used them yet; that comes later, when you write the Chronicle draft.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Claude can suggest search terms for your angle and summarize an abstract you paste in. It cannot tell you whether an article exists or what it says: AI tools routinely invent titles, authors, and journals that do not exist. Only cite a source you found and opened on JStor yourself; every citation in your Chronicle is verified on JStor itself.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#9997;&#65039;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Arrival at Thornfield</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Jane arrives at a new house with a new set of questions. Keep your search from today running in the background as you read.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A feature a stranger can trust is a feature that shows its work. Every search you run this week becomes a citation your reader can check for themselves, which is exactly what separates a Chronicle feature from a rumor.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Research Tool &middot; The JStor Refresher: Researching Jane's World</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button').forEach(function (b) { b.classList.remove('selected'); b.classList.remove('matched'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w._matchPick = null;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

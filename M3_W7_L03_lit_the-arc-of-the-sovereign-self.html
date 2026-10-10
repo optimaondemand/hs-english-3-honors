@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; The Arc of the Sovereign Self</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 7</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (3 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Arc of the Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Jane Eyre, the whole novel (synthesis)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Literature &middot; Synthesis</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Arc of the Sovereign Self</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A ten-year-old shut in a room cries "Unjust!" A grown woman at Ferndean chooses a blind man freely. Between those two moments, the same self says no, five separate times, to five separate people who wanted her to be less than whole.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have now read the whole novel. Today's lesson steps back from any single scene to trace the shape of Jane's arc across all thirty-eight chapters, then sets that arc beside the other selves this year has studied: a prince who examined his own conscience before acting, a pseudonymous arguer defending a form of government, a philosopher urging self-trust, and a man who claimed his own selfhood against literal bondage. This is the lesson where the whole year's question comes into view at once.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> place Jane's five key refusals in the order they occur and explain what each one costs her.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> connect Jane's arc to at least two other selves studied this year, naming a real point of comparison for each.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state my own current answer to the module question, using Jane's arc as evidence.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN</div>
+            <div class="widget-question">Looking back over the whole novel, which of Jane's refusals felt like it cost her the most: Gateshead, Brocklehurst, Rochester, St. John's mission, or St. John's proposal?</div>
+            <div class="widget-options">
+                <button data-response="A child's refusal has the least to lose materially and the most to lose in safety; Jane has nowhere else to go. Weigh that against the adult refusals, where she has more options but also more to give up.">The earliest ones, when she had the least power</button>
+                <button data-response="The proposals are where she refuses something she might actually have wanted for the wrong reasons, love without law, or duty mistaken for love. That makes them a different kind of costly.">The two marriage proposals, because she wanted connection</button>
+                <button data-response="Ranking the costs against each other is exactly today's work. Keep this instinct in mind as you build the timeline below and see if it still holds.">I cannot rank them; each cost something different</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Reading tool: the arc as a labeled timeline</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">A character's arc becomes visible only when you step back far enough to see the whole shape at once, the way you might step back from a single brushstroke to see a painting. Jane's arc is built from five moments where she is offered a version of safety, love, or belonging that requires her to become less than a whole person, and she says no every time. Read the timeline below left to right. At each point, notice not just what she refuses, but what refusing costs her right then, since the cost is different every time.</p>
+
+        <!-- CORE VISUAL: labeled arc/timeline -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 16px; text-align: center;">THE ARC: FIVE REFUSALS, GATESHEAD TO FERNDEAN</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch;">
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #0E1C42; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;">
+                    <div style="font-size: 12px; color: #3B4E8C; margin-bottom: 4px;">CH. 2 &middot; GATESHEAD</div>
+                    <div style="font-size: 14px; color: #0e1c42; margin-bottom: 6px;"><strong>"Unjust!"</strong></div>
+                    <div style="font-size: 13px; color: #1a2340; line-height: 1.5;">A child refuses to accept a punishment she has not earned. Cost: the red-room itself.</div>
+                </div>
+                <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #0E1C42; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;">
+                    <div style="font-size: 12px; color: #3B4E8C; margin-bottom: 4px;">CH. 4 &middot; GATESHEAD</div>
+                    <div style="font-size: 14px; color: #0e1c42; margin-bottom: 6px;"><strong>"I am not deceitful"</strong></div>
+                    <div style="font-size: 13px; color: #1a2340; line-height: 1.5;">A child refuses a false label and hands it back to the person who gave it to her. Cost: the after-taste of vengeance.</div>
+                </div>
+                <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #0E1C42; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;">
+                    <div style="font-size: 12px; color: #3B4E8C; margin-bottom: 4px;">CH. 23 &middot; THORNFIELD</div>
+                    <div style="font-size: 14px; color: #0e1c42; margin-bottom: 6px;"><strong>"A free human being"</strong></div>
+                    <div style="font-size: 13px; color: #1a2340; line-height: 1.5;">A young woman refuses to stay for love without a lawful marriage. Cost: the man she loves.</div>
+                </div>
+                <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #0E1C42; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;">
+                    <div style="font-size: 12px; color: #3B4E8C; margin-bottom: 4px;">CH. 27 &middot; THORNFIELD</div>
+                    <div style="font-size: 14px; color: #0e1c42; margin-bottom: 6px;"><strong>"I care for myself"</strong></div>
+                    <div style="font-size: 13px; color: #1a2340; line-height: 1.5;">She refuses to become Rochester's mistress even in her lowest, loneliest moment. Cost: a home and every certainty she had.</div>
+                </div>
+                <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 18px;">&#8594;</div>
+                <div style="flex: 1; min-width: 150px; background: #FDF3E3; border-top: 4px solid #C7922C; border: 1px solid #E7C983; border-radius: 8px; padding: 12px 14px;">
+                    <div style="font-size: 12px; color: #C7922C; margin-bottom: 4px;">CH. 34 &middot; MOOR HOUSE</div>
+                    <div style="font-size: 14px; color: #0e1c42; margin-bottom: 6px;"><strong>"I scorn your idea of love"</strong></div>
+                    <div style="font-size: 13px; color: #1a2340; line-height: 1.5;">A grown woman refuses duty without love. Cost: a great purpose and her cousin's regard.</div>
+                </div>
+            </div>
+            <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 16px;">Five refusals, five different costs, one self that will not shrink to fit anyone else's terms.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 2 &middot; THE YEAR'S OTHER VOICES</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Jane is not the only self this year has studied under pressure. Set her arc beside the others, briefly, to see what the comparison reveals.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+            <div style="flex: 1; min-width: 220px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px;">
+                <div style="font-size: 15px; color: #0e1c42; margin-bottom: 6px;"><strong>Hamlet</strong> <span style="font-size: 12px; color: #3B4E8C;">(Module 1)</span></div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">A prince examines his own conscience before he will act, delaying rather than accepting a role handed to him from outside. Jane's refusals are faster, but the same insistence on examining a demand before yielding to it runs through both.</div>
+            </div>
+            <div style="flex: 1; min-width: 220px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px;">
+                <div style="font-size: 15px; color: #0e1c42; margin-bottom: 6px;"><strong>Publius</strong> <span style="font-size: 12px; color: #3B4E8C;">(Module 2)</span></div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">A pseudonymous author argues that a government of laws, not of unchecked will, protects a people from tyranny. St. John's proposal in chapter 34 asks Jane to accept his will as her law; her refusal is a one-person version of the same argument.</div>
+            </div>
+            <div style="flex: 1; min-width: 220px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px;">
+                <div style="font-size: 15px; color: #0e1c42; margin-bottom: 6px;"><strong>Emerson</strong> <span style="font-size: 12px; color: #3B4E8C;">(Module 2)</span></div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">"Trust thyself" is Emerson's whole argument compressed into two words. Every one of Jane's five refusals is an act of trusting her own judgment over an authority, a suitor, or a cousin who is certain he knows better.</div>
+            </div>
+            <div style="flex: 1; min-width: 220px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px;">
+                <div style="font-size: 15px; color: #0e1c42; margin-bottom: 6px;"><strong>Douglass</strong> <span style="font-size: 12px; color: #3B4E8C;">(Module 2)</span></div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Douglass claims his own selfhood against literal, legal bondage, a claim of an entirely different order of cost than Jane's. Setting the two side by side is not a claim that their situations were equal; it shows how far the idea of a self that will not be owned reaches across this year's very different texts.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ow-order widget -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 3 &middot; NOW YOU: ORDER THE FIVE TURNING POINTS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Click the five turning points in the order they happen in the novel.</p>
+        <div class="optima-widget ow-order" data-done="That is the order the novel follows. Notice that the costs do not get smaller as Jane gets older and more capable; they simply change shape.">
+            <div class="widget-kicker">&#128203; PUT THESE IN ORDER</div>
+            <div class="widget-question">Click the beats in the order they happen in the novel.</div>
+            <div class="order-list">
+                <button data-order="4"><span class="seq" data-default="?">?</span>"I care for myself": Jane refuses to become Rochester's mistress (ch. 27)</button>
+                <button data-order="2"><span class="seq" data-default="?">?</span>"I am not deceitful": Jane refuses Mrs. Reed's false label (ch. 4)</button>
+                <button data-order="5"><span class="seq" data-default="?">?</span>"I scorn your idea of love": Jane refuses St. John's proposal (ch. 34)</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span>"Unjust!": Jane refuses an unearned punishment in the red-room (ch. 2)</button>
+                <button data-order="3"><span class="seq" data-default="?">?</span>"A free human being with an independent will": Jane refuses to stay with Rochester unmarried (ch. 23)</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING RESPONSE &middot; YOUR CLAIM</div>
+            <div class="rj-task">Write the first draft of your end-of-module answer to the question: <em>What does it cost to stay true to one's conscience under the pressures of love, faith, and authority, and is it worth it?</em> Use at least three of Jane's five refusals as evidence, naming the specific cost of each, and bring in at least one of the year's other voices (Hamlet, Publius, Emerson, or Douglass) as a point of comparison. This is a first draft, not a final essay: aim for a real, defensible position, not a summary of the novel.</div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Claude can help you check that a comparison you draw between Jane and one of the year's other voices is textually accurate, for instance, confirming what Emerson's "Trust thyself" actually argues in context. It cannot decide your own claim for you; that synthesis is the whole point of this lesson and this module.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Grammar &amp; Vocabulary</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">MLA for a novel: how to cite Jane Eyre correctly in a Works Cited list and in-text, the skills a writer needs to quote a novel correctly.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Every text this year has asked the same underlying question in a different costume: what does a self owe itself when the world outside demands something less than the whole of it? Whatever angle a writer takes, a governess's real position, the Gothic mode, inheritance and marriage law, or the shape of a coming-of-age story, the work explains one more piece of the world that tested this same sovereign self.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">The Arc of the Sovereign Self</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .order-list button').forEach(function (b) { b.classList.remove('selected'); b.classList.remove('picked'); b.disabled = false; var s = b.querySelector('.seq'); if (s) s.textContent = s.dataset.default || '?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w._orderSeq = 0;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq = (ow._orderSeq || 0) + 1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen = ow._orderSeq; var seq = oBtn.querySelector('.seq'); if (seq) seq.textContent = ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok = true; all.forEach(function (b) { if (b.dataset.chosen !== b.dataset.order) ok = false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the novel follows. Hit Reset and retrace the arc.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

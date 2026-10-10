@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; Morton and the Inheritance</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all 0.15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    details.je-reader summary::-webkit-details-marker { display:none; }
+    details.je-reader[open] summary { border-bottom:1px solid #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 6</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (2 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Morton and the Inheritance</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Jane Eyre, ch. 31&ndash;33</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Morton and the Inheritance</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A schoolmistress teaches farm girls their letters by day, and a clergyman refuses the one thing he wants most, while a stranger's fortune quietly changes both their lives.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Chapters 31 through 33 hold two separate stories about giving something up. St. John Rivers is offered a wealthy, beautiful woman who plainly loves him, and turns her down for a purpose he has already chosen. Jane is offered a fortune that would finally make her secure, and gives three quarters of it away to cousins she met a month ago. Today's tool is reading a character's decision about money or love as a direct statement of what that character actually values, often more honest than anything the character says in dialogue. Watch what each of them is willing to refuse.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> read a character's choice about money or love as evidence of what that character values, not just what they say.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why St. John refuses to pursue Rosamond Oliver, in his own stated terms.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why Jane insists on dividing her inheritance four ways instead of keeping it.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN</div>
+            <div class="widget-question">If you suddenly received a large amount of money you had not earned, what would tell you most about a person: how much they kept, or how they explained keeping it?</div>
+            <div class="widget-options">
+                <button data-response="Jane's chapter 33 argument runs exactly this way: she does not simply announce a decision, she argues for it in the language of justice and kinship. Watch what reasons she gives St. John, and whether they are about fairness or about something else.">How they explained it</button>
+                <button data-response="The number itself is where this chapter actually lands: Jane could keep all twenty thousand pounds and calls it unjust. Watch for the exact fraction she insists on.">How much they kept</button>
+                <button data-response="Brontë gives you both: a number (what Jane does) and a speech defending it (why she says she does it). Watch for the moment the reasons stop being about money at all.">Both together</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Reading a choice about money or love as a statement of value</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">When a character explains, out loud, what they believe, a reader has to decide how much to trust the explanation. When a character gives up something they visibly want, for a reason they choose to name, the action and the reason together are harder to fake. St. John tells Jane plainly that he loves Rosamond Oliver "wildly" and just as plainly that he will not marry her, because a missionary's wife is not what she could be. Jane, offered twenty thousand pounds outright and legally hers, insists on splitting it four ways among cousins she has known a matter of weeks. Read each refusal for its stated reason, then ask whether the reason matches everything else you know about that character so far.</p>
+
+        <!-- CORE VISUAL: two disciplines -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">TWO KINDS OF DISCIPLINE: CHAPTERS 31&ndash;33</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+                <div style="flex: 1; min-width: 240px; background: #FFFFFF; border-top: 4px solid #0E1C42; border: 1px solid #C7CFE6; border-radius: 8px; padding: 16px 18px;">
+                    <div style="font-size: 16px; color: #0e1c42; margin-bottom: 10px;"><strong>ST. JOHN AND ROSAMOND</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.7;">What he wants: her, by his own account. What he refuses: her, because he judges she would not make "a missionary's wife." Ask: does he refuse out of love for his vocation, or something colder, and how do you know?</div>
+                </div>
+                <div style="flex: 1; min-width: 240px; background: #FDF3E3; border-top: 4px solid #C7922C; border: 1px solid #E7C983; border-radius: 8px; padding: 16px 18px;">
+                    <div style="font-size: 16px; color: #0e1c42; margin-bottom: 10px;"><strong>JANE AND THE INHERITANCE</strong></div>
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.7;">What she is owed: all twenty thousand pounds, by her uncle's will. What she gives away: fifteen thousand of it, to cousins she barely knows. Ask: what does she say she is buying with that money, if not comfort?</div>
+                </div>
+            </div>
+            <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 14px;">Both refuse an easy gain. What each one chooses instead tells you what they actually value.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 2 &middot; NOW READ CHAPTERS 31&ndash;33</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 4px 0;"><strong>Watch for, chapter 31:</strong> the question Jane asks herself about her old life at Thornfield, and how St. John reacts the moment Rosamond Oliver walks up unannounced.</p>
+            <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter XXXI</strong> <span style="font-size:13px; color:#3B4E8C;">(about 3,100 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">My home, then, when I at last find a home,—is a cottage; a little room with whitewashed walls and a sanded floor, containing four painted chairs and a table, a clock, a cupboard, with two or three plates and dishes, and a set of tea-things in delf. Above, a chamber of the same dimensions as the kitchen, with a deal bedstead and chest of drawers; small, yet too large to be filled with my scanty wardrobe: though the kindness of my gentle and generous friends has increased that, by a modest stock of such things as are necessary.</p>
+    <p style="margin:0 0 14px 0;">It is evening. I have dismissed, with the fee of an orange, the little orphan who serves me as a handmaid. I am sitting alone on the hearth. This morning, the village school opened. I had twenty scholars. But three of the number can read: none write or cipher. Several knit, and a few sew a little. They speak with the broadest accent of the district. At present, they and I have a difficulty in understanding each other’s language. Some of them are unmannered, rough, intractable, as well as ignorant; but others are docile, have a wish to learn, and evince a disposition that pleases me. I must not forget that these coarsely-clad little peasants are of flesh and blood as good as the scions of gentlest genealogy; and that the germs of native excellence, refinement, intelligence, kind feeling, are as likely to exist in their hearts as in those of the best-born. My duty will be to develop these germs: surely I shall find some happiness in discharging that office. Much enjoyment I do not expect in the life opening before me: yet it will, doubtless, if I regulate my mind, and exert my powers as I ought, yield me enough to live on from day to day.</p>
+    <p style="margin:0 0 14px 0;">Was I very gleeful, settled, content, during the hours I passed in yonder bare, humble schoolroom this morning and afternoon? Not to deceive myself, I must reply—No: I felt desolate to a degree. I felt—yes, idiot that I am—I felt degraded. I doubted I had taken a step which sank instead of raising me in the scale of social existence. I was weakly dismayed at the ignorance, the poverty, the coarseness of all I heard and saw round me. But let me not hate and despise myself too much for these feelings; I know them to be wrong—that is a great step gained; I shall strive to overcome them. To-morrow, I trust, I shall get the better of them partially; and in a few weeks, perhaps, they will be quite subdued. In a few months, it is possible, the happiness of seeing progress, and a change for the better in my scholars may substitute gratification for disgust.</p>
+    <p style="margin:0 0 14px 0;">Meantime, let me ask myself one question—Which is better?—To have surrendered to temptation; listened to passion; made no painful effort—no struggle;—but to have sunk down in the silken snare; fallen asleep on the flowers covering it; wakened in a southern clime, amongst the luxuries of a pleasure villa: to have been now living in France, Mr. Rochester’s mistress; delirious with his love half my time—for he would—oh, yes, he would have loved me well for a while. He <em>did</em> love me—no one will ever love me so again. I shall never more know the sweet homage given to beauty, youth, and grace—for never to any one else shall I seem to possess these charms. He was fond and proud of me—it is what no man besides will ever be.—But where am I wandering, and what am I saying, and above all, feeling? Whether is it better, I ask, to be a slave in a fool’s paradise at Marseilles—fevered with delusive bliss one hour—suffocating with the bitterest tears of remorse and shame the next—or to be a village-schoolmistress, free and honest, in a breezy mountain nook in the healthy heart of England?</p>
+    <p style="margin:0 0 14px 0;">Yes; I feel now that I was right when I adhered to principle and law, and scorned and crushed the insane promptings of a frenzied moment. God directed me to a correct choice: I thank His providence for the guidance!</p>
+    <p style="margin:0 0 14px 0;">Having brought my eventide musings to this point, I rose, went to my door, and looked at the sunset of the harvest-day, and at the quiet fields before my cottage, which, with the school, was distant half a mile from the village. The birds were singing their last strains—</p>
+    <p style="margin:0 0 14px 0;">“The air was mild, the dew was balm.”</p>
+    <p style="margin:0 0 14px 0;">While I looked, I thought myself happy, and was surprised to find myself ere long weeping—and why? For the doom which had reft me from adhesion to my master: for him I was no more to see; for the desperate grief and fatal fury—consequences of my departure—which might now, perhaps, be dragging him from the path of right, too far to leave hope of ultimate restoration thither. At this thought, I turned my face aside from the lovely sky of eve and lonely vale of Morton—I say <em>lonely</em>, for in that bend of it visible to me there was no building apparent save the church and the parsonage, half-hid in trees, and, quite at the extremity, the roof of Vale Hall, where the rich Mr. Oliver and his daughter lived. I hid my eyes, and leant my head against the stone frame of my door; but soon a slight noise near the wicket which shut in my tiny garden from the meadow beyond it made me look up. A dog—old Carlo, Mr. Rivers’ pointer, as I saw in a moment—was pushing the gate with his nose, and St. John himself leant upon it with folded arms; his brow knit, his gaze, grave almost to displeasure, fixed on me. I asked him to come in.</p>
+    <p style="margin:0 0 14px 0;">“No, I cannot stay; I have only brought you a little parcel my sisters left for you. I think it contains a colour-box, pencils, and paper.”</p>
+    <p style="margin:0 0 14px 0;">I approached to take it: a welcome gift it was. He examined my face, I thought, with austerity, as I came near: the traces of tears were doubtless very visible upon it.</p>
+    <p style="margin:0 0 14px 0;">“Have you found your first day’s work harder than you expected?” he asked.</p>
+    <p style="margin:0 0 14px 0;">“Oh, no! On the contrary, I think in time I shall get on with my scholars very well.”</p>
+    <p style="margin:0 0 14px 0;">“But perhaps your accommodations—your cottage—your furniture—have disappointed your expectations? They are, in truth, scanty enough; but—” I interrupted—</p>
+    <p style="margin:0 0 14px 0;">“My cottage is clean and weather-proof; my furniture sufficient and commodious. All I see has made me thankful, not despondent. I am not absolutely such a fool and sensualist as to regret the absence of a carpet, a sofa, and silver plate; besides, five weeks ago I had nothing—I was an outcast, a beggar, a vagrant; now I have acquaintance, a home, a business. I wonder at the goodness of God; the generosity of my friends; the bounty of my lot. I do not repine.”</p>
+    <p style="margin:0 0 14px 0;">“But you feel solitude an oppression? The little house there behind you is dark and empty.”</p>
+    <p style="margin:0 0 14px 0;">“I have hardly had time yet to enjoy a sense of tranquillity, much less to grow impatient under one of loneliness.”</p>
+    <p style="margin:0 0 14px 0;">“Very well; I hope you feel the content you express: at any rate, your good sense will tell you that it is too soon yet to yield to the vacillating fears of Lot’s wife. What you had left before I saw you, of course I do not know; but I counsel you to resist firmly every temptation which would incline you to look back: pursue your present career steadily, for some months at least.”</p>
+    <p style="margin:0 0 14px 0;">“It is what I mean to do,” I answered. St. John continued—</p>
+    <p style="margin:0 0 14px 0;">“It is hard work to control the workings of inclination and turn the bent of nature; but that it may be done, I know from experience. God has given us, in a measure, the power to make our own fate; and when our energies seem to demand a sustenance they cannot get—when our will strains after a path we may not follow—we need neither starve from inanition, nor stand still in despair: we have but to seek another nourishment for the mind, as strong as the forbidden food it longed to taste—and perhaps purer; and to hew out for the adventurous foot a road as direct and broad as the one Fortune has blocked up against us, if rougher than it.</p>
+    <p style="margin:0 0 14px 0;">“A year ago I was myself intensely miserable, because I thought I had made a mistake in entering the ministry: its uniform duties wearied me to death. I burnt for the more active life of the world—for the more exciting toils of a literary career—for the destiny of an artist, author, orator; anything rather than that of a priest: yes, the heart of a politician, of a soldier, of a votary of glory, a lover of renown, a luster after power, beat under my curate’s surplice. I considered; my life was so wretched, it must be changed, or I must die. After a season of darkness and struggling, light broke and relief fell: my cramped existence all at once spread out to a plain without bounds—my powers heard a call from heaven to rise, gather their full strength, spread their wings, and mount beyond ken. God had an errand for me; to bear which afar, to deliver it well, skill and strength, courage and eloquence, the best qualifications of soldier, statesman, and orator, were all needed: for these all centre in the good missionary.</p>
+    <p style="margin:0 0 14px 0;">“A missionary I resolved to be. From that moment my state of mind changed; the fetters dissolved and dropped from every faculty, leaving nothing of bondage but its galling soreness—which time only can heal. My father, indeed, imposed the determination, but since his death, I have not a legitimate obstacle to contend with; some affairs settled, a successor for Morton provided, an entanglement or two of the feelings broken through or cut asunder—a last conflict with human weakness, in which I know I shall overcome, because I have vowed that I <em>will</em> overcome—and I leave Europe for the East.”</p>
+    <p style="margin:0 0 14px 0;">He said this, in his peculiar, subdued, yet emphatic voice; looking, when he had ceased speaking, not at me, but at the setting sun, at which I looked too. Both he and I had our backs towards the path leading up the field to the wicket. We had heard no step on that grass-grown track; the water running in the vale was the one lulling sound of the hour and scene; we might well then start when a gay voice, sweet as a silver bell, exclaimed—</p>
+    <p style="margin:0 0 14px 0;">“Good evening, Mr. Rivers. And good evening, old Carlo. Your dog is quicker to recognise his friends than you are, sir; he pricked his ears and wagged his tail when I was at the bottom of the field, and you have your back towards me now.”</p>
+    <p style="margin:0 0 14px 0;">It was true. Though Mr. Rivers had started at the first of those musical accents, as if a thunderbolt had split a cloud over his head, he stood yet, at the close of the sentence, in the same attitude in which the speaker had surprised him—his arm resting on the gate, his face directed towards the west. He turned at last, with measured deliberation. A vision, as it seemed to me, had risen at his side. There appeared, within three feet of him, a form clad in pure white—a youthful, graceful form: full, yet fine in contour; and when, after bending to caress Carlo, it lifted up its head, and threw back a long veil, there bloomed under his glance a face of perfect beauty. Perfect beauty is a strong expression; but I do not retrace or qualify it: as sweet features as ever the temperate clime of Albion moulded; as pure hues of rose and lily as ever her humid gales and vapoury skies generated and screened, justified, in this instance, the term. No charm was wanting, no defect was perceptible; the young girl had regular and delicate lineaments; eyes shaped and coloured as we see them in lovely pictures, large, and dark, and full; the long and shadowy eyelash which encircles a fine eye with so soft a fascination; the pencilled brow which gives such clearness; the white smooth forehead, which adds such repose to the livelier beauties of tint and ray; the cheek oval, fresh, and smooth; the lips, fresh too, ruddy, healthy, sweetly formed; the even and gleaming teeth without flaw; the small dimpled chin; the ornament of rich, plenteous tresses—all advantages, in short, which, combined, realise the ideal of beauty, were fully hers. I wondered, as I looked at this fair creature: I admired her with my whole heart. Nature had surely formed her in a partial mood; and, forgetting her usual stinted step-mother dole of gifts, had endowed this, her darling, with a grand-dame’s bounty.</p>
+    <p style="margin:0 0 14px 0;">What did St. John Rivers think of this earthly angel? I naturally asked myself that question as I saw him turn to her and look at her; and, as naturally, I sought the answer to the inquiry in his countenance. He had already withdrawn his eye from the Peri, and was looking at a humble tuft of daisies which grew by the wicket.</p>
+    <p style="margin:0 0 14px 0;">“A lovely evening, but late for you to be out alone,” he said, as he crushed the snowy heads of the closed flowers with his foot.</p>
+    <p style="margin:0 0 14px 0;">“Oh, I only came home from S——” (she mentioned the name of a large town some twenty miles distant) “this afternoon. Papa told me you had opened your school, and that the new mistress was come; and so I put on my bonnet after tea, and ran up the valley to see her: this is she?” pointing to me.</p>
+    <p style="margin:0 0 14px 0;">“It is,” said St. John.</p>
+    <p style="margin:0 0 14px 0;">“Do you think you shall like Morton?” she asked of me, with a direct and naïve simplicity of tone and manner, pleasing, if child-like.</p>
+    <p style="margin:0 0 14px 0;">“I hope I shall. I have many inducements to do so.”</p>
+    <p style="margin:0 0 14px 0;">“Did you find your scholars as attentive as you expected?”</p>
+    <p style="margin:0 0 14px 0;">“Quite.”</p>
+    <p style="margin:0 0 14px 0;">“Do you like your house?”</p>
+    <p style="margin:0 0 14px 0;">“Very much.”</p>
+    <p style="margin:0 0 14px 0;">“Have I furnished it nicely?”</p>
+    <p style="margin:0 0 14px 0;">“Very nicely, indeed.”</p>
+    <p style="margin:0 0 14px 0;">“And made a good choice of an attendant for you in Alice Wood?”</p>
+    <p style="margin:0 0 14px 0;">“You have indeed. She is teachable and handy.” (This then, I thought, is Miss Oliver, the heiress; favoured, it seems, in the gifts of fortune, as well as in those of nature! What happy combination of the planets presided over her birth, I wonder?)</p>
+    <p style="margin:0 0 14px 0;">“I shall come up and help you to teach sometimes,” she added. “It will be a change for me to visit you now and then; and I like a change. Mr. Rivers, I have been <em>so</em> gay during my stay at S——. Last night, or rather this morning, I was dancing till two o’clock. The ——th regiment are stationed there since the riots; and the officers are the most agreeable men in the world: they put all our young knife-grinders and scissor merchants to shame.”</p>
+    <p style="margin:0 0 14px 0;">It seemed to me that Mr. St. John’s under lip protruded, and his upper lip curled a moment. His mouth certainly looked a good deal compressed, and the lower part of his face unusually stern and square, as the laughing girl gave him this information. He lifted his gaze, too, from the daisies, and turned it on her. An unsmiling, a searching, a meaning gaze it was. She answered it with a second laugh, and laughter well became her youth, her roses, her dimples, her bright eyes.</p>
+    <p style="margin:0 0 14px 0;">As he stood, mute and grave, she again fell to caressing Carlo. “Poor Carlo loves me,” said she. “<em>He</em> is not stern and distant to his friends; and if he could speak, he would not be silent.”</p>
+    <p style="margin:0 0 14px 0;">As she patted the dog’s head, bending with native grace before his young and austere master, I saw a glow rise to that master’s face. I saw his solemn eye melt with sudden fire, and flicker with resistless emotion. Flushed and kindled thus, he looked nearly as beautiful for a man as she for a woman. His chest heaved once, as if his large heart, weary of despotic constriction, had expanded, despite the will, and made a vigorous bound for the attainment of liberty. But he curbed it, I think, as a resolute rider would curb a rearing steed. He responded neither by word nor movement to the gentle advances made him.</p>
+    <p style="margin:0 0 14px 0;">“Papa says you never come to see us now,” continued Miss Oliver, looking up. “You are quite a stranger at Vale Hall. He is alone this evening, and not very well: will you return with me and visit him?”</p>
+    <p style="margin:0 0 14px 0;">“It is not a seasonable hour to intrude on Mr. Oliver,” answered St. John.</p>
+    <p style="margin:0 0 14px 0;">“Not a seasonable hour! But I declare it is. It is just the hour when papa most wants company: when the works are closed and he has no business to occupy him. Now, Mr. Rivers, <em>do</em> come. Why are you so very shy, and so very sombre?” She filled up the hiatus his silence left by a reply of her own.</p>
+    <p style="margin:0 0 14px 0;">“I forgot!” she exclaimed, shaking her beautiful curled head, as if shocked at herself. “I am so giddy and thoughtless! <em>Do</em> excuse me. It had slipped my memory that you have good reasons to be indisposed for joining in my chatter. Diana and Mary have left you, and Moor House is shut up, and you are so lonely. I am sure I pity you. Do come and see papa.”</p>
+    <p style="margin:0 0 14px 0;">“Not to-night, Miss Rosamond, not to-night.”</p>
+    <p style="margin:0 0 14px 0;">Mr. St. John spoke almost like an automaton: himself only knew the effort it cost him thus to refuse.</p>
+    <p style="margin:0 0 14px 0;">“Well, if you are so obstinate, I will leave you; for I dare not stay any longer: the dew begins to fall. Good evening!”</p>
+    <p style="margin:0 0 14px 0;">She held out her hand. He just touched it. “Good evening!” he repeated, in a voice low and hollow as an echo. She turned, but in a moment returned.</p>
+    <p style="margin:0 0 14px 0;">“Are you well?” she asked. Well might she put the question: his face was blanched as her gown.</p>
+    <p style="margin:0 0 14px 0;">“Quite well,” he enunciated; and, with a bow, he left the gate. She went one way; he another. She turned twice to gaze after him as she tripped fairy-like down the field; he, as he strode firmly across, never turned at all.</p>
+    <p style="margin:0 0 14px 0;">This spectacle of another’s suffering and sacrifice rapt my thoughts from exclusive meditation on my own. Diana Rivers had designated her brother “inexorable as death.” She had not exaggerated.</p>
+  </div>
+</details>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 18px 0 4px 0;"><strong>Watch for, chapter 32:</strong> St. John's own words for why he will not marry Rosamond, and what he tears from the edge of Jane's drawing paper.</p>
+            <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter XXXII</strong> <span style="font-size:13px; color:#3B4E8C;">(about 4,600 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">I continued the labours of the village-school as actively and faithfully as I could. It was truly hard work at first. Some time elapsed before, with all my efforts, I could comprehend my scholars and their nature. Wholly untaught, with faculties quite torpid, they seemed to me hopelessly dull; and, at first sight, all dull alike: but I soon found I was mistaken. There was a difference amongst them as amongst the educated; and when I got to know them, and they me, this difference rapidly developed itself. Their amazement at me, my language, my rules, and ways, once subsided, I found some of these heavy-looking, gaping rustics wake up into sharp-witted girls enough. Many showed themselves obliging, and amiable too; and I discovered amongst them not a few examples of natural politeness, and innate self-respect, as well as of excellent capacity, that won both my goodwill and my admiration. These soon took a pleasure in doing their work well, in keeping their persons neat, in learning their tasks regularly, in acquiring quiet and orderly manners. The rapidity of their progress, in some instances, was even surprising; and an honest and happy pride I took in it: besides, I began personally to like some of the best girls; and they liked me. I had amongst my scholars several farmers’ daughters: young women grown, almost. These could already read, write, and sew; and to them I taught the elements of grammar, geography, history, and the finer kinds of needlework. I found estimable characters amongst them—characters desirous of information and disposed for improvement—with whom I passed many a pleasant evening hour in their own homes. Their parents then (the farmer and his wife) loaded me with attentions. There was an enjoyment in accepting their simple kindness, and in repaying it by a consideration—a scrupulous regard to their feelings—to which they were not, perhaps, at all times accustomed, and which both charmed and benefited them; because, while it elevated them in their own eyes, it made them emulous to merit the deferential treatment they received.</p>
+    <p style="margin:0 0 14px 0;">I felt I became a favourite in the neighbourhood. Whenever I went out, I heard on all sides cordial salutations, and was welcomed with friendly smiles. To live amidst general regard, though it be but the regard of working people, is like “sitting in sunshine, calm and sweet;” serene inward feelings bud and bloom under the ray. At this period of my life, my heart far oftener swelled with thankfulness than sank with dejection: and yet, reader, to tell you all, in the midst of this calm, this useful existence—after a day passed in honourable exertion amongst my scholars, an evening spent in drawing or reading contentedly alone—I used to rush into strange dreams at night: dreams many-coloured, agitated, full of the ideal, the stirring, the stormy—dreams where, amidst unusual scenes, charged with adventure, with agitating risk and romantic chance, I still again and again met Mr. Rochester, always at some exciting crisis; and then the sense of being in his arms, hearing his voice, meeting his eye, touching his hand and cheek, loving him, being loved by him—the hope of passing a lifetime at his side, would be renewed, with all its first force and fire. Then I awoke. Then I recalled where I was, and how situated. Then I rose up on my curtainless bed, trembling and quivering; and then the still, dark night witnessed the convulsion of despair, and heard the burst of passion. By nine o’clock the next morning I was punctually opening the school; tranquil, settled, prepared for the steady duties of the day.</p>
+    <p style="margin:0 0 14px 0;">Rosamond Oliver kept her word in coming to visit me. Her call at the school was generally made in the course of her morning ride. She would canter up to the door on her pony, followed by a mounted livery servant. Anything more exquisite than her appearance, in her purple habit, with her Amazon’s cap of black velvet placed gracefully above the long curls that kissed her cheek and floated to her shoulders, can scarcely be imagined: and it was thus she would enter the rustic building, and glide through the dazzled ranks of the village children. She generally came at the hour when Mr. Rivers was engaged in giving his daily catechising lesson. Keenly, I fear, did the eye of the visitress pierce the young pastor’s heart. A sort of instinct seemed to warn him of her entrance, even when he did not see it; and when he was looking quite away from the door, if she appeared at it, his cheek would glow, and his marble-seeming features, though they refused to relax, changed indescribably, and in their very quiescence became expressive of a repressed fervour, stronger than working muscle or darting glance could indicate.</p>
+    <p style="margin:0 0 14px 0;">Of course, she knew her power: indeed, he did not, because he could not, conceal it from her. In spite of his Christian stoicism, when she went up and addressed him, and smiled gaily, encouragingly, even fondly in his face, his hand would tremble and his eye burn. He seemed to say, with his sad and resolute look, if he did not say it with his lips, “I love you, and I know you prefer me. It is not despair of success that keeps me dumb. If I offered my heart, I believe you would accept it. But that heart is already laid on a sacred altar: the fire is arranged round it. It will soon be no more than a sacrifice consumed.”</p>
+    <p style="margin:0 0 14px 0;">And then she would pout like a disappointed child; a pensive cloud would soften her radiant vivacity; she would withdraw her hand hastily from his, and turn in transient petulance from his aspect, at once so heroic and so martyr-like. St. John, no doubt, would have given the world to follow, recall, retain her, when she thus left him; but he would not give one chance of heaven, nor relinquish, for the elysium of her love, one hope of the true, eternal Paradise. Besides, he could not bind all that he had in his nature—the rover, the aspirant, the poet, the priest—in the limits of a single passion. He could not—he would not—renounce his wild field of mission warfare for the parlours and the peace of Vale Hall. I learnt so much from himself in an inroad I once, despite his reserve, had the daring to make on his confidence.</p>
+    <p style="margin:0 0 14px 0;">Miss Oliver already honoured me with frequent visits to my cottage. I had learnt her whole character, which was without mystery or disguise: she was coquettish but not heartless; exacting, but not worthlessly selfish. She had been indulged from her birth, but was not absolutely spoilt. She was hasty, but good-humoured; vain (she could not help it, when every glance in the glass showed her such a flush of loveliness), but not affected; liberal-handed; innocent of the pride of wealth; ingenuous; sufficiently intelligent; gay, lively, and unthinking: she was very charming, in short, even to a cool observer of her own sex like me; but she was not profoundly interesting or thoroughly impressive. A very different sort of mind was hers from that, for instance, of the sisters of St. John. Still, I liked her almost as I liked my pupil Adèle; except that, for a child whom we have watched over and taught, a closer affection is engendered than we can give an equally attractive adult acquaintance.</p>
+    <p style="margin:0 0 14px 0;">She had taken an amiable caprice to me. She said I was like Mr. Rivers, only, certainly, she allowed, “not one-tenth so handsome, though I was a nice neat little soul enough, but he was an angel.” I was, however, good, clever, composed, and firm, like him. I was a <em>lusus naturæ</em>, she affirmed, as a village schoolmistress: she was sure my previous history, if known, would make a delightful romance.</p>
+    <p style="margin:0 0 14px 0;">One evening, while, with her usual child-like activity, and thoughtless yet not offensive inquisitiveness, she was rummaging the cupboard and the table-drawer of my little kitchen, she discovered first two French books, a volume of Schiller, a German grammar and dictionary, and then my drawing-materials and some sketches, including a pencil-head of a pretty little cherub-like girl, one of my scholars, and sundry views from nature, taken in the Vale of Morton and on the surrounding moors. She was first transfixed with surprise, and then electrified with delight.</p>
+    <p style="margin:0 0 14px 0;">“Had I done these pictures? Did I know French and German? What a love—what a miracle I was! I drew better than her master in the first school in S——. Would I sketch a portrait of her, to show to papa?”</p>
+    <p style="margin:0 0 14px 0;">“With pleasure,” I replied; and I felt a thrill of artist-delight at the idea of copying from so perfect and radiant a model. She had then on a dark-blue silk dress; her arms and her neck were bare; her only ornament was her chestnut tresses, which waved over her shoulders with all the wild grace of natural curls. I took a sheet of fine card-board, and drew a careful outline. I promised myself the pleasure of colouring it; and, as it was getting late then, I told her she must come and sit another day.</p>
+    <p style="margin:0 0 14px 0;">She made such a report of me to her father, that Mr. Oliver himself accompanied her next evening—a tall, massive-featured, middle-aged, and grey-headed man, at whose side his lovely daughter looked like a bright flower near a hoary turret. He appeared a taciturn, and perhaps a proud personage; but he was very kind to me. The sketch of Rosamond’s portrait pleased him highly: he said I must make a finished picture of it. He insisted, too, on my coming the next day to spend the evening at Vale Hall.</p>
+    <p style="margin:0 0 14px 0;">I went. I found it a large, handsome residence, showing abundant evidences of wealth in the proprietor. Rosamond was full of glee and pleasure all the time I stayed. Her father was affable; and when he entered into conversation with me after tea, he expressed in strong terms his approbation of what I had done in Morton school, and said he only feared, from what he saw and heard, I was too good for the place, and would soon quit it for one more suitable.</p>
+    <p style="margin:0 0 14px 0;">“Indeed,” cried Rosamond, “she is clever enough to be a governess in a high family, papa.”</p>
+    <p style="margin:0 0 14px 0;">I thought I would far rather be where I am than in any high family in the land. Mr. Oliver spoke of Mr. Rivers—of the Rivers family—with great respect. He said it was a very old name in that neighbourhood; that the ancestors of the house were wealthy; that all Morton had once belonged to them; that even now he considered the representative of that house might, if he liked, make an alliance with the best. He accounted it a pity that so fine and talented a young man should have formed the design of going out as a missionary; it was quite throwing a valuable life away. It appeared, then, that her father would throw no obstacle in the way of Rosamond’s union with St. John. Mr. Oliver evidently regarded the young clergyman’s good birth, old name, and sacred profession as sufficient compensation for the want of fortune.</p>
+    <p style="margin:0 0 14px 0;">It was the 5th of November, and a holiday. My little servant, after helping me to clean my house, was gone, well satisfied with the fee of a penny for her aid. All about me was spotless and bright—scoured floor, polished grate, and well-rubbed chairs. I had also made myself neat, and had now the afternoon before me to spend as I would.</p>
+    <p style="margin:0 0 14px 0;">The translation of a few pages of German occupied an hour; then I got my palette and pencils, and fell to the more soothing, because easier occupation, of completing Rosamond Oliver’s miniature. The head was finished already: there was but the background to tint and the drapery to shade off; a touch of carmine, too, to add to the ripe lips—a soft curl here and there to the tresses—a deeper tinge to the shadow of the lash under the azured eyelid. I was absorbed in the execution of these nice details, when, after one rapid tap, my door unclosed, admitting St. John Rivers.</p>
+    <p style="margin:0 0 14px 0;">“I am come to see how you are spending your holiday,” he said. “Not, I hope, in thought? No, that is well: while you draw you will not feel lonely. You see, I mistrust you still, though you have borne up wonderfully so far. I have brought you a book for evening solace,” and he laid on the table a new publication—a poem: one of those genuine productions so often vouchsafed to the fortunate public of those days—the golden age of modern literature. Alas! the readers of our era are less favoured. But courage! I will not pause either to accuse or repine. I know poetry is not dead, nor genius lost; nor has Mammon gained power over either, to bind or slay: they will both assert their existence, their presence, their liberty and strength again one day. Powerful angels, safe in heaven! they smile when sordid souls triumph, and feeble ones weep over their destruction. Poetry destroyed? Genius banished? No! Mediocrity, no: do not let envy prompt you to the thought. No; they not only live, but reign and redeem: and without their divine influence spread everywhere, you would be in hell—the hell of your own meanness.</p>
+    <p style="margin:0 0 14px 0;">While I was eagerly glancing at the bright pages of “Marmion” (for “Marmion” it was), St. John stooped to examine my drawing. His tall figure sprang erect again with a start: he said nothing. I looked up at him: he shunned my eye. I knew his thoughts well, and could read his heart plainly; at the moment I felt calmer and cooler than he: I had then temporarily the advantage of him, and I conceived an inclination to do him some good, if I could.</p>
+    <p style="margin:0 0 14px 0;">“With all his firmness and self-control,” thought I, “he tasks himself too far: locks every feeling and pang within—expresses, confesses, imparts nothing. I am sure it would benefit him to talk a little about this sweet Rosamond, whom he thinks he ought not to marry: I will make him talk.”</p>
+    <p style="margin:0 0 14px 0;">I said first, “Take a chair, Mr. Rivers.” But he answered, as he always did, that he could not stay. “Very well,” I responded, mentally, “stand if you like; but you shall not go just yet, I am determined: solitude is at least as bad for you as it is for me. I’ll try if I cannot discover the secret spring of your confidence, and find an aperture in that marble breast through which I can shed one drop of the balm of sympathy.”</p>
+    <p style="margin:0 0 14px 0;">“Is this portrait like?” I asked bluntly.</p>
+    <p style="margin:0 0 14px 0;">“Like! Like whom? I did not observe it closely.”</p>
+    <p style="margin:0 0 14px 0;">“You did, Mr. Rivers.”</p>
+    <p style="margin:0 0 14px 0;">He almost started at my sudden and strange abruptness: he looked at me astonished. “Oh, that is nothing yet,” I muttered within. “I don’t mean to be baffled by a little stiffness on your part; I’m prepared to go to considerable lengths.” I continued, “You observed it closely and distinctly; but I have no objection to your looking at it again,” and I rose and placed it in his hand.</p>
+    <p style="margin:0 0 14px 0;">“A well-executed picture,” he said; “very soft, clear colouring; very graceful and correct drawing.”</p>
+    <p style="margin:0 0 14px 0;">“Yes, yes; I know all that. But what of the resemblance? Who is it like?”</p>
+    <p style="margin:0 0 14px 0;">Mastering some hesitation, he answered, “Miss Oliver, I presume.”</p>
+    <p style="margin:0 0 14px 0;">“Of course. And now, sir, to reward you for the accurate guess, I will promise to paint you a careful and faithful duplicate of this very picture, provided you admit that the gift would be acceptable to you. I don’t wish to throw away my time and trouble on an offering you would deem worthless.”</p>
+    <p style="margin:0 0 14px 0;">He continued to gaze at the picture: the longer he looked, the firmer he held it, the more he seemed to covet it. “It is like!” he murmured; “the eye is well managed: the colour, light, expression, are perfect. It smiles!”</p>
+    <p style="margin:0 0 14px 0;">“Would it comfort, or would it wound you to have a similar painting? Tell me that. When you are at Madagascar, or at the Cape, or in India, would it be a consolation to have that memento in your possession? or would the sight of it bring recollections calculated to enervate and distress?”</p>
+    <p style="margin:0 0 14px 0;">He now furtively raised his eyes: he glanced at me, irresolute, disturbed: he again surveyed the picture.</p>
+    <p style="margin:0 0 14px 0;">“That I should like to have it is certain: whether it would be judicious or wise is another question.”</p>
+    <p style="margin:0 0 14px 0;">Since I had ascertained that Rosamond really preferred him, and that her father was not likely to oppose the match, I—less exalted in my views than St. John—had been strongly disposed in my own heart to advocate their union. It seemed to me that, should he become the possessor of Mr. Oliver’s large fortune, he might do as much good with it as if he went and laid his genius out to wither, and his strength to waste, under a tropical sun. With this persuasion I now answered—</p>
+    <p style="margin:0 0 14px 0;">“As far as I can see, it would be wiser and more judicious if you were to take to yourself the original at once.”</p>
+    <p style="margin:0 0 14px 0;">By this time he had sat down: he had laid the picture on the table before him, and with his brow supported on both hands, hung fondly over it. I discerned he was now neither angry nor shocked at my audacity. I saw even that to be thus frankly addressed on a subject he had deemed unapproachable—to hear it thus freely handled—was beginning to be felt by him as a new pleasure—an unhoped-for relief. Reserved people often really need the frank discussion of their sentiments and griefs more than the expansive. The sternest-seeming stoic is human after all; and to “burst” with boldness and good-will into “the silent sea” of their souls is often to confer on them the first of obligations.</p>
+    <p style="margin:0 0 14px 0;">“She likes you, I am sure,” said I, as I stood behind his chair, “and her father respects you. Moreover, she is a sweet girl—rather thoughtless; but you would have sufficient thought for both yourself and her. You ought to marry her.”</p>
+    <p style="margin:0 0 14px 0;">“<em>Does</em> she like me?” he asked.</p>
+    <p style="margin:0 0 14px 0;">“Certainly; better than she likes any one else. She talks of you continually: there is no subject she enjoys so much or touches upon so often.”</p>
+    <p style="margin:0 0 14px 0;">“It is very pleasant to hear this,” he said—“very: go on for another quarter of an hour.” And he actually took out his watch and laid it upon the table to measure the time.</p>
+    <p style="margin:0 0 14px 0;">“But where is the use of going on,” I asked, “when you are probably preparing some iron blow of contradiction, or forging a fresh chain to fetter your heart?”</p>
+    <p style="margin:0 0 14px 0;">“Don’t imagine such hard things. Fancy me yielding and melting, as I am doing: human love rising like a freshly opened fountain in my mind and overflowing with sweet inundation all the field I have so carefully and with such labour prepared—so assiduously sown with the seeds of good intentions, of self-denying plans. And now it is deluged with a nectarous flood—the young germs swamped—delicious poison cankering them: now I see myself stretched on an ottoman in the drawing-room at Vale Hall at my bride Rosamond Oliver’s feet: she is talking to me with her sweet voice—gazing down on me with those eyes your skilful hand has copied so well—smiling at me with these coral lips. She is mine—I am hers—this present life and passing world suffice to me. Hush! say nothing—my heart is full of delight—my senses are entranced—let the time I marked pass in peace.”</p>
+    <p style="margin:0 0 14px 0;">I humoured him: the watch ticked on: he breathed fast and low: I stood silent. Amidst this hush the quartet sped; he replaced the watch, laid the picture down, rose, and stood on the hearth.</p>
+    <p style="margin:0 0 14px 0;">“Now,” said he, “that little space was given to delirium and delusion. I rested my temples on the breast of temptation, and put my neck voluntarily under her yoke of flowers; I tasted her cup. The pillow was burning: there is an asp in the garland: the wine has a bitter taste: her promises are hollow—her offers false: I see and know all this.”</p>
+    <p style="margin:0 0 14px 0;">I gazed at him in wonder.</p>
+    <p style="margin:0 0 14px 0;">“It is strange,” pursued he, “that while I love Rosamond Oliver so wildly—with all the intensity, indeed, of a first passion, the object of which is exquisitely beautiful, graceful, fascinating—I experience at the same time a calm, unwarped consciousness that she would not make me a good wife; that she is not the partner suited to me; that I should discover this within a year after marriage; and that to twelve months’ rapture would succeed a lifetime of regret. This I know.”</p>
+    <p style="margin:0 0 14px 0;">“Strange indeed!” I could not help ejaculating.</p>
+    <p style="margin:0 0 14px 0;">“While something in me,” he went on, “is acutely sensible to her charms, something else is as deeply impressed with her defects: they are such that she could sympathise in nothing I aspired to—co-operate in nothing I undertook. Rosamond a sufferer, a labourer, a female apostle? Rosamond a missionary’s wife? No!”</p>
+    <p style="margin:0 0 14px 0;">“But you need not be a missionary. You might relinquish that scheme.”</p>
+    <p style="margin:0 0 14px 0;">“Relinquish! What! my vocation? My great work? My foundation laid on earth for a mansion in heaven? My hopes of being numbered in the band who have merged all ambitions in the glorious one of bettering their race—of carrying knowledge into the realms of ignorance—of substituting peace for war—freedom for bondage—religion for superstition—the hope of heaven for the fear of hell? Must I relinquish that? It is dearer than the blood in my veins. It is what I have to look forward to, and to live for.”</p>
+    <p style="margin:0 0 14px 0;">After a considerable pause, I said—“And Miss Oliver? Are her disappointment and sorrow of no interest to you?”</p>
+    <p style="margin:0 0 14px 0;">“Miss Oliver is ever surrounded by suitors and flatterers: in less than a month, my image will be effaced from her heart. She will forget me; and will marry, probably, some one who will make her far happier than I should do.”</p>
+    <p style="margin:0 0 14px 0;">“You speak coolly enough; but you suffer in the conflict. You are wasting away.”</p>
+    <p style="margin:0 0 14px 0;">“No. If I get a little thin, it is with anxiety about my prospects, yet unsettled—my departure, continually procrastinated. Only this morning, I received intelligence that the successor, whose arrival I have been so long expecting, cannot be ready to replace me for three months to come yet; and perhaps the three months may extend to six.”</p>
+    <p style="margin:0 0 14px 0;">“You tremble and become flushed whenever Miss Oliver enters the schoolroom.”</p>
+    <p style="margin:0 0 14px 0;">Again the surprised expression crossed his face. He had not imagined that a woman would dare to speak so to a man. For me, I felt at home in this sort of discourse. I could never rest in communication with strong, discreet, and refined minds, whether male or female, till I had passed the outworks of conventional reserve, and crossed the threshold of confidence, and won a place by their heart’s very hearthstone.</p>
+    <p style="margin:0 0 14px 0;">“You <em>are</em> original,” said he, “and not timid. There is something brave in your spirit, as well as penetrating in your eye; but allow me to assure you that you partially misinterpret my emotions. You think them more profound and potent than they are. You give me a larger allowance of sympathy than I have a just claim to. When I colour, and when I shake before Miss Oliver, I do not pity myself. I scorn the weakness. I know it is ignoble: a mere fever of the flesh: not, I declare, the convulsion of the soul. <em>That</em> is just as fixed as a rock, firm set in the depths of a restless sea. Know me to be what I am—a cold hard man.”</p>
+    <p style="margin:0 0 14px 0;">I smiled incredulously.</p>
+    <p style="margin:0 0 14px 0;">“You have taken my confidence by storm,” he continued, “and now it is much at your service. I am simply, in my original state—stripped of that blood-bleached robe with which Christianity covers human deformity—a cold, hard, ambitious man. Natural affection only, of all the sentiments, has permanent power over me. Reason, and not feeling, is my guide; my ambition is unlimited: my desire to rise higher, to do more than others, insatiable. I honour endurance, perseverance, industry, talent; because these are the means by which men achieve great ends and mount to lofty eminence. I watch your career with interest, because I consider you a specimen of a diligent, orderly, energetic woman: not because I deeply compassionate what you have gone through, or what you still suffer.”</p>
+    <p style="margin:0 0 14px 0;">“You would describe yourself as a mere pagan philosopher,” I said.</p>
+    <p style="margin:0 0 14px 0;">“No. There is this difference between me and deistic philosophers: I believe; and I believe the Gospel. You missed your epithet. I am not a pagan, but a Christian philosopher—a follower of the sect of Jesus. As His disciple I adopt His pure, His merciful, His benignant doctrines. I advocate them: I am sworn to spread them. Won in youth to religion, she has cultivated my original qualities thus:—From the minute germ, natural affection, she has developed the overshadowing tree, philanthropy. From the wild stringy root of human uprightness, she has reared a due sense of the Divine justice. Of the ambition to win power and renown for my wretched self, she has formed the ambition to spread my Master’s kingdom; to achieve victories for the standard of the cross. So much has religion done for me; turning the original materials to the best account; pruning and training nature. But she could not eradicate nature: nor will it be eradicated ‘till this mortal shall put on immortality.’”</p>
+    <p style="margin:0 0 14px 0;">Having said this, he took his hat, which lay on the table beside my palette. Once more he looked at the portrait.</p>
+    <p style="margin:0 0 14px 0;">“She <em>is</em> lovely,” he murmured. “She is well named the Rose of the World, indeed!”</p>
+    <p style="margin:0 0 14px 0;">“And may I not paint one like it for you?”</p>
+    <p style="margin:0 0 14px 0;">“<em>Cui bono</em>? No.”</p>
+    <p style="margin:0 0 14px 0;">He drew over the picture the sheet of thin paper on which I was accustomed to rest my hand in painting, to prevent the cardboard from being sullied. What he suddenly saw on this blank paper, it was impossible for me to tell; but something had caught his eye. He took it up with a snatch; he looked at the edge; then shot a glance at me, inexpressibly peculiar, and quite incomprehensible: a glance that seemed to take and make note of every point in my shape, face, and dress; for it traversed all, quick, keen as lightning. His lips parted, as if to speak: but he checked the coming sentence, whatever it was.</p>
+    <p style="margin:0 0 14px 0;">“What is the matter?” I asked.</p>
+    <p style="margin:0 0 14px 0;">“Nothing in the world,” was the reply; and, replacing the paper, I saw him dexterously tear a narrow slip from the margin. It disappeared in his glove; and, with one hasty nod and “good-afternoon,” he vanished.</p>
+    <p style="margin:0 0 14px 0;">“Well!” I exclaimed, using an expression of the district, “that caps the globe, however!”</p>
+    <p style="margin:0 0 14px 0;">I, in my turn, scrutinised the paper; but saw nothing on it save a few dingy stains of paint where I had tried the tint in my pencil. I pondered the mystery a minute or two; but finding it insolvable, and being certain it could not be of much moment, I dismissed, and soon forgot it.</p>
+  </div>
+</details>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 18px 0 4px 0;"><strong>Watch for, chapter 33:</strong> how St. John proves who Jane is, and the exact sum Jane insists each cousin should receive.</p>
+            <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter XXXIII</strong> <span style="font-size:13px; color:#3B4E8C;">(about 4,800 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">When Mr. St. John went, it was beginning to snow; the whirling storm continued all night. The next day a keen wind brought fresh and blinding falls; by twilight the valley was drifted up and almost impassable. I had closed my shutter, laid a mat to the door to prevent the snow from blowing in under it, trimmed my fire, and after sitting nearly an hour on the hearth listening to the muffled fury of the tempest, I lit a candle, took down “Marmion,” and beginning—</p>
+    <div style="margin:0 0 14px 24px; font-style:italic;">“Day set on Norham’s castled steep,<br />And Tweed’s fair river broad and deep,<br />And Cheviot’s mountains lone;<br />The massive towers, the donjon keep,<br />The flanking walls that round them sweep,<br />In yellow lustre shone”—</div>
+    <p style="margin:0 0 14px 0;">I soon forgot storm in music.</p>
+    <p style="margin:0 0 14px 0;">I heard a noise: the wind, I thought, shook the door. No; it was St. John Rivers, who, lifting the latch, came in out of the frozen hurricane—the howling darkness—and stood before me: the cloak that covered his tall figure all white as a glacier. I was almost in consternation, so little had I expected any guest from the blocked-up vale that night.</p>
+    <p style="margin:0 0 14px 0;">“Any ill news?” I demanded. “Has anything happened?”</p>
+    <p style="margin:0 0 14px 0;">“No. How very easily alarmed you are!” he answered, removing his cloak and hanging it up against the door, towards which he again coolly pushed the mat which his entrance had deranged. He stamped the snow from his boots.</p>
+    <p style="margin:0 0 14px 0;">“I shall sully the purity of your floor,” said he, “but you must excuse me for once.” Then he approached the fire. “I have had hard work to get here, I assure you,” he observed, as he warmed his hands over the flame. “One drift took me up to the waist; happily the snow is quite soft yet.”</p>
+    <p style="margin:0 0 14px 0;">“But why are you come?” I could not forbear saying.</p>
+    <p style="margin:0 0 14px 0;">“Rather an inhospitable question to put to a visitor; but since you ask it, I answer simply to have a little talk with you; I got tired of my mute books and empty rooms. Besides, since yesterday I have experienced the excitement of a person to whom a tale has been half-told, and who is impatient to hear the sequel.”</p>
+    <p style="margin:0 0 14px 0;">He sat down. I recalled his singular conduct of yesterday, and really I began to fear his wits were touched. If he were insane, however, his was a very cool and collected insanity: I had never seen that handsome-featured face of his look more like chiselled marble than it did just now, as he put aside his snow-wet hair from his forehead and let the firelight shine free on his pale brow and cheek as pale, where it grieved me to discover the hollow trace of care or sorrow now so plainly graved. I waited, expecting he would say something I could at least comprehend; but his hand was now at his chin, his finger on his lip: he was thinking. It struck me that his hand looked wasted like his face. A perhaps uncalled-for gush of pity came over my heart: I was moved to say—</p>
+    <p style="margin:0 0 14px 0;">“I wish Diana or Mary would come and live with you: it is too bad that you should be quite alone; and you are recklessly rash about your own health.”</p>
+    <p style="margin:0 0 14px 0;">“Not at all,” said he: “I care for myself when necessary. I am well now. What do you see amiss in me?”</p>
+    <p style="margin:0 0 14px 0;">This was said with a careless, abstracted indifference, which showed that my solicitude was, at least in his opinion, wholly superfluous. I was silenced.</p>
+    <p style="margin:0 0 14px 0;">He still slowly moved his finger over his upper lip, and still his eye dwelt dreamily on the glowing grate; thinking it urgent to say something, I asked him presently if he felt any cold draught from the door, which was behind him.</p>
+    <p style="margin:0 0 14px 0;">“No, no!” he responded shortly and somewhat testily.</p>
+    <p style="margin:0 0 14px 0;">“Well,” I reflected, “if you won’t talk, you may be still; I’ll let you alone now, and return to my book.”</p>
+    <p style="margin:0 0 14px 0;">So I snuffed the candle and resumed the perusal of “Marmion.” He soon stirred; my eye was instantly drawn to his movements; he only took out a morocco pocket-book, thence produced a letter, which he read in silence, folded it, put it back, relapsed into meditation. It was vain to try to read with such an inscrutable fixture before me; nor could I, in impatience, consent to be dumb; he might rebuff me if he liked, but talk I would.</p>
+    <p style="margin:0 0 14px 0;">“Have you heard from Diana and Mary lately?”</p>
+    <p style="margin:0 0 14px 0;">“Not since the letter I showed you a week ago.”</p>
+    <p style="margin:0 0 14px 0;">“There has not been any change made about your own arrangements? You will not be summoned to leave England sooner than you expected?”</p>
+    <p style="margin:0 0 14px 0;">“I fear not, indeed: such chance is too good to befall me.” Baffled so far, I changed my ground. I bethought myself to talk about the school and my scholars.</p>
+    <p style="margin:0 0 14px 0;">“Mary Garrett’s mother is better, and Mary came back to the school this morning, and I shall have four new girls next week from the Foundry Close—they would have come to-day but for the snow.”</p>
+    <p style="margin:0 0 14px 0;">“Indeed!”</p>
+    <p style="margin:0 0 14px 0;">“Mr. Oliver pays for two.”</p>
+    <p style="margin:0 0 14px 0;">“Does he?”</p>
+    <p style="margin:0 0 14px 0;">“He means to give the whole school a treat at Christmas.”</p>
+    <p style="margin:0 0 14px 0;">“I know.”</p>
+    <p style="margin:0 0 14px 0;">“Was it your suggestion?”</p>
+    <p style="margin:0 0 14px 0;">“No.”</p>
+    <p style="margin:0 0 14px 0;">“Whose, then?”</p>
+    <p style="margin:0 0 14px 0;">“His daughter’s, I think.”</p>
+    <p style="margin:0 0 14px 0;">“It is like her: she is so good-natured.”</p>
+    <p style="margin:0 0 14px 0;">“Yes.”</p>
+    <p style="margin:0 0 14px 0;">Again came the blank of a pause: the clock struck eight strokes. It aroused him; he uncrossed his legs, sat erect, turned to me.</p>
+    <p style="margin:0 0 14px 0;">“Leave your book a moment, and come a little nearer the fire,” he said.</p>
+    <p style="margin:0 0 14px 0;">Wondering, and of my wonder finding no end, I complied.</p>
+    <p style="margin:0 0 14px 0;">“Half-an-hour ago,” he pursued, “I spoke of my impatience to hear the sequel of a tale: on reflection, I find the matter will be better managed by my assuming the narrator’s part, and converting you into a listener. Before commencing, it is but fair to warn you that the story will sound somewhat hackneyed in your ears; but stale details often regain a degree of freshness when they pass through new lips. For the rest, whether trite or novel, it is short.</p>
+    <p style="margin:0 0 14px 0;">“Twenty years ago, a poor curate—never mind his name at this moment—fell in love with a rich man’s daughter; she fell in love with him, and married him, against the advice of all her friends, who consequently disowned her immediately after the wedding. Before two years passed, the rash pair were both dead, and laid quietly side by side under one slab. (I have seen their grave; it formed part of the pavement of a huge churchyard surrounding the grim, soot-black old cathedral of an overgrown manufacturing town in ——shire.) They left a daughter, which, at its very birth, Charity received in her lap—cold as that of the snow-drift I almost stuck fast in to-night. Charity carried the friendless thing to the house of its rich maternal relations; it was reared by an aunt-in-law, called (I come to names now) Mrs. Reed of Gateshead. You start—did you hear a noise? I daresay it is only a rat scrambling along the rafters of the adjoining schoolroom: it was a barn before I had it repaired and altered, and barns are generally haunted by rats.—To proceed. Mrs. Reed kept the orphan ten years: whether it was happy or not with her, I cannot say, never having been told; but at the end of that time she transferred it to a place you know—being no other than Lowood School, where you so long resided yourself. It seems her career there was very honourable: from a pupil, she became a teacher, like yourself—really it strikes me there are parallel points in her history and yours—she left it to be a governess: there, again, your fates were analogous; she undertook the education of the ward of a certain Mr. Rochester.”</p>
+    <p style="margin:0 0 14px 0;">“Mr. Rivers!” I interrupted.</p>
+    <p style="margin:0 0 14px 0;">“I can guess your feelings,” he said, “but restrain them for a while: I have nearly finished; hear me to the end. Of Mr. Rochester’s character I know nothing, but the one fact that he professed to offer honourable marriage to this young girl, and that at the very altar she discovered he had a wife yet alive, though a lunatic. What his subsequent conduct and proposals were is a matter of pure conjecture; but when an event transpired which rendered inquiry after the governess necessary, it was discovered she was gone—no one could tell when, where, or how. She had left Thornfield Hall in the night; every research after her course had been vain: the country had been scoured far and wide; no vestige of information could be gathered respecting her. Yet that she should be found is become a matter of serious urgency: advertisements have been put in all the papers; I myself have received a letter from one Mr. Briggs, a solicitor, communicating the details I have just imparted. Is it not an odd tale?”</p>
+    <p style="margin:0 0 14px 0;">“Just tell me this,” said I, “and since you know so much, you surely <em>can</em> tell it me—what of Mr. Rochester? How and where is he? What is he doing? Is he well?”</p>
+    <p style="margin:0 0 14px 0;">“I am ignorant of all concerning Mr. Rochester: the letter never mentions him but to narrate the fraudulent and illegal attempt I have adverted to. You should rather ask the name of the governess—the nature of the event which requires her appearance.”</p>
+    <p style="margin:0 0 14px 0;">“Did no one go to Thornfield Hall, then? Did no one see Mr. Rochester?”</p>
+    <p style="margin:0 0 14px 0;">“I suppose not.”</p>
+    <p style="margin:0 0 14px 0;">“But they wrote to him?”</p>
+    <p style="margin:0 0 14px 0;">“Of course.”</p>
+    <p style="margin:0 0 14px 0;">“And what did he say? Who has his letters?”</p>
+    <p style="margin:0 0 14px 0;">“Mr. Briggs intimates that the answer to his application was not from Mr. Rochester, but from a lady: it is signed ‘Alice Fairfax.’”</p>
+    <p style="margin:0 0 14px 0;">I felt cold and dismayed: my worst fears then were probably true: he had in all probability left England and rushed in reckless desperation to some former haunt on the Continent. And what opiate for his severe sufferings—what object for his strong passions—had he sought there? I dared not answer the question. Oh, my poor master—once almost my husband—whom I had often called “my dear Edward!”</p>
+    <p style="margin:0 0 14px 0;">“He must have been a bad man,” observed Mr. Rivers.</p>
+    <p style="margin:0 0 14px 0;">“You don’t know him—don’t pronounce an opinion upon him,” I said, with warmth.</p>
+    <p style="margin:0 0 14px 0;">“Very well,” he answered quietly: “and indeed my head is otherwise occupied than with him: I have my tale to finish. Since you won’t ask the governess’s name, I must tell it of my own accord. Stay! I have it here—it is always more satisfactory to see important points written down, fairly committed to black and white.”</p>
+    <p style="margin:0 0 14px 0;">And the pocket-book was again deliberately produced, opened, sought through; from one of its compartments was extracted a shabby slip of paper, hastily torn off: I recognised in its texture and its stains of ultra-marine, and lake, and vermillion, the ravished margin of the portrait-cover. He got up, held it close to my eyes: and I read, traced in Indian ink, in my own handwriting, the words “JANE EYRE”—the work doubtless of some moment of abstraction.</p>
+    <p style="margin:0 0 14px 0;">“Briggs wrote to me of a Jane Eyre:” he said, “the advertisements demanded a Jane Eyre: I knew a Jane Elliott.—I confess I had my suspicions, but it was only yesterday afternoon they were at once resolved into certainty. You own the name and renounce the <em>alias</em>?”</p>
+    <p style="margin:0 0 14px 0;">“Yes—yes; but where is Mr. Briggs? He perhaps knows more of Mr. Rochester than you do.”</p>
+    <p style="margin:0 0 14px 0;">“Briggs is in London. I should doubt his knowing anything at all about Mr. Rochester; it is not in Mr. Rochester he is interested. Meantime, you forget essential points in pursuing trifles: you do not inquire why Mr. Briggs sought after you—what he wanted with you.”</p>
+    <p style="margin:0 0 14px 0;">“Well, what did he want?”</p>
+    <p style="margin:0 0 14px 0;">“Merely to tell you that your uncle, Mr. Eyre of Madeira, is dead; that he has left you all his property, and that you are now rich—merely that—nothing more.”</p>
+    <p style="margin:0 0 14px 0;">“I!—rich?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, you, rich—quite an heiress.”</p>
+    <p style="margin:0 0 14px 0;">Silence succeeded.</p>
+    <p style="margin:0 0 14px 0;">“You must prove your identity of course,” resumed St. John presently: “a step which will offer no difficulties; you can then enter on immediate possession. Your fortune is vested in the English funds; Briggs has the will and the necessary documents.”</p>
+    <p style="margin:0 0 14px 0;">Here was a new card turned up! It is a fine thing, reader, to be lifted in a moment from indigence to wealth—a very fine thing; but not a matter one can comprehend, or consequently enjoy, all at once. And then there are other chances in life far more thrilling and rapture-giving: <em>this</em> is solid, an affair of the actual world, nothing ideal about it: all its associations are solid and sober, and its manifestations are the same. One does not jump, and spring, and shout hurrah! at hearing one has got a fortune; one begins to consider responsibilities, and to ponder business; on a base of steady satisfaction rise certain grave cares, and we contain ourselves, and brood over our bliss with a solemn brow.</p>
+    <p style="margin:0 0 14px 0;">Besides, the words Legacy, Bequest, go side by side with the words, Death, Funeral. My uncle I had heard was dead—my only relative; ever since being made aware of his existence, I had cherished the hope of one day seeing him: now, I never should. And then this money came only to me: not to me and a rejoicing family, but to my isolated self. It was a grand boon doubtless; and independence would be glorious—yes, I felt that—<em>that</em> thought swelled my heart.</p>
+    <p style="margin:0 0 14px 0;">“You unbend your forehead at last,” said Mr. Rivers. “I thought Medusa had looked at you, and that you were turning to stone. Perhaps now you will ask how much you are worth?”</p>
+    <p style="margin:0 0 14px 0;">“How much am I worth?”</p>
+    <p style="margin:0 0 14px 0;">“Oh, a trifle! Nothing of course to speak of—twenty thousand pounds, I think they say—but what is that?”</p>
+    <p style="margin:0 0 14px 0;">“Twenty thousand pounds?”</p>
+    <p style="margin:0 0 14px 0;">Here was a new stunner—I had been calculating on four or five thousand. This news actually took my breath for a moment: Mr. St. John, whom I had never heard laugh before, laughed now.</p>
+    <p style="margin:0 0 14px 0;">“Well,” said he, “if you had committed a murder, and I had told you your crime was discovered, you could scarcely look more aghast.”</p>
+    <p style="margin:0 0 14px 0;">“It is a large sum—don’t you think there is a mistake?”</p>
+    <p style="margin:0 0 14px 0;">“No mistake at all.”</p>
+    <p style="margin:0 0 14px 0;">“Perhaps you have read the figures wrong—it may be two thousand!”</p>
+    <p style="margin:0 0 14px 0;">“It is written in letters, not figures,—twenty thousand.”</p>
+    <p style="margin:0 0 14px 0;">I again felt rather like an individual of but average gastronomical powers sitting down to feast alone at a table spread with provisions for a hundred. Mr. Rivers rose now and put his cloak on.</p>
+    <p style="margin:0 0 14px 0;">“If it were not such a very wild night,” he said, “I would send Hannah down to keep you company: you look too desperately miserable to be left alone. But Hannah, poor woman! could not stride the drifts so well as I: her legs are not quite so long: so I must e’en leave you to your sorrows. Good-night.”</p>
+    <p style="margin:0 0 14px 0;">He was lifting the latch: a sudden thought occurred to me.</p>
+    <p style="margin:0 0 14px 0;">“Stop one minute!” I cried.</p>
+    <p style="margin:0 0 14px 0;">“Well?”</p>
+    <p style="margin:0 0 14px 0;">“It puzzles me to know why Mr. Briggs wrote to you about me; or how he knew you, or could fancy that you, living in such an out-of-the-way place, had the power to aid in my discovery.”</p>
+    <p style="margin:0 0 14px 0;">“Oh! I am a clergyman,” he said; “and the clergy are often appealed to about odd matters.” Again the latch rattled.</p>
+    <p style="margin:0 0 14px 0;">“No; that does not satisfy me!” I exclaimed: and indeed there was something in the hasty and unexplanatory reply which, instead of allaying, piqued my curiosity more than ever.</p>
+    <p style="margin:0 0 14px 0;">“It is a very strange piece of business,” I added; “I must know more about it.”</p>
+    <p style="margin:0 0 14px 0;">“Another time.”</p>
+    <p style="margin:0 0 14px 0;">“No; to-night!—to-night!” and as he turned from the door, I placed myself between it and him. He looked rather embarrassed.</p>
+    <p style="margin:0 0 14px 0;">“You certainly shall not go till you have told me all,” I said.</p>
+    <p style="margin:0 0 14px 0;">“I would rather not just now.”</p>
+    <p style="margin:0 0 14px 0;">“You shall!—you must!”</p>
+    <p style="margin:0 0 14px 0;">“I would rather Diana or Mary informed you.”</p>
+    <p style="margin:0 0 14px 0;">Of course these objections wrought my eagerness to a climax: gratified it must be, and that without delay; and I told him so.</p>
+    <p style="margin:0 0 14px 0;">“But I apprised you that I was a hard man,” said he, “difficult to persuade.”</p>
+    <p style="margin:0 0 14px 0;">“And I am a hard woman,—impossible to put off.”</p>
+    <p style="margin:0 0 14px 0;">“And then,” he pursued, “I am cold: no fervour infects me.”</p>
+    <p style="margin:0 0 14px 0;">“Whereas I am hot, and fire dissolves ice. The blaze there has thawed all the snow from your cloak; by the same token, it has streamed on to my floor, and made it like a trampled street. As you hope ever to be forgiven, Mr. Rivers, the high crime and misdemeanour of spoiling a sanded kitchen, tell me what I wish to know.”</p>
+    <p style="margin:0 0 14px 0;">“Well, then,” he said, “I yield; if not to your earnestness, to your perseverance: as stone is worn by continual dropping. Besides, you must know some day,—as well now as later. Your name is Jane Eyre?”</p>
+    <p style="margin:0 0 14px 0;">“Of course: that was all settled before.”</p>
+    <p style="margin:0 0 14px 0;">“You are not, perhaps, aware that I am your namesake?—that I was christened St. John Eyre Rivers?”</p>
+    <p style="margin:0 0 14px 0;">“No, indeed! I remember now seeing the letter E. comprised in your initials written in books you have at different times lent me; but I never asked for what name it stood. But what then? Surely—”</p>
+    <p style="margin:0 0 14px 0;">I stopped: I could not trust myself to entertain, much less to express, the thought that rushed upon me—that embodied itself,—that, in a second, stood out a strong, solid probability. Circumstances knit themselves, fitted themselves, shot into order: the chain that had been lying hitherto a formless lump of links was drawn out straight,—every ring was perfect, the connection complete. I knew, by instinct, how the matter stood, before St. John had said another word; but I cannot expect the reader to have the same intuitive perception, so I must repeat his explanation.</p>
+    <p style="margin:0 0 14px 0;">“My mother’s name was Eyre; she had two brothers; one a clergyman, who married Miss Jane Reed, of Gateshead; the other, John Eyre, Esq., merchant, late of Funchal, Madeira. Mr. Briggs, being Mr. Eyre’s solicitor, wrote to us last August to inform us of our uncle’s death, and to say that he had left his property to his brother the clergyman’s orphan daughter, overlooking us, in consequence of a quarrel, never forgiven, between him and my father. He wrote again a few weeks since, to intimate that the heiress was lost, and asking if we knew anything of her. A name casually written on a slip of paper has enabled me to find her out. You know the rest.” Again he was going, but I set my back against the door.</p>
+    <p style="margin:0 0 14px 0;">“Do let me speak,” I said; “let me have one moment to draw breath and reflect.” I paused—he stood before me, hat in hand, looking composed enough. I resumed—</p>
+    <p style="margin:0 0 14px 0;">“Your mother was my father’s sister?”</p>
+    <p style="margin:0 0 14px 0;">“Yes.”</p>
+    <p style="margin:0 0 14px 0;">“My aunt, consequently?”</p>
+    <p style="margin:0 0 14px 0;">He bowed.</p>
+    <p style="margin:0 0 14px 0;">“My uncle John was your uncle John? You, Diana, and Mary are his sister’s children, as I am his brother’s child?”</p>
+    <p style="margin:0 0 14px 0;">“Undeniably.”</p>
+    <p style="margin:0 0 14px 0;">“You three, then, are my cousins; half our blood on each side flows from the same source?”</p>
+    <p style="margin:0 0 14px 0;">“We are cousins; yes.”</p>
+    <p style="margin:0 0 14px 0;">I surveyed him. It seemed I had found a brother: one I could be proud of,—one I could love; and two sisters, whose qualities were such, that, when I knew them but as mere strangers, they had inspired me with genuine affection and admiration. The two girls, on whom, kneeling down on the wet ground, and looking through the low, latticed window of Moor House kitchen, I had gazed with so bitter a mixture of interest and despair, were my near kinswomen; and the young and stately gentleman who had found me almost dying at his threshold was my blood relation. Glorious discovery to a lonely wretch! This was wealth indeed!—wealth to the heart!—a mine of pure, genial affections. This was a blessing, bright, vivid, and exhilarating;—not like the ponderous gift of gold: rich and welcome enough in its way, but sobering from its weight. I now clapped my hands in sudden joy—my pulse bounded, my veins thrilled.</p>
+    <p style="margin:0 0 14px 0;">“Oh, I am glad!—I am glad!” I exclaimed.</p>
+    <p style="margin:0 0 14px 0;">St. John smiled. “Did I not say you neglected essential points to pursue trifles?” he asked. “You were serious when I told you you had got a fortune; and now, for a matter of no moment, you are excited.”</p>
+    <p style="margin:0 0 14px 0;">“What <em>can</em> you mean? It may be of no moment to you; you have sisters and don’t care for a cousin; but I had nobody; and now three relations,—or two, if you don’t choose to be counted,—are born into my world full-grown. I say again, I am glad!”</p>
+    <p style="margin:0 0 14px 0;">I walked fast through the room: I stopped, half suffocated with the thoughts that rose faster than I could receive, comprehend, settle them:—thoughts of what might, could, would, and should be, and that ere long. I looked at the blank wall: it seemed a sky thick with ascending stars,—every one lit me to a purpose or delight. Those who had saved my life, whom, till this hour, I had loved barrenly, I could now benefit. They were under a yoke,—I could free them: they were scattered,—I could reunite them: the independence, the affluence which was mine, might be theirs too. Were we not four? Twenty thousand pounds shared equally would be five thousand each, justice—enough and to spare: justice would be done,—mutual happiness secured. Now the wealth did not weigh on me: now it was not a mere bequest of coin,—it was a legacy of life, hope, enjoyment.</p>
+    <p style="margin:0 0 14px 0;">How I looked while these ideas were taking my spirit by storm, I cannot tell; but I perceived soon that Mr. Rivers had placed a chair behind me, and was gently attempting to make me sit down on it. He also advised me to be composed; I scorned the insinuation of helplessness and distraction, shook off his hand, and began to walk about again.</p>
+    <p style="margin:0 0 14px 0;">“Write to Diana and Mary to-morrow,” I said, “and tell them to come home directly. Diana said they would both consider themselves rich with a thousand pounds, so with five thousand they will do very well.”</p>
+    <p style="margin:0 0 14px 0;">“Tell me where I can get you a glass of water,” said St. John; “you must really make an effort to tranquillise your feelings.”</p>
+    <p style="margin:0 0 14px 0;">“Nonsense! and what sort of an effect will the bequest have on you? Will it keep you in England, induce you to marry Miss Oliver, and settle down like an ordinary mortal?”</p>
+    <p style="margin:0 0 14px 0;">“You wander: your head becomes confused. I have been too abrupt in communicating the news; it has excited you beyond your strength.”</p>
+    <p style="margin:0 0 14px 0;">“Mr. Rivers! you quite put me out of patience: I am rational enough; it is you who misunderstand, or rather who affect to misunderstand.”</p>
+    <p style="margin:0 0 14px 0;">“Perhaps, if you explained yourself a little more fully, I should comprehend better.”</p>
+    <p style="margin:0 0 14px 0;">“Explain! What is there to explain? You cannot fail to see that twenty thousand pounds, the sum in question, divided equally between the nephew and three nieces of our uncle, will give five thousand to each? What I want is, that you should write to your sisters and tell them of the fortune that has accrued to them.”</p>
+    <p style="margin:0 0 14px 0;">“To you, you mean.”</p>
+    <p style="margin:0 0 14px 0;">“I have intimated my view of the case: I am incapable of taking any other. I am not brutally selfish, blindly unjust, or fiendishly ungrateful. Besides, I am resolved I will have a home and connections. I like Moor House, and I will live at Moor House; I like Diana and Mary, and I will attach myself for life to Diana and Mary. It would please and benefit me to have five thousand pounds; it would torment and oppress me to have twenty thousand; which, moreover, could never be mine in justice, though it might in law. I abandon to you, then, what is absolutely superfluous to me. Let there be no opposition, and no discussion about it; let us agree amongst each other, and decide the point at once.”</p>
+    <p style="margin:0 0 14px 0;">“This is acting on first impulses; you must take days to consider such a matter, ere your word can be regarded as valid.”</p>
+    <p style="margin:0 0 14px 0;">“Oh! if all you doubt is my sincerity, I am easy: you see the justice of the case?”</p>
+    <p style="margin:0 0 14px 0;">“I <em>do</em> see a certain justice; but it is contrary to all custom. Besides, the entire fortune is your right: my uncle gained it by his own efforts; he was free to leave it to whom he would: he left it to you. After all, justice permits you to keep it: you may, with a clear conscience, consider it absolutely your own.”</p>
+    <p style="margin:0 0 14px 0;">“With me,” said I, “it is fully as much a matter of feeling as of conscience: I must indulge my feelings; I so seldom have had an opportunity of doing so. Were you to argue, object, and annoy me for a year, I could not forego the delicious pleasure of which I have caught a glimpse—that of repaying, in part, a mighty obligation, and winning to myself lifelong friends.”</p>
+    <p style="margin:0 0 14px 0;">“You think so now,” rejoined St. John, “because you do not know what it is to possess, nor consequently to enjoy wealth: you cannot form a notion of the importance twenty thousand pounds would give you; of the place it would enable you to take in society; of the prospects it would open to you: you cannot—”</p>
+    <p style="margin:0 0 14px 0;">“And you,” I interrupted, “cannot at all imagine the craving I have for fraternal and sisterly love. I never had a home, I never had brothers or sisters; I must and will have them now: you are not reluctant to admit me and own me, are you?”</p>
+    <p style="margin:0 0 14px 0;">“Jane, I will be your brother—my sisters will be your sisters—without stipulating for this sacrifice of your just rights.”</p>
+    <p style="margin:0 0 14px 0;">“Brother? Yes; at the distance of a thousand leagues! Sisters? Yes; slaving amongst strangers! I, wealthy—gorged with gold I never earned and do not merit! You, penniless! Famous equality and fraternisation! Close union! Intimate attachment!”</p>
+    <p style="margin:0 0 14px 0;">“But, Jane, your aspirations after family ties and domestic happiness may be realised otherwise than by the means you contemplate: you may marry.”</p>
+    <p style="margin:0 0 14px 0;">“Nonsense, again! Marry! I don’t want to marry, and never shall marry.”</p>
+    <p style="margin:0 0 14px 0;">“That is saying too much: such hazardous affirmations are a proof of the excitement under which you labour.”</p>
+    <p style="margin:0 0 14px 0;">“It is not saying too much: I know what I feel, and how averse are my inclinations to the bare thought of marriage. No one would take me for love; and I will not be regarded in the light of a mere money speculation. And I do not want a stranger—unsympathising, alien, different from me; I want my kindred: those with whom I have full fellow-feeling. Say again you will be my brother: when you uttered the words I was satisfied, happy; repeat them, if you can, repeat them sincerely.”</p>
+    <p style="margin:0 0 14px 0;">“I think I can. I know I have always loved my own sisters; and I know on what my affection for them is grounded,—respect for their worth and admiration of their talents. You too have principle and mind: your tastes and habits resemble Diana’s and Mary’s; your presence is always agreeable to me; in your conversation I have already for some time found a salutary solace. I feel I can easily and naturally make room in my heart for you, as my third and youngest sister.”</p>
+    <p style="margin:0 0 14px 0;">“Thank you: that contents me for to-night. Now you had better go; for if you stay longer, you will perhaps irritate me afresh by some mistrustful scruple.”</p>
+    <p style="margin:0 0 14px 0;">“And the school, Miss Eyre? It must now be shut up, I suppose?”</p>
+    <p style="margin:0 0 14px 0;">“No. I will retain my post of mistress till you get a substitute.”</p>
+    <p style="margin:0 0 14px 0;">He smiled approbation: we shook hands, and he took leave.</p>
+    <p style="margin:0 0 14px 0;">I need not narrate in detail the further struggles I had, and arguments I used, to get matters regarding the legacy settled as I wished. My task was a very hard one; but, as I was absolutely resolved—as my cousins saw at length that my mind was really and immutably fixed on making a just division of the property—as they must in their own hearts have felt the equity of the intention; and must, besides, have been innately conscious that in my place they would have done precisely what I wished to do—they yielded at length so far as to consent to put the affair to arbitration. The judges chosen were Mr. Oliver and an able lawyer: both coincided in my opinion: I carried my point. The instruments of transfer were drawn out: St. John, Diana, Mary, and I, each became possessed of a competency.</p>
+  </div>
+</details>
+        <p style="font-size: 14px; color: #3B4E8C; margin: 14px 0 0 0;">Stable outside link to the full novel: <a href="https://www.gutenberg.org/ebooks/1260" style="color:#3B4E8C;">gutenberg.org/ebooks/1260</a></p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 3 &middot; NOW YOU: MATCH THE LINE TO WHAT IT REVEALS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Each line below is spoken in chapters 31 through 33. Match it to what it reveals about the speaker's values, based on the whole chapter, not the line alone.</p>
+        <div class="optima-widget ow-match" data-done="All four matched. Notice that both St. John and Jane use the language of duty and justice, for very different kinds of refusal.">
+            <div class="widget-kicker">&#129513; CLICK A LINE, THEN WHAT IT REVEALS</div>
+            <div class="widget-question">Four lines, four values.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">SPOKEN IN CHAPTERS 31&ndash;33</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="calling">&ldquo;Rosamond a sufferer, a labourer, a female apostle? Rosamond a missionary's wife? No!&rdquo;</button>
+                        <button data-key="cold">&ldquo;Know me to be what I am&mdash;a cold hard man.&rdquo;</button>
+                        <button data-key="kin">&ldquo;I want my kindred: those with whom I have full fellow-feeling.&rdquo;</button>
+                        <button data-key="justice">&ldquo;Were we not four? Twenty thousand pounds shared equally would be five thousand each, justice&mdash;enough and to spare.&rdquo;</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHAT IT REVEALS</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="justice">Jane's fortune has become an instrument of fairness in her mind before it is a comfort for herself; she measures it in shares owed, not in what she alone deserves.</button>
+                        <button data-key="calling">St. John judges people, even the woman he loves, by whether they fit the single purpose he has already chosen for his life.</button>
+                        <button data-key="kin">Jane's hunger is not for money at all; the fortune matters to her chiefly as the means to buy back a family she never had.</button>
+                        <button data-key="cold">St. John names his own hardness without shame, treating it as a fact about himself rather than a flaw to hide.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; DO SOMETHING WITH THE READING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">When St. John objects that giving away fifteen thousand pounds is "contrary to all custom," Jane answers him first with feeling, then with a count: <em>"Were we not four? Twenty thousand pounds shared equally would be five thousand each, justice&mdash;enough and to spare: justice would be done,&mdash;mutual happiness secured."</em></p>
+        <div class="rj-badge">
+            <div class="rj-icon">&#128211;</div>
+            <div>
+                <div class="rj-label">READING RESPONSE</div>
+                <div class="rj-task">Write a paragraph comparing what St. John refuses to what Jane gives away. To do it well: quote each character's own stated reason for their choice, cited by chapter, and then say in your own words what each reason tells you they actually value most, vocation, fairness, family, or something else. Which refusal costs the refuser more, in your reading, and why? Say whether this chapter has moved your answer to the module question, and how.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Claude can explain what an English inheritance in "the funds" meant in the 1840s, or what a missionary posting to India or Madagascar would have actually involved. It cannot tell you which refusal, St. John's or Jane's, costs more; that judgment is the work of this lesson.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>St. John's Proposal</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The cousin who refused a fortune he could have kept now asks Jane for something far larger. Read chapters 34 and 35.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Two refusals, two kinds of discipline: one that hardens a heart against what it wants, one that gives away what it is owed. Keep both in mind. The cousin capable of that second discipline is about to ask Jane for a marriage built on the first.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Morton and the Inheritance</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button').forEach(function (b) { b.classList.remove('selected'); b.classList.remove('matched'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w._matchPick = null;
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

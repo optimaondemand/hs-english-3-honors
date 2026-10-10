@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; Arrival at Thornfield</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-direction: column; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 10px 14px; font-size: 15px; color: #0E1C42; cursor: pointer; transition: all .15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0 0 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    details.je-reader summary::-webkit-details-marker { display:none; }
+    details.je-reader[open] summary { border-bottom:1px solid #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Arrival at Thornfield</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Jane Eyre, ch. 11&ndash;12</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Arrival at Thornfield</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A new house, a kind housekeeper, a small French pupil. Then, alone in a narrow third-story corridor, Jane hears a laugh where no one ought to be laughing.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Jane's new post begins gently: Mrs. Fairfax is warm, Ad&egrave;le is lively, Thornfield Hall is handsome. Then a single detail breaks the calm. Today you bring back the four Gothic elements you learned in the red-room lesson and apply them to a new house, and you meet Jane's own account of why restlessness is not a flaw to be cured. Read chapters 11 and 12.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> find each of the four Gothic elements (enclosure, color and light, the dead, the uncanny) in Thornfield's third story, with a citation for each.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain, in my own words, the argument Jane makes on the leads in chapter 12 about restlessness and women's lives.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state exactly what the text does and does not tell you about the laugh, without adding anything the chapters do not say.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN</div>
+            <div class="widget-question">Have you ever felt at ease in a new place right up until one small detail made you uneasy? What was it?</div>
+            <div class="widget-options">
+                <button data-response="Thornfield's third story is described as a place with only one small window, narrow, low, and lined with shut doors: the same enclosure the red-room used, in a new house. Watch for how quickly the description turns confining.">A closed-off space that felt harder to leave than the rest of the building</button>
+                <button data-response="The narrator moves from bright, sunlit description of the grounds to an attic 'black as a vault' in the space of one paragraph. Watch for that same swing in chapter 11.">A sudden shift from bright and open to dim and closed-in</button>
+                <button data-response="Thornfield's third story is furnished with generations-old relics Jane calls 'a home of the past: a shrine of memory.' Watch for how the past is kept present in an old house.">Objects that felt like they belonged to people long gone</button>
+                <button data-response="Mrs. Fairfax hears the same sound Jane does and has a name ready before Jane can even ask: watch how quickly, and how incompletely, the household explains it away.">A sound with no visible source</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The same four elements, a new house</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">In the red-room lesson you learned to read a Gothic interior by four elements: <strong>enclosure</strong>, <strong>color and light</strong>, <strong>the dead</strong>, and <strong>the uncanny</strong>, a familiar thing turned strange. The red-room built all four at once. Thornfield spreads them out, room by room, and saves the fourth for a sound rather than a mirror. Bring the same tool to a new house.</p>
+
+        <!-- CORE VISUAL: same four elements, reapplied to Thornfield -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">THE SAME FOUR, AT THORNFIELD'S THIRD STORY (CHAPTER 11)</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>Enclosure</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">"narrow, low, and dim, with only one little window at the far end," lined with "two rows of small black doors all shut," like "a corridor in some Bluebeard's castle."</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>Color and light</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">the attic "seemed black as a vault" the moment Jane leaves the roof's "arch of blue air" behind her.</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>The dead</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">furniture and embroidery "wrought by fingers that for two generations had been coffin-dust," in rooms Mrs. Fairfax calls "a home of the past: a shrine of memory."</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>The uncanny</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">a human laugh, "distinct, formal, mirthless," in a hallway where Jane is certain she is alone; Mrs. Fairfax offers a name, "perhaps Grace Poole," and nothing more.</div></div>
+            </div>
+            <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 14px;">Notice what the text withholds: a name is offered, not an explanation. Keep your own reading to exactly that.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 2 &middot; READ CHAPTERS 11 AND 12</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;"><strong>Watch for, in chapter 11:</strong> Mrs. Fairfax's actual relationship to Mr. Rochester, which is not what Jane first assumes; and the exact wording Mrs. Fairfax uses about the laugh. <strong>Watch for, in chapter 12:</strong> the paragraph where Jane argues that "women feel just as men feel," and what she says restlessness is actually for.</p>
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter XI</strong> <span style="font-size:13px; color:#3B4E8C;">(about 6,500 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">A new chapter in a novel is something like a new scene in a play; and when I draw up the curtain this time, reader, you must fancy you see a room in the George Inn at Millcote, with such large figured papering on the walls as inn rooms have; such a carpet, such furniture, such ornaments on the mantelpiece, such prints, including a portrait of George the Third, and another of the Prince of Wales, and a representation of the death of Wolfe. All this is visible to you by the light of an oil lamp hanging from the ceiling, and by that of an excellent fire, near which I sit in my cloak and bonnet; my muff and umbrella lie on the table, and I am warming away the numbness and chill contracted by sixteen hours’ exposure to the rawness of an October day: I left Lowton at four o’clock A.M., and the Millcote town clock is now just striking eight.</p>
+    <p style="margin:0 0 14px 0;">Reader, though I look comfortably accommodated, I am not very tranquil in my mind. I thought when the coach stopped here there would be some one to meet me; I looked anxiously round as I descended the wooden steps the “boots” placed for my convenience, expecting to hear my name pronounced, and to see some description of carriage waiting to convey me to Thornfield. Nothing of the sort was visible; and when I asked a waiter if any one had been to inquire after a Miss Eyre, I was answered in the negative: so I had no resource but to request to be shown into a private room: and here I am waiting, while all sorts of doubts and fears are troubling my thoughts.</p>
+    <p style="margin:0 0 14px 0;">It is a very strange sensation to inexperienced youth to feel itself quite alone in the world, cut adrift from every connection, uncertain whether the port to which it is bound can be reached, and prevented by many impediments from returning to that it has quitted. The charm of adventure sweetens that sensation, the glow of pride warms it; but then the throb of fear disturbs it; and fear with me became predominant when half-an-hour elapsed and still I was alone. I bethought myself to ring the bell.</p>
+    <p style="margin:0 0 14px 0;">“Is there a place in this neighbourhood called Thornfield?” I asked of the waiter who answered the summons.</p>
+    <p style="margin:0 0 14px 0;">“Thornfield? I don’t know, ma’am; I’ll inquire at the bar.” He vanished, but reappeared instantly—</p>
+    <p style="margin:0 0 14px 0;">“Is your name Eyre, Miss?”</p>
+    <p style="margin:0 0 14px 0;">“Yes.”</p>
+    <p style="margin:0 0 14px 0;">“Person here waiting for you.”</p>
+    <p style="margin:0 0 14px 0;">I jumped up, took my muff and umbrella, and hastened into the inn-passage: a man was standing by the open door, and in the lamp-lit street I dimly saw a one-horse conveyance.</p>
+    <p style="margin:0 0 14px 0;">“This will be your luggage, I suppose?” said the man rather abruptly when he saw me, pointing to my trunk in the passage.</p>
+    <p style="margin:0 0 14px 0;">“Yes.” He hoisted it on to the vehicle, which was a sort of car, and then I got in; before he shut me up, I asked him how far it was to Thornfield.</p>
+    <p style="margin:0 0 14px 0;">“A matter of six miles.”</p>
+    <p style="margin:0 0 14px 0;">“How long shall we be before we get there?”</p>
+    <p style="margin:0 0 14px 0;">“Happen an hour and a half.”</p>
+    <p style="margin:0 0 14px 0;">He fastened the car door, climbed to his own seat outside, and we set off. Our progress was leisurely, and gave me ample time to reflect; I was content to be at length so near the end of my journey; and as I leaned back in the comfortable though not elegant conveyance, I meditated much at my ease.</p>
+    <p style="margin:0 0 14px 0;">“I suppose,” thought I, “judging from the plainness of the servant and carriage, Mrs. Fairfax is not a very dashing person: so much the better; I never lived amongst fine people but once, and I was very miserable with them. I wonder if she lives alone except this little girl; if so, and if she is in any degree amiable, I shall surely be able to get on with her; I will do my best; it is a pity that doing one’s best does not always answer. At Lowood, indeed, I took that resolution, kept it, and succeeded in pleasing; but with Mrs. Reed, I remember my best was always spurned with scorn. I pray God Mrs. Fairfax may not turn out a second Mrs. Reed; but if she does, I am not bound to stay with her! let the worst come to the worst, I can advertise again. How far are we on our road now, I wonder?”</p>
+    <p style="margin:0 0 14px 0;">I let down the window and looked out; Millcote was behind us; judging by the number of its lights, it seemed a place of considerable magnitude, much larger than Lowton. We were now, as far as I could see, on a sort of common; but there were houses scattered all over the district; I felt we were in a different region to Lowood, more populous, less picturesque; more stirring, less romantic.</p>
+    <p style="margin:0 0 14px 0;">The roads were heavy, the night misty; my conductor let his horse walk all the way, and the hour and a half extended, I verily believe, to two hours; at last he turned in his seat and said—</p>
+    <p style="margin:0 0 14px 0;">“You’re noan so far fro’ Thornfield now.”</p>
+    <p style="margin:0 0 14px 0;">Again I looked out: we were passing a church; I saw its low broad tower against the sky, and its bell was tolling a quarter; I saw a narrow galaxy of lights too, on a hillside, marking a village or hamlet. About ten minutes after, the driver got down and opened a pair of gates: we passed through, and they clashed to behind us. We now slowly ascended a drive, and came upon the long front of a house: candlelight gleamed from one curtained bow-window; all the rest were dark. The car stopped at the front door; it was opened by a maid-servant; I alighted and went in.</p>
+    <p style="margin:0 0 14px 0;">“Will you walk this way, ma’am?” said the girl; and I followed her across a square hall with high doors all round: she ushered me into a room whose double illumination of fire and candle at first dazzled me, contrasting as it did with the darkness to which my eyes had been for two hours inured; when I could see, however, a cosy and agreeable picture presented itself to my view.</p>
+    <p style="margin:0 0 14px 0;">A snug small room; a round table by a cheerful fire; an arm-chair high-backed and old-fashioned, wherein sat the neatest imaginable little elderly lady, in widow’s cap, black silk gown, and snowy muslin apron; exactly like what I had fancied Mrs. Fairfax, only less stately and milder looking. She was occupied in knitting; a large cat sat demurely at her feet; nothing in short was wanting to complete the beau-ideal of domestic comfort. A more reassuring introduction for a new governess could scarcely be conceived; there was no grandeur to overwhelm, no stateliness to embarrass; and then, as I entered, the old lady got up and promptly and kindly came forward to meet me.</p>
+    <p style="margin:0 0 14px 0;">“How do you do, my dear? I am afraid you have had a tedious ride; John drives so slowly; you must be cold, come to the fire.”</p>
+    <p style="margin:0 0 14px 0;">“Mrs. Fairfax, I suppose?” said I.</p>
+    <p style="margin:0 0 14px 0;">“Yes, you are right: do sit down.”</p>
+    <p style="margin:0 0 14px 0;">She conducted me to her own chair, and then began to remove my shawl and untie my bonnet-strings; I begged she would not give herself so much trouble.</p>
+    <p style="margin:0 0 14px 0;">“Oh, it is no trouble; I dare say your own hands are almost numbed with cold. Leah, make a little hot negus and cut a sandwich or two: here are the keys of the storeroom.”</p>
+    <p style="margin:0 0 14px 0;">And she produced from her pocket a most housewifely bunch of keys, and delivered them to the servant.</p>
+    <p style="margin:0 0 14px 0;">“Now, then, draw nearer to the fire,” she continued. “You’ve brought your luggage with you, haven’t you, my dear?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, ma’am.”</p>
+    <p style="margin:0 0 14px 0;">“I’ll see it carried into your room,” she said, and bustled out.</p>
+    <p style="margin:0 0 14px 0;">“She treats me like a visitor,” thought I. “I little expected such a reception; I anticipated only coldness and stiffness: this is not like what I have heard of the treatment of governesses; but I must not exult too soon.”</p>
+    <p style="margin:0 0 14px 0;">She returned; with her own hands cleared her knitting apparatus and a book or two from the table, to make room for the tray which Leah now brought, and then herself handed me the refreshments. I felt rather confused at being the object of more attention than I had ever before received, and, that too, shown by my employer and superior; but as she did not herself seem to consider she was doing anything out of her place, I thought it better to take her civilities quietly.</p>
+    <p style="margin:0 0 14px 0;">“Shall I have the pleasure of seeing Miss Fairfax to-night?” I asked, when I had partaken of what she offered me.</p>
+    <p style="margin:0 0 14px 0;">“What did you say, my dear? I am a little deaf,” returned the good lady, approaching her ear to my mouth.</p>
+    <p style="margin:0 0 14px 0;">I repeated the question more distinctly.</p>
+    <p style="margin:0 0 14px 0;">“Miss Fairfax? Oh, you mean Miss Varens! Varens is the name of your future pupil.”</p>
+    <p style="margin:0 0 14px 0;">“Indeed! Then she is not your daughter?”</p>
+    <p style="margin:0 0 14px 0;">“No,—I have no family.”</p>
+    <p style="margin:0 0 14px 0;">I should have followed up my first inquiry, by asking in what way Miss Varens was connected with her; but I recollected it was not polite to ask too many questions: besides, I was sure to hear in time.</p>
+    <p style="margin:0 0 14px 0;">“I am so glad,” she continued, as she sat down opposite to me, and took the cat on her knee; “I am so glad you are come; it will be quite pleasant living here now with a companion. To be sure it is pleasant at any time; for Thornfield is a fine old hall, rather neglected of late years perhaps, but still it is a respectable place; yet you know in winter-time one feels dreary quite alone in the best quarters. I say alone—Leah is a nice girl to be sure, and John and his wife are very decent people; but then you see they are only servants, and one can’t converse with them on terms of equality: one must keep them at due distance, for fear of losing one’s authority. I’m sure last winter (it was a very severe one, if you recollect, and when it did not snow, it rained and blew), not a creature but the butcher and postman came to the house, from November till February; and I really got quite melancholy with sitting night after night alone; I had Leah in to read to me sometimes; but I don’t think the poor girl liked the task much: she felt it confining. In spring and summer one got on better: sunshine and long days make such a difference; and then, just at the commencement of this autumn, little Adela Varens came and her nurse: a child makes a house alive all at once; and now you are here I shall be quite gay.”</p>
+    <p style="margin:0 0 14px 0;">My heart really warmed to the worthy lady as I heard her talk; and I drew my chair a little nearer to her, and expressed my sincere wish that she might find my company as agreeable as she anticipated.</p>
+    <p style="margin:0 0 14px 0;">“But I’ll not keep you sitting up late to-night,” said she; “it is on the stroke of twelve now, and you have been travelling all day: you must feel tired. If you have got your feet well warmed, I’ll show you your bedroom. I’ve had the room next to mine prepared for you; it is only a small apartment, but I thought you would like it better than one of the large front chambers: to be sure they have finer furniture, but they are so dreary and solitary, I never sleep in them myself.”</p>
+    <p style="margin:0 0 14px 0;">I thanked her for her considerate choice, and as I really felt fatigued with my long journey, expressed my readiness to retire. She took her candle, and I followed her from the room. First she went to see if the hall-door was fastened; having taken the key from the lock, she led the way upstairs. The steps and banisters were of oak; the staircase window was high and latticed; both it and the long gallery into which the bedroom doors opened looked as if they belonged to a church rather than a house. A very chill and vault-like air pervaded the stairs and gallery, suggesting cheerless ideas of space and solitude; and I was glad, when finally ushered into my chamber, to find it of small dimensions, and furnished in ordinary, modern style.</p>
+    <p style="margin:0 0 14px 0;">When Mrs. Fairfax had bidden me a kind good-night, and I had fastened my door, gazed leisurely round, and in some measure effaced the eerie impression made by that wide hall, that dark and spacious staircase, and that long, cold gallery, by the livelier aspect of my little room, I remembered that, after a day of bodily fatigue and mental anxiety, I was now at last in safe haven. The impulse of gratitude swelled my heart, and I knelt down at the bedside, and offered up thanks where thanks were due; not forgetting, ere I rose, to implore aid on my further path, and the power of meriting the kindness which seemed so frankly offered me before it was earned. My couch had no thorns in it that night; my solitary room no fears. At once weary and content, I slept soon and soundly: when I awoke it was broad day.</p>
+    <p style="margin:0 0 14px 0;">The chamber looked such a bright little place to me as the sun shone in between the gay blue chintz window curtains, showing papered walls and a carpeted floor, so unlike the bare planks and stained plaster of Lowood, that my spirits rose at the view. Externals have a great effect on the young: I thought that a fairer era of life was beginning for me, one that was to have its flowers and pleasures, as well as its thorns and toils. My faculties, roused by the change of scene, the new field offered to hope, seemed all astir. I cannot precisely define what they expected, but it was something pleasant: not perhaps that day or that month, but at an indefinite future period.</p>
+    <p style="margin:0 0 14px 0;">I rose; I dressed myself with care: obliged to be plain—for I had no article of attire that was not made with extreme simplicity—I was still by nature solicitous to be neat. It was not my habit to be disregardful of appearance or careless of the impression I made: on the contrary, I ever wished to look as well as I could, and to please as much as my want of beauty would permit. I sometimes regretted that I was not handsomer; I sometimes wished to have rosy cheeks, a straight nose, and small cherry mouth; I desired to be tall, stately, and finely developed in figure; I felt it a misfortune that I was so little, so pale, and had features so irregular and so marked. And why had I these aspirations and these regrets? It would be difficult to say: I could not then distinctly say it to myself; yet I had a reason, and a logical, natural reason too. However, when I had brushed my hair very smooth, and put on my black frock—which, Quakerlike as it was, at least had the merit of fitting to a nicety—and adjusted my clean white tucker, I thought I should do respectably enough to appear before Mrs. Fairfax, and that my new pupil would not at least recoil from me with antipathy. Having opened my chamber window, and seen that I left all things straight and neat on the toilet table, I ventured forth.</p>
+    <p style="margin:0 0 14px 0;">Traversing the long and matted gallery, I descended the slippery steps of oak; then I gained the hall: I halted there a minute; I looked at some pictures on the walls (one, I remember, represented a grim man in a cuirass, and one a lady with powdered hair and a pearl necklace), at a bronze lamp pendent from the ceiling, at a great clock whose case was of oak curiously carved, and ebon black with time and rubbing. Everything appeared very stately and imposing to me; but then I was so little accustomed to grandeur. The hall-door, which was half of glass, stood open; I stepped over the threshold. It was a fine autumn morning; the early sun shone serenely on embrowned groves and still green fields; advancing on to the lawn, I looked up and surveyed the front of the mansion. It was three storeys high, of proportions not vast, though considerable: a gentleman’s manor-house, not a nobleman’s seat: battlements round the top gave it a picturesque look. Its grey front stood out well from the background of a rookery, whose cawing tenants were now on the wing: they flew over the lawn and grounds to alight in a great meadow, from which these were separated by a sunk fence, and where an array of mighty old thorn trees, strong, knotty, and broad as oaks, at once explained the etymology of the mansion’s designation. Farther off were hills: not so lofty as those round Lowood, nor so craggy, nor so like barriers of separation from the living world; but yet quiet and lonely hills enough, and seeming to embrace Thornfield with a seclusion I had not expected to find existent so near the stirring locality of Millcote. A little hamlet, whose roofs were blent with trees, straggled up the side of one of these hills; the church of the district stood nearer Thornfield: its old tower-top looked over a knoll between the house and gates.</p>
+    <p style="margin:0 0 14px 0;">I was yet enjoying the calm prospect and pleasant fresh air, yet listening with delight to the cawing of the rooks, yet surveying the wide, hoary front of the hall, and thinking what a great place it was for one lonely little dame like Mrs. Fairfax to inhabit, when that lady appeared at the door.</p>
+    <p style="margin:0 0 14px 0;">“What! out already?” said she. “I see you are an early riser.” I went up to her, and was received with an affable kiss and shake of the hand.</p>
+    <p style="margin:0 0 14px 0;">“How do you like Thornfield?” she asked. I told her I liked it very much.</p>
+    <p style="margin:0 0 14px 0;">“Yes,” she said, “it is a pretty place; but I fear it will be getting out of order, unless Mr. Rochester should take it into his head to come and reside here permanently; or, at least, visit it rather oftener: great houses and fine grounds require the presence of the proprietor.”</p>
+    <p style="margin:0 0 14px 0;">“Mr. Rochester!” I exclaimed. “Who is he?”</p>
+    <p style="margin:0 0 14px 0;">“The owner of Thornfield,” she responded quietly. “Did you not know he was called Rochester?”</p>
+    <p style="margin:0 0 14px 0;">Of course I did not—I had never heard of him before; but the old lady seemed to regard his existence as a universally understood fact, with which everybody must be acquainted by instinct.</p>
+    <p style="margin:0 0 14px 0;">“I thought,” I continued, “Thornfield belonged to you.”</p>
+    <p style="margin:0 0 14px 0;">“To me? Bless you, child; what an idea! To me! I am only the housekeeper—the manager. To be sure I am distantly related to the Rochesters by the mother’s side, or at least my husband was; he was a clergyman, incumbent of Hay—that little village yonder on the hill—and that church near the gates was his. The present Mr. Rochester’s mother was a Fairfax, and second cousin to my husband: but I never presume on the connection—in fact, it is nothing to me; I consider myself quite in the light of an ordinary housekeeper: my employer is always civil, and I expect nothing more.”</p>
+    <p style="margin:0 0 14px 0;">“And the little girl—my pupil!”</p>
+    <p style="margin:0 0 14px 0;">“She is Mr. Rochester’s ward; he commissioned me to find a governess for her. He intended to have her brought up in ——shire, I believe. Here she comes, with her ‘bonne,’ as she calls her nurse.” The enigma then was explained: this affable and kind little widow was no great dame; but a dependent like myself. I did not like her the worse for that; on the contrary, I felt better pleased than ever. The equality between her and me was real; not the mere result of condescension on her part: so much the better—my position was all the freer.</p>
+    <p style="margin:0 0 14px 0;">As I was meditating on this discovery, a little girl, followed by her attendant, came running up the lawn. I looked at my pupil, who did not at first appear to notice me: she was quite a child, perhaps seven or eight years old, slightly built, with a pale, small-featured face, and a redundancy of hair falling in curls to her waist.</p>
+    <p style="margin:0 0 14px 0;">“Good morning, Miss Adela,” said Mrs. Fairfax. “Come and speak to the lady who is to teach you, and to make you a clever woman some day.” She approached.</p>
+    <p style="margin:0 0 14px 0;">“C’est là ma gouvernante!” said she, pointing to me, and addressing her nurse; who answered—</p>
+    <p style="margin:0 0 14px 0;">“Mais oui, certainement.”</p>
+    <p style="margin:0 0 14px 0;">“Are they foreigners?” I inquired, amazed at hearing the French language.</p>
+    <p style="margin:0 0 14px 0;">“The nurse is a foreigner, and Adela was born on the Continent; and, I believe, never left it till within six months ago. When she first came here she could speak no English; now she can make shift to talk it a little: I don’t understand her, she mixes it so with French; but you will make out her meaning very well, I dare say.”</p>
+    <p style="margin:0 0 14px 0;">Fortunately I had had the advantage of being taught French by a French lady; and as I had always made a point of conversing with Madame Pierrot as often as I could, and had besides, during the last seven years, learnt a portion of French by heart daily—applying myself to take pains with my accent, and imitating as closely as possible the pronunciation of my teacher, I had acquired a certain degree of readiness and correctness in the language, and was not likely to be much at a loss with Mademoiselle Adela. She came and shook hands with me when she heard that I was her governess; and as I led her in to breakfast, I addressed some phrases to her in her own tongue: she replied briefly at first, but after we were seated at the table, and she had examined me some ten minutes with her large hazel eyes, she suddenly commenced chattering fluently.</p>
+    <p style="margin:0 0 14px 0;">“Ah!” cried she, in French, “you speak my language as well as Mr. Rochester does: I can talk to you as I can to him, and so can Sophie. She will be glad: nobody here understands her: Madame Fairfax is all English. Sophie is my nurse; she came with me over the sea in a great ship with a chimney that smoked—how it did smoke!—and I was sick, and so was Sophie, and so was Mr. Rochester. Mr. Rochester lay down on a sofa in a pretty room called the salon, and Sophie and I had little beds in another place. I nearly fell out of mine; it was like a shelf. And Mademoiselle—what is your name?”</p>
+    <p style="margin:0 0 14px 0;">“Eyre—Jane Eyre.”</p>
+    <p style="margin:0 0 14px 0;">“Aire? Bah! I cannot say it. Well, our ship stopped in the morning, before it was quite daylight, at a great city—a huge city, with very dark houses and all smoky; not at all like the pretty clean town I came from; and Mr. Rochester carried me in his arms over a plank to the land, and Sophie came after, and we all got into a coach, which took us to a beautiful large house, larger than this and finer, called an hotel. We stayed there nearly a week: I and Sophie used to walk every day in a great green place full of trees, called the Park; and there were many children there besides me, and a pond with beautiful birds in it, that I fed with crumbs.”</p>
+    <p style="margin:0 0 14px 0;">“Can you understand her when she runs on so fast?” asked Mrs. Fairfax.</p>
+    <p style="margin:0 0 14px 0;">I understood her very well, for I had been accustomed to the fluent tongue of Madame Pierrot.</p>
+    <p style="margin:0 0 14px 0;">“I wish,” continued the good lady, “you would ask her a question or two about her parents: I wonder if she remembers them?”</p>
+    <p style="margin:0 0 14px 0;">“Adèle,” I inquired, “with whom did you live when you were in that pretty clean town you spoke of?”</p>
+    <p style="margin:0 0 14px 0;">“I lived long ago with mama; but she is gone to the Holy Virgin. Mama used to teach me to dance and sing, and to say verses. A great many gentlemen and ladies came to see mama, and I used to dance before them, or to sit on their knees and sing to them: I liked it. Shall I let you hear me sing now?”</p>
+    <p style="margin:0 0 14px 0;">She had finished her breakfast, so I permitted her to give a specimen of her accomplishments. Descending from her chair, she came and placed herself on my knee; then, folding her little hands demurely before her, shaking back her curls and lifting her eyes to the ceiling, she commenced singing a song from some opera. It was the strain of a forsaken lady, who, after bewailing the perfidy of her lover, calls pride to her aid; desires her attendant to deck her in her brightest jewels and richest robes, and resolves to meet the false one that night at a ball, and prove to him, by the gaiety of her demeanour, how little his desertion has affected her.</p>
+    <p style="margin:0 0 14px 0;">The subject seemed strangely chosen for an infant singer; but I suppose the point of the exhibition lay in hearing the notes of love and jealousy warbled with the lisp of childhood; and in very bad taste that point was: at least I thought so.</p>
+    <p style="margin:0 0 14px 0;">Adèle sang the canzonette tunefully enough, and with the <em>naïveté</em> of her age. This achieved, she jumped from my knee and said, “Now, Mademoiselle, I will repeat you some poetry.”</p>
+    <p style="margin:0 0 14px 0;">Assuming an attitude, she began, “La Ligue des Rats: fable de La Fontaine.” She then declaimed the little piece with an attention to punctuation and emphasis, a flexibility of voice and an appropriateness of gesture, very unusual indeed at her age, and which proved she had been carefully trained.</p>
+    <p style="margin:0 0 14px 0;">“Was it your mama who taught you that piece?” I asked.</p>
+    <p style="margin:0 0 14px 0;">“Yes, and she just used to say it in this way: ‘Qu’avez vous donc? lui dit un de ces rats; parlez!’ She made me lift my hand—so—to remind me to raise my voice at the question. Now shall I dance for you?”</p>
+    <p style="margin:0 0 14px 0;">“No, that will do: but after your mama went to the Holy Virgin, as you say, with whom did you live then?”</p>
+    <p style="margin:0 0 14px 0;">“With Madame Frédéric and her husband: she took care of me, but she is nothing related to me. I think she is poor, for she had not so fine a house as mama. I was not long there. Mr. Rochester asked me if I would like to go and live with him in England, and I said yes; for I knew Mr. Rochester before I knew Madame Frédéric, and he was always kind to me and gave me pretty dresses and toys: but you see he has not kept his word, for he has brought me to England, and now he is gone back again himself, and I never see him.”</p>
+    <p style="margin:0 0 14px 0;">After breakfast, Adèle and I withdrew to the library, which room, it appears, Mr. Rochester had directed should be used as the schoolroom. Most of the books were locked up behind glass doors; but there was one bookcase left open containing everything that could be needed in the way of elementary works, and several volumes of light literature, poetry, biography, travels, a few romances, &amp;c. I suppose he had considered that these were all the governess would require for her private perusal; and, indeed, they contented me amply for the present; compared with the scanty pickings I had now and then been able to glean at Lowood, they seemed to offer an abundant harvest of entertainment and information. In this room, too, there was a cabinet piano, quite new and of superior tone; also an easel for painting and a pair of globes.</p>
+    <p style="margin:0 0 14px 0;">I found my pupil sufficiently docile, though disinclined to apply: she had not been used to regular occupation of any kind. I felt it would be injudicious to confine her too much at first; so, when I had talked to her a great deal, and got her to learn a little, and when the morning had advanced to noon, I allowed her to return to her nurse. I then proposed to occupy myself till dinner-time in drawing some little sketches for her use.</p>
+    <p style="margin:0 0 14px 0;">As I was going upstairs to fetch my portfolio and pencils, Mrs. Fairfax called to me: “Your morning school-hours are over now, I suppose,” said she. She was in a room the folding-doors of which stood open: I went in when she addressed me. It was a large, stately apartment, with purple chairs and curtains, a Turkey carpet, walnut-panelled walls, one vast window rich in stained glass, and a lofty ceiling, nobly moulded. Mrs. Fairfax was dusting some vases of fine purple spar, which stood on a sideboard.</p>
+    <p style="margin:0 0 14px 0;">“What a beautiful room!” I exclaimed, as I looked round; for I had never before seen any half so imposing.</p>
+    <p style="margin:0 0 14px 0;">“Yes; this is the dining-room. I have just opened the window, to let in a little air and sunshine; for everything gets so damp in apartments that are seldom inhabited; the drawing-room yonder feels like a vault.”</p>
+    <p style="margin:0 0 14px 0;">She pointed to a wide arch corresponding to the window, and hung like it with a Tyrian-dyed curtain, now looped up. Mounting to it by two broad steps, and looking through, I thought I caught a glimpse of a fairy place, so bright to my novice-eyes appeared the view beyond. Yet it was merely a very pretty drawing-room, and within it a boudoir, both spread with white carpets, on which seemed laid brilliant garlands of flowers; both ceiled with snowy mouldings of white grapes and vine-leaves, beneath which glowed in rich contrast crimson couches and ottomans; while the ornaments on the pale Parian mantelpiece were of sparkling Bohemian glass, ruby red; and between the windows large mirrors repeated the general blending of snow and fire.</p>
+    <p style="margin:0 0 14px 0;">“In what order you keep these rooms, Mrs. Fairfax!” said I. “No dust, no canvas coverings: except that the air feels chilly, one would think they were inhabited daily.”</p>
+    <p style="margin:0 0 14px 0;">“Why, Miss Eyre, though Mr. Rochester’s visits here are rare, they are always sudden and unexpected; and as I observed that it put him out to find everything swathed up, and to have a bustle of arrangement on his arrival, I thought it best to keep the rooms in readiness.”</p>
+    <p style="margin:0 0 14px 0;">“Is Mr. Rochester an exacting, fastidious sort of man?”</p>
+    <p style="margin:0 0 14px 0;">“Not particularly so; but he has a gentleman’s tastes and habits, and he expects to have things managed in conformity to them.”</p>
+    <p style="margin:0 0 14px 0;">“Do you like him? Is he generally liked?”</p>
+    <p style="margin:0 0 14px 0;">“Oh, yes; the family have always been respected here. Almost all the land in this neighbourhood, as far as you can see, has belonged to the Rochesters time out of mind.”</p>
+    <p style="margin:0 0 14px 0;">“Well, but, leaving his land out of the question, do you like him? Is he liked for himself?”</p>
+    <p style="margin:0 0 14px 0;">“<em>I</em> have no cause to do otherwise than like him; and I believe he is considered a just and liberal landlord by his tenants: but he has never lived much amongst them.”</p>
+    <p style="margin:0 0 14px 0;">“But has he no peculiarities? What, in short, is his character?”</p>
+    <p style="margin:0 0 14px 0;">“Oh! his character is unimpeachable, I suppose. He is rather peculiar, perhaps: he has travelled a great deal, and seen a great deal of the world, I should think. I dare say he is clever, but I never had much conversation with him.”</p>
+    <p style="margin:0 0 14px 0;">“In what way is he peculiar?”</p>
+    <p style="margin:0 0 14px 0;">“I don’t know—it is not easy to describe—nothing striking, but you feel it when he speaks to you; you cannot be always sure whether he is in jest or earnest, whether he is pleased or the contrary; you don’t thoroughly understand him, in short—at least, I don’t: but it is of no consequence, he is a very good master.”</p>
+    <p style="margin:0 0 14px 0;">This was all the account I got from Mrs. Fairfax of her employer and mine. There are people who seem to have no notion of sketching a character, or observing and describing salient points, either in persons or things: the good lady evidently belonged to this class; my queries puzzled, but did not draw her out. Mr. Rochester was Mr. Rochester in her eyes; a gentleman, a landed proprietor—nothing more: she inquired and searched no further, and evidently wondered at my wish to gain a more definite notion of his identity.</p>
+    <p style="margin:0 0 14px 0;">When we left the dining-room, she proposed to show me over the rest of the house; and I followed her upstairs and downstairs, admiring as I went; for all was well arranged and handsome. The large front chambers I thought especially grand: and some of the third-storey rooms, though dark and low, were interesting from their air of antiquity. The furniture once appropriated to the lower apartments had from time to time been removed here, as fashions changed: and the imperfect light entering by their narrow casement showed bedsteads of a hundred years old; chests in oak or walnut, looking, with their strange carvings of palm branches and cherubs’ heads, like types of the Hebrew ark; rows of venerable chairs, high-backed and narrow; stools still more antiquated, on whose cushioned tops were yet apparent traces of half-effaced embroideries, wrought by fingers that for two generations had been coffin-dust. All these relics gave to the third storey of Thornfield Hall the aspect of a home of the past: a shrine of memory. I liked the hush, the gloom, the quaintness of these retreats in the day; but I by no means coveted a night’s repose on one of those wide and heavy beds: shut in, some of them, with doors of oak; shaded, others, with wrought old English hangings crusted with thick work, portraying effigies of strange flowers, and stranger birds, and strangest human beings,—all which would have looked strange, indeed, by the pallid gleam of moonlight.</p>
+    <p style="margin:0 0 14px 0;">“Do the servants sleep in these rooms?” I asked.</p>
+    <p style="margin:0 0 14px 0;">“No; they occupy a range of smaller apartments to the back; no one ever sleeps here: one would almost say that, if there were a ghost at Thornfield Hall, this would be its haunt.”</p>
+    <p style="margin:0 0 14px 0;">“So I think: you have no ghost, then?”</p>
+    <p style="margin:0 0 14px 0;">“None that I ever heard of,” returned Mrs. Fairfax, smiling.</p>
+    <p style="margin:0 0 14px 0;">“Nor any traditions of one? no legends or ghost stories?”</p>
+    <p style="margin:0 0 14px 0;">“I believe not. And yet it is said the Rochesters have been rather a violent than a quiet race in their time: perhaps, though, that is the reason they rest tranquilly in their graves now.”</p>
+    <p style="margin:0 0 14px 0;">“Yes—‘after life’s fitful fever they sleep well,’” I muttered. “Where are you going now, Mrs. Fairfax?” for she was moving away.</p>
+    <p style="margin:0 0 14px 0;">“On to the leads; will you come and see the view from thence?” I followed still, up a very narrow staircase to the attics, and thence by a ladder and through a trap-door to the roof of the hall. I was now on a level with the crow colony, and could see into their nests. Leaning over the battlements and looking far down, I surveyed the grounds laid out like a map: the bright and velvet lawn closely girdling the grey base of the mansion; the field, wide as a park, dotted with its ancient timber; the wood, dun and sere, divided by a path visibly overgrown, greener with moss than the trees were with foliage; the church at the gates, the road, the tranquil hills, all reposing in the autumn day’s sun; the horizon bounded by a propitious sky, azure, marbled with pearly white. No feature in the scene was extraordinary, but all was pleasing. When I turned from it and repassed the trap-door, I could scarcely see my way down the ladder; the attic seemed black as a vault compared with that arch of blue air to which I had been looking up, and to that sunlit scene of grove, pasture, and green hill, of which the hall was the centre, and over which I had been gazing with delight.</p>
+    <p style="margin:0 0 14px 0;">Mrs. Fairfax stayed behind a moment to fasten the trap-door; I, by dint of groping, found the outlet from the attic, and proceeded to descend the narrow garret staircase. I lingered in the long passage to which this led, separating the front and back rooms of the third storey: narrow, low, and dim, with only one little window at the far end, and looking, with its two rows of small black doors all shut, like a corridor in some Bluebeard’s castle.</p>
+    <p style="margin:0 0 14px 0;">While I paced softly on, the last sound I expected to hear in so still a region, a laugh, struck my ear. It was a curious laugh; distinct, formal, mirthless. I stopped: the sound ceased, only for an instant; it began again, louder: for at first, though distinct, it was very low. It passed off in a clamorous peal that seemed to wake an echo in every lonely chamber; though it originated but in one, and I could have pointed out the door whence the accents issued.</p>
+    <p style="margin:0 0 14px 0;">“Mrs. Fairfax!” I called out: for I now heard her descending the great stairs. “Did you hear that loud laugh? Who is it?”</p>
+    <p style="margin:0 0 14px 0;">“Some of the servants, very likely,” she answered: “perhaps Grace Poole.”</p>
+    <p style="margin:0 0 14px 0;">“Did you hear it?” I again inquired.</p>
+    <p style="margin:0 0 14px 0;">“Yes, plainly: I often hear her: she sews in one of these rooms. Sometimes Leah is with her; they are frequently noisy together.”</p>
+    <p style="margin:0 0 14px 0;">The laugh was repeated in its low, syllabic tone, and terminated in an odd murmur.</p>
+    <p style="margin:0 0 14px 0;">“Grace!” exclaimed Mrs. Fairfax.</p>
+    <p style="margin:0 0 14px 0;">I really did not expect any Grace to answer; for the laugh was as tragic, as preternatural a laugh as any I ever heard; and, but that it was high noon, and that no circumstance of ghostliness accompanied the curious cachinnation; but that neither scene nor season favoured fear, I should have been superstitiously afraid. However, the event showed me I was a fool for entertaining a sense even of surprise.</p>
+    <p style="margin:0 0 14px 0;">The door nearest me opened, and a servant came out,—a woman of between thirty and forty; a set, square-made figure, red-haired, and with a hard, plain face: any apparition less romantic or less ghostly could scarcely be conceived.</p>
+    <p style="margin:0 0 14px 0;">“Too much noise, Grace,” said Mrs. Fairfax. “Remember directions!” Grace curtseyed silently and went in.</p>
+    <p style="margin:0 0 14px 0;">“She is a person we have to sew and assist Leah in her housemaid’s work,” continued the widow; “not altogether unobjectionable in some points, but she does well enough. By-the-bye, how have you got on with your new pupil this morning?”</p>
+    <p style="margin:0 0 14px 0;">The conversation, thus turned on Adèle, continued till we reached the light and cheerful region below. Adèle came running to meet us in the hall, exclaiming—</p>
+    <p style="margin:0 0 14px 0;">“Mesdames, vous êtes servies!” adding, “J’ai bien faim, moi!”</p>
+    <p style="margin:0 0 14px 0;">We found dinner ready, and waiting for us in Mrs. Fairfax’s room.</p>
+  </div>
+</details>
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter XII</strong> <span style="font-size:13px; color:#3B4E8C;">(about 4,200 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">The promise of a smooth career, which my first calm introduction to Thornfield Hall seemed to pledge, was not belied on a longer acquaintance with the place and its inmates. Mrs. Fairfax turned out to be what she appeared, a placid-tempered, kind-natured woman, of competent education and average intelligence. My pupil was a lively child, who had been spoilt and indulged, and therefore was sometimes wayward; but as she was committed entirely to my care, and no injudicious interference from any quarter ever thwarted my plans for her improvement, she soon forgot her little freaks, and became obedient and teachable. She had no great talents, no marked traits of character, no peculiar development of feeling or taste which raised her one inch above the ordinary level of childhood; but neither had she any deficiency or vice which sunk her below it. She made reasonable progress, entertained for me a vivacious, though perhaps not very profound, affection; and by her simplicity, gay prattle, and efforts to please, inspired me, in return, with a degree of attachment sufficient to make us both content in each other’s society.</p>
+    <p style="margin:0 0 14px 0;">This, <em>par parenthèse</em>, will be thought cool language by persons who entertain solemn doctrines about the angelic nature of children, and the duty of those charged with their education to conceive for them an idolatrous devotion: but I am not writing to flatter parental egotism, to echo cant, or prop up humbug; I am merely telling the truth. I felt a conscientious solicitude for Adèle’s welfare and progress, and a quiet liking for her little self: just as I cherished towards Mrs. Fairfax a thankfulness for her kindness, and a pleasure in her society proportionate to the tranquil regard she had for me, and the moderation of her mind and character.</p>
+    <p style="margin:0 0 14px 0;">Anybody may blame me who likes, when I add further, that, now and then, when I took a walk by myself in the grounds; when I went down to the gates and looked through them along the road; or when, while Adèle played with her nurse, and Mrs. Fairfax made jellies in the storeroom, I climbed the three staircases, raised the trap-door of the attic, and having reached the leads, looked out afar over sequestered field and hill, and along dim sky-line—that then I longed for a power of vision which might overpass that limit; which might reach the busy world, towns, regions full of life I had heard of but never seen—that then I desired more of practical experience than I possessed; more of intercourse with my kind, of acquaintance with variety of character, than was here within my reach. I valued what was good in Mrs. Fairfax, and what was good in Adèle; but I believed in the existence of other and more vivid kinds of goodness, and what I believed in I wished to behold.</p>
+    <p style="margin:0 0 14px 0;">Who blames me? Many, no doubt; and I shall be called discontented. I could not help it: the restlessness was in my nature; it agitated me to pain sometimes. Then my sole relief was to walk along the corridor of the third storey, backwards and forwards, safe in the silence and solitude of the spot, and allow my mind’s eye to dwell on whatever bright visions rose before it—and, certainly, they were many and glowing; to let my heart be heaved by the exultant movement, which, while it swelled it in trouble, expanded it with life; and, best of all, to open my inward ear to a tale that was never ended—a tale my imagination created, and narrated continuously; quickened with all of incident, life, fire, feeling, that I desired and had not in my actual existence.</p>
+    <p style="margin:0 0 14px 0;">It is in vain to say human beings ought to be satisfied with tranquillity: they must have action; and they will make it if they cannot find it. Millions are condemned to a stiller doom than mine, and millions are in silent revolt against their lot. Nobody knows how many rebellions besides political rebellions ferment in the masses of life which people earth. Women are supposed to be very calm generally: but women feel just as men feel; they need exercise for their faculties, and a field for their efforts, as much as their brothers do; they suffer from too rigid a restraint, too absolute a stagnation, precisely as men would suffer; and it is narrow-minded in their more privileged fellow-creatures to say that they ought to confine themselves to making puddings and knitting stockings, to playing on the piano and embroidering bags. It is thoughtless to condemn them, or laugh at them, if they seek to do more or learn more than custom has pronounced necessary for their sex.</p>
+    <p style="margin:0 0 14px 0;">When thus alone, I not unfrequently heard Grace Poole’s laugh: the same peal, the same low, slow ha! ha! which, when first heard, had thrilled me: I heard, too, her eccentric murmurs; stranger than her laugh. There were days when she was quite silent; but there were others when I could not account for the sounds she made. Sometimes I saw her: she would come out of her room with a basin, or a plate, or a tray in her hand, go down to the kitchen and shortly return, generally (oh, romantic reader, forgive me for telling the plain truth!) bearing a pot of porter. Her appearance always acted as a damper to the curiosity raised by her oral oddities: hard-featured and staid, she had no point to which interest could attach. I made some attempts to draw her into conversation, but she seemed a person of few words: a monosyllabic reply usually cut short every effort of that sort.</p>
+    <p style="margin:0 0 14px 0;">The other members of the household, viz., John and his wife, Leah the housemaid, and Sophie the French nurse, were decent people; but in no respect remarkable; with Sophie I used to talk French, and sometimes I asked her questions about her native country; but she was not of a descriptive or narrative turn, and generally gave such vapid and confused answers as were calculated rather to check than encourage inquiry.</p>
+    <p style="margin:0 0 14px 0;">October, November, December passed away. One afternoon in January, Mrs. Fairfax had begged a holiday for Adèle, because she had a cold; and, as Adèle seconded the request with an ardour that reminded me how precious occasional holidays had been to me in my own childhood, I accorded it, deeming that I did well in showing pliability on the point. It was a fine, calm day, though very cold; I was tired of sitting still in the library through a whole long morning: Mrs. Fairfax had just written a letter which was waiting to be posted, so I put on my bonnet and cloak and volunteered to carry it to Hay; the distance, two miles, would be a pleasant winter afternoon walk. Having seen Adèle comfortably seated in her little chair by Mrs. Fairfax’s parlour fireside, and given her her best wax doll (which I usually kept enveloped in silver paper in a drawer) to play with, and a story-book for change of amusement; and having replied to her “Revenez bientôt, ma bonne amie, ma chère Mdlle. Jeannette,” with a kiss, I set out.</p>
+    <p style="margin:0 0 14px 0;">The ground was hard, the air was still, my road was lonely; I walked fast till I got warm, and then I walked slowly to enjoy and analyse the species of pleasure brooding for me in the hour and situation. It was three o’clock; the church bell tolled as I passed under the belfry: the charm of the hour lay in its approaching dimness, in the low-gliding and pale-beaming sun. I was a mile from Thornfield, in a lane noted for wild roses in summer, for nuts and blackberries in autumn, and even now possessing a few coral treasures in hips and haws, but whose best winter delight lay in its utter solitude and leafless repose. If a breath of air stirred, it made no sound here; for there was not a holly, not an evergreen to rustle, and the stripped hawthorn and hazel bushes were as still as the white, worn stones which causewayed the middle of the path. Far and wide, on each side, there were only fields, where no cattle now browsed; and the little brown birds, which stirred occasionally in the hedge, looked like single russet leaves that had forgotten to drop.</p>
+    <p style="margin:0 0 14px 0;">This lane inclined up-hill all the way to Hay; having reached the middle, I sat down on a stile which led thence into a field. Gathering my mantle about me, and sheltering my hands in my muff, I did not feel the cold, though it froze keenly; as was attested by a sheet of ice covering the causeway, where a little brooklet, now congealed, had overflowed after a rapid thaw some days since. From my seat I could look down on Thornfield: the grey and battlemented hall was the principal object in the vale below me; its woods and dark rookery rose against the west. I lingered till the sun went down amongst the trees, and sank crimson and clear behind them. I then turned eastward.</p>
+    <p style="margin:0 0 14px 0;">On the hill-top above me sat the rising moon; pale yet as a cloud, but brightening momentarily, she looked over Hay, which, half lost in trees, sent up a blue smoke from its few chimneys: it was yet a mile distant, but in the absolute hush I could hear plainly its thin murmurs of life. My ear, too, felt the flow of currents; in what dales and depths I could not tell: but there were many hills beyond Hay, and doubtless many becks threading their passes. That evening calm betrayed alike the tinkle of the nearest streams, the sough of the most remote.</p>
+    <p style="margin:0 0 14px 0;">A rude noise broke on these fine ripplings and whisperings, at once so far away and so clear: a positive tramp, tramp, a metallic clatter, which effaced the soft wave-wanderings; as, in a picture, the solid mass of a crag, or the rough boles of a great oak, drawn in dark and strong on the foreground, efface the aërial distance of azure hill, sunny horizon, and blended clouds where tint melts into tint.</p>
+    <p style="margin:0 0 14px 0;">The din was on the causeway: a horse was coming; the windings of the lane yet hid it, but it approached. I was just leaving the stile; yet, as the path was narrow, I sat still to let it go by. In those days I was young, and all sorts of fancies bright and dark tenanted my mind: the memories of nursery stories were there amongst other rubbish; and when they recurred, maturing youth added to them a vigour and vividness beyond what childhood could give. As this horse approached, and as I watched for it to appear through the dusk, I remembered certain of Bessie’s tales, wherein figured a North-of-England spirit called a “Gytrash,” which, in the form of horse, mule, or large dog, haunted solitary ways, and sometimes came upon belated travellers, as this horse was now coming upon me.</p>
+    <p style="margin:0 0 14px 0;">It was very near, but not yet in sight; when, in addition to the tramp, tramp, I heard a rush under the hedge, and close down by the hazel stems glided a great dog, whose black and white colour made him a distinct object against the trees. It was exactly one form of Bessie’s Gytrash—a lion-like creature with long hair and a huge head: it passed me, however, quietly enough; not staying to look up, with strange pretercanine eyes, in my face, as I half expected it would. The horse followed,—a tall steed, and on its back a rider. The man, the human being, broke the spell at once. Nothing ever rode the Gytrash: it was always alone; and goblins, to my notions, though they might tenant the dumb carcasses of beasts, could scarce covet shelter in the commonplace human form. No Gytrash was this,—only a traveller taking the short cut to Millcote. He passed, and I went on; a few steps, and I turned: a sliding sound and an exclamation of “What the deuce is to do now?” and a clattering tumble, arrested my attention. Man and horse were down; they had slipped on the sheet of ice which glazed the causeway. The dog came bounding back, and seeing his master in a predicament, and hearing the horse groan, barked till the evening hills echoed the sound, which was deep in proportion to his magnitude. He snuffed round the prostrate group, and then he ran up to me; it was all he could do,—there was no other help at hand to summon. I obeyed him, and walked down to the traveller, by this time struggling himself free of his steed. His efforts were so vigorous, I thought he could not be much hurt; but I asked him the question—</p>
+    <p style="margin:0 0 14px 0;">“Are you injured, sir?”</p>
+    <p style="margin:0 0 14px 0;">I think he was swearing, but am not certain; however, he was pronouncing some formula which prevented him from replying to me directly.</p>
+    <p style="margin:0 0 14px 0;">“Can I do anything?” I asked again.</p>
+    <p style="margin:0 0 14px 0;">“You must just stand on one side,” he answered as he rose, first to his knees, and then to his feet. I did; whereupon began a heaving, stamping, clattering process, accompanied by a barking and baying which removed me effectually some yards’ distance; but I would not be driven quite away till I saw the event. This was finally fortunate; the horse was re-established, and the dog was silenced with a “Down, Pilot!” The traveller now, stooping, felt his foot and leg, as if trying whether they were sound; apparently something ailed them, for he halted to the stile whence I had just risen, and sat down.</p>
+    <p style="margin:0 0 14px 0;">I was in the mood for being useful, or at least officious, I think, for I now drew near him again.</p>
+    <p style="margin:0 0 14px 0;">“If you are hurt, and want help, sir, I can fetch some one either from Thornfield Hall or from Hay.”</p>
+    <p style="margin:0 0 14px 0;">“Thank you: I shall do: I have no broken bones,—only a sprain;” and again he stood up and tried his foot, but the result extorted an involuntary “Ugh!”</p>
+    <p style="margin:0 0 14px 0;">Something of daylight still lingered, and the moon was waxing bright: I could see him plainly. His figure was enveloped in a riding cloak, fur collared and steel clasped; its details were not apparent, but I traced the general points of middle height and considerable breadth of chest. He had a dark face, with stern features and a heavy brow; his eyes and gathered eyebrows looked ireful and thwarted just now; he was past youth, but had not reached middle-age; perhaps he might be thirty-five. I felt no fear of him, and but little shyness. Had he been a handsome, heroic-looking young gentleman, I should not have dared to stand thus questioning him against his will, and offering my services unasked. I had hardly ever seen a handsome youth; never in my life spoken to one. I had a theoretical reverence and homage for beauty, elegance, gallantry, fascination; but had I met those qualities incarnate in masculine shape, I should have known instinctively that they neither had nor could have sympathy with anything in me, and should have shunned them as one would fire, lightning, or anything else that is bright but antipathetic.</p>
+    <p style="margin:0 0 14px 0;">If even this stranger had smiled and been good-humoured to me when I addressed him; if he had put off my offer of assistance gaily and with thanks, I should have gone on my way and not felt any vocation to renew inquiries: but the frown, the roughness of the traveller, set me at my ease: I retained my station when he waved to me to go, and announced—</p>
+    <p style="margin:0 0 14px 0;">“I cannot think of leaving you, sir, at so late an hour, in this solitary lane, till I see you are fit to mount your horse.”</p>
+    <p style="margin:0 0 14px 0;">He looked at me when I said this; he had hardly turned his eyes in my direction before.</p>
+    <p style="margin:0 0 14px 0;">“I should think you ought to be at home yourself,” said he, “if you have a home in this neighbourhood: where do you come from?”</p>
+    <p style="margin:0 0 14px 0;">“From just below; and I am not at all afraid of being out late when it is moonlight: I will run over to Hay for you with pleasure, if you wish it: indeed, I am going there to post a letter.”</p>
+    <p style="margin:0 0 14px 0;">“You live just below—do you mean at that house with the battlements?” pointing to Thornfield Hall, on which the moon cast a hoary gleam, bringing it out distinct and pale from the woods that, by contrast with the western sky, now seemed one mass of shadow.</p>
+    <p style="margin:0 0 14px 0;">“Yes, sir.”</p>
+    <p style="margin:0 0 14px 0;">“Whose house is it?”</p>
+    <p style="margin:0 0 14px 0;">“Mr. Rochester’s.”</p>
+    <p style="margin:0 0 14px 0;">“Do you know Mr. Rochester?”</p>
+    <p style="margin:0 0 14px 0;">“No, I have never seen him.”</p>
+    <p style="margin:0 0 14px 0;">“He is not resident, then?”</p>
+    <p style="margin:0 0 14px 0;">“No.”</p>
+    <p style="margin:0 0 14px 0;">“Can you tell me where he is?”</p>
+    <p style="margin:0 0 14px 0;">“I cannot.”</p>
+    <p style="margin:0 0 14px 0;">“You are not a servant at the hall, of course. You are—” He stopped, ran his eye over my dress, which, as usual, was quite simple: a black merino cloak, a black beaver bonnet; neither of them half fine enough for a lady’s-maid. He seemed puzzled to decide what I was; I helped him.</p>
+    <p style="margin:0 0 14px 0;">“I am the governess.”</p>
+    <p style="margin:0 0 14px 0;">“Ah, the governess!” he repeated; “deuce take me, if I had not forgotten! The governess!” and again my raiment underwent scrutiny. In two minutes he rose from the stile: his face expressed pain when he tried to move.</p>
+    <p style="margin:0 0 14px 0;">“I cannot commission you to fetch help,” he said; “but you may help me a little yourself, if you will be so kind.”</p>
+    <p style="margin:0 0 14px 0;">“Yes, sir.”</p>
+    <p style="margin:0 0 14px 0;">“You have not an umbrella that I can use as a stick?”</p>
+    <p style="margin:0 0 14px 0;">“No.”</p>
+    <p style="margin:0 0 14px 0;">“Try to get hold of my horse’s bridle and lead him to me: you are not afraid?”</p>
+    <p style="margin:0 0 14px 0;">I should have been afraid to touch a horse when alone, but when told to do it, I was disposed to obey. I put down my muff on the stile, and went up to the tall steed; I endeavoured to catch the bridle, but it was a spirited thing, and would not let me come near its head; I made effort on effort, though in vain: meantime, I was mortally afraid of its trampling fore-feet. The traveller waited and watched for some time, and at last he laughed.</p>
+    <p style="margin:0 0 14px 0;">I was mortally afraid of its trampling forefeet</p>
+    <p style="margin:0 0 14px 0;">“I see,” he said, “the mountain will never be brought to Mahomet, so all you can do is to aid Mahomet to go to the mountain; I must beg of you to come here.”</p>
+    <p style="margin:0 0 14px 0;">I came. “Excuse me,” he continued: “necessity compels me to make you useful.” He laid a heavy hand on my shoulder, and leaning on me with some stress, limped to his horse. Having once caught the bridle, he mastered it directly and sprang to his saddle; grimacing grimly as he made the effort, for it wrenched his sprain.</p>
+    <p style="margin:0 0 14px 0;">“Now,” said he, releasing his under lip from a hard bite, “just hand me my whip; it lies there under the hedge.”</p>
+    <p style="margin:0 0 14px 0;">I sought it and found it.</p>
+    <p style="margin:0 0 14px 0;">“Thank you; now make haste with the letter to Hay, and return as fast as you can.”</p>
+    <p style="margin:0 0 14px 0;">A touch of a spurred heel made his horse first start and rear, and then bound away; the dog rushed in his traces; all three vanished,</p>
+    <p style="margin:0 0 14px 0;">“Like heath that, in the wilderness, The wild wind whirls away.”</p>
+    <p style="margin:0 0 14px 0;">I took up my muff and walked on. The incident had occurred and was gone for me: it <em>was</em> an incident of no moment, no romance, no interest in a sense; yet it marked with change one single hour of a monotonous life. My help had been needed and claimed; I had given it: I was pleased to have done something; trivial, transitory though the deed was, it was yet an active thing, and I was weary of an existence all passive. The new face, too, was like a new picture introduced to the gallery of memory; and it was dissimilar to all the others hanging there: firstly, because it was masculine; and, secondly, because it was dark, strong, and stern. I had it still before me when I entered Hay, and slipped the letter into the post-office; I saw it as I walked fast down-hill all the way home. When I came to the stile, I stopped a minute, looked round and listened, with an idea that a horse’s hoofs might ring on the causeway again, and that a rider in a cloak, and a Gytrash-like Newfoundland dog, might be again apparent: I saw only the hedge and a pollard willow before me, rising up still and straight to meet the moonbeams; I heard only the faintest waft of wind roaming fitful among the trees round Thornfield, a mile distant; and when I glanced down in the direction of the murmur, my eye, traversing the hall-front, caught a light kindling in a window: it reminded me that I was late, and I hurried on.</p>
+    <p style="margin:0 0 14px 0;">I did not like re-entering Thornfield. To pass its threshold was to return to stagnation; to cross the silent hall, to ascend the darksome staircase, to seek my own lonely little room, and then to meet tranquil Mrs. Fairfax, and spend the long winter evening with her, and her only, was to quell wholly the faint excitement wakened by my walk,—to slip again over my faculties the viewless fetters of an uniform and too still existence; of an existence whose very privileges of security and ease I was becoming incapable of appreciating. What good it would have done me at that time to have been tossed in the storms of an uncertain struggling life, and to have been taught by rough and bitter experience to long for the calm amidst which I now repined! Yes, just as much good as it would do a man tired of sitting still in a “too easy chair” to take a long walk: and just as natural was the wish to stir, under my circumstances, as it would be under his.</p>
+    <p style="margin:0 0 14px 0;">I lingered at the gates; I lingered on the lawn; I paced backwards and forwards on the pavement; the shutters of the glass door were closed; I could not see into the interior; and both my eyes and spirit seemed drawn from the gloomy house—from the grey hollow filled with rayless cells, as it appeared to me—to that sky expanded before me,—a blue sea absolved from taint of cloud; the moon ascending it in solemn march; her orb seeming to look up as she left the hill-tops, from behind which she had come, far and farther below her, and aspired to the zenith, midnight dark in its fathomless depth and measureless distance; and for those trembling stars that followed her course; they made my heart tremble, my veins glow when I viewed them. Little things recall us to earth; the clock struck in the hall; that sufficed; I turned from moon and stars, opened a side-door, and went in.</p>
+    <p style="margin:0 0 14px 0;">The hall was not dark, nor yet was it lit, only by the high-hung bronze lamp; a warm glow suffused both it and the lower steps of the oak staircase. This ruddy shine issued from the great dining-room, whose two-leaved door stood open, and showed a genial fire in the grate, glancing on marble hearth and brass fire-irons, and revealing purple draperies and polished furniture, in the most pleasant radiance. It revealed, too, a group near the mantelpiece: I had scarcely caught it, and scarcely become aware of a cheerful mingling of voices, amongst which I seemed to distinguish the tones of Adèle, when the door closed.</p>
+    <p style="margin:0 0 14px 0;">I hastened to Mrs. Fairfax’s room; there was a fire there too, but no candle, and no Mrs. Fairfax. Instead, all alone, sitting upright on the rug, and gazing with gravity at the blaze, I beheld a great black and white long-haired dog, just like the Gytrash of the lane. It was so like it that I went forward and said—“Pilot,” and the thing got up and came to me and snuffed me. I caressed him, and he wagged his great tail; but he looked an eerie creature to be alone with, and I could not tell whence he had come. I rang the bell, for I wanted a candle; and I wanted, too, to get an account of this visitant. Leah entered.</p>
+    <p style="margin:0 0 14px 0;">“What dog is this?”</p>
+    <p style="margin:0 0 14px 0;">“He came with master.”</p>
+    <p style="margin:0 0 14px 0;">“With whom?”</p>
+    <p style="margin:0 0 14px 0;">“With master—Mr. Rochester—he is just arrived.”</p>
+    <p style="margin:0 0 14px 0;">“Indeed! and is Mrs. Fairfax with him?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, and Miss Adèle; they are in the dining-room, and John is gone for a surgeon; for master has had an accident; his horse fell and his ankle is sprained.”</p>
+    <p style="margin:0 0 14px 0;">“Did the horse fall in Hay Lane?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, coming down-hill; it slipped on some ice.”</p>
+    <p style="margin:0 0 14px 0;">“Ah! Bring me a candle will you Leah?”</p>
+    <p style="margin:0 0 14px 0;">Leah brought it; she entered, followed by Mrs. Fairfax, who repeated the news; adding that Mr. Carter the surgeon was come, and was now with Mr. Rochester: then she hurried out to give orders about tea, and I went upstairs to take off my things.</p>
+  </div>
+</details>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 3 &middot; NOW YOU: MATCH THE ELEMENT TO THE EVIDENCE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Match each Gothic element to the line from chapter 11 that shows it at Thornfield.</p>
+        <div class="optima-widget ow-match" data-done="All four matched. The tool from the red-room lesson still works: a new house, the same four signals, the same method for reading it.">
+            <div class="widget-kicker">&#129513; MATCH EACH ELEMENT TO ITS EVIDENCE</div>
+            <div class="widget-question">Click an element, then click the line from chapter 11 that shows it.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">ELEMENT</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="encl">Enclosure</button>
+                        <button data-key="color">Color and light</button>
+                        <button data-key="dead">The dead</button>
+                        <button data-key="uncanny">The uncanny</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">EVIDENCE FROM CHAPTER 11</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="encl">A corridor "narrow, low, and dim," lined with "two rows of small black doors all shut."</button>
+                        <button data-key="color">The attic "seemed black as a vault" compared with the roof's "arch of blue air."</button>
+                        <button data-key="dead">Embroidery "wrought by fingers that for two generations had been coffin-dust."</button>
+                        <button data-key="uncanny">A laugh "distinct, formal, mirthless," heard where Jane believes herself alone.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; DO SOMETHING WITH THE READING</div>
+        <div class="rj-badge">
+            <div class="rj-icon">&#128211;</div>
+            <div>
+                <div class="rj-label">READING RESPONSE</div>
+                <div class="rj-task">Write a paragraph connecting the restlessness speech to the laugh in the corridor. To do it well: first quote the sentence where Jane says "women feel just as men feel" and explain, in your own words, what she argues restlessness is for (not a flaw, but what). Then look at where this speech sits in the chapter, right before the laugh interrupts her pacing. Ask: why might Bront&euml; place an argument about a mind that needs "a field for their efforts" directly next to a sound that suggests something in this house has no field for its efforts at all? You do not need a final answer, only a well-supported question. Cite by chapter.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Claude can explain how Gothic fiction typically uses an unexplained sound to build suspense. It cannot tell you what chapters 11 and 12 actually say about the laugh, and if you ask it to guess at a cause, it will invent detail the novel has not yet given you. Keep your reading to exactly what the text states.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Hay Lane</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A dog and a rider on an icy road, and a legend Jane half expects to see, in chapter 12's second half.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A careful reader states only what a text says, not what it might mean later. A feature writer who gets ahead of the facts loses a reader's trust fast. Keep the habit of citing exactly what is on the page.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Arrival at Thornfield</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

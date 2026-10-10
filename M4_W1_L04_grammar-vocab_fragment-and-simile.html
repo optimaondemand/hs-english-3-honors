@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; The Deliberate Fragment &amp; the Simile Chain</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all 0.15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    table.wordstudy { width: 100%; border-collapse: collapse; }
+    table.wordstudy th { background: #0E1C42; color: #fff; font-size: 13px; text-align: left; padding: 10px 12px; border: 1px solid #334; }
+    table.wordstudy td { font-size: 15px; color: #1a2340; padding: 10px 12px; border: 1px solid #D0D9E8; vertical-align: top; line-height: 1.55; }
+    table.wordstudy tr:nth-child(even) td { background: #F4F6FA; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Self Imperiled</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">Grammar &amp; Vocabulary</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Deliberate Fragment &amp; the Simile Chain</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Fahrenheit 451, Part One (sentences, own copy)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Grammar &amp; Vocabulary</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Deliberate Fragment &amp; the Simile Chain</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; one combined grammar and vocabulary session</div>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:12px 18px; margin-bottom:20px;">
+        <div style="font-size:11px; color:#3B4E8C; margin-bottom:6px;">&#128218; YOUR OWN COPY</div>
+        <div style="font-size:14px; color:#1a2340; line-height:1.55;">Students must obtain lawful access to the assigned literary work separately. Optima course materials are original instructional materials designed to support analysis, discussion, and assessment of the work. Copyrighted text, images, illustrations, panels, audio, or other protected materials are not reproduced in Canvas, videos, downloadable files, or teacher resources except where expressly licensed, in the public domain, or approved as a limited fair-use excerpt for instructional analysis.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Bradbury writes sentences your grammar checker would underline. He is not making mistakes. He is making a rhythm, and you can learn to hear the difference.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Bront&euml; built long sentences that held their breath. Bradbury breaks his. Part One is full of <strong>fragments</strong>, pieces of sentences standing alone, and of <strong>similes</strong> that arrive in chains, one comparison after another until the thing described disappears behind what it is like. Today you learn the rule the fragment breaks, why a writer breaks it on purpose, and how to tell a deliberate fragment from an accidental one in your own prose. Then Word Study: two words from Part One, <em>mausoleum</em> and <em>olfactory</em>, found in Part One.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify a sentence fragment, explain what it lacks, and tell a deliberate one from an accidental one.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> build a chain of similes that escalates on purpose, and know when to stop.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use <em>mausoleum</em> and <em>olfactory</em> precisely in sentences of my own.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9999;&#65039; PART 1 &middot; THE RULE, AND WHY A WRITER BREAKS IT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">A complete sentence has a <strong>subject</strong> and a <strong>verb</strong> and can stand alone. A <strong>fragment</strong> is missing one of those, or is a dependent clause left on its own (<em>Because the door was locked.</em>). In an essay, a fragment is usually an error: the reader reaches the period and the thought is not finished. In fiction, a writer may break the rule on purpose to make prose move the way a mind moves: in flashes, in single perceptions, in the short breath between one shock and the next. The test is not whether the fragment is grammatical. It is whether it is <strong>controlled</strong>: whether the writer could have written the full sentence and chose not to, and whether the reader can feel why.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Bradbury's other habit is the <strong>simile chain</strong>. A simile compares one thing to another with <em>like</em> or <em>as</em>. Bradbury rarely stops at one. Fire is like one thing, then another, then a third, each comparison bigger than the last, until the reader is looking at the comparisons rather than the fire. The chain has a purpose in Part One: it makes destruction dazzling before the novel asks whether it should be. Learn to hear the chain, and learn where one link too many turns dazzle into noise.</p>
+
+        <!-- CORE VISUAL: fragment anatomy, with model sentences written for this lesson (not from the novel) -->
+        <div style="background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.6px; margin-bottom: 4px;">FRAGMENT OR SENTENCE? THREE CASES</div>
+            <div style="font-size: 12px; color: #3B4E8C; font-style: italic; margin-bottom: 12px;">The example sentences below were written for this lesson about a firehouse. They are models of the shapes, not lines from the novel; Bradbury's own sentences are in your copy, where the response task sends you.</div>
+
+            <div style="background: #EEF1F8; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px;">
+                <div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">A COMPLETE SENTENCE &middot; subject + verb, stands alone</div>
+                <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;"><span style="background:#FDF3E3; border-radius:4px; padding:1px 6px;"><strong>The truck</strong></span> <span style="color:#3B4E8C;"><strong>idled</strong></span> at the curb while the men waited for the alarm.</div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 6px;">Subject <em>truck</em>, verb <em>idled</em>. The novel's opening sentence has this shape too: five words, complete, and quiet.</div>
+            </div>
+
+            <div style="background: #EEF1F8; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px;">
+                <div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">A DELIBERATE FRAGMENT &middot; controlled; the full sentence is felt, not written</div>
+                <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">The men waited for the alarm. <span style="background:#FDF3E3; border-radius:4px; padding:1px 6px;"><strong>Kerosene on their hands. Brass under their boots. The Hound asleep in its corner.</strong></span></div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 6px;">Three fragments, each a single perception, each missing a verb on purpose. The reader supplies "there was" without noticing. The rhythm is a man looking at one thing at a time.</div>
+            </div>
+
+            <div style="background: #EEF1F8; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px;">
+                <div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">AN ACCIDENTAL FRAGMENT &middot; the thought is simply unfinished</div>
+                <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">The men waited for the alarm. <span style="background:#FDECEC; border-radius:4px; padding:1px 6px;"><strong>Which usually came after midnight and was loud.</strong></span></div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 6px;">A dependent clause that wandered away from its sentence. Nothing is gained by the break; the reader stumbles. Fix: attach it (<em>an alarm which usually came after midnight</em>) or give it a subject and verb of its own.</div>
+            </div>
+
+            <div style="background: #FDF3E3; border-radius: 8px; padding: 14px 18px;">
+                <div style="font-size: 13px; color: #C7922C; margin-bottom: 6px;">THE SIMILE CHAIN &middot; each link larger than the last</div>
+                <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">The hose in his hands was <span style="color:#3B4E8C;">like a snake</span>, then <span style="color:#3B4E8C;">like a river running uphill</span>, then <span style="color:#3B4E8C;">like a comet he was steering into a house</span>.</div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 6px;">Snake, river, comet: small to vast. The order is the effect. Reverse it and the sentence deflates. Add a fourth link and the reader stops seeing the hose at all, which may or may not be what you want.</div>
+            </div>
+            <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 12px;">Two tests before you keep a fragment. <strong>Rewrite test:</strong> write the full sentence beside it; if the full version is better, the fragment was an accident. <strong>Rhythm test:</strong> read the paragraph aloud; a deliberate fragment lands where a breath would, an accidental one lands where the reader trips.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 12px 0;">Now sort the shapes. The sentences below were written for this exercise in the manner of the novel's opening; they are not Bradbury's lines.</p>
+
+        <div class="optima-widget ow-match" data-done="All three matched. Now find the real ones: Part One's opening pages are full of both shapes, and your response task sends you to your own copy to catch them.">
+            <div class="widget-kicker">&#129513; MATCH EACH SENTENCE TO ITS SHAPE</div>
+            <div class="widget-question">Click a sentence, then click the shape it takes. Three pairs. Find the subject and verb first, or their absence.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">THE SENTENCE (a model, not from the novel)</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="frag">The house went up. A roar. Then the smell of paper and the sound of birds that were not birds.</button>
+                        <button data-key="chain">The pages lifted like wings, like a flock rising off a field, like a whole sky of birds turning black at the edges.</button>
+                        <button data-key="acc">Montag watched the roof begin to fall. Because that was the part he always watched.</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">ITS SHAPE</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="chain">a simile chain &middot; three comparisons, each larger than the last, until the pages vanish behind the birds</button>
+                        <button data-key="acc">an accidental fragment &middot; a dependent clause cut loose; attaching it to the first sentence makes it better</button>
+                        <button data-key="frag">deliberate fragments &middot; single perceptions with the verbs withheld; the reader supplies them and feels the shock in pieces</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">In your own copy, find in the first pages of Part One one deliberate fragment and one simile chain of at least two links. Write each one out, cited (Part One). Under each, run the two tests in writing: for the fragment, write the full sentence beside it and say which is better and why; for the chain, list the links in order and say what the order does. Then write three sentences of your own about a place you know at night: one complete, one deliberate fragment placed right after it, and one simile chain of exactly three links that grow. Label each.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128213; PART 2 &middot; WORD STUDY (from Part One)</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 0 0 12px 0;">Because the novel is under copyright, the "In the text" column names the scene where each word appears rather than quoting it. Find the sentence in your own copy and write it out.</p>
+        <table class="wordstudy">
+            <thead><tr><th style="width: 150px;">Word</th><th>In the text</th><th>What it means</th><th>Word origin</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>mausoleum</strong><br /><span style="font-size: 12px; color: #3B4E8C;">noun</span></td>
+                    <td>Part One: the word the narrator reaches for when Montag steps from the hall into his own dark bedroom on the night he comes home from meeting Clarisse, before he knows what has happened to his wife. Find the sentence and notice what the room is compared to.</td>
+                    <td>A large, stately tomb; a building made to hold the dead in splendor. Applied to a bedroom, the word does two things at once: it makes the room cold and grand, and it tells you, before the plot does, that something in it is not alive.</td>
+                    <td>From Latin <em>Mausoleum</em>, the name of the tomb of Mausolus, a ruler of Caria in Asia Minor, built about 350 BCE and counted among the seven wonders of the ancient world; his name became the word for any grand tomb.</td>
+                </tr>
+                <tr>
+                    <td><strong>olfactory</strong><br /><span style="font-size: 12px; color: #3B4E8C;">adjective</span></td>
+                    <td>Part One: the word used for the Mechanical Hound's sense when Montag studies the machine in the firehouse and thinks about how it is set to hunt. Find it and notice how much of the Hound is described in the language of a laboratory.</td>
+                    <td>Having to do with the sense of smell. A clinical, scientific word; using it for the Hound turns a hunting animal into an instrument, which is exactly how the firemen prefer to think of it.</td>
+                    <td>From Latin <em>olfacere</em>, "to smell," itself from <em>olere</em> ("to give off a smell") and <em>facere</em> ("to make, to do"): literally "to make a smell known" to oneself.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="rj-badge">
+        <div class="rj-icon">&#128211;</div>
+        <div>
+            <div class="rj-label">WORD STUDY &middot; TRY IT</div>
+            <div class="rj-task">Copy the sentence from your own copy for each word. Then write one new sentence of your own for each, on a subject unrelated to the novel, keeping the meaning exact. For <em>mausoleum</em>, use it as a comparison for a living space the way the novel does, so the reader feels what the comparison implies. For <em>olfactory</em>, keep its clinical tone; do not soften it to "smelly." Notice how <em>mausoleum</em> still carries a king's name inside it.</div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">The Deliberate Fragment &amp; the Simile Chain</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button').forEach(function (b) { b.classList.remove('selected'); b.classList.remove('matched'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w._matchPick = null;
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

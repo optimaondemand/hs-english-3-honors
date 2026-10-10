@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &mdash; Module 3 Recitation</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .pass-tabs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+    .pass-tabs button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:20px; padding:8px 15px; font-size:14px; color:#0E1C42; cursor:pointer; font-family:inherit; }
+    .pass-tabs button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .pass-tabs button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .pass-panel { display:none; background:#FFFFFF; border:1px solid #C7CFE6; border-radius:8px; padding:16px 20px; }
+    .pass-panel.show { display:block; }
+    .pass-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 12px; }
+    .pass-reset:hover { background: #FDF3E3; }
+    .poem { background:#FDF3E3; border-left:4px solid #C7922C; border-radius:6px; padding:12px 18px; margin:10px 0; font-size:15px; color:#1a2340; line-height:1.7; font-style:italic; }
+    details.je-reader summary::-webkit-details-marker { display:none; }
+    details.je-reader[open] summary { border-bottom:1px solid #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Recitation Thread</div>
+        <div style="font-size: 17px; color: #0e1c42;">Beat 3 of 4</div>
+        <div style="font-size: 12px; color: #0e1c42;">Choose Wk 4 &middot; Rehearse Wk 5 &middot; Perform Wk 6</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">This Quarter's Passage</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">A Victorian-era poem, paired with Jane Eyre</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">THE MODULE 3 RECITATION</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Choose a Poem, Learn It by Heart, and Speak It</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Read this page in Week 1 so you know what is coming. This quarter's passage is a poem, not a prose speech: a Victorian-era poem chosen from the menu below. Two of the seven are sung inside <em>Jane Eyre</em> itself; the others were written by Bront&euml;'s contemporaries and share the novel's questions about endurance, faith, and a self that will not be governed from outside. You choose in Week 4, after the poetry lesson, rehearse in Week 5, and record or perform in Week 6.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127908; WHAT THIS IS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Once each quarter you memorize and perform a passage connected to that quarter's text. In Quarter 1 it was a speech from <em>Hamlet</em>; in Quarter 2, a passage of Douglass's oratory. This quarter it is verse. A poem learned by heart is different from a speech learned by heart: the line breaks tell you where to breathe, the rhymes tell you where the thought turns, and the meter is a pulse you carry in your body. That is why the Week 4 lesson on reading a Victorian poem comes before you choose. When a poem is inside you, you understand it differently, and you keep it for life.</p>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#127919; HOW YOU PERFORM IT (READ CAREFULLY)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">You recite <strong>from memory, with your eyes covered</strong>. Wear a blindfold, close your eyes, or turn away from any screen or page. This proves the words are truly memorized and frees you to perform rather than read. There are two ways to do it, and you choose one:</p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px;">
+            <div style="flex:1; min-width:250px; background:#FFFFFF; border:1px solid #E7C983; border-radius:8px; padding:14px 16px;"><div style="font-size:16px; color:#0e1c42;">&#127909; <strong>Option A: Record a video</strong></div><div style="font-size:15px; color:#1a2340; line-height:1.55;">Record yourself on any device you have (a phone is fine), eyes covered, then submit the video on the Week 6 assignment page. Include a caption or transcript of the poem so your teacher can check accuracy.</div></div>
+            <div style="flex:1; min-width:250px; background:#FFFFFF; border:1px solid #E7C983; border-radius:8px; padding:14px 16px;"><div style="font-size:16px; color:#0e1c42;">&#128172; <strong>Option B: Live with your teacher</strong></div><div style="font-size:15px; color:#1a2340; line-height:1.55;">Your teacher may instead choose to meet with you and hear the recitation live, also with eyes closed. If so, they will schedule it; you do not submit a video.</div></div>
+        </div>
+    </div>
+
+    <!-- THE MENU -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128220; CHOOSE ONE POEM (15&ndash;37 LINES) &middot; TAP TO PREVIEW</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 0 0 14px 0;">Every poem below is in the public domain, so the full text is here for you. Read all seven aloud once before you decide; pick the one your voice keeps returning to. Where a span is marked, you may recite that continuous span instead of the whole poem.</p>
+        <div class="pass-tabs" id="passTabs">
+            <button data-p="p1" class="selected">1 &middot; The Poor Orphan Child</button>
+            <button data-p="p2">2 &middot; A Song from Chapter 24</button>
+            <button data-p="p3">3 &middot; Life</button>
+            <button data-p="p4">4 &middot; No Coward Soul Is Mine</button>
+            <button data-p="p5">5 &middot; Dover Beach</button>
+            <button data-p="p6">6 &middot; Invictus</button>
+            <button data-p="p7">7 &middot; Ulysses (closing lines)</button>
+        </div>
+
+        <div class="pass-panel show" data-p="p1">
+            <div style="font-size:17px; color:#0e1c42; margin-bottom:4px;"><strong>The ballad Bessie sings</strong> &middot; <em>Jane Eyre</em>, chapter 3 (Charlotte Bront&euml;, 1847)</div>
+            <div style="font-size:14px; color:#3B4E8C; margin-bottom:8px;">Whole poem, 20 lines in five stanzas. You meet it in your Week 1 reading.</div>
+            <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:10px 0 12px 0;"><summary style="cursor:pointer; padding:12px 18px; font-size:16px; color:#0e1c42; list-style:none;">&#128214; <strong>Read the full poem</strong> <span style="font-size:13px; color:#3B4E8C;">(public domain)</span></summary><div style="padding:6px 22px 16px 22px;"><div class="poem">My feet they are sore, and my limbs they are weary;<br />Long is the way, and the mountains are wild;<br />Soon will the twilight close moonless and dreary<br />Over the path of the poor orphan child.<br /><br />Why did they send me so far and so lonely,<br />Up where the moors spread and grey rocks are piled?<br />Men are hard-hearted, and kind angels only<br />Watch o&rsquo;er the steps of a poor orphan child.<br /><br />Yet distant and soft the night breeze is blowing,<br />Clouds there are none, and clear stars beam mild,<br />God, in His mercy, protection is showing,<br />Comfort and hope to the poor orphan child.<br /><br />Ev&rsquo;n should I fall o&rsquo;er the broken bridge passing,<br />Or stray in the marshes, by false lights beguiled,<br />Still will my Father, with promise and blessing,<br />Take to His bosom the poor orphan child.<br /><br />There is a thought that for strength should avail me,<br />Though both of shelter and kindred despoiled;<br />Heaven is a home, and a rest will not fail me;<br />God is a friend to the poor orphan child.</div></div></details>
+            <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0;">A nursemaid's ballad that the ten-year-old Jane hears as "the saddest cadence of a funeral hymn." Choose this if you want a passage from inside the novel with a refrain to anchor your memory. It rewards a plain, unhurried voice that lets the refrain change meaning each time it returns.</p>
+        </div>
+
+        <div class="pass-panel" data-p="p2">
+            <div style="font-size:17px; color:#0e1c42; margin-bottom:4px;"><strong>A song sung in chapter 24</strong> &middot; <em>Jane Eyre</em> (Charlotte Bront&euml;, 1847)</div>
+            <div style="font-size:14px; color:#3B4E8C; margin-bottom:8px;">The first six stanzas, 24 lines, from "The truest love that ever heart" to "Disasters gather nigh." You reach this chapter in Week 5; the text is here so you can plan ahead, without its context.</div>
+            <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:10px 0 12px 0;"><summary style="cursor:pointer; padding:12px 18px; font-size:16px; color:#0e1c42; list-style:none;">&#128214; <strong>Read the full poem</strong> <span style="font-size:13px; color:#3B4E8C;">(public domain)</span></summary><div style="padding:6px 22px 16px 22px;"><div class="poem">The truest love that ever heart<br />Felt at its kindled core,<br />Did through each vein, in quickened start,<br />The tide of being pour.<br /><br />Her coming was my hope each day,<br />Her parting was my pain;<br />The chance that did her steps delay<br />Was ice in every vein.<br /><br />I dreamed it would be nameless bliss,<br />As I loved, loved to be;<br />And to this object did I press<br />As blind as eagerly.<br /><br />But wide as pathless was the space<br />That lay our lives between,<br />And dangerous as the foamy race<br />Of ocean-surges green.<br /><br />And haunted as a robber-path<br />Through wilderness or wood;<br />For Might and Right, and Woe and Wrath,<br />Between our spirits stood.<br /><br />I dangers dared; I hindrance scorned;<br />I omens did defy:<br />Whatever menaced, harassed, warned,<br />I passed impetuous by.</div></div></details>
+            <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0;">A love song in short, driving stanzas, sung by one character to another. Choose this for its momentum: the lines are brief and the rhymes close, so it sits quickly in the memory and asks for a voice that can build. Wait until Week 5 to decide what the singer means by it.</p>
+        </div>
+
+        <div class="pass-panel" data-p="p3">
+            <div style="font-size:17px; color:#0e1c42; margin-bottom:4px;"><strong>"Life"</strong> &middot; Charlotte Bront&euml;, from <em>Poems by Currer, Ellis, and Acton Bell</em> (1846)</div>
+            <div style="font-size:14px; color:#3B4E8C; margin-bottom:8px;">Whole poem, 24 lines. Published the year before <em>Jane Eyre</em>, under the same pen name.</div>
+            <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:10px 0 12px 0;"><summary style="cursor:pointer; padding:12px 18px; font-size:16px; color:#0e1c42; list-style:none;">&#128214; <strong>Read the full poem</strong> <span style="font-size:13px; color:#3B4E8C;">(public domain)</span></summary><div style="padding:6px 22px 16px 22px;"><div class="poem">Life, believe, is not a dream<br />So dark as sages say;<br />Oft a little morning rain<br />Foretells a pleasant day.<br />Sometimes there are clouds of gloom,<br />But these are transient all;<br />If the shower will make the roses bloom,<br />O why lament its fall?<br />Rapidly, merrily,<br />Life&rsquo;s sunny hours flit by,<br />Gratefully, cheerily<br />Enjoy them as they fly!<br />What though Death at times steps in,<br />And calls our Best away?<br />What though sorrow seems to win,<br />O&rsquo;er hope, a heavy sway?<br />Yet Hope again elastic springs,<br />Unconquered, though she fell;<br />Still buoyant are her golden wings,<br />Still strong to bear us well.<br />Manfully, fearlessly,<br />The day of trial bear,<br />For gloriously, victoriously,<br />Can courage quell despair!</div></div></details>
+            <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0;">Bront&euml;'s own voice, a year before Jane's. Choose this if you want a poem that changes pace on purpose: the quick tripping lines ("Rapidly, merrily") against the steadier ones. It rewards a speaker who can hear the shift in rhythm and let the voice follow it.</p>
+        </div>
+
+        <div class="pass-panel" data-p="p4">
+            <div style="font-size:17px; color:#0e1c42; margin-bottom:4px;"><strong>"No Coward Soul Is Mine"</strong> &middot; Emily Bront&euml; (written 1846, published 1850)</div>
+            <div style="font-size:14px; color:#3B4E8C; margin-bottom:8px;">Whole poem, 28 lines. Charlotte called these "the last lines my sister Emily ever wrote."</div>
+            <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:10px 0 12px 0;"><summary style="cursor:pointer; padding:12px 18px; font-size:16px; color:#0e1c42; list-style:none;">&#128214; <strong>Read the full poem</strong> <span style="font-size:13px; color:#3B4E8C;">(public domain)</span></summary><div style="padding:6px 22px 16px 22px;"><div class="poem">No coward soul is mine,<br />No trembler in the world&rsquo;s storm-troubled sphere:<br />I see Heaven&rsquo;s glories shine,<br />And faith shines equal, arming me from fear.<br /><br />O God within my breast,<br />Almighty, ever-present Deity!<br />Life&mdash;that in me has rest,<br />As I&mdash;undying Life&mdash;have power in Thee!<br /><br />Vain are the thousand creeds<br />That move men&rsquo;s hearts: unutterably vain;<br />Worthless as withered weeds,<br />Or idle froth amid the boundless main,<br /><br />To waken doubt in one<br />Holding so fast by Thine infinity;<br />So surely anchored on<br />The stedfast rock of immortality.<br /><br />With wide-embracing love<br />Thy spirit animates eternal years,<br />Pervades and broods above,<br />Changes, sustains, dissolves, creates, and rears.<br /><br />Though earth and man were gone,<br />And suns and universes ceased to be,<br />And Thou were left alone,<br />Every existence would exist in Thee.<br /><br />There is not room for Death,<br />Nor atom that his might could render void:<br />Thou&mdash;Thou art Being and Breath,<br />And what Thou art may never be destroyed.</div></div></details>
+            <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0;">Jane's creator's sister, refusing fear. Choose this for its declarative force: every stanza plants a flag. It rewards a low, steady voice that grows without hurrying, and it is the menu's most demanding poem to hold in the memory because its stanzas are so alike in shape.</p>
+        </div>
+
+        <div class="pass-panel" data-p="p5">
+            <div style="font-size:17px; color:#0e1c42; margin-bottom:4px;"><strong>"Dover Beach"</strong> &middot; Matthew Arnold (1867)</div>
+            <div style="font-size:14px; color:#3B4E8C; margin-bottom:8px;">Whole poem, 37 lines; or the continuous span from "The sea of faith" to the end (23 lines).</div>
+            <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:10px 0 12px 0;"><summary style="cursor:pointer; padding:12px 18px; font-size:16px; color:#0e1c42; list-style:none;">&#128214; <strong>Read the full poem</strong> <span style="font-size:13px; color:#3B4E8C;">(public domain)</span></summary><div style="padding:6px 22px 16px 22px;"><div class="poem">The sea is calm to-night.<br />The tide is full, the moon lies fair<br />Upon the straits; on the French coast, the light<br />Gleams and is gone; the cliffs of England stand,<br />Glimmering and vast, out in the tranquil bay.<br />Come to the window, sweet is the night-air!<br />Only, from the long line of spray<br />Where the sea meets the moon-blanched sand,<br />Listen! you hear the grating roar<br />Of pebbles which the waves draw back, and fling,<br />At their return, up the high strand,<br />Begin and cease, and then again begin,<br />With tremulous cadence slow, and bring<br />The eternal note of sadness in.<br /><br />Sophocles long ago<br />Heard it on the &AElig;gean, and it brought<br />Into his mind the turbid ebb and flow<br />Of human misery: we<br />Find also in the sound a thought,<br />Hearing it by this distant northern sea.<br /><br />The sea of faith<br />Was once, too, at the full, and round earth&rsquo;s shore<br />Lay like the folds of a bright girdle furled.<br />But now I only hear<br />Its melancholy, long, withdrawing roar,<br />Retreating, to the breath<br />Of the night-wind, down the vast edges drear<br />And naked shingles of the world.<br /><br />Ah, love, let us be true<br />To one another! for the world, which seems<br />To lie before us like a land of dreams,<br />So various, so beautiful, so new,<br />Hath really neither joy, nor love, nor light,<br />Nor certitude, nor peace, nor help for pain;<br />And we are here as on a darkling plain<br />Swept with confused alarms of struggle and flight,<br />Where ignorant armies clash by night.</div></div></details>
+            <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0;">A man at a window, speaking to someone he loves, about a world that has lost its certainties. Choose this for its long, irregular lines and its one great turn ("Ah, love, let us be true"). It rewards patience: the pauses are the performance. This poem returns next quarter, in a very different setting.</p>
+        </div>
+
+        <div class="pass-panel" data-p="p6">
+            <div style="font-size:17px; color:#0e1c42; margin-bottom:4px;"><strong>"Invictus"</strong> &middot; William Ernest Henley (written 1875, published 1888)</div>
+            <div style="font-size:14px; color:#3B4E8C; margin-bottom:8px;">Whole poem, 16 lines. The shortest choice, and the hardest to make sound new.</div>
+            <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:10px 0 12px 0;"><summary style="cursor:pointer; padding:12px 18px; font-size:16px; color:#0e1c42; list-style:none;">&#128214; <strong>Read the full poem</strong> <span style="font-size:13px; color:#3B4E8C;">(public domain)</span></summary><div style="padding:6px 22px 16px 22px;"><div class="poem">Out of the night that covers me,<br />Black as the Pit from pole to pole,<br />I thank whatever gods may be<br />For my unconquerable soul.<br /><br />In the fell clutch of circumstance<br />I have not winced nor cried aloud.<br />Under the bludgeonings of chance<br />My head is bloody, but unbowed.<br /><br />Beyond this place of wrath and tears<br />Looms but the Horror of the shade,<br />And yet the menace of the years<br />Finds, and shall find, me unafraid.<br /><br />It matters not how strait the gate,<br />How charged with punishments the scroll,<br />I am the master of my fate:<br />I am the captain of my soul.</div></div></details>
+            <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0;">Written by a young man in a hospital bed after losing a leg. Choose this if you want the year's question stated as plainly as it can be: a self that governs itself. Because so many people know the last two lines, the challenge is to earn them, stanza by stanza, so that they arrive as a conclusion and not a slogan.</p>
+        </div>
+
+        <div class="pass-panel" data-p="p7">
+            <div style="font-size:17px; color:#0e1c42; margin-bottom:4px;"><strong>"Ulysses," the closing lines</strong> &middot; Alfred Tennyson (1842)</div>
+            <div style="font-size:14px; color:#3B4E8C; margin-bottom:8px;">The continuous span from "There lies the port" to the last line, 26 lines. The whole poem is 70 lines; the full text is on Wikisource if you want the context.</div>
+            <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:10px 0 12px 0;"><summary style="cursor:pointer; padding:12px 18px; font-size:16px; color:#0e1c42; list-style:none;">&#128214; <strong>Read the full poem</strong> <span style="font-size:13px; color:#3B4E8C;">(public domain)</span></summary><div style="padding:6px 22px 16px 22px;"><div class="poem">There lies the port: the vessel puffs her sail:<br />There gloom the dark broad seas. My mariners,<br />Souls that have toil&rsquo;d, and wrought, and thought with me&mdash;<br />That ever with a frolic welcome took<br />The thunder and the sunshine, and opposed<br />Free hearts, free foreheads&mdash;you and I are old;<br />Old age hath yet his honour and his toil;<br />Death closes all: but something ere the end,<br />Some work of noble note, may yet be done,<br />Not unbecoming men that strove with Gods.<br />The lights begin to twinkle from the rocks:<br />The long day wanes: the slow moon climbs: the deep<br />Moans round with many voices. Come, my friends,<br />&rsquo;Tis not too late to seek a newer world.<br />Push off, and sitting well in order smite<br />The sounding furrows; for my purpose holds<br />To sail beyond the sunset, and the baths<br />Of all the western stars, until I die.<br />It may be that the gulfs will wash us down:<br />It may be we shall touch the Happy Isles,<br />And see the great Achilles, whom we knew.<br />Tho&rsquo; much is taken, much abides; and tho&rsquo;<br />We are not now that strength which in old days<br />Moved earth and heaven, that which we are, we are;<br />One equal temper of heroic hearts,<br />Made weak by time and fate, but strong in will<br />To strive, to seek, to find, and not to yield.</div></div></details>
+            <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0;">An old king talking his sailors into one last voyage. Choose this for its unrhymed lines that run past their endings; you must find the breath-points yourself, the way you did with Shakespeare in Quarter 1. It rewards a voice that can be tired and unbeaten at once.</p>
+        </div>
+
+        <button class="pass-reset">Show first poem</button>
+        <div style="font-size:13px; color:#3B4E8C; margin-top:12px;">You choose in Week 4, after the poetry lesson. If you are unsure, read all seven aloud once and pick the one your voice returns to.</div>
+    </div>
+
+    <!-- Rubric -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; overflow-x: auto;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128202; HOW IT IS GRADED (20 POINTS)</div>
+        <table style="width: 100%; border-collapse: collapse; min-width: 560px;">
+            <thead><tr style="background: #0E1C42;">
+                <th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #334;">Criteria</th>
+                <th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #334;">Strong</th>
+                <th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #334;">Developing</th>
+                <th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: center; border: 1px solid #334;">Pts</th>
+            </tr></thead>
+            <tbody>
+                <tr style="background: #FFFFFF;">
+                    <td style="padding: 10px 12px; font-size: 15px; color: #0e1c42; border: 1px solid #D0D9E8; vertical-align: top;">Accuracy of text<br /><span style="font-size: 12px; color: #3B4E8C;">7 pts</span></td>
+                    <td style="padding: 10px 12px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8; vertical-align: top;">From memory, eyes covered, faithful to the words and the line order; slips are rare and self-recovered.</td>
+                    <td style="padding: 10px 12px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8; vertical-align: top;">Frequent errors, skipped stanzas, or long stalls; or eyes open / clearly reading.</td>
+                    <td style="padding: 10px 12px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8; text-align: center; vertical-align: top;">7</td>
+                </tr>
+                <tr style="background: #F4F6FA;">
+                    <td style="padding: 10px 12px; font-size: 15px; color: #0e1c42; border: 1px solid #D0D9E8; vertical-align: top;">Vocal delivery<br /><span style="font-size: 12px; color: #3B4E8C;">7 pts</span></td>
+                    <td style="padding: 10px 12px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8; vertical-align: top;">Clear and controlled; pace, pause, and stress follow the sense, not just the line ends; the meter is felt without being pounded.</td>
+                    <td style="padding: 10px 12px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8; vertical-align: top;">Rushed or flat; a sing-song beat that ignores meaning; pauses only at line breaks; hard to follow.</td>
+                    <td style="padding: 10px 12px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8; text-align: center; vertical-align: top;">7</td>
+                </tr>
+                <tr style="background: #FFFFFF;">
+                    <td style="padding: 10px 12px; font-size: 15px; color: #0e1c42; border: 1px solid #D0D9E8; vertical-align: top;">Interpretation<br /><span style="font-size: 12px; color: #3B4E8C;">6 pts</span></td>
+                    <td style="padding: 10px 12px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8; vertical-align: top;">Delivery choices show real understanding of the poem's turn and its weight.</td>
+                    <td style="padding: 10px 12px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8; vertical-align: top;">Recited correctly but with little sense of what the words mean or where the poem turns.</td>
+                    <td style="padding: 10px 12px; font-size: 14px; color: #1a2340; border: 1px solid #D0D9E8; text-align: center; vertical-align: top;">6</td>
+                </tr>
+                <tr style="background: #0E1C42;">
+                    <td style="padding: 10px 12px; font-size: 15px; color: #ffffff; border: 1px solid #55C8E8; text-align: right;" colspan="3">Total:</td>
+                    <td style="padding: 10px 12px; font-size: 16px; color: #55c8e8; border: 1px solid #55C8E8; text-align: center;">20 pts</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Path -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#128197; YOUR PATH TO WEEK 6</div>
+        <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px;">
+            <div style="flex: 1; min-width: 120px; text-align: center; background: #EEF1F8; border-radius: 8px; padding: 14px 10px;"><div style="font-size: 22px;">&#128220;</div><div style="font-size: 13px; color: #0e1c42; margin-top: 6px;">Wk 1: preview the menu; read all seven aloud</div></div>
+            <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 20px;">&#8594;</div>
+            <div style="flex: 1; min-width: 120px; text-align: center; background: #EEF1F8; border-radius: 8px; padding: 14px 10px;"><div style="font-size: 22px;">&#128218;</div><div style="font-size: 13px; color: #0e1c42; margin-top: 6px;">Wk 4: the poetry lesson; choose your poem</div></div>
+            <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 20px;">&#8594;</div>
+            <div style="flex: 1; min-width: 120px; text-align: center; background: #EEF1F8; border-radius: 8px; padding: 14px 10px;"><div style="font-size: 22px;">&#129504;</div><div style="font-size: 13px; color: #0e1c42; margin-top: 6px;">Wk 5: memorize; rehearse aloud, eyes closed</div></div>
+            <div style="display: flex; align-items: center; color: #3B4E8C; font-size: 20px;">&#8594;</div>
+            <div style="flex: 1; min-width: 120px; text-align: center; background: #FDF3E3; border-radius: 8px; padding: 14px 10px;"><div style="font-size: 22px;">&#127908;</div><div style="font-size: 13px; color: #0e1c42; margin-top: 6px;">Wk 6: perform, eyes covered; submit the video or meet live</div></div>
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 16px 0 0 0;">You submit on the <strong>Week 6 &middot; Graded Recitation</strong> assignment page. Everything before Week 6 is preparation and none of it is graded, so use the time to make the poem yours.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 3 &middot; The Sovereign Self</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Module 3 Recitation &middot; Poem menu, rules, and rubric</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  var tabs = document.getElementById('passTabs');
+  if (!tabs) return;
+  var frame = tabs.closest('div');
+  function show(p) {
+    tabs.querySelectorAll('button').forEach(function (b) { b.classList.toggle('selected', b.dataset.p === p); });
+    frame.querySelectorAll('.pass-panel').forEach(function (x) { x.classList.toggle('show', x.dataset.p === p); });
+  }
+  tabs.addEventListener('click', function (e) { var b = e.target.closest('button[data-p]'); if (b) show(b.dataset.p); });
+  var reset = frame.querySelector('.pass-reset');
+  if (reset) reset.addEventListener('click', function () { show('p1'); });
+})();
+</script>
+</body>
+</html>

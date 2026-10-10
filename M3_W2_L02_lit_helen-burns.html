@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; Helen Burns: Two Answers to Injustice</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-direction: column; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 10px 14px; font-size: 15px; color: #0E1C42; cursor: pointer; transition: all .15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0 0 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    details.je-reader summary::-webkit-details-marker { display:none; }
+    details.je-reader[open] summary { border-bottom:1px solid #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (2 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Helen Burns: Two Answers to Injustice</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Jane Eyre, ch. 6 (reread) and ch. 8</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Helen Burns: Two Answers to Injustice</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Jane says she would strike back "very hard." Helen says, "It is not violence that best overcomes hate." Both girls have just watched injustice happen to them, in the same school, in the same week.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In chapter 6, which you already read in the Lowood lesson, Jane meets Helen Burns for the first time and watches her endure a flogging without a tear. Today you go back into that conversation and hold Jane's creed against Helen's, side by side, before reading chapter 8, where Jane herself is publicly shamed and Helen's way of answering it is put to the test in front of her.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state Jane's creed and Helen's creed for answering injustice, each in the character's own words, with a citation.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace, in the order chapter 8 gives them, the events between Jane's public shaming and Helen being labeled "Slattern" the next morning.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> take a position on which creed the text seems to respect more, without pretending the novel gives an easy answer.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN</div>
+            <div class="widget-question">When someone treats you unfairly, do you find it easier to let it go or to answer it? What makes the difference for you?</div>
+            <div class="widget-options">
+                <button data-response="Jane argues that letting cruelty go unanswered only teaches the cruel person that cruelty works. Watch for the exact reasoning she gives Helen in chapter 6.">Answer it. Letting it go feels like agreeing you deserved it.</button>
+                <button data-response="Helen argues that a fight over every wrong costs more than it's worth, and that some things are better carried than contested. Watch for the reasoning she gives back.">Let it go. A fight over every wrong costs too much.</button>
+                <button data-response="Chapter 6 stages exactly this: whether the person doing the wrong will ever face it changes how the other girls, and the reader, judge the choice to stay quiet or speak up.">It depends whether the person who wronged me will ever know or answer for it.</button>
+                <button data-response="Jane and Helen are close in age and share a school, a teacher, and an unjust world, and still land in opposite places. Watch how the text refuses to say one girl is simply right.">It depends on who I am, more than the situation.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Two creeds, laid side by side</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Bront&euml; does not tell you which girl is right. She gives each one a full, reasoned case in her own words and lets the two cases sit next to each other unresolved. Reading for a contrast like this means finding the strongest statement each side makes, not the first thing either girl says. Go back to chapter 6 (embedded in the Lowood lesson) and find the exchange that begins after Jane says she would "strike back again very hard" if struck without cause. Read it through to Helen's answer about the New Testament. That is the core of both creeds.</p>
+
+        <!-- CORE VISUAL: two creeds, side by side -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">TWO ANSWERS TO INJUSTICE (CHAPTER 6)</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 14px; color: #C7922C; margin-bottom: 6px;">JANE'S CREED: RESISTANCE</div>
+                    <div style="font-size: 15px; color: #0e1c42; line-height: 1.6; margin-bottom: 8px;">"When we are struck at without a reason, we should strike back again very hard; I am sure we should&mdash;so hard as to teach the person who struck us never to do it again."</div>
+                    <div style="font-size: 13px; color: #3B4E8C;">Her reasoning: unanswered cruelty only teaches the cruel that cruelty works, and lets it "have it all their own way."</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 14px; color: #3B4E8C; margin-bottom: 6px;">HELEN'S CREED: ENDURANCE</div>
+                    <div style="font-size: 15px; color: #0e1c42; line-height: 1.6; margin-bottom: 8px;">"It is not violence that best overcomes hate&mdash;nor vengeance that most certainly heals injury." "Love your enemies; bless them that curse you."</div>
+                    <div style="font-size: 13px; color: #3B4E8C;">Her reasoning: life is "too short to be spent in nursing animosity," and she trusts a judgment beyond this world to sort out what she cannot.</div>
+                </div>
+            </div>
+            <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 14px;">Neither girl backs down in this conversation. Chapter 8 will test both creeds on Jane's own worst day yet.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 2 &middot; READ CHAPTER 8</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;"><strong>Watch for:</strong> what Helen actually does, not just says, when she finds Jane weeping alone; how Miss Temple treats a serious accusation as something that must be checked, not assumed; and the moment near the end of the chapter where Jane, not Helen, is the one who cannot stand an injustice without acting on it.</p>
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter VIII</strong> <span style="font-size:13px; color:#3B4E8C;">(about 3,000 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">Ere the half-hour ended, five o’clock struck; school was dismissed, and all were gone into the refectory to tea. I now ventured to descend: it was deep dusk; I retired into a corner and sat down on the floor. The spell by which I had been so far supported began to dissolve; reaction took place, and soon, so overwhelming was the grief that seized me, I sank prostrate with my face to the ground. Now I wept: Helen Burns was not here; nothing sustained me; left to myself I abandoned myself, and my tears watered the boards. I had meant to be so good, and to do so much at Lowood: to make so many friends, to earn respect and win affection. Already I had made visible progress: that very morning I had reached the head of my class; Miss Miller had praised me warmly; Miss Temple had smiled approbation; she had promised to teach me drawing, and to let me learn French, if I continued to make similar improvement two months longer: and then I was well received by my fellow-pupils; treated as an equal by those of my own age, and not molested by any; now, here I lay again crushed and trodden on; and could I ever rise more?</p>
+    <p style="margin:0 0 14px 0;">“Never,” I thought; and ardently I wished to die. While sobbing out this wish in broken accents, some one approached: I started up—again Helen Burns was near me; the fading fires just showed her coming up the long, vacant room; she brought my coffee and bread.</p>
+    <p style="margin:0 0 14px 0;">“Come, eat something,” she said; but I put both away from me, feeling as if a drop or a crumb would have choked me in my present condition. Helen regarded me, probably with surprise: I could not now abate my agitation, though I tried hard; I continued to weep aloud. She sat down on the ground near me, embraced her knees with her arms, and rested her head upon them; in that attitude she remained silent as an Indian. I was the first who spoke—</p>
+    <p style="margin:0 0 14px 0;">“Helen, why do you stay with a girl whom everybody believes to be a liar?”</p>
+    <p style="margin:0 0 14px 0;">“Everybody, Jane? Why, there are only eighty people who have heard you called so, and the world contains hundreds of millions.”</p>
+    <p style="margin:0 0 14px 0;">“But what have I to do with millions? The eighty I know despise me.”</p>
+    <p style="margin:0 0 14px 0;">“Jane, you are mistaken: probably not one in the school either despises or dislikes you: many, I am sure, pity you much.”</p>
+    <p style="margin:0 0 14px 0;">“How can they pity me after what Mr. Brocklehurst has said?”</p>
+    <p style="margin:0 0 14px 0;">“Mr. Brocklehurst is not a god: nor is he even a great and admired man: he is little liked here; he never took steps to make himself liked. Had he treated you as an especial favourite, you would have found enemies, declared or covert, all around you; as it is, the greater number would offer you sympathy if they dared. Teachers and pupils may look coldly on you for a day or two, but friendly feelings are concealed in their hearts; and if you persevere in doing well, these feelings will ere long appear so much the more evidently for their temporary suppression. Besides, Jane”—she paused.</p>
+    <p style="margin:0 0 14px 0;">“Well, Helen?” said I, putting my hand into hers: she chafed my fingers gently to warm them, and went on—</p>
+    <p style="margin:0 0 14px 0;">“If all the world hated you, and believed you wicked, while your own conscience approved you, and absolved you from guilt, you would not be without friends.”</p>
+    <p style="margin:0 0 14px 0;">“No; I know I should think well of myself; but that is not enough: if others don’t love me I would rather die than live—I cannot bear to be solitary and hated, Helen. Look here; to gain some real affection from you, or Miss Temple, or any other whom I truly love, I would willingly submit to have the bone of my arm broken, or to let a bull toss me, or to stand behind a kicking horse, and let it dash its hoof at my chest—”</p>
+    <p style="margin:0 0 14px 0;">“Hush, Jane! you think too much of the love of human beings; you are too impulsive, too vehement; the sovereign hand that created your frame, and put life into it, has provided you with other resources than your feeble self, or than creatures feeble as you. Besides this earth, and besides the race of men, there is an invisible world and a kingdom of spirits: that world is round us, for it is everywhere; and those spirits watch us, for they are commissioned to guard us; and if we were dying in pain and shame, if scorn smote us on all sides, and hatred crushed us, angels see our tortures, recognise our innocence (if innocent we be: as I know you are of this charge which Mr. Brocklehurst has weakly and pompously repeated at second-hand from Mrs. Reed; for I read a sincere nature in your ardent eyes and on your clear front), and God waits only the separation of spirit from flesh to crown us with a full reward. Why, then, should we ever sink overwhelmed with distress, when life is so soon over, and death is so certain an entrance to happiness—to glory?”</p>
+    <p style="margin:0 0 14px 0;">I was silent; Helen had calmed me; but in the tranquillity she imparted there was an alloy of inexpressible sadness. I felt the impression of woe as she spoke, but I could not tell whence it came; and when, having done speaking, she breathed a little fast and coughed a short cough, I momentarily forgot my own sorrows to yield to a vague concern for her.</p>
+    <p style="margin:0 0 14px 0;">Resting my head on Helen’s shoulder, I put my arms round her waist; she drew me to her, and we reposed in silence. We had not sat long thus, when another person came in. Some heavy clouds, swept from the sky by a rising wind, had left the moon bare; and her light, streaming in through a window near, shone full both on us and on the approaching figure, which we at once recognised as Miss Temple.</p>
+    <p style="margin:0 0 14px 0;">“I came on purpose to find you, Jane Eyre,” said she; “I want you in my room; and as Helen Burns is with you, she may come too.”</p>
+    <p style="margin:0 0 14px 0;">We went; following the superintendent’s guidance, we had to thread some intricate passages, and mount a staircase before we reached her apartment; it contained a good fire, and looked cheerful. Miss Temple told Helen Burns to be seated in a low arm-chair on one side of the hearth, and herself taking another, she called me to her side.</p>
+    <p style="margin:0 0 14px 0;">“Is it all over?” she asked, looking down at my face. “Have you cried your grief away?”</p>
+    <p style="margin:0 0 14px 0;">“I am afraid I never shall do that.”</p>
+    <p style="margin:0 0 14px 0;">“Why?”</p>
+    <p style="margin:0 0 14px 0;">“Because I have been wrongly accused; and you, ma’am, and everybody else, will now think me wicked.”</p>
+    <p style="margin:0 0 14px 0;">“We shall think you what you prove yourself to be, my child. Continue to act as a good girl, and you will satisfy us.”</p>
+    <p style="margin:0 0 14px 0;">“Shall I, Miss Temple?”</p>
+    <p style="margin:0 0 14px 0;">“You will,” said she, passing her arm round me. “And now tell me who is the lady whom Mr. Brocklehurst called your benefactress?”</p>
+    <p style="margin:0 0 14px 0;">“Mrs. Reed, my uncle’s wife. My uncle is dead, and he left me to her care.”</p>
+    <p style="margin:0 0 14px 0;">“Did she not, then, adopt you of her own accord?”</p>
+    <p style="margin:0 0 14px 0;">“No, ma’am; she was sorry to have to do it: but my uncle, as I have often heard the servants say, got her to promise before he died that she would always keep me.”</p>
+    <p style="margin:0 0 14px 0;">“Well now, Jane, you know, or at least I will tell you, that when a criminal is accused, he is always allowed to speak in his own defence. You have been charged with falsehood; defend yourself to me as well as you can. Say whatever your memory suggests is true; but add nothing and exaggerate nothing.”</p>
+    <p style="margin:0 0 14px 0;">I resolved, in the depth of my heart, that I would be most moderate—most correct; and, having reflected a few minutes in order to arrange coherently what I had to say, I told her all the story of my sad childhood. Exhausted by emotion, my language was more subdued than it generally was when it developed that sad theme; and mindful of Helen’s warnings against the indulgence of resentment, I infused into the narrative far less of gall and wormwood than ordinary. Thus restrained and simplified, it sounded more credible: I felt as I went on that Miss Temple fully believed me.</p>
+    <p style="margin:0 0 14px 0;">In the course of the tale I had mentioned Mr. Lloyd as having come to see me after the fit: for I never forgot the, to me, frightful episode of the red-room: in detailing which, my excitement was sure, in some degree, to break bounds; for nothing could soften in my recollection the spasm of agony which clutched my heart when Mrs. Reed spurned my wild supplication for pardon, and locked me a second time in the dark and haunted chamber.</p>
+    <p style="margin:0 0 14px 0;">I had finished: Miss Temple regarded me a few minutes in silence; she then said—</p>
+    <p style="margin:0 0 14px 0;">“I know something of Mr. Lloyd; I shall write to him; if his reply agrees with your statement, you shall be publicly cleared from every imputation; to me, Jane, you are clear now.”</p>
+    <p style="margin:0 0 14px 0;">She kissed me, and still keeping me at her side (where I was well contented to stand, for I derived a child’s pleasure from the contemplation of her face, her dress, her one or two ornaments, her white forehead, her clustered and shining curls, and beaming dark eyes), she proceeded to address Helen Burns.</p>
+    <p style="margin:0 0 14px 0;">“How are you to-night, Helen? Have you coughed much to-day?”</p>
+    <p style="margin:0 0 14px 0;">“Not quite so much, I think, ma’am.”</p>
+    <p style="margin:0 0 14px 0;">“And the pain in your chest?”</p>
+    <p style="margin:0 0 14px 0;">“It is a little better.”</p>
+    <p style="margin:0 0 14px 0;">Miss Temple got up, took her hand and examined her pulse; then she returned to her own seat: as she resumed it, I heard her sigh low. She was pensive a few minutes, then rousing herself, she said cheerfully—</p>
+    <p style="margin:0 0 14px 0;">“But you two are my visitors to-night; I must treat you as such.” She rang her bell.</p>
+    <p style="margin:0 0 14px 0;">“Barbara,” she said to the servant who answered it, “I have not yet had tea; bring the tray and place cups for these two young ladies.”</p>
+    <p style="margin:0 0 14px 0;">And a tray was soon brought. How pretty, to my eyes, did the china cups and bright teapot look, placed on the little round table near the fire! How fragrant was the steam of the beverage, and the scent of the toast! of which, however, I, to my dismay (for I was beginning to be hungry) discerned only a very small portion: Miss Temple discerned it too.</p>
+    <p style="margin:0 0 14px 0;">“Barbara,” said she, “can you not bring a little more bread and butter? There is not enough for three.”</p>
+    <p style="margin:0 0 14px 0;">Barbara went out: she returned soon—</p>
+    <p style="margin:0 0 14px 0;">“Madam, Mrs. Harden says she has sent up the usual quantity.”</p>
+    <p style="margin:0 0 14px 0;">Mrs. Harden, be it observed, was the housekeeper: a woman after Mr. Brocklehurst’s own heart, made up of equal parts of whalebone and iron.</p>
+    <p style="margin:0 0 14px 0;">“Oh, very well!” returned Miss Temple; “we must make it do, Barbara, I suppose.” And as the girl withdrew she added, smiling, “Fortunately, I have it in my power to supply deficiencies for this once.”</p>
+    <p style="margin:0 0 14px 0;">Having invited Helen and me to approach the table, and placed before each of us a cup of tea with one delicious but thin morsel of toast, she got up, unlocked a drawer, and taking from it a parcel wrapped in paper, disclosed presently to our eyes a good-sized seed-cake.</p>
+    <p style="margin:0 0 14px 0;">“I meant to give each of you some of this to take with you,” said she, “but as there is so little toast, you must have it now,” and she proceeded to cut slices with a generous hand.</p>
+    <p style="margin:0 0 14px 0;">We feasted that evening as on nectar and ambrosia; and not the least delight of the entertainment was the smile of gratification with which our hostess regarded us, as we satisfied our famished appetites on the delicate fare she liberally supplied.</p>
+    <p style="margin:0 0 14px 0;">Tea over and the tray removed, she again summoned us to the fire; we sat one on each side of her, and now a conversation followed between her and Helen, which it was indeed a privilege to be admitted to hear.</p>
+    <p style="margin:0 0 14px 0;">Miss Temple had always something of serenity in her air, of state in her mien, of refined propriety in her language, which precluded deviation into the ardent, the excited, the eager: something which chastened the pleasure of those who looked on her and listened to her, by a controlling sense of awe; and such was my feeling now: but as to Helen Burns, I was struck with wonder.</p>
+    <p style="margin:0 0 14px 0;">The refreshing meal, the brilliant fire, the presence and kindness of her beloved instructress, or, perhaps, more than all these, something in her own unique mind, had roused her powers within her. They woke, they kindled: first, they glowed in the bright tint of her cheek, which till this hour I had never seen but pale and bloodless; then they shone in the liquid lustre of her eyes, which had suddenly acquired a beauty more singular than that of Miss Temple’s—a beauty neither of fine colour nor long eyelash, nor pencilled brow, but of meaning, of movement, of radiance. Then her soul sat on her lips, and language flowed, from what source I cannot tell. Has a girl of fourteen a heart large enough, vigorous enough, to hold the swelling spring of pure, full, fervid eloquence? Such was the characteristic of Helen’s discourse on that, to me, memorable evening; her spirit seemed hastening to live within a very brief span as much as many live during a protracted existence.</p>
+    <p style="margin:0 0 14px 0;">They conversed of things I had never heard of; of nations and times past; of countries far away; of secrets of nature discovered or guessed at: they spoke of books: how many they had read! What stores of knowledge they possessed! Then they seemed so familiar with French names and French authors: but my amazement reached its climax when Miss Temple asked Helen if she sometimes snatched a moment to recall the Latin her father had taught her, and taking a book from a shelf, bade her read and construe a page of Virgil; and Helen obeyed, my organ of veneration expanding at every sounding line. She had scarcely finished ere the bell announced bedtime! no delay could be admitted; Miss Temple embraced us both, saying, as she drew us to her heart—</p>
+    <p style="margin:0 0 14px 0;">“God bless you, my children!”</p>
+    <p style="margin:0 0 14px 0;">Helen she held a little longer than me: she let her go more reluctantly; it was Helen her eye followed to the door; it was for her she a second time breathed a sad sigh; for her she wiped a tear from her cheek.</p>
+    <p style="margin:0 0 14px 0;">On reaching the bedroom, we heard the voice of Miss Scatcherd: she was examining drawers; she had just pulled out Helen Burns’s, and when we entered Helen was greeted with a sharp reprimand, and told that to-morrow she should have half-a-dozen of untidily folded articles pinned to her shoulder.</p>
+    <p style="margin:0 0 14px 0;">“My things were indeed in shameful disorder,” murmured Helen to me, in a low voice: “I intended to have arranged them, but I forgot.”</p>
+    <p style="margin:0 0 14px 0;">Next morning, Miss Scatcherd wrote in conspicuous characters on a piece of pasteboard the word “Slattern,” and bound it like a phylactery round Helen’s large, mild, intelligent, and benign-looking forehead. She wore it till evening, patient, unresentful, regarding it as a deserved punishment. The moment Miss Scatcherd withdrew after afternoon school, I ran to Helen, tore it off, and thrust it into the fire: the fury of which she was incapable had been burning in my soul all day, and tears, hot and large, had continually been scalding my cheek; for the spectacle of her sad resignation gave me an intolerable pain at the heart.</p>
+    <p style="margin:0 0 14px 0;">About a week subsequently to the incidents above narrated, Miss Temple, who had written to Mr. Lloyd, received his answer: it appeared that what he said went to corroborate my account. Miss Temple, having assembled the whole school, announced that inquiry had been made into the charges alleged against Jane Eyre, and that she was most happy to be able to pronounce her completely cleared from every imputation. The teachers then shook hands with me and kissed me, and a murmur of pleasure ran through the ranks of my companions.</p>
+    <p style="margin:0 0 14px 0;">Thus relieved of a grievous load, I from that hour set to work afresh, resolved to pioneer my way through every difficulty: I toiled hard, and my success was proportionate to my efforts; my memory, not naturally tenacious, improved with practice; exercise sharpened my wits; in a few weeks I was promoted to a higher class; in less than two months I was allowed to commence French and drawing. I learned the first two tenses of the verb <em>Etre</em>, and sketched my first cottage (whose walls, by-the-bye, outrivalled in slope those of the leaning tower of Pisa), on the same day. That night, on going to bed, I forgot to prepare in imagination the Barmecide supper of hot roast potatoes, or white bread and new milk, with which I was wont to amuse my inward cravings: I feasted instead on the spectacle of ideal drawings, which I saw in the dark; all the work of my own hands: freely pencilled houses and trees, picturesque rocks and ruins, Cuyp-like groups of cattle, sweet paintings of butterflies hovering over unblown roses, of birds picking at ripe cherries, of wren’s nests enclosing pearl-like eggs, wreathed about with young ivy sprays. I examined, too, in thought, the possibility of my ever being able to translate currently a certain little French story which Madame Pierrot had that day shown me; nor was that problem solved to my satisfaction ere I fell sweetly asleep.</p>
+    <p style="margin:0 0 14px 0;">Well has Solomon said—“Better is a dinner of herbs where love is, than a stalled ox and hatred therewith.”</p>
+    <p style="margin:0 0 14px 0;">I would not now have exchanged Lowood with all its privations for Gateshead and its daily luxuries.</p>
+  </div>
+</details>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 3 &middot; NOW YOU: TRACE CHAPTER 8 IN ORDER</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Five beats from chapter 8, from Jane's lowest moment to the next morning. Put them in the order the text gives them.</p>
+        <div class="optima-widget ow-order" data-done="That is the order of chapter 8: grief, comfort, a hearing, a feast, and then a fresh injustice that Helen bears exactly as she said she would in chapter 6.">
+            <div class="widget-kicker">&#128204; CLICK THE MOMENTS IN THE ORDER THEY HAPPEN</div>
+            <div class="widget-question">Five beats, from the schoolroom floor to the next day's dormitory.</div>
+            <div class="order-list">
+                <button data-order="4"><span class="seq" data-default="?">?</span> Miss Temple gives Jane and Helen tea and a seed-cake, and asks Helen to read a page of Virgil aloud from memory.</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span> Left alone after the school disperses to tea, Jane sinks to the floor and weeps, believing herself friendless and disgraced.</button>
+                <button data-order="3"><span class="seq" data-default="?">?</span> Miss Temple sends for Jane and Helen, hears Jane's account of Mrs. Reed and the red-room, and promises to write to Mr. Lloyd to confirm it.</button>
+                <button data-order="2"><span class="seq" data-default="?">?</span> Helen finds Jane on the floor, brings her coffee and bread, and tells her that most of the school does not despise her.</button>
+                <button data-order="5"><span class="seq" data-default="?">?</span> The next morning, Miss Scatcherd brands Helen with a card reading "Slattern"; that evening, Jane tears it off and burns it.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 14px 0 0 0;">Notice the last beat against the first: Jane does for Helen exactly what her own creed would predict, tearing the label off rather than letting the insult stand. Helen, offered the same choice, wears the label all day, "patient, unresentful," and lets Jane act.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; DO SOMETHING WITH THE READING</div>
+        <div class="rj-badge">
+            <div class="rj-icon">&#128211;</div>
+            <div>
+                <div class="rj-label">READING RESPONSE</div>
+                <div class="rj-task">Write a paragraph comparing Jane's creed and Helen's creed. To do it well: quote one full sentence from each girl's speech in chapter 6, cited. Then point to one specific moment in chapter 8 where a character's actions match her stated creed (Helen wearing the label; Jane tearing it off) and explain what the moment adds that the chapter 6 speech alone did not show you. End with your own claim: does the novel seem to respect one creed more than the other so far, or does it hold both up as real and costly? Defend your claim with the text, not with how you personally would feel in Jane's place.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Claude can summarize the philosophical difference between resistance and endurance in general terms. It cannot tell you which girl's words land harder on the page for you, and a general summary will flatten two carefully individual voices into one idea. Quote Jane and Helen in their own words, not a paraphrase.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Resurgam</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A spring illness changes Lowood, and the narrator makes a choice about how much of the next eight years she is willing to tell you.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Whose response is more admirable, Helen's or Jane's, is the question this lesson leaves open. A claim about a character's ethics is only as strong as the sentence that can be pointed to, so keep quotations ready, not just an instinct.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Helen Burns: Two Answers to Injustice</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

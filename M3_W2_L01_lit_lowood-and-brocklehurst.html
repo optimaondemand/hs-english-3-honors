@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; Lowood and Brocklehurst</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-direction: column; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 10px 14px; font-size: 15px; color: #0E1C42; cursor: pointer; transition: all .15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0 0 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    details.je-reader summary::-webkit-details-marker { display:none; }
+    details.je-reader[open] summary { border-bottom:1px solid #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (1 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Lowood and Brocklehurst</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Jane Eyre, ch. 5&ndash;7</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Lowood and Brocklehurst</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A clergyman orders a child's naturally curling hair cut off in the name of humility. An hour later, his own wife and daughters walk in wearing silk, ermine, and a "false front of French curls."</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Jane leaves Gateshead for Lowood, a charity school for orphans, and finds a new kind of authority: not one aunt's temper, but an institution, run in the name of religion by a man named Mr. Brocklehurst. Today's reading tool is simple and exact: hold what a person <strong>says</strong> against what that same person <strong>does</strong>, in the same scene, and see what the gap tells you. Apply it to chapter 7's inspection, where Brocklehurst preaches privation to eighty hungry girls and then receives his own family, dressed exactly as he has just forbidden. Read chapters 5 through 7.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name the gap between what Mr. Brocklehurst claims for the school and what his own conduct shows, using at least two paired examples from chapter 7.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why Miss Temple's bread-and-cheese decision is a different answer to the same problem Brocklehurst claims to be solving.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe, in my own words, the difference between institutional religion and lived charity as Bront&euml; stages it in these chapters.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a rule you have seen enforced unevenly: strictly for some people, loosely for others. What did that unevenness tell you about who the rule was really for?</div>
+            <div class="widget-options">
+                <button data-response="That is exactly the pattern in chapter 7. Brocklehurst enforces plainness on eighty charity pupils and exempts his own family in the same conversation. Watch for who the rule binds and who it does not.">A rule that bent for some people and not others</button>
+                <button data-response="Brocklehurst frames privation as a spiritual good, borrowing scripture to defend burnt porridge. Watch how he uses religious language specifically at the moment he is asked to explain himself.">Someone using a bigger idea (faith, tradition, safety) to justify a small unfairness</button>
+                <button data-response="Miss Temple answers hunger with bread and cheese, on her own authority, without a speech. Watch how little she says compared to Brocklehurst, and how much she does.">Someone who fixed the problem quietly, without announcing it</button>
+                <button data-response="Jane is new at Lowood and has no power to question anything yet. Watch how the text lets you, the reader, see the gap even though the youngest characters in the room cannot say a word about it.">Watching unfairness happen and not being in a position to say anything</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Reading for the gap between saying and doing</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">A character's stated principle is not the same thing as a character's action, and a careful reader tracks both. When a novelist wants you to see hypocrisy, she rarely says the word: she places the claim and the contradiction close together and lets you do the arithmetic. Chapter 7 is built almost entirely this way. Mr. Brocklehurst delivers a speech on humility and plainness to Miss Temple and the assembled school; before the chapter ends, his own wife and daughters arrive dressed in exactly what he has just condemned. The technique has a name in rhetoric: it is the gap between <strong>ethos claimed</strong> (what a speaker says he stands for) and <strong>ethos shown</strong> (what his conduct actually demonstrates). Read for both, side by side, and the chapter's argument makes itself.</p>
+
+        <!-- CORE VISUAL: says vs. does, chapter 7 -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">MR. BROCKLEHURST: WHAT HE SAYS, WHAT HAPPENS NEXT (CHAPTER 7)</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 12px; color: #C7922C; margin-bottom: 6px;">HE SAYS</div>
+                    <div style="font-size: 15px; color: #0e1c42; line-height: 1.55;">His aim is "not to accustom them to habits of luxury and indulgence, but to render them hardy, patient, self-denying"; the girls should meet a spoiled meal with fortitude, not a replacement.</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 12px; color: #3B4E8C; margin-bottom: 6px;">WHAT HAPPENS NEXT</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Minutes later his wife enters "enveloped in a costly velvet shawl, trimmed with ermine," wearing "a false front of French curls."</div>
+                </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px;">
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 12px; color: #C7922C; margin-bottom: 6px;">HE SAYS</div>
+                    <div style="font-size: 15px; color: #0e1c42; line-height: 1.55;">Julia Severn's hair, which "curls naturally," must be cut off, because the school must not "conform to the world" or wear "braided hair and costly apparel."</div>
+                </div>
+                <div style="flex: 1; min-width: 220px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;">
+                    <div style="font-size: 12px; color: #3B4E8C; margin-bottom: 6px;">WHAT HAPPENS NEXT</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">His own two daughters arrive with "a profusion of light tresses, elaborately curled," under fashionable ostrich-plumed hats.</div>
+                </div>
+            </div>
+            <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 14px;">His own words: &ldquo;my mission is to mortify in these girls the lusts of the flesh.&rdquo; Ask: whose flesh does the rule apply to?</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 2 &middot; READ CHAPTERS 5, 6, AND 7</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;"><strong>Watch for, in chapter 5:</strong> how Lowood's discipline and its food are described before you ever see Brocklehurst himself. <strong>Watch for, in chapter 6:</strong> how Miss Scatcherd treats a girl named Burns, and how that girl responds. <strong>Watch for, in chapter 7:</strong> every place Brocklehurst states a rule, and what happens within a page or two of the statement. The stable outside link for the full text is <a href="https://www.gutenberg.org/ebooks/1260" style="color: #3B4E8C;">Project Gutenberg</a>.</p>
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter V</strong> <span style="font-size:13px; color:#3B4E8C;">(about 5,000 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">Five o’clock had hardly struck on the morning of the 19th of January, when Bessie brought a candle into my closet and found me already up and nearly dressed. I had risen half-an-hour before her entrance, and had washed my face, and put on my clothes by the light of a half-moon just setting, whose rays streamed through the narrow window near my crib. I was to leave Gateshead that day by a coach which passed the lodge gates at six A.M. Bessie was the only person yet risen; she had lit a fire in the nursery, where she now proceeded to make my breakfast. Few children can eat when excited with the thoughts of a journey; nor could I. Bessie, having pressed me in vain to take a few spoonfuls of the boiled milk and bread she had prepared for me, wrapped up some biscuits in a paper and put them into my bag; then she helped me on with my pelisse and bonnet, and wrapping herself in a shawl, she and I left the nursery. As we passed Mrs. Reed’s bedroom, she said, “Will you go in and bid Missis good-bye?”</p>
+    <p style="margin:0 0 14px 0;">“No, Bessie: she came to my crib last night when you were gone down to supper, and said I need not disturb her in the morning, or my cousins either; and she told me to remember that she had always been my best friend, and to speak of her and be grateful to her accordingly.”</p>
+    <p style="margin:0 0 14px 0;">“What did you say, Miss?”</p>
+    <p style="margin:0 0 14px 0;">“Nothing: I covered my face with the bedclothes, and turned from her to the wall.”</p>
+    <p style="margin:0 0 14px 0;">“That was wrong, Miss Jane.”</p>
+    <p style="margin:0 0 14px 0;">“It was quite right, Bessie. Your Missis has not been my friend: she has been my foe.”</p>
+    <p style="margin:0 0 14px 0;">“O Miss Jane! don’t say so!”</p>
+    <p style="margin:0 0 14px 0;">“Good-bye to Gateshead!” cried I, as we passed through the hall and went out at the front door.</p>
+    <p style="margin:0 0 14px 0;">The moon was set, and it was very dark; Bessie carried a lantern, whose light glanced on wet steps and gravel road sodden by a recent thaw. Raw and chill was the winter morning: my teeth chattered as I hastened down the drive. There was a light in the porter’s lodge: when we reached it, we found the porter’s wife just kindling her fire: my trunk, which had been carried down the evening before, stood corded at the door. It wanted but a few minutes of six, and shortly after that hour had struck, the distant roll of wheels announced the coming coach; I went to the door and watched its lamps approach rapidly through the gloom.</p>
+    <p style="margin:0 0 14px 0;">“Is she going by herself?” asked the porter’s wife.</p>
+    <p style="margin:0 0 14px 0;">“Yes.”</p>
+    <p style="margin:0 0 14px 0;">“And how far is it?”</p>
+    <p style="margin:0 0 14px 0;">“Fifty miles.”</p>
+    <p style="margin:0 0 14px 0;">“What a long way! I wonder Mrs. Reed is not afraid to trust her so far alone.”</p>
+    <p style="margin:0 0 14px 0;">The coach drew up; there it was at the gates with its four horses and its top laden with passengers: the guard and coachman loudly urged haste; my trunk was hoisted up; I was taken from Bessie’s neck, to which I clung with kisses.</p>
+    <p style="margin:0 0 14px 0;">“Be sure and take good care of her,” cried she to the guard, as he lifted me into the inside.</p>
+    <p style="margin:0 0 14px 0;">“Ay, ay!” was the answer: the door was slapped to, a voice exclaimed “All right,” and on we drove. Thus was I severed from Bessie and Gateshead; thus whirled away to unknown, and, as I then deemed, remote and mysterious regions.</p>
+    <p style="margin:0 0 14px 0;">I remember but little of the journey; I only know that the day seemed to me of a preternatural length, and that we appeared to travel over hundreds of miles of road. We passed through several towns, and in one, a very large one, the coach stopped; the horses were taken out, and the passengers alighted to dine. I was carried into an inn, where the guard wanted me to have some dinner; but, as I had no appetite, he left me in an immense room with a fireplace at each end, a chandelier pendent from the ceiling, and a little red gallery high up against the wall filled with musical instruments. Here I walked about for a long time, feeling very strange, and mortally apprehensive of some one coming in and kidnapping me; for I believed in kidnappers, their exploits having frequently figured in Bessie’s fireside chronicles. At last the guard returned; once more I was stowed away in the coach, my protector mounted his own seat, sounded his hollow horn, and away we rattled over the “stony street” of L——.</p>
+    <p style="margin:0 0 14px 0;">The afternoon came on wet and somewhat misty: as it waned into dusk, I began to feel that we were getting very far indeed from Gateshead: we ceased to pass through towns; the country changed; great grey hills heaved up round the horizon: as twilight deepened, we descended a valley, dark with wood, and long after night had overclouded the prospect, I heard a wild wind rushing amongst trees.</p>
+    <p style="margin:0 0 14px 0;">Lulled by the sound, I at last dropped asleep; I had not long slumbered when the sudden cessation of motion awoke me; the coach-door was open, and a person like a servant was standing at it: I saw her face and dress by the light of the lamps.</p>
+    <p style="margin:0 0 14px 0;">“Is there a little girl called Jane Eyre here?” she asked. I answered “Yes,” and was then lifted out; my trunk was handed down, and the coach instantly drove away.</p>
+    <p style="margin:0 0 14px 0;">I was stiff with long sitting, and bewildered with the noise and motion of the coach: gathering my faculties, I looked about me. Rain, wind, and darkness filled the air; nevertheless, I dimly discerned a wall before me and a door open in it; through this door I passed with my new guide: she shut and locked it behind her. There was now visible a house or houses—for the building spread far—with many windows, and lights burning in some; we went up a broad pebbly path, splashing wet, and were admitted at a door; then the servant led me through a passage into a room with a fire, where she left me alone.</p>
+    <p style="margin:0 0 14px 0;">I stood and warmed my numbed fingers over the blaze, then I looked round; there was no candle, but the uncertain light from the hearth showed, by intervals, papered walls, carpet, curtains, shining mahogany furniture: it was a parlour, not so spacious or splendid as the drawing-room at Gateshead, but comfortable enough. I was puzzling to make out the subject of a picture on the wall, when the door opened, and an individual carrying a light entered; another followed close behind.</p>
+    <p style="margin:0 0 14px 0;">The first was a tall lady with dark hair, dark eyes, and a pale and large forehead; her figure was partly enveloped in a shawl, her countenance was grave, her bearing erect.</p>
+    <p style="margin:0 0 14px 0;">“The child is very young to be sent alone,” said she, putting her candle down on the table. She considered me attentively for a minute or two, then further added—</p>
+    <p style="margin:0 0 14px 0;">“She had better be put to bed soon; she looks tired: are you tired?” she asked, placing her hand on my shoulder.</p>
+    <p style="margin:0 0 14px 0;">“A little, ma’am.”</p>
+    <p style="margin:0 0 14px 0;">“And hungry too, no doubt: let her have some supper before she goes to bed, Miss Miller. Is this the first time you have left your parents to come to school, my little girl?”</p>
+    <p style="margin:0 0 14px 0;">I explained to her that I had no parents. She inquired how long they had been dead: then how old I was, what was my name, whether I could read, write, and sew a little: then she touched my cheek gently with her forefinger, and saying, “She hoped I should be a good child,” dismissed me along with Miss Miller.</p>
+    <p style="margin:0 0 14px 0;">The lady I had left might be about twenty-nine; the one who went with me appeared some years younger: the first impressed me by her voice, look, and air. Miss Miller was more ordinary; ruddy in complexion, though of a careworn countenance; hurried in gait and action, like one who had always a multiplicity of tasks on hand: she looked, indeed, what I afterwards found she really was, an under-teacher. Led by her, I passed from compartment to compartment, from passage to passage, of a large and irregular building; till, emerging from the total and somewhat dreary silence pervading that portion of the house we had traversed, we came upon the hum of many voices, and presently entered a wide, long room, with great deal tables, two at each end, on each of which burnt a pair of candles, and seated all round on benches, a congregation of girls of every age, from nine or ten to twenty. Seen by the dim light of the dips, their number to me appeared countless, though not in reality exceeding eighty; they were uniformly dressed in brown stuff frocks of quaint fashion, and long holland pinafores. It was the hour of study; they were engaged in conning over their to-morrow’s task, and the hum I had heard was the combined result of their whispered repetitions.</p>
+    <p style="margin:0 0 14px 0;">Miss Miller signed to me to sit on a bench near the door, then walking up to the top of the long room she cried out—</p>
+    <p style="margin:0 0 14px 0;">“Monitors, collect the lesson-books and put them away!”</p>
+    <p style="margin:0 0 14px 0;">Four tall girls arose from different tables, and going round, gathered the books and removed them. Miss Miller again gave the word of command—</p>
+    <p style="margin:0 0 14px 0;">“Monitors, fetch the supper-trays!”</p>
+    <p style="margin:0 0 14px 0;">The tall girls went out and returned presently, each bearing a tray, with portions of something, I knew not what, arranged thereon, and a pitcher of water and mug in the middle of each tray. The portions were handed round; those who liked took a draught of the water, the mug being common to all. When it came to my turn, I drank, for I was thirsty, but did not touch the food, excitement and fatigue rendering me incapable of eating: I now saw, however, that it was a thin oaten cake shared into fragments.</p>
+    <p style="margin:0 0 14px 0;">The meal over, prayers were read by Miss Miller, and the classes filed off, two and two, upstairs. Overpowered by this time with weariness, I scarcely noticed what sort of a place the bedroom was, except that, like the schoolroom, I saw it was very long. To-night I was to be Miss Miller’s bed-fellow; she helped me to undress: when laid down I glanced at the long rows of beds, each of which was quickly filled with two occupants; in ten minutes the single light was extinguished, and amidst silence and complete darkness I fell asleep.</p>
+    <p style="margin:0 0 14px 0;">The night passed rapidly: I was too tired even to dream; I only once awoke to hear the wind rave in furious gusts, and the rain fall in torrents, and to be sensible that Miss Miller had taken her place by my side. When I again unclosed my eyes, a loud bell was ringing; the girls were up and dressing; day had not yet begun to dawn, and a rushlight or two burned in the room. I too rose reluctantly; it was bitter cold, and I dressed as well as I could for shivering, and washed when there was a basin at liberty, which did not occur soon, as there was but one basin to six girls, on the stands down the middle of the room. Again the bell rang: all formed in file, two and two, and in that order descended the stairs and entered the cold and dimly lit schoolroom: here prayers were read by Miss Miller; afterwards she called out—</p>
+    <p style="margin:0 0 14px 0;">“Form classes!”</p>
+    <p style="margin:0 0 14px 0;">A great tumult succeeded for some minutes, during which Miss Miller repeatedly exclaimed, “Silence!” and “Order!” When it subsided, I saw them all drawn up in four semicircles, before four chairs, placed at the four tables; all held books in their hands, and a great book, like a Bible, lay on each table, before the vacant seat. A pause of some seconds succeeded, filled up by the low, vague hum of numbers; Miss Miller walked from class to class, hushing this indefinite sound.</p>
+    <p style="margin:0 0 14px 0;">A distant bell tinkled: immediately three ladies entered the room, each walked to a table and took her seat; Miss Miller assumed the fourth vacant chair, which was that nearest the door, and around which the smallest of the children were assembled: to this inferior class I was called, and placed at the bottom of it.</p>
+    <p style="margin:0 0 14px 0;">Business now began: the day’s Collect was repeated, then certain texts of Scripture were said, and to these succeeded a protracted reading of chapters in the Bible, which lasted an hour. By the time that exercise was terminated, day had fully dawned. The indefatigable bell now sounded for the fourth time: the classes were marshalled and marched into another room to breakfast: how glad I was to behold a prospect of getting something to eat! I was now nearly sick from inanition, having taken so little the day before.</p>
+    <p style="margin:0 0 14px 0;">The refectory was a great, low-ceiled, gloomy room; on two long tables smoked basins of something hot, which, however, to my dismay, sent forth an odour far from inviting. I saw a universal manifestation of discontent when the fumes of the repast met the nostrils of those destined to swallow it; from the van of the procession, the tall girls of the first class, rose the whispered words—</p>
+    <p style="margin:0 0 14px 0;">“Disgusting! The porridge is burnt again!”</p>
+    <p style="margin:0 0 14px 0;">“Silence!” ejaculated a voice; not that of Miss Miller, but one of the upper teachers, a little and dark personage, smartly dressed, but of somewhat morose aspect, who installed herself at the top of one table, while a more buxom lady presided at the other. I looked in vain for her I had first seen the night before; she was not visible: Miss Miller occupied the foot of the table where I sat, and a strange, foreign-looking, elderly lady, the French teacher, as I afterwards found, took the corresponding seat at the other board. A long grace was said and a hymn sung; then a servant brought in some tea for the teachers, and the meal began.</p>
+    <p style="margin:0 0 14px 0;">Ravenous, and now very faint, I devoured a spoonful or two of my portion without thinking of its taste; but the first edge of hunger blunted, I perceived I had got in hand a nauseous mess; burnt porridge is almost as bad as rotten potatoes; famine itself soon sickens over it. The spoons were moved slowly: I saw each girl taste her food and try to swallow it; but in most cases the effort was soon relinquished. Breakfast was over, and none had breakfasted. Thanks being returned for what we had not got, and a second hymn chanted, the refectory was evacuated for the schoolroom. I was one of the last to go out, and in passing the tables, I saw one teacher take a basin of the porridge and taste it; she looked at the others; all their countenances expressed displeasure, and one of them, the stout one, whispered—</p>
+    <p style="margin:0 0 14px 0;">“Abominable stuff! How shameful!”</p>
+    <p style="margin:0 0 14px 0;">A quarter of an hour passed before lessons again began, during which the schoolroom was in a glorious tumult; for that space of time it seemed to be permitted to talk loud and more freely, and they used their privilege. The whole conversation ran on the breakfast, which one and all abused roundly. Poor things! it was the sole consolation they had. Miss Miller was now the only teacher in the room: a group of great girls standing about her spoke with serious and sullen gestures. I heard the name of Mr. Brocklehurst pronounced by some lips; at which Miss Miller shook her head disapprovingly; but she made no great effort to check the general wrath; doubtless she shared in it.</p>
+    <p style="margin:0 0 14px 0;">A clock in the schoolroom struck nine; Miss Miller left her circle, and standing in the middle of the room, cried—</p>
+    <p style="margin:0 0 14px 0;">“Silence! To your seats!”</p>
+    <p style="margin:0 0 14px 0;">Discipline prevailed: in five minutes the confused throng was resolved into order, and comparative silence quelled the Babel clamour of tongues. The upper teachers now punctually resumed their posts: but still, all seemed to wait. Ranged on benches down the sides of the room, the eighty girls sat motionless and erect; a quaint assemblage they appeared, all with plain locks combed from their faces, not a curl visible; in brown dresses, made high and surrounded by a narrow tucker about the throat, with little pockets of holland (shaped something like a Highlander’s purse) tied in front of their frocks, and destined to serve the purpose of a work-bag: all, too, wearing woollen stockings and country-made shoes, fastened with brass buckles. Above twenty of those clad in this costume were full-grown girls, or rather young women; it suited them ill, and gave an air of oddity even to the prettiest.</p>
+    <p style="margin:0 0 14px 0;">I was still looking at them, and also at intervals examining the teachers—none of whom precisely pleased me; for the stout one was a little coarse, the dark one not a little fierce, the foreigner harsh and grotesque, and Miss Miller, poor thing! looked purple, weather-beaten, and over-worked—when, as my eye wandered from face to face, the whole school rose simultaneously, as if moved by a common spring.</p>
+    <p style="margin:0 0 14px 0;">What was the matter? I had heard no order given: I was puzzled. Ere I had gathered my wits, the classes were again seated: but as all eyes were now turned to one point, mine followed the general direction, and encountered the personage who had received me last night. She stood at the bottom of the long room, on the hearth; for there was a fire at each end; she surveyed the two rows of girls silently and gravely. Miss Miller approaching, seemed to ask her a question, and having received her answer, went back to her place, and said aloud—</p>
+    <p style="margin:0 0 14px 0;">“Monitor of the first class, fetch the globes!”</p>
+    <p style="margin:0 0 14px 0;">While the direction was being executed, the lady consulted moved slowly up the room. I suppose I have a considerable organ of veneration, for I retain yet the sense of admiring awe with which my eyes traced her steps. Seen now, in broad daylight, she looked tall, fair, and shapely; brown eyes with a benignant light in their irids, and a fine pencilling of long lashes round, relieved the whiteness of her large front; on each of her temples her hair, of a very dark brown, was clustered in round curls, according to the fashion of those times, when neither smooth bands nor long ringlets were in vogue; her dress, also in the mode of the day, was of purple cloth, relieved by a sort of Spanish trimming of black velvet; a gold watch (watches were not so common then as now) shone at her girdle. Let the reader add, to complete the picture, refined features; a complexion, if pale, clear; and a stately air and carriage, and he will have, at least, as clearly as words can give it, a correct idea of the exterior of Miss Temple—Maria Temple, as I afterwards saw the name written in a prayer-book intrusted to me to carry to church.</p>
+    <p style="margin:0 0 14px 0;">The superintendent of Lowood (for such was this lady) having taken her seat before a pair of globes placed on one of the tables, summoned the first class round her, and commenced giving a lesson on geography; the lower classes were called by the teachers: repetitions in history, grammar, &amp;c., went on for an hour; writing and arithmetic succeeded, and music lessons were given by Miss Temple to some of the elder girls. The duration of each lesson was measured by the clock, which at last struck twelve. The superintendent rose—</p>
+    <p style="margin:0 0 14px 0;">“I have a word to address to the pupils,” said she.</p>
+    <p style="margin:0 0 14px 0;">The tumult of cessation from lessons was already breaking forth, but it sank at her voice. She went on—</p>
+    <p style="margin:0 0 14px 0;">“You had this morning a breakfast which you could not eat; you must be hungry:—I have ordered that a lunch of bread and cheese shall be served to all.”</p>
+    <p style="margin:0 0 14px 0;">The teachers looked at her with a sort of surprise.</p>
+    <p style="margin:0 0 14px 0;">“It is to be done on my responsibility,” she added, in an explanatory tone to them, and immediately afterwards left the room.</p>
+    <p style="margin:0 0 14px 0;">The bread and cheese was presently brought in and distributed, to the high delight and refreshment of the whole school. The order was now given “To the garden!” Each put on a coarse straw bonnet, with strings of coloured calico, and a cloak of grey frieze. I was similarly equipped, and, following the stream, I made my way into the open air.</p>
+    <p style="margin:0 0 14px 0;">The garden was a wide inclosure, surrounded with walls so high as to exclude every glimpse of prospect; a covered verandah ran down one side, and broad walks bordered a middle space divided into scores of little beds: these beds were assigned as gardens for the pupils to cultivate, and each bed had an owner. When full of flowers they would doubtless look pretty; but now, at the latter end of January, all was wintry blight and brown decay. I shuddered as I stood and looked round me: it was an inclement day for outdoor exercise; not positively rainy, but darkened by a drizzling yellow fog; all under foot was still soaking wet with the floods of yesterday. The stronger among the girls ran about and engaged in active games, but sundry pale and thin ones herded together for shelter and warmth in the verandah; and amongst these, as the dense mist penetrated to their shivering frames, I heard frequently the sound of a hollow cough.</p>
+    <p style="margin:0 0 14px 0;">As yet I had spoken to no one, nor did anybody seem to take notice of me; I stood lonely enough: but to that feeling of isolation I was accustomed; it did not oppress me much. I leant against a pillar of the verandah, drew my grey mantle close about me, and, trying to forget the cold which nipped me without, and the unsatisfied hunger which gnawed me within, delivered myself up to the employment of watching and thinking. My reflections were too undefined and fragmentary to merit record: I hardly yet knew where I was; Gateshead and my past life seemed floated away to an immeasurable distance; the present was vague and strange, and of the future I could form no conjecture. I looked round the convent-like garden, and then up at the house—a large building, half of which seemed grey and old, the other half quite new. The new part, containing the schoolroom and dormitory, was lit by mullioned and latticed windows, which gave it a church-like aspect; a stone tablet over the door bore this inscription:—</p>
+    <p style="margin:0 0 14px 0;">LOWOOD INSTITUTION.</p>
+    <p style="margin:0 0 14px 0;">This portion was rebuilt A.D. ——, by Naomi Brocklehurst, of Brocklehurst Hall, in this county.</p>
+    <p style="margin:0 0 14px 0;">“Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.”—St. Matt. v. 16.</p>
+    <p style="margin:0 0 14px 0;">I read these words over and over again: I felt that an explanation belonged to them, and was unable fully to penetrate their import. I was still pondering the signification of “Institution,” and endeavouring to make out a connection between the first words and the verse of Scripture, when the sound of a cough close behind me made me turn my head. I saw a girl sitting on a stone bench near; she was bent over a book, on the perusal of which she seemed intent: from where I stood I could see the title—it was “Rasselas;” a name that struck me as strange, and consequently attractive. In turning a leaf she happened to look up, and I said to her directly—</p>
+    <p style="margin:0 0 14px 0;">“Is your book interesting?” I had already formed the intention of asking her to lend it to me some day.</p>
+    <p style="margin:0 0 14px 0;">“I like it,” she answered, after a pause of a second or two, during which she examined me.</p>
+    <p style="margin:0 0 14px 0;">“What is it about?” I continued. I hardly know where I found the hardihood thus to open a conversation with a stranger; the step was contrary to my nature and habits: but I think her occupation touched a chord of sympathy somewhere; for I too liked reading, though of a frivolous and childish kind; I could not digest or comprehend the serious or substantial.</p>
+    <p style="margin:0 0 14px 0;">“You may look at it,” replied the girl, offering me the book.</p>
+    <p style="margin:0 0 14px 0;">I did so; a brief examination convinced me that the contents were less taking than the title: “Rasselas” looked dull to my trifling taste; I saw nothing about fairies, nothing about genii; no bright variety seemed spread over the closely-printed pages. I returned it to her; she received it quietly, and without saying anything she was about to relapse into her former studious mood: again I ventured to disturb her—</p>
+    <p style="margin:0 0 14px 0;">“Can you tell me what the writing on that stone over the door means? What is Lowood Institution?”</p>
+    <p style="margin:0 0 14px 0;">“This house where you are come to live.”</p>
+    <p style="margin:0 0 14px 0;">“And why do they call it Institution? Is it in any way different from other schools?”</p>
+    <p style="margin:0 0 14px 0;">“It is partly a charity-school: you and I, and all the rest of us, are charity-children. I suppose you are an orphan: are not either your father or your mother dead?”</p>
+    <p style="margin:0 0 14px 0;">“Both died before I can remember.”</p>
+    <p style="margin:0 0 14px 0;">“Well, all the girls here have lost either one or both parents, and this is called an institution for educating orphans.”</p>
+    <p style="margin:0 0 14px 0;">“Do we pay no money? Do they keep us for nothing?”</p>
+    <p style="margin:0 0 14px 0;">“We pay, or our friends pay, fifteen pounds a year for each.”</p>
+    <p style="margin:0 0 14px 0;">“Then why do they call us charity-children?”</p>
+    <p style="margin:0 0 14px 0;">“Because fifteen pounds is not enough for board and teaching, and the deficiency is supplied by subscription.”</p>
+    <p style="margin:0 0 14px 0;">“Who subscribes?”</p>
+    <p style="margin:0 0 14px 0;">“Different benevolent-minded ladies and gentlemen in this neighbourhood and in London.”</p>
+    <p style="margin:0 0 14px 0;">“Who was Naomi Brocklehurst?”</p>
+    <p style="margin:0 0 14px 0;">“The lady who built the new part of this house as that tablet records, and whose son overlooks and directs everything here.”</p>
+    <p style="margin:0 0 14px 0;">“Why?”</p>
+    <p style="margin:0 0 14px 0;">“Because he is treasurer and manager of the establishment.”</p>
+    <p style="margin:0 0 14px 0;">“Then this house does not belong to that tall lady who wears a watch, and who said we were to have some bread and cheese?”</p>
+    <p style="margin:0 0 14px 0;">“To Miss Temple? Oh, no! I wish it did: she has to answer to Mr. Brocklehurst for all she does. Mr. Brocklehurst buys all our food and all our clothes.”</p>
+    <p style="margin:0 0 14px 0;">“Does he live here?”</p>
+    <p style="margin:0 0 14px 0;">“No—two miles off, at a large hall.”</p>
+    <p style="margin:0 0 14px 0;">“Is he a good man?”</p>
+    <p style="margin:0 0 14px 0;">“He is a clergyman, and is said to do a great deal of good.”</p>
+    <p style="margin:0 0 14px 0;">“Did you say that tall lady was called Miss Temple?”</p>
+    <p style="margin:0 0 14px 0;">“Yes.”</p>
+    <p style="margin:0 0 14px 0;">“And what are the other teachers called?”</p>
+    <p style="margin:0 0 14px 0;">“The one with red cheeks is called Miss Smith; she attends to the work, and cuts out—for we make our own clothes, our frocks, and pelisses, and everything; the little one with black hair is Miss Scatcherd; she teaches history and grammar, and hears the second class repetitions; and the one who wears a shawl, and has a pocket-handkerchief tied to her side with a yellow ribband, is Madame Pierrot: she comes from Lisle, in France, and teaches French.”</p>
+    <p style="margin:0 0 14px 0;">“Do you like the teachers?”</p>
+    <p style="margin:0 0 14px 0;">“Well enough.”</p>
+    <p style="margin:0 0 14px 0;">“Do you like the little black one, and the Madame ——?—I cannot pronounce her name as you do.”</p>
+    <p style="margin:0 0 14px 0;">“Miss Scatcherd is hasty—you must take care not to offend her; Madame Pierrot is not a bad sort of person.”</p>
+    <p style="margin:0 0 14px 0;">“But Miss Temple is the best—isn’t she?”</p>
+    <p style="margin:0 0 14px 0;">“Miss Temple is very good and very clever; she is above the rest, because she knows far more than they do.”</p>
+    <p style="margin:0 0 14px 0;">“Have you been long here?”</p>
+    <p style="margin:0 0 14px 0;">“Two years.”</p>
+    <p style="margin:0 0 14px 0;">“Are you an orphan?”</p>
+    <p style="margin:0 0 14px 0;">“My mother is dead.”</p>
+    <p style="margin:0 0 14px 0;">“Are you happy here?”</p>
+    <p style="margin:0 0 14px 0;">“You ask rather too many questions. I have given you answers enough for the present: now I want to read.”</p>
+    <p style="margin:0 0 14px 0;">But at that moment the summons sounded for dinner; all re-entered the house. The odour which now filled the refectory was scarcely more appetising than that which had regaled our nostrils at breakfast: the dinner was served in two huge tin-plated vessels, whence rose a strong steam redolent of rancid fat. I found the mess to consist of indifferent potatoes and strange shreds of rusty meat, mixed and cooked together. Of this preparation a tolerably abundant plateful was apportioned to each pupil. I ate what I could, and wondered within myself whether every day’s fare would be like this.</p>
+    <p style="margin:0 0 14px 0;">After dinner, we immediately adjourned to the schoolroom: lessons recommenced, and were continued till five o’clock.</p>
+    <p style="margin:0 0 14px 0;">The only marked event of the afternoon was, that I saw the girl with whom I had conversed in the verandah dismissed in disgrace by Miss Scatcherd from a history class, and sent to stand in the middle of the large schoolroom. The punishment seemed to me in a high degree ignominious, especially for so great a girl—she looked thirteen or upwards. I expected she would show signs of great distress and shame; but to my surprise she neither wept nor blushed: composed, though grave, she stood, the central mark of all eyes. “How can she bear it so quietly—so firmly?” I asked of myself. “Were I in her place, it seems to me I should wish the earth to open and swallow me up. She looks as if she were thinking of something beyond her punishment—beyond her situation: of something not round her nor before her. I have heard of day-dreams—is she in a day-dream now? Her eyes are fixed on the floor, but I am sure they do not see it—her sight seems turned in, gone down into her heart: she is looking at what she can remember, I believe; not at what is really present. I wonder what sort of a girl she is—whether good or naughty.”</p>
+    <p style="margin:0 0 14px 0;">Soon after five P.M. we had another meal, consisting of a small mug of coffee, and half-a-slice of brown bread. I devoured my bread and drank my coffee with relish; but I should have been glad of as much more—I was still hungry. Half-an-hour’s recreation succeeded, then study; then the glass of water and the piece of oat-cake, prayers, and bed. Such was my first day at Lowood.</p>
+  </div>
+</details>
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter VI</strong> <span style="font-size:13px; color:#3B4E8C;">(about 2,900 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">The next day commenced as before, getting up and dressing by rushlight; but this morning we were obliged to dispense with the ceremony of washing; the water in the pitchers was frozen. A change had taken place in the weather the preceding evening, and a keen north-east wind, whistling through the crevices of our bedroom windows all night long, had made us shiver in our beds, and turned the contents of the ewers to ice.</p>
+    <p style="margin:0 0 14px 0;">Before the long hour and a half of prayers and Bible-reading was over, I felt ready to perish with cold. Breakfast-time came at last, and this morning the porridge was not burnt; the quality was eatable, the quantity small. How small my portion seemed! I wished it had been doubled.</p>
+    <p style="margin:0 0 14px 0;">In the course of the day I was enrolled a member of the fourth class, and regular tasks and occupations were assigned me: hitherto, I had only been a spectator of the proceedings at Lowood; I was now to become an actor therein. At first, being little accustomed to learn by heart, the lessons appeared to me both long and difficult; the frequent change from task to task, too, bewildered me; and I was glad when, about three o’clock in the afternoon, Miss Smith put into my hands a border of muslin two yards long, together with needle, thimble, &amp;c., and sent me to sit in a quiet corner of the schoolroom, with directions to hem the same. At that hour most of the others were sewing likewise; but one class still stood round Miss Scatcherd’s chair reading, and as all was quiet, the subject of their lessons could be heard, together with the manner in which each girl acquitted herself, and the animadversions or commendations of Miss Scatcherd on the performance. It was English history: among the readers I observed my acquaintance of the verandah: at the commencement of the lesson, her place had been at the top of the class, but for some error of pronunciation, or some inattention to stops, she was suddenly sent to the very bottom. Even in that obscure position, Miss Scatcherd continued to make her an object of constant notice: she was continually addressing to her such phrases as the following:—</p>
+    <p style="margin:0 0 14px 0;">“Burns” (such it seems was her name: the girls here were all called by their surnames, as boys are elsewhere), “Burns, you are standing on the side of your shoe; turn your toes out immediately.” “Burns, you poke your chin most unpleasantly; draw it in.” “Burns, I insist on your holding your head up; I will not have you before me in that attitude,” &amp;c. &amp;c.</p>
+    <p style="margin:0 0 14px 0;">A chapter having been read through twice, the books were closed and the girls examined. The lesson had comprised part of the reign of Charles I., and there were sundry questions about tonnage and poundage and ship-money, which most of them appeared unable to answer; still, every little difficulty was solved instantly when it reached Burns: her memory seemed to have retained the substance of the whole lesson, and she was ready with answers on every point. I kept expecting that Miss Scatcherd would praise her attention; but, instead of that, she suddenly cried out—</p>
+    <p style="margin:0 0 14px 0;">“You dirty, disagreeable girl! you have never cleaned your nails this morning!”</p>
+    <p style="margin:0 0 14px 0;">Burns made no answer: I wondered at her silence.</p>
+    <p style="margin:0 0 14px 0;">“Why,” thought I, “does she not explain that she could neither clean her nails nor wash her face, as the water was frozen?”</p>
+    <p style="margin:0 0 14px 0;">My attention was now called off by Miss Smith desiring me to hold a skein of thread: while she was winding it, she talked to me from time to time, asking whether I had ever been at school before, whether I could mark, stitch, knit, &amp;c.; till she dismissed me, I could not pursue my observations on Miss Scatcherd’s movements. When I returned to my seat, that lady was just delivering an order of which I did not catch the import; but Burns immediately left the class, and going into the small inner room where the books were kept, returned in half a minute, carrying in her hand a bundle of twigs tied together at one end. This ominous tool she presented to Miss Scatcherd with a respectful curtesy; then she quietly, and without being told, unloosed her pinafore, and the teacher instantly and sharply inflicted on her neck a dozen strokes with the bunch of twigs. Not a tear rose to Burns’ eye; and, while I paused from my sewing, because my fingers quivered at this spectacle with a sentiment of unavailing and impotent anger, not a feature of her pensive face altered its ordinary expression.</p>
+    <p style="margin:0 0 14px 0;">“Hardened girl!” exclaimed Miss Scatcherd; “nothing can correct you of your slatternly habits: carry the rod away.”</p>
+    <p style="margin:0 0 14px 0;">Burns obeyed: I looked at her narrowly as she emerged from the book-closet; she was just putting back her handkerchief into her pocket, and the trace of a tear glistened on her thin cheek.</p>
+    <p style="margin:0 0 14px 0;">The play-hour in the evening I thought the pleasantest fraction of the day at Lowood: the bit of bread, the draught of coffee swallowed at five o’clock had revived vitality, if it had not satisfied hunger: the long restraint of the day was slackened; the schoolroom felt warmer than in the morning—its fires being allowed to burn a little more brightly, to supply, in some measure, the place of candles, not yet introduced: the ruddy gloaming, the licensed uproar, the confusion of many voices gave one a welcome sense of liberty.</p>
+    <p style="margin:0 0 14px 0;">On the evening of the day on which I had seen Miss Scatcherd flog her pupil, Burns, I wandered as usual among the forms and tables and laughing groups without a companion, yet not feeling lonely: when I passed the windows, I now and then lifted a blind, and looked out; it snowed fast, a drift was already forming against the lower panes; putting my ear close to the window, I could distinguish from the gleeful tumult within, the disconsolate moan of the wind outside.</p>
+    <p style="margin:0 0 14px 0;">Probably, if I had lately left a good home and kind parents, this would have been the hour when I should most keenly have regretted the separation; that wind would then have saddened my heart; this obscure chaos would have disturbed my peace! as it was, I derived from both a strange excitement, and reckless and feverish, I wished the wind to howl more wildly, the gloom to deepen to darkness, and the confusion to rise to clamour.</p>
+    <p style="margin:0 0 14px 0;">Jumping over forms, and creeping under tables, I made my way to one of the fire-places; there, kneeling by the high wire fender, I found Burns, absorbed, silent, abstracted from all round her by the companionship of a book, which she read by the dim glare of the embers.</p>
+    <p style="margin:0 0 14px 0;">“Is it still ‘Rasselas’?” I asked, coming behind her.</p>
+    <p style="margin:0 0 14px 0;">“Yes,” she said, “and I have just finished it.”</p>
+    <p style="margin:0 0 14px 0;">And in five minutes more she shut it up. I was glad of this.</p>
+    <p style="margin:0 0 14px 0;">“Now,” thought I, “I can perhaps get her to talk.” I sat down by her on the floor.</p>
+    <p style="margin:0 0 14px 0;">“What is your name besides Burns?”</p>
+    <p style="margin:0 0 14px 0;">“Helen.”</p>
+    <p style="margin:0 0 14px 0;">“Do you come a long way from here?”</p>
+    <p style="margin:0 0 14px 0;">“I come from a place farther north, quite on the borders of Scotland.”</p>
+    <p style="margin:0 0 14px 0;">“Will you ever go back?”</p>
+    <p style="margin:0 0 14px 0;">“I hope so; but nobody can be sure of the future.”</p>
+    <p style="margin:0 0 14px 0;">“You must wish to leave Lowood?”</p>
+    <p style="margin:0 0 14px 0;">“No! why should I? I was sent to Lowood to get an education; and it would be of no use going away until I have attained that object.”</p>
+    <p style="margin:0 0 14px 0;">“But that teacher, Miss Scatcherd, is so cruel to you?”</p>
+    <p style="margin:0 0 14px 0;">“Cruel? Not at all! She is severe: she dislikes my faults.”</p>
+    <p style="margin:0 0 14px 0;">“And if I were in your place I should dislike her; I should resist her. If she struck me with that rod, I should get it from her hand; I should break it under her nose.”</p>
+    <p style="margin:0 0 14px 0;">“Probably you would do nothing of the sort: but if you did, Mr. Brocklehurst would expel you from the school; that would be a great grief to your relations. It is far better to endure patiently a smart which nobody feels but yourself, than to commit a hasty action whose evil consequences will extend to all connected with you; and besides, the Bible bids us return good for evil.”</p>
+    <p style="margin:0 0 14px 0;">“But then it seems disgraceful to be flogged, and to be sent to stand in the middle of a room full of people; and you are such a great girl: I am far younger than you, and I could not bear it.”</p>
+    <p style="margin:0 0 14px 0;">“Yet it would be your duty to bear it, if you could not avoid it: it is weak and silly to say you <em>cannot bear</em> what it is your fate to be required to bear.”</p>
+    <p style="margin:0 0 14px 0;">I heard her with wonder: I could not comprehend this doctrine of endurance; and still less could I understand or sympathise with the forbearance she expressed for her chastiser. Still I felt that Helen Burns considered things by a light invisible to my eyes. I suspected she might be right and I wrong; but I would not ponder the matter deeply; like Felix, I put it off to a more convenient season.</p>
+    <p style="margin:0 0 14px 0;">“You say you have faults, Helen: what are they? To me you seem very good.”</p>
+    <p style="margin:0 0 14px 0;">“Then learn from me, not to judge by appearances: I am, as Miss Scatcherd said, slatternly; I seldom put, and never keep, things in order; I am careless; I forget rules; I read when I should learn my lessons; I have no method; and sometimes I say, like you, I cannot <em>bear</em> to be subjected to systematic arrangements. This is all very provoking to Miss Scatcherd, who is naturally neat, punctual, and particular.”</p>
+    <p style="margin:0 0 14px 0;">“And cross and cruel,” I added; but Helen Burns would not admit my addition: she kept silence.</p>
+    <p style="margin:0 0 14px 0;">“Is Miss Temple as severe to you as Miss Scatcherd?”</p>
+    <p style="margin:0 0 14px 0;">At the utterance of Miss Temple’s name, a soft smile flitted over her grave face.</p>
+    <p style="margin:0 0 14px 0;">“Miss Temple is full of goodness; it pains her to be severe to any one, even the worst in the school: she sees my errors, and tells me of them gently; and, if I do anything worthy of praise, she gives me my meed liberally. One strong proof of my wretchedly defective nature is, that even her expostulations, so mild, so rational, have not influence to cure me of my faults; and even her praise, though I value it most highly, cannot stimulate me to continued care and foresight.”</p>
+    <p style="margin:0 0 14px 0;">“That is curious,” said I, “it is so easy to be careful.”</p>
+    <p style="margin:0 0 14px 0;">“For <em>you</em> I have no doubt it is. I observed you in your class this morning, and saw you were closely attentive: your thoughts never seemed to wander while Miss Miller explained the lesson and questioned you. Now, mine continually rove away; when I should be listening to Miss Scatcherd, and collecting all she says with assiduity, often I lose the very sound of her voice; I fall into a sort of dream. Sometimes I think I am in Northumberland, and that the noises I hear round me are the bubbling of a little brook which runs through Deepden, near our house;—then, when it comes to my turn to reply, I have to be awakened; and having heard nothing of what was read for listening to the visionary brook, I have no answer ready.”</p>
+    <p style="margin:0 0 14px 0;">“Yet how well you replied this afternoon.”</p>
+    <p style="margin:0 0 14px 0;">“It was mere chance; the subject on which we had been reading had interested me. This afternoon, instead of dreaming of Deepden, I was wondering how a man who wished to do right could act so unjustly and unwisely as Charles the First sometimes did; and I thought what a pity it was that, with his integrity and conscientiousness, he could see no farther than the prerogatives of the crown. If he had but been able to look to a distance, and see how what they call the spirit of the age was tending! Still, I like Charles—I respect him—I pity him, poor murdered king! Yes, his enemies were the worst: they shed blood they had no right to shed. How dared they kill him!”</p>
+    <p style="margin:0 0 14px 0;">Helen was talking to herself now: she had forgotten I could not very well understand her—that I was ignorant, or nearly so, of the subject she discussed. I recalled her to my level.</p>
+    <p style="margin:0 0 14px 0;">“And when Miss Temple teaches you, do your thoughts wander then?”</p>
+    <p style="margin:0 0 14px 0;">“No, certainly, not often; because Miss Temple has generally something to say which is newer than my own reflections; her language is singularly agreeable to me, and the information she communicates is often just what I wished to gain.”</p>
+    <p style="margin:0 0 14px 0;">“Well, then, with Miss Temple you are good?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, in a passive way: I make no effort; I follow as inclination guides me. There is no merit in such goodness.”</p>
+    <p style="margin:0 0 14px 0;">“A great deal: you are good to those who are good to you. It is all I ever desire to be. If people were always kind and obedient to those who are cruel and unjust, the wicked people would have it all their own way: they would never feel afraid, and so they would never alter, but would grow worse and worse. When we are struck at without a reason, we should strike back again very hard; I am sure we should—so hard as to teach the person who struck us never to do it again.”</p>
+    <p style="margin:0 0 14px 0;">“You will change your mind, I hope, when you grow older: as yet you are but a little untaught girl.”</p>
+    <p style="margin:0 0 14px 0;">“But I feel this, Helen; I must dislike those who, whatever I do to please them, persist in disliking me; I must resist those who punish me unjustly. It is as natural as that I should love those who show me affection, or submit to punishment when I feel it is deserved.”</p>
+    <p style="margin:0 0 14px 0;">“Heathens and savage tribes hold that doctrine, but Christians and civilised nations disown it.”</p>
+    <p style="margin:0 0 14px 0;">“How? I don’t understand.”</p>
+    <p style="margin:0 0 14px 0;">“It is not violence that best overcomes hate—nor vengeance that most certainly heals injury.”</p>
+    <p style="margin:0 0 14px 0;">“What then?”</p>
+    <p style="margin:0 0 14px 0;">“Read the New Testament, and observe what Christ says, and how He acts; make His word your rule, and His conduct your example.”</p>
+    <p style="margin:0 0 14px 0;">“What does He say?”</p>
+    <p style="margin:0 0 14px 0;">“Love your enemies; bless them that curse you; do good to them that hate you and despitefully use you.”</p>
+    <p style="margin:0 0 14px 0;">“Then I should love Mrs. Reed, which I cannot do; I should bless her son John, which is impossible.”</p>
+    <p style="margin:0 0 14px 0;">In her turn, Helen Burns asked me to explain, and I proceeded forthwith to pour out, in my own way, the tale of my sufferings and resentments. Bitter and truculent when excited, I spoke as I felt, without reserve or softening.</p>
+    <p style="margin:0 0 14px 0;">Helen heard me patiently to the end: I expected she would then make a remark, but she said nothing.</p>
+    <p style="margin:0 0 14px 0;">“Well,” I asked impatiently, “is not Mrs. Reed a hard-hearted, bad woman?”</p>
+    <p style="margin:0 0 14px 0;">“She has been unkind to you, no doubt; because you see, she dislikes your cast of character, as Miss Scatcherd does mine; but how minutely you remember all she has done and said to you! What a singularly deep impression her injustice seems to have made on your heart! No ill-usage so brands its record on my feelings. Would you not be happier if you tried to forget her severity, together with the passionate emotions it excited? Life appears to me too short to be spent in nursing animosity or registering wrongs. We are, and must be, one and all, burdened with faults in this world: but the time will soon come when, I trust, we shall put them off in putting off our corruptible bodies; when debasement and sin will fall from us with this cumbrous frame of flesh, and only the spark of the spirit will remain,—the impalpable principle of light and thought, pure as when it left the Creator to inspire the creature: whence it came it will return; perhaps again to be communicated to some being higher than man—perhaps to pass through gradations of glory, from the pale human soul to brighten to the seraph! Surely it will never, on the contrary, be suffered to degenerate from man to fiend? No; I cannot believe that: I hold another creed: which no one ever taught me, and which I seldom mention; but in which I delight, and to which I cling: for it extends hope to all: it makes Eternity a rest—a mighty home, not a terror and an abyss. Besides, with this creed, I can so clearly distinguish between the criminal and his crime; I can so sincerely forgive the first while I abhor the last: with this creed revenge never worries my heart, degradation never too deeply disgusts me, injustice never crushes me too low: I live in calm, looking to the end.”</p>
+    <p style="margin:0 0 14px 0;">Helen’s head, always drooping, sank a little lower as she finished this sentence. I saw by her look she wished no longer to talk to me, but rather to converse with her own thoughts. She was not allowed much time for meditation: a monitor, a great rough girl, presently came up, exclaiming in a strong Cumberland accent—</p>
+    <p style="margin:0 0 14px 0;">“Helen Burns, if you don’t go and put your drawer in order, and fold up your work this minute, I’ll tell Miss Scatcherd to come and look at it!”</p>
+    <p style="margin:0 0 14px 0;">Helen sighed as her reverie fled, and getting up, obeyed the monitor without reply as without delay.</p>
+  </div>
+</details>
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter VII</strong> <span style="font-size:13px; color:#3B4E8C;">(about 3,600 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">My first quarter at Lowood seemed an age; and not the golden age either; it comprised an irksome struggle with difficulties in habituating myself to new rules and unwonted tasks. The fear of failure in these points harassed me worse than the physical hardships of my lot; though these were no trifles.</p>
+    <p style="margin:0 0 14px 0;">During January, February, and part of March, the deep snows, and, after their melting, the almost impassable roads, prevented our stirring beyond the garden walls, except to go to church; but within these limits we had to pass an hour every day in the open air. Our clothing was insufficient to protect us from the severe cold: we had no boots, the snow got into our shoes and melted there: our ungloved hands became numbed and covered with chilblains, as were our feet: I remember well the distracting irritation I endured from this cause every evening, when my feet inflamed; and the torture of thrusting the swelled, raw, and stiff toes into my shoes in the morning. Then the scanty supply of food was distressing: with the keen appetites of growing children, we had scarcely sufficient to keep alive a delicate invalid. From this deficiency of nourishment resulted an abuse, which pressed hardly on the younger pupils: whenever the famished great girls had an opportunity, they would coax or menace the little ones out of their portion. Many a time I have shared between two claimants the precious morsel of brown bread distributed at tea-time; and after relinquishing to a third half the contents of my mug of coffee, I have swallowed the remainder with an accompaniment of secret tears, forced from me by the exigency of hunger.</p>
+    <p style="margin:0 0 14px 0;">Sundays were dreary days in that wintry season. We had to walk two miles to Brocklebridge Church, where our patron officiated. We set out cold, we arrived at church colder: during the morning service we became almost paralysed. It was too far to return to dinner, and an allowance of cold meat and bread, in the same penurious proportion observed in our ordinary meals, was served round between the services.</p>
+    <p style="margin:0 0 14px 0;">At the close of the afternoon service we returned by an exposed and hilly road, where the bitter winter wind, blowing over a range of snowy summits to the north, almost flayed the skin from our faces.</p>
+    <p style="margin:0 0 14px 0;">I can remember Miss Temple walking lightly and rapidly along our drooping line, her plaid cloak, which the frosty wind fluttered, gathered close about her, and encouraging us, by precept and example, to keep up our spirits, and march forward, as she said, “like stalwart soldiers.” The other teachers, poor things, were generally themselves too much dejected to attempt the task of cheering others.</p>
+    <p style="margin:0 0 14px 0;">How we longed for the light and heat of a blazing fire when we got back! But, to the little ones at least, this was denied: each hearth in the schoolroom was immediately surrounded by a double row of great girls, and behind them the younger children crouched in groups, wrapping their starved arms in their pinafores.</p>
+    <p style="margin:0 0 14px 0;">A little solace came at tea-time, in the shape of a double ration of bread—a whole, instead of a half, slice—with the delicious addition of a thin scrape of butter: it was the hebdomadal treat to which we all looked forward from Sabbath to Sabbath. I generally contrived to reserve a moiety of this bounteous repast for myself; but the remainder I was invariably obliged to part with.</p>
+    <p style="margin:0 0 14px 0;">The Sunday evening was spent in repeating, by heart, the Church Catechism, and the fifth, sixth, and seventh chapters of St. Matthew; and in listening to a long sermon, read by Miss Miller, whose irrepressible yawns attested her weariness. A frequent interlude of these performances was the enactment of the part of Eutychus by some half-dozen of little girls, who, overpowered with sleep, would fall down, if not out of the third loft, yet off the fourth form, and be taken up half dead. The remedy was, to thrust them forward into the centre of the schoolroom, and oblige them to stand there till the sermon was finished. Sometimes their feet failed them, and they sank together in a heap; they were then propped up with the monitors’ high stools.</p>
+    <p style="margin:0 0 14px 0;">I have not yet alluded to the visits of Mr. Brocklehurst; and indeed that gentleman was from home during the greater part of the first month after my arrival; perhaps prolonging his stay with his friend the archdeacon: his absence was a relief to me. I need not say that I had my own reasons for dreading his coming: but come he did at last.</p>
+    <p style="margin:0 0 14px 0;">One afternoon (I had then been three weeks at Lowood), as I was sitting with a slate in my hand, puzzling over a sum in long division, my eyes, raised in abstraction to the window, caught sight of a figure just passing: I recognised almost instinctively that gaunt outline; and when, two minutes after, all the school, teachers included, rose <em>en masse</em>, it was not necessary for me to look up in order to ascertain whose entrance they thus greeted. A long stride measured the schoolroom, and presently beside Miss Temple, who herself had risen, stood the same black column which had frowned on me so ominously from the hearthrug of Gateshead. I now glanced sideways at this piece of architecture. Yes, I was right: it was Mr. Brocklehurst, buttoned up in a surtout, and looking longer, narrower, and more rigid than ever.</p>
+    <p style="margin:0 0 14px 0;">I had my own reasons for being dismayed at this apparition; too well I remembered the perfidious hints given by Mrs. Reed about my disposition, &amp;c.; the promise pledged by Mr. Brocklehurst to apprise Miss Temple and the teachers of my vicious nature. All along I had been dreading the fulfilment of this promise,—I had been looking out daily for the “Coming Man,” whose information respecting my past life and conversation was to brand me as a bad child for ever: now there he was.</p>
+    <p style="margin:0 0 14px 0;">He stood at Miss Temple’s side; he was speaking low in her ear: I did not doubt he was making disclosures of my villainy; and I watched her eye with painful anxiety, expecting every moment to see its dark orb turn on me a glance of repugnance and contempt. I listened too; and as I happened to be seated quite at the top of the room, I caught most of what he said: its import relieved me from immediate apprehension.</p>
+    <p style="margin:0 0 14px 0;">“I suppose, Miss Temple, the thread I bought at Lowton will do; it struck me that it would be just of the quality for the calico chemises, and I sorted the needles to match. You may tell Miss Smith that I forgot to make a memorandum of the darning needles, but she shall have some papers sent in next week; and she is not, on any account, to give out more than one at a time to each pupil: if they have more, they are apt to be careless and lose them. And, O ma’am! I wish the woollen stockings were better looked to!—when I was here last, I went into the kitchen-garden and examined the clothes drying on the line; there was a quantity of black hose in a very bad state of repair: from the size of the holes in them I was sure they had not been well mended from time to time.”</p>
+    <p style="margin:0 0 14px 0;">He paused.</p>
+    <p style="margin:0 0 14px 0;">“Your directions shall be attended to, sir,” said Miss Temple.</p>
+    <p style="margin:0 0 14px 0;">“And, ma’am,” he continued, “the laundress tells me some of the girls have two clean tuckers in the week: it is too much; the rules limit them to one.”</p>
+    <p style="margin:0 0 14px 0;">“I think I can explain that circumstance, sir. Agnes and Catherine Johnstone were invited to take tea with some friends at Lowton last Thursday, and I gave them leave to put on clean tuckers for the occasion.”</p>
+    <p style="margin:0 0 14px 0;">Mr. Brocklehurst nodded.</p>
+    <p style="margin:0 0 14px 0;">“Well, for once it may pass; but please not to let the circumstance occur too often. And there is another thing which surprised me; I find, in settling accounts with the housekeeper, that a lunch, consisting of bread and cheese, has twice been served out to the girls during the past fortnight. How is this? I looked over the regulations, and I find no such meal as lunch mentioned. Who introduced this innovation? and by what authority?”</p>
+    <p style="margin:0 0 14px 0;">“I must be responsible for the circumstance, sir,” replied Miss Temple: “the breakfast was so ill prepared that the pupils could not possibly eat it; and I dared not allow them to remain fasting till dinner-time.”</p>
+    <p style="margin:0 0 14px 0;">“Madam, allow me an instant. You are aware that my plan in bringing up these girls is, not to accustom them to habits of luxury and indulgence, but to render them hardy, patient, self-denying. Should any little accidental disappointment of the appetite occur, such as the spoiling of a meal, the under or the over dressing of a dish, the incident ought not to be neutralised by replacing with something more delicate the comfort lost, thus pampering the body and obviating the aim of this institution; it ought to be improved to the spiritual edification of the pupils, by encouraging them to evince fortitude under the temporary privation. A brief address on those occasions would not be mistimed, wherein a judicious instructor would take the opportunity of referring to the sufferings of the primitive Christians; to the torments of martyrs; to the exhortations of our blessed Lord Himself, calling upon His disciples to take up their cross and follow Him; to His warnings that man shall not live by bread alone, but by every word that proceedeth out of the mouth of God; to His divine consolations, ‘If ye suffer hunger or thirst for My sake, happy are ye.’ Oh, madam, when you put bread and cheese, instead of burnt porridge, into these children’s mouths, you may indeed feed their vile bodies, but you little think how you starve their immortal souls!”</p>
+    <p style="margin:0 0 14px 0;">Mr. Brocklehurst again paused—perhaps overcome by his feelings. Miss Temple had looked down when he first began to speak to her; but she now gazed straight before her, and her face, naturally pale as marble, appeared to be assuming also the coldness and fixity of that material; especially her mouth, closed as if it would have required a sculptor’s chisel to open it, and her brow settled gradually into petrified severity.</p>
+    <p style="margin:0 0 14px 0;">Meantime, Mr. Brocklehurst, standing on the hearth with his hands behind his back, majestically surveyed the whole school. Suddenly his eye gave a blink, as if it had met something that either dazzled or shocked its pupil; turning, he said in more rapid accents than he had hitherto used—</p>
+    <p style="margin:0 0 14px 0;">“Miss Temple, Miss Temple, what—<em>what</em> is that girl with curled hair? Red hair, ma’am, curled—curled all over?” And extending his cane he pointed to the awful object, his hand shaking as he did so.</p>
+    <p style="margin:0 0 14px 0;">“It is Julia Severn,” replied Miss Temple, very quietly.</p>
+    <p style="margin:0 0 14px 0;">“Julia Severn, ma’am! And why has she, or any other, curled hair? Why, in defiance of every precept and principle of this house, does she conform to the world so openly—here in an evangelical, charitable establishment—as to wear her hair one mass of curls?”</p>
+    <p style="margin:0 0 14px 0;">“Julia’s hair curls naturally,” returned Miss Temple, still more quietly.</p>
+    <p style="margin:0 0 14px 0;">“Naturally! Yes, but we are not to conform to nature; I wish these girls to be the children of Grace: and why that abundance? I have again and again intimated that I desire the hair to be arranged closely, modestly, plainly. Miss Temple, that girl’s hair must be cut off entirely; I will send a barber to-morrow: and I see others who have far too much of the excrescence—that tall girl, tell her to turn round. Tell all the first form to rise up and direct their faces to the wall.”</p>
+    <p style="margin:0 0 14px 0;">Miss Temple passed her handkerchief over her lips, as if to smooth away the involuntary smile that curled them; she gave the order, however, and when the first class could take in what was required of them, they obeyed. Leaning a little back on my bench, I could see the looks and grimaces with which they commented on this manoeuvre: it was a pity Mr. Brocklehurst could not see them too; he would perhaps have felt that, whatever he might do with the outside of the cup and platter, the inside was further beyond his interference than he imagined.</p>
+    <p style="margin:0 0 14px 0;">He scrutinised the reverse of these living medals some five minutes, then pronounced sentence. These words fell like the knell of doom—</p>
+    <p style="margin:0 0 14px 0;">“All those top-knots must be cut off.”</p>
+    <p style="margin:0 0 14px 0;">Miss Temple seemed to remonstrate.</p>
+    <p style="margin:0 0 14px 0;">“Madam,” he pursued, “I have a Master to serve whose kingdom is not of this world: my mission is to mortify in these girls the lusts of the flesh; to teach them to clothe themselves with shame-facedness and sobriety, not with braided hair and costly apparel; and each of the young persons before us has a string of hair twisted in plaits which vanity itself might have woven; these, I repeat, must be cut off; think of the time wasted, of—”</p>
+    <p style="margin:0 0 14px 0;">Mr. Brocklehurst was here interrupted: three other visitors, ladies, now entered the room. They ought to have come a little sooner to have heard his lecture on dress, for they were splendidly attired in velvet, silk, and furs. The two younger of the trio (fine girls of sixteen and seventeen) had grey beaver hats, then in fashion, shaded with ostrich plumes, and from under the brim of this graceful head-dress fell a profusion of light tresses, elaborately curled; the elder lady was enveloped in a costly velvet shawl, trimmed with ermine, and she wore a false front of French curls.</p>
+    <p style="margin:0 0 14px 0;">These ladies were deferentially received by Miss Temple, as Mrs. and the Misses Brocklehurst, and conducted to seats of honour at the top of the room. It seems they had come in the carriage with their reverend relative, and had been conducting a rummaging scrutiny of the room upstairs, while he transacted business with the housekeeper, questioned the laundress, and lectured the superintendent. They now proceeded to address divers remarks and reproofs to Miss Smith, who was charged with the care of the linen and the inspection of the dormitories: but I had no time to listen to what they said; other matters called off and enchanted my attention.</p>
+    <p style="margin:0 0 14px 0;">Hitherto, while gathering up the discourse of Mr. Brocklehurst and Miss Temple, I had not, at the same time, neglected precautions to secure my personal safety; which I thought would be effected, if I could only elude observation. To this end, I had sat well back on the form, and while seeming to be busy with my sum, had held my slate in such a manner as to conceal my face: I might have escaped notice, had not my treacherous slate somehow happened to slip from my hand, and falling with an obtrusive crash, directly drawn every eye upon me; I knew it was all over now, and, as I stooped to pick up the two fragments of slate, I rallied my forces for the worst. It came.</p>
+    <p style="margin:0 0 14px 0;">“A careless girl!” said Mr. Brocklehurst, and immediately after—“It is the new pupil, I perceive.” And before I could draw breath, “I must not forget I have a word to say respecting her.” Then aloud: how loud it seemed to me! “Let the child who broke her slate come forward!”</p>
+    <p style="margin:0 0 14px 0;">Of my own accord I could not have stirred; I was paralysed: but the two great girls who sat on each side of me, set me on my legs and pushed me towards the dread judge, and then Miss Temple gently assisted me to his very feet, and I caught her whispered counsel—</p>
+    <p style="margin:0 0 14px 0;">“Don’t be afraid, Jane, I saw it was an accident; you shall not be punished.”</p>
+    <p style="margin:0 0 14px 0;">The kind whisper went to my heart like a dagger.</p>
+    <p style="margin:0 0 14px 0;">“Another minute, and she will despise me for a hypocrite,” thought I; and an impulse of fury against Reed, Brocklehurst, and Co. bounded in my pulses at the conviction. I was no Helen Burns.</p>
+    <p style="margin:0 0 14px 0;">“Fetch that stool,” said Mr. Brocklehurst, pointing to a very high one from which a monitor had just risen: it was brought.</p>
+    <p style="margin:0 0 14px 0;">“Place the child upon it.”</p>
+    <p style="margin:0 0 14px 0;">And I was placed there, by whom I don’t know: I was in no condition to note particulars; I was only aware that they had hoisted me up to the height of Mr. Brocklehurst’s nose, that he was within a yard of me, and that a spread of shot orange and purple silk pelisses and a cloud of silvery plumage extended and waved below me.</p>
+    <p style="margin:0 0 14px 0;">Mr. Brocklehurst hemmed.</p>
+    <p style="margin:0 0 14px 0;">“Ladies,” said he, turning to his family, “Miss Temple, teachers, and children, you all see this girl?”</p>
+    <p style="margin:0 0 14px 0;">Of course they did; for I felt their eyes directed like burning-glasses against my scorched skin.</p>
+    <p style="margin:0 0 14px 0;">“You see she is yet young; you observe she possesses the ordinary form of childhood; God has graciously given her the shape that He has given to all of us; no signal deformity points her out as a marked character. Who would think that the Evil One had already found a servant and agent in her? Yet such, I grieve to say, is the case.”</p>
+    <p style="margin:0 0 14px 0;">A pause—in which I began to steady the palsy of my nerves, and to feel that the Rubicon was passed; and that the trial, no longer to be shirked, must be firmly sustained.</p>
+    <p style="margin:0 0 14px 0;">“My dear children,” pursued the black marble clergyman, with pathos, “this is a sad, a melancholy occasion; for it becomes my duty to warn you, that this girl, who might be one of God’s own lambs, is a little castaway: not a member of the true flock, but evidently an interloper and an alien. You must be on your guard against her; you must shun her example; if necessary, avoid her company, exclude her from your sports, and shut her out from your converse. Teachers, you must watch her: keep your eyes on her movements, weigh well her words, scrutinise her actions, punish her body to save her soul: if, indeed, such salvation be possible, for (my tongue falters while I tell it) this girl, this child, the native of a Christian land, worse than many a little heathen who says its prayers to Brahma and kneels before Juggernaut—this girl is—a liar!”</p>
+    <p style="margin:0 0 14px 0;">Now came a pause of ten minutes, during which I, by this time in perfect possession of my wits, observed all the female Brocklehursts produce their pocket-handkerchiefs and apply them to their optics, while the elderly lady swayed herself to and fro, and the two younger ones whispered, “How shocking!”</p>
+    <p style="margin:0 0 14px 0;">Mr. Brocklehurst resumed.</p>
+    <p style="margin:0 0 14px 0;">“This I learned from her benefactress; from the pious and charitable lady who adopted her in her orphan state, reared her as her own daughter, and whose kindness, whose generosity the unhappy girl repaid by an ingratitude so bad, so dreadful, that at last her excellent patroness was obliged to separate her from her own young ones, fearful lest her vicious example should contaminate their purity: she has sent her here to be healed, even as the Jews of old sent their diseased to the troubled pool of Bethesda; and, teachers, superintendent, I beg of you not to allow the waters to stagnate round her.”</p>
+    <p style="margin:0 0 14px 0;">With this sublime conclusion, Mr. Brocklehurst adjusted the top button of his surtout, muttered something to his family, who rose, bowed to Miss Temple, and then all the great people sailed in state from the room. Turning at the door, my judge said—</p>
+    <p style="margin:0 0 14px 0;">“Let her stand half-an-hour longer on that stool, and let no one speak to her during the remainder of the day.”</p>
+    <p style="margin:0 0 14px 0;">There was I, then, mounted aloft; I, who had said I could not bear the shame of standing on my natural feet in the middle of the room, was now exposed to general view on a pedestal of infamy. What my sensations were, no language can describe; but just as they all rose, stifling my breath and constricting my throat, a girl came up and passed me: in passing, she lifted her eyes. What a strange light inspired them! What an extraordinary sensation that ray sent through me! How the new feeling bore me up! It was as if a martyr, a hero, had passed a slave or victim, and imparted strength in the transit. I mastered the rising hysteria, lifted up my head, and took a firm stand on the stool. Helen Burns asked some slight question about her work of Miss Smith, was chidden for the triviality of the inquiry, returned to her place, and smiled at me as she again went by. What a smile! I remember it now, and I know that it was the effluence of fine intellect, of true courage; it lit up her marked lineaments, her thin face, her sunken grey eye, like a reflection from the aspect of an angel. Yet at that moment Helen Burns wore on her arm “the untidy badge;” scarcely an hour ago I had heard her condemned by Miss Scatcherd to a dinner of bread and water on the morrow because she had blotted an exercise in copying it out. Such is the imperfect nature of man! such spots are there on the disc of the clearest planet; and eyes like Miss Scatcherd’s can only see those minute defects, and are blind to the full brightness of the orb.</p>
+  </div>
+</details>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 3 &middot; NOW YOU: MATCH THE RULE TO ITS CONTRADICTION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Three things Brocklehurst says or orders in chapter 7, and three things that happen in the very same chapter. Match each rule to the fact that undercuts it.</p>
+        <div class="optima-widget ow-match" data-done="All three matched. This is how Bronte builds an argument without ever writing the word hypocrite: she lets the facts sit next to each other.">
+            <div class="widget-kicker">&#129513; MATCH EACH STATEMENT TO ITS CONTRADICTION</div>
+            <div class="widget-question">Click a rule on the left, then click the fact on the right that undercuts it.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHAT BROCKLEHURST SAYS OR ORDERS</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="mission">&ldquo;My mission is to mortify in these girls the lusts of the flesh&rdquo;; no luxury, no indulgence.</button>
+                        <button data-key="hair">Julia Severn's naturally curling hair "must be cut off entirely."</button>
+                        <button data-key="lunch">A spoiled meal should be borne with fortitude, not replaced with something "more delicate."</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHAT HAPPENS MINUTES LATER, SAME CHAPTER</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="mission">His wife arrives in a "costly velvet shawl, trimmed with ermine," with "a false front of French curls."</button>
+                        <button data-key="hair">His own daughters arrive with "a profusion of light tresses, elaborately curled."</button>
+                        <button data-key="lunch">Miss Temple has already fed the starved girls bread and cheese "on my responsibility," and defends the choice to his face.</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; DO SOMETHING WITH THE READING</div>
+        <div class="rj-badge">
+            <div class="rj-icon">&#128211;</div>
+            <div>
+                <div class="rj-label">READING RESPONSE</div>
+                <div class="rj-task">Write a paragraph on institutional religion versus lived charity, using chapter 7. To do it well: first state, in one sentence, what Brocklehurst claims his rules are for. Then show, with a direct quotation and citation, one place his own conduct or his family's does not match the claim. Next, look at Miss Temple: what does she actually do about the burnt porridge, and how many words does it take her to do it? Close with your own sentence on the difference between an institution that talks about charity and a person who acts on it. Cite everything by chapter.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Claude can define hypocrisy and list its common patterns in literature. It cannot tell you which contradiction in chapter 7 lands hardest for you as a reader, and if you ask it to summarize the chapter it may blur together details that the text keeps separate on purpose. Go back to the chapter for your quotations.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Helen Burns</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The girl you saw flogged in chapter 6 has a creed of her own. It is nothing like Jane's, and Jane cannot understand it yet.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A reader who tracks the gap between what an institution claims and what it does is the kind of reader who writes a trustworthy explainer. Keep the habit.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lowood and Brocklehurst</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

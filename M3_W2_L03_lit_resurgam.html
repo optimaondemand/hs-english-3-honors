@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; Resurgam</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-direction: column; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 10px 14px; font-size: 15px; color: #0E1C42; cursor: pointer; transition: all .15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all .15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .locate-box { width:100%; box-sizing:border-box; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-family:inherit; font-size:15px; color:#1a2340; min-height:70px; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0 0 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    details.je-reader summary::-webkit-details-marker { display:none; }
+    details.je-reader[open] summary { border-bottom:1px solid #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (3 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Resurgam</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Jane Eyre, ch. 9&ndash;10</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Resurgam</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">One night in June takes several pages to tell. The next eight years take one paragraph. A narrator decides what is worth your time, and today you watch her decide.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Chapter 9 gives you Lowood's typhus spring, a friendship, and a death, in patient, close-up detail. Chapter 10 opens by telling you, plainly, that eight years are about to pass in a single paragraph. Today's tool is narrative pace: how a storyteller chooses where to slow down and where to speed up, and what that choice tells you about what she thinks a life is made of. The lesson also names, for the first time in this course, the shape this story is taking.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> point to the sentence in chapter 10 where the narrator explains why she is compressing eight years, and explain her reasoning in my own words.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what the word "Resurgam" on Helen's gravestone contributes that a plain report of her death would not.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name the coming-of-age shape of this story so far and locate Jane's stages within it, using only what the text has shown by chapter 10.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN</div>
+            <div class="widget-question">Think about how you tell the story of a hard year in your own life. Do you dwell on the worst night, or do you sum the whole stretch up quickly and move on?</div>
+            <div class="widget-options">
+                <button data-response="The narrator gives Helen's death several unhurried pages: the whispered conversation, the crib, the cold hand, the morning discovery. Watch how much of chapter 9 that single night takes up.">I dwell on the one night that changed everything.</button>
+                <button data-response="Chapter 10 opens by telling you plainly that eight ordinary years are about to become one paragraph. Watch for the narrator's own explanation of why.">I sum up the routine years fast and move on.</button>
+                <button data-response="A storyteller decides this for you by how much space she gives each part, whether or not she says so directly. Chapter 10 is unusual because this narrator says so directly.">Some events choose themselves, no matter what I decide.</button>
+                <button data-response="Watch what changes for Jane the moment Miss Temple leaves in chapter 10: it is not a single dramatic night, but it still marks a real turn in the story's pace.">A turning point does not have to be dramatic to matter.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Reading for narrative pace, and naming the shape of the story</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">A novelist controls two clocks at once: the clock inside the story (how much time passes) and the clock of the page (how many words she spends on it). When the two clocks run at wildly different speeds, in either direction, pay attention: the mismatch is the author telling you what she thinks matters. Chapter 9 slows the page clock almost to a stop for one June night. Chapter 10 then does the opposite on purpose, and says so: eight years become "a few lines," because, as the narrator puts it herself, she means to "invoke Memory" only "where I know her responses will possess some degree of interest." That is a narrator managing her own story, in front of you.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">This novel is also, you can now say plainly, a <strong>coming-of-age story</strong>: the account of a young person's formation across distinct stages, moving toward independence. You have enough of the book to trace the shape so far, without guessing at anything beyond chapter 10.</p>
+
+        <!-- CORE VISUAL: narrative-time bar and coming-of-age arc -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">STORY TIME VS. PAGE TIME (CHAPTERS 9&ndash;10)</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;">
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <div style="width:120px; font-size:13px; color:#0e1c42;">One June night</div>
+                    <div style="flex:1; background:#C7922C; height:22px; border-radius:4px; width:92%;"></div>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <div style="width:120px; font-size:13px; color:#0e1c42;">Eight years</div>
+                    <div style="flex:1; background:#3B4E8C; height:22px; border-radius:4px; width:8%;"></div>
+                </div>
+            </div>
+            <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-bottom: 14px;">Bar length stands for how much of the text each stretch of story time occupies. A single night gets more of the page than eight full years. The narrator tells you why: "this is not to be a regular autobiography."</div>
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 10px; text-align: center;">THE SHAPE SO FAR: A COMING-OF-AGE STORY</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 14px; color: #0e1c42;"><strong>Formative wound</strong></div><div style="font-size: 13px; color: #1a2340; line-height: 1.5;">Gateshead: exile within a family, the red-room (ch. 1&ndash;4)</div></div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 14px; color: #0e1c42;"><strong>Institution and testing</strong></div><div style="font-size: 13px; color: #1a2340; line-height: 1.5;">Lowood under Brocklehurst: hardship, public shaming (ch. 5&ndash;8)</div></div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 14px; color: #0e1c42;"><strong>Mentor found, then lost</strong></div><div style="font-size: 13px; color: #1a2340; line-height: 1.5;">Helen and Miss Temple: formation, grief, departure (ch. 8&ndash;10)</div></div>
+                <div style="flex: 1; min-width: 150px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 12px 14px;"><div style="font-size: 14px; color: #0e1c42;"><strong>The leap outward</strong></div><div style="font-size: 13px; color: #1a2340; line-height: 1.5;">Jane advertises for a post and leaves Lowood (ch. 10)</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 2 &middot; READ CHAPTERS 9 AND 10</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;"><strong>Watch for, in chapter 9:</strong> the word "Resurgam" at the very end, and what it is doing on a gravestone rather than in a sentence of narration. <strong>Watch for, in chapter 10:</strong> the exact sentence where the narrator tells you she is about to skip ahead, and the moment that actually ends her stay at Lowood.</p>
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter IX</strong> <span style="font-size:13px; color:#3B4E8C;">(about 3,200 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">But the privations, or rather the hardships, of Lowood lessened. Spring drew on: she was indeed already come; the frosts of winter had ceased; its snows were melted, its cutting winds ameliorated. My wretched feet, flayed and swollen to lameness by the sharp air of January, began to heal and subside under the gentler breathings of April; the nights and mornings no longer by their Canadian temperature froze the very blood in our veins; we could now endure the play-hour passed in the garden: sometimes on a sunny day it began even to be pleasant and genial, and a greenness grew over those brown beds, which, freshening daily, suggested the thought that Hope traversed them at night, and left each morning brighter traces of her steps. Flowers peeped out amongst the leaves; snow-drops, crocuses, purple auriculas, and golden-eyed pansies. On Thursday afternoons (half-holidays) we now took walks, and found still sweeter flowers opening by the wayside, under the hedges.</p>
+    <p style="margin:0 0 14px 0;">I discovered, too, that a great pleasure, an enjoyment which the horizon only bounded, lay all outside the high and spike-guarded walls of our garden: this pleasure consisted in prospect of noble summits girdling a great hill-hollow, rich in verdure and shadow; in a bright beck, full of dark stones and sparkling eddies. How different had this scene looked when I viewed it laid out beneath the iron sky of winter, stiffened in frost, shrouded with snow!—when mists as chill as death wandered to the impulse of east winds along those purple peaks, and rolled down “ing” and holm till they blended with the frozen fog of the beck! That beck itself was then a torrent, turbid and curbless: it tore asunder the wood, and sent a raving sound through the air, often thickened with wild rain or whirling sleet; and for the forest on its banks, <em>that</em> showed only ranks of skeletons.</p>
+    <p style="margin:0 0 14px 0;">April advanced to May: a bright serene May it was; days of blue sky, placid sunshine, and soft western or southern gales filled up its duration. And now vegetation matured with vigour; Lowood shook loose its tresses; it became all green, all flowery; its great elm, ash, and oak skeletons were restored to majestic life; woodland plants sprang up profusely in its recesses; unnumbered varieties of moss filled its hollows, and it made a strange ground-sunshine out of the wealth of its wild primrose plants: I have seen their pale gold gleam in overshadowed spots like scatterings of the sweetest lustre. All this I enjoyed often and fully, free, unwatched, and almost alone: for this unwonted liberty and pleasure there was a cause, to which it now becomes my task to advert.</p>
+    <p style="margin:0 0 14px 0;">Have I not described a pleasant site for a dwelling, when I speak of it as bosomed in hill and wood, and rising from the verge of a stream? Assuredly, pleasant enough: but whether healthy or not is another question.</p>
+    <p style="margin:0 0 14px 0;">That forest-dell, where Lowood lay, was the cradle of fog and fog-bred pestilence; which, quickening with the quickening spring, crept into the Orphan Asylum, breathed typhus through its crowded schoolroom and dormitory, and, ere May arrived, transformed the seminary into an hospital.</p>
+    <p style="margin:0 0 14px 0;">Semi-starvation and neglected colds had predisposed most of the pupils to receive infection: forty-five out of the eighty girls lay ill at one time. Classes were broken up, rules relaxed. The few who continued well were allowed almost unlimited license; because the medical attendant insisted on the necessity of frequent exercise to keep them in health: and had it been otherwise, no one had leisure to watch or restrain them. Miss Temple’s whole attention was absorbed by the patients: she lived in the sick-room, never quitting it except to snatch a few hours’ rest at night. The teachers were fully occupied with packing up and making other necessary preparations for the departure of those girls who were fortunate enough to have friends and relations able and willing to remove them from the seat of contagion. Many, already smitten, went home only to die: some died at the school, and were buried quietly and quickly, the nature of the malady forbidding delay.</p>
+    <p style="margin:0 0 14px 0;">While disease had thus become an inhabitant of Lowood, and death its frequent visitor; while there was gloom and fear within its walls; while its rooms and passages steamed with hospital smells, the drug and the pastille striving vainly to overcome the effluvia of mortality, that bright May shone unclouded over the bold hills and beautiful woodland out of doors. Its garden, too, glowed with flowers: hollyhocks had sprung up tall as trees, lilies had opened, tulips and roses were in bloom; the borders of the little beds were gay with pink thrift and crimson double daisies; the sweetbriars gave out, morning and evening, their scent of spice and apples; and these fragrant treasures were all useless for most of the inmates of Lowood, except to furnish now and then a handful of herbs and blossoms to put in a coffin.</p>
+    <p style="margin:0 0 14px 0;">But I, and the rest who continued well, enjoyed fully the beauties of the scene and season; they let us ramble in the wood, like gipsies, from morning till night; we did what we liked, went where we liked: we lived better too. Mr. Brocklehurst and his family never came near Lowood now: household matters were not scrutinised into; the cross housekeeper was gone, driven away by the fear of infection; her successor, who had been matron at the Lowton Dispensary, unused to the ways of her new abode, provided with comparative liberality. Besides, there were fewer to feed; the sick could eat little; our breakfast-basins were better filled; when there was no time to prepare a regular dinner, which often happened, she would give us a large piece of cold pie, or a thick slice of bread and cheese, and this we carried away with us to the wood, where we each chose the spot we liked best, and dined sumptuously.</p>
+    <p style="margin:0 0 14px 0;">My favourite seat was a smooth and broad stone, rising white and dry from the very middle of the beck, and only to be got at by wading through the water; a feat I accomplished barefoot. The stone was just broad enough to accommodate, comfortably, another girl and me, at that time my chosen comrade—one Mary Ann Wilson; a shrewd, observant personage, whose society I took pleasure in, partly because she was witty and original, and partly because she had a manner which set me at my ease. Some years older than I, she knew more of the world, and could tell me many things I liked to hear: with her my curiosity found gratification: to my faults also she gave ample indulgence, never imposing curb or rein on anything I said. She had a turn for narrative, I for analysis; she liked to inform, I to question; so we got on swimmingly together, deriving much entertainment, if not much improvement, from our mutual intercourse.</p>
+    <p style="margin:0 0 14px 0;">And where, meantime, was Helen Burns? Why did I not spend these sweet days of liberty with her? Had I forgotten her? or was I so worthless as to have grown tired of her pure society? Surely the Mary Ann Wilson I have mentioned was inferior to my first acquaintance: she could only tell me amusing stories, and reciprocate any racy and pungent gossip I chose to indulge in; while, if I have spoken truth of Helen, she was qualified to give those who enjoyed the privilege of her converse a taste of far higher things.</p>
+    <p style="margin:0 0 14px 0;">True, reader; and I knew and felt this: and though I am a defective being, with many faults and few redeeming points, yet I never tired of Helen Burns; nor ever ceased to cherish for her a sentiment of attachment, as strong, tender, and respectful as any that ever animated my heart. How could it be otherwise, when Helen, at all times and under all circumstances, evinced for me a quiet and faithful friendship, which ill-humour never soured, nor irritation never troubled? But Helen was ill at present: for some weeks she had been removed from my sight to I knew not what room upstairs. She was not, I was told, in the hospital portion of the house with the fever patients; for her complaint was consumption, not typhus: and by consumption I, in my ignorance, understood something mild, which time and care would be sure to alleviate.</p>
+    <p style="margin:0 0 14px 0;">I was confirmed in this idea by the fact of her once or twice coming downstairs on very warm sunny afternoons, and being taken by Miss Temple into the garden; but, on these occasions, I was not allowed to go and speak to her; I only saw her from the schoolroom window, and then not distinctly; for she was much wrapped up, and sat at a distance under the verandah.</p>
+    <p style="margin:0 0 14px 0;">One evening, in the beginning of June, I had stayed out very late with Mary Ann in the wood; we had, as usual, separated ourselves from the others, and had wandered far; so far that we lost our way, and had to ask it at a lonely cottage, where a man and woman lived, who looked after a herd of half-wild swine that fed on the mast in the wood. When we got back, it was after moonrise: a pony, which we knew to be the surgeon’s, was standing at the garden door. Mary Ann remarked that she supposed some one must be very ill, as Mr. Bates had been sent for at that time of the evening. She went into the house; I stayed behind a few minutes to plant in my garden a handful of roots I had dug up in the forest, and which I feared would wither if I left them till the morning. This done, I lingered yet a little longer: the flowers smelt so sweet as the dew fell; it was such a pleasant evening, so serene, so warm; the still glowing west promised so fairly another fine day on the morrow; the moon rose with such majesty in the grave east. I was noting these things and enjoying them as a child might, when it entered my mind as it had never done before:—</p>
+    <p style="margin:0 0 14px 0;">“How sad to be lying now on a sick bed, and to be in danger of dying! This world is pleasant—it would be dreary to be called from it, and to have to go who knows where?”</p>
+    <p style="margin:0 0 14px 0;">And then my mind made its first earnest effort to comprehend what had been infused into it concerning heaven and hell; and for the first time it recoiled, baffled; and for the first time glancing behind, on each side, and before it, it saw all round an unfathomed gulf: it felt the one point where it stood—the present; all the rest was formless cloud and vacant depth; and it shuddered at the thought of tottering, and plunging amid that chaos. While pondering this new idea, I heard the front door open; Mr. Bates came out, and with him was a nurse. After she had seen him mount his horse and depart, she was about to close the door, but I ran up to her.</p>
+    <p style="margin:0 0 14px 0;">“How is Helen Burns?”</p>
+    <p style="margin:0 0 14px 0;">“Very poorly,” was the answer.</p>
+    <p style="margin:0 0 14px 0;">“Is it her Mr. Bates has been to see?”</p>
+    <p style="margin:0 0 14px 0;">“Yes.”</p>
+    <p style="margin:0 0 14px 0;">“And what does he say about her?”</p>
+    <p style="margin:0 0 14px 0;">“He says she’ll not be here long.”</p>
+    <p style="margin:0 0 14px 0;">This phrase, uttered in my hearing yesterday, would have only conveyed the notion that she was about to be removed to Northumberland, to her own home. I should not have suspected that it meant she was dying; but I knew instantly now! It opened clear on my comprehension that Helen Burns was numbering her last days in this world, and that she was going to be taken to the region of spirits, if such region there were. I experienced a shock of horror, then a strong thrill of grief, then a desire—a necessity to see her; and I asked in what room she lay.</p>
+    <p style="margin:0 0 14px 0;">“She is in Miss Temple’s room,” said the nurse.</p>
+    <p style="margin:0 0 14px 0;">“May I go up and speak to her?”</p>
+    <p style="margin:0 0 14px 0;">“Oh no, child! It is not likely; and now it is time for you to come in; you’ll catch the fever if you stop out when the dew is falling.”</p>
+    <p style="margin:0 0 14px 0;">The nurse closed the front door; I went in by the side entrance which led to the schoolroom: I was just in time; it was nine o’clock, and Miss Miller was calling the pupils to go to bed.</p>
+    <p style="margin:0 0 14px 0;">It might be two hours later, probably near eleven, when I—not having been able to fall asleep, and deeming, from the perfect silence of the dormitory, that my companions were all wrapt in profound repose—rose softly, put on my frock over my night-dress, and, without shoes, crept from the apartment, and set off in quest of Miss Temple’s room. It was quite at the other end of the house; but I knew my way; and the light of the unclouded summer moon, entering here and there at passage windows, enabled me to find it without difficulty. An odour of camphor and burnt vinegar warned me when I came near the fever room: and I passed its door quickly, fearful lest the nurse who sat up all night should hear me. I dreaded being discovered and sent back; for I <em>must</em> see Helen,—I must embrace her before she died,—I must give her one last kiss, exchange with her one last word.</p>
+    <p style="margin:0 0 14px 0;">Having descended a staircase, traversed a portion of the house below, and succeeded in opening and shutting, without noise, two doors, I reached another flight of steps; these I mounted, and then just opposite to me was Miss Temple’s room. A light shone through the keyhole and from under the door; a profound stillness pervaded the vicinity. Coming near, I found the door slightly ajar; probably to admit some fresh air into the close abode of sickness. Indisposed to hesitate, and full of impatient impulses—soul and senses quivering with keen throes—I put it back and looked in. My eye sought Helen, and feared to find death.</p>
+    <p style="margin:0 0 14px 0;">Close by Miss Temple’s bed, and half covered with its white curtains, there stood a little crib. I saw the outline of a form under the clothes, but the face was hid by the hangings: the nurse I had spoken to in the garden sat in an easy-chair asleep; an unsnuffed candle burnt dimly on the table. Miss Temple was not to be seen: I knew afterwards that she had been called to a delirious patient in the fever-room. I advanced; then paused by the crib side: my hand was on the curtain, but I preferred speaking before I withdrew it. I still recoiled at the dread of seeing a corpse.</p>
+    <p style="margin:0 0 14px 0;">“Helen!” I whispered softly, “are you awake?”</p>
+    <p style="margin:0 0 14px 0;">She stirred herself, put back the curtain, and I saw her face, pale, wasted, but quite composed: she looked so little changed that my fear was instantly dissipated.</p>
+    <p style="margin:0 0 14px 0;">“Can it be you, Jane?” she asked, in her own gentle voice.</p>
+    <p style="margin:0 0 14px 0;">“Oh!” I thought, “she is not going to die; they are mistaken: she could not speak and look so calmly if she were.”</p>
+    <p style="margin:0 0 14px 0;">I got on to her crib and kissed her: her forehead was cold, and her cheek both cold and thin, and so were her hand and wrist; but she smiled as of old.</p>
+    <p style="margin:0 0 14px 0;">“Why are you come here, Jane? It is past eleven o’clock: I heard it strike some minutes since.”</p>
+    <p style="margin:0 0 14px 0;">“I came to see you, Helen: I heard you were very ill, and I could not sleep till I had spoken to you.”</p>
+    <p style="margin:0 0 14px 0;">“You came to bid me good-bye, then: you are just in time probably.”</p>
+    <p style="margin:0 0 14px 0;">“Are you going somewhere, Helen? Are you going home?”</p>
+    <p style="margin:0 0 14px 0;">“Yes; to my long home—my last home.”</p>
+    <p style="margin:0 0 14px 0;">“No, no, Helen!” I stopped, distressed. While I tried to devour my tears, a fit of coughing seized Helen; it did not, however, wake the nurse; when it was over, she lay some minutes exhausted; then she whispered—</p>
+    <p style="margin:0 0 14px 0;">“Jane, your little feet are bare; lie down and cover yourself with my quilt.”</p>
+    <p style="margin:0 0 14px 0;">I did so: she put her arm over me, and I nestled close to her. After a long silence, she resumed, still whispering—</p>
+    <p style="margin:0 0 14px 0;">“I am very happy, Jane; and when you hear that I am dead, you must be sure and not grieve: there is nothing to grieve about. We all must die one day, and the illness which is removing me is not painful; it is gentle and gradual: my mind is at rest. I leave no one to regret me much: I have only a father; and he is lately married, and will not miss me. By dying young, I shall escape great sufferings. I had not qualities or talents to make my way very well in the world: I should have been continually at fault.”</p>
+    <p style="margin:0 0 14px 0;">“But where are you going to, Helen? Can you see? Do you know?”</p>
+    <p style="margin:0 0 14px 0;">“I believe; I have faith: I am going to God.”</p>
+    <p style="margin:0 0 14px 0;">“Where is God? What is God?”</p>
+    <p style="margin:0 0 14px 0;">“My Maker and yours, who will never destroy what He created. I rely implicitly on His power, and confide wholly in His goodness: I count the hours till that eventful one arrives which shall restore me to Him, reveal Him to me.”</p>
+    <p style="margin:0 0 14px 0;">“You are sure, then, Helen, that there is such a place as heaven, and that our souls can get to it when we die?”</p>
+    <p style="margin:0 0 14px 0;">“I am sure there is a future state; I believe God is good; I can resign my immortal part to Him without any misgiving. God is my father; God is my friend: I love Him; I believe He loves me.”</p>
+    <p style="margin:0 0 14px 0;">“And shall I see you again, Helen, when I die?”</p>
+    <p style="margin:0 0 14px 0;">“You will come to the same region of happiness: be received by the same mighty, universal Parent, no doubt, dear Jane.”</p>
+    <p style="margin:0 0 14px 0;">Again I questioned, but this time only in thought. “Where is that region? Does it exist?” And I clasped my arms closer round Helen; she seemed dearer to me than ever; I felt as if I could not let her go; I lay with my face hidden on her neck. Presently she said, in the sweetest tone—</p>
+    <p style="margin:0 0 14px 0;">“How comfortable I am! That last fit of coughing has tired me a little; I feel as if I could sleep: but don’t leave me, Jane; I like to have you near me.”</p>
+    <p style="margin:0 0 14px 0;">“I’ll stay with you, <em>dear</em> Helen: no one shall take me away.”</p>
+    <p style="margin:0 0 14px 0;">“Are you warm, darling?”</p>
+    <p style="margin:0 0 14px 0;">“Yes.”</p>
+    <p style="margin:0 0 14px 0;">“Good-night, Jane.”</p>
+    <p style="margin:0 0 14px 0;">“Good-night, Helen.”</p>
+    <p style="margin:0 0 14px 0;">She kissed me, and I her, and we both soon slumbered.</p>
+    <p style="margin:0 0 14px 0;">When I awoke it was day: an unusual movement roused me; I looked up; I was in somebody’s arms; the nurse held me; she was carrying me through the passage back to the dormitory. I was not reprimanded for leaving my bed; people had something else to think about; no explanation was afforded then to my many questions; but a day or two afterwards I learned that Miss Temple, on returning to her own room at dawn, had found me laid in the little crib; my face against Helen Burns’s shoulder, my arms round her neck. I was asleep, and Helen was—dead.</p>
+    <p style="margin:0 0 14px 0;">Her grave is in Brocklebridge churchyard: for fifteen years after her death it was only covered by a grassy mound; but now a grey marble tablet marks the spot, inscribed with her name, and the word “Resurgam.”</p>
+  </div>
+</details>
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter X</strong> <span style="font-size:13px; color:#3B4E8C;">(about 4,400 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">Hitherto I have recorded in detail the events of my insignificant existence: to the first ten years of my life I have given almost as many chapters. But this is not to be a regular autobiography: I am only bound to invoke Memory where I know her responses will possess some degree of interest; therefore I now pass a space of eight years almost in silence: a few lines only are necessary to keep up the links of connection.</p>
+    <p style="margin:0 0 14px 0;">When the typhus fever had fulfilled its mission of devastation at Lowood, it gradually disappeared from thence; but not till its virulence and the number of its victims had drawn public attention on the school. Inquiry was made into the origin of the scourge, and by degrees various facts came out which excited public indignation in a high degree. The unhealthy nature of the site; the quantity and quality of the children’s food; the brackish, fetid water used in its preparation; the pupils’ wretched clothing and accommodations—all these things were discovered, and the discovery produced a result mortifying to Mr. Brocklehurst, but beneficial to the institution.</p>
+    <p style="margin:0 0 14px 0;">Several wealthy and benevolent individuals in the county subscribed largely for the erection of a more convenient building in a better situation; new regulations were made; improvements in diet and clothing introduced; the funds of the school were intrusted to the management of a committee. Mr. Brocklehurst, who, from his wealth and family connections, could not be overlooked, still retained the post of treasurer; but he was aided in the discharge of his duties by gentlemen of rather more enlarged and sympathising minds: his office of inspector, too, was shared by those who knew how to combine reason with strictness, comfort with economy, compassion with uprightness. The school, thus improved, became in time a truly useful and noble institution. I remained an inmate of its walls, after its regeneration, for eight years: six as pupil, and two as teacher; and in both capacities I bear my testimony to its value and importance.</p>
+    <p style="margin:0 0 14px 0;">During these eight years my life was uniform: but not unhappy, because it was not inactive. I had the means of an excellent education placed within my reach; a fondness for some of my studies, and a desire to excel in all, together with a great delight in pleasing my teachers, especially such as I loved, urged me on: I availed myself fully of the advantages offered me. In time I rose to be the first girl of the first class; then I was invested with the office of teacher; which I discharged with zeal for two years: but at the end of that time I altered.</p>
+    <p style="margin:0 0 14px 0;">Miss Temple, through all changes, had thus far continued superintendent of the seminary: to her instruction I owed the best part of my acquirements; her friendship and society had been my continual solace; she had stood me in the stead of mother, governess, and, latterly, companion. At this period she married, removed with her husband (a clergyman, an excellent man, almost worthy of such a wife) to a distant county, and consequently was lost to me.</p>
+    <p style="margin:0 0 14px 0;">From the day she left I was no longer the same: with her was gone every settled feeling, every association that had made Lowood in some degree a home to me. I had imbibed from her something of her nature and much of her habits: more harmonious thoughts: what seemed better regulated feelings had become the inmates of my mind. I had given in allegiance to duty and order; I was quiet; I believed I was content: to the eyes of others, usually even to my own, I appeared a disciplined and subdued character.</p>
+    <p style="margin:0 0 14px 0;">But destiny, in the shape of the Rev. Mr. Nasmyth, came between me and Miss Temple: I saw her in her travelling dress step into a post-chaise, shortly after the marriage ceremony; I watched the chaise mount the hill and disappear beyond its brow; and then retired to my own room, and there spent in solitude the greatest part of the half-holiday granted in honour of the occasion.</p>
+    <p style="margin:0 0 14px 0;">I walked about the chamber most of the time. I imagined myself only to be regretting my loss, and thinking how to repair it; but when my reflections were concluded, and I looked up and found that the afternoon was gone, and evening far advanced, another discovery dawned on me, namely, that in the interval I had undergone a transforming process; that my mind had put off all it had borrowed of Miss Temple—or rather that she had taken with her the serene atmosphere I had been breathing in her vicinity—and that now I was left in my natural element, and beginning to feel the stirring of old emotions. It did not seem as if a prop were withdrawn, but rather as if a motive were gone: it was not the power to be tranquil which had failed me, but the reason for tranquillity was no more. My world had for some years been in Lowood: my experience had been of its rules and systems; now I remembered that the real world was wide, and that a varied field of hopes and fears, of sensations and excitements, awaited those who had courage to go forth into its expanse, to seek real knowledge of life amidst its perils.</p>
+    <p style="margin:0 0 14px 0;">I went to my window, opened it, and looked out. There were the two wings of the building; there was the garden; there were the skirts of Lowood; there was the hilly horizon. My eye passed all other objects to rest on those most remote, the blue peaks; it was those I longed to surmount; all within their boundary of rock and heath seemed prison-ground, exile limits. I traced the white road winding round the base of one mountain, and vanishing in a gorge between two; how I longed to follow it farther! I recalled the time when I had travelled that very road in a coach; I remembered descending that hill at twilight; an age seemed to have elapsed since the day which brought me first to Lowood, and I had never quitted it since. My vacations had all been spent at school: Mrs. Reed had never sent for me to Gateshead; neither she nor any of her family had ever been to visit me. I had had no communication by letter or message with the outer world: school-rules, school-duties, school-habits and notions, and voices, and faces, and phrases, and costumes, and preferences, and antipathies—such was what I knew of existence. And now I felt that it was not enough; I tired of the routine of eight years in one afternoon. I desired liberty; for liberty I gasped; for liberty I uttered a prayer; it seemed scattered on the wind then faintly blowing. I abandoned it and framed a humbler supplication; for change, stimulus: that petition, too, seemed swept off into vague space: “Then,” I cried, half desperate, “grant me at least a new servitude!”</p>
+    <p style="margin:0 0 14px 0;">Here a bell, ringing the hour of supper, called me downstairs.</p>
+    <p style="margin:0 0 14px 0;">I was not free to resume the interrupted chain of my reflections till bedtime: even then a teacher who occupied the same room with me kept me from the subject to which I longed to recur, by a prolonged effusion of small talk. How I wished sleep would silence her. It seemed as if, could I but go back to the idea which had last entered my mind as I stood at the window, some inventive suggestion would rise for my relief.</p>
+    <p style="margin:0 0 14px 0;">Miss Gryce snored at last; she was a heavy Welshwoman, and till now her habitual nasal strains had never been regarded by me in any other light than as a nuisance; to-night I hailed the first deep notes with satisfaction; I was debarrassed of interruption; my half-effaced thought instantly revived.</p>
+    <p style="margin:0 0 14px 0;">“A new servitude! There is something in that,” I soliloquised (mentally, be it understood; I did not talk aloud). “I know there is, because it does not sound too sweet; it is not like such words as Liberty, Excitement, Enjoyment: delightful sounds truly; but no more than sounds for me; and so hollow and fleeting that it is mere waste of time to listen to them. But Servitude! That must be matter of fact. Any one may serve: I have served here eight years; now all I want is to serve elsewhere. Can I not get so much of my own will? Is not the thing feasible? Yes—yes—the end is not so difficult; if I had only a brain active enough to ferret out the means of attaining it.”</p>
+    <p style="margin:0 0 14px 0;">I sat up in bed by way of arousing this said brain: it was a chilly night; I covered my shoulders with a shawl, and then I proceeded <em>to think</em> again with all my might.</p>
+    <p style="margin:0 0 14px 0;">“What do I want? A new place, in a new house, amongst new faces, under new circumstances: I want this because it is of no use wanting anything better. How do people do to get a new place? They apply to friends, I suppose: I have no friends. There are many others who have no friends, who must look about for themselves and be their own helpers; and what is their resource?”</p>
+    <p style="margin:0 0 14px 0;">I could not tell: nothing answered me; I then ordered my brain to find a response, and quickly. It worked and worked faster: I felt the pulses throb in my head and temples; but for nearly an hour it worked in chaos; and no result came of its efforts. Feverish with vain labour, I got up and took a turn in the room; undrew the curtain, noted a star or two, shivered with cold, and again crept to bed.</p>
+    <p style="margin:0 0 14px 0;">A kind fairy, in my absence, had surely dropped the required suggestion on my pillow; for as I lay down, it came quietly and naturally to my mind:—“Those who want situations advertise; you must advertise in the <em>——shire Herald</em>.”</p>
+    <p style="margin:0 0 14px 0;">“How? I know nothing about advertising.”</p>
+    <p style="margin:0 0 14px 0;">Replies rose smooth and prompt now:—</p>
+    <p style="margin:0 0 14px 0;">“You must enclose the advertisement and the money to pay for it under a cover directed to the editor of the <em>Herald</em>; you must put it, the first opportunity you have, into the post at Lowton; answers must be addressed to J.E., at the post-office there; you can go and inquire in about a week after you send your letter, if any are come, and act accordingly.”</p>
+    <p style="margin:0 0 14px 0;">This scheme I went over twice, thrice; it was then digested in my mind; I had it in a clear practical form: I felt satisfied, and fell asleep.</p>
+    <p style="margin:0 0 14px 0;">With earliest day, I was up: I had my advertisement written, enclosed, and directed before the bell rang to rouse the school; it ran thus:—</p>
+    <p style="margin:0 0 14px 0;">“A young lady accustomed to tuition” (had I not been a teacher two years?) “is desirous of meeting with a situation in a private family where the children are under fourteen” (I thought that as I was barely eighteen, it would not do to undertake the guidance of pupils nearer my own age). “She is qualified to teach the usual branches of a good English education, together with French, Drawing, and Music” (in those days, reader, this now narrow catalogue of accomplishments, would have been held tolerably comprehensive). “Address, J.E., Post-office, Lowton, ——shire.”</p>
+    <p style="margin:0 0 14px 0;">This document remained locked in my drawer all day: after tea, I asked leave of the new superintendent to go to Lowton, in order to perform some small commissions for myself and one or two of my fellow-teachers; permission was readily granted; I went. It was a walk of two miles, and the evening was wet, but the days were still long; I visited a shop or two, slipped the letter into the post-office, and came back through heavy rain, with streaming garments, but with a relieved heart.</p>
+    <p style="margin:0 0 14px 0;">The succeeding week seemed long: it came to an end at last, however, like all sublunary things, and once more, towards the close of a pleasant autumn day, I found myself afoot on the road to Lowton. A picturesque track it was, by the way; lying along the side of the beck and through the sweetest curves of the dale: but that day I thought more of the letters, that might or might not be awaiting me at the little burgh whither I was bound, than of the charms of lea and water.</p>
+    <p style="margin:0 0 14px 0;">My ostensible errand on this occasion was to get measured for a pair of shoes; so I discharged that business first, and when it was done, I stepped across the clean and quiet little street from the shoemaker’s to the post-office: it was kept by an old dame, who wore horn spectacles on her nose, and black mittens on her hands.</p>
+    <p style="margin:0 0 14px 0;">“Are there any letters for J.E.?” I asked.</p>
+    <p style="margin:0 0 14px 0;">She peered at me over her spectacles, and then she opened a drawer and fumbled among its contents for a long time, so long that my hopes began to falter. At last, having held a document before her glasses for nearly five minutes, she presented it across the counter, accompanying the act by another inquisitive and mistrustful glance—it was for J.E.</p>
+    <p style="margin:0 0 14px 0;">“Is there only one?” I demanded.</p>
+    <p style="margin:0 0 14px 0;">“There are no more,” said she; and I put it in my pocket and turned my face homeward: I could not open it then; rules obliged me to be back by eight, and it was already half-past seven.</p>
+    <p style="margin:0 0 14px 0;">Various duties awaited me on my arrival: I had to sit with the girls during their hour of study; then it was my turn to read prayers; to see them to bed: afterwards I supped with the other teachers. Even when we finally retired for the night, the inevitable Miss Gryce was still my companion: we had only a short end of candle in our candlestick, and I dreaded lest she should talk till it was all burnt out; fortunately, however, the heavy supper she had eaten produced a soporific effect: she was already snoring before I had finished undressing. There still remained an inch of candle: I now took out my letter; the seal was an initial F.; I broke it; the contents were brief.</p>
+    <p style="margin:0 0 14px 0;">“If J.E., who advertised in the <em>——shire Herald</em> of last Thursday, possesses the acquirements mentioned, and if she is in a position to give satisfactory references as to character and competency, a situation can be offered her where there is but one pupil, a little girl, under ten years of age; and where the salary is thirty pounds per annum. J.E. is requested to send references, name, address, and all particulars to the direction:—</p>
+    <p style="margin:0 0 14px 0;">“Mrs. Fairfax, Thornfield, near Millcote, ——shire.”</p>
+    <p style="margin:0 0 14px 0;">I examined the document long: the writing was old-fashioned and rather uncertain, like that of an elderly lady. This circumstance was satisfactory: a private fear had haunted me, that in thus acting for myself, and by my own guidance, I ran the risk of getting into some scrape; and, above all things, I wished the result of my endeavours to be respectable, proper, <em>en règle</em>. I now felt that an elderly lady was no bad ingredient in the business I had on hand. Mrs. Fairfax! I saw her in a black gown and widow’s cap; frigid, perhaps, but not uncivil: a model of elderly English respectability. Thornfield! that, doubtless, was the name of her house: a neat orderly spot, I was sure; though I failed in my efforts to conceive a correct plan of the premises. Millcote, ——shire; I brushed up my recollections of the map of England; yes, I saw it; both the shire and the town. ——shire was seventy miles nearer London than the remote county where I now resided: that was a recommendation to me. I longed to go where there was life and movement: Millcote was a large manufacturing town on the banks of the A——: a busy place enough, doubtless: so much the better; it would be a complete change at least. Not that my fancy was much captivated by the idea of long chimneys and clouds of smoke—“but,” I argued, “Thornfield will, probably, be a good way from the town.”</p>
+    <p style="margin:0 0 14px 0;">Here the socket of the candle dropped, and the wick went out.</p>
+    <p style="margin:0 0 14px 0;">Next day new steps were to be taken; my plans could no longer be confined to my own breast; I must impart them in order to achieve their success. Having sought and obtained an audience of the superintendent during the noontide recreation, I told her I had a prospect of getting a new situation where the salary would be double what I now received (for at Lowood I only got £15 per annum); and requested she would break the matter for me to Mr. Brocklehurst, or some of the committee, and ascertain whether they would permit me to mention them as references. She obligingly consented to act as mediatrix in the matter. The next day she laid the affair before Mr. Brocklehurst, who said that Mrs. Reed must be written to, as she was my natural guardian. A note was accordingly addressed to that lady, who returned for answer, that “I might do as I pleased: she had long relinquished all interference in my affairs.” This note went the round of the committee, and at last, after what appeared to me most tedious delay, formal leave was given me to better my condition if I could; and an assurance added, that as I had always conducted myself well, both as teacher and pupil, at Lowood, a testimonial of character and capacity, signed by the inspectors of that institution, should forthwith be furnished me.</p>
+    <p style="margin:0 0 14px 0;">This testimonial I accordingly received in about a month, forwarded a copy of it to Mrs. Fairfax, and got that lady’s reply, stating that she was satisfied, and fixing that day fortnight as the period for my assuming the post of governess in her house.</p>
+    <p style="margin:0 0 14px 0;">I now busied myself in preparations: the fortnight passed rapidly. I had not a very large wardrobe, though it was adequate to my wants; and the last day sufficed to pack my trunk,—the same I had brought with me eight years ago from Gateshead.</p>
+    <p style="margin:0 0 14px 0;">The box was corded, the card nailed on. In half-an-hour the carrier was to call for it to take it to Lowton, whither I myself was to repair at an early hour the next morning to meet the coach. I had brushed my black stuff travelling-dress, prepared my bonnet, gloves, and muff; sought in all my drawers to see that no article was left behind; and now having nothing more to do, I sat down and tried to rest. I could not; though I had been on foot all day, I could not now repose an instant; I was too much excited. A phase of my life was closing to-night, a new one opening to-morrow: impossible to slumber in the interval; I must watch feverishly while the change was being accomplished.</p>
+    <p style="margin:0 0 14px 0;">“Miss,” said a servant who met me in the lobby, where I was wandering like a troubled spirit, “a person below wishes to see you.”</p>
+    <p style="margin:0 0 14px 0;">“The carrier, no doubt,” I thought, and ran downstairs without inquiry. I was passing the back-parlour or teachers’ sitting-room, the door of which was half open, to go to the kitchen, when some one ran out—</p>
+    <p style="margin:0 0 14px 0;">“It’s her, I am sure!—I could have told her anywhere!” cried the individual who stopped my progress and took my hand.</p>
+    <p style="margin:0 0 14px 0;">I looked: I saw a woman attired like a well-dressed servant, matronly, yet still young; very good-looking, with black hair and eyes, and lively complexion.</p>
+    <p style="margin:0 0 14px 0;">“Well, who is it?” she asked, in a voice and with a smile I half recognised; “you’ve not quite forgotten me, I think, Miss Jane?”</p>
+    <p style="margin:0 0 14px 0;">In another second I was embracing and kissing her rapturously: “Bessie! Bessie! Bessie!” that was all I said; whereat she half laughed, half cried, and we both went into the parlour. By the fire stood a little fellow of three years old, in plaid frock and trousers.</p>
+    <p style="margin:0 0 14px 0;">“That is my little boy,” said Bessie directly.</p>
+    <p style="margin:0 0 14px 0;">“Then you are married, Bessie?”</p>
+    <p style="margin:0 0 14px 0;">“Yes; nearly five years since to Robert Leaven, the coachman; and I’ve a little girl besides Bobby there, that I’ve christened Jane.”</p>
+    <p style="margin:0 0 14px 0;">“And you don’t live at Gateshead?”</p>
+    <p style="margin:0 0 14px 0;">“I live at the lodge: the old porter has left.”</p>
+    <p style="margin:0 0 14px 0;">“Well, and how do they all get on? Tell me everything about them, Bessie: but sit down first; and, Bobby, come and sit on my knee, will you?” but Bobby preferred sidling over to his mother.</p>
+    <p style="margin:0 0 14px 0;">“You’re not grown so very tall, Miss Jane, nor so very stout,” continued Mrs. Leaven. “I dare say they’ve not kept you too well at school: Miss Reed is the head and shoulders taller than you are; and Miss Georgiana would make two of you in breadth.”</p>
+    <p style="margin:0 0 14px 0;">“Georgiana is handsome, I suppose, Bessie?”</p>
+    <p style="margin:0 0 14px 0;">“Very. She went up to London last winter with her mama, and there everybody admired her, and a young lord fell in love with her: but his relations were against the match; and—what do you think?—he and Miss Georgiana made it up to run away; but they were found out and stopped. It was Miss Reed that found them out: I believe she was envious; and now she and her sister lead a cat and dog life together; they are always quarrelling—”</p>
+    <p style="margin:0 0 14px 0;">“Well, and what of John Reed?”</p>
+    <p style="margin:0 0 14px 0;">“Oh, he is not doing so well as his mama could wish. He went to college, and he got—plucked, I think they call it: and then his uncles wanted him to be a barrister, and study the law: but he is such a dissipated young man, they will never make much of him, I think.”</p>
+    <p style="margin:0 0 14px 0;">“What does he look like?”</p>
+    <p style="margin:0 0 14px 0;">“He is very tall: some people call him a fine-looking young man; but he has such thick lips.”</p>
+    <p style="margin:0 0 14px 0;">“And Mrs. Reed?”</p>
+    <p style="margin:0 0 14px 0;">“Missis looks stout and well enough in the face, but I think she’s not quite easy in her mind: Mr. John’s conduct does not please her—he spends a deal of money.”</p>
+    <p style="margin:0 0 14px 0;">“Did she send you here, Bessie?”</p>
+    <p style="margin:0 0 14px 0;">“No, indeed: but I have long wanted to see you, and when I heard that there had been a letter from you, and that you were going to another part of the country, I thought I’d just set off, and get a look at you before you were quite out of my reach.”</p>
+    <p style="margin:0 0 14px 0;">“I am afraid you are disappointed in me, Bessie.” I said this laughing: I perceived that Bessie’s glance, though it expressed regard, did in no shape denote admiration.</p>
+    <p style="margin:0 0 14px 0;">“No, Miss Jane, not exactly: you are genteel enough; you look like a lady, and it is as much as ever I expected of you: you were no beauty as a child.”</p>
+    <p style="margin:0 0 14px 0;">I smiled at Bessie’s frank answer: I felt that it was correct, but I confess I was not quite indifferent to its import: at eighteen most people wish to please, and the conviction that they have not an exterior likely to second that desire brings anything but gratification.</p>
+    <p style="margin:0 0 14px 0;">“I dare say you are clever, though,” continued Bessie, by way of solace. “What can you do? Can you play on the piano?”</p>
+    <p style="margin:0 0 14px 0;">“A little.”</p>
+    <p style="margin:0 0 14px 0;">There was one in the room; Bessie went and opened it, and then asked me to sit down and give her a tune: I played a waltz or two, and she was charmed.</p>
+    <p style="margin:0 0 14px 0;">“The Miss Reeds could not play as well!” said she exultingly. “I always said you would surpass them in learning: and can you draw?”</p>
+    <p style="margin:0 0 14px 0;">“That is one of my paintings over the chimney-piece.” It was a landscape in water colours, of which I had made a present to the superintendent, in acknowledgment of her obliging mediation with the committee on my behalf, and which she had framed and glazed.</p>
+    <p style="margin:0 0 14px 0;">“Well, that is beautiful, Miss Jane! It is as fine a picture as any Miss Reed’s drawing-master could paint, let alone the young ladies themselves, who could not come near it: and have you learnt French?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, Bessie, I can both read it and speak it.”</p>
+    <p style="margin:0 0 14px 0;">“And you can work on muslin and canvas?”</p>
+    <p style="margin:0 0 14px 0;">“I can.”</p>
+    <p style="margin:0 0 14px 0;">“Oh, you are quite a lady, Miss Jane! I knew you would be: you will get on whether your relations notice you or not. There was something I wanted to ask you. Have you ever heard anything from your father’s kinsfolk, the Eyres?”</p>
+    <p style="margin:0 0 14px 0;">“Never in my life.”</p>
+    <p style="margin:0 0 14px 0;">“Well, you know Missis always said they were poor and quite despicable: and they may be poor; but I believe they are as much gentry as the Reeds are; for one day, nearly seven years ago, a Mr. Eyre came to Gateshead and wanted to see you; Missis said you were at school fifty miles off; he seemed so much disappointed, for he could not stay: he was going on a voyage to a foreign country, and the ship was to sail from London in a day or two. He looked quite a gentleman, and I believe he was your father’s brother.”</p>
+    <p style="margin:0 0 14px 0;">“What foreign country was he going to, Bessie?”</p>
+    <p style="margin:0 0 14px 0;">“An island thousands of miles off, where they make wine—the butler did tell me—”</p>
+    <p style="margin:0 0 14px 0;">“Madeira?” I suggested.</p>
+    <p style="margin:0 0 14px 0;">“Yes, that is it—that is the very word.”</p>
+    <p style="margin:0 0 14px 0;">“So he went?”</p>
+    <p style="margin:0 0 14px 0;">“Yes; he did not stay many minutes in the house: Missis was very high with him; she called him afterwards a ‘sneaking tradesman.’ My Robert believes he was a wine-merchant.”</p>
+    <p style="margin:0 0 14px 0;">“Very likely,” I returned; “or perhaps clerk or agent to a wine-merchant.”</p>
+    <p style="margin:0 0 14px 0;">Bessie and I conversed about old times an hour longer, and then she was obliged to leave me: I saw her again for a few minutes the next morning at Lowton, while I was waiting for the coach. We parted finally at the door of the Brocklehurst Arms there: each went her separate way; she set off for the brow of Lowood Fell to meet the conveyance which was to take her back to Gateshead, I mounted the vehicle which was to bear me to new duties and a new life in the unknown environs of Millcote.</p>
+  </div>
+</details>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 3 &middot; NOW YOU: FIND THE SENTENCE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Somewhere at the start of chapter 10, the narrator states directly that she is about to compress eight years and gives her reason for doing it. Find that sentence and type it below, with the chapter.</p>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#128269; FIND IT IN THE TEXT</div>
+            <div class="widget-question">Type the sentence where the narrator explains why she is skipping ahead, and cite the chapter.</div>
+            <textarea class="locate-box" placeholder="Type the line and citation you found&hellip;"></textarea>
+            <div style="font-size: 14px; color: #3B4E8C; margin-top: 10px;">Where to look: the very first paragraph of chapter 10, before any mention of the typhus outbreak's aftermath. The narrator addresses "Memory" directly.</div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; DO SOMETHING WITH THE READING</div>
+        <div class="rj-badge">
+            <div class="rj-icon">&#128211;</div>
+            <div>
+                <div class="rj-label">READING RESPONSE</div>
+                <div class="rj-task">Write a paragraph on "Resurgam." To do it well: first say what the word means and why a single Latin word on a gravestone does something that a plain sentence like "Helen Burns died young" would not. Then contrast how Jane responds to loss in chapter 10 (her restlessness once Miss Temple leaves, her prayer for "a new servitude") with how Helen met the idea of dying in chapter 9. Point to specific lines from both. Close with one sentence locating Jane, right now, on the coming-of-age arc from this lesson: which stage is she leaving, and which is she stepping into? Cite everything by chapter.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Claude can define "coming-of-age story" and list its common stages in general terms. It cannot tell you where Jane's story actually sits on that arc at the end of chapter 10, since that depends on details specific to this text. Ground your placement in a quotation, not in a genre description.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Grammar &amp; Vocabulary</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The semicolon and the colon inside Bront&euml;'s long sentences, including the very sentence you just found in Part 3.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Choosing what to slow down for and what to summarize is also a skill of explanatory writing: an explainer for a general reader cannot dwell on everything. Notice what Bront&euml; decided was worth a full scene and what she decided was worth a sentence.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Resurgam</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      var lb = w.querySelector('.locate-box'); if (lb) lb.value='';
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

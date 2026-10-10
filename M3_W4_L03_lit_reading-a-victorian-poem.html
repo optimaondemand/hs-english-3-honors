@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; Reading a Victorian Poem: Stanza, Line, and Sound</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .match-col { display:flex; flex-direction:column; gap:8px; }
+    .match-col button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 12px; font-size:14px; color:#0E1C42; cursor:pointer; transition:all 0.15s; font-family:inherit; text-align:left; }
+    .match-col button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .match-col button.selected { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .match-col button.matched { background:#FDF3E3; border-color:#C7922C; color:#0E1C42; cursor:default; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (3 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Reading a Victorian Poem: Stanza, Line, and Sound</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Victorian poems (excerpts)</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Reading a Victorian Poem: Stanza, Line, and Sound</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; the tools for the poem you are about to choose</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A novel gives you paragraphs. A poem gives you lines, and the line is where the poet decides exactly how much of a thought you get at once.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have been reading Bront&euml;'s prose closely all module: sentence shape, dialogue, description. A poem asks something a little different of you. Today's lesson gives you five tools, stanza, line and line break, speaker versus poet, meter felt as a pulse, and the sound devices a poet reaches for, using Victorian poems as the examples. By the end of the lesson you choose the poem you would make your own.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name a poem's stanzas and lines, and explain what a line break asks the reader to do.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> feel a line's meter as a pulse and identify alliteration, assonance, rhyme scheme, and refrain in real lines.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose a poem and say, in one sentence, why my voice returns to it.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a song lyric or a line of verse you already know by heart, from anywhere. What is it about that line that made it stick?</div>
+            <div class="widget-options">
+                <button data-response="A pattern of stresses your body remembers even when your mind forgets the words. That is meter, and today you will learn to feel it in a single line before you try to name it.">Its rhythm, the way it beats</button>
+                <button data-response="Repeated sounds are doing real work on your ear, whether it is matching consonants (alliteration) or matching vowel sounds (assonance). Today you will learn to hear the difference.">The way certain sounds repeat</button>
+                <button data-response="A line that returns, word for word, is a refrain, and a refrain is one of the oldest memory tools a poet has. Watch for it today in a ballad you already know from this novel.">A line that keeps coming back</button>
+                <button data-response="Rhyme marks the end of a line and tells your ear where one unit of thought closes and the next opens. Today you will learn to label a rhyme scheme with letters.">The rhymes lining up</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Five tools for reading a poem</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">A <strong>stanza</strong> is a group of lines set off by white space, a poem's version of a paragraph, though a stanza is usually built on a repeating shape rather than a single idea. A <strong>line</strong> is one row of the poem as the poet set it on the page, and the <strong>line break</strong>, where one line ends and the next begins, is a choice: it can close a thought (end-stopped) or cut across one, forcing you to carry the sense over the gap (enjambment). The <strong>speaker</strong> is the voice inside the poem, and the <strong>poet</strong> is the person who wrote it; they are sometimes close and sometimes not the same at all, and a careful reader checks rather than assumes. <strong>Meter</strong> is a pattern of stressed and unstressed syllables that gives a line a pulse you can feel if you read it aloud and tap the stresses; you do not need to name every foot, only to feel the beat return. And a handful of <strong>sound devices</strong> do most of the remaining work: <strong>alliteration</strong> (repeated consonant sounds at the start of nearby words), <strong>assonance</strong> (repeated vowel sounds inside nearby words), <strong>rhyme scheme</strong> (the pattern of end-rhymes, labeled with letters, A, B, A, B and so on), and <strong>refrain</strong> (a line or phrase that returns unchanged, usually at the same point in each stanza).</p>
+
+        <!-- CORE VISUAL: stanza anatomy card -->
+        <div style="background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #C7922C; letter-spacing: 0.6px; margin-bottom: 12px; text-align: center;">STANZA ANATOMY, LABELED &middot; "INVICTUS," W. E. HENLEY (1875), STANZA 1</div>
+            <div style="display: flex; gap: 14px; align-items: stretch;">
+                <div style="min-width: 90px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #EEF1F8; border-radius: 8px; padding: 10px 6px;">
+                    <div style="writing-mode: vertical-rl; text-orientation: mixed; font-size: 13px; color: #3B4E8C; letter-spacing: 1px;">ONE STANZA</div>
+                </div>
+                <div style="flex: 1;">
+                    <div style="display:flex; align-items:center; gap:10px; border-bottom:1px dashed #C7CFE6; padding:6px 0;">
+                        <div style="font-size:17px; color:#0e1c42; flex:1;">Out of the night that covers me,</div>
+                        <div style="font-size:12px; color:#3B4E8C; background:#FDF3E3; border-radius:4px; padding:2px 8px;">line 1 &middot; rhyme A</div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px; border-bottom:1px dashed #C7CFE6; padding:6px 0;">
+                        <div style="font-size:17px; color:#0e1c42; flex:1;">Black as the Pit from pole to pole,</div>
+                        <div style="font-size:12px; color:#3B4E8C; background:#FDF3E3; border-radius:4px; padding:2px 8px;">line 2 &middot; rhyme B</div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px; border-bottom:1px dashed #C7CFE6; padding:6px 0;">
+                        <div style="font-size:17px; color:#0e1c42; flex:1;">I thank whatever gods may be</div>
+                        <div style="font-size:12px; color:#3B4E8C; background:#FDF3E3; border-radius:4px; padding:2px 8px;">line 3 &middot; rhyme A</div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px; padding:6px 0;">
+                        <div style="font-size:17px; color:#0e1c42; flex:1;">For my unconquerable soul.</div>
+                        <div style="font-size:12px; color:#3B4E8C; background:#FDF3E3; border-radius:4px; padding:2px 8px;">line 4 &middot; rhyme B</div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; font-size:14px; color:#1a2340; margin-top:10px;">Four lines, a rhyme scheme of ABAB, and each line end-stopped: the sense finishes where the line does. That is a stanza doing exactly what a stanza does.</div>
+
+            <div style="background: #EEF1F8; border-radius: 8px; padding: 14px 18px; margin-top: 16px;">
+                <div style="font-size: 13px; color: #3B4E8C; margin-bottom: 8px;">FEEL THE PULSE &middot; ONE LINE, ONE TIME</div>
+                <div style="font-size: 20px; color: #0e1c42; text-align: center; line-height: 1.8;">i <span style="background:#FDF3E3; padding:1px 4px; border-radius:3px; font-weight:bold;">THANK</span> what<span style="background:#FDF3E3; padding:1px 4px; border-radius:3px; font-weight:bold;">EV</span>er <span style="background:#FDF3E3; padding:1px 4px; border-radius:3px; font-weight:bold;">GODS</span> may <span style="background:#FDF3E3; padding:1px 4px; border-radius:3px; font-weight:bold;">BE</span></div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 8px;">Read it aloud, tapping on the gold syllables. Four soft-then-hard beats in a row: that steady rise-and-fall is the line's meter. You do not need the Greek name for it. You only need to feel that the beat returns, evenly, four times, and that this is part of why the line is easy to remember.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 16px 0 8px 0;">Now the other three sound devices, each from a different Victorian poem.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-bottom: 6px;">
+            <div style="flex:1; min-width:220px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:4px solid #C7922C; border-radius:8px; padding:14px 16px;">
+                <div style="font-size:13px; color:#3B4E8C; margin-bottom:6px;">ALLITERATION</div>
+                <div style="font-size:16px; color:#0e1c42; font-style:italic; line-height:1.55;">&ldquo;Worthless as withered weeds&rdquo;</div>
+                <div style="font-size:13px; color:#1a2340; margin-top:4px;">Emily Bront&euml;, &ldquo;No Coward Soul Is Mine&rdquo; (1846)</div>
+                <div style="font-size:14px; color:#1a2340; line-height:1.5; margin-top:6px;">Three <em>w</em> sounds in a row make the line itself sound worn out, which is the point: the poet is dismissing something as trash.</div>
+            </div>
+            <div style="flex:1; min-width:220px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:4px solid #3B4E8C; border-radius:8px; padding:14px 16px;">
+                <div style="font-size:13px; color:#3B4E8C; margin-bottom:6px;">ASSONANCE</div>
+                <div style="font-size:16px; color:#0e1c42; font-style:italic; line-height:1.55;">&ldquo;Where the sea meets the moon-blanched sand&rdquo;</div>
+                <div style="font-size:13px; color:#1a2340; margin-top:4px;">Matthew Arnold, &ldquo;Dover Beach&rdquo; (1867)</div>
+                <div style="font-size:14px; color:#1a2340; line-height:1.5; margin-top:6px;">The short <em>a</em> sound in &ldquo;blanched&rdquo; and &ldquo;sand&rdquo; ties the two words together by ear, even though they do not rhyme.</div>
+            </div>
+            <div style="flex:1; min-width:220px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:4px solid #C7922C; border-radius:8px; padding:14px 16px;">
+                <div style="font-size:13px; color:#3B4E8C; margin-bottom:6px;">REFRAIN</div>
+                <div style="font-size:16px; color:#0e1c42; font-style:italic; line-height:1.55;">&ldquo;&hellip;the poor orphan child&rdquo;</div>
+                <div style="font-size:13px; color:#1a2340; margin-top:4px;">Bessie's ballad, <em>Jane Eyre</em>, ch. 3</div>
+                <div style="font-size:14px; color:#1a2340; line-height:1.5; margin-top:6px;">The same four words end all five stanzas. The words never change; what changes is how much you have learned about the child by the time you hear them again.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 2 &middot; SPEAKER, POET, AND THE LINE BREAK</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Two more things to notice before you choose. First, <strong>speaker versus poet</strong>: the song in chapter 24 of the novel is sung by a character, in a scene, for a reason of his own; the singer is not Bront&euml;. "No Coward Soul Is Mine" is different: Charlotte Bront&euml; herself introduced it as "the last lines my sister Emily ever wrote," so most readers hear Emily Bront&euml;'s own voice close behind the speaker. Always ask who is talking before you decide what a poem believes. Second, the <strong>line break</strong> as a choice: read this from "Dover Beach," where the sentence keeps running past the end of each line: <em>"Upon the straits; on the French coast, the light / Gleams and is gone; the cliffs of England stand, / Glimmering and vast, out in the tranquil bay."</em> (Matthew Arnold, &ldquo;Dover Beach,&rdquo; 1867). The grammar does not stop where the line does; Arnold is choosing to make you carry the thought across the gap. That carrying-over is called enjambment, and it feels different from a line that closes its own thought, the way each line of the "Invictus" stanza above does.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 3 &middot; NOW YOU: MATCH THE LINE TO ITS TOOL</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Six lines from Victorian poems, six features from today's lesson. Click a line, then click the feature it demonstrates.</p>
+        <div class="optima-widget ow-match" data-done="All six matched. You now have the vocabulary to talk about any Victorian poem, not just to enjoy them.">
+            <div class="widget-kicker">&#129513; MATCH EACH LINE TO WHAT IT DOES</div>
+            <div class="widget-question">Read each line closely before you decide; more than one feature might be tempting, but only one is the best fit for what today's lesson named it.</div>
+            <div style="display:flex; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:240px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">THE LINE</div>
+                    <div class="match-col" data-side="left">
+                        <button data-key="allit">&ldquo;Worthless as withered weeds&rdquo; (Emily Bront&euml;, &ldquo;No Coward Soul Is Mine&rdquo;)</button>
+                        <button data-key="assn">&ldquo;Where the sea meets the moon-blanched sand&rdquo; (Arnold, &ldquo;Dover Beach&rdquo;)</button>
+                        <button data-key="refr">&ldquo;&hellip;the poor orphan child,&rdquo; closing all five stanzas (Bessie's ballad, <em>Jane Eyre</em>, ch. 3)</button>
+                        <button data-key="meter">&ldquo;I thank whatever gods may be&rdquo; (Henley, &ldquo;Invictus&rdquo;)</button>
+                        <button data-key="rhyme">&ldquo;&hellip;covers me&rdquo; / &ldquo;&hellip;pole to pole&rdquo; / &ldquo;&hellip;gods may be&rdquo; / &ldquo;&hellip;unconquerable soul&rdquo; (Henley, &ldquo;Invictus,&rdquo; stanza 1)</button>
+                        <button data-key="enjamb">&ldquo;Upon the straits; on the French coast, the light / Gleams and is gone&rdquo; (Arnold, &ldquo;Dover Beach&rdquo;)</button>
+                    </div>
+                </div>
+                <div style="flex:1; min-width:240px;">
+                    <div style="font-size:11px; color:#3B4E8C; margin-bottom:8px;">WHAT IT DOES</div>
+                    <div class="match-col" data-side="right">
+                        <button data-key="rhyme">rhyme scheme &middot; the end-sounds fall into a pattern (here, ABAB)</button>
+                        <button data-key="enjamb">line break as enjambment &middot; the sentence runs past the line's end, forcing you onward</button>
+                        <button data-key="allit">alliteration &middot; the same consonant sound opens three words in a row</button>
+                        <button data-key="meter">meter felt as a pulse &middot; a steady rise-and-fall you can tap</button>
+                        <button data-key="assn">assonance &middot; the same vowel sound echoes inside nearby words</button>
+                        <button data-key="refr">refrain &middot; the same words return, unchanged, in the same place each stanza</button>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; CHOOSE A POEM</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The five tools apply to any poem. Read each poem quoted in this lesson aloud once. Notice where your own voice wants to land: on a poem's rhyme, its refrain, its pulse, or its long unrhymed reach. That reaction is real evidence, not a distraction from the decision.</p>
+        <div class="rj-badge">
+            <div class="rj-icon">&#128211;</div>
+            <div>
+                <div class="rj-label">READING RESPONSE</div>
+                <div class="rj-task">Record which of the Victorian poems in this lesson you would choose to carry in memory and write one honest sentence on why your voice returns to it. Name at least one tool from today's lesson (its meter, a sound device, a refrain, the shape of its stanzas) as part of your reason, not just how the poem makes you feel.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Claude can define meter, rhyme scheme, and the other terms from today's lesson accurately. It cannot decide which poem your own voice returns to; that decision needs your ear and your own reading aloud, not a recommendation. If you ask Claude to scan a line's meter for you, check its stress marks against your own tapped-out reading before you trust them.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Dialogue and the Rhythm of Wit</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Back to prose, and to punctuating the fast exchanges between Jane and Rochester so a fast conversation reads as fast on the page.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The five tools from this lesson, stanza, line break, speaker, pulse, and sound, are not only for analysis; they are what a reader rehearses when memorizing a poem. A reader who can feel the pulse and hear the refrain coming has already done half the work of memorizing it.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Reading a Victorian Poem: Stanza, Line, and Sound</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    var mBtn = e.target.closest('.ow-match .match-col button');
+    if (mBtn && !mBtn.disabled) {
+      var mw = mBtn.closest('.optima-widget'); var fb2 = mw.querySelector('.widget-feedback');
+      var side = mBtn.closest('.match-col').dataset.side;
+      if (!mw._matchPick) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else if (mw._matchPick===mBtn) { mBtn.classList.remove('selected'); mw._matchPick=null; }
+      else if (mw._matchPick.closest('.match-col').dataset.side===side) { mw.querySelectorAll('.match-col button').forEach(function(b){b.classList.remove('selected');}); mBtn.classList.add('selected'); mw._matchPick=mBtn; }
+      else {
+        var first = mw._matchPick;
+        if (first.dataset.key===mBtn.dataset.key) { first.classList.remove('selected'); first.classList.add('matched'); first.disabled=true; mBtn.classList.add('matched'); mBtn.disabled=true; var left=mw.querySelectorAll('.match-col button:not(.matched)').length; fb2.textContent = left===0 ? (mw.dataset.done||'All matched.') : 'Matched. Keep going.'; }
+        else { first.classList.remove('selected'); fb2.textContent='Not that pairing. Reread and try again.'; }
+        fb2.classList.add('show'); mw._matchPick=null;
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

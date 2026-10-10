@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 3 Honors &middot; Living Books: The Final</title>
+<link rel="stylesheet" href="project.css" />
+</head>
+<body data-ns="eng3h.livingbooks" data-lesson="L3" data-title="Living Books: The Final" data-course="English 3 Honors" data-project-name="The Living Books Broadcast" data-assignment="Module 4 Project" data-code="ELA11">
+<div class="frame" id="pageTop">
+
+<div class="progress-wrap"><span class="progress-label">LESSON PROGRESS</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
+
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div><div class="header-org">Optima Academy Online</div><div class="header-tag">An Education Experience Company</div></div>
+  </div>
+  <div class="header-course">ENGLISH 3 HONORS</div>
+</div>
+<div class="strip">
+  <div class="strip-cell"><div class="strip-k">Module 4 Project</div><div class="strip-v">The Living Books Broadcast</div><div class="strip-s">Episode Final &middot; 50 points</div></div>
+  <div class="strip-cell"><div class="strip-k">Part</div><div class="strip-v">3 of 3 &middot; The Final</div><div class="strip-s">Module 4, Week 8</div></div>
+  <div class="strip-cell"><div class="strip-k">You make</div><div class="strip-v">The finished episode and show notes</div><div class="strip-s">Lesson saved as a PDF</div></div>
+  <div class="strip-cell"><div class="strip-k">Turn in</div><div class="strip-v">Episode audio, show notes, and this PDF</div><div class="strip-s"><span class="cname">The Living Books Broadcast: Episode FINAL</span> in Canvas</div></div>
+</div>
+
+<div style="padding: 18px 28px 0 28px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+</div>
+
+<div class="intro">
+  <div class="title-card">
+    <div class="title-k">Living Books</div>
+    <div class="title-h">The Final</div>
+    <div class="title-s">This is the finished episode, the main graded work of Module 4. Everything this quarter has led here: the pitch, the cold open, the show bible, the Draft. Today you revise for the ear, check the details, write your show notes, and record.</div>
+  </div>
+  <div class="path">
+    <div class="path-title">YOUR PATH TODAY</div>
+    <div class="path-steps">
+      <span class="path-step">Listen to your Draft</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Revise for the ear</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Run the final checklist</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Draft your show notes</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Record the final</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Turn it in</span>
+    </div>
+  </div>
+  <div class="need-strip"><span class="need-label">You will need:</span><span class="need-chip">About 75 minutes</span><span class="need-chip">Your rough recording from the Draft</span><span class="need-chip">Your PDFs from The Workshop and The Draft</span><span class="need-chip">Word, for the show notes</span></div>
+  <div class="project-strip" data-fields="work,title"></div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn" data-tab="revise"><span class="tab-n">1</span>Listen and revise</button>
+  <button class="tab-btn" data-tab="checklist"><span class="tab-n">2</span>The checklist</button>
+  <button class="tab-btn" data-tab="notes"><span class="tab-n">3</span>Show notes</button>
+  <button class="tab-btn" data-tab="final"><span class="tab-n">4</span>Record the final</button>
+  <button class="tab-btn" data-tab="wrap"><span class="tab-n">5</span>Wrap up and turn in</button>
+</div>
+<div class="reset-row"><button class="reset-btn">Start this lesson over</button></div>
+
+<!-- ============ REVISE ============ -->
+<div class="tab-panel" id="tab-revise">
+<div class="activity bl-burgundy">
+    <div class="activity-head"><div class="activity-num">1</div><div><div class="activity-title">Listen first, then revise</div><div class="activity-sub">A recording teaches what a script cannot</div></div></div>
+    <div class="activity-body">
+      <svg viewBox="0 0 640 150" role="img" aria-label="The revision loop: listen to your rough recording, make three moves, record again, then check" style="display:block;max-width:640px;width:100%;margin:4px auto 14px;">
+        <rect x="0" y="0" width="640" height="150" rx="12" fill="#0E1C42"/>
+        <g font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">
+          <rect x="16" y="40" width="130" height="62" rx="8" fill="#55C8E8"/><text x="81" y="67" fill="#0E1C42">Listen to</text><text x="81" y="87" fill="#0E1C42">your Draft</text>
+          <rect x="174" y="40" width="130" height="62" rx="8" fill="#8A2E3B"/><text x="239" y="67">Make three</text><text x="239" y="87">moves</text>
+          <rect x="332" y="40" width="130" height="62" rx="8" fill="#C7922C"/><text x="397" y="67" fill="#0E1C42">Record</text><text x="397" y="87" fill="#0E1C42">again</text>
+          <rect x="490" y="40" width="134" height="62" rx="8" fill="#4F6F52"/><text x="557" y="67">Run the</text><text x="557" y="87">checklist</text>
+          <path d="M148,71 L172,71 M306,71 L330,71 M464,71 L488,71" stroke="#FFFFFF" stroke-width="3" fill="none"/>
+          <text x="320" y="130" font-size="13" fill="#55C8E8">Revise with your ears, not your eyes</text>
+        </g>
+      </svg>
+      <div class="coach"><span class="ci">&#9679;</span><div>A page rewards a reader who can slow down and reread. A listener gets one pass at the pace you set. A sentence built for the page can run out of breath when spoken. So play your rough recording and follow along on your script. Mark every place you stumbled or got lost. Then make three moves.</div></div>
+      <div class="two">
+        <div class="textpanel"><div class="tp-k">MOVE 1 &middot; CUT THE WRITTEN-ONLY SENTENCE</div>A sentence that works only because you can see its punctuation often collapses aloud. If you stumble on it twice, do not reword it. Cut it, or split it into two short spoken sentences.</div>
+        <div class="textpanel"><div class="tp-k">MOVE 2 &middot; MOVE THE STRONGEST LINE EARLIER</div>A reader can skim ahead. A listener just stops. If your best line sits three minutes in, move it, or an echo of it, into the first thirty seconds.</div>
+      </div>
+      <div class="textpanel"><div class="tp-k">MOVE 3 &middot; LET THE RECITATION BREATHE</div>The moment you stop arguing and speak the passage is the center of the episode. Leave a real pause before it and a real pause after it, in the script and in the recording.</div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">What is the first step in revising for the ear?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="Polishing one line first tells you nothing about the whole. Hear the whole script first.">Polish the wording of the line you like best before reading</button>
+            <button class="opt" data-correct="true" data-fb="Yes. Only a full pass without stopping shows where the ear trips.">Read the whole script aloud, start to finish, without stopping</button>
+            <button class="opt" data-correct="false" data-fb="Recording the final comes after you have heard and fixed the script.">Record the final take, then listen back for any errors</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+      <div class="q"><div class="q-prompt">Move 1: name one sentence you cut or split, and why<div class="q-hint">Only worked on the page? Say what the recording told you.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="cutMove" data-label="Move 1: a sentence I cut or split" data-required></textarea><div class="words"></div></div>
+      <div class="q"><div class="q-prompt">Move 2: which line did you move earlier, and from where?<span class="saved-dot"></span></div><textarea class="answer" data-key="moveMove" data-label="Move 2: a line I moved earlier" data-required></textarea><div class="words"></div></div>
+      <div class="q"><div class="q-prompt">Move 3: how did you adjust the pause before and after your recitation?<span class="saved-dot"></span></div><textarea class="answer" data-key="breatheMove" data-label="Move 3: the pause around my recitation" data-required></textarea><div class="words"></div></div>
+      <div class="q"><div class="q-prompt">What did your recording tell you that your script alone did not?<span class="saved-dot"></span></div><textarea class="answer" data-key="heard" data-label="What my recording told me that my script did not" data-required></textarea><div class="words"></div></div>
+
+    </div>
+  </div>
+  <button class="tab-next" data-next="checklist">Continue: the checklist &#8594;</button>
+</div>
+
+<!-- ============ CHECKLIST ============ -->
+<div class="tab-panel" id="tab-checklist">
+<div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">2</div><div><div class="activity-title">The final editing checklist</div><div class="activity-sub">Five points, for your script and your show notes together</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>A listener will never see this checklist, and that is the point. Small slips in a name, a citation, or a caption are what keep the argument from doing its work. Run all five points before your last take.</div></div>
+      <div class="flow">
+        <div class="flow-step"><div class="flow-n">1</div><div class="flow-t">Names and titles</div><div class="flow-d">Spelled and capitalized the same way everywhere</div></div>
+        <div class="flow-step"><div class="flow-n">2</div><div class="flow-t">MLA in the show notes</div><div class="flow-d">Every source complete; none unused, none missing</div></div>
+        <div class="flow-step"><div class="flow-n">3</div><div class="flow-t">Sources read aloud</div><div class="flow-d">What you say matches your show notes</div></div>
+        <div class="flow-step"><div class="flow-n">4</div><div class="flow-t">Recitation caption</div><div class="flow-d">The caption matches what you actually recorded</div></div>
+        <div class="flow-step"><div class="flow-n">5</div><div class="flow-t">File names</div><div class="flow-d">Show notes and audio named correctly</div></div>
+      </div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">A caption for your recitation gives fifteen lines, but your recording includes twenty. Which point catches it?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="That point checks spelling and capitalization of names across your documents.">Names and titles</button>
+            <button class="opt" data-correct="false" data-fb="That point is about your source list.">MLA in the show notes</button>
+            <button class="opt" data-correct="true" data-fb="Yes. The caption and the audio have to match each other exactly.">Recitation caption</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+      <div class="q"><div class="q-prompt">Which checklist points did you have to fix, and what did you change?<div class="q-hint">If everything already passed, say so.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="fixes" data-label="Fixes I made from the checklist" data-required></textarea><div class="words"></div></div>
+
+    </div>
+  </div>
+  <button class="tab-next" data-next="notes">Continue: show notes &#8594;</button>
+</div>
+
+<!-- ============ NOTES ============ -->
+<div class="tab-panel" id="tab-notes">
+<div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">3</div><div><div class="activity-title">Draft your show notes</div><div class="activity-sub">The page a listener reads beside your episode</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Show notes are saved as a Word document with four parts: a short summary, a segment list with timings, an MLA source list with at least two credible sources including one from JStor, and credits for any music or sound and its license. Draft each part here, then paste it into Word.</div></div>
+      <div class="carry" data-from="L1.seg1" data-k="Cold open (The Workshop)"></div>
+      <div class="carry" data-from="L1.seg2" data-k="Recitation (The Workshop)"></div>
+      <div class="carry" data-from="L1.seg3" data-k="The case (The Workshop)"></div>
+      <div class="carry" data-from="L1.seg4" data-k="Close (The Workshop)"></div>
+      <div class="q"><div class="q-prompt">Summary<div class="q-hint">Two or three sentences that tell a stranger what the episode saves and why.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="summary" data-label="Show notes: summary" data-required></textarea><div class="words"></div></div>
+      <div class="q"><div class="q-prompt">Segment list with timings<div class="q-hint">Update the timings to match your final recording.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="segList" data-label="Show notes: segment list with timings" data-required></textarea><div class="words"></div></div>
+      <div class="q"><div class="q-prompt">MLA source list<div class="q-hint">At least two credible sources, one from JStor. Alphabetize them.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="mla" data-label="Show notes: MLA source list" data-required data-seed-from="L1.src1"></textarea><div class="words"></div></div>
+      <div class="q"><div class="q-prompt">Credits<div class="q-hint">Music or sound, and its license. Write "none" if you use only your voice.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="creditList" data-label="Show notes: credits and licenses" data-required data-seed-from="L1.credits"></textarea><div class="words"></div></div>
+      <div class="q"><div class="q-prompt">Which claims in your case did you verify, and against what?<div class="q-hint">Every factual claim must be checked before you submit.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="verify" data-label="Claims I verified against a real source" data-required></textarea><div class="words"></div></div>
+
+    </div>
+  </div>
+  <button class="tab-next" data-next="final">Continue: record the final &#8594;</button>
+</div>
+
+<!-- ============ FINAL ============ -->
+<div class="tab-panel" id="tab-final">
+<div class="activity bl-gold">
+    <div class="activity-head"><div class="activity-num">4</div><div><div class="activity-title">What your teacher looks for</div><div class="activity-sub">The Final rubric, 50 points</div></div></div>
+    <div class="activity-body">
+      <div class="goals">
+        <div class="goal"><div class="goal-w"><b>15</b><span>pts</span></div><div class="goal-b"><div class="goal-t">THE CASE</div><div class="goal-d">An argued, evidenced reason the work must survive that directly answers the strongest objection.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>15</b><span>pts</span></div><div class="goal-b"><div class="goal-t">RESEARCH AND SOURCES</div><div class="goal-d">Two or more credible sources, one from JStor, verified and cited in MLA, with accurate claims.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>12</b><span>pts</span></div><div class="goal-b"><div class="goal-t">DELIVERY AND PRODUCTION</div><div class="goal-d">A confident voice, clean transitions, a real pause on each side of the recitation, sound credited.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>8</b><span>pts</span></div><div class="goal-b"><div class="goal-t">CRAFT AND MECHANICS</div><div class="goal-d">Clearly revised beyond the Draft, the checklist visibly applied, complete and clean show notes.</div></div></div>
+      </div>
+      <div class="callout-gold">Your recitation is graded separately on the On-Air Recitation page, 20 points, on its own rubric. Use the same recording as the recitation inside your episode. This rubric does not grade it a second time.</div>
+
+    </div>
+  </div>
+<div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">5</div><div><div class="activity-title">Record your finished episode</div><div class="activity-sub">8 to 12 minutes, four segments in order</div></div></div>
+    <div class="activity-body">
+      <div class="action"><div class="ak">RECORD IT</div><ul>
+        <li>Record in order: cold open, recitation, the case, then the close with your sources read aloud.</li>
+        <li>Use only royalty-free or self-made music and sound, and credit it.</li>
+        <li>Save the audio as LastName_FirstName_LivingBooks_ELA11_Episode in OneDrive: Optima &rarr; ELA &rarr; ELA11. A link to audio stored elsewhere also works.</li>
+        <li>Save your show notes as LastName_FirstName_LivingBooks_ELA11_Final (Word).</li>
+      </ul></div>
+      <div class="coach"><span class="ci">&#9679;</span><div>Your case still has to answer the objection you tested in the Workshop. That step is not repeated here. If the case needs to be stronger, revise it yourself. Claude flags a counter-argument. It never writes your case or your script. Note any change on your AI-use log.</div></div>
+      <div class="q"><div class="q-prompt">Your final segment timings and total length<div class="q-hint">Check that the total is between 8 and 12 minutes.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="finalTimes" data-label="My final segment timings and total length" data-required></textarea><div class="words"></div></div>
+      <div class="q"><div class="q-prompt">Did you change your case since the Draft? Note it on your AI-use log.<div class="q-hint">Write "no change" if you did not.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="aiChange" data-label="Changes to my AI-use log" data-required></textarea><div class="words"></div></div>
+
+    </div>
+  </div>
+  <button class="tab-next" data-next="wrap">Continue: wrap up and turn in &#8594;</button>
+</div>
+
+<!-- ============ WRAP ============ -->
+<div class="tab-panel" id="tab-wrap">
+  <div class="project-strip" data-fields="work,title"></div>
+<div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">6</div><div><div class="activity-title">Assemble the Final and turn it in</div><div class="activity-sub">Audio, show notes, and this lesson's PDF</div></div></div>
+    <div class="activity-body">
+      <div class="flow">
+        <div class="flow-step"><div class="flow-n">1</div><div class="flow-t">Cold open</div><div class="flow-d">The Draft</div></div>
+        <div class="flow-step"><div class="flow-n">2</div><div class="flow-t">Recitation</div><div class="flow-d">Same recording as On-Air Recitation</div></div>
+        <div class="flow-step"><div class="flow-n">3</div><div class="flow-t">The case</div><div class="flow-d">Revised today</div></div>
+        <div class="flow-step"><div class="flow-n">4</div><div class="flow-t">Close</div><div class="flow-d">Sources read aloud</div></div>
+      </div>
+      <div class="gathered">
+        <div class="gathered-head"><div><div class="gk">ALL YOUR WORK FROM THIS LESSON</div><div class="gt">Review, copy, or download</div></div></div>
+        <div class="gathered-body">
+          <textarea class="gathered-output" id="gathered" readonly></textarea>
+          <div class="gathered-actions">
+            <button class="gbtn pdf" data-action="pdf" type="button">Download as PDF</button>
+            <button class="gbtn ghost" data-action="copy" type="button">Copy the text</button>
+          </div>
+          <div class="gstatus" id="gstatus"></div>
+        </div>
+      </div>
+      <div class="turn-in">
+        <div class="turn-in-head"><div class="gk">BEFORE YOU TURN IT IN</div><div class="gt">Check each line</div></div>
+        <div class="turn-in-body">
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My episode is 8 to 12 minutes, with all four segments in order.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My case answers the strongest objection, with claims I verified.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My show notes have a summary, a segment list with timings, an MLA source list with a JStor source, and credits.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My recitation is woven in with a real pause on each side.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I ran the five-point checklist and updated my AI-use log.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I saved the audio as LastName_FirstName_LivingBooks_ELA11_Episode and the show notes as LastName_FirstName_LivingBooks_ELA11_Final in OneDrive: Optima &rarr; ELA &rarr; ELA11, and I turned in both through the OneDrive tab in <span class="cname">The Living Books Broadcast: Episode FINAL</span> assignment.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I added this lesson's PDF, saved as LastName_LivingBooksLesson3_ELA11, to the same submission.</div></div>
+        </div>
+      </div>
+      <div class="callout-gold">If your teacher runs an optional class listening event, it happens entirely inside Canvas. You built an argument, found the sources, and gave a passage your own voice. Submit it with confidence.</div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="f1"><span>Optima Academy Online</span> &middot; ENGLISH 3 HONORS &middot; Module 4 &middot; The Self Imperiled</div>
+  <div class="f2">The Living Books Broadcast &middot; Part 3 of 3 &middot; The Final</div>
+  <div class="f3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>window.PROJECT_LABELS = { work: "You are preserving", title: "Working title" };</script>
+<script src="project.js"></script>
+</body>
+</html>

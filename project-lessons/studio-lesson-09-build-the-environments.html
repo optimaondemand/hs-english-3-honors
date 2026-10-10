@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 3 Honors &middot; Adaptation Studio, Milestone 9: Build the Environments</title>
+<link rel="stylesheet" href="project.css" />
+</head>
+<body data-ns="eng3h.studio" data-lesson="L9" data-title="Adaptation Studio, Milestone 9: Build the Environments" data-course="English 3 Honors" data-project-name="The Adaptation Studio" data-assignment="Adaptation Studio, Milestone 9" data-code="ELA11">
+<div class="frame" id="pageTop">
+
+<div class="progress-wrap"><span class="progress-label">LESSON PROGRESS</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
+
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div><div class="header-org">Optima Academy Online</div><div class="header-tag">An Education Experience Company</div></div>
+  </div>
+  <div class="header-course">ENGLISH 3 HONORS</div>
+</div>
+<div class="strip">
+  <div class="strip-cell"><div class="strip-k">Honors project</div><div class="strip-v">The Adaptation Studio</div><div class="strip-s">Milestone 9 of 16 &middot; 15 pts</div></div>
+  <div class="strip-cell"><div class="strip-k">Milestone</div><div class="strip-v">Build the Environments</div><div class="strip-s">Module 3, Weeks 1 to 2</div></div>
+  <div class="strip-cell"><div class="strip-k">You make</div><div class="strip-v">Assembled scenes, a build log, one AI-use line</div><div class="strip-s">Word or PDF, plus this lesson's PDF</div></div>
+  <div class="strip-cell"><div class="strip-k">Keep</div><div class="strip-v">Your Milestone 9 PDF</div><div class="strip-s">Turned in with your Milestone 9 work</div></div>
+</div>
+
+<div style="padding: 18px 28px 0 28px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+</div>
+
+<div class="intro">
+  <div class="title-card">
+    <div class="title-k">Milestone 9 &middot; Weeks 1 to 2</div>
+    <div class="title-h">Build the Environments</div>
+    <div class="title-s">Production begins. The spaces you designed on paper in Quarter 2 now get built. Today you see the whole year, list your spaces, build and log each one, and check one for anachronisms.</div>
+  </div>
+  <div class="path">
+    <div class="path-title">YOUR PATH TODAY</div>
+    <div class="path-steps"><span class="path-step">See the whole studio</span><span class="path-arrow">&#8594;</span><span class="path-step">List your spaces</span><span class="path-arrow">&#8594;</span><span class="path-step">Assemble and log each one</span><span class="path-arrow">&#8594;</span><span class="path-step">Check with Claude</span><span class="path-arrow">&#8594;</span><span class="path-step">Download your PDF</span></div>
+  </div>
+  <div class="need-strip"><span class="need-label">You will need:</span><span class="need-chip">About 40 minutes for the lesson</span><span class="need-chip">Your Design Package from Milestone 8</span><span class="need-chip">Your Source and Line Log</span><span class="need-chip">Slide or video software</span></div>
+  <div class="project-strip" data-fields="unit,mode,format"></div>
+<div style="max-width:420px;">      <div class="q plain"><div class="q-prompt">Your last name<span class="saved-dot"></span></div><input class="answer" type="text" data-key="name" data-label="Name" data-project="name" placeholder="LastName" /></div>
+</div></div>
+
+<div class="tab-bar">
+  <button class="tab-btn" data-tab="project"><span class="tab-n">1</span>The project</button>
+  <button class="tab-btn" data-tab="plan"><span class="tab-n">2</span>Plan your spaces</button>
+  <button class="tab-btn" data-tab="build"><span class="tab-n">3</span>Build and log</button>
+  <button class="tab-btn" data-tab="claude"><span class="tab-n">4</span>Check with Claude</button>
+  <button class="tab-btn" data-tab="wrap"><span class="tab-n">5</span>Wrap up</button>
+</div>
+<div class="reset-row"><button class="reset-btn">Start this lesson over</button></div>
+
+<div class="tab-panel" id="tab-project">
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">1</div><div><div class="activity-title">The whole studio, and where this semester sits</div><div class="activity-sub">Sixteen milestones, eight of them still ahead of you</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>You have spent a semester planning a work. This semester you make it. Sixteen milestones run all year, one every two weeks. Milestones 1 to 8 were pre-production: you chose your unit, researched it, and designed the work on paper. Milestones 9 to 16, the gold tiles, are production and release. This lesson series sits beside them and walks you through each one.</div></div>
+      <div class="flow"><div class="flow-step"><div class="flow-n">1</div><div class="flow-t">Film grammar</div><div class="flow-d">The working vocabulary of cinema, tried on a real clip</div><div class="flow-when">Q1 &middot; WEEKS 1 TO 2</div></div><div class="flow-step"><div class="flow-n">2</div><div class="flow-t">Lock your project</div><div class="flow-d">Your unit, your mode, your contested question</div><div class="flow-when">Q1 &middot; WEEKS 3 TO 4</div></div><div class="flow-step"><div class="flow-n">3</div><div class="flow-t">Research Foundation</div><div class="flow-d">Sources gathered and annotated; Source and Line Log opened</div><div class="flow-when">Q1 &middot; WEEKS 5 TO 6</div></div><div class="flow-step"><div class="flow-n">4</div><div class="flow-t">The Treatment</div><div class="flow-d">Logline, through-line, scene or segment list</div><div class="flow-when">Q1 &middot; WEEKS 7 TO 8</div></div><div class="flow-step"><div class="flow-n">5</div><div class="flow-t">Script and narration draft</div><div class="flow-d">Written to be spoken aloud</div><div class="flow-when">Q2 &middot; WEEKS 1 TO 2</div></div><div class="flow-step"><div class="flow-n">6</div><div class="flow-t">Storyboard and blocking</div><div class="flow-d">Where each shot is framed</div><div class="flow-when">Q2 &middot; WEEKS 3 TO 4</div></div><div class="flow-step"><div class="flow-n">7</div><div class="flow-t">Accuracy Review #1</div><div class="flow-d">Every claim checked against its source</div><div class="flow-when">Q2 &middot; WEEKS 5 TO 6</div></div><div class="flow-step"><div class="flow-n">8</div><div class="flow-t">Design Package</div><div class="flow-d">Environments, props, light, color, sound plan</div><div class="flow-when">Q2 &middot; WEEKS 7 TO 8</div></div><div class="flow-step now"><div class="flow-n">9</div><div class="flow-t">Build the Environments</div><div class="flow-d">The spaces get built</div><div class="flow-when">Q3 &middot; WEEKS 1 TO 2</div></div><div class="flow-step now"><div class="flow-n">10</div><div class="flow-t">Capture, Part I</div><div class="flow-d">The first half, captured</div><div class="flow-when">Q3 &middot; WEEKS 3 TO 4</div></div><div class="flow-step now"><div class="flow-n">11</div><div class="flow-t">Capture, Part II</div><div class="flow-d">The second half, plus titles and sound</div><div class="flow-when">Q3 &middot; WEEKS 5 TO 6</div></div><div class="flow-step now"><div class="flow-n">12</div><div class="flow-t">Rough Cut and Critique</div><div class="flow-d">Assemble it and take honest feedback</div><div class="flow-when">Q3 &middot; WEEKS 7 TO 8</div></div><div class="flow-step now"><div class="flow-n">13</div><div class="flow-t">Edit and Assemble</div><div class="flow-d">Fine cut, citations, captions</div><div class="flow-when">Q4 &middot; WEEKS 1 TO 2</div></div><div class="flow-step now"><div class="flow-n">14</div><div class="flow-t">Accuracy Review #2</div><div class="flow-d">The final check, and the Accuracy Statement</div><div class="flow-when">Q4 &middot; WEEKS 3 TO 4</div></div><div class="flow-step now"><div class="flow-n">15</div><div class="flow-t">Publish</div><div class="flow-d">Deliver the kit</div><div class="flow-when">Q4 &middot; WEEKS 5 TO 6</div></div><div class="flow-step now"><div class="flow-n">16</div><div class="flow-t">Premiere and Reflect</div><div class="flow-d">Show it, speak it live, look back</div><div class="flow-when">Q4 &middot; WEEKS 7 TO 9</div></div></div>
+      <div class="flow-end"><div class="fe-k">WEEK 9 OF MODULE 4</div><div class="fe-t">One finished, captioned work, either a film or a documentary, premiered live with your published kit: director's statement, annotated bibliography, Accuracy Statement, and AI-use log.</div></div>
+      <div class="callout-gold" style="margin-top:14px;"><strong>The film stays the product.</strong> These lessons coach you through the steps. The work you make, and the files you turn in at each milestone, are the same ones your Canvas Assignments list. Each lesson ends with a PDF of your thinking, which you add to that milestone's submission.</div>
+    </div>
+  </div>
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num">2</div><div><div class="activity-title">The records you keep</div><div class="activity-sub">Four things to know before you start</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Three records follow your work all year, and you will meet each one in these lessons. Your <b>Source and Line Log</b> lists every source your work uses and every line or fact that comes from it, so any claim can be traced back. Your <b>AI-use log</b> gets one line per milestone: what you asked an AI tool, what it flagged, what you checked, and what you changed. Your teacher reads them to see how you worked. You also write a short <b>log entry</b> in each milestone to show what you built or captured.</div></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Your Source and Line Log is for which job?</div>
+        <div class="check-row">
+          <div class="opts"><button class="opt" data-correct="true" data-fb="Yes. It is how you prove every claim in your work has a source behind it.">Listing each source and tracing every line or fact back to it</button><button class="opt" data-correct="false" data-fb="That is your AI-use log, a separate record. This one tracks sources and the lines or facts they support.">Recording what you asked Claude and what you changed in reply</button><button class="opt" data-correct="false" data-fb="That is the edit log you keep in Milestone 13. This one is a record of sources, not of changes.">Listing every change you made from the rough cut onward</button></div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="activity bl-gold">
+    <div class="activity-head"><div class="activity-num">3</div><div><div class="activity-title">What your teacher grades: the Master Rubric</div><div class="activity-sub">Four bands, 25 points each</div></div></div>
+    <div class="activity-body">
+      <div class="goals"><div class="goal"><div class="goal-w"><b>25</b><span>of 100</span></div><div class="goal-b"><div class="goal-t">CRAFT</div><div class="goal-d">Film grammar (framing, sequence, shot choice), sound, pacing, captions. Deliberate choices, named correctly in your statement.</div></div></div><div class="goal"><div class="goal-w"><b>25</b><span>of 100</span></div><div class="goal-b"><div class="goal-t">ACCURACY</div><div class="goal-d">Every reference or claim traces to a logged source. Both reviews documented. Departures disclosed.</div></div></div><div class="goal"><div class="goal-w"><b>25</b><span>of 100</span></div><div class="goal-b"><div class="goal-t">ARGUMENT</div><div class="goal-d">Your director's statement poses the contested question, takes a position, and answers the strongest alternative reading.</div></div></div><div class="goal"><div class="goal-w"><b>25</b><span>of 100</span></div><div class="goal-b"><div class="goal-t">RESEARCH</div><div class="goal-d">At least four credible sources, at least two from JStor, each annotated for how it was used and verified.</div></div></div></div>
+      <div class="coach"><span class="ci">&#9679;</span><div>Each milestone is worth 15 points and is graded on completion: is the work there, is it honest, is it logged. Your finished kit, delivered in Quarter 4, is graded once on these four bands. Your live delivery at the premiere is scored separately on the 20-point recitation rubric (accuracy, delivery, interpretation) and counts as your Quarter 4 recitation. The Master Rubric page, linked in your Module 3 Week 1 materials, has the full descriptions. Read it once before you build.</div></div>
+      <div class="q"><div class="q-prompt">In your own words, what will you make this semester, and how will it be graded?<div class="q-hint">Two or three sentences. Say it the way you would explain it to a friend.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="projectOwnWords" data-label="The studio in my own words" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="plan">Continue: plan your spaces &#8594;</button>
+</div>
+
+<div class="tab-panel" id="tab-plan">
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">4</div><div><div class="activity-title">Set up your studio</div><div class="activity-sub">Your mode, and the format you build in</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Production starts with a list. Your Design Package from Milestone 8 describes the spaces your work needs: scenes if you are adapting a dramatic work (the dramatic track), stations if you are making a documentary (the documentary track). A station is one stop in a documentary walkthrough. Reread it now. Your mode, locked in Milestone 2, tells you which track you are on.</div></div>
+      <div class="carry" data-from="L2.mode" data-k="Your mode (Milestone 2)" data-empty="Nothing saved here. Open your Milestone 2 PDF and find your mode."></div>
+      <p>Which format are you building in?</p>
+      <div class="choices" data-key="format" data-project="format" data-label="My format" data-required>
+        <button class="choice" type="button" data-value="Narrated slide deck" data-fb="Each space becomes a slide or a short run of slides: reference images arranged the way the scene would be, with narration and captions.">Narrated slide deck</button>
+        <button class="choice" type="button" data-value="Video walkthrough" data-fb="Each space becomes a short video of reference images arranged the way the scene would be, with narration. Captions are required.">Short video walkthrough</button>
+      </div>
+      <div class="choice-fb"></div>
+      <div class="callout-gold" style="margin-top:14px;"><strong>The format.</strong> Build each space as a narrated slide deck, or a short video walkthrough of reference images arranged the way your scenes would be, with captions. The grade is for the pipeline and the thinking.</div>
+    </div>
+  </div>
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num">5</div><div><div class="activity-title">See one space before you build it</div><div class="activity-sub">A plan, a model entry, a check</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Before you assemble anything, picture the space from above. This plan shows one station from the model below. The camera sits where the dot is. The dashed line is the first thing it frames. Decide those two things for every space and the rest of the build follows.</div></div>
+      <svg viewBox="0 0 380 250" role="img" aria-label="Top-down plan of a printing office: a hand press and lamp, a window on the right wall, and the camera inside the doorway on the left, with a line of sight to the press" style="display:block;max-width:440px;width:100%;margin:4px auto 14px;">
+        <rect x="0" y="0" width="380" height="250" rx="12" fill="#0E1C42"/>
+        <rect x="40" y="30" width="300" height="170" rx="6" fill="none" stroke="#55C8E8" stroke-width="2.5"/>
+        <rect x="336" y="80" width="8" height="60" fill="#C7922C"/>
+        <rect x="36" y="105" width="8" height="40" fill="#0E1C42" stroke="#FFFFFF" stroke-width="1.5"/>
+        <rect x="190" y="80" width="70" height="50" rx="4" fill="#8A2E3B"/>
+        <circle cx="300" cy="55" r="9" fill="#C7922C"/>
+        <circle cx="70" cy="125" r="9" fill="#4F6F52" stroke="#FFFFFF" stroke-width="2"/>
+        <path d="M82,122 L186,108" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+        <path d="M186,108 L176,102 M186,108 L177,114" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+        <text x="225" y="110" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#FFFFFF">Hand press</text>
+        <text x="282" y="60" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#C7922C">Lamp</text>
+        <text x="70" y="150" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#FFFFFF">Camera</text>
+        <text x="60" y="172" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#55C8E8">Doorway</text>
+        <text x="326" y="160" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#C7922C">Window, evening light</text>
+        <text x="190" y="228" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#55C8E8">First thing seen: the press</text>
+      </svg>
+      <div class="notebook"><div class="nb-title">WHAT A BUILD-LOG ENTRY LOOKS LIKE (A MODEL, NOT YOUR ANSWER)</div><div class="nb-line"><b>Space:</b> Station 2, the printing office (documentary track, the 1787 ratification debate).</div><div class="nb-line"><b>Placed:</b> a hand press, stacked broadsheets, one lamp, a single window with evening light. The shot is framed from the doorway so the press is the first thing seen.</div><div class="nb-line"><b>Why:</b> the essays were written for newspapers, so the room where they were set in type carries the argument that this was persuasion, not decree.</div><div class="nb-line"><b>Sources:</b> the newspaper origin of the Federalist essays (Module 2); the press design checked against a museum photograph, Source and Line Log entry 14.</div><div class="nb-line"><b>Slide:</b> slide 4, three reference images arranged left to right as the scene would be seen.</div></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">In the model entry, why is the shot framed from the doorway?</div>
+        <div class="check-row">
+          <div class="opts"><button class="opt" data-correct="false" data-fb="Placement here is a choice with a reason, not a convenience. Read the Why line again.">Because a doorway is the easiest place to put the camera</button><button class="opt" data-correct="true" data-fb="Yes. Framing is a film-grammar choice, and it should serve the argument.">So the press is seen first and the space argues before narration</button><button class="opt" data-correct="false" data-fb="Both are in the space on purpose. The doorway is chosen so the press comes first.">To keep the lamp and the window out of the viewer's first view</button></div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">6</div><div><div class="activity-title">List your spaces</div><div class="activity-sub">One line each. This is your build plan.</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>For each space in your Design Package, write one sentence: what is the first thing the viewer should see, and what should they feel before a word is spoken? That sentence is your build target. If you cannot write it, the space is not designed yet. Go back to your Design Package before you open the tools.</div></div>
+      <div class="carry" data-from="L4.scenes" data-k="Your scene or segment list (Milestone 4)" data-empty="Nothing saved here. Open your Milestone 4 PDF and find your scene or segment list."></div>
+      <div class="q"><div class="q-prompt">List every space your script or narration needs. Number each one, name it, and give it a one-line build target.<div class="q-hint">Example: 1. The schoolroom. First thing seen: the slate with the alphabet. Feeling: small and curious.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="spaceList" data-label="My spaces and their build targets" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="build">Continue: build and log &#8594;</button>
+</div>
+
+<div class="tab-panel" id="tab-build">
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">7</div><div><div class="activity-title">Build, then log each space</div><div class="activity-sub">One entry per space, with an image</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Now assemble each space as a narrated slide or a short video walkthrough of reference images. Set the environment, props, light and color, and how each shot is framed. Use the film grammar you named in your Design Package: mise-en-sc&egrave;ne (everything arranged in the scene), framing, and sightlines (what the viewer's eyes are drawn to). Take at least one image of each finished space, a screenshot or a photo. Then write one log entry per space, in the model's format.</div></div>
+      <div class="q"><div class="q-prompt">Space 1: what you placed, and why<div class="q-hint">Name the space, then the objects, light, and color, and the reason for each.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="sp1Placed" data-label="Space 1: what I placed and why" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">Space 1: how the shot is framed, and the film-grammar choice behind it<div class="q-hint">Use the film vocabulary: placement, sightline, scale, light.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="sp1View" data-label="Space 1: framing and film-grammar choice" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">Space 1: which sources justify your key choices<div class="q-hint">Give the Source and Line Log entry numbers.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="sp1Src" data-label="Space 1: sources" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">Space 2 (optional): what you placed, and why<div class="q-hint">Name the space, then the objects, light, and color, and the reason for each.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="sp2Placed" data-label="Space 2: what I placed and why"></textarea></div>
+      <div class="q"><div class="q-prompt">Space 2: how the shot is framed, and the film-grammar choice behind it<div class="q-hint">Use the film vocabulary: placement, sightline, scale, light.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="sp2View" data-label="Space 2: framing and film-grammar choice"></textarea></div>
+      <div class="q"><div class="q-prompt">Space 2: which sources justify your key choices<div class="q-hint">Give the Source and Line Log entry numbers.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="sp2Src" data-label="Space 2: sources"></textarea></div>
+      <div class="q"><div class="q-prompt">Space 3 (optional): what you placed, and why<div class="q-hint">Name the space, then the objects, light, and color, and the reason for each.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="sp3Placed" data-label="Space 3: what I placed and why"></textarea></div>
+      <div class="q"><div class="q-prompt">Space 3: how the shot is framed, and the film-grammar choice behind it<div class="q-hint">Use the film vocabulary: placement, sightline, scale, light.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="sp3View" data-label="Space 3: framing and film-grammar choice"></textarea></div>
+      <div class="q"><div class="q-prompt">Space 3: which sources justify your key choices<div class="q-hint">Give the Source and Line Log entry numbers.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="sp3Src" data-label="Space 3: sources"></textarea></div>
+      <div class="coach"><span class="ci">&#9679;</span><div>Have more than three spaces? Write the rest in your Word document in the same format. Your submission needs one entry and at least one image for every space.</div></div>
+      <div class="q"><div class="q-prompt">Which Source and Line Log entries did you add or update this week?<div class="q-hint">Every period detail you placed should trace to an entry. List the entry numbers and what each covers.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="logUpdate" data-label="Source and Line Log entries I added or updated" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="claude">Continue: check with Claude &#8594;</button>
+</div>
+
+<div class="tab-panel" id="tab-claude">
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">8</div><div><div class="activity-title">Check one space for anachronisms</div><div class="activity-sub">Flag, verify, correct or keep, log</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Use Claude, then log it. Describe one finished space to Claude in words and ask it to flag anything that might be anachronistic or inaccurate for your unit's period. An anachronism is a detail from the wrong time, like a modern bulb in an 1800s room. Treat every flag as a question, not a verdict. Claude guesses from patterns, so it can flag something true and miss something false. You verify each flag against a real source.</div></div>
+      <div class="q"><div class="q-prompt">Describe one finished space in words<div class="q-hint">Objects, materials, light, and any clothing. Words only. Write the description you will give Claude.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="aiDescribe" data-label="My space description for Claude" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">What did you ask Claude, in your own words?<div class="q-hint">Write what you actually pasted or typed, in your own words.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="aiAsked" data-label="What I asked Claude" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">What did Claude flag? List each flag.<span class="saved-dot"></span></div><textarea class="answer" data-key="aiFlagged" data-label="What Claude flagged" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">How did you check each flag? Name the source.<div class="q-hint">Name the source you opened. Claude points. You decide.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="aiVerified" data-label="What I checked against a real source" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">What did you change, and what did you keep even though it was flagged?<div class="q-hint">Record the outcome in your Source and Line Log, too.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="aiChanged" data-label="What I kept, fixed, or removed" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">Your AI-use log line, in one to three sentences<div class="q-hint">What you asked, what it flagged, what you verified and changed. This line goes in your submission.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="aiLine" data-label="My AI-use log line" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="wrap">Continue: wrap up &#8594;</button>
+</div>
+
+<div class="tab-panel" id="tab-wrap">
+  <div class="project-strip" data-fields="unit,mode,format"></div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">9</div><div><div class="activity-title">Your Milestone 9 work, on one page</div><div class="activity-sub">Download it, then turn it in the way the checklist says</div></div></div>
+    <div class="activity-body">
+      <div class="gathered">
+        <div class="gathered-head"><div><div class="gk">ALL YOUR WORK FROM THIS LESSON</div><div class="gt">Review, copy, or download</div></div></div>
+        <div class="gathered-body">
+          <textarea class="gathered-output" id="gathered" readonly></textarea>
+          <div class="gathered-actions">
+            <button class="gbtn pdf" data-action="pdf" type="button">Download as PDF</button>
+            <button class="gbtn ghost" data-action="copy" type="button">Copy the text</button>
+          </div>
+          <div class="gstatus" id="gstatus"></div>
+        </div>
+      </div>
+      <div class="turn-in">
+        <div class="turn-in-head"><div class="gk">BEFORE YOU TURN IT IN</div><div class="gt">Check each line</div></div>
+        <div class="turn-in-body">
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">Every space the script needs is assembled as slides or video, with a log entry and at least one image.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">Each entry names the framing and the film-grammar choice behind it.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My Source and Line Log is updated so period details trace to sources.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I wrote an AI-use log line: what I asked, what was flagged, what I verified and changed.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I submitted my build log with images, my updated Source and Line Log, and my AI-use log line as one Word document or PDF, named LastName_FirstName_Adaptation_M9_ELA11, and added this lesson's PDF, saved as LastName_FirstName_Adaptation_M9_Lesson_ELA11, to the same submission in Canvas. Due: end of Week 2.</div></div>
+        </div>
+      </div>
+      <div class="callout-gold" style="margin-top:14px;"><strong>Next.</strong> Milestone 10, Capture, Part I, is due at the end of Week 4. Open <a href="studio-lesson-10-capture-part-one.html">Milestone 10: Capture, Part I</a> in Week 3. You will capture the first half of your work, scene by scene, from the spaces you just built.</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="footer">
+  <div class="f1"><span>Optima Academy Online</span> &middot; ENGLISH 3 HONORS &middot; The Adaptation Studio</div>
+  <div class="f2">Milestone 9 of 16 &middot; Build the Environments</div>
+  <div class="f3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>window.PROJECT_LABELS = { unit: "Your unit", mode: "Your mode", format: "Your format" };</script>
+<script src="project.js"></script>
+</body>
+</html>

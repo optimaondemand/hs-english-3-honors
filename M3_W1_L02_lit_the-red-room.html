@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English III Honors &middot; The Red-Room: A Room Built to Mean</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #C7CFE6; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #3B4E8C; color: #FFFFFF; border-color: #3B4E8C; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .order-list { display:flex; flex-direction:column; gap:8px; }
+    .order-list button { background:#FFFFFF; border:1.5px solid #C7CFE6; border-radius:8px; padding:10px 14px; font-size:15px; color:#0E1C42; cursor:pointer; font-family:inherit; text-align:left; display:flex; gap:10px; align-items:center; }
+    .order-list button:hover { background:#F4F6FA; border-color:#3B4E8C; }
+    .order-list button .seq { min-width:24px; height:24px; border-radius:50%; background:#EEF1F8; color:#3B4E8C; font-size:13px; display:inline-flex; align-items:center; justify-content:center; }
+    .order-list button.picked { background:#3B4E8C; color:#FFFFFF; border-color:#3B4E8C; }
+    .order-list button.picked .seq { background:#C7922C; color:#FFFFFF; }
+    .rj-badge { background:#EEF1F8; border:1px solid #C7CFE6; border-left:5px solid #3B4E8C; border-radius:8px; padding:14px 18px; margin:16px 0; display:flex; gap:14px; align-items:flex-start; }
+    .rj-badge .rj-icon { font-size:30px; line-height:1; }
+    .rj-badge .rj-label { font-size:11px; color:#3B4E8C; letter-spacing:0.4px; margin-bottom:6px; }
+    .rj-badge .rj-task { font-size:16px; color:#1a2340; line-height:1.6; }
+    details.je-reader summary::-webkit-details-marker { display:none; }
+    details.je-reader[open] summary { border-bottom:1px solid #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH III HONORS</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 12px; color: #0e1c42;">The Sovereign Self</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 1</div>
+        <div style="font-size: 12px; color: #0e1c42;">Literature (2 of 3)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Red-Room: A Room Built to Mean</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 4px;">Reading</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Jane Eyre, ch. 2 (reread) and ch. 3</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Literature</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Red-Room: A Room Built to Mean</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Red curtains, a white bed like a throne, a locked door, a mirror, and a child who sees a ghost in it. None of it is accidental.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Novelists of Bront&euml;'s generation had inherited a way of writing that made rooms, weather, and light carry feeling: the <strong>Gothic</strong> mode. Today you learn to read a described space as a made thing, an arrangement of color, enclosure, and reflection that does the work of telling you what a scene means before anyone says it. You go back into the red-room of chapter 2 with that tool, and then read chapter 3, where the narrator looks back at the night from a long way off and decides what she owes the woman who locked her in.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name four elements of a Gothic interior (enclosure, color, the dead, the uncanny reflection) and find each in Bront&euml;'s red-room.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace how Jane's feelings move through the scene, from rebellion to terror, using the order of the text.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what the narrating Jane adds in chapter 3 that the child in the red-room could not know.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A WARM-UP BEFORE WE BEGIN</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; QUICK CHECK-IN</div>
+            <div class="widget-question">Picture a room that has frightened you, in life or in a film. What did the frightening actually come from?</div>
+            <div class="widget-options">
+                <button data-response="Enclosure is the oldest Gothic move: a space you cannot leave. Notice how many times chapter 2 tells you the red-room door is locked, and who holds the key.">Being shut in</button>
+                <button data-response="Color and light do a great deal of quiet work. The red-room is built almost entirely from two colors; watch which two, and what glares out of the dark.">The light, or the color of things</button>
+                <button data-response="A death in a room changes the room. Chapter 2 gives the red-room a history before Jane ever sits down in it; watch when the narrator tells you and how.">Something that happened there</button>
+                <button data-response="The uncanny is a familiar thing turned strange, most often your own reflection. The red-room has a mirror. Watch what Jane sees in it.">Seeing something that should not be there</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Reading a room as a made thing</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">The <strong>Gothic</strong> is a way of writing that began in the late 1700s in novels of haunted castles and locked chambers, and by Bront&euml;'s time had become a set of tools any serious writer could pick up. Its subject is fear, but its method is furniture: a Gothic writer tells you what a character feels by building the space around her. Four elements do most of the work, and they are the reading tool for today. <strong>Enclosure</strong>: a space the character cannot leave. <strong>Color and light</strong>: usually a few strong colors and a play of dark against glare. <strong>The presence of the dead</strong>: a history in the room that makes it more than a room. <strong>The uncanny reflection</strong>: a familiar thing, often the self, seen as strange. A room built from these does not describe a feeling. It <em>is</em> the feeling, made visible.</p>
+
+        <!-- CORE VISUAL: the four Gothic elements as a labeled tool -->
+        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 20px;">
+            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: 0.6px; margin-bottom: 14px; text-align: center;">THE GOTHIC INTERIOR: FOUR THINGS TO LOOK FOR</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>Enclosure</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">walls, locks, the key held by someone else</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Ask: who can leave, who cannot, and who decides?</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>Color and light</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">a few strong colors; dark against glare</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Ask: which colors repeat, and what stands out white or bright in the gloom?</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #C7922C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>The dead</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">a history that haunts the space</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Ask: what happened here before, and who remembers it?</div></div>
+                <div style="flex: 1; min-width: 200px; background: #FFFFFF; border-top: 4px solid #3B4E8C; border: 1px solid #C7CFE6; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 18px; color: #0e1c42;"><strong>The uncanny reflection</strong></div><div style="font-size: 13px; color: #3B4E8C; margin-bottom: 6px;">the familiar made strange, often the self</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5;">Ask: what does the character see that she almost does not recognize?</div></div>
+            </div>
+            <div style="text-align: center; background: #0E1C42; color: #fff; font-size: 14px; padding: 8px 14px; border-radius: 6px; margin-top: 14px;">Find the four in the passage first. Only then ask what the room is saying about the girl inside it.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 2 &middot; REREAD THE RED-ROOM, THEN READ CHAPTER 3</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Go back to chapter 2 (embedded in the Gateshead lesson) and reread from the moment the door is locked to the end of the chapter, slowly, with the four elements in hand. Then read chapter 3 below. <strong>Watch for:</strong> in chapter 2, the exact order of Jane's feelings from the moment she is left alone; in chapter 3, the sentence where the narrator addresses Mrs. Reed directly across the years, and what she decides to do about her. Notice also the ballad Bessie sings, and what its "poor orphan child" has that Jane does not yet.</p>
+        <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 0 0 12px 0;">
+            <div style="font-size: 16px; color: #0e1c42; line-height: 1.6;">&#128279; <strong>Reread:</strong> <em>Jane Eyre</em>, chapter 2, from "They went, shutting the door, and locking it behind them" to the end (in the Gateshead lesson, or at <a href="https://www.gutenberg.org/ebooks/1260" style="color: #3B4E8C;">Project Gutenberg</a>).</div>
+        </div>
+        <details class="je-reader" style="background:#FFFFFF; border:1px solid #C7CFE6; border-left:5px solid #C7922C; border-radius:8px; padding:0; margin:14px 0;">
+  <summary style="cursor:pointer; padding:14px 18px; font-size:17px; color:#0e1c42; list-style:none;">&#128214; <strong>Read: <em>Jane Eyre</em>, Chapter III</strong> <span style="font-size:13px; color:#3B4E8C;">(about 3,200 words &middot; public domain, Project Gutenberg #1260)</span></summary>
+  <div style="padding:6px 22px 18px 22px; font-size:17px; color:#1a2340; line-height:1.75;">
+    <p style="margin:0 0 14px 0;">The next thing I remember is, waking up with a feeling as if I had had a frightful nightmare, and seeing before me a terrible red glare, crossed with thick black bars. I heard voices, too, speaking with a hollow sound, and as if muffled by a rush of wind or water: agitation, uncertainty, and an all-predominating sense of terror confused my faculties. Ere long, I became aware that some one was handling me; lifting me up and supporting me in a sitting posture, and that more tenderly than I had ever been raised or upheld before. I rested my head against a pillow or an arm, and felt easy.</p>
+    <p style="margin:0 0 14px 0;">In five minutes more the cloud of bewilderment dissolved: I knew quite well that I was in my own bed, and that the red glare was the nursery fire. It was night: a candle burnt on the table; Bessie stood at the bed-foot with a basin in her hand, and a gentleman sat in a chair near my pillow, leaning over me.</p>
+    <p style="margin:0 0 14px 0;">I felt an inexpressible relief, a soothing conviction of protection and security, when I knew that there was a stranger in the room, an individual not belonging to Gateshead, and not related to Mrs. Reed. Turning from Bessie (though her presence was far less obnoxious to me than that of Abbot, for instance, would have been), I scrutinised the face of the gentleman: I knew him; it was Mr. Lloyd, an apothecary, sometimes called in by Mrs. Reed when the servants were ailing: for herself and the children she employed a physician.</p>
+    <p style="margin:0 0 14px 0;">“Well, who am I?” he asked.</p>
+    <p style="margin:0 0 14px 0;">I pronounced his name, offering him at the same time my hand: he took it, smiling and saying, “We shall do very well by-and-by.” Then he laid me down, and addressing Bessie, charged her to be very careful that I was not disturbed during the night. Having given some further directions, and intimated that he should call again the next day, he departed; to my grief: I felt so sheltered and befriended while he sat in the chair near my pillow; and as he closed the door after him, all the room darkened and my heart again sank: inexpressible sadness weighed it down.</p>
+    <p style="margin:0 0 14px 0;">“Do you feel as if you should sleep, Miss?” asked Bessie, rather softly.</p>
+    <p style="margin:0 0 14px 0;">Scarcely dared I answer her; for I feared the next sentence might be rough. “I will try.”</p>
+    <p style="margin:0 0 14px 0;">“Would you like to drink, or could you eat anything?”</p>
+    <p style="margin:0 0 14px 0;">“No, thank you, Bessie.”</p>
+    <p style="margin:0 0 14px 0;">“Then I think I shall go to bed, for it is past twelve o’clock; but you may call me if you want anything in the night.”</p>
+    <p style="margin:0 0 14px 0;">Wonderful civility this! It emboldened me to ask a question.</p>
+    <p style="margin:0 0 14px 0;">“Bessie, what is the matter with me? Am I ill?”</p>
+    <p style="margin:0 0 14px 0;">“You fell sick, I suppose, in the red-room with crying; you’ll be better soon, no doubt.”</p>
+    <p style="margin:0 0 14px 0;">Bessie went into the housemaid’s apartment, which was near. I heard her say—</p>
+    <p style="margin:0 0 14px 0;">“Sarah, come and sleep with me in the nursery; I daren’t for my life be alone with that poor child to-night: she might die; it’s such a strange thing she should have that fit: I wonder if she saw anything. Missis was rather too hard.”</p>
+    <p style="margin:0 0 14px 0;">Sarah came back with her; they both went to bed; they were whispering together for half-an-hour before they fell asleep. I caught scraps of their conversation, from which I was able only too distinctly to infer the main subject discussed.</p>
+    <p style="margin:0 0 14px 0;">“Something passed her, all dressed in white, and vanished”—“A great black dog behind him”—“Three loud raps on the chamber door”—“A light in the churchyard just over his grave,” &amp;c., &amp;c.</p>
+    <p style="margin:0 0 14px 0;">At last both slept: the fire and the candle went out. For me, the watches of that long night passed in ghastly wakefulness; ear, eye, and mind were alike strained by dread: such dread as children only can feel.</p>
+    <p style="margin:0 0 14px 0;">No severe or prolonged bodily illness followed this incident of the red-room; it only gave my nerves a shock of which I feel the reverberation to this day. Yes, Mrs. Reed, to you I owe some fearful pangs of mental suffering, but I ought to forgive you, for you knew not what you did: while rending my heart-strings, you thought you were only uprooting my bad propensities.</p>
+    <p style="margin:0 0 14px 0;">Next day, by noon, I was up and dressed, and sat wrapped in a shawl by the nursery hearth. I felt physically weak and broken down: but my worse ailment was an unutterable wretchedness of mind: a wretchedness which kept drawing from me silent tears; no sooner had I wiped one salt drop from my cheek than another followed. Yet, I thought, I ought to have been happy, for none of the Reeds were there, they were all gone out in the carriage with their mama. Abbot, too, was sewing in another room, and Bessie, as she moved hither and thither, putting away toys and arranging drawers, addressed to me every now and then a word of unwonted kindness. This state of things should have been to me a paradise of peace, accustomed as I was to a life of ceaseless reprimand and thankless fagging; but, in fact, my racked nerves were now in such a state that no calm could soothe, and no pleasure excite them agreeably.</p>
+    <p style="margin:0 0 14px 0;">Bessie had been down into the kitchen, and she brought up with her a tart on a certain brightly painted china plate, whose bird of paradise, nestling in a wreath of convolvuli and rosebuds, had been wont to stir in me a most enthusiastic sense of admiration; and which plate I had often petitioned to be allowed to take in my hand in order to examine it more closely, but had always hitherto been deemed unworthy of such a privilege. This precious vessel was now placed on my knee, and I was cordially invited to eat the circlet of delicate pastry upon it. Vain favour! coming, like most other favours long deferred and often wished for, too late! I could not eat the tart; and the plumage of the bird, the tints of the flowers, seemed strangely faded: I put both plate and tart away. Bessie asked if I would have a book: the word <em>book</em> acted as a transient stimulus, and I begged her to fetch Gulliver’s Travels from the library. This book I had again and again perused with delight. I considered it a narrative of facts, and discovered in it a vein of interest deeper than what I found in fairy tales: for as to the elves, having sought them in vain among foxglove leaves and bells, under mushrooms and beneath the ground-ivy mantling old wall-nooks, I had at length made up my mind to the sad truth, that they were all gone out of England to some savage country where the woods were wilder and thicker, and the population more scant; whereas, Lilliput and Brobdignag being, in my creed, solid parts of the earth’s surface, I doubted not that I might one day, by taking a long voyage, see with my own eyes the little fields, houses, and trees, the diminutive people, the tiny cows, sheep, and birds of the one realm; and the corn-fields forest-high, the mighty mastiffs, the monster cats, the tower-like men and women, of the other. Yet, when this cherished volume was now placed in my hand—when I turned over its leaves, and sought in its marvellous pictures the charm I had, till now, never failed to find—all was eerie and dreary; the giants were gaunt goblins, the pigmies malevolent and fearful imps, Gulliver a most desolate wanderer in most dread and dangerous regions. I closed the book, which I dared no longer peruse, and put it on the table, beside the untasted tart.</p>
+    <p style="margin:0 0 14px 0;">Bessie had now finished dusting and tidying the room, and having washed her hands, she opened a certain little drawer, full of splendid shreds of silk and satin, and began making a new bonnet for Georgiana’s doll. Meantime she sang: her song was—</p>
+    <p style="margin:0 0 14px 0;">“In the days when we went gipsying, A long time ago.”</p>
+    <p style="margin:0 0 14px 0;">I had often heard the song before, and always with lively delight; for Bessie had a sweet voice,—at least, I thought so. But now, though her voice was still sweet, I found in its melody an indescribable sadness. Sometimes, preoccupied with her work, she sang the refrain very low, very lingeringly; “A long time ago” came out like the saddest cadence of a funeral hymn. She passed into another ballad, this time a really doleful one.</p>
+    <div style="margin:0 0 14px 24px; font-style:italic;">“My feet they are sore, and my limbs they are weary;<br />Long is the way, and the mountains are wild;<br />Soon will the twilight close moonless and dreary<br />Over the path of the poor orphan child.</div>
+    <div style="margin:0 0 14px 24px; font-style:italic;">Why did they send me so far and so lonely,<br />Up where the moors spread and grey rocks are piled?<br />Men are hard-hearted, and kind angels only<br />Watch o’er the steps of a poor orphan child.</div>
+    <div style="margin:0 0 14px 24px; font-style:italic;">Yet distant and soft the night breeze is blowing,<br />Clouds there are none, and clear stars beam mild,<br />God, in His mercy, protection is showing,<br />Comfort and hope to the poor orphan child.</div>
+    <div style="margin:0 0 14px 24px; font-style:italic;">Ev’n should I fall o’er the broken bridge passing,<br />Or stray in the marshes, by false lights beguiled,<br />Still will my Father, with promise and blessing,<br />Take to His bosom the poor orphan child.</div>
+    <div style="margin:0 0 14px 24px; font-style:italic;">There is a thought that for strength should avail me,<br />Though both of shelter and kindred despoiled;<br />Heaven is a home, and a rest will not fail me;<br />God is a friend to the poor orphan child.”</div>
+    <p style="margin:0 0 14px 0;">“Come, Miss Jane, don’t cry,” said Bessie as she finished. She might as well have said to the fire, “don’t burn!” but how could she divine the morbid suffering to which I was a prey? In the course of the morning Mr. Lloyd came again.</p>
+    <p style="margin:0 0 14px 0;">“What, already up!” said he, as he entered the nursery. “Well, nurse, how is she?”</p>
+    <p style="margin:0 0 14px 0;">Bessie answered that I was doing very well.</p>
+    <p style="margin:0 0 14px 0;">“Then she ought to look more cheerful. Come here, Miss Jane: your name is Jane, is it not?”</p>
+    <p style="margin:0 0 14px 0;">“Yes, sir, Jane Eyre.”</p>
+    <p style="margin:0 0 14px 0;">“Well, you have been crying, Miss Jane Eyre; can you tell me what about? Have you any pain?”</p>
+    <p style="margin:0 0 14px 0;">“No, sir.”</p>
+    <p style="margin:0 0 14px 0;">“Oh! I daresay she is crying because she could not go out with Missis in the carriage,” interposed Bessie.</p>
+    <p style="margin:0 0 14px 0;">“Surely not! why, she is too old for such pettishness.”</p>
+    <p style="margin:0 0 14px 0;">I thought so too; and my self-esteem being wounded by the false charge, I answered promptly, “I never cried for such a thing in my life: I hate going out in the carriage. I cry because I am miserable.”</p>
+    <p style="margin:0 0 14px 0;">“Oh fie, Miss!” said Bessie.</p>
+    <p style="margin:0 0 14px 0;">The good apothecary appeared a little puzzled. I was standing before him; he fixed his eyes on me very steadily: his eyes were small and grey; not very bright, but I dare say I should think them shrewd now: he had a hard-featured yet good-natured looking face. Having considered me at leisure, he said—</p>
+    <p style="margin:0 0 14px 0;">“What made you ill yesterday?”</p>
+    <p style="margin:0 0 14px 0;">“She had a fall,” said Bessie, again putting in her word.</p>
+    <p style="margin:0 0 14px 0;">“Fall! why, that is like a baby again! Can’t she manage to walk at her age? She must be eight or nine years old.”</p>
+    <p style="margin:0 0 14px 0;">“I was knocked down,” was the blunt explanation, jerked out of me by another pang of mortified pride; “but that did not make me ill,” I added; while Mr. Lloyd helped himself to a pinch of snuff.</p>
+    <p style="margin:0 0 14px 0;">As he was returning the box to his waistcoat pocket, a loud bell rang for the servants’ dinner; he knew what it was. “That’s for you, nurse,” said he; “you can go down; I’ll give Miss Jane a lecture till you come back.”</p>
+    <p style="margin:0 0 14px 0;">Bessie would rather have stayed, but she was obliged to go, because punctuality at meals was rigidly enforced at Gateshead Hall.</p>
+    <p style="margin:0 0 14px 0;">“The fall did not make you ill; what did, then?” pursued Mr. Lloyd when Bessie was gone.</p>
+    <p style="margin:0 0 14px 0;">“I was shut up in a room where there is a ghost till after dark.”</p>
+    <p style="margin:0 0 14px 0;">I saw Mr. Lloyd smile and frown at the same time.</p>
+    <p style="margin:0 0 14px 0;">“Ghost! What, you are a baby after all! You are afraid of ghosts?”</p>
+    <p style="margin:0 0 14px 0;">“Of Mr. Reed’s ghost I am: he died in that room, and was laid out there. Neither Bessie nor any one else will go into it at night, if they can help it; and it was cruel to shut me up alone without a candle,—so cruel that I think I shall never forget it.”</p>
+    <p style="margin:0 0 14px 0;">“Nonsense! And is it that makes you so miserable? Are you afraid now in daylight?”</p>
+    <p style="margin:0 0 14px 0;">“No: but night will come again before long: and besides,—I am unhappy,—very unhappy, for other things.”</p>
+    <p style="margin:0 0 14px 0;">“What other things? Can you tell me some of them?”</p>
+    <p style="margin:0 0 14px 0;">How much I wished to reply fully to this question! How difficult it was to frame any answer! Children can feel, but they cannot analyse their feelings; and if the analysis is partially effected in thought, they know not how to express the result of the process in words. Fearful, however, of losing this first and only opportunity of relieving my grief by imparting it, I, after a disturbed pause, contrived to frame a meagre, though, as far as it went, true response.</p>
+    <p style="margin:0 0 14px 0;">“For one thing, I have no father or mother, brothers or sisters.”</p>
+    <p style="margin:0 0 14px 0;">“You have a kind aunt and cousins.”</p>
+    <p style="margin:0 0 14px 0;">Again I paused; then bunglingly enounced—</p>
+    <p style="margin:0 0 14px 0;">“But John Reed knocked me down, and my aunt shut me up in the red-room.”</p>
+    <p style="margin:0 0 14px 0;">Mr. Lloyd a second time produced his snuff-box.</p>
+    <p style="margin:0 0 14px 0;">“Don’t you think Gateshead Hall a very beautiful house?” asked he. “Are you not very thankful to have such a fine place to live at?”</p>
+    <p style="margin:0 0 14px 0;">“It is not my house, sir; and Abbot says I have less right to be here than a servant.”</p>
+    <p style="margin:0 0 14px 0;">“Pooh! you can’t be silly enough to wish to leave such a splendid place?”</p>
+    <p style="margin:0 0 14px 0;">“If I had anywhere else to go, I should be glad to leave it; but I can never get away from Gateshead till I am a woman.”</p>
+    <p style="margin:0 0 14px 0;">“Perhaps you may—who knows? Have you any relations besides Mrs. Reed?”</p>
+    <p style="margin:0 0 14px 0;">“I think not, sir.”</p>
+    <p style="margin:0 0 14px 0;">“None belonging to your father?”</p>
+    <p style="margin:0 0 14px 0;">“I don’t know: I asked Aunt Reed once, and she said possibly I might have some poor, low relations called Eyre, but she knew nothing about them.”</p>
+    <p style="margin:0 0 14px 0;">“If you had such, would you like to go to them?”</p>
+    <p style="margin:0 0 14px 0;">I reflected. Poverty looks grim to grown people; still more so to children: they have not much idea of industrious, working, respectable poverty; they think of the word only as connected with ragged clothes, scanty food, fireless grates, rude manners, and debasing vices: poverty for me was synonymous with degradation.</p>
+    <p style="margin:0 0 14px 0;">“No; I should not like to belong to poor people,” was my reply.</p>
+    <p style="margin:0 0 14px 0;">“Not even if they were kind to you?”</p>
+    <p style="margin:0 0 14px 0;">I shook my head: I could not see how poor people had the means of being kind; and then to learn to speak like them, to adopt their manners, to be uneducated, to grow up like one of the poor women I saw sometimes nursing their children or washing their clothes at the cottage doors of the village of Gateshead: no, I was not heroic enough to purchase liberty at the price of caste.</p>
+    <p style="margin:0 0 14px 0;">“But are your relatives so very poor? Are they working people?”</p>
+    <p style="margin:0 0 14px 0;">“I cannot tell; Aunt Reed says if I have any, they must be a beggarly set: I should not like to go a begging.”</p>
+    <p style="margin:0 0 14px 0;">“Would you like to go to school?”</p>
+    <p style="margin:0 0 14px 0;">Again I reflected: I scarcely knew what school was: Bessie sometimes spoke of it as a place where young ladies sat in the stocks, wore backboards, and were expected to be exceedingly genteel and precise: John Reed hated his school, and abused his master; but John Reed’s tastes were no rule for mine, and if Bessie’s accounts of school-discipline (gathered from the young ladies of a family where she had lived before coming to Gateshead) were somewhat appalling, her details of certain accomplishments attained by these same young ladies were, I thought, equally attractive. She boasted of beautiful paintings of landscapes and flowers by them executed; of songs they could sing and pieces they could play, of purses they could net, of French books they could translate; till my spirit was moved to emulation as I listened. Besides, school would be a complete change: it implied a long journey, an entire separation from Gateshead, an entrance into a new life.</p>
+    <p style="margin:0 0 14px 0;">“I should indeed like to go to school,” was the audible conclusion of my musings.</p>
+    <p style="margin:0 0 14px 0;">“Well, well! who knows what may happen?” said Mr. Lloyd, as he got up. “The child ought to have change of air and scene,” he added, speaking to himself; “nerves not in a good state.”</p>
+    <p style="margin:0 0 14px 0;">Bessie now returned; at the same moment the carriage was heard rolling up the gravel-walk.</p>
+    <p style="margin:0 0 14px 0;">“Is that your mistress, nurse?” asked Mr. Lloyd. “I should like to speak to her before I go.”</p>
+    <p style="margin:0 0 14px 0;">Bessie invited him to walk into the breakfast-room, and led the way out. In the interview which followed between him and Mrs. Reed, I presume, from after-occurrences, that the apothecary ventured to recommend my being sent to school; and the recommendation was no doubt readily enough adopted; for as Abbot said, in discussing the subject with Bessie when both sat sewing in the nursery one night, after I was in bed, and, as they thought, asleep, “Missis was, she dared say, glad enough to get rid of such a tiresome, ill-conditioned child, who always looked as if she were watching everybody, and scheming plots underhand.” Abbot, I think, gave me credit for being a sort of infantine Guy Fawkes.</p>
+    <p style="margin:0 0 14px 0;">On that same occasion I learned, for the first time, from Miss Abbot’s communications to Bessie, that my father had been a poor clergyman; that my mother had married him against the wishes of her friends, who considered the match beneath her; that my grandfather Reed was so irritated at her disobedience, he cut her off without a shilling; that after my mother and father had been married a year, the latter caught the typhus fever while visiting among the poor of a large manufacturing town where his curacy was situated, and where that disease was then prevalent: that my mother took the infection from him, and both died within a month of each other.</p>
+    <p style="margin:0 0 14px 0;">Bessie, when she heard this narrative, sighed and said, “Poor Miss Jane is to be pitied, too, Abbot.”</p>
+    <p style="margin:0 0 14px 0;">“Yes,” responded Abbot; “if she were a nice, pretty child, one might compassionate her forlornness; but one really cannot care for such a little toad as that.”</p>
+    <p style="margin:0 0 14px 0;">“Not a great deal, to be sure,” agreed Bessie: “at any rate, a beauty like Miss Georgiana would be more moving in the same condition.”</p>
+    <p style="margin:0 0 14px 0;">“Yes, I doat on Miss Georgiana!” cried the fervent Abbot. “Little darling!—with her long curls and her blue eyes, and such a sweet colour as she has; just as if she were painted!—Bessie, I could fancy a Welsh rabbit for supper.”</p>
+    <p style="margin:0 0 14px 0;">“So could I—with a roast onion. Come, we’ll go down.” They went.</p>
+  </div>
+</details>
+    </div>
+
+    <!-- Post-reading: ORDER the movement of Jane's feelings (student supplies) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 3 &middot; NOW YOU: TRACE THE NIGHT IN THE RED-ROOM</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Bront&euml; builds the scene as a sequence: the child's mood changes several times before the door is shaken. Put these five moments from chapter 2 in the order the text gives them. Use what you reread, not memory.</p>
+        <div class="optima-widget ow-order" data-done="That is the order of the chapter: rebellion, the room, the reflection, the question of injustice, and only then terror. Bronte lets the mind fight before the nerves fail.">
+            <div class="widget-kicker">&#128204; CLICK THE MOMENTS IN THE ORDER THEY HAPPEN</div>
+            <div class="widget-question">Five beats, from being locked in to the door being shaken.</div>
+            <div class="order-list">
+                <button data-order="3"><span class="seq" data-default="?">?</span> Crossing before the looking-glass, Jane sees "the strange little figure there gazing at me" and thinks it "like one of the tiny phantoms" of Bessie's stories.</button>
+                <button data-order="1"><span class="seq" data-default="?">?</span> Left alone, Jane takes in the room: the mahogany bed with "curtains of deep red damask," the red carpet, the white piled-up bed glaring out of the shade.</button>
+                <button data-order="5"><span class="seq" data-default="?">?</span> A light gleams on the wall; Jane takes it for "a herald of some coming vision from another world," and "endurance broke down."</button>
+                <button data-order="2"><span class="seq" data-default="?">?</span> The narrator tells us the room's secret: Mr. Reed "breathed his last" here nine years ago, and "a sense of dreary consecration had guarded it."</button>
+                <button data-order="4"><span class="seq" data-default="?">?</span> Still warm with anger, Jane asks "Why was I always suffering, always browbeaten, always accused, for ever condemned?" and her reason answers "Unjust!"</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 14px 0 0 0;">Once the order is right, look again at where the four Gothic elements fall in it. The room is described, the dead are named, the reflection appears, and only then does the child's courage fail. The furniture comes first; the fear follows from it. That is the Gothic method working exactly as designed.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 4 &middot; DO SOMETHING WITH THE READING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">In chapter 3 the narrator stops the story to speak across the years: <em>"Yes, Mrs. Reed, to you I owe some fearful pangs of mental suffering, but I ought to forgive you, for you knew not what you did: while rending my heart-strings, you thought you were only uprooting my bad propensities."</em> The child in the red-room could never have said this. The woman does.</p>
+        <div class="rj-badge">
+            <div class="rj-icon">&#128211;</div>
+            <div>
+                <div class="rj-label">READING RESPONSE</div>
+                <div class="rj-task">Write a short paragraph on this sentence. To do it well: first say plainly what the narrating Jane does here that the experiencing Jane could not (name the two Janes from the Gateshead lesson). Then look hard at the word <em>ought</em>: is this forgiveness, a decision to forgive, or something less settled? Point to the two halves of the sentence, the debt and the excuse, and quote the words you are weighing. End with one line on the red-room itself: which of the four Gothic elements did the most to make the night unbearable, and which sentence proves it? Cite by chapter.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">Claude can list the conventions of Gothic fiction and name other novels that use them. It cannot tell you which detail in this particular room did the most work on you as a reader, and if you ask it to quote the red-room description it may reword Bront&euml;'s sentences. Check any quotation against the chapter text before you use it.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#8594;</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>"I Am Not Deceitful"</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A clergyman in black asks a ten-year-old about hell, and the ten-year-old finally speaks.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The Gothic returns in this novel, in a great house with a locked upper story and a laugh in the corridor. The four elements carry forward: enclosure, color and light, the dead, the uncanny reflection. A writer who builds rooms this carefully is saying something in every one of them.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH III HONORS &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">The Red-Room: A Room Built to Mean</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button, .match-col button, .order-list button').forEach(function (b) { b.classList.remove('selected','matched','picked'); b.disabled=false; var s=b.querySelector('.seq'); if(s) s.textContent=s.dataset.default||'?'; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent=''; });
+      w._matchPick=null; w._orderSeq=0;
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button, .ow-reflect .widget-options button');
+    if (sBtn) {
+      var sw = sBtn.closest('.optima-widget');
+      sw.querySelectorAll('.widget-options button').forEach(function (b){ b.classList.remove('selected'); });
+      sBtn.classList.add('selected');
+      var fb = sw.querySelector('.widget-feedback');
+      fb.textContent = sBtn.dataset.response || ''; fb.classList.add('show');
+      return;
+    }
+    var oBtn = e.target.closest('.ow-order .order-list button');
+    if (oBtn && !oBtn.classList.contains('picked')) {
+      var ow = oBtn.closest('.optima-widget'); ow._orderSeq=(ow._orderSeq||0)+1;
+      oBtn.classList.add('picked'); oBtn.dataset.chosen=ow._orderSeq; var seq=oBtn.querySelector('.seq'); if(seq) seq.textContent=ow._orderSeq;
+      var all = ow.querySelectorAll('.order-list button');
+      if (ow._orderSeq === all.length) {
+        var ok=true; all.forEach(function(b){ if (b.dataset.chosen !== b.dataset.order) ok=false; });
+        var fb3 = ow.querySelector('.widget-feedback');
+        fb3.textContent = ok ? (ow.dataset.done || 'That is the order the text follows.') : 'Not the order the text follows. Hit Reset and retrace the scene.';
+        fb3.classList.add('show');
+      }
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
