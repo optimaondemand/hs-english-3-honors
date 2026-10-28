@@ -338,10 +338,11 @@
 
     <!-- practice (help up front, no dropdown) -->
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">In your Journal, take these two flat sentences and combine them into one complex sentence: "The Ghost tells Hamlet the truth. Hamlet is not sure he can act on it." To do it: pick a subordinating word that fits the relationship (although, even though, because), turn one sentence into a clause that starts with it, and join it to the other. If your clause comes first, put a comma after it. Write two different versions using two different subordinating words, and note which one you prefer and why.</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Take these two flat sentences and combine them into one complex sentence: "The Ghost tells Hamlet the truth. Hamlet is not sure he can act on it." To do it: pick a subordinating word that fits the relationship (although, even though, because), turn one sentence into a clause that starts with it, and join it to the other. If your clause comes first, put a comma after it. Write two different versions using two different subordinating words, and note which one you prefer and why.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -369,10 +370,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
-            <div class="rj-task">Add both words to the Word Study section of your Journal. For each, write one new sentence of your own on a subject that has nothing to do with <em>Hamlet</em>, keeping the meaning exact. For example, for <em>countenance</em>: "The coach kept a calm countenance even as the game slipped away." Aim to make the sentence show the meaning, not just contain the word. Notice how <em>countenance</em>'s root sense of "holding together" still echoes in the idea of keeping your composure.</div>
+            <div class="rj-label">WORD STUDY &middot; TRY IT</div>
+            <div class="rj-task">For each word, write one new sentence of your own on a subject that has nothing to do with <em>Hamlet</em>, keeping the meaning exact. For example, for <em>countenance</em>: "The coach kept a calm countenance even as the game slipped away." Aim to make the sentence show the meaning, not just contain the word. Notice how <em>countenance</em>'s root sense of "holding together" still echoes in the idea of keeping your composure.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -390,6 +392,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Subordination is not decoration; it is how a sentence shows thinking. Reach for it whenever your writing starts to sound like a list, this week and all year.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -457,5 +467,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

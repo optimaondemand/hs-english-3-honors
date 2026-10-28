@@ -339,10 +339,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-label">READING RESPONSE</div>
             <div class="rj-task">Write three complex sentences of your own about this week's reading, each tracing a cause or consequence from chapters 6 and 7. Build one with a cause conjunction (<em>because</em> or <em>since</em>), one with a concession conjunction (<em>although</em> or <em>while</em>), and one with a time conjunction (<em>when</em> or <em>after</em>). Bracket the subordinate clause in each, label the job it does (cause, concession, time), and check the comma rule: comma after a subordinate clause that opens the sentence, usually none before one that ends it. Then reread all three and confirm the main clause in each carries the idea you actually most want to assert. If it does not, trade the clauses and rewrite.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -369,10 +370,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
-            <div class="rj-task">Add both words to your Journal. For each, write one new sentence of your own on a subject unrelated to Douglass, keeping the meaning exact and letting the sentence show it. For <em>stratagem</em>, make the contest visible: show who is maneuvering around whom, and toward what end; a stratagem with no opposition is just a plan. For <em>abolition</em>, let the formality do the work: show something ended by decision and effort, not something that faded on its own. Bonus move: build one of your two sentences as a complex sentence from Part 1, with the subordinate clause bracketed and labeled. Notice how <em>stratagem</em>'s root sense of "a general's maneuver" still echoes in its scent of outwitting an opponent.</div>
+            <div class="rj-label">WORD STUDY &middot; TRY IT</div>
+            <div class="rj-task">For each word, write one new sentence of your own on a subject unrelated to Douglass, keeping the meaning exact and letting the sentence show it. For <em>stratagem</em>, make the contest visible: show who is maneuvering around whom, and toward what end; a stratagem with no opposition is just a plan. For <em>abolition</em>, let the formality do the work: show something ended by decision and effort, not something that faded on its own. Bonus move: build one of your two sentences as a complex sentence from Part 1, with the subordinate clause bracketed and labeled. Notice how <em>stratagem</em>'s root sense of "a general's maneuver" still echoes in its scent of outwitting an opponent.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -390,6 +392,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">An op-ed that only asserts is a list; an op-ed that subordinates is an argument. When Publius Returns asks you to persuade the citizenry, your reader will decide within a paragraph whether you rank your ideas or merely pile them. Douglass, who reasoned his way from a forbidden alphabet to a nation's conscience one consequence at a time, is the standard. Next week you recite him.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -443,5 +453,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

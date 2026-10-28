@@ -330,10 +330,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">Do a practice run now, before Feeder 4. Pick one question this week raised for you (for example: does life tenure still protect judicial independence, or has the confirmation process politicized it?). Search JStor with two or three key terms, filter to journal articles, and record in your Journal: your search terms, the titles and authors of two promising articles, and one sentence per article from its abstract saying what it argues. Run the C.R.A.P. check on the stronger of the two and jot your four one-line answers. This log becomes your head start on Feeder 4.</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Do a practice run now, before Feeder 4. Pick one question this week raised for you (for example: does life tenure still protect judicial independence, or has the confirmation process politicized it?). Search JStor with two or three key terms, filter to journal articles, and record your search terms, the titles and authors of two promising articles, and one sentence per article from its abstract saying what it argues. Run the C.R.A.P. check on the stronger of the two and jot your four one-line answers. This log becomes your head start on Feeder 4.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -353,6 +354,14 @@
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Madison and Hamilton wrote with the record of every failed republic open on the desk. Evidence was their authority, and it is yours: from Feeder 4 through Publius Returns to every research task this year, the writer who has actually read the sources argues from higher ground.</p>
     </div>
 
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
+    </div>
+
 </div>
 
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
@@ -362,5 +371,7 @@
 </div>
 
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

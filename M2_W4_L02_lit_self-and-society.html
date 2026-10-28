@@ -371,10 +371,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-label">READING RESPONSE</div>
             <div class="rj-task">In your Week 4 notes, copy the joint-stock sentence and write a two-part response. Part one: name one concrete, present-day version of the bargain, a specific setting where people trade some freedom of thought or expression for belonging or security (a team, a workplace, an online community, a friend group). Explain in two or three sentences how the trade works there, using the metaphor's own terms: dividend and surrender. Part two: apply Emerson's admitted costs to it. What "whips of displeasure" would a nonconformist face in that setting, and would keeping "the independence of solitude" there be worth it? Also add one line to your appeals watch: the joint-stock sentence works partly by pathos through metaphor. Note what feeling the business language is built to produce.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -397,6 +398,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The strongest move in today's reading is Emerson conceding the costs of his own position. That is the same claim-concede-counter engine you practiced in Feeder 3, run by a master. Your Publius Returns op-ed earns trust the same way: name what your position costs before your opponent does.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -464,5 +473,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

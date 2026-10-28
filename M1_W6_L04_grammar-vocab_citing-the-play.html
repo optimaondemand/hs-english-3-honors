@@ -330,10 +330,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">Practice on a line you have already logged. Pick any two consecutive lines of verse from your Journal notes, quote them inside a sentence of your own with the slash marking the line break, and add a correct MLA parenthetical. Then write one more sentence quoting just a short phrase (not full lines) and citing it. Check: spaces around the slash, periods (not commas) between act, scene, and line, and the sentence period after the parenthesis.</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Practice on a line you have already logged. Pick any two consecutive lines of verse, quote them inside a sentence of your own with the slash marking the line break, and add a correct MLA parenthetical. Then write one more sentence quoting just a short phrase (not full lines) and citing it. Check: spaces around the slash, periods (not commas) between act, scene, and line, and the sentence period after the parenthesis.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -360,10 +361,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
-            <div class="rj-task">Add both words to the Word Study section of your Journal. For each, write one new sentence of your own on a subject unrelated to <em>Hamlet</em>, keeping the meaning exact and making the sentence show the meaning. For <em>equivocation</em>, aim for the sense of dodging with slippery words rather than lying outright. Notice how <em>equivocation</em>'s root sense of "equal voice" still echoes in a statement built to mean two things at once.</div>
+            <div class="rj-label">WORD STUDY &middot; TRY IT</div>
+            <div class="rj-task">For each word, write one new sentence of your own on a subject unrelated to <em>Hamlet</em>, keeping the meaning exact and making the sentence show the meaning. For <em>equivocation</em>, aim for the sense of dodging with slippery words rather than lying outright. Notice how <em>equivocation</em>'s root sense of "equal voice" still echoes in a statement built to mean two things at once.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -381,6 +383,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Accurate citation is not busywork; it is how you let a reader check you and how you show you are arguing from the text, not from memory. Make it a habit now and it will serve you in every course.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -416,5 +426,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

@@ -277,7 +277,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A quotation dropped into a paragraph sits there like a stone. A quotation woven in becomes part of your own sentence's muscle.</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">All week your Journal tasks have asked you to quote the play, and every claim you post in this week's discussion needs lines behind it. So today's grammar is the mechanics of doing that cleanly: how to <strong>integrate a quotation</strong> into your own sentence and how to <strong>punctuate</strong> the seam so no reader can see the stitching. Then two words from Act II for your Word Study.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">All week your reading responses have asked you to quote the play, and every claim you post in this week's discussion needs lines behind it. So today's grammar is the mechanics of doing that cleanly: how to <strong>integrate a quotation</strong> into your own sentence and how to <strong>punctuate</strong> the seam so no reader can see the stitching. Then two words from Act II for your Word Study.</div>
     </div>
 
     <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -330,10 +330,11 @@
 
     <!-- practice (help up front, no dropdown) -->
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">Take Hamlet's line "Denmark's a prison" (2.2) and write it into your Journal three times, once in each pattern: woven into your own sentence with no punctuation at the seam, introduced by a speech tag with a comma, and set up by a complete sentence with a colon. Then read each aloud without the quotation marks and mark the one that flows best. Keep the citation (2.2) after every version. You will use your favorite pattern in this week's discussion post.</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Take Hamlet's line "Denmark's a prison" (2.2) and write it three times, once in each pattern: woven into your own sentence with no punctuation at the seam, introduced by a speech tag with a comma, and set up by a complete sentence with a colon. Then read each aloud without the quotation marks and mark the one that flows best. Keep the citation (2.2) after every version. You will use your favorite pattern in this week's discussion post.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -361,10 +362,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
-            <div class="rj-task">Add both words to the Word Study section of your Journal. For each, write one new sentence of your own on a subject that has nothing to do with <em>Hamlet</em>, keeping the meaning exact. For example, for <em>brevity</em>: "The coach's halftime speech was ten seconds long, and its brevity said more than a lecture could." Aim to make the sentence show the meaning, not just contain the word. Notice how <em>pestilent</em>'s root sense of literal plague still echoes when we call an idea or influence "pestilent."</div>
+            <div class="rj-label">WORD STUDY &middot; TRY IT</div>
+            <div class="rj-task">For each word, write one new sentence of your own on a subject that has nothing to do with <em>Hamlet</em>, keeping the meaning exact. For example, for <em>brevity</em>: "The coach's halftime speech was ten seconds long, and its brevity said more than a lecture could." Aim to make the sentence show the meaning, not just contain the word. Notice how <em>pestilent</em>'s root sense of literal plague still echoes when we call an idea or influence "pestilent."</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -382,6 +384,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Every analytical sentence you write this year will carry evidence, and the seam between your words and the text's words is where readers judge your control. Weave, tag, or set up with a colon; never just drop the stone and walk away.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -449,5 +459,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

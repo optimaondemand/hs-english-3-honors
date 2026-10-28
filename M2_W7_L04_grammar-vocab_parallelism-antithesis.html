@@ -345,10 +345,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">Write three sentences in your Organizer and label each. (1) A parallel series of three: name three things a person needs to govern themselves, all three in the same grammatical form. (2) An antithesis about Douglass: two matched halves across a pivot (a semicolon or a comma), reversing one key pair the way Douglass reverses man and slave. (3) One sentence you find that has faulty parallelism, from your own earlier writing or invented on purpose, then its corrected version beneath it, with the fix underlined. Run the match test and the contrast test on the first two before you move on.</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Write three sentences and label each. (1) A parallel series of three: name three things a person needs to govern themselves, all three in the same grammatical form. (2) An antithesis about Douglass: two matched halves across a pivot (a semicolon or a comma), reversing one key pair the way Douglass reverses man and slave. (3) One sentence you find that has faulty parallelism, from your own earlier writing or invented on purpose, then its corrected version beneath it, with the fix underlined. Run the match test and the contrast test on the first two before you move on.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -374,10 +375,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
-            <div class="rj-task">Add both words to your Organizer. For each, write one new sentence of your own on a subject unrelated to Douglass, keeping the meaning exact and letting the sentence show it. For <em>impartial</em>, name the two or more sides being treated equally, so the reader sees the even-handedness in action; do not water it down to mean merely "fair-minded in general." For <em>misnomer</em>, make clear what is being named and why the name is wrong, since a misnomer is about the label, not the thing. Bonus move: cast one of your two sentences as a parallel series or an antithesis from Part 1. Notice how <em>misnomer</em>'s root sense of "naming wrongly" still echoes whenever we call a label itself the false thing.</div>
+            <div class="rj-label">WORD STUDY &middot; TRY IT</div>
+            <div class="rj-task">For each word, write one new sentence of your own on a subject unrelated to Douglass, keeping the meaning exact and letting the sentence show it. For <em>impartial</em>, name the two or more sides being treated equally, so the reader sees the even-handedness in action; do not water it down to mean merely "fair-minded in general." For <em>misnomer</em>, make clear what is being named and why the name is wrong, since a misnomer is about the label, not the thing. Bonus move: cast one of your two sentences as a parallel series or an antithesis from Part 1. Notice how <em>misnomer</em>'s root sense of "naming wrongly" still echoes whenever we call a label itself the false thing.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -395,6 +397,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Parallelism is the backbone of persuasive prose, and your Publius Returns op-ed will lean on it: a parallel series to marshal your reasons, an antithesis to sharpen the choice you want your reader to make. Use it where the contrast is real and use it sparingly, and it will do for your argument what it did for Douglass's, make the point land and stay landed.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -462,5 +472,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

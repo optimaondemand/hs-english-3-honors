@@ -372,17 +372,18 @@
 
     <!-- Reading Journal task (help up front, no dropdown) -->
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">Find the turn in the "rogue and peasant slave" soliloquy: the moment where Hamlet stops lashing himself and starts building the plan. Copy the line where you locate the pivot into your Journal, cited (2.2). Then write two sentences: what the speech is doing just before your line, and what it is doing just after. Readers place the turn in slightly different spots, so do not hunt for one official answer; what matters is that the before and the after genuinely differ in your quotation's shadow.</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Find the turn in the "rogue and peasant slave" soliloquy: the moment where Hamlet stops lashing himself and starts building the plan. Copy the line where you locate the pivot, cited (2.2). Then write two sentences: what the speech is doing just before your line, and what it is doing just after. Readers place the turn in slightly different spots, so do not hunt for one official answer; what matters is that the before and the after genuinely differ in your quotation's shadow.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
     <!-- RECITATION THREAD LAUNCH (ungraded note) -->
     <div style="background: #EEF1F8; border: 1px solid #C7CFE6; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#127908; RECITATION THREAD &middot; STARTS NOW (ungraded this week)</div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In <strong>Week 7</strong> you will perform a graded recitation of a <em>Hamlet</em> soliloquy: memorized, spoken aloud, and recorded. The work starts now, because memory is built by small repeated visits, not a last-minute cram. <strong>This week, choose your soliloquy</strong> and write your choice in your Reading Journal. You may pick any soliloquy from the play, including ones we have not reached yet. Candidates you have already met or will meet soon:</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In <strong>Week 7</strong> you will perform a graded recitation of a <em>Hamlet</em> soliloquy: memorized, spoken aloud, and recorded. The work starts now, because memory is built by small repeated visits, not a last-minute cram. <strong>This week, choose your soliloquy</strong>. You may pick any soliloquy from the play, including ones we have not reached yet. Candidates you have already met or will meet soon:</p>
             <div style="font-size: 16px; color: #1a2340; line-height: 1.8; margin: 0 0 10px 0;">
             &#8226; "O, that this too too solid flesh would melt" (1.2), grief in private<br />
             &#8226; "O, what a rogue and peasant slave am I!" (2.2), this week's self-reproach (you may recite a continuous portion; it is long)<br />
@@ -418,6 +419,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Hamlet has stopped waiting for his feelings to produce action and built a test instead: proof before blood. Whether the test is conscience or one more delay is a question you now own. The trap is set; Act III springs it.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -485,5 +494,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

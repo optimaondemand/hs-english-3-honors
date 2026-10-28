@@ -350,10 +350,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-label">READING RESPONSE</div>
             <div class="rj-task">Choose a civic question you might use for Publius Returns and write three commands about it: one direct imperative (base verb first), one negative imperative (<em>do not</em> or <em>never</em> + base verb), and one hortatory sentence (<em>Let us&hellip;</em> or <em>Let every citizen&hellip;</em>). Label each form. Then pick your strongest of the three and attach one indicative sentence before or after it giving the reason that earns the command. Check yourself against the frame above: no stated subject except inside the <em>let</em> form, and every verb in its base form.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -379,10 +380,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
-            <div class="rj-task">Add both words to your Journal. For each, write one new sentence of your own on a subject unrelated to Emerson, keeping the meaning exact and letting the sentence show it. For <em>aversion</em>, make clear who turns away from what; "I have an aversion" alone shows nothing. For <em>integrity</em>, let the wholeness sense do the work: show a person undivided between belief, word, and act, not just someone following rules. Bonus move: cast one of your two sentences as an imperative or a hortatory <em>let</em> sentence from Part 1. Notice how <em>integrity</em>'s root sense of "untouched wholeness" still echoes in what it means to call a person's character intact.</div>
+            <div class="rj-label">WORD STUDY &middot; TRY IT</div>
+            <div class="rj-task">For each word, write one new sentence of your own on a subject unrelated to Emerson, keeping the meaning exact and letting the sentence show it. For <em>aversion</em>, make clear who turns away from what; "I have an aversion" alone shows nothing. For <em>integrity</em>, let the wholeness sense do the work: show a person undivided between belief, word, and act, not just someone following rules. Bonus move: cast one of your two sentences as an imperative or a hortatory <em>let</em> sentence from Part 1. Notice how <em>integrity</em>'s root sense of "untouched wholeness" still echoes in what it means to call a person's character intact.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -392,7 +394,7 @@
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#128172;</div>
             <div>
                 <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Discussion: Self-Reliance: Virtue, Danger, or Both?</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Your discussion post argues in the indicative; do not command your classmates. But bank today's imperative sentences in your Journal: an op-ed addressed to the citizenry is the imperative's natural home, and Publius Returns will want one or two, well earned.</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Your discussion post argues in the indicative; do not command your classmates. But bank today's imperative sentences: an op-ed addressed to the citizenry is the imperative's natural home, and Publius Returns will want one or two, well earned.</div>
             </div>
         </div>
     </div>
@@ -400,6 +402,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The imperative is the mood of writers who want something from the reader beyond agreement: they want action. Emerson commands the conscience, and in two weeks you will hear Douglass command a nation's. When your own writing finally needs a command, you will know how to build one and what it costs to use.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -467,5 +477,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

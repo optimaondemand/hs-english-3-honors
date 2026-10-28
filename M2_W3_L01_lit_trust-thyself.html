@@ -394,10 +394,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">Start a new page in your Module 2 Organizer titled "Self-Reliance." Copy the sentence "Trust thyself: every heart vibrates to that iron string." and cite it ("Self-Reliance"). Under it, write three or four sentences on one real situation in your own life this month where trusting your own judgment and doing what was expected pulled in different directions. Name the situation concretely, say which force won, and note what it cost. You are gathering the raw material you will test Emerson's claims against all week.</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Copy the sentence "Trust thyself: every heart vibrates to that iron string." and cite it ("Self-Reliance"). Under it, write three or four sentences on one real situation in your own life this month where trusting your own judgment and doing what was expected pulled in different directions. Name the situation concretely, say which force won, and note what it cost. You are gathering the raw material you will test Emerson's claims against all week.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -420,6 +421,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Publius asked how a people governs itself; Emerson asks how one person does. Your Publius Returns op-ed will be stronger if it can speak in both registers: the design of institutions and the conscience of the individual inside them. Keep both questions open. Douglass, in two weeks, will test them against the hardest case.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -487,5 +496,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

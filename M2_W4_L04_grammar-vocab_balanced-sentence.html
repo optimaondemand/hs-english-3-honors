@@ -336,10 +336,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-label">READING RESPONSE</div>
             <div class="rj-task">Beneath the two-column bridge you built in Lesson 2.15, write two balanced sentences of your own. The first must weigh Madison against Emerson (one clause each, matching shape, semicolon at the pivot). The second may be about anything from your own life. Then label the pivot and underline the matched parts in each, the way the frame above does with color. Run the stand-alone test and the mirror test on both before you move on; if a side fails the stand-alone test, rebuild it into a full clause rather than patching with a comma. At least one of these sentences should reappear in this week's synthesis quick-write.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -365,10 +366,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
-            <div class="rj-task">Add both words to your Journal. For each, write one new sentence of your own on a subject unrelated to Emerson, keeping the meaning exact and making the sentence show the meaning. For <em>aversion</em>, name both the person who feels it and the thing it turns away from; "an aversion to" is the usual pattern. For <em>suffrage</em>, pick one sense and commit: either approval and support (Emerson's sense) or the right to vote (the sense you will meet in Douglass's century), and make your sentence leave no doubt which one you mean. Bonus move: cast one of the two sentences as a balanced sentence from Part 1. Notice how <em>aversion</em>'s root sense of "turning away" still echoes in the modern word.</div>
+            <div class="rj-label">WORD STUDY &middot; TRY IT</div>
+            <div class="rj-task">For each word, write one new sentence of your own on a subject unrelated to Emerson, keeping the meaning exact and making the sentence show the meaning. For <em>aversion</em>, name both the person who feels it and the thing it turns away from; "an aversion to" is the usual pattern. For <em>suffrage</em>, pick one sense and commit: either approval and support (Emerson's sense) or the right to vote (the sense you will meet in Douglass's century), and make your sentence leave no doubt which one you mean. Bonus move: cast one of the two sentences as a balanced sentence from Part 1. Notice how <em>aversion</em>'s root sense of "turning away" still echoes in the modern word.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -386,6 +388,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The balanced sentence is how English does justice to two ideas at once; the writers in this module lived by it. Keep it in your kit for the Publius Returns op-ed, where you will need to hold your position and your opponent's in a single steady hand.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -453,5 +463,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

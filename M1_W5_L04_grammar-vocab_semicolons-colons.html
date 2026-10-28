@@ -335,10 +335,11 @@
 
     <!-- practice (help up front, no dropdown) -->
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">In your Journal, write three sentences about Act IV: one that joins two complete thoughts with a semicolon, one that uses a colon to introduce an explanation or a list, and one that uses a colon to introduce a short quotation you cite by act and scene. Run the test on each before you move on: cover the mark and check that everything required to stand alone actually does. Label the three sentences so they are easy to find at the Reading Journal Check.</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Write three sentences about Act IV: one that joins two complete thoughts with a semicolon, one that uses a colon to introduce an explanation or a list, and one that uses a colon to introduce a short quotation you cite by act and scene. Run the test on each before you move on: cover the mark and check that everything required to stand alone actually does.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -366,27 +367,26 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
-            <div class="rj-task">Add both words to the Word Study section of your Journal. For each, write one new sentence of your own on a subject that has nothing to do with <em>Hamlet</em>, keeping the meaning exact. For example, for <em>conjecture</em>: "Until the flight recorder was found, every theory about the crash was conjecture." Aim to make the sentence show the meaning, not just contain the word. These two complete your Module 1 Word Study list through Week 5, which the Reading Journal Check will look for. Notice how <em>conjecture</em>'s root sense of "throwing together" clues still echoes in a guess pieced together from incomplete evidence.</div>
+            <div class="rj-label">WORD STUDY &middot; TRY IT</div>
+            <div class="rj-task">For each word, write one new sentence of your own on a subject that has nothing to do with <em>Hamlet</em>, keeping the meaning exact. For example, for <em>conjecture</em>: "Until the flight recorder was found, every theory about the crash was conjecture." Aim to make the sentence show the meaning, not just contain the word. Notice how <em>conjecture</em>'s root sense of "throwing together" clues still echoes in a guess pieced together from incomplete evidence.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
-    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT'S NEXT THIS WEEK</div>
-        <div style="display: flex; align-items: flex-start; gap: 14px;">
-            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">&#128211;</div>
-            <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Journal Check</strong></div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Bring your Module 1 Organizer up to date through Act IV, make sure the Word Study list runs through this week, and upload the document at the Reading Journal Check.</div>
-            </div>
-        </div>
-    </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The semicolon holds two thoughts in balance; the colon aims one thought at its payoff. Between them and subordination, you can now build any relationship two ideas can have. Use the right tool on purpose, starting with this week's journal entries.</p>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The semicolon holds two thoughts in balance; the colon aims one thought at its payoff. Between them and subordination, you can now build any relationship two ideas can have. Use the right tool on purpose, starting with this week's responses.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -423,5 +423,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

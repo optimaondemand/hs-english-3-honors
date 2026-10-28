@@ -407,10 +407,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">Build your own three-voice table in your Module 2 Organizer, on your chosen civic question. Write the question at the top in one sentence that ends with a question mark. Then give each writer two rows: THE ANSWER he would give, in your own words, and THE EVIDENCE you would cite from his text, quoted briefly and cited the way this module always cites: (Federalist 10 or 51), ("Self-Reliance"), (Narrative, ch. 6). Finish by marking each column FOR ME or AGAINST ME. Coaching: run the four checks from Part 2 before you fill anything in, and if a column sits empty because a writer has nothing to say to your question, that is your signal to sharpen the question, not to skip the voice.</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Build your own three-voice table, on your chosen civic question. Write the question at the top in one sentence that ends with a question mark. Then give each writer two rows: THE ANSWER he would give, in your own words, and THE EVIDENCE you would cite from his text, quoted briefly and cited the way this module always cites: (Federalist 10 or 51), ("Self-Reliance"), (Narrative, ch. 6). Finish by marking each column FOR ME or AGAINST ME. Coaching: run the four checks from Part 2 before you fill anything in, and if a column sits empty because a writer has nothing to say to your question, that is your signal to sharpen the question, not to skip the voice.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -433,6 +434,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A good op-ed is a conversation you are brave enough to finish. Choose a question that is really being argued, seat all three voices honestly, and decide where you stand. Tomorrow you learn the form; the position you take today is what the form will carry.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -500,5 +509,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

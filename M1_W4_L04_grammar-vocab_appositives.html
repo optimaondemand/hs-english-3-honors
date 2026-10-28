@@ -345,10 +345,11 @@
 
     <!-- practice (help up front, no dropdown) -->
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-label">READING RESPONSE</div>
             <div class="rj-task">Write two sentences of your own about a character in Act III, each using an appositive. Make the first one nonrestrictive (extra information, set off with commas) and the second restrictive (information that identifies which one you mean, no commas). Underline the appositive in each, and label it "extra" or "needed." Use the lift-it-out test to check your commas.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -375,10 +376,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL &middot; WORD STUDY</div>
-            <div class="rj-task">Add both words to the Word Study section of your Journal. For each, write one new sentence of your own on a subject unrelated to <em>Hamlet</em>, keeping the meaning exact. Make the sentence show the meaning, not just contain the word. For <em>unction</em>, aim for the figurative sense: a comforting idea someone uses to avoid a hard truth. Notice how <em>unction</em>'s root sense of "anointing with oil" still echoes in its figurative use as something that smooths over a truth.</div>
+            <div class="rj-label">WORD STUDY &middot; TRY IT</div>
+            <div class="rj-task">For each word, write one new sentence of your own on a subject unrelated to <em>Hamlet</em>, keeping the meaning exact. Make the sentence show the meaning, not just contain the word. For <em>unction</em>, aim for the figurative sense: a comforting idea someone uses to avoid a hard truth. Notice how <em>unction</em>'s root sense of "anointing with oil" still echoes in its figurative use as something that smooths over a truth.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -396,6 +398,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The appositive is how careful writers pack a sentence without cluttering it. Reach for it whenever you introduce a character or a term, and let the commas signal whether the information is extra or essential.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -463,5 +473,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

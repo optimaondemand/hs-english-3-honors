@@ -373,16 +373,17 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">Draw or outline the double security in your Journal: the two divisions of power, in your own words, with one sentence for each explaining what it protects against. Quote either "Ambition must be made to counteract ambition" or the "double security" line, and cite it (Federalist 51). Then answer in two or three sentences: which single check in the diagram do you think does the most work today, and why? Point to how that check has an ambition pushing back on another; that is the test of whether you picked a real one.</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Draw or outline the double security: the two divisions of power, in your own words, with one sentence for each explaining what it protects against. Quote either "Ambition must be made to counteract ambition" or the "double security" line, and cite it (Federalist 51). Then answer in two or three sentences: which single check in the diagram do you think does the most work today, and why? Point to how that check has an ambition pushing back on another; that is the test of whether you picked a real one.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
     <div style="background: #FDF3E3; border: 1px solid #E7C983; border-left: 5px solid #C7922C; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#129302; WORKING WITH AI</div>
-        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can produce a tidy chart of checks and balances in seconds, and it will usually be accurate about the mechanics. What it cannot do is tell you which check matters most right now, or whether Madison's machinery is working; those are judgment calls that depend on evidence and argument. Use AI to confirm a mechanism if you are unsure, and keep the evaluation, the part your Journal asks for, as your own reasoning.</p>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">An AI tool can produce a tidy chart of checks and balances in seconds, and it will usually be accurate about the mechanics. What it cannot do is tell you which check matters most right now, or whether Madison's machinery is working; those are judgment calls that depend on evidence and argument. Use AI to confirm a mechanism if you are unsure, and keep the evaluation as your own reasoning.</p>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -399,6 +400,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Madison's deepest claim is that structure can do what virtue alone cannot. The same is true of an essay: a well-built argument protects your point even when a hostile reader works through it. Build your writing the way Madison built the government.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -466,5 +475,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

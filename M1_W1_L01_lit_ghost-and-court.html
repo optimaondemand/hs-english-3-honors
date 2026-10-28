@@ -302,12 +302,6 @@
         </div>
     </div>
 
-    <!-- What is the Reading Journal (one-time signpost) -->
-    <div style="background: #FFFFFF; border: 1px solid #C7CFE6; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#128211; MEET YOUR READING JOURNAL</div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Your <strong>Reading Journal</strong> is the one Word document you set up in Start Here (the Module 1 Organizer). You keep it open all module and add to it as you read; you do <strong>not</strong> turn it in every week. Your teacher collects it once, partway through the module, at a scheduled <strong>Reading Journal Check</strong>, and you upload the same document then through Canvas using the OneDrive tab. It lives in your own OneDrive at <strong>Optima &#8594; ELA &#8594; ELA11</strong> and stays yours to revisit.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Watch for this mark. Whenever you see the 📓 <strong>Reading Journal</strong> badge, the task goes in your Journal.</p>
-    </div>
 
     <!-- PART 1 warm-up -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -432,10 +426,11 @@
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9997;&#65039; PART 3 &middot; DO SOMETHING WITH THE READING</div>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Hamlet's very first words are a muttered aside about his uncle, the new king, who has married his mother: <em>"A little more than kin, and less than kind."</em> Two small words, <em>kin</em> and <em>kind</em>, carry the whole mood.</p>
         <div class="rj-badge">
-            <div class="rj-icon">&#128211;</div>
+            <div class="rj-icon">&#9997;&#65039;</div>
             <div>
-                <div class="rj-label">READING JOURNAL</div>
-                <div class="rj-task">In your Journal, write two or three sentences on this line. To do it well: say what <em>kin</em> means (family), then weigh the two senses of <em>kind</em> (affectionate, and "of the same nature"). Then explain what the pun lets Hamlet do in front of the king he distrusts. Quote the words you are reading; a claim without the words is only a guess.</div>
+                <div class="rj-label">READING RESPONSE</div>
+                <div class="rj-task">Write two or three sentences on this line. To do it well: say what <em>kin</em> means (family), then weigh the two senses of <em>kind</em> (affectionate, and "of the same nature"). Then explain what the pun lets Hamlet do in front of the king he distrusts. Quote the words you are reading; a claim without the words is only a guess.</div>
+                <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
             </div>
         </div>
     </div>
@@ -462,6 +457,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You have met a hero who will spend five acts trying to know his own mind. Hold onto the seeming-versus-being pattern; it is the lens for everything ahead.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -532,5 +535,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

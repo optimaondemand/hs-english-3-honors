@@ -331,10 +331,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">Plan your lost scene by answering the three questions in your Journal. Name the exact seam where your scene slots in; name your character and the one thing they want in that moment; and list two or three facts from the real play your scene must not contradict. Pull from your Week 4 Character Dossier. This plan becomes your Week 8 draft, so make it specific.</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Plan your lost scene by answering the three questions. Name the exact seam where your scene slots in; name your character and the one thing they want in that moment; and list two or three facts from the real play your scene must not contradict. Pull from your Week 4 Character Dossier. This plan becomes your Week 8 draft, so make it specific.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -357,6 +358,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Writing inside another author's world is one of the fastest ways to learn how it was built. Choose your gap with care this week; a good gap does half the work of a good scene.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -391,5 +400,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

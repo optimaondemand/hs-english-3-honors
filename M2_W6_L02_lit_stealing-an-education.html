@@ -349,10 +349,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
+            <div class="rj-label">READING RESPONSE</div>
             <div class="rj-task">Make a two-column entry titled "What reading gave / What reading cost." Put at least two items in each column, and anchor each column with one exact quotation from chapter 7, copied word for word and cited (Narrative, ch. 7). Keep the quotations short, a sentence or less, and check them letter by letter against the text. Then, beneath the columns, write two or three sentences answering honestly: was Mr. Auld right about what reading would do? Distinguish between his prediction coming true and his conclusion being right; those are not the same thing, and the gap between them is where your discussion post this week lives.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -375,6 +376,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Publius argued that liberty needs structure; Emerson, that it needs self-trust. Chapter 7 adds the missing term: liberty needs knowledge, and knowledge has a price that the knower pays first. When your Publius Returns op-ed argues about what free citizens owe one another, remember the boy trading bread for lessons in a country whose laws called the trade a crime.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -414,5 +423,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

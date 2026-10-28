@@ -300,7 +300,7 @@
         </div>
         <div style="display: flex; align-items: flex-start; gap: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> apply Emerson's standard to my own evolving claim in the Reading Journal.</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> apply Emerson's standard to my own evolving claim.</div>
         </div>
     </div>
 
@@ -365,10 +365,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">Open the "evolving claim" section of your Module 2 Organizer and reread your Week 1 answer to the module question. Write a short entry doing two things. First, name one place your thinking has shifted since Week 1 and state your current view in one plain sentence, hard words and all. Second, judge your own shift by Emerson's standard: is this growth (new evidence, better reasons) or drift (absorbing other people's opinions)? To decide, point to the specific reading or idea that moved you; growth can name its cause, drift usually cannot. Quote the hobgoblin sentence or the "Speak what you think" sentence and cite it ("Self-Reliance").</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Write a short response doing two things. First, name one place your thinking has shifted since Week 1 and state your current view in one plain sentence, hard words and all. Second, judge your own shift by Emerson's standard: is this growth (new evidence, better reasons) or drift (absorbing other people's opinions)? To decide, point to the specific reading or idea that moved you; growth can name its cause, drift usually cannot. Quote the hobgoblin sentence or the "Speak what you think" sentence and cite it ("Self-Reliance").</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -391,6 +392,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Your Publius Returns op-ed will be stronger if you let your claim evolve while you draft it. Emerson just gave you permission: revision is not inconsistency, it is thinking in public. The writers who never change a word are usually the ones who stopped thinking.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -458,5 +467,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>

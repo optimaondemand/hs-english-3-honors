@@ -363,10 +363,11 @@
     </div>
 
     <div class="rj-badge">
-        <div class="rj-icon">&#128211;</div>
+        <div class="rj-icon">&#9997;&#65039;</div>
         <div>
-            <div class="rj-label">READING JOURNAL</div>
-            <div class="rj-task">Set up your Module 2 Organizer, then start an "appeals watch." As you begin No. 10, copy one short sentence where Publius seems to use each appeal, or as many as you find so far, and label it ethos, logos, or pathos. To decide: ask whether the sentence works by authority (ethos), by reasoning (logos), or by feeling (pathos). You will add to this list all week.</div>
+            <div class="rj-label">READING RESPONSE</div>
+            <div class="rj-task">Start an "appeals watch." As you begin No. 10, copy one short sentence where Publius seems to use each appeal, or as many as you find so far, and label it ethos, logos, or pathos. To decide: ask whether the sentence works by authority (ethos), by reasoning (logos), or by feeling (pathos). You will add to this list all week.</div>
+            <textarea class="rsp-field" aria-label="Your response" placeholder="Type your response here."></textarea>
         </div>
     </div>
 
@@ -389,6 +390,14 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 4px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Every text in this quarter is someone making a public case: Publius for a constitution, Emerson for the self, Douglass for freedom. The appeals are your lens on all of them, and the tools you will use in your own Publius Returns op-ed.</p>
+    </div>
+
+
+    <!-- Your responses -->
+    <div class="rsp-save" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#128190; YOUR RESPONSES</div>
+        <div class="rsp-row"><label>Your name<input class="rsp-name" type="text" autocomplete="name"></label><button type="button" class="rsp-pdf">Download my responses (PDF)</button></div>
+        <div class="rsp-note" aria-live="polite"></div>
     </div>
 
 </div>
@@ -440,5 +449,7 @@
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="lesson-responses.js"></script>
 </body>
 </html>
